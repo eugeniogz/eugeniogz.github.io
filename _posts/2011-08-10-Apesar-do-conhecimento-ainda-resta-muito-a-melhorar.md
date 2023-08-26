@@ -1,0 +1,5 @@
+---
+tags: metafísica sobrenatural ciência deficiências futuro
+---
+Estou ciente de minhas limitações, mas ao mesmo tempo sinto que preciso externar o que penso e compartilhar minhas experiências com o maior número de pessoas. Tenho convicção de que não existe metafísica, que não há nada sobrenatural, porém nós humanos jamais compreenderemos a física do Universo. O que sabemos é muito comparado ao que se sabia a poucos anos atrás. Já desvendamos os segredos do mundo microscópico encontrando partículas menores que os prótons e  nêutrons e nos maravilhamos com a natureza dual da luz como partícula e onda ao mesmo tempo. E nas grandes escalas temos cada vez mais conhecimento sobre os astros, de que são compostos, como são formados, como se transformam. A Biologia e a medicina elucidam a cada dia os mistérios da vida. Apesar de tudo isso, vivemos infelizes e nos degladiamos devido às nossas deficiências psicológicas, mas tenho esperança num futuro em que estas sejam superadas e a ciência supere os misticismos, nos dando as condições para um mundo de harmonia e alegria.
+

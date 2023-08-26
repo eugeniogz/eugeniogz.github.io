@@ -1,0 +1,2 @@
+A vida é cheia de escolhas, cada uma delas contribui para o nosso destino. Muitas vezes é impossível mudar o rumo traçado por tais escolhas, no entanto em alguns casos podemos corrigir a direção que tomamos. Devemos ter em conta que não podemos controlar tudo, pois muito do que vivemos resulta de eventos externos. Assim nossas decisões têm influência, mas não definem tudo o que o futuro nos reserva, porém se não tomamos as rédeas da nossa jornada buscando algo melhor para nós a cada dia, não estaremos lutando pela nossa felicidade. 
+
