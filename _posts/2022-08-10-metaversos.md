@@ -1,7 +1,7 @@
 ---
 tags: metaversos internet desconectar
 ---
-Há metaversos suficientes ao não acessar nada.
+á metaversos suficientes ao não acessar nada.
 Em quais redes me conecto?
 Sei lá em quais redes me conecto!
 Se eu ficasse offline pensaria nisso.
@@ -29,4 +29,12 @@ e por isso não erra e é comum e boa."
 Metaverso? Que metaverso têm naqueles prédios?
 Por serem altos e terem janelas
 E por serem habitados?
+E a de aparecer vez ou outra com um recém-nascido,
+Que coisa boa e ver um bebê!
+Então que melhor metaverso que esse Universo
+de pais e filhos, avós e netos, bisavós e bisnetos,
+Enfim esse Universo real é tão belo!
+Porque fugir para um Metaverso de fantasia,
+quando o melhor é viver nesse Universo real?
 
+Baseado no poema <A HREF="https://eugeniogz.blogspot.com/ha-metafisica-bastante-em-nao-pensar-em.html">Há metafísica bastante em não pensar em nada (Alberto Caeiro)</A>
