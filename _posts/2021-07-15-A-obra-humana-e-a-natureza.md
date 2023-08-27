@@ -1,1 +1,0 @@
-Caminhando e refletindo sobre a beleza da natureza e da obra humana. A primeira sempre existirá, enquanto a segunda ruirá aos poucos com o fim da humanidade. Sinto um júbilo enorme ao observar o natural e o humano, sou parte desses dois mundos e viver proporciona desfrutar do que há de melhor em ambos.
