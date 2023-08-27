@@ -1,5 +1,5 @@
 ---
 tags: pensamentos mal
 ---
-A opinião está muito condicionada ao que pensa a maioria, contudo, nem sempre estes pensamentos são os corretos. Saber discernir entre o que é certo e o que é apenas um pensamento da massa é difícil. O mal se vale desta dificuldade para propagar aqueles pensamentos que são a raiz do mesmo.
+A opinião é frequentemente influenciada pela maioria, mas nem sempre a maioria está certa. É difícil discernir entre o que é correto e o que é apenas um pensamento popular. O mal se aproveita disso para propagar seus próprios pensamentos.
 
