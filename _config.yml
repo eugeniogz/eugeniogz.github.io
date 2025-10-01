@@ -1,16 +1,19 @@
 #title: "My Blogs Name"
 author: "José Eugênio de Assis Gonçalves"
 description: "" # This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
 
 # Email / Social media user names used by the minima theme:
 # All of these are optional and can be removed or commented out
 #email: "eugeniog@gmail.com"
-twitter_username: "eugeniog"
+#twitter_username: "eugeniog"
 #github_username: "githubuser"
 #linkedin_username: "linkedinuser"
 #facebook_username: username
 #flickr_username: username
-instagram_username: eugeniogz
+#instagram_username: eugeniogz
 #pinterest_username: username
 #youtube_username: username
 #googleplus_username: +username
