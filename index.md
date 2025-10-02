@@ -9,5 +9,5 @@
 - [Crônicas](./Crônicas/index.md)
 
 ## Documentos
-- [Aforismos e breves inspirações](./aforismos-e-breves-inspiracoes.html)
 - [Vida: O acróstico ](./vida-o-acrostico.html)
+- [Aforismos e breves inspirações](./aforismos-e-breves-inspiracoes.html)

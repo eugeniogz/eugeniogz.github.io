@@ -1,12 +1,9 @@
 ### Vida: O acróstico 
 
-Valores
-
-Imperfeições
-
-Decisões
-
-Atenção
+**V**alores  
+**I**mperfeições  
+**D**ecisões  
+**A**tenção
 
 A essência de uma existência feliz pode ser guiada por estes quatro faróis interiores, que formam a própria VIDA que buscamos viver com plenitude.
 
