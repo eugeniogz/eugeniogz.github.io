@@ -40,16 +40,13 @@ Capaz de sentir o meio.
 Com a ciência amplia  
 a vida no seu seio.
 
-Com simplicidade caminhar,
-
-não pensar na aparência,
-
-mas na felicidade escondida,
-
+Com simplicidade caminhar,  
+não pensar na aparência,  
+mas na felicidade escondida,  
 no fundo, na inocência.
 
 O prazer que permanece,  
-em sutis transformações;  
+em sutis transformações.  
 feitas sem prece.  
 Broto em busca da luz.
 
