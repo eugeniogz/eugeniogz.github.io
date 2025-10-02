@@ -1,9 +1,9 @@
 ### Aquarela de uma valsa
 
-Trilha do compasso,  
+Trilha a duplo passo,  
 cores da aquarela.  
 Unidos pelo abraço,  
-ginga um só par.
+ginga a velejar.
 
 Enlaçam corações,  
 flores em sintonia,  
@@ -18,21 +18,21 @@ pintando sinfonia.
 Luzem dois corações,  
 Além do firmamento.  
 Expande o movimento,  
-passos do céu ao mar.
+rota do céu ao mar.
 
-Cantam no crepúsculo  
+Cantam aninhadas  
 aves do entardecer;   
-Prelúdio do alvorecer,   
+Prelúdio da alvorada,   
 manhã que irá nascer.
 
-Raízes brindando vida,  
-folhas no som a flutuar,  
-em suave movimento  
-ao ritmo leve do mar.
+Seiva brindando vida,  
+folhas a flutuar,  
+o suave movimento  
+do ritmo do mar.
 
-Libertos, tal uma balsa,  
-pintam-se no porvir:  
-navegando na valsa,  
-eterno baile do amar.
+Suaves na balsa,  
+nave do porvir:  
+vivem a terna valsa,  
+amor eterno amar.
 
-(14/08/25)
+(02/10/25)
