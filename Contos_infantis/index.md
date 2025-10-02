@@ -9,4 +9,4 @@
 - [O Passeio de Bicicleta](./o-passeio-de-bicicleta.html)
 - [Pombo Correio](./pombo-correio.html)
 
-[voltar](./)
+[voltar](../)

@@ -11,4 +11,4 @@
 - [Triste tarde](./triste-tarde.html)
 - [Vida](./vida.html)
 
-[voltar](./)
+[voltar](../)

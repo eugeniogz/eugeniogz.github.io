@@ -13,4 +13,4 @@
 - [A mão invisível da ganância](./a-mao-invisivel-da-ganancia.html)
 - [A quarta dimensão](./a-quarta-dimensao.html)
 
-[voltar](./)
+[voltar](../)
