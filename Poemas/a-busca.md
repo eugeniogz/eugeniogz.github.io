@@ -15,14 +15,14 @@ escurecem o dia.
 A verdade escondida  
 no véu jazia.
 
-Bilhões de estrelas brilham,   
+Bilhões de estrelas brilham   
 na escuridão da noite.  
 Mentes brilhantes trabalham,  
 mas a busca é sua.
 
 ### The search
 
-On the clarity of the moon  
+On the clarity of the moon,  
 thoughts will appear.  
 Looking for a path,  
 ideas are near.
@@ -34,12 +34,12 @@ but the search doesn’t end.
 
 Routine clouds  
 the dark days.  
-under the shrouds,  
+Under the shrouds,  
 the truth sleeps.
 
 In the darkness of night,  
 billions of stars shine.   
-The minds work bright,   
+Minds work bright,   
 but the search is yours.
 
 (25/08/25)

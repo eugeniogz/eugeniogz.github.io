@@ -1,33 +1,26 @@
 ### Alegria: Labor e arte
 
-Outro dia se parte,  
-do suor construtivo,  
-surgiu a arte.  
-Labor que cria.
+Suor criativo  
+fonte da arte  
+refúgio sagrado  
+da mente brilhante
 
-Dédalos findam  
-no ocaso cinza.  
-Cores quebram  
-a monotonia.
+Ocaso do cinza  
+da monotonia  
+cores que bailam  
+pintam sinfonia
 
-Existir é fugir da rotina.  
-Criar obras-primas,  
-em busca do que ilumina:  
-Saber que produzindo transforma.
+Fugir da rotina  
+inventar o que tece  
+descobrir horizontes  
+saber que merece
 
-Mas o generoso artífice,  
-antes de tudo, é humilde.  
-Tem ciência que pouco sabe,  
-estuda para ensinar.
+Estudar cada dia  
+aumentando o saber  
+visando o ensino  
+sua fonte estender
 
-Da árvore do Éden superada,  
-será assim, para tantos,  
-farol para a rota da vida,  
-na trilha, criando artistas.
-
-Trilhar a vida em arte  
-torna-se enfim,  
-razão da humanidade,  
-que assim, respira felicidade.
-
-(19/08/25)
+Viver como artista  
+brindar sabedoria  
+razão do humano  
+pulsando alegria
