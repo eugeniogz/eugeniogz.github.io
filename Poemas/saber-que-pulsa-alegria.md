@@ -1,4 +1,4 @@
-### Alegria: Labor e arte
+### Saber que pulsa alegria
 
 Suor criativo  
 fonte da arte  
@@ -16,11 +16,11 @@ descobrir horizontes
 saber que merece
 
 Estudar cada dia  
-aumentando o saber  
-visando o ensino  
-sua fonte estender
+aumenta o saber  
+visando ensinar  
+brindar o prazer
 
 Viver como artista  
-brindar sabedoria  
+alçar sabedoria  
 razão do humano  
 pulsando alegria

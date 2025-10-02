@@ -2,67 +2,60 @@
 
 Aproveitar o caminho,  
 oportunidade sem par.  
-Sentir em cada estímulo  
+Sentir nos estímulos  
 a experiência singular.
 
 Observar cada instante,  
 viver, fazer-se vida.  
-Busca de significado  
+Buscar o significado  
 que o viver nos convida.
 
-Um existir nunca solitário,  
+Existir sem solidão,  
 que precisa, para ser,  
 da solidária mente,  
-dedicada a compreender.
+pronta a compreender.
 
-Sem o ímpeto de externar,  
-com mais tempo consigo.  
-A mente enfim sossega  
-no fundo da consciência.
+Sem querer externar,  
+com tempo consigo.  
+A mente sossega  
+no tempo amigo.
 
-Nesse sítio o pensar  
-encontra as respostas.  
-O eu vibrante e intenso  
-no íntimo se constrói.
+Nesse sítio do pensar  
+encontrar as respostas.  
+Um eu vibra intenso  
+no íntimo imenso.
 
-Não vive fora de si.  
-Em ritmo maquinal.  
-Assume saber pouco,  
-ciente do que contém.
+Não vive por fora.  
+Em cinzento ritmo.  
+Nas cores da aurora,  
+desperta o íntimo.
 
 Mais que senciente,  
-consciente é nosso ser.  
-Porém o valor da mente,  
-sem ciência vai perder.
+consciente é o ser.  
+Expande a mente,  
+procura saber.
 
-Senciência própria do vivo.  
-Capaz de sentir o meio.  
-Com a ciência amplia  
-a vida no seu seio.
+Viver é senciência,  
+poder de sentir.  
+Ciência amplia  
+a vida, o viver.
 
-Com simplicidade caminhar,  
-não pensar na aparência,  
-mas na felicidade escondida,  
-no fundo, na inocência.
+Atenta jornada,  
+transmuta o olhar,  
+nas veias o pulsar,  
+da trilha forjada.
 
-O prazer que permanece,  
-em sutis transformações.  
-feitas sem prece.  
-Broto em busca da luz.
+Pulsos do baile,  
+dança de sinapses,  
+sintonia, razão,  
+feliz sensação
 
-A atenção, no caminho,  
-transforma-o em beleza.  
-A verdadeira oração,  
-forjada em cada jornada.
+Inteiro êxtase,  
+elixir da mente,  
+Sol da verdade,  
+vida consciente
 
-Criando com o que   
-todos podem se dar.   
-A cada tempo vivido.  
-Ao sentir, ao pensar,
-
-Nesse êxtase,  
-clama-se consciente:  
-A verdade espera  
-que a invente!
-
-(22/08/25)
+Segredo oculto,  
+da fauna senciente.  
+Exclamação etérea,  
+clama a quem invente.
