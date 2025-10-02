@@ -1,0 +1,5 @@
+### Alarme da janela
+
+Teclar frenético interrompe-se. Cinza janela avisa o descanso. Dentro, cheio indicador verdejante. Partindo de 10 minutos, regredindo, esvazia.  Da cozinha, o filtro espera. Copo de alumínio. Água gelada refresca. Na caixa mágica, um novelo se enrola. Cheio de desavenças. A moça atenta assiste. Por algum tempo, conversa. De volta, 6 minutos luzem no equipamento. Um processamento termina. 4 minutos e 4 segundos. O descanso é saudável, diz a epicondilite que grita nos braços. Obedecer ao alarme não é rotina. Muitas vezes ele clama. Nem sempre é atendido. Na espera, o horizonte se descortina. Rápido, um pássaro corta os céus. Serra do curral luta com os prédios. Uma paisagem castigada pela estiagem. Brancos enfeites do alto povoam o azul. Quietos, sem movimento. O verde desaparece. Retomada será a labuta. Voador solitário, o invertebrado passa.
+
+(25/08/25)

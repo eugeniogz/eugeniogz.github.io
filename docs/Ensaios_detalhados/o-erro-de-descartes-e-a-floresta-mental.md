@@ -1,0 +1,11 @@
+### O erro de Descartes e a floresta mental
+
+“É este o erro de Descartes: a separação abissal entre o corpo e a mente, entre a substância corporal, infinitamente divisível, com volume, com dimensões e com um funcionamento mecânico, por um lado, e a substância mental, indivisível, sem volume, sem dimensões e intangível; a sugestão de que o raciocínio, o juízo moral e o sofrimento adveniente da dor física ou agitação emocional poderiam existir independentemente do corpo.” (Antônio Damásio)
+
+A mente faz parte do corpo, ele a cria no espaço corpóreo, povoado seus órgãos sensoriais e governado pela máquina cerebral. Centro de todas as sensações, emoções e pensamentos. Essa poderosa máquina pode parecer, em alguns casos, extrapolar o limite corporal. Viajando nas ondas extasiadas das inúmeras conexões neuronais. Mas sua substância é material, não metafísica. Endosso o parágrafo de Damásio que abre esse texto: a mente não existe sem matéria. No entanto, o mundo que vive em cada mente é repleto de árvores vicejantes que pulsam em harmonia numa dança incessante de conexões neuronais.
+
+Essa atividade frenética do bosque mental responde aos estímulos externos, guia a tomada de decisões e, principalmente, acumula o conhecimento que o expande. Nesse processo, a busca por explicações pode levar ao acúmulo de inúmeras concepções fantasiosas que tomam conta do ser. É comodo adubar árvores de crescimento fácil, como as crenças, as religiões, as seitas e até mesmo posições políticas. Evitando o florescimento de conhecimentos que, para brotar, precisam do cuidado na seleção das melhores sementes e do esforço e paciência para desenvolvê-lo.
+
+Expurgando as ervas daninhas que surgem do apelo preguiçoso de aceitar narrativas infundadas. Com esforço e paciência, chave para cultivar no solo do método científico florestas inteiras de sólidos arvoredos, cria-se uma mente devidamente sã, onde o engano não se alastra. Uma mente que, sendo parte do corpo, torna sua existência mais plena.
+
+13/09/2025.
