@@ -1,12 +1,6 @@
 ### Aquarela de uma valsa
 
-Trilha do compasso,
-
-cores da aquarela.
-
-Unidos pelo abraço,
-
-ginga um só par.
+Trilha do compasso,cores da aquarela.Unidos pelo abraço,ginga um só par.
 
 Enlaçam corações,
 
