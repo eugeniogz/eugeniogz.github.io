@@ -23,3 +23,5 @@ Preocupado, o homem é o único que teme o futuro. Tece teorias, cria antropomó
 Longe das divagações religiosas, a morte é o fim da existência. Mas esta não terá sido inútil, se cada um cuidar para garantir um bom futuro para as próximas gerações. Aparentemente, não é isso que temos feito. Estamos a cada dia solapando os recursos naturais do nosso planeta, sem pensar nas consequências para o futuro de nossos filhos e netos.
 
 Que mundo esperamos reservar para aqueles que tanto amamos? Parece que o nosso egoísmo está nos deixando cegos. Somente acreditamos naquilo que nos convêm. Se plantar uma árvore nos traz um retorno financeiro, então plantamos. Se para garantir um planeta mais sustentável a longo prazo precisamos plantar esta mesma árvore, vamos avaliar o custo de plantar e pensar que não queremos gastar dinheiro com isso.   (31/12/21)
+
+[voltar](./)

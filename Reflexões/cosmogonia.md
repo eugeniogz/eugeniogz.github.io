@@ -1,3 +1,5 @@
 ### Cosmogonia
 
 A minha cosmogonia reflete a ideia postulada por teorias científicas onde se idealiza que um buraco negro pode ter na outra ponta um buraco branco. Nosso universo seria então um buraco branco. Imagino a existência de uma sequência infinita de pares de buracos brancos e negros.  A vida pode existir em cada um desses buracos brancos. A dor da perda é mitigada pelo entendimento da eternidade desse ciclo. O possível renascimento de outros universos me leva a crer que o conhecimento é infinito e que, em cada novo ciclo, ele avança ainda mais. (19/01/2025)
+
+[voltar](./)

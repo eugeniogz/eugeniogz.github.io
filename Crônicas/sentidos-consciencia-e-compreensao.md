@@ -7,3 +7,5 @@ Vivemos em uma época privilegiada, a humanidade nunca desfrutou de tanto confor
 Como será o estado de espírito daqueles que colhem o café na Tanzânia? O trabalho em lavouras de café naquela região é feito por inúmeros pequenos produtores. Serão eles felizes? Penso que, em muitos casos, o consumidor final da bebida vive mais infeliz que estes trabalhadores.
 
 Podemos superar isso ao encontrar os verdadeiros motivos da felicidade, que estão nas pequenas coisas. Assim, podemos viver em um estado de alegria permanente, valorizando o que vivemos. Sem esquecer de fazer o bem, o qual é sem dúvida a principal fonte dessa felicidade. (23/07/20)
+
+[voltar](./)

@@ -43,3 +43,5 @@ Minds work bright,
 but the search is yours.
 
 (25/08/25)
+
+[voltar](./)

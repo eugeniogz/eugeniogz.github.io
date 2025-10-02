@@ -16,3 +16,5 @@ Decisões nos dão o poder de agarrar as rédeas do próprio destino, guiados pe
 Atenção, singular e única, porque acompanha todo caminho consciente. A arte de viver no agora. Perceber os detalhes, escutar verdadeiramente e quebrar a rotina automática que nos faz viver no piloto automático. É na atenção ao momento presente que a vida se revela em sua riqueza e complexidade. Seu cultivo deve ser constante, mas a ciência de que a mente pode perdê-la não deve ser motivo para deixar de buscá-la, em cada instante da imperfeita jornada.
 
 Assim, os valores se moldam, combatendo imperfeições, decidindo caminhos. Na trilha dos passos de uma vida que pulsa feliz e consciente.
+
+[voltar](./)

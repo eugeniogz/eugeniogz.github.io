@@ -11,3 +11,5 @@ As ervas daninhas que surgem do apelo preguiçoso de aceitar narrativas infundad
 A mente, sendo parte do corpo, somente será plena se abrigar as sólidas árvores do conhecimento. Onde cada planta dará acolhida a novas sementes que ressoem semelhantes ao bosque da plena e corpórea mente. Plasmada a imagem da mente em incontáveis raízes e folhas verdejantes, sua complexidade está posta. Corrige-se Descartes, pois a mente é física, mas abriga em seu íntimo uma vasta floresta.
 
 13/09/2025.
+
+[voltar](./)

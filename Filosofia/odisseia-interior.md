@@ -5,3 +5,5 @@ Muitos se perdem em um labirinto de incertos caminhos, buscam a fuga voando nas 
 De posse do leme dessa odisseia, se doma a força do selvagem touro, aquele que ofuscava e confundia as trilhas da mente. Assim, surge a sabedoria de Atena, que repousa em cada ser, trazendo a verdadeira chama que ilumina a consciência. Uma luz que descortina a bússola, mensageira do verdadeiro objetivo, o qual não está nas alturas do monte Olimpo — esse fatal destino das asas de cera de Ícaro, derretidas ao sol. Seu norte orienta a heroica jornada até o confortável sítio das Cárites, as deusas da beleza e da alegria, que ordenam e confortam a mente. Liberta do labirinto, a mente reluz o triunfo da verdadeira odisseia interior: navegar no sereno mar da felicidade.
 
 (30/08/25)
+
+[voltar](./)

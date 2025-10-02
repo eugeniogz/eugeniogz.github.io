@@ -9,3 +9,5 @@ Novas filosofias permanecem à espera. Navegadores do mar metafísico buscam res
 Soluções para a vida em sociedade também parecem estagnadas. De um lado, uns defendem o liberalismo, que demonstra a sua crueldade para a maioria. Outros defendem um estado forte, que apresenta falhas, perdendo a agilidade do espírito empreendedor. Melhor seria que se descortinasse a solução que se encontra escondida, para alívio na desigualdade e estímulo da iniciativa.
 
 (17/09/25).
+
+[voltar](./)

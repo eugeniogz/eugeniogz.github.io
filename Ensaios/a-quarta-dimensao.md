@@ -11,3 +11,5 @@ Da cozinha vem o cheiro do almoço, a tela será desligada. A eminência do sagr
 Para, respira, pensa. Que bom deixar que passe no ritmo do sereno coração!
 
 23/08/25 - 14:00
+
+[voltar](./)

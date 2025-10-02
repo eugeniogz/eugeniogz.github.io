@@ -9,3 +9,5 @@ Os pensamentos e sentimentos são somente o palco onde o artista apresenta a pe�
 Mas se a sinfonia vira rotina, a dança do artista vira melancolia. Evitar esse desastre passa pelos sentidos que, em plena atenção, pintam novas harmonias. Uma cor diferente, um passo inovador que quebra o frio contínuo. Como numa caminhada ao sol, quando sinto o calor e o perfume que brilha nas flores do dia. A mente atenta não somente observa o cenário, mas alça voos vibrantes. Podendo, no esforço consciente, atingir novos horizontes, pulsando satisfeita em serena euforia.
 
 (16/09/25).
+
+[voltar](./)

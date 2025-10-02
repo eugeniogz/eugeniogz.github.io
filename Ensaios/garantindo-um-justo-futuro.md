@@ -7,3 +7,5 @@ Um sistema político forte e coeso precisa de um Estado capaz de suplantar a for
 Os temidos donos dos oceanos podem continuar sua trajetória, no entanto, sem influenciar significativamente o destino das empresas.  Cuja missão apoiadas e reguladas pelo Estado. Aquele que, por sua vez, deverá garantir aos navegantes uma viagem tranquila até o almejado destino.
 
 (17/09/25).
+
+[voltar](./)

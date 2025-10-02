@@ -23,3 +23,5 @@ Ouço o canto da asa branca, minha filha mais nova acorda, cumprimentando o avô
 De volta aos meus aposentos, olho para a janela e vejo a asa branca voando. Ela dá voltas no ar, some atrás de um prédio, reaparece e segue seu voo, sumindo no azul infinito, enquanto um coro de rolinhas, bem-te-vis, pardais e outros pássaros descortina o entardecer. De repente, se destaca o canto de um único sabiá, como um regente da sinfonia, que é retomada após sua sútil intervenção.
 
 (10/08/25).
+
+[voltar](./)

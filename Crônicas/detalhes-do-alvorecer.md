@@ -29,3 +29,5 @@ Depois da pausa para o café, ela começa os preparativos para o almoço. Já ha
 Quase tudo pronto para o almoço, pensa em preparar um bolo para assar à tarde. Procura a farinha na gaveta de baixo e não encontra. Na escada, olha as prateleiras de cima. Nada. O forno, ainda quente, esperava a massa, inexistente na falta do ingrediente principal. Será que o senhor Marcos poderá voltar ao supermercado?
 
 (19/09/25 a 23/09/25).
+
+[voltar](./)

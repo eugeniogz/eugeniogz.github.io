@@ -13,3 +13,5 @@ A trilha é tranquila, um tempo que se alonga, contando as passadas. Conversas d
 Saciadas as gargantas, seguem a caminhada, o retorno ao lar. O suor refresca o corpo, que respira observador. A casa os recebe com o tormento da televisão gritante. O poder da atenção plena da aurora se dissipa na cacofonia de vozes e batidas que poluem a audição. O aparelho ligado seduz sua mente, que perde o sossego.
 
 Recolhendo-se na varanda, o físico sente o sol. O ruído se abranda, abrindo caminho para a serena euforia. Avistando o horizonte, a mente acalma. Os neurônios bailam alheios ao sentir e ao pensar. Os prédios respiram, pulsando emoções, de seres conscientes. Nem todos presentes.
+
+[voltar](./)

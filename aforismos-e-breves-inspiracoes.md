@@ -51,3 +51,5 @@ As telas iluminam as teclas que domam a escuridão. (19/09/25)
 A atenção consciente é fugaz, sua busca deve ser tenaz. (30/09/25)
 
 Sentir e pensar presentes favorecem o saudável brilho da serena euforia. (01/10/25)
+
+[voltar](./)

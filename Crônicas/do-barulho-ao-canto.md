@@ -15,3 +15,5 @@ Com a grande rede, qualquer um pode ser um “influenciador”, utilizando o seu
 Quando o mundo for menos desigual, a vida das formiguinhas se transformará. Com mais dignidade, a busca por um futuro melhor deixará de ser pessoal, se tornando coletiva. Muitos se unirão na luta por fazer a diferença. O bem superará o desejo de propagar o mal. Isso garantirá um futuro musical, onde o canto prevaleça sobre o barulho.
 
 (25/08/25)
+
+[voltar](./)

@@ -11,3 +11,5 @@ A verdade não ganha seguidores. Não tem graça divulgar a ciência, mas uma fo
 O quarto poder tenta negar fakes com fatos, porém parece que, enquanto houver pessoas dispostas a acreditar no irreal, o que é simples e plausível vai perdendo força. Começar a duvidar do grande prazer do rebuscado irreal é o primeiro passo para tornar o valor da verdade, mesmo que simples, ganhar poder. Esse deve ser o objetivo de cada um dos bilhões de humanos, navegantes desse pequeno planeta azul.
 
 13/09/25.
+
+[voltar](./)

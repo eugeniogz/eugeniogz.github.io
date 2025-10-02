@@ -9,3 +9,5 @@ Na esteira dos famosos cientistas, surge da física atômica um poder ignorado p
 A meta, que nos estudos se gesta, trabalha as quatro forças no verdadeiro deus almejado. Um deus sem nome, além de Zeus e Tupã, objetivo de toda existência, a espera do ocaso final. Onde o infinito se dobra em silêncio, quando restará apenas a música das partículas. Com um coro de átomos dançando no escuro, saudando o adeus ao finito, despede-se o pálido ponto azul.
 
 (04/09/25)
+
+[voltar](./)

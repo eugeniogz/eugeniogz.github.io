@@ -19,3 +19,5 @@ Sentado em frente ao computador, abri uma gaveta. Me deparando com vários itens
 Hoje é fácil passar horas rolando telas, jogando videogame, enfim, toda a sorte de entretenimento. Do mesmo modo, podemos perder tempo "jogando conversa fora" em mesas de bar ou em reuniões vazias. É certo que se deve curtir esses momentos, podemos vivê-los, o segredo é evitar que os mesmos sejam o que ocupa as nossas gavetas. Um passeio a dois, observando e dialogando sobre a vida ou em um momento com um café. Aquele preparado com ciência. Onde se extrai do pó a sua essência. Aquecendo a água, visualizando nas bolhas a temperatura ideal, derramada, em seguida, sobre o coador em despejos controlados. Enfim, saborear o delicioso aroma e sabor dessa bebida, que, um dia, já detestei.
 
 (20/08/25)
+
+[voltar](./)

@@ -9,3 +9,5 @@ Durante os quinze minutos de conversa, no passo firme da mocidade, uma pausa na 
 Hoje, as paineiras se renovam a cada estação, mas os novos estudantes quase não enxergam. Ocupados com os jogos digitais e a correria. O calor da amizade dos jogos de peteca é raridade. Foi preciso proibir os modernos telefones nas escolas. A sincera preocupação dos pais e mestres amplia a luta por uma infância menos conectada. A certeza de um futuro no qual as painas pintem os olhos dos jovens surge no horizonte. Assim, na totalidade de cores que o branco representa, a paz da contemplação reinará sobre a insana virtual prisão.
 
 (20/09/25)
+
+[voltar](./)

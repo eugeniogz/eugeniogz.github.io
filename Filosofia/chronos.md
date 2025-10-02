@@ -15,3 +15,5 @@ Hoje, porém, muitos ainda vivem como se Cronos ainda governasse. Rolando a mesm
 Mas Zeus permanece soberano. A música universal—a harmonia do cosmos—ainda quebra a monotonia. Ser ciente disso é libertar-se. É reconhecer que cada instante é único, um presente novo a viver. É escolher sentir o mundo como ele é: acíclico, linear—e por isso, precioso.
 
 23/08/25 - 18:00
+
+[voltar](./)

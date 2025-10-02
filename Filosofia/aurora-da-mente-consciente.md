@@ -6,4 +6,7 @@ Sentir essa dádiva é próprio do humano, mas poucos a buscam. Perdidos na sís
 
 Esse sonho é possível para mentes atentas. Basta enxergar o que se sente e observar o que se pensa, pois em momentos propícios o espírito se ilumina. Pensar e sentir conscientemente favorecem esse instante de serena euforia, onde o corpo é o palco onde a alma baila pura e simples. Basta que o palco se situe em um local tranquilo, sem notar o ruído da plateia de estímulos. No conforto do lar, no movimento do caminho, o espírito repousa esperando a deixa da delicada dança. Valsa de neurônios pulsando em feliz sintonia.
 
-A aurora da mente consciente, a serena euforia. Pode acontecer todo dia, em saudáveis instantes de paz e alegria. Ocasiões especiais nas quais os sentimentos não gritam, os pensamentos não perturbam. Eles estarão sempre lá, não é o vazio, a meditação incompreendida, mas o suave pensar e sentir. Presença sentida como palco e plateia, mas que não ofusca o brilho da mente. Que flutua, se expande, numa grata sensação de ser por si só. Sem ocupação que a distraia. Somente o caminho de um ser consciente.
+A aurora da mente consciente, a serena euforia. Pode acontecer todo dia, em saudáveis instantes de paz e alegria. Ocasiões especiais nas quais os sentimentos não gritam, os pensamentos não perturbam. Eles estarão sempre lá, não é o vazio, a meditação incompreendida, mas o suave pensar e sentir.   
+Presença sentida como palco e plateia, mas que não ofusca o brilho da mente. Que flutua, se expande, numa grata sensação de ser por si só. Sem ocupação que a distraia. Somente o caminho de um ser consciente.
+
+[voltar](./)

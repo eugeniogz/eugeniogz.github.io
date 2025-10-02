@@ -12,3 +12,5 @@
 - [Adeus ao finito](./adeus-ao-finito.html)
 - [A mão invisível da ganância](./a-mao-invisivel-da-ganancia.html)
 - [A quarta dimensão](./a-quarta-dimensao.html)
+
+[voltar](./)

@@ -1,6 +1,6 @@
 ### Tecendo a vida
 
-### Introdução
+### **Introdução**
 
 A arte de viver requer aprendizado constante. Compreendendo que os desafios que experimenta servem a um propósito individual, o artista precisa reconhecer que a obra nunca termina. A tapeçaria de reflexões que se tece poderá apresentar-se bela ao olhar do criador. Uma beleza resplandecente na consciência daquele que enxerga o colorido entrelaçado de suas experiências. Ciente da sua infindável tarefa, sua obra, sua vida, por mais sem sentido que pareça, iluminará seu entendimento com valorosas compreensões sobre o aprimoramento de seu ofício.
 
@@ -8,7 +8,7 @@ A felicidade surge ao descortinar o véu da ignorância ante a beleza da obra-pr
 
 Os nobres sentimentos brotam e se solidificam com o conhecimento, o tempo e o futuro. Cabe ao artífice da vida aprender a consolidá-los, aumentando sua capacidade criadora. A galeria de sua obra deve ser cuidada, não para ser vista, mas para que o proprietário geste sua obra pessoal. Que se molda a cada fio entrelaçado feita de vitórias e fracassos, amores e desavenças.
 
-### Brincando e fazendo arte
+### **Brincando e fazendo arte**
 
 Começando a aprender o ofício desde os primeiros anos de vida, o ser humano, mesmo sem saber, já começa a entrelaçar os coloridos fios de sua consciência. Brincando no mundo de fantasia, gradualmente vai formando no seu pequeno sítio mental belas imagens. Um artista que, de rabiscos e aventuras, molda no seu íntimo uma concepção própria do mundo que o rodeia.
 
@@ -22,7 +22,7 @@ Atualmente, os desafios para os pais e educadores são crescentes. Crianças nas
 
 Cabe, pois, aos adultos o esforço de se libertar das amarras dos algoritmos, para mostrar o verdadeiro mundo, palco da tapeçaria que cada um tece e no qual os novos artistas poderão criar a obra de suas vidas. Uma obra que iluminará com fios reluzentes o sítio mental da humanidade nascente. Criada não com algoritmos, mas com os frutos do conhecimento que brotarão nos pequenos sítios, regadas com o calor do afeto e cultivadas com a simplicidade das brincadeiras.
 
-### Incertezas da adolescência
+### **Incertezas da adolescência**
 
 Trilhado o caminho da infância, um artista em amadurecimento continua seu trabalho com os fios da vida. Nessa fase, as dúvidas tornam as escolhas mais difíceis. Críticas de colegas e amigos aumentam ainda mais a insegurança do artífice. Inevitáveis comparações se apresentam no convívio com pessoas. Como saber se os estimados e coloridos fios que vieram desde a infância teceram um valoroso caráter?
 
@@ -30,7 +30,7 @@ Novamente, a tecnologia e as redes sociais estarão presentes. Deixando, na maio
 
 Na tentativa de se engajar com a maioria, o jovem perde o fio da meada, se enrola no novelo das críticas. Perdendo seu tempo, esquece-se da obra de sua vida. Porém, a base construída desde a infância consegue indicar o caminho, permitindo ao jovem seguir em frente. Nesse instante, o exemplo de pais, mestres e amigos será uma poderosa força. Composta de hercúleas cordas ressonantes com as escolhas do jovem artista.
 
-### Desafios da vida adulta
+### **Desafios da vida adulta**
 
 Seguindo em frente, a galeria do sítio mental já exibe resultados da obra que abriga. Os fios das convicções apresentam indeléveis padrões que moldam a conduta. Avistando múltiplos novelos, matérias-primas para construir futuros, o adulto precisa escolher os que lhe atraem. Dentre eles, na prateleira das vocações repousam os múltiplos destinos profissionais. Acessar aqueles mais desejados nem sempre é possível. Buscar o ofício almejado pode se tornar uma luta de tentativas frustradas.
 
@@ -38,7 +38,7 @@ A base alcançada desde a infância e a maturidade servirão para definir um rum
 
 Surgem os primeiros relacionamentos, frutos da busca por um par que ressoe com os incontáveis fios que moldam a obra em constante construção. Muitas tentativas se destoam, rompem-se laços que pareciam firmes, mas que não ecoavam no ritmo do ser em evolução. Obras parecidas em estilo, mas com outras inspirações.
 
-### Tecendo uma vida a dois
+### **Tecendo uma vida a dois**
 
 A vida ganha outro sentido quando duas cordas ressonantes especiais entrelaçam-se na bela tapeçaria de amor conjugal. Forma-se um casal que sustentará sua força na ação do verbo amar, que, sedimentado no sítio mental individual, tece padrões comuns. Fortes laços do amor consciente, que não tiram a liberdade do artista individual. Os fios da união não devem se embaraçar, tornando-se adições harmônicas à trama original do artista.
 
@@ -59,3 +59,5 @@ O artífice da vida, com a maturidade, compreende a sua obra em toda a sua ampli
 Cada dia é uma nova oportunidade de entrelaçar fios, de burilar a obra-prima que é a própria existência. O sítio mental permanece em constante transformação, abrigando novas compreensões e novas cores. O artista, ciente de sua infindável tarefa, abraça os desafios e as alegrias, celebrando cada momento com a leveza de uma dança. Que se cria e aprimora a cada passo, a cada respiração, em um universo de infinitas possibilidades. No compasso do coração, o artista sente seu sítio mental pulsar no ritmo da vida. Nesse estado de atenção consciente, a cada movimento a obra se ilumina. E assim, no estado de plena felicidade, percebe que a obra, mesmo inacabada, sobreviverá ao seu criador. Vibrando em harmônica sintonia com a dança eterna dos artistas, que, como ele, tecerão tramas ressonantes com os eternos fios da criação.
 
 (04/09/25)
+
+[voltar](./)

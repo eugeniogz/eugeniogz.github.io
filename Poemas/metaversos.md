@@ -39,3 +39,5 @@ O melhor é viver na realidade.
 (10/08/22)
 
 Baseado no poema: Há metafísica bastante em não pensar em nada (Alberto Caeiro)
+
+[voltar](./)

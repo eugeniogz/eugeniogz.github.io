@@ -13,3 +13,5 @@ Algumas vezes, vovô Aurélio acompanhava os meninos até o rio. Todos recordam 
 A noite, após o jantar, vovô Aurélio foi até sua estante e pegou um grosso livro, as mil e uma noites. Folheou calmamente e disse: — Hoje vou ler a história do homem que sabia a língua dos pássaros. A fábula contava sobre um homem que recebe a dádiva de entender a linguagem dos animais. Com o seu dom, o homem aprendia com os pássaros e outras criaturas, percebendo a interdependência entre os seres vivos e a natureza. Certo dia, ele ouve os pássaros discutindo a chegada de uma seca e a necessidade de proteger as fontes de água da região. O homem, então, com a ajuda de amigos, consegue preservar um oásis importante que sustentou toda a vida na região.
 
 Após a leitura, o sábio avô complementa dizendo: — A natureza fala conosco, se soubermos ouvir, devemos aprender a preservá-la.
+
+[voltar](./)

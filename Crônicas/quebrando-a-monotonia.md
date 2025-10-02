@@ -29,3 +29,5 @@ A vida pode apresentar de nuances sutis a mudanças bruscas, que podem passar de
 Esses momentos inesquecíveis dão mais cor à vida, mas assim podem ser, também, as nuances, como uma tonalidade a mais no pôr do sol do dia seguinte. A monotonia pode existir em nós, mas cada dia traz uma experiência diferente. O mais importante é encontrar esse colorido tão especial: existir é perceber os detalhes que quebram a monotonia. Aqueles que não o fazem vivem uma vida cinza.
 
 (11/08/25)
+
+[voltar](./)

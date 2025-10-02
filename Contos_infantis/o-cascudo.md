@@ -1,6 +1,6 @@
 ### O Cascudo
 
-## O Cascudo
+## **O Cascudo**
 
 Fevereiro 11, 2008
 
@@ -27,3 +27,5 @@ Chegando lá, colocaram o peixe no aquário. Ele grudou a boca nas paredes do vi
 Assim os duas irmãs concluiram que tinham conseguido pescar um cascudo. Mostraram para o avô, que confirmou ser um cascudo e disse: Viram, na natureza cada animal tem um papel importante, o cascudo ajuda a limpar o lodo. Nós como temos maior inteligência devemos colaborar para preservar a natureza.
 
 CategoriasUncategorizedEtiquetas:Aprender com os mais velhos, Natureza
+
+[voltar](./)

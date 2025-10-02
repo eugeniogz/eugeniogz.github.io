@@ -17,3 +17,5 @@ Liberta do labirinto, guiada pela mente iluminada, iniciou sua triunfal odisseia
 Dirce encontra nas graças, nas Cárites, o confortável sítio da felicidade.
 
 Desde então, a centelha divina guia seus serenos passos. Como uma bússola para a paz e a ciência.
+
+[voltar](./)

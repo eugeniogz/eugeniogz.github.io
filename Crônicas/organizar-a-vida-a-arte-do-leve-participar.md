@@ -13,3 +13,5 @@ Buscar soluções no órgão máximo do nosso corpo pode parecer antiquado. Mas 
 Nesse instante, a felicidade falará mais alto no ser.
 
 (21/08/25)
+
+[voltar](./)
