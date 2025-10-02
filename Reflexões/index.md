@@ -1,6 +1,6 @@
 # Índice
 
-## Documentos
+## Reflexões
 - [Finita existência](./finita-existencia.html)
 - [Roupas ao vento](./roupas-ao-vento.html)
 - [Ipês e tijolos](./ipes-e-tijolos.html)

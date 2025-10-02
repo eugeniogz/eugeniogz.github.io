@@ -1,6 +1,6 @@
 # Índice
 
-## Documentos
+## Ensaios
 - [O erro de Descartes e a floresta mental](./o-erro-de-descartes-e-a-floresta-mental.html)
 - [O valor da verdade](./o-valor-da-verdade.html)
 - [O caminho do conhecimento](./o-caminho-do-conhecimento.html)

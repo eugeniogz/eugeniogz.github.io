@@ -1,6 +1,6 @@
 # Índice
 
-## Documentos
+## Poemas
 - [Vida consciente](./vida-consciente.html)
 - [Saber que pulsa alegria](./saber-que-pulsa-alegria.html)
 - [Aquarela de uma valsa](./aquarela-de-uma-valsa.html)

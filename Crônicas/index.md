@@ -1,6 +1,6 @@
 # Índice
 
-## Documentos
+## Crônicas
 - [Baile de uma mente atenta](./baile-de-uma-mente-atenta.html)
 - [Relógios e cafés](./relogios-e-cafes.html)
 - [Organizar a vida: a arte do leve participar](./organizar-a-vida-a-arte-do-leve-participar.html)

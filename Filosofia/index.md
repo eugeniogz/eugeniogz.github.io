@@ -1,6 +1,6 @@
 # Índice
 
-## Documentos
+## Filosofia
 - [Aurora da mente consciente](./aurora-da-mente-consciente.html)
 - [Serena euforia](./serena-euforia.html)
 - [Eudaimonia](./eudaimonia.html)

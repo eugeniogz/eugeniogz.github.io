@@ -1,6 +1,6 @@
 # Índice
 
-## Documentos
+## Contos infantis
 - [Rio Japão](./rio-japao.html)
 - [Alegria de Colaborar](./alegria-de-colaborar.html)
 - [Carolina na Internet](./carolina-na-internet.html)
