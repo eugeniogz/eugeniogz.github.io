@@ -24,9 +24,7 @@ Felicidade: aproveitar o caminho da evolução ciente da utópica perfeição. (
 
 Os pilares da felicidade: Criar, Amar, Recordar e Evoluir, requerem cuidado (CARE). (25/02/23)
 
-O amor para existir não precisa ser divulgado, sua força é um tesouro precioso.
-
-(30/09/25)
+O amor para existir não precisa ser divulgado, sua força é um tesouro precioso. (30/09/25)
 
 Não há amor sem a prática ativa do amar.
 

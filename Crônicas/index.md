@@ -1,10 +1,10 @@
 # Índice
 
 ## Crônicas
-- [Baile de uma mente atenta](./baile-de-uma-mente-atenta.html)
+- [Alvorecer](./alvorecer.html)
+- [Baile da atenção consciente](./baile-da-atencao-consciente.html)
 - [Relógios e cafés](./relogios-e-cafes.html)
 - [Organizar a vida: a arte do leve participar](./organizar-a-vida-a-arte-do-leve-participar.html)
-- [Detalhes do alvorecer](./detalhes-do-alvorecer.html)
 - [Tapete de algodão](./tapete-de-algodao.html)
 - [Odisseia interior - estória com personagens](./odisseia-interior-estoria-com-personagens.html)
 - [Reinventando o cotidiano](./reinventando-o-cotidiano.html)

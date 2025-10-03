@@ -1,4 +1,4 @@
-### Detalhes do alvorecer
+### Alvorecer
 
 Marcos acorda com o som programado de seu moderno aparelho, cada dia menos usado para o que nasceu seu avô, telefone. Com a agilidade que o torpor do sono permite, prepara-se para o exercício. Seu treinador avisa da sua iminente chegada. Pão com queijo, leite puro e ele está pronto. No subsolo, encontra Ivan esperando para orientá-lo naquela hora de esforço. Com a precisão suíça, já havia buscado as chaves e preparado a academia. Para Marcos, a saudável e monótona obrigação transmuta-se em um alegre momento com a agradável e descomprometida conversa que trava com seu tutor. Que, apesar de 20 anos mais novo, tem sempre um assunto interessante.
 

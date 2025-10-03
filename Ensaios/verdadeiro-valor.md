@@ -1,4 +1,4 @@
-### O valor da verdade
+### Verdadeiro valor
 
 “A mente crédula [...] experimenta um grande prazer em acreditar em coisas estranhas, e quanto mais estranhas forem, mais facilmente serão aceitas; mas nunca leva em consideração as coisas simples e plausíveis, pois todo mundo pode acreditar nelas.” (Samuel Butler)
 
@@ -8,7 +8,7 @@ Ingênuas, pessoas comuns cultivam um séquito de fãs que acompanham avidamente
 
 A verdade não ganha seguidores. Não tem graça divulgar a ciência, mas uma foto de uma cabeça na boca de um tigre ganha o mundo. Em que isso pode ser útil para a vida? Maior agravante se apresenta com a Inteligência artificial. É possível gerar uma foto de um leão com pele de cobra bastante realista, então o prazer da credulidade mais uma vez pode inundar o mundo com fotos, áudios, vídeos, enfim inúmeras esquisitices.
 
-O quarto poder tenta negar fakes com fatos, porém parece que, enquanto houver pessoas dispostas a acreditar no irreal, o que é simples e plausível vai perdendo força. Começar a duvidar do grande prazer do rebuscado irreal é o primeiro passo para tornar o valor da verdade, mesmo que simples, ganhar poder. Esse deve ser o objetivo de cada um dos bilhões de humanos, navegantes desse pequeno planeta azul.
+O quarto poder tenta negar fakes com fatos, porém parece que, enquanto houver pessoas dispostas a acreditar no irreal, o que é simples e plausível vai perdendo força. Começar a duvidar do grande prazer do rebuscado irreal é o primeiro passo para tornar o valor da verdade, mesmo que simples, ganhar poder. Esse deve ser o objetivo de cada um dos bilhões de humanos, navegantes deste pequeno planeta azul.
 
 13/09/25.
 

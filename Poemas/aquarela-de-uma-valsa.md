@@ -1,40 +1,40 @@
 ### Aquarela de uma valsa
 
-Trilha a duplo passo,  
+Pinta o duplo passo,  
 cores da aquarela.  
-Unidos pelo abraço,  
+Unido no abraço,  
 ginga a velejar.
 
-Enlaçam corações,  
+Brotos a caminhar,  
 flores em sintonia,  
-coloridos botões  
-florescem poesia.
+notas de botões  
+nascendo alegria.
 
-Serena evolução,  
+Serena criação,  
 paleta a dançar.  
 valsa da emoção  
 pintando sinfonia.
 
-Luzem dois corações,  
-Além do firmamento.  
-Expande o movimento,  
-rota do céu ao mar.
+Luzindo corações,  
+sobre o firmamento.  
+voo alado, vento,  
+alçando céu e mar.
 
-Cantam aninhadas  
-aves do entardecer;   
-Prelúdio da alvorada,   
-manhã que irá nascer.
+Aninhado sussuro,   
+aves a entardecer,  
+prelúdio, alvorada,  
+manhã irá nascer.
 
-Seiva brindando vida,  
+Seiva brinda vida,  
 folhas a flutuar,  
-o suave movimento  
-do ritmo do mar.
+no leve movimento  
+beijo suave lar.
 
 Suaves na balsa,  
 nave do porvir:  
 vivem a terna valsa,  
 amor eterno amar.
 
-(02/10/25)
+(03/10/25)
 
 [voltar](./)

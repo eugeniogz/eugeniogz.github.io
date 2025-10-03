@@ -1,12 +1,12 @@
 # Índice
 
 ## Poemas
-- [Vida consciente](./vida-consciente.html)
-- [Saber que pulsa alegria](./saber-que-pulsa-alegria.html)
+- [Café em flor](./cafe-em-flor.html)
+- [Infância perdida](./infancia-perdida.html)
+- [Pulsando alegria](./pulsando-alegria.html)
 - [Aquarela de uma valsa](./aquarela-de-uma-valsa.html)
+- [Vida consciente](./vida-consciente.html)
 - [A busca](./a-busca.html)
 - [Metaversos](./metaversos.html)
-- [Café em flor](./cafe-em-flor.html)
-- [Infância perdida na bala ](./infancia-perdida-na-bala.html)
 
 [voltar](../)

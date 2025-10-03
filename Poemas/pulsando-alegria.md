@@ -1,4 +1,4 @@
-### Saber que pulsa alegria
+### Pulsando alegria
 
 Suor criativo  
 fonte da arte  
