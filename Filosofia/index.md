@@ -1,8 +1,9 @@
 # Índice
 
 ## Filosofia
-- [Aprimorando a Herança espiritual](./aprimorando-a-heranca-espiritual.html)
 - [Aurora da mente consciente](./aurora-da-mente-consciente.html)
+- [Êxtase](./extase.html)
+- [Aprimorando a Herança espiritual](./aprimorando-a-heranca-espiritual.html)
 - [Serena euforia](./serena-euforia.html)
 - [Eudaimonia](./eudaimonia.html)
 - [Chronos](./chronos.html)
