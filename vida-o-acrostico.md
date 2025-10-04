@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Vida: O acróstico 
+title: "Vida: O acróstico "
 --- 
 
 ## Vida: O acróstico 

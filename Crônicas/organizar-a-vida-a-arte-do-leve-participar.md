@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Organizar a vida: a arte do leve participar
+title: "Organizar a vida: a arte do leve participar"
 --- 
 
 ## Organizar a vida: a arte do leve participar
