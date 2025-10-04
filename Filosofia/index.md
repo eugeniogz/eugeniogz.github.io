@@ -1,6 +1,7 @@
 # Índice
 
 ## Filosofia
+- [Êxtase](./extase.html)
 - [Aprimorando a Herança espiritual](./aprimorando-a-heranca-espiritual.html)
 - [Aurora da mente consciente](./aurora-da-mente-consciente.html)
 - [Serena euforia](./serena-euforia.html)
@@ -8,7 +9,6 @@
 - [Chronos](./chronos.html)
 - [O que nos faz humanos](./o-que-nos-faz-humanos.html)
 - [É possível viver sem crer](./e-possivel-viver-sem-crer.html)
-- [Meu eu espiritual](./meu-eu-espiritual.html)
 - [Escolhas](./escolhas.html)
 - [Odisseia interior](./odisseia-interior.html)
 
