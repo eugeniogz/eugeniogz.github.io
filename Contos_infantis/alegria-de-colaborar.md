@@ -1,4 +1,9 @@
-### Alegria de Colaborar
+---
+layout: default
+title: Alegria de Colaborar
+--- 
+
+## Alegria de Colaborar
 
 Fevereiro 11, 2008
 

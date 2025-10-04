@@ -1,4 +1,9 @@
-### A quarta dimensão
+---
+layout: default
+title: A quarta dimensão
+--- 
+
+## A quarta dimensão
 
 O som agradável da música vem do banheiro, misturando-se ao barulho da água que cai do chuveiro. Ela canta junto. Na boca repousa o gosto da bebida, marcante e saboroso. A tela exibe o programa que permite a escrita. Sentindo as teclas suaves, os dedos habilmente percorrem cada letra, símbolo e acento. A escrita já foi com canetas e cadernos, hoje ele não tem tanta destreza. Sua letra no papel chega a ser ilegível. Folheando o passado, a caligrafia se dissolve em garranchos sem sentido.
 

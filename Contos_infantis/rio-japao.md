@@ -1,4 +1,9 @@
-### Rio Japão
+---
+layout: default
+title: Rio Japão
+--- 
+
+## Rio Japão
 
 O pequeno Marcos e seus dois irmãos, todo ano, contavam as horas para as costumeiras viagens à terra natal dos seus pais. Lá viviam intensos momentos na companhia dos avós Aurélio e Dirce. Vovó Dirce fazia quitandas de milho e de trigo, deliciosas broas e biscoitos, assados em um grande forno ao lado do paiol. Fora os doces de leite, sempre encontrados no pote da sala de jantar, que por coincidência ficava no caminho entre a cozinha e a entrada da casa, no entanto, por mais que comessem, parecia estar sempre cheio. Do pote de doces, corriam pelo quintal em divertidas brincadeiras da vida do campo.
 

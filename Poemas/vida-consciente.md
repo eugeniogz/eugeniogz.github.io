@@ -1,4 +1,9 @@
-### Vida consciente
+---
+layout: default
+title: Vida consciente
+--- 
+
+## Vida consciente
 
 Aproveitar o caminho,  
 oportunidade sem par.  

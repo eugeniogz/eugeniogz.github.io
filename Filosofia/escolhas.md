@@ -1,4 +1,9 @@
-### Escolhas
+---
+layout: default
+title: Escolhas
+--- 
+
+## Escolhas
 
 A vida é cheia de escolhas, cada uma delas contribui para o nosso destino. Muitas vezes é impossível mudar o rumo traçado por tais escolhas, no entanto, em alguns casos podemos corrigir a direção que tomamos. Devemos considerar que não podemos controlar tudo, pois muito do que vivemos resulta de eventos externos.
 

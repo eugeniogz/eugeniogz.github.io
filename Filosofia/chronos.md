@@ -1,4 +1,9 @@
-### Chronos
+---
+layout: default
+title: Chronos
+--- 
+
+## Chronos
 
 Cronos, o mais velho dos Titãs, movido pelo medo de ser usurpado, devorava cada filho recém-nascido. Num ato de pura voracidade, engolia não apenas corpos, mas futuros inteiros, condenando-os à escuridão silenciosa de seu ventre—um ciclo maldito onde o tempo não passava, apenas se repetia.
 

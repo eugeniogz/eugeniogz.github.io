@@ -1,4 +1,9 @@
-### Adeus ao finito
+---
+layout: default
+title: Adeus ao finito
+--- 
+
+## Adeus ao finito
 
 Zeus, Thor, Tupã, deuses do trovão, ressoam seu martelo na terra. Todavia, é o clarão do raio que anuncia o estrondo. Sua luz é fruto da incrível força eletromagnética, um mistério da antiguidade, esclarecido pelas equações de Maxwell. Eletricidade e magnetismo compõem de forma sublime a beleza dessa força. Quando visível, pinta os olhos com os tons da natureza. Nas mãos humanas, ilumina cidades, tece teias digitais.
 

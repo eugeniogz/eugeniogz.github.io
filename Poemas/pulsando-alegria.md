@@ -1,4 +1,9 @@
-### Pulsando alegria
+---
+layout: default
+title: Pulsando alegria
+--- 
+
+## Pulsando alegria
 
 Suor criativo  
 fonte da arte  

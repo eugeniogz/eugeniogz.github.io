@@ -1,4 +1,9 @@
-### Aurora da mente consciente
+---
+layout: default
+title: Aurora da mente consciente
+--- 
+
+## Aurora da mente consciente
 
 Um breve instante de alegria intensa, experiência radiante da mente sem pressa. Que vive um momento além do comum. Um estado superior, uma grande euforia, contida e serena. Caloroso aconchego, fogo que não queima. Uma serena euforia que não é tão distante surge espontaneamente. Numa caminhada ao sol da tarde, observando árvores e bichos. Não importa se a trilha é a paisagem urbana ou a tranquila pintura que da seiva emana. Quando os estímulos dos sentidos não ferem a sensibilidade e o pensamento fluido não perturba a consciência. Um estado possível nesses simples momentos, que elevam sinapses em energia vital.
 

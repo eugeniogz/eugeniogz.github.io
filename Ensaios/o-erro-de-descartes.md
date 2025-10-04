@@ -1,4 +1,9 @@
-### O erro de Descartes
+---
+layout: default
+title: O erro de Descartes
+--- 
+
+## O erro de Descartes
 
 “É este o erro de Descartes: a separação abissal entre o corpo e a mente, entre a substância corporal, infinitamente divisível, com volume, com dimensões e com um funcionamento mecânico, por um lado, e a substância mental, indivisível, sem volume, sem dimensões e intangível; a sugestão de que o raciocínio, o juízo moral e o sofrimento adveniente da dor física ou agitação emocional poderiam existir independentemente do corpo.” (Antônio Damásio)
 

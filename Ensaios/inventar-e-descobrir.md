@@ -1,4 +1,9 @@
-### Inventar é descobrir
+---
+layout: default
+title: Inventar é descobrir
+--- 
+
+## Inventar é descobrir
 
 Inventar, Invenire, do latim, tem como significado literal descobrir. Tomei contato com essa sutileza estudando a biografia de Jorge Luís Borges. O ofício do artista criador não é diminuído ao posicioná-lo como um desbravador. Caminhos para obras-primas são sempre descobertas do mundo. Científicas ou metafísicas, as respostas estão no Universo, aguardando que mentes criativas as inventem.
 

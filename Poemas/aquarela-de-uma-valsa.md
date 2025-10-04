@@ -1,4 +1,9 @@
-### Aquarela de uma valsa
+---
+layout: default
+title: Aquarela de uma valsa
+--- 
+
+## Aquarela de uma valsa
 
 Pinta o duplo passo,  
 cores da aquarela.  

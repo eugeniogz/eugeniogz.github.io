@@ -1,4 +1,9 @@
-### Reinventando o cotidiano
+---
+layout: default
+title: Reinventando o cotidiano
+--- 
+
+## Reinventando o cotidiano
 
 No conforto do meu quarto, uma cama Queen é ocupada apenas por mim, sentado. Um pijama quadriculado, um cobre leito cinza atravessado por um enfeite tecido em linha multicolorido, uma blusa de lã verde jogada sobre a mesma. Quatro travesseiros. Uma cômoda estreita com objetos variados, dentre eles três porta retratos que capturam momentos do casal e sua família. Um espelho calado, os computadores sem vida. Na sala, uma TV estridente transmite a novela. Não tenho vontade de assistir a essa melodramática e imensamente cruel trama.
 

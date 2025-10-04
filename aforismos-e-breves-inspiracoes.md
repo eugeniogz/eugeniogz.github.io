@@ -1,4 +1,9 @@
-### Aforismos e breves inspirações
+---
+layout: default
+title: Aforismos e breves inspirações
+--- 
+
+## Aforismos e breves inspirações
 
 As trevas que encobrem a humanidade advêm da preguiça em mover a pedra que esconde a verdade. (07/07/19)
 

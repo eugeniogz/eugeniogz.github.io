@@ -1,4 +1,9 @@
-### Odisseia interior - estória com personagens
+---
+layout: default
+title: Odisseia interior - estória com personagens
+--- 
+
+## Odisseia interior - estória com personagens
 
 Dirce vivia perdida num dédalo de incertos caminhos. Tentava escapar com quiméricas e frágeis asas. Pintadas pela imaginação.
 

@@ -1,4 +1,9 @@
-### Sentidos, consciência e compreensão
+---
+layout: default
+title: Sentidos, consciência e compreensão
+--- 
+
+## Sentidos, consciência e compreensão
 
 Sorvendo uma xícara de café expresso da Tanzânia, enquanto penso sobre os mistérios da vida. O café é bom, assim é a vida. Por que então surge a tristeza? O que nos falta é ter certeza de que a sorte nos brinda com milhares de prêmios, como esta xícara de café, por exemplo, que nos dá o prazer de sentir o sabor do fruto que vem de cultivos de uma região tão remota.
 

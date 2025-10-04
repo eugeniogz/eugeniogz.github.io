@@ -1,4 +1,9 @@
-### Do barulho ao canto
+---
+layout: default
+title: Do barulho ao canto
+--- 
+
+## Do barulho ao canto
 
 As gotas da chuva recente ainda pingam, o cheiro inconfundível de terra molhada povoa meu olfato, disparando memórias de outras chuvas na roça. Mesmo na vida corrida da cidade, o recanto do meu jardim exala o mesmo aroma que me transporta para o campo. Uma trilha de formigas corre o chão úmido com a urgência própria de operárias. Lembro da luta de milhares de trabalhadores que, na cidade grande, percorrem trilhas criadas pelos automóveis em suas motos. Eles arriscam a vida nesses veículos, qualquer acidente pode ser fatal.
 

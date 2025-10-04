@@ -1,4 +1,9 @@
-### Quebrando a monotonia
+---
+layout: default
+title: Quebrando a monotonia
+--- 
+
+## Quebrando a monotonia
 
 No horizonte, o ocaso do sol atrás das construções mais distantes. Poucas nuvens no céu tornam o espetáculo ainda mais bonito, adicionando tonalidades adicionais ao céu azul-claro. Prédios multicoloridos, de diversos tamanhos e arquiteturas, brotam do chão. Alguns mais baixos mostram seus telhados marrons. O verde-escuro das árvores esconde as ruas e calçadas, que estão lá, mas não aparecem. Dois urubus esvoaçam de um canto ao outro, fazendo círculos no ar. Sobem alto, a procura de algum alimento. Esse deve ser o último voo do dia. A noite deve chegar logo. O barulho do trânsito aumenta. Jovens começando a curtir os rolês, gente retornando aos seus lares.
 

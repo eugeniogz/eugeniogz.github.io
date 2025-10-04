@@ -1,4 +1,9 @@
-### Relógios e cafés
+---
+layout: default
+title: Relógios e cafés
+--- 
+
+## Relógios e cafés
 
 São onze horas, o trabalho não rende. Recordo do relógio que, dentre três, havia levado ontem para trocar a bateria. Ao contrário dos demais, o caso dele não se resumia à troca. A bateria tinha vazado, sujando toda a máquina. Apesar de ter feito orçamento, quis perguntar para a dona, concluiu-se que valia a pena por ser o mais caro e bonito. Corpo de titânio e por isso muito leve. Resolvo fazer uma pausa e levá-lo, quem sabe na volta as ideias estariam mais frescas. Também tenho um relógio de titânio, mas sua pulseira está torta pelo tempo, a efemeridade que torna o que registra menor que a dimensão medida.  
   

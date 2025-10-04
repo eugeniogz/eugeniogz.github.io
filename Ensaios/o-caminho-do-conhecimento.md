@@ -1,4 +1,9 @@
-### O caminho do conhecimento
+---
+layout: default
+title: O caminho do conhecimento
+--- 
+
+## O caminho do conhecimento
 
 Na vida trilhamos uma rota cheia de acontecimentos repletos de significado. Recordar esses momentos nos permite visualizar como evoluímos nessa jornada. Essa odisseia não reflete apenas cada decisão tomada, os sucessos e os fracassos, mas o mundo ao nosso redor, que muitas vezes fecha portas, bloqueia almejados destinos.
 

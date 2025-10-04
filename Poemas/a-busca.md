@@ -1,4 +1,9 @@
-### A busca
+---
+layout: default
+title: A busca
+--- 
+
+## A busca
 
 Na clareza do luar,  
 pensamentos vão surgir.  

@@ -1,4 +1,9 @@
-### Tapete de algodão
+---
+layout: default
+title: Tapete de algodão
+--- 
+
+## Tapete de algodão
 
 A caminhada até a escola era alegre, os colegas seguiam juntos, celebrando a força da amizade. Desconhecidos do primeiro verão, em pleno outono, nutriam a simplicidade do encontro fraternal. Paineiras enormes rompiam céu azulado. De róseas flores, a paina frutificara. Marcando o passo das felizes conversas. Histórias das proezas das atletas de seu esporte favorito eram pontuadas com observações apaixonadas sobre as garotas, belas jovens do colégio. Tímidos, as paqueravam, sem coragem de declarar o sentimento puro que nutriam.
 

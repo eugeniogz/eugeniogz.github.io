@@ -1,4 +1,9 @@
-### Historia humana
+---
+layout: default
+title: Historia humana
+--- 
+
+## Historia humana
 
 ### Início
 

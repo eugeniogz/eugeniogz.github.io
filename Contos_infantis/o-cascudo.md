@@ -1,4 +1,9 @@
-### O Cascudo
+---
+layout: default
+title: O Cascudo
+--- 
+
+## O Cascudo
 
 Fevereiro 11, 2008
 

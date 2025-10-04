@@ -1,4 +1,9 @@
-### Ipês e tijolos
+---
+layout: default
+title: Ipês e tijolos
+--- 
+
+## Ipês e tijolos
 
 2025, ano que a florada dos ipês foi farta. A tranquila harmonia de uma natureza que não liga para as sandices do mundo de concreto. Desabando em explosões de guerras. Passando fome para alimentar o ego dos poderosos. Navegando em precárias barcas, afundando no mar da esperança. Sem avistar a terra próspera, milhares de vidas sofridas falecem.
 

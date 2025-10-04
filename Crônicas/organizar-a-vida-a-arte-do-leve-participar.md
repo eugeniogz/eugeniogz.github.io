@@ -1,4 +1,9 @@
-### Organizar a vida: a arte do leve participar
+---
+layout: default
+title: Organizar a vida: a arte do leve participar
+--- 
+
+## Organizar a vida: a arte do leve participar
 
 Fios entrelaçados povoam a mesa, buscando aumentar a entropia. Se o ser que os liga e conecta não os toca, permanecem ali espectadores do vazio. Sua extensão, em alguns pontos, encontra apenas uma parcela atmosférica em constante movimento. Inertes, têm a energia a fluir em suas veias. Ligam aparelhos, numa frenética troca, transportam apenas, sem saber o que importa.
 

@@ -1,4 +1,9 @@
-### Serena euforia
+---
+layout: default
+title: Serena euforia
+--- 
+
+## Serena euforia
 
 “A Natureza quis que não fossem necessários grandes instrumentos para uma vida boa: todo indivíduo pode se fazer feliz. Os bens externos são triviais e não têm muita influência: a prosperidade não engrandece o sábio e a adversidade não o diminui. Pois ele sempre se esforçou para confiar o máximo possível em si e extrair de seu interior toda a alegria.” (Sêneca).
 

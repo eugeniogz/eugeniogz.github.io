@@ -1,4 +1,9 @@
-### O que nos faz humanos
+---
+layout: default
+title: O que nos faz humanos
+--- 
+
+## O que nos faz humanos
 
 A capacidade de criação humana é incomparável à de qualquer outro ser vivo. Um pássaro tem a capacidade inata de construir ninhos, com pequenas variações entre si. Já os seres humanos desenvolveram a ciência que permite criar diversos artefatos. Essa ciência evolui a cada dia, no entanto, precisamos nos livrar de inúmeras deficiências que impedem uma civilização ainda mais avançada, não apenas tecnologicamente, mas espiritualmente.
 

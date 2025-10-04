@@ -1,4 +1,9 @@
-### A Teimosia
+---
+layout: default
+title: A Teimosia
+--- 
+
+## A Teimosia
 
 Fevereiro 11, 2008
 

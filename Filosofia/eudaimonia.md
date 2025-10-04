@@ -1,4 +1,9 @@
-### Eudaimonia
+---
+layout: default
+title: Eudaimonia
+--- 
+
+## Eudaimonia
 
 A “eudaimonia” do grego eu = bem e “daimon” = espírito, pode ser pensada como viver com o espírito ativo, bem resolvido, num estado de plena felicidade. Um estado alcançável por aquele que sabe viver segundo o que sente, pensa e faz, independente das influências externas. Esse é o meu conceito de eudaimonia. Ele se alinha ao pensamento estoico. Como disse Marco Aurélio: "Muito pouco é necessário para ter uma vida feliz; está tudo dentro de você, em sua maneira de pensar". Viver com a certeza de que o caminho que se segue permite escolhas e que fatores externos existem e podem mudar direções e planos. Torna a vida mais leve, permite o desabrochar de um novo horizonte, onde fatores alheios ao controle pessoal não abalam o espírito.
 

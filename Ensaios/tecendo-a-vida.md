@@ -1,4 +1,9 @@
-### Tecendo a vida
+---
+layout: default
+title: Tecendo a vida
+--- 
+
+## Tecendo a vida
 
 ### **Introdução**
 

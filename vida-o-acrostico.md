@@ -1,4 +1,9 @@
-### Vida: O acróstico 
+---
+layout: default
+title: Vida: O acróstico 
+--- 
+
+## Vida: O acróstico 
 
 **V**alores  
 **I**mperfeições  

@@ -1,4 +1,9 @@
-### Metaversos
+---
+layout: default
+title: Metaversos
+--- 
+
+## Metaversos
 
 Há metaversos suficientes ao não acessar nada.  
 Em quais redes me conecto?  

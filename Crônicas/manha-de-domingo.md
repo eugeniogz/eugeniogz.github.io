@@ -1,4 +1,9 @@
-### Manhã de domingo
+---
+layout: default
+title: Manhã de domingo
+--- 
+
+## Manhã de domingo
 
 Acordo em uma manhã ensolarada de domingo. Os tristes dias frios recentes deram lugar ao enérgico calor. Um sabiá canta por perto, reconheço a melodia agradável de seu canto monótono. Ela já se levantara, preparando o café. Torna ao quarto anunciando os pães de queijo que estão saindo do forno. Posso sentir o cheiro da iguaria. Me levanto e vou até a sala de jantar, onde já me espera uma cesta com os saborosos pãezinhos. Para não perder o costume, faço pequenos sanduíches com eles e um queijo comprado na véspera. O pão, recheado com o mesmo queijo da massa, fica ainda mais especial.
 

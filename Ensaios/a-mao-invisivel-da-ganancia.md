@@ -1,4 +1,9 @@
-### A mão invisível da ganância
+---
+layout: default
+title: A mão invisível da ganância
+--- 
+
+## A mão invisível da ganância
 
 A luz tênue do sol de chumbo esfria os corações. O calor dos motores não aquece os volantes que guiam possantes carros. Máquinas perseguidas por cães em busca de dourados ossos. Presos às invisíveis coleiras da servidão, vivem na ilusão de uma liberdade inexistente. Farejando as migalhas do poder, os caninos dentes guardam o portão dos seus senhores. A cada passo, sentem o peso de sua rotina escravizante, o estalo do chicote no ar. Mas a promessa de um osso maior é a única coisa que importa. No desbotado cinza do asfalto, queimam suas patas, vigiam as casas sob o jugo velado de seus donos. Alimentados pela mão invisível da ganância, julgam estar satisfeitos, desconhecendo as belezas do mundo fora das grades.
 

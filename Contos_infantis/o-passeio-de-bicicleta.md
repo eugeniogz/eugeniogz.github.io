@@ -1,4 +1,9 @@
-### O Passeio de Bicicleta
+---
+layout: default
+title: O Passeio de Bicicleta
+--- 
+
+## O Passeio de Bicicleta
 
 Fevereiro 11, 2008
 

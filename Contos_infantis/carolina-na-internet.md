@@ -1,4 +1,9 @@
-### Carolina na Internet
+---
+layout: default
+title: Carolina na Internet
+--- 
+
+## Carolina na Internet
 
 Fevereiro 11, 2008
 
