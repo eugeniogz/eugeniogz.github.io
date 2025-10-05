@@ -1,6 +1,7 @@
 # Índice
 
 ## Filosofia
+- [Divino amor](./divino-amor.html)
 - [Aurora da mente consciente](./aurora-da-mente-consciente.html)
 - [Êxtase](./extase.html)
 - [Aprimorando a Herança espiritual](./aprimorando-a-heranca-espiritual.html)
