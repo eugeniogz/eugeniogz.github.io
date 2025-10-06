@@ -1,9 +1,9 @@
 ---
 layout: default
-title: A Teimosia
+title: "Teimosia"
 --- 
 
-## A Teimosia
+## Teimosia
 
 Fevereiro 11, 2008
 

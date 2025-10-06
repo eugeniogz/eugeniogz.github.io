@@ -1,9 +1,9 @@
 ---
 layout: default
-title: O Passeio de Bicicleta
+title: "Passeio de Bicicleta"
 --- 
 
-## O Passeio de Bicicleta
+## Passeio de Bicicleta
 
 Fevereiro 11, 2008
 

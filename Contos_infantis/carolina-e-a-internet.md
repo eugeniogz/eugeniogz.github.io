@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Carolina na Internet
+title: "Carolina e a Internet"
 --- 
 
-## Carolina na Internet
+## Carolina e a Internet
 
 Fevereiro 11, 2008
 
