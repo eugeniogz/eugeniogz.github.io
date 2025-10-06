@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Verdadeiro valor
+title: "Oceano poluido"
 --- 
 
-## Verdadeiro valor
+## Oceano poluido
 
 “A mente crédula [...] experimenta um grande prazer em acreditar em coisas estranhas, e quanto mais estranhas forem, mais facilmente serão aceitas; mas nunca leva em consideração as coisas simples e plausíveis, pois todo mundo pode acreditar nelas.” (Samuel Butler)
 

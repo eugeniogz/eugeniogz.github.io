@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Baile da atenção consciente
+title: "Consciente bailar"
 --- 
 
-## Baile da atenção consciente
+## Consciente bailar
 
 A mão sente o peso do toque transparente da asa. O cristalino foca na imagem vibrante do líquido, que evapora ondas bailando em calor. Pernas cruzadas pressionam a panturrilha direita, sensação simultânea ao fumegante sabor que povoa a boca, esquenta o paladar.
 

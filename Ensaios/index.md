@@ -1,10 +1,10 @@
 # Índice
 
 ## Ensaios
+- [Oceano poluido](./oceano-poluido.html)
+- [Baleias e marujos](./baleias-e-marujos.html)
 - [A quarta dimensão](./a-quarta-dimensao.html)
 - [Sementes do futuro](./sementes-do-futuro.html)
-- [Esperança de um justo futuro](./esperanca-de-um-justo-futuro.html)
-- [Verdadeiro valor](./verdadeiro-valor.html)
 - [O erro de Descartes](./o-erro-de-descartes.html)
 - [Inventar é descobrir](./inventar-e-descobrir.html)
 - [O caminho do conhecimento](./o-caminho-do-conhecimento.html)

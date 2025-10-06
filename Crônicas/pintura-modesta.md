@@ -1,9 +1,9 @@
 ---
 layout: default
-title: "Sereno ruído "
+title: "Pintura modesta"
 --- 
 
-## Sereno ruído 
+## Pintura modesta
 
 Buscando manter o estado de serena euforia mesmo quando os sentidos tamborilham minha mente. O barulho da TV alta que o idoso escuta. A tendinite teimosa que dói em meu braço. Mas o céu está vistoso, um convite ao aconchego desta mente que vibra, se sacia de vida, acima dos ouvidos, da dor aguda que permanece.
 

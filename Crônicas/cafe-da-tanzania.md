@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Sentidos, consciência e compreensão
+title: "Café da Tanzânia"
 --- 
 
-## Sentidos, consciência e compreensão
+## Café da Tanzânia
 
-Sorvendo uma xícara de café expresso da Tanzânia, enquanto penso sobre os mistérios da vida. O café é bom, assim é a vida. Por que então surge a tristeza? O que nos falta é ter certeza de que a sorte nos brinda com milhares de prêmios, como esta xícara de café, por exemplo, que nos dá o prazer de sentir o sabor do fruto que vem de cultivos de uma região tão remota.
+Sorvendo uma xícara de café expresso da Tanzânia, enquanto penso sobre os mistérios da vida. O café é bom, assim é a vida. Por que, então, surge a tristeza? O que nos falta é ter certeza de que a sorte nos brinda com milhares de prêmios, como esta xícara de café, por exemplo, que nos dá o prazer de sentir o sabor do fruto que vem de cultivos de uma região tão remota.
 
 Vivemos em uma época privilegiada, a humanidade nunca desfrutou de tanto conforto, no entanto, muitos sofrem e outros, mesmo sem motivo, se entristecem. Precisamos aprender a sentir a alegria de cada instante, quando os dons dos nossos sentidos nos permitem tomar ciência da beleza do mundo.
 

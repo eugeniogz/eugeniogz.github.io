@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Aprimorando a Herança espiritual
+title: "Herança espiritual"
 --- 
 
-## Aprimorando a Herança espiritual
+## Herança espiritual
 
 “Os nossos cérebros e as nossas mentes não são tablae rasae quando nascemos. Contudo, também não são, na sua totalidade, geneticamente determinados.  A sombra genética tem um grande alcance, mas não é completa”. (Antônio Damásio)
 

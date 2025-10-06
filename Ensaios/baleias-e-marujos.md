@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Esperança de um justo futuro
+title: "Baleias e marujos"
 --- 
 
-## Esperança de um justo futuro
+## Baleias e marujos
 
 Vivemos em um mundo onde as desigualdades econômicas e sociais são geradas por estruturas de poder injustas. Colossais barreiras econômicas e sociais impedem que a maioria progrida pelo mérito ou esforço individual. Grandes baleias detêm em suas mãos as maiores empresas, que definem a rota das mesmas no oceano do capital. Com a mão invisível no leme, açoitam os marujos, que batalham em busca de um ínfimo soldo.
 
