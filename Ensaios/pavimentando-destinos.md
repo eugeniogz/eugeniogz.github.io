@@ -1,11 +1,11 @@
 ---
 layout: default
-title: O caminho do conhecimento
+title: "Pavimentando destinos"
 --- 
 
-## O caminho do conhecimento
+## Pavimentando destinos
 
-Na vida trilhamos uma rota cheia de acontecimentos repletos de significado. Recordar esses momentos nos permite visualizar como evoluímos nessa jornada. Essa odisseia não reflete apenas cada decisão tomada, os sucessos e os fracassos, mas o mundo ao nosso redor, que muitas vezes fecha portas, bloqueia almejados destinos.
+Na vida, trilhamos uma rota cheia de acontecimentos repletos de significado. Recordar esses momentos nos permite visualizar como evoluímos nessa jornada. Essa odisseia não reflete apenas cada decisão tomada, os sucessos e os fracassos, mas o mundo ao nosso redor, que muitas vezes fecha portas, bloqueia almejados destinos.
 
 O gradual melhoramento do caráter deve obedecer a valores já conhecidos pela humanidade, os quais, para serem alcançados, exigem nosso esforço. Nem sempre avançaremos no aperfeiçoamento, surgirão vários desvios ao longo da vida. Podemos avançar um dia e retroceder no outro, tomar um rumo equivocado e ter que voltar e recomeçar. No entanto, a estrada da vida é longa e as maravilhas que nos aguardam em cada fase valem a pena.
 
@@ -29,7 +29,7 @@ Muitas atitudes do dia a dia da vida moderna são deficiências, que passam desp
 
 Com a evolução constante rumo à perfeição, alçamos um estado de espírito de constante paz e harmonia. Passamos a aproveitar cada momento e viver o prazer das pequenas coisas da vida. Para garantir esse desiderato, é preciso lutar por um futuro melhor, nos esforçando para garantir a tranquilidade financeira. Outro ponto a considerar está relacionado à busca pelo saber, que deve ser constante e pautada no discernimento do que é útil e verdadeiro.
 
-A vida é cheia de momentos alegres e tristes e isso não se relaciona com a felicidade. Quem é feliz também se entristece, mas a tristeza não abala as convicções de quem possui no seu interno o sentimento da vida plena. Esse é pautado no conhecimento, que permite separar os pensamentos de tristeza dos objetivos e planos de evolução. Sendo esses últimos, muito maiores que qualquer revés. A felicidade é um estado de espírito e, como tal, pode permanecer inabalável frente aos desafios da vida. Esse estado não depende do que se  sente ou pensa, baila em um nível superior, na saudável sinfonia neuronal, que numa contida euforia reflete o mesmo na saciada mente.
+A vida é cheia de momentos alegres e tristes e isso não se relaciona com a felicidade. Quem é feliz também se entristece, mas a tristeza não abala as convicções de quem possui no seu interno o sentimento da vida plena. Esse é pautado no conhecimento, que permite separar os pensamentos de tristeza dos objetivos e planos de evolução. Sendo esses últimos muito maiores que qualquer revés. A felicidade é um estado de espírito e, como tal, pode permanecer inabalável frente aos desafios da vida. Esse estado não depende do que se  sente ou pensa, baila em um nível superior, que numa contida euforia reflete o mesmo na saciada mente.
 
 # O sentido da vida
 
@@ -41,7 +41,7 @@ Deixaremos de pensar no que vem depois da morte para saber que nosso exemplo ser
 
 Os valores adquiridos ao longo da vida integram o nosso espírito, que já recebeu tendências de nossos ancestrais. Com o aprendizado, especialmente aquele relacionado ao aperfeiçoamento, seguimos o caminho. Com a felicidade sendo alçada e a integração do saber ao espírito, chega-se à realização plena, onde o esforço de toda uma vida terá valido a pena.
 
-No entanto, o caminho das pegadas marcado por poucos pés logo se desfaz, encoberto pelo mato. É preciso muitos passos para criar uma trilha que possa ser encontrada pelos futuros viajantes. Portanto, as descobertas e atalhos devem se solidificar em uma humana aventura, estradas para o futuro da sociedade. Desta forma, o que se aprende deve ser ensinado generosamente. Pois cada um que na vida se aprimora é mais um operário que une esforços pavimentando destinos com o sólido piso do conhecimento.
+No entanto, o caminho das pegadas marcado por poucos pés logo se desfaz, encoberto pelo mato. É preciso muitos passos para criar uma trilha que possa ser encontrada pelos futuros viajantes. Portanto, as descobertas e atalhos devem se solidificar em uma humana aventura, estradas para o futuro da sociedade. Desta forma, o que se aprende deve ser ensinado generosamente. Pois cada um que na vida se aprimora é mais um operário que une esforços, pavimentando destinos com o sólido piso do conhecimento.
 
 Futuro da sociedade
 
@@ -49,6 +49,6 @@ O futuro da sociedade será promissor se grande parte, senão toda a humanidade,
 
 Boa parte da população mundial está conectada à grande rede de computadores, à Internet. Isso revolucionou como nos comunicamos e acessamos a informação, ao mesmo tempo, permitiu aos criminosos divulgar notícias e todo tipo de informação falsa. Ficamos cada vez mais inundados por esse lixo informacional que pode afetar a vida e o futuro da humanidade. Perturbações abruptas da bússola do  conhecimento podem desorientar o norte do brilhante destino, que será encontrado com a consciência crítica. A capacidade de  distinguir o verdadeiro do falso e a adoção da postura de verificar em fontes confiáveis evitarão a propagação perniciosa dessas inverdades.
 
-O complexo sistema, girando as engrenagens que não avançam, não se preocupa com o futuro, fomenta guerras e boicota a busca por um futuro sustentável. Usa a desinformação para o seu proveito. A recente crise climática causada pelo aquecimento global é um exemplo de um fato concreto negado por muitos, reféns da máquina que, girando, nada cria. Apesar disso, algumas mudanças vêm sendo feitas, entretanto, elas têm sido tímidas e não têm surtido grandes efeitos na poluição e nos gases do efeito estufa. Se não buscarmos um estilo de vida mais sustentável, libertando-nos da cinzenta máquina, a garantia do futuro da humanidade na Terra será comprometida. Apesar dos problemas que enfrentaremos, essa perversa máquina será vencida com a força do saber. Enfim, teremos uma gradual diminuição das desigualdades sociais e o conhecimento acerca da superação tratado aqui será então comum entre os seres humanos. Todos buscarão o aprimoramento pessoal, seguindo os sábios caminhos ancestrais e desbravando os horizontes de um futuro promissor. (29/06/24 - eugeniogz.blogspot.com)
+O complexo sistema, girando as engrenagens que não avançam, não se preocupa com o futuro, fomenta guerras e boicota a busca por um futuro sustentável. Usa a desinformação para o seu proveito. A recente crise climática causada pelo aquecimento global é um exemplo de um fato concreto negado por muitos, reféns da máquina que, girando, nada cria. Apesar disso, algumas mudanças vêm sendo feitas, entretanto, elas têm sido tímidas e não têm surtido grandes efeitos na poluição e nos gases do efeito estufa. Se não buscarmos um estilo de vida mais sustentável, libertando-nos da cinzenta máquina, a garantia do futuro da humanidade na Terra será comprometida. Apesar dos problemas que enfrentaremos, essa perversa máquina será vencida com a força do saber. Enfim, teremos uma gradual diminuição das desigualdades sociais e o conhecimento acerca da superação tratado aqui será então comum entre os seres humanos. Todos buscarão o aprimoramento pessoal, seguindo os sábios caminhos ancestrais e desbravando os horizontes de um futuro promissor. (29/06/24)
 
 [voltar](./)
