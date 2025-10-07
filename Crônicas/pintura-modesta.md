@@ -17,6 +17,6 @@ O olhar atento observava. O mar das asas derramava o azul sobre as telhas inerte
 
 Aquela doce sensação, a serena euforia, sumira do ser. Os sons eram calmos, pardais em cantoria. Garotos brincando, vozes macias, bola quicando. Uma máquina voa cortando o celeste, num rastro molhado. Sinalizando a passagem em efêmero traço.
 
-Um bando de asas negras paira distante. Sem predadores que ameacem seu dia. O caloroso ambiente envolve o humano, a plácida euforia está na lembrança. Ele sabe que pode vivê-la novamente. Feliz sente o dia, descansa o pensar. O traço do voo permanece no ar. A qualidade e a força vívida e recente, assim como as brancas marcas, surgirão novamente em auroras recorrentes nos voos de serena euforia. Inspirações metafísicas da mente consciente.
+Um bando de asas negras paira distante. Sem predadores que ameacem seu dia. O caloroso ambiente envolve o humano, a plácida euforia está na lembrança. Ele sabe que pode vivê-la novamente. Feliz sente o dia, descansa o pensar. O traço do voo permanece no ar. A qualidade e a força vívida e recente, assim como as brancas marcas, surgirão novamente em auroras recorrentes. Inspirações metafísicas da mente consciente.
 
 [voltar](./)

@@ -1,9 +1,9 @@
 # Índice
 
 ## Crônicas
+- [Pintura modesta](./pintura-modesta.html)
 - [Mente presente](./mente-presente.html)
 - [Horizonte azul](./horizonte-azul.html)
-- [Pintura modesta](./pintura-modesta.html)
 - [Organizar a vida](./organizar-a-vida.html)
 - [Café da Tanzânia](./cafe-da-tanzania.html)
 - [Alvorecer](./alvorecer.html)

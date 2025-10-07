@@ -5,7 +5,7 @@ title: "Aurora da mente"
 
 ## Aurora da mente
 
-Um breve instante de alegria intensa, experiência radiante da mente sem pressa. Que vive um momento além do comum. Um estado superior, uma grande euforia, contida e serena. Caloroso aconchego, fogo que não queima. Que surge espontaneamente. Numa caminhada ao sol, observando a paisagem. Não importa se a trilha é urbana ou a tranquila pintura, que da seiva emana. Quando os sentidos não ferem e o pensamento não perturba. A consciência flutua. Um estado possível em simples momentos, que elevam sinapses da energia vital.
+Um breve instante de alegria intensa, experiência radiante da mente sem pressa. Que vive um momento além do comum. Um estado superior, uma grande euforia, contida e serena. Caloroso aconchego, fogo que não queima. Não importa o local. Uma caminhada no cinza urbano ou na tranquila pintura, que da seiva emana. Quando os sentidos não ferem e pensamentos não perturbam. A consciência flutua. Um estado possível em simples instantes, que elevam sinapses da energia vital.
 
 Sentir essa dádiva é próprio do humano, mas poucos a buscam. Perdidos na rotina, rolando de obrigações mundanas. Castigo de Sísifo que nunca termina. Vendendo o suor para saciar o ego.  É preciso buscar a eudaimonia que repousa na mente. Busca dos velhos filósofos, do mundo arcaico. Sem o vasto conhecimento que o presente abriga. Já sabiam e proclamavam como agradar ao espírito. Hoje o progresso é visível, mas prioriza-se o fútil. Encobrindo o sonho ao alcance de todos. Florescer a felicidade da alma vivente.
 
