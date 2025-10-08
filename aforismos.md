@@ -49,7 +49,7 @@ Viver em entretenimento constante mantém um espírito pleno. <!--07/07/24-->
 
 A felicidade da criação ilumina o espírito da realização. <!--30/09/25-->
 
-Momentos singulares perdidos em nuvens são o azul presente no cinza do dia. <!--30/09/25-->
+Momentos singulares perdidos em nuvens são as cores presentes no cinza do dia. <!--30/09/25-->
 
 ***
 
