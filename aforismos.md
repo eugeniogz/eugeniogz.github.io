@@ -5,7 +5,9 @@ title: "Aforismos"
 
 ## Aforismos
 
-Estes aforismos são frutos de uma vida consciente, que floresce felicidade nos pilares do amor. Anotações que amadureceram com o tempo, inventadas com a doce seiva que esperava por um autor.
+Estes aforismos são frutos de uma vida que floresce felicidade nos pilares do amor. Anotações que amadureceram com o tempo, inventadas da doce seiva que esperava um autor.
+
+***
 
 ### 🧠 Consciência
 
@@ -33,6 +35,8 @@ A atenção consciente é fugaz, sua busca deve ser tenaz. <!--30/09/25-->
 
 Sentir e pensar presentes favorecem o saudável brilho da serena euforia. <!--01/10/25-->
 
+***
+
 ### 🌞 Felicidade
 
 A almejada perfeição é utópica, a felicidade reside na aceitação das falhas, que não impedem a busca pelo ótimo. <!--07/08/20-->
@@ -47,6 +51,8 @@ A felicidade da criação ilumina o espírito da realização. <!--30/09/25-->
 
 Momentos singulares perdidos em nuvens são o azul presente no cinza do dia. <!--30/09/25-->
 
+***
+
 ### ❤️ Amor
 
 Amar é tesouro preciso, cuidar é sempre preciso. <!--30/09/25-->
@@ -59,9 +65,11 @@ Amizade sincera é pleonasmo, amizade simples é verdadeira. <!--17/07/2022-->
 
 Amar a profissão é realizá-la na infantil diversão. <!--30/09/25-->
 
+***
+
 ### 🌿 Natureza
 
-Pássaros voando sobre o frio asfalto ressaltam a soberania da natureza sobre a escuridão. <!--16/07/22-->
+Pássaros sobre o frio asfalto ressaltam a soberania da natureza sobre a escuridão. <!--16/07/22-->
 
 As telas iluminam as teclas que domam a escuridão. <!--19/09/25-->
 
