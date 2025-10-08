@@ -55,7 +55,7 @@ Todos os caminhos levam a Roma, exceto a verdade que semeia o amor. (22/09/25)
 
 Amizade sincera é pleonasmo, amizade simples é verdadeira. (17/07/2022)
 
-Amar a profissão traz a gratidão da pura infantil diversão. (30/09/25)
+Amar a profissão é realizá-la na infantil diversão. (30/09/25)
 
 ### 🌿 Natureza
 
