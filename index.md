@@ -9,6 +9,6 @@
 - [Crônicas](./Crônicas/index.md)
 
 ## Documentos
-- [Vida: um acróstico ](./vida-um-acrostico.html)
 - [Aforismos e breves inspirações](./aforismos-e-breves-inspiracoes.html)
+- [Vida: um acróstico ](./vida-um-acrostico.html)
 - [Wingene](./wingene.html)
