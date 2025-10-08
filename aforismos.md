@@ -5,6 +5,8 @@ title: "Aforismos"
 
 ## Aforismos
 
+Estes aforismos são frutos de uma vida consciente, que floresce felicidade nos pilares do amor. Anotações que amadureceram com o tempo, inventadas com a doce seiva que esperava por um autor.
+
 ### 🧠 Consciência
 
 As trevas que encobrem a humanidade advêm da preguiça em mover a pedra que esconde a verdade. <!--07/07/19-->
