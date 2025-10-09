@@ -33,7 +33,9 @@ O que sei é pouco, mas o que conheço é o que me faz. <!--02/07/24-->
 
 A atenção consciente é fugaz, sua busca deve ser tenaz. <!--30/09/25-->
 
-Sentir e pensar presentes favorecem o saudável brilho da serena euforia. <!--01/10/25-->
+Sentir e pensar presentes favorecem o saudável brilho da serena euforia. <!--01/10/25→  
+  
+Saber felicidade, aurora da mente: êxtase que irradia. <!-09/10/25-->
 
 ***
 
