@@ -1,7 +1,7 @@
 # Índice
 
 ## Crônicas
-- [Dez minutos](./dez-minutos.html)
+- [Um minuto](./um-minuto.html)
 - [Pintura modesta](./pintura-modesta.html)
 - [Mente presente](./mente-presente.html)
 - [Horizonte azul](./horizonte-azul.html)
