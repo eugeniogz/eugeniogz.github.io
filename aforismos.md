@@ -9,21 +9,21 @@ Estes aforismos são invenções de uma vida que floresce felicidade nos pilares
 
 ***
 
-### 🧠 Consciência
+### 🔬Ciência
 
-A ciência ilumina a metafísica com os dourados fios do conhecimento. <!--16/09/25-->
+### A ciência ilumina a metafísica com os dourados fios do conhecimento. <!--16/09/25-->
+
+### Descobrir é raro, reinventar é caro. <!--08/10/25-->
+
+***
+
+### 🧠 Consciência
 
 Trilhar a vida ímpar, criar a obra sem par. <!--12/08/11-->
 
 Viver tece na mente o inédito indescritível. <!--03/07/13-->
 
-Descobrir é raro, reinventar é caro. <!--08/10/25-->
-
 A atenção consciente é fugaz, sua busca deve ser tenaz. <!--30/09/25-->
-
-Sentir e pensar presentes: atenção que brilha. <!--01/10/25-->
-
-Saber felicidade, aurora da mente: êxtase que irradia. <!-09/10/25-->
 
 Sentimentos lúdicos, pensamentos lúcidos. <!--09/10/25-->
 
