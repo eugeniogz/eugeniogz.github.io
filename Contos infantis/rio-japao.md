@@ -13,10 +13,10 @@ Uma das aventuras preferidas de Marcos e seus irmãos João e Arthur era passear
 
 As represas eram cuidadosamente construídas com pedrinhas e areia. Uma entrada de água em cascata trazia água pura e cristalina para os peixes. A saída de água era um vertedouro, que deixava o excesso de água ir embora, para a barragem não encher demais e transbordar. Os seus moradores nadavam tranquilos, alegrando a pequena construção. Que mais tarde tinha suas comportas abertas, soltando-os de volta ao lar.
 
-Algumas vezes, vovô Aurélio acompanhava os meninos até o rio. Todos recordam do dia em que, agachado, olhando o rio, perguntou: — Já imaginaram se essa água toda fosse petróleo? Os netos ficaram pensativos por um tempo, até que Arthur disse: — Os peixes iam morrer. João e Marcos concordaram, dizendo ao mesmo tempo: — Essa água aqui é mais valiosa que o petróleo. O avô sorriu satisfeito.
+Algumas vezes, vovô Aurélio acompanhava os meninos até o rio. Todos recordam do dia em que, agachado, olhando o rio, perguntou: — Já imaginaram se essa água toda fosse petróleo? Os netos ficaram pensativos por um tempo, até que Arthur disse: — Os peixes iam morrer. João concordou: — Não vai dar para fazer represas. Enfim, Marcos afirmou: — Prefiro essa água aqui do que o petróleo. O avô sorriu satisfeito.
 
 À noite, após o jantar, vovô Aurélio foi até sua estante e pegou um grosso livro, as mil e uma noites. Folheou calmamente e disse: — Hoje vou ler a história do homem que sabia a língua dos pássaros. A fábula contava sobre um homem que recebe a dádiva de entender a linguagem dos animais. Com o seu dom, o homem aprendia com os pássaros e outras criaturas, percebendo a interdependência entre os seres vivos e a natureza. Certo dia, ele ouve os pássaros discutindo a chegada de uma seca e a necessidade de proteger as fontes de água da região. O homem, então, com a ajuda de amigos, consegue preservar um oásis importante que sustentou toda a vida na região.
 
-Após a leitura, o sábio avô complementa dizendo: — A natureza fala conosco, se soubermos ouvir, devemos aprender a preservá-la.
+Após a leitura, o sábio avô complementa dizendo: — A natureza fala conosco, se soubermos ouvir, devemos aprender a preservá-la. Hoje vimos como a água é mais valiosa que o petróleo.
 
 [voltar](./)

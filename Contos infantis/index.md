@@ -1,10 +1,10 @@
 # Índice
 
 ## Contos infantis
-- [O Cascudo](./o-cascudo.html)
-- [Carolina e a Internet](./carolina-e-a-internet.html)
+- [Armadilhas da Internet](./armadilhas-da-internet.html)
+- [Aventura de bicicleta](./aventura-de-bicicleta.html)
 - [Teimosia](./teimosia.html)
-- [Passeio de Bicicleta](./passeio-de-bicicleta.html)
+- [O Cascudo](./o-cascudo.html)
 - [Alegria de Colaborar](./alegria-de-colaborar.html)
 - [Rio Japão](./rio-japao.html)
 
