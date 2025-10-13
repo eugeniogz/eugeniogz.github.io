@@ -6,9 +6,26 @@ description: "José Eugênio" # This will show up in places like twitter, linked
 #remote_theme: pages-themes/modernist@v0.2.0
 remote_theme: pages-themes/architect@v0.2.0
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-sitemap
 
-# Email / Social media user names used by the minima theme:
+#########################################################################################
+######### Nothing below needs to be changed (unless you know what you're doing) #########
+#########################################################################################
+#theme: "minima"
+
+# rss: rss
+
+# kramdown:
+#   syntax_highlighter_opts:
+#     disable: true
+
+# titles_from_headings:
+#   strip_title: true
+#   collections: true
+
+# Social media user names used by the minima theme:
 # All of these are optional and can be removed or commented out
 #email: "eugeniog@gmail.com"
 #twitter_username: "eugeniog"
@@ -21,29 +38,10 @@ plugins:
 #youtube_username: username
 #googleplus_username: +username
 
-#########################################################################################
-######### Nothing below needs to be changed (unless you know what you're doing) #########
-#########################################################################################
-#theme: "minima"
-
-rss: rss
-
-kramdown:
-  syntax_highlighter_opts:
-    disable: true
-    
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-
-titles_from_headings:
-  strip_title: true
-  collections: true
-
-defaults:
-  - scope:
-      path: ""
-      type: post
-    values:
-      tags: 
-       - other
+# defaults:
+#   - scope:
+#       path: ""
+#       type: posts
+#     values:
+#       tags: 
+#        - other
