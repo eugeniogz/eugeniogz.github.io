@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Eudaimonia
+title: "Eudaimonia"
 --- 
 
 ## Eudaimonia

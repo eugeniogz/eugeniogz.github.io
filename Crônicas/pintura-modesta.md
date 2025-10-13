@@ -13,7 +13,7 @@ Reviso, releio esse texto. Para certificar que o que vivo é o que transcrevo. E
 
 ***
 
-O olhar atento observava. O mar das asas derramava o azul sobre as telhas inertes. Tingido pela força do astro da vida. Espelhava a serena cor radiante que no espaço explodia.
+O olhar atento observava. O mar das asas derramava o azul sobre as telhas inertes. Tingido pela força do astro da vida. Espelhava a cor radiante que no espaço explodia.
 
 Aquela doce sensação, a serena euforia, sumira do ser. Os sons eram calmos, pardais em cantoria. Garotos brincando, vozes macias, bola quicando. Uma máquina voa cortando o celeste, num rastro molhado. Sinalizando a passagem em efêmero traço.
 

@@ -13,7 +13,7 @@ O som que vinha da Internet, repentinamente, dá lugar à música de um rádio e
 
 Da cozinha vem o cheiro do almoço, a tela será desligada. A iminência do sagrado momento, da comunhão familiar, traz alegria. Passou-se um quarto de hora. A quarta dimensão, diferente das que pintam o espaço, passa sem que se sinta. Na rápida frequência do cristal.
 
-Para, respira, pensa. Que bom deixar que passe no ritmo do sereno coração!
+Para, respira, pensa: o tempo passou como um facho. Que bom seria se caminhasse no ritmo do coração!
 
 23/08/25 - 14:00
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Serena euforia
+title: "Serena euforia"
 --- 
 
 ## Serena euforia

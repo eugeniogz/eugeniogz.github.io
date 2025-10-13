@@ -1,6 +1,6 @@
 ---
 layout: default
-title: O erro de Descartes
+title: "O erro de Descartes"
 --- 
 
 ## O erro de Descartes

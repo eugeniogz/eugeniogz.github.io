@@ -5,10 +5,10 @@ title: "Café em flor"
 
 ## Café em flor
 
-Viçoso jasmim do cafezal. Pulsando a seiva que as folhas adoçam. Baila ao vento, exala o doce aroma. Néctar saudável, mel de déboras, gosto de pólen. Beijo aguardado que fecunda o ventre.
+Viçoso jasmim do cafezal. Pulsando a seiva que as folhas adoçam. Baila ao vento, exala o aroma. Néctar saudável. Nutrindo déboras em cortejo de amor. Beijo aguardado enseja calor.
 
-Sem noção do porvir, somente vive, vegetal e serena. Nascendo uma estrela branca, torna-se valioso fruto, lar de gêmeas sementes. Cria do outrora broto, floresce o futuro.
+Nasce branca estrela. Sem noção do porvir, somente vive, vegetal e serena. Cresce fruta esperança, lar de gêmeas filhas. Crias do outrora broto, vida de doce futuro.
 
-Colorindo douradas porcelanas. Delícia que pinta o sabor. Forjado na herança da flor.
+Desperto em novas estrelas, alma de porcelanas. Delícia que pinta o sabor. Forjado na herança da flor.
 
 [voltar](./)

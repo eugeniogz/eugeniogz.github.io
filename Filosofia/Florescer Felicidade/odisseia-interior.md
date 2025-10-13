@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Odisseia interior
+title: "Odisseia interior"
 --- 
 
 ## Odisseia interior

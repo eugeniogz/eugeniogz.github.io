@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Aquarela de uma valsa
+title: "Aquarela de uma valsa"
 --- 
 
 ## Aquarela de uma valsa
@@ -11,8 +11,8 @@ Unido no abraço,
 ginga a velejar.
 
 Brotos a caminhar,  
-flores em sintonia,  
-notas de botões  
+flores em sintonia.  
+O ritmo da seiva,  
 nascendo alegria.
 
 Serena criação,  
@@ -35,10 +35,10 @@ folhas a flutuar,
 no leve movimento  
 beijo suave lar.
 
-Suaves na balsa,  
-nave do porvir:  
+Nave suave brisa,  
+orienta o porvir:  
 vivem a terna valsa,  
-amor eterno amar.
+aquarela do amar.
 
 (03/10/25)
 

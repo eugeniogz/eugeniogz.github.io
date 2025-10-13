@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Inventar é descobrir
+title: "Inventar é descobrir"
 --- 
 
 ## Inventar é descobrir

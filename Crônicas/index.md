@@ -1,12 +1,12 @@
 # Índice
 
 ## Crônicas
-- [Um minuto](./um-minuto.html)
+- [Café da Tanzânia](./cafe-da-tanzania.html)
+- [Organizar a vida](./organizar-a-vida.html)
 - [Pintura modesta](./pintura-modesta.html)
+- [Um minuto](./um-minuto.html)
 - [Mente presente](./mente-presente.html)
 - [Horizonte azul](./horizonte-azul.html)
-- [Organizar a vida](./organizar-a-vida.html)
-- [Café da Tanzânia](./cafe-da-tanzania.html)
 - [Alvorecer](./alvorecer.html)
 - [Relógios e cafés](./relogios-e-cafes.html)
 - [Tapete de algodão](./tapete-de-algodao.html)

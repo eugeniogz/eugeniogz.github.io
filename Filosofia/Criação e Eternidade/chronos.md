@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Chronos
+title: "Chronos"
 --- 
 
 ## Chronos

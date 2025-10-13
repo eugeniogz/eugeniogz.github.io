@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Adeus ao finito
+title: "Adeus ao finito"
 --- 
 
 ## Adeus ao finito
