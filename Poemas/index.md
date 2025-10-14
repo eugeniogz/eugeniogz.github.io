@@ -1,6 +1,8 @@
 # Índice
 
 ## Poemas
+- [Banal ](./banal.html)
+- [Música urbana](./musica-urbana.html)
 - [Triste tarde](./triste-tarde.html)
 - [Ipês e tijolos](./ipes-e-tijolos.html)
 - [Aquarela de uma valsa](./aquarela-de-uma-valsa.html)

@@ -11,7 +11,7 @@ As palavras do filósofo, mais uma vez, são consonantes com o que penso e obser
 
 Os pensamentos e sentimentos são somente o palco onde o artista apresenta a peça em sublime sintonia. Sentindo o baile dos neurônios, ele transcende o tablado. A arena, embora necessária, não influencia seu desempenho. Não importa se o cenário é modesto ou se inevitáveis sofrimentos povoam as marcações de seu papel. A dança estará sempre presente, florescendo a felicidade da atuação individual.
 
-Mas se a sinfonia vira rotina, a dança do artista vira melancolia. Evitar esse desastre passa pelos sentidos que, em plena atenção, pintam novas harmonias. Uma cor diferente, um passo inovador que quebra o frio contínuo. Como numa caminhada ao sol, quando sinto o calor e o perfume que brilha nas flores do dia. A mente atenta não somente observa o cenário, mas alça voos vibrantes. Podendo, no esforço consciente, atingir novos horizontes, pulsando satisfeita em serena euforia.
+Mas se a sinfonia vira rotina, a dança do artista vira melancolia. Evitar esse desastre passa pelos sentidos que, em plena atenção, pintam novas harmonias. Uma cor diferente, um passo inovador que quebra o frio contínuo. Como numa caminhada ao sol, sentindo o calor e o perfume que brilha nas flores do dia. A mente atenta não somente observa o cenário, mas alça voos vibrantes. Podendo, no esforço consciente, atingir novos horizontes, pulsando satisfeita em serena euforia.
 
 (16/09/25).
 

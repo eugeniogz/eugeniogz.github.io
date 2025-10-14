@@ -2,6 +2,10 @@
 layout: default
 ---
 
+sudo bundle install (não devia ser sudo)
+
+bundle exec jekyll serve
+
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 [Link to another page](./another-page.html).
