@@ -39,7 +39,7 @@ Os pilares da felicidade: Criar, Amar, Recordar e Evoluir, requerem cuidado (CAR
 
 A felicidade da criação ilumina o espírito da realização. <!--30/09/25-->
 
-Momentos singulares envoltos em nuvens são cores presentes no cinza da vida. <!--30/09/25-->
+A atenção revela cores presentes nas nuvens da vida. <!--14/10/25-->
 
 Viver lúdica atenção floresce felicidade. <!--07/07/24-->
 
@@ -49,7 +49,7 @@ Viver lúdica atenção floresce felicidade. <!--07/07/24-->
 
 Amar tesouro preciso, cuidar sempre preciso. <!--30/09/25-->
 
-Todos os caminhos levam a Roma, exceto a verdade que eleva ao amor. <!--22/09/25-->
+Todos os caminhos levam a Roma, somente a verdade eleva ao amor. <!--22/09/25-->
 
 Amar a profissão: labor que inspira diversão. <!--30/09/25-->
 
@@ -57,7 +57,7 @@ Amar a profissão: labor que inspira diversão. <!--30/09/25-->
 
 ### 🌿 Natureza
 
-Pássaros além do frio asfalto: o natural soberano do cultural. <!--16/07/22-->
+Além do frio asfalto: o natural soberano do cultural. <!--16/07/22-->
 
 As telas iluminam as teclas que domam a escuridão. <!--19/09/25-->
 
