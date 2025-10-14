@@ -11,9 +11,9 @@ Estes aforismos são invenções de uma vida que floresce felicidade nos pilares
 
 ### 🔬Ciência
 
-### A ciência ilumina a metafísica com os dourados fios do conhecimento. <!--16/09/25-->
+A ciência ilumina a metafísica com os dourados fios do conhecimento. <!--16/09/25-->
 
-### Descobrir é raro, reinventar é caro. <!--08/10/25-->
+Descobrir é raro, reinventar é caro. <!--08/10/25-->
 
 ***
 
@@ -41,7 +41,7 @@ A felicidade da criação ilumina o espírito da realização. <!--30/09/25-->
 
 Momentos singulares envoltos em nuvens são cores presentes no cinza da vida. <!--30/09/25-->
 
-Viver lúdica construção floresce felicidade. <!--07/07/24-->
+Viver lúdica atenção floresce felicidade. <!--07/07/24-->
 
 ***
 
@@ -57,13 +57,13 @@ Amar a profissão: labor que inspira diversão. <!--30/09/25-->
 
 ### 🌿 Natureza
 
-Pássaros sobre o frio asfalto: a soberania da natureza sobre a escuridão. <!--16/07/22-->
+Pássaros além do frio asfalto: o natural soberano do cultural. <!--16/07/22-->
 
 As telas iluminam as teclas que domam a escuridão. <!--19/09/25-->
 
 O natural é eterno, observa a mente finita. <!--21/09/25-->
 
-Outras vidas e alegrias brilham em infinitas cosmogonias. <!--08/10/25-->
+Outras alegrias brilham em infinitas cosmogonias. <!--08/10/25-->
 
 ***
 
