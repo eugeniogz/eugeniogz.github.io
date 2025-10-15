@@ -5,7 +5,7 @@ title: "Aforismos"
 
 ## Aforismos
 
-Estes aforismos são invenções de uma vida que floresce felicidade nos pilares do amor. Notas que amadureceram com o tempo, inventadas da doce seiva que esperava um autor.
+Estes aforismos são invenções de uma vida que floresce felicidade nos pilares do amor. Notas que amadureceram com o tempo.
 
 ***
 
@@ -57,7 +57,7 @@ Amar a profissão: labor que inspira diversão. <!--30/09/25-->
 
 ### 🌿 Natureza
 
-Além do frio asfalto: o natural soberano do cultural. <!--16/07/22-->
+Além do frio asfalto: o natural reina soberano sobre o cultural. <!--16/07/22-->
 
 As telas iluminam as teclas que domam a escuridão. <!--19/09/25-->
 
@@ -67,6 +67,6 @@ Outras alegrias brilham em infinitas cosmogonias. <!--08/10/25-->
 
 ***
 
-A vida aguarda novas descobertas, no caminho da evolução sem fim. A trilha da beleza consciente, embalada pela vida criativa. Brindando felicidade em emoções que pulsam do coração à razão, brincando e pensando o amor universal.
+A vida aguarda novas descobertas, no caminho da evolução sem fim. Brindando felicidade em emoções que pulsam do coração à razão, brincando e pensando o amor universal.
 
 [voltar](./)
