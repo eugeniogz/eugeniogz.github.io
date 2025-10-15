@@ -2,8 +2,9 @@
 layout: null
 permalink: /search.json
 ---
-{%- assign all_items = site.pages | concat: site.posts -%}
-{%- assign filtered_items = all_items | where: "layout", "default" -%}
+{%- assign all_content = site.pages | concat: site.posts -%}
+{%- assign items_with_layout = all_content | where: "layout", "default" -%}
+{%- assign filtered_items = items_with_layout | where_exp: "item", "item.name != 'index.md'" -%}
 [
   {%- for item in filtered_items -%}
     {
