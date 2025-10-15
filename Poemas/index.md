@@ -1,12 +1,12 @@
 # Poemas
 
 ## Documentos
+- [Aquarela de uma valsa](./aquarela-de-uma-valsa.html)
 - [Vida consciente](./vida-consciente.html)
 - [Banal ](./banal.html)
 - [Música urbana](./musica-urbana.html)
 - [Triste tarde](./triste-tarde.html)
 - [Ipês e tijolos](./ipes-e-tijolos.html)
-- [Aquarela de uma valsa](./aquarela-de-uma-valsa.html)
 - [Café em flor](./cafe-em-flor.html)
 - [Infância perdida](./infancia-perdida.html)
 - [Espaço e tempo](./espaco-e-tempo.html)

@@ -2,10 +2,10 @@
 layout: null
 permalink: /search.json
 ---
-{% assign all_items = site.pages | concat: site.posts %}
-{% assign filtered_items = all_items | where_exp: "item", "item.title and item.layout != 'null' and item.layout != nil" %}
+{%- assign all_items = site.pages | concat: site.posts -%}
+{%- assign filtered_items = all_items | where: "layout", "default" -%}
 [
-  {% for item in filtered_items %}
+  {%- for item in filtered_items -%}
     {
       "title"    : "{{ item.title | escape | strip_newlines }}",
       "url"      : "{{ item.url | relative_url }}",
@@ -16,6 +16,6 @@ permalink: /search.json
       "type"     : "page"
       {% endif %}
     }
-    {% unless forloop.last %},{% endunless %}
-  {% endfor %}
+    {%- unless forloop.last -%},{%- endunless -%}
+  {%- endfor -%}
 ]

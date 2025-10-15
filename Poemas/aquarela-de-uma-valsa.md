@@ -5,24 +5,24 @@ title: "Aquarela de uma valsa"
 
 ## Aquarela de uma valsa
 
-Pinta o duplo passo,  
+Brilham no espaço  
 cores da aquarela.  
-Unido no abraço,  
-ginga a velejar.
+Unidas no abraço,  
+gingam a velejar.
 
-Brotos a caminhar,  
+Brotos a flutuar,  
 flores em sintonia.  
-O ritmo da seiva,  
+Moldura natural,  
 nascendo alegria.
 
 Serena criação,  
 paleta a dançar.  
-valsa da emoção  
+Valsa da emoção  
 pintando sinfonia.
 
-Luzindo corações,  
-sobre o firmamento.  
-voo alado, vento,  
+Luzindo navegar,  
+unidos corações,  
+abrindo horizontes,  
 alçando céu e mar.
 
 Aninhado sussuro,   
@@ -30,7 +30,7 @@ aves a entardecer,
 prelúdio, alvorada,  
 manhã irá nascer.
 
-Seiva brinda vida,  
+Seiva doce vida,  
 folhas a flutuar,  
 no leve movimento  
 beijo suave lar.
@@ -42,4 +42,4 @@ aquarela do amar.
 
 (03/10/25)
 
-[voltar](./)
+[<--](./)
