@@ -5,7 +5,7 @@ title: "Aforismos"
 
 ## Aforismos
 
-Estes aforismos são invenções de uma vida que floresce felicidade nos pilares do amor. Notas que amadureceram com o tempo.
+Estes aforismos são invenções de uma vida que floresce felicidade nos pilares do amor. Notas que amadureceram com o tempo, lapidadas e polidas em serena euforia.
 
 ***
 
@@ -67,6 +67,6 @@ Outras alegrias brilham em infinitas cosmogonias. <!--08/10/25-->
 
 ***
 
-A vida aguarda novas descobertas, no caminho da evolução sem fim. Brindando felicidade em emoções que pulsam do coração à razão, brincando e pensando o amor universal.
+A vida aguarda novas descobertas, no caminho da evolução sem fim. Brindando felicidade em emoções que pulsam do coração à razão, brincando e pensando a harmonia universal.
 
 [voltar](./)

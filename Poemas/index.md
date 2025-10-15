@@ -1,6 +1,7 @@
 # Poemas
 
 ## Documentos
+- [Vida consciente](./vida-consciente.html)
 - [Banal ](./banal.html)
 - [Música urbana](./musica-urbana.html)
 - [Triste tarde](./triste-tarde.html)
@@ -10,7 +11,6 @@
 - [Infância perdida](./infancia-perdida.html)
 - [Espaço e tempo](./espaco-e-tempo.html)
 - [Pulsando alegria](./pulsando-alegria.html)
-- [Vida consciente](./vida-consciente.html)
 - [A busca](./a-busca.html)
 - [Metaversos](./metaversos.html)
 
