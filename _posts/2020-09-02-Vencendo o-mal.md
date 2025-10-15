@@ -1,2 +1,0 @@
-O que vemos no nosso mundo a cada dia são amostras de como o mal está presente nos seres humanos. Diante desta realidade, a maioria conclui que a humanidade não tem mais jeito, que as gerações futuras terão que enfrentar cada vez situações onde o mal irá prevalecer sobre o bem. Penso que existe uma esperança e ela começa no combate ao mal que existe dentro de cada um de nós, se cada gesto, cada atitude, cada pensamento que tenhamos for isento de maldade, estaremos contribuindo para que esta se torne cada vez mais insignificante na nossa vida.
-
