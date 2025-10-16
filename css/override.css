@@ -43,3 +43,13 @@ hr {
   font-size: 2.5em;
   opacity: 0.3;
 }
+
+.search-link-header {
+  position: absolute;
+  top: 40px; /* Alinha verticalmente com o título */
+  right: 0;
+  color: white !important; /* !important para garantir a prioridade sobre outras regras */
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-size: 26px;
+  font-weight: normal;
+}

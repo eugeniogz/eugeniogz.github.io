@@ -63,10 +63,10 @@ As telas iluminam as teclas que domam a escuridão. <!--19/09/25-->
 
 O natural é eterno, observa a mente finita. <!--21/09/25-->
 
-Outras alegrias brilham em infinitas cosmogonias. <!--08/10/25-->
+Brilham alegrias em infinitas cosmogonias. <!--08/10/25-->
 
 ***
 
 A vida aguarda novas descobertas, no caminho da evolução sem fim. Brindando felicidade em emoções que pulsam do coração à razão, brincando e pensando a harmonia universal.
 
-[voltar](./)
+[<--](./)
