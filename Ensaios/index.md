@@ -1,8 +1,8 @@
 # Ensaios
 
 ## Documentos
-- [Quarta dimensão](./quarta-dimensao.html)
 - [Pavimentando destinos](./pavimentando-destinos.html)
+- [Quarta dimensão](./quarta-dimensao.html)
 - [Invisível ganância](./invisivel-ganancia.html)
 - [Oceano poluido](./oceano-poluido.html)
 - [Baleias e marujos](./baleias-e-marujos.html)
