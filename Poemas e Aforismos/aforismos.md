@@ -31,35 +31,35 @@ Euforia serena, alma plena. <!--09/10/25-->
 
 ***
 
-### 🌞 Felicidade
-
-Felicidade: aproveitar o caminho da evolução ciente da utópica perfeição. <!--20/09/25-->
+### 🌞❤️ Felicidade e Amor
 
 Os pilares da felicidade: Criar, Amar, Recordar e Evoluir (CARE). <!--25/02/23-->
 
 A felicidade da criação ilumina o espírito da realização. <!--30/09/25-->
 
+Amar tesouro preciso, zelar sempre preciso. <!--30/09/25-->
+
+Recordar pulsa a seiva da alegria. <!--17/10/25-->
+
+Felicidade: visar a evolução ciente da utópica perfeição. <!--20/09/25-->
+
+***
+
 A atenção revela cores presentes nas nuvens da vida. <!--14/10/25-->
 
 Viver lúdica atenção floresce felicidade. <!--07/07/24-->
 
-***
-
-### ❤️ Amor
-
-Amar tesouro preciso, cuidar sempre preciso. <!--30/09/25-->
-
 Todos os caminhos levam a Roma, somente a verdade eleva ao amor. <!--22/09/25-->
 
-Amar a profissão: labor que inspira diversão. <!--30/09/25-->
+Amar a profissão: arte que inspira diversão. <!--30/09/25-->
 
 ***
 
 ### 🌿 Natureza
 
-Além do frio asfalto: o natural reina soberano sobre o cultural. <!--16/07/22-->
+Além do frio asfalto, o natural reina soberano sobre o cultural. <!--16/07/22-->
 
-As telas iluminam as teclas que domam a escuridão. <!--19/09/25-->
+Os olhos iluminam as telas que domam a escuridão. <!--19/09/25-->
 
 O natural é eterno, observa a mente finita. <!--21/09/25-->
 
