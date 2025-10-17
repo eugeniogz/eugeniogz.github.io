@@ -6,7 +6,6 @@
 - [Pintura modesta](./pintura-modesta.html) <span class="word-count">[1.5 min]</span>
 - [Um minuto](./um-minuto.html) <span class="word-count">[1 min]</span>
 - [Mente presente](./mente-presente.html) <span class="word-count">[1.5 min]</span>
-- [Horizonte azul](./horizonte-azul.html) <span class="word-count">[0.5 min]</span>
 - [Alvorecer](./alvorecer.html) <span class="word-count">[5 min]</span>
 - [Relógios e cafés](./relogios-e-cafes.html) <span class="word-count">[4 min]</span>
 - [Manhã de domingo](./manha-de-domingo.html) <span class="word-count">[4.5 min]</span>

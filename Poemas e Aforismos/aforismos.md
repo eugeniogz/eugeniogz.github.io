@@ -5,7 +5,7 @@ title: "Aforismos"
 
 
 
-[Poemas](./)
+[Poemas e Aforismos](./)
 
 ## Aforismos
 
