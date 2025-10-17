@@ -3,6 +3,10 @@ layout: default
 title: "Mente presente"
 --- 
 
+
+
+[Crônicas](./)
+
 ## Mente presente
 
 A mão sente o peso do toque transparente da asa. O cristalino foca na imagem vibrante do líquido, que evapora ondas bailando em calor. Pernas cruzadas pressionam a panturrilha direita, sensação simultânea ao fumegante sabor que povoa a boca, esquenta o paladar.
@@ -19,4 +23,4 @@ Saciadas as gargantas, seguem a caminhada, o retorno ao lar. O suor refresca o c
 
 Recolhendo-se na varanda, o físico sente o sol. O ruído se abranda, abrindo caminho para a serena euforia. Avistando o horizonte, a mente acalma. Os neurônios bailam alheios ao sentir e ao pensar. Os prédios respiram, pulsando emoções, de seres conscientes. Nem todos presentes.
 
-[voltar](./)
+[<--](./)

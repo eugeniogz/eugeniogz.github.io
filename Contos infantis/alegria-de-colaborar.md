@@ -3,6 +3,10 @@ layout: default
 title: "Alegria de Colaborar"
 --- 
 
+
+
+[Contos infantis](./)
+
 ## Alegria de Colaborar
 
 Fevereiro 11, 2008  
@@ -33,4 +37,4 @@ Cada uma preparou o seu pão do jeito que mais gostava, Ana gostava de manteiga 
 
 Após aquele dia junto de sua amiga Débora, Ana aprendeu que podia colaborar não somente na escola, mas em casa, e enfim em todos os lugares. Aprendeu também como era bom sentir a alegria de colaborar.
 
-[voltar](./)
+[<--](./)

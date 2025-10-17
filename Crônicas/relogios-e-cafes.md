@@ -1,7 +1,11 @@
 ---
 layout: default
-title: Relógios e cafés
+title: "Relógios e cafés"
 --- 
+
+
+
+[Crônicas](./)
 
 ## Relógios e cafés
 
@@ -29,4 +33,4 @@ Retornando ao lar, as plumagens sem cor arrulham na calçada, caminho até o ele
 
 (18/08/25)
 
-[voltar](./)
+[<--](./)

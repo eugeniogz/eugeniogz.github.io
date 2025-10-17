@@ -1,7 +1,11 @@
 ---
 layout: default
-title: Quebrando a monotonia
+title: "Quebrando a monotonia"
 --- 
+
+
+
+[Crônicas](./)
 
 ## Quebrando a monotonia
 
@@ -35,4 +39,4 @@ Esses momentos inesquecíveis dão mais cor à vida, mas assim podem ser, també
 
 (11/08/25)
 
-[voltar](./)
+[<--](./)

@@ -1,7 +1,11 @@
 ---
 layout: default
-title: Manhã de domingo
+title: "Manhã de domingo"
 --- 
+
+
+
+[Crônicas](./)
 
 ## Manhã de domingo
 
@@ -29,4 +33,4 @@ De volta aos meus aposentos, olho para a janela e vejo a asa branca voando. Ela 
 
 (10/08/25).
 
-[voltar](./)
+[<--](./)

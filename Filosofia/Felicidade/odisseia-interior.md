@@ -3,6 +3,10 @@ layout: default
 title: "Odisseia interior"
 --- 
 
+
+
+[Felicidade](./)
+
 ## Odisseia interior
 
 Muitos se perdem em um labirinto de incertos caminhos, buscam a fuga voando nas frágeis asas da quimera, em um voo impossível. Perdidos na infindável monotonia da rotina, como Sísifo condenado a empurrar sua pedra montanha acima diariamente. As ofuscantes luzes da ignorância os mantêm cativos, perseguidos pelo minotauro: um monstro que sufoca a força e astúcia do Ulisses interior, náufrago no vasto oceano da informação. A verdadeira odisseia não se realiza onde não há escolha, mesmo que difícil. A heroica jornada do navegante começa com a decisão de enfrentar Cila, o monstro de seis cabeças, ou Caríbdis, o colossal redemoinho.
@@ -11,4 +15,4 @@ De posse do leme dessa odisseia, doma-se a força do selvagem touro, aquele que 
 
 (30/08/25)
 
-[voltar](./)
+[<--](./)

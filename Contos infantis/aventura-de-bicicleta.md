@@ -3,6 +3,10 @@ layout: default
 title: "Aventura de bicicleta"
 --- 
 
+
+
+[Contos infantis](./)
+
 ## Aventura de bicicleta
 
 Fevereiro 11, 2008
@@ -29,4 +33,4 @@ Passou-se algum tempo e enfim Clara lembrou: — Precisamos ir, temos que chegar
 
 Que aventura legal, como aproveitaram as garotas. E que gratidão sentiram por terem escutado os conselhos do papai e da mamãe.
 
-[voltar](./)
+[<--](./)

@@ -3,6 +3,10 @@ layout: default
 title: "Um minuto"
 --- 
 
+
+
+[Crônicas](./)
+
 ## Um minuto
 
 A atenção plena no trabalho é interrompida pelo alerta. Uma necessária pausa, seu aviso clama. Penso em continuar sentado, olhando o brilho que desenha cores no grande retângulo. Destino das letras que povoam meus dedos. Mudo de ideia, vou até a copa, bebo uma água gelada. A mente permanece presente, observando. Mantendo o êxtase dos miolos que vibram os sentidos. Me dirijo até a sala.
@@ -11,4 +15,4 @@ Na janela, o olhar se perde na imensidão celeste. Neurônios continuam o baile.
 
 De volta ao teclado, transcrevo o instante. Pescando palavras, inventando o sentimento. Uma tarefa fluida que espelha o breve momento. O som de sabiás e bem-te-vis se intercalam com monótonos latidos. Sereno e tranquilo, baila o pensar. Preenchendo o vazio com sinceras palavras. Pulsação real da mente atenta. Dez minutos de paz em um minuto escrito.
 
-[voltar](./)
+[<--](./)

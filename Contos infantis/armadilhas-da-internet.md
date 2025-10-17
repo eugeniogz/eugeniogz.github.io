@@ -3,6 +3,10 @@ layout: default
 title: "Armadilhas da Internet"
 --- 
 
+
+
+[Contos infantis](./)
+
 ## Armadilhas da Internet
 
 Fevereiro 11, 2008
@@ -21,4 +25,4 @@ A polícia conseguiu encontrar o esconderijo dos bandidos e recuperar o dinheiro
 
 Mais tarde os policiais retornaram à casa de Carolina e explicaram para ela o perigo de digitar informações pessoais na internet.
 
-[voltar](./)
+[<--](./)

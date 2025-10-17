@@ -1,7 +1,11 @@
 ---
 layout: default
-title: Alvorecer
+title: "Alvorecer"
 --- 
+
+
+
+[Crônicas](./)
 
 ## Alvorecer
 
@@ -35,4 +39,4 @@ Quase tudo pronto para o almoço, pensa em preparar um bolo para assar à tarde.
 
 (19/09/25 a 23/09/25).
 
-[voltar](./)
+[<--](./)

@@ -3,6 +3,10 @@ layout: default
 title: "Teimosia"
 --- 
 
+
+
+[Contos infantis](./)
+
 ## Teimosia
 
 Fevereiro 11, 2008
@@ -23,4 +27,4 @@ Ela queria jogar vôlei e então pegou a bola e chamou a meninada. — Vamos jog
 
 Assim, Lude aprendeu a lição e, a partir deste dia, passou a combater o pensamento de teimosia que tanto atrapalhava a amizade com os amigos.
 
-[voltar](./)
+[<--](./)

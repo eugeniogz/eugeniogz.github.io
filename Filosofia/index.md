@@ -1,12 +1,9 @@
 # Filosofia
 
-## Documentos
-- [Divino amor](./divino-amor.html)
-- [Lar: segredos invioláveis](./lar-segredos-inviolaveis.html)
-
 ## Subpastas
+- [Natureza](./Natureza/index.md)
+- [Amor](./Amor/index.md)
+- [Consciência](./Consciência/index.md)
 - [Felicidade](./Felicidade/index.md)
-- [Mente e conhecimento](./Mente e conhecimento/index.md)
-- [Criação e Eternidade](./Criação e Eternidade/index.md)
 
 [<--](../)

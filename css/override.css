@@ -53,3 +53,10 @@ hr {
   font-size: 26px;
   font-weight: normal;
 }
+
+.word-count {
+  font-size: 0.8em;
+  color: #666;
+  margin-left: 8px;
+  font-style: italic;
+}

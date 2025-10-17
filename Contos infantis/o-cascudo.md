@@ -3,6 +3,10 @@ layout: default
 title: "O Cascudo"
 --- 
 
+
+
+[Contos infantis](./)
+
 ## O Cascudo
 
 Fevereiro 11, 2008
@@ -19,4 +23,4 @@ No dia seguinte, Fabiana e Rafaela levantaram bem cedo para tentar capturar o ca
 
 Chegando lá, colocaram o peixe no aquário. Ele grudou a boca nas paredes do vidro e começou a comer todo o lodo. Assim, as irmãs concluíram haver pescado um cascudo. Mostraram para o avô, que confirmou ser um cascudo e disse: — Viram, na natureza cada animal tem um papel importante, o cascudo ajuda a limpar o lodo. Nós, como temos maior inteligência, temos uma obrigação ainda mais importante: devemos preservar e proteger a natureza.
 
-[voltar](./)
+[<--](./)

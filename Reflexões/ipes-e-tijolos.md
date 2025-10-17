@@ -1,7 +1,11 @@
 ---
 layout: default
-title: Ipês e tijolos
+title: "Ipês e tijolos"
 --- 
+
+
+
+[Reflexões](./)
 
 ## Ipês e tijolos
 
@@ -11,4 +15,4 @@ Quando esses frios tijolos serão como as flores? Amarelas e homogêneas, nascen
 
 (21/09/25)
 
-[voltar](./)
+[<--](./)

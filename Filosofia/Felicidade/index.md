@@ -1,11 +1,9 @@
 # Felicidade
 
-## Documentos
-- [Escolhas](./escolhas.html)
-- [Odisseia interior](./odisseia-interior.html)
-- [Aurora da mente](./aurora-da-mente.html)
-- [Serena euforia](./serena-euforia.html)
-- [Êxtase](./extase.html)
-- [Eudaimonia](./eudaimonia.html)
+- [Tecendo a vida](./tecendo-a-vida.html) <span class="word-count">[8.5 min]</span>
+- [Escolhas](./escolhas.html) <span class="word-count">[1 min]</span>
+- [Odisseia interior](./odisseia-interior.html) <span class="word-count">[1 min]</span>
+- [Êxtase](./extase.html) <span class="word-count">[0.5 min]</span>
+- [Eudaimonia](./eudaimonia.html) <span class="word-count">[1 min]</span>
 
 [<--](../)

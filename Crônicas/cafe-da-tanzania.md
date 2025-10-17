@@ -3,6 +3,10 @@ layout: default
 title: "Café da Tanzânia"
 --- 
 
+
+
+[Crônicas](./)
+
 ## Café da Tanzânia
 
 Degusto uma xícara de café expresso da Tanzânia, enquanto penso sobre os mistérios da vida. O café é bom, assim é a vida. Por que, então, surge a tristeza? O que nos falta é reconhecer o que a sorte nos brinda milhares de prêmios, como este café, por exemplo, que nos dá o prazer de sentir o sabor do fruto de cultivos de uma região tão remota. Esse prazer, dádiva do nosso tempo, muitas vezes nem é notado.
@@ -15,4 +19,4 @@ Podemos superar isso ao encontrar os verdadeiros motivos da felicidade, que est�
 
 (23/07/20)
 
-[voltar](./)
+[<--](./)
