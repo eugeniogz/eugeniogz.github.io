@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Ipês e tijolos"
+tags:
+  - Sociedade
 --- 
 
 

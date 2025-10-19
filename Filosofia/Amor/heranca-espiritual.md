@@ -1,6 +1,10 @@
 ---
 layout: default
 title: "Herança espiritual"
+tags:
+  - Mente
+  - Serena euforia
+  - Herança
 --- 
 
 

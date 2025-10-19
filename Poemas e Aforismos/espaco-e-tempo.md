@@ -1,11 +1,14 @@
 ---
 layout: default
 title: "Espaço e tempo"
+tags:
+  - Tempo
+  - Vida
 --- 
 
 
 
-[Poemas](./)
+[Poemas e Aforismos](./)
 
 ## Espaço e tempo
 

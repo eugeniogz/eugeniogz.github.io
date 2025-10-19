@@ -1,6 +1,9 @@
 ---
 layout: default
 title: "Sementes do futuro"
+tags:
+  - Herança
+  - Gratidão
 --- 
 
 
@@ -9,6 +12,8 @@ title: "Sementes do futuro"
 
 ## Sementes do futuro
 
-A estação das flores se divisava no horizonte e o perfume que vinha da janela remetia ao caloroso verão. A sinfonia dos animais se pronunciava mais intensa, dando adeus ao inverno que se despedia. Os ipês-roxos e os amarelos já haviam mostrado as suas coloridas flores, em seu lugar pintavam as ruas as flores róseas de seus parentes. Os dias já não eram tão frios, amanheciam frescos, uma amena temperatura que dispensava agasalhos. Famílias são como ipês. Umas florescem mais cedo, com galhos sofridos, despidos de folhas, vivendo com poucos recursos, absorvendo a escassa seiva invernal. Outras, aproveitando a abundância da primavera, exibem suas alegres flores ao lado de verdejantes folhas da fartura. Suas raízes absorvem a deliciosa seiva de um terreno que as flores do frio lhes prepararam. As folhas rosadas não devem nunca esquecer do esforço das primeiras flores, o roxo sofrimento dos ancestrais, porque a gratidão aos que a precederam é que valoriza as sementes do seu futuro. (16/09/25)
+A estação das flores se divisava no horizonte e o perfume que vinha da janela remetia ao caloroso verão. A sinfonia dos animais se pronunciava mais intensa, dando adeus ao inverno que se despedia. Os ipês-roxos e os amarelos já haviam brindado suas coloridas flores, em seu lugar, as flores róseas de seus parentes pintavam as ruas. Os dias já não eram tão frios, amanheciam frescos, uma amena temperatura que dispensava agasalhos. Famílias são como ipês. Umas florescem mais cedo, com galhos sofridos, despidos de folhas, vivendo com poucos recursos, absorvendo a escassa seiva invernal. Outras, aproveitando a abundância da primavera, exibem suas alegres flores ao lado de verdejantes folhas da fartura. Suas raízes absorvem a deliciosa seiva de um terreno que as flores do frio lhes prepararam. As folhas rosadas não devem nunca esquecer do esforço das primeiras flores, o roxo sofrimento dos ancestrais, porque a gratidão aos que a precederam é que valoriza as sementes do seu futuro.
+
+(16/09/25)
 
 [<--](./)

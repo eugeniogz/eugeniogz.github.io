@@ -1,6 +1,9 @@
 ---
 layout: default
 title: "Internet: oceano poluido"
+tags:
+  - Mentira
+  - Crença
 --- 
 
 

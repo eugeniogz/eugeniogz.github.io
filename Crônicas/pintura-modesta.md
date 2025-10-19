@@ -1,6 +1,9 @@
 ---
 layout: default
 title: "Pintura modesta"
+tags:
+  - Atenção plena
+  - Serena euforia
 --- 
 
 

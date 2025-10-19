@@ -146,12 +146,12 @@
       
       // 3. Rola a página para o título da lista (para melhor UX)
       // Usamos setTimeout para garantir que a rolagem ocorra após a exibição
-    //   setTimeout(() => {
-    //     const targetElement = document.getElementById(tagSlug);
-    //     if (targetElement) {
-    //       targetElement.scrollIntoView({ behavior: 'smooth' });
-    //     }
-    //   }, 0);
+       setTimeout(() => {
+         const targetElement = document.getElementById(tagSlug);
+         if (targetElement) {
+           targetElement.scrollIntoView({ behavior: 'smooth' });
+         }
+       }, 0);
     }
   }
 </script>

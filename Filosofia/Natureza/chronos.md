@@ -1,6 +1,10 @@
 ---
 layout: default
 title: "Chronos"
+tags:
+  - Monotonia
+  - Tempo
+  - Mitologia
 --- 
 
 

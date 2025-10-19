@@ -1,6 +1,12 @@
 ---
 layout: default
 title: "Aforismos"
+tags:
+  - Conhecimento
+  - Felicidade
+  - Amor
+  - Natureza
+  - Mente
 --- 
 
 

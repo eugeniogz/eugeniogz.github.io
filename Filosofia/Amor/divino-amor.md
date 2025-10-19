@@ -1,6 +1,9 @@
 ---
 layout: default
 title: "Divino amor"
+tags:
+  - Alma
+  - Amor
 --- 
 
 

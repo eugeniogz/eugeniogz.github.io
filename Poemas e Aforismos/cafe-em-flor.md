@@ -1,6 +1,9 @@
 ---
 layout: default
 title: "Café em flor"
+tags:
+  - Herança
+  - Vida
 --- 
 
 

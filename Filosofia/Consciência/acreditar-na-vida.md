@@ -1,6 +1,9 @@
 ---
 layout: default
 title: "Acreditar na vida"
+tags:
+  - Crença
+  - Conhecimento
 --- 
 
 

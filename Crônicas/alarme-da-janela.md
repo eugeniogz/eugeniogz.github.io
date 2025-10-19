@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Alarme da janela"
+tags:
+  - Sociedade
 --- 
 
 

@@ -1,6 +1,9 @@
 ---
 layout: default
 title: "Tapete de algodão"
+tags:
+  - Sociedade
+  - Escravidão digital
 --- 
 
 

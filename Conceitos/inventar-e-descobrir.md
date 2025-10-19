@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Inventar é descobrir"
+tags:
+  - Conhecimento
 --- 
 
 
@@ -15,7 +17,7 @@ Teorias físicas são modelos, a antiga música das esferas postulada há quase 
 
 Novas filosofias permanecem à espera. Navegadores do mar metafísico buscam respostas, que já estão prontas em continentes desconhecidos. Por enquanto, parecem perdidos, ofuscados por soluções cada vez mais ousadas da ciência e por conteúdos de autoajuda que propagam como pragas.
 
-Soluções para a vida em sociedade também parecem estagnadas. De um lado, uns defendem o liberalismo, que demonstra a sua crueldade para a maioria. Outros defendem um estado forte, que apresenta falhas, perdendo a agilidade do espírito empreendedor. Melhor seria que se descortinasse a solução que se encontra escondida, para alívio na desigualdade e estímulo da iniciativa.
+Soluções para a vida em sociedade também parecem estagnadas. De um lado, uns defendem o liberalismo, que demonstra a sua crueldade para a maioria. Outros defendem um estado forte, que apresenta falhas, perdendo a agilidade do espírito empreendedor. Melhor seria que se descortinasse uma solução  alternativa para alívio das desigualdades e estímulo da iniciativa.
 
 (17/09/25).
 

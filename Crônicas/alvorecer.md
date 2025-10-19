@@ -1,6 +1,9 @@
 ---
 layout: default
 title: "Alvorecer"
+tags:
+  - Atenção plena
+  - Sociedade
 --- 
 
 

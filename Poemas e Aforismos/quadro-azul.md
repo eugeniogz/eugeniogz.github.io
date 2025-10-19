@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Quadro azul"
+tags:
+  - Atenção plena
 --- 
 
 

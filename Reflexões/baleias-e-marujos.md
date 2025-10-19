@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Baleias e marujos"
+tags:
+  - Sociedade
 --- 
 
 

@@ -1,6 +1,9 @@
 ---
 layout: default
 title: "Café da Tanzânia"
+tags:
+  - Sociedade
+  - Felicidade
 --- 
 
 

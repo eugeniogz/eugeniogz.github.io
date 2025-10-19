@@ -1,6 +1,9 @@
 ---
 layout: default
 title: "Tecendo a vida"
+tags:
+  - Vida
+  - Caminho
 --- 
 
 

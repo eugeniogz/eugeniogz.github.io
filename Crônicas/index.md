@@ -9,6 +9,6 @@
 - [Alvorecer](./alvorecer.html) <span class="word-count">[5 min]</span>
 - [Relógios e cafés](./relogios-e-cafes.html) <span class="word-count">[4 min]</span>
 - [Manhã de domingo](./manha-de-domingo.html) <span class="word-count">[4.5 min]</span>
-- [Quebrando a monotonia](./quebrando-a-monotonia.html) <span class="word-count">[4 min]</span>
+- [Quebrando a monotonia](./quebrando-a-monotonia.html) <span class="word-count">[2 min]</span>
 
 [<--](../)

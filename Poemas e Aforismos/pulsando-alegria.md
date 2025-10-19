@@ -1,6 +1,10 @@
 ---
 layout: default
 title: "Pulsando alegria"
+tags:
+  - Trabalho
+  - Felicidade
+  - Ensinar
 --- 
 
 

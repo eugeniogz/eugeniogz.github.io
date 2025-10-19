@@ -1,6 +1,9 @@
 ---
 layout: default
 title: "Relógios e cafés"
+tags:
+  - Atenção plena
+  - Tempo
 --- 
 
 

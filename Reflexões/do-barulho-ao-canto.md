@@ -1,6 +1,9 @@
 ---
 layout: default
 title: "Do barulho ao canto"
+tags:
+  - Atenção plena
+  - Sociedade
 --- 
 
 

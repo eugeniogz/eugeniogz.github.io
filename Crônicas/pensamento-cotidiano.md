@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Pensamento cotidiano"
+tags:
+  - Atenção plena
 --- 
 
 
@@ -23,7 +25,7 @@ Cinco dias se passaram, estive absorto no cotidiano monótono, dias vivendo no p
 
 Os ipês-rosas estavam floridos, algumas flores caídas decoravam o chão como tapetes rosados. Pessoas andavam, outras corriam. O clima era ameno, sem ser frio. Um leve vento sacudia os tapetes, que pareciam ter vida.
 
-No retorno, me envolvi a teclar no meu notebook. Tenho um monitor de 24" acoplado ao mesmo, o que me ajuda a enxergar melhor do que no pequeno monitor integrado. Uso Linux, o que me remete à rebeldia do mestrado, quando este sistema era uma arma de resistência contra o monopólio do Windows - instalar um Linux era como plantar uma árvore em terreno árido. É prazeroso poder escolher esse sistema hoje muito mais simples de instalar, fico feliz com as vantagens do mesmo, sua rapidez, a falta de anúncios a pipocar na tela. Sobretudo, a opção preferencial pelo software gratuito e não proprietário.
+No retorno, me envolvi a teclar atento ao monitor de 24" que me ajuda a enxergar melhor. Uso Linux, o que me remete à rebeldia do mestrado, quando este sistema era uma arma de resistência contra o monopólio do Windows - instalar um Linux era como plantar uma árvore em terreno árido. É prazeroso poder escolher esse sistema hoje muito mais simples de instalar, fico feliz com as vantagens do mesmo, sua rapidez, a falta de anúncios a pipocar na tela. Sobretudo, a opção preferencial pelo software gratuito e não proprietário.
 
 Sentado em frente ao computador, abri uma gaveta. Me deparando com vários itens entulhando a mesma. Dediquei um tempo a organizá-la, colocando muitos papéis inúteis no lixo.  Costumo fazer essa mesma faxina com frequência nos arquivos do computador. As gavetas mentais costumam ficar bagunçadas, cheias de informações fúteis. Muitas vezes sem perceber preenchemos seus espaços, deixando de aproveitar sua capacidade.
 

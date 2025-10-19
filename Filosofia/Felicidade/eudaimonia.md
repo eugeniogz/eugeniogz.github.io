@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Eudaimonia"
+tags:
+  - Felicidade
 --- 
 
 
@@ -11,6 +13,8 @@ title: "Eudaimonia"
 
 A “eudaimonia” do grego eu = bem e “daimon” = espírito, pode ser pensada como viver com o espírito ativo, bem resolvido, num estado de plena felicidade. Um estado alcançável por aquele que sabe viver segundo o que sente, pensa e faz, independente das influências externas. Esse é o meu conceito de eudaimonia. Ele se alinha ao pensamento estoico. Como disse Marco Aurélio: "Muito pouco é necessário para ter uma vida feliz; está tudo dentro de você, em sua maneira de pensar". Viver com a certeza de que o caminho que se segue permite escolhas e que fatores externos existem e podem mudar direções e planos. Torna a vida mais leve, permite o desabrochar de um novo horizonte, onde fatores alheios ao controle pessoal não abalam o espírito.
 
-Não é possível manter uma vida de plenitude, encontrar no interno a felicidade constante, se mantemos nosso foco no que não temos controle. Sêneca já afirmava: "Apoia-se em bases frágeis quem faz sua felicidade depender de elementos externos. Toda a alegria que assim surge logo se vai; no entanto, aquela que vem do interior é firme e sólida. Ela cresce e nos acompanha até o final". Assim, devemos saber o que podemos realizar e lutar por isso. Tudo o que nos rodeia e nos afeta será apenas a tela onde o artista, em plena eudaimonia pinta com cores vibrantes seu futuro. (10/9/25).
+Não é possível manter uma vida de plenitude, encontrar no interno a felicidade constante, se mantemos nosso foco no que não temos controle. Sêneca já afirmava: "Apoia-se em bases frágeis quem faz sua felicidade depender de elementos externos. Toda a alegria que assim surge logo se vai; no entanto, aquela que vem do interior é firme e sólida. Ela cresce e nos acompanha até o final". Assim, devemos saber o que podemos realizar e lutar por isso. Tudo o que nos rodeia e nos afeta será apenas a tela onde o artista, em plena eudaimonia pinta com cores vibrantes seu futuro.
+
+(10/9/25).
 
 [<--](./)

@@ -1,6 +1,10 @@
 ---
 layout: default
 title: "Vida consciente"
+tags:
+  - Serena euforia
+  - Vida
+  - Mente
 --- 
 
 

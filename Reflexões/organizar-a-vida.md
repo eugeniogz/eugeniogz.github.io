@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Organizar a vida"
+tags:
+  - Escravidão digital
 --- 
 
 
