@@ -1,13 +1,13 @@
 ---
 layout: default
-title: "Reinventando o cotidiano"
+title: "Pensamento cotidiano"
 --- 
 
 
 
 [Crônicas](./)
 
-## Reinventando o cotidiano
+## Pensamento cotidiano
 
 No conforto do meu quarto, uma cama Queen é ocupada apenas por mim, sentado. Um pijama quadriculado, um cobre leito cinza atravessado por um enfeite tecido em linha multicolorido, uma blusa de lã verde jogada sobre a mesma. Quatro travesseiros. Uma cômoda estreita com objetos variados, dentre eles três porta retratos que capturam momentos do casal e sua família. Um espelho calado, os computadores sem vida. Na sala, uma TV estridente transmite a novela. Não tenho vontade de assistir a essa melodramática e imensamente cruel trama.
 
@@ -25,7 +25,7 @@ Os ipês-rosas estavam floridos, algumas flores caídas decoravam o chão como t
 
 No retorno, me envolvi a teclar no meu notebook. Tenho um monitor de 24" acoplado ao mesmo, o que me ajuda a enxergar melhor do que no pequeno monitor integrado. Uso Linux, o que me remete à rebeldia do mestrado, quando este sistema era uma arma de resistência contra o monopólio do Windows - instalar um Linux era como plantar uma árvore em terreno árido. É prazeroso poder escolher esse sistema hoje muito mais simples de instalar, fico feliz com as vantagens do mesmo, sua rapidez, a falta de anúncios a pipocar na tela. Sobretudo, a opção preferencial pelo software gratuito e não proprietário.
 
-Sentado em frente ao computador, abri uma gaveta. Me deparando com vários itens entulhando a mesma. Dediquei um tempo a organizá-la, colocando muitos papéis inúteis no lixo.  Costumo fazer essa mesma faxina com frequência nos arquivos do computador. Devemos tratar também assim a nossa mente, deixando de ocupá-la como as gavetas, mantendo o foco em atividades úteis, como um telefonema para a mãe.
+Sentado em frente ao computador, abri uma gaveta. Me deparando com vários itens entulhando a mesma. Dediquei um tempo a organizá-la, colocando muitos papéis inúteis no lixo.  Costumo fazer essa mesma faxina com frequência nos arquivos do computador. As gavetas mentais costumam ficar bagunçadas, cheias de informações fúteis. Muitas vezes sem perceber preenchemos seus espaços, deixando de aproveitar sua capacidade.
 
 Hoje é fácil passar horas rolando telas, jogando videogame, enfim, toda a sorte de entretenimento. Do mesmo modo, podemos perder tempo "jogando conversa fora" em mesas de bar ou em reuniões vazias. É certo que se deve curtir esses momentos, podemos vivê-los, o segredo é evitar que os mesmos sejam o que ocupa as nossas gavetas.
 

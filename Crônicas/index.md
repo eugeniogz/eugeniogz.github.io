@@ -1,6 +1,6 @@
 # Crônicas
 
-- [Reinventando o cotidiano](./reinventando-o-cotidiano.html) <span class="word-count">[3 min]</span>
+- [Pensamento cotidiano](./pensamento-cotidiano.html) <span class="word-count">[3 min]</span>
 - [Alarme da janela](./alarme-da-janela.html) <span class="word-count">[0.5 min]</span>
 - [Café da Tanzânia](./cafe-da-tanzania.html) <span class="word-count">[1 min]</span>
 - [Pintura modesta](./pintura-modesta.html) <span class="word-count">[1.5 min]</span>

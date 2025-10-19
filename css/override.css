@@ -60,3 +60,23 @@ hr {
   margin-left: 8px;
   font-style: italic;
 }
+
+.tag-cloud {
+    display: flex; /* Para que as tags fiquem lado a lado */
+    flex-wrap: wrap; /* Para que quebrem a linha */
+    gap: 0.5em; /* Espaçamento entre as tags */
+    justify-content: center; /* Centraliza a nuvem */
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.tag-cloud a {
+    text-decoration: none;
+    transition: color 0.3s, font-size 0.3s;
+    /* Outras estilizações, como cor de fundo ou borda */
+    border-radius: 4px;
+}
+
+.tag-cloud a:hover {
+    color: #007bff; /* Cor primária do seu site */
+}

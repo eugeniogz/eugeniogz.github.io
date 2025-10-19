@@ -1,0 +1,157 @@
+<h1>Nuvem de Tags</h1>
+
+{% comment %} 
+    Ação: Corrige o problema do array aninhado (["Tag1", "Tag2"])
+    Caminho: Força a iteração em duas etapas para garantir que cada tag seja uma string.
+{% endcomment %}
+
+{% comment %} PASSO 1: Coletar TODAS as tags de TODOS os itens em uma lista bruta {% endcomment %}
+{% assign raw_tags_list = "" %}
+{% assign total_items = site.posts | concat: site.pages %}
+
+{% for item in total_items %}
+  {% if item.tags %}
+    {% comment %} Itera sobre a lista de tags de CADA ITEM. Se for um array aninhado, 
+                 esta iteração pega o array inteiro como "tag". {% endcomment %}
+    {% for tag_item in item.tags %}
+      {% comment %} 
+        Agora, transformamos o que pode ser um array (como ["Eternidade", ...])
+        em uma string única separada por um caractere que usaremos para quebrar.
+      {% endcomment %}
+      {% assign tag_string = tag_item | join: "||" %}
+      
+      {% comment %} Adiciona à nossa lista bruta, separando por um delimitador forte (||) {% endcomment %}
+      {% assign raw_tags_list = raw_tags_list | append: tag_string | append: "||" %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{% comment %} 
+    PASSO 2: Quebrar a lista bruta em tags individuais e limpar.
+    O split transforma "Eternidade||Cosmogonia||..." em ["Eternidade", "Cosmogonia", ...]
+{% endcomment %}
+{% assign all_tags = raw_tags_list | split: "||" | uniq | sort %}
+{% assign all_tags_cleaned = all_tags | where_exp: "item", "item != ''" %}
+
+
+{% comment %} PASSO 3: Encontrar o tamanho MÁXIMO e MÍNIMO para o cálculo da nuvem {% endcomment %}
+{% assign min_size = 10000000 %}
+{% assign max_size = 0 %}
+
+{% for tag_name in all_tags_cleaned %}
+  {% assign count = 0 %}
+  {% for item in total_items %}
+    {% if item.tags contains tag_name %}
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if count < min_size %}
+    {% assign min_size = count %}
+  {% endif %}
+  {% if count > max_size %}
+    {% assign max_size = count %}
+  {% endif %}
+{% endfor %}
+
+
+{% comment %} PASSO 4: Geração da Nuvem - CÁLCULO DE TAMANHO COM ESCOPO CORRIGIDO {% endcomment %}
+
+{% comment %} Variáveis Fixas de Comparação e Range (Números) {% endcomment %}
+{% assign max_count = max_size | plus: 0 %} 
+{% assign min_count = min_size | plus: 0 %}
+
+{% comment %} Variáveis de Fonte (Floating Point) {% endcomment %}
+{% assign font_size_min_f = 1.0 | times: 1.0 %}
+{% assign font_size_max_f = 1.5 | times: 1.0 %}
+{% assign font_range_f = font_size_max_f | minus: font_size_min_f %}
+
+{% assign size_range = max_count | minus: min_count %} 
+{% assign size_range_f = size_range | times: 1.0 %}
+
+<div class="tag-cloud" id="tag-cloud-top">
+  {% for tag_name in all_tags_cleaned %}
+    
+    {% comment %} 1. Recalcula a contagem (Garantindo o Escopo) {% endcomment %}
+    {% assign current_count = 0 %} 
+    {% for item in total_items %}
+      {% if item.tags contains tag_name %}
+        {% assign current_count = current_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    
+    {% assign tag_size_num = current_count | plus: 0 %} 
+    
+    {% comment %} 2. Cálculo da Fonte (Agora com valores numéricos confiáveis) {% endcomment %}
+    {% if size_range_f == 0.0 %}
+        {% assign font_size = font_size_min_f %}
+    {% else %}
+        {% assign size_diff = tag_size_num | minus: min_count %}
+        {% assign size_diff_f = size_diff | times: 1.0 %}
+
+        {% comment %} Calcula a posição relativa na escala (0 a 1) {% endcomment %}
+        {% assign relative_size = size_diff_f | divided_by: size_range_f %}
+        
+        {% comment %} Escala o tamanho e soma ao mínimo {% endcomment %}
+        {% assign font_size_increment = relative_size | times: font_range_f %}
+        {% assign font_size = font_size_min_f | plus: font_size_increment %}
+        
+    {% endif %}
+
+    <a href="javascript:void(0);" 
+       onclick="showTagList('{{ tag_name | slugify }}');" 
+       style="font-size: {{ font_size }}em; padding: 0.2em 0.4em; cursor: pointer;">
+      {{ tag_name }}
+    </a>
+  {% endfor %}
+</div>
+<hr>
+
+{% comment %} 
+  Esta seção inclui a lista oculta.
+{% endcomment %}
+
+{% for tag_name in all_tags_cleaned %}
+  {% assign tag_id = tag_name | slugify %}
+  
+  <div class="tag-list-container" id="{{ tag_id }}-container" style="display: none;">
+    
+    <h3 id="{{ tag_id }}">{{ tag_name }}</h3>
+
+    <ul>
+      {% assign total_items = site.posts | concat: site.pages %}
+      {% for item in total_items %}
+        {% if item.tags contains tag_name %}
+          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+{% endfor %}
+
+<script>
+  // Função para mostrar a lista de tags clicada e ocultar todas as outras
+  function showTagList(tagSlug) {
+    const containers = document.querySelectorAll('.tag-list-container');
+    const selectedContainer = document.getElementById(tagSlug + '-container');
+
+    // 1. Oculta todos os containers
+    containers.forEach(container => {
+      container.style.display = 'none';
+    });
+
+    // 2. Exibe o container da tag clicada
+    if (selectedContainer) {
+      selectedContainer.style.display = 'block';
+      
+      // 3. Rola a página para o título da lista (para melhor UX)
+      // Usamos setTimeout para garantir que a rolagem ocorra após a exibição
+    //   setTimeout(() => {
+    //     const targetElement = document.getElementById(tagSlug);
+    //     if (targetElement) {
+    //       targetElement.scrollIntoView({ behavior: 'smooth' });
+    //     }
+    //   }, 0);
+    }
+  }
+</script>
