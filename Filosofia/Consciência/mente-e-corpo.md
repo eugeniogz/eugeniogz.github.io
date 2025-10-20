@@ -3,6 +3,7 @@ layout: default
 title: "Mente e corpo"
 tags:
   - Mente
+  - Corpo
 --- 
 
 
@@ -17,7 +18,7 @@ A mente faz parte do corpo, cria-se no espaço físico, povoado por seus órgão
 
 Nesse baile, as sinapses se fortalecem, se conectam e se podam, uma atividade frenética que responde aos estímulos externos, guiando a tomada de decisões, carregando a elétrica seiva do compasso primordial, a expansão do saber, o movimento vital. Nesse processo, a valsa pode desandar. A busca por explicações pode levar ao acúmulo de concepções fantasiosas, pois é cômodo adubar árvores de crescimento fácil, semeadas por ofuscantes enganos. Evitando o florescimento de conhecimentos que, para brotar, precisam do cuidado na seleção da verdadeira cultura, que requer esforço e paciência para compreender a verdade que encerra.
 
-As ervas daninhas que surgem do apelo preguiçoso de aceitar narrativas infundadas cativam a mente com informações falsas. Crescem e se alastram apelando para a tendência em acreditar em falsas notícias, placebos milagrosos e toda sorte de absurdos. É preciso expurgar essas ervas que cegam a mente. Cultivando no solo do método científico uma esplêndida floresta, cria-se uma mente devidamente sã, onde a experimentação e a consciência crítica impeçam que o engano se alastre.
+As ervas daninhas que surgem do apelo preguiçoso de aceitar narrativas infundadas cativam a mente com informações falsas. Crescem e se alastram, apelando para a tendência em acreditar em falsas notícias, placebos milagrosos e toda sorte de absurdos. É preciso expurgar essas ervas que cegam a mente. Cultivando no solo do método científico uma esplêndida floresta, cria-se uma mente devidamente sã, onde a experimentação e a consciência crítica impeçam que o engano se alastre.
 
 A floresta mental não se dissocia do corpo, enraizada em cada órgão, comanda o movimento e o descanso, sente o prazer e a dor. Neurônios corporais sentem a dor do músculo fatigado, clamando o repouso que a mente decide. As copas reluzentes, viçosas e frenéticas, governam o ser, mas o corpo é presente em cada pelo do viver. Que adoece, resente, falha e envelhece. Não basta o gerente desejar a saúde, isso ele não pode controlar, mas pode decidir manter o vigor. Buscando bons hábitos, exercitando e nutrindo o físico com ciência.
 
