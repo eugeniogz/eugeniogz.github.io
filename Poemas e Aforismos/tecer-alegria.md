@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Pulsando alegria"
+title: "Tecer alegria"
 tags:
   - Trabalho
   - Felicidade
@@ -11,7 +11,7 @@ tags:
 
 [Poemas e Aforismos](./)
 
-## Pulsando alegria
+## Tecer alegria
 
 Suor criativo  
 fonte da arte  
@@ -23,19 +23,14 @@ da monotonia
 cores que bailam  
 pintam sinfonia
 
-Fugir da rotina  
-inventar o que tece  
-descobrir horizontes  
-saber que merece
-
 Estudar cada dia  
-aumenta o saber  
-visando ensinar  
+colher o saber  
+ensinar a cultura  
 brindar o prazer
 
 Viver como artista  
-alçar sabedoria  
+criar todo dia  
 razão do humano  
-pulsando alegria
+tecer alegria
 
 [<--](./)

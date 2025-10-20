@@ -37,13 +37,13 @@ blockElement.style.display = 'none';
 
 </script>
 
-### 📓 [A Arte do cotidiano](./Crônicas)
+### 📓 [Cotidiano](./Crônicas)
 
-Crônicas que transformam os pequenos momentos em reflexões profundas
+Crônicas da atenta observação do cotidiano
 
 ### ✒️ [Palavra Poética](./Poemas e Aforismos)
 
-Poesias e aforismos que capturam a essência dos sentimentos
+Poesias e aforismos
 
 ### 🌆 [Janela para o Mundo](./Reflexões)
 
