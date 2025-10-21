@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Amor consciente"
+tags:
+  - Amor
 --- 
 
 

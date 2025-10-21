@@ -1,6 +1,10 @@
 ---
 layout: default
 title: "Armadilhas da Internet"
+tags:
+  - Escravidão digital
+  - Amor
+  - Tempo
 --- 
 
 
@@ -17,6 +21,6 @@ Animado com o jogo, Pedrinho recebeu uma mensagem: — Clique aqui para ganhar p
 
 Mais tarde, conversou com o filho: — Pedrinho, deixa eu ver o seu jogo. O menino mostrou para o pai. Olhando as mensagens, ele viu que havia várias com links que prometiam prêmios e pontos. Entendendo o problema, ligou para um técnico. Que recomendou apagar o jogo e trocar as senhas do banco. Resolvida a situação, chamou Pedrinho: — Filho, você não pode clicar em mensagens assim, acabou instalando um programa malvado no meu celular. — Agora você jogará só meia hora por dia e eu vou acompanhar. — Mas, papai, meia hora é muito pouco. — Você vai ver que não, e eu vou brincar mais com você.
 
-A rotina do menino mudou. Pedrinho jogava bola com o pai, brincava com jogos de tabuleiro, desenhava. Um belo dia, ele disse: — Papai, é mais legal brincar com você do que com o celular. — Verdade, filho, eu também me divirto mais. Assim, Pedrinho aprendeu os perigos de clicar em mensagens e ao mesmo tempo viu como era bom ter mais tempo com o pai.
+A rotina do menino mudou. Pedrinho jogava bola com o pai, brincava com jogos de tabuleiro, desenhava. Um belo dia, ele disse: — Papai, é mais legal brincar com você do que com o celular. — Verdade, filho, eu também me divirto mais. Assim, Pedrinho aprendeu os perigos de clicar em mensagens e viu como era bom ter mais tempo com o pai.
 
 [<--](./)

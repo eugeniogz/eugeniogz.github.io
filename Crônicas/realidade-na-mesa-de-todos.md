@@ -1,6 +1,9 @@
 ---
 layout: default
 title: "Realidade na mesa de todos"
+tags:
+  - Economia
+  - Sociedade
 --- 
 
 

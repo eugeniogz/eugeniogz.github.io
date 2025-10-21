@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Singelas letras da imprecisão"
+tags:
+  - Trabalho
 --- 
 
 
