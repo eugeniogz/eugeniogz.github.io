@@ -1,5 +1,7 @@
 # Crônicas
 
+- [Amor consciente](./amor-consciente.html) <span class="word-count">[2.5 min]</span>
+- [Realidade na mesa de todos](./realidade-na-mesa-de-todos.html) <span class="word-count">[3.5 min]</span>
 - [Singelas letras da imprecisão](./singelas-letras-da-imprecisao.html) <span class="word-count">[2 min]</span>
 - [Pensamento cotidiano](./pensamento-cotidiano.html) <span class="word-count">[3 min]</span>
 - [Alarme da janela](./alarme-da-janela.html) <span class="word-count">[0.5 min]</span>

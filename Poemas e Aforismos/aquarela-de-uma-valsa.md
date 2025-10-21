@@ -9,7 +9,7 @@ title: "Aquarela de uma valsa"
 
 ## Aquarela de uma valsa
 
-Brilham no espaço  
+Brilham o espaço  
 cores da aquarela.  
 Unidas no abraço,  
 gingam a velejar.
@@ -29,7 +29,7 @@ unidos corações,
 abrindo horizontes,  
 alçando céu e mar.
 
-Aninhado sussuro,   
+Aninhado sussurro,   
 aves a entardecer,  
 prelúdio, alvorada,  
 manhã irá nascer.

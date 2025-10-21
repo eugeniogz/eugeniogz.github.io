@@ -9,20 +9,14 @@ title: "Armadilhas da Internet"
 
 ## Armadilhas da Internet
 
-Fevereiro 11, 2008
+Marcos adorava seu filho, Pedro. Ele estava com 7 anos, era um garoto muito animado, mas quando estava em casa, não tinha amiguinhos para brincar. O pai brincava com ele, mas muitas vezes não tinha tempo. Nessas horas, acabava emprestando o celular para ele. Pedro se divertia com joguinhos que o pai colocava no celular. Certa vez, na escola, um amigo disse: — Tem um jogo muito legal! Ele perguntou: — Que jogo? — O clube dos pinguins.
 
-Carolina gosta muito de computadores. Com 6 anos aprendeu a usar alguns programas e hoje já com 8 anos gosta de jogar paciência, campo-minado e de navegar na internet. Em alguns trabalhos da escola ela usa o computador para pesquisar figuras e de vez em quando até textos sobre diversos assuntos.
+Quando chegou em casa, pediu ao pai: — Papai, pode pôr o clube dos pinguins para mim? O pai pesquisou no celular: — Tem esse jogo mesmo, vou colocar para você. Esse passou a ser o jogo preferido do menino. Acontece que o jogo permitia conversar com os outros jogadores. Pedrinho, mesmo com dificuldade, começou a enviar e receber mensagens de outros jogadores. No entanto, uma falha permitia que pessoas enviassem mensagens com vírus.
 
-Um dia estava pesquisando sobre um filme que gosta muito: O Crock.
+Animado com o jogo, Pedrinho recebeu uma mensagem: — Clique aqui para ganhar pontos. Pedrinho clicou no link, era um vírus. O celular do pai ficou infectado com um aplicativo do mal. O pai, sem perceber, continuou utilizando o aparelho. Mal sabia que o vírus estaria roubando seus dados e enviando para bandidos. No dia seguinte, o pai percebeu que estava faltando dinheiro no banco. Sem entender, procurou o gerente. — Alfredo, estou com um problema aqui. Alfredo, o gerente, investigou e percebeu o problema. — Marcos, isso é um golpe, deve ser um vírus no seu celular. — Você clicou em algum link? Marcos pensou: deve ter sido o Pedrinho.
 
-Pesquisando, Carolina encontrou vários sites sobre o assunto. Foi quando ela viu um anúncio: “conheça o castelo do Crock”. Ela achou interessante e acessou o site do anúncio. Quando ela viu o site percebeu que para acessar o castelo tinha que preencher alguns dados dela: Nome, idade, endereço, email, telefone. Ela preencheu e conseguiu ver o castelo, não podia imaginar o risco que estava correndo. Do outro lado da cidade a quadrilha que tinha feito o site lia os dados enviados por Carolina, planejando um golpe.
+Mais tarde, conversou com o filho: — Pedrinho, deixa eu ver o seu jogo. O menino mostrou para o pai. Olhando as mensagens, ele viu que havia várias com links que prometiam prêmios e pontos. Entendendo o problema, ligou para um técnico. Que recomendou apagar o jogo e trocar as senhas do banco. Resolvida a situação, chamou Pedrinho: — Filho, você não pode clicar em mensagens assim, acabou instalando um programa malvado no meu celular. — Agora você jogará só meia hora por dia e eu vou acompanhar. — Mas, papai, meia hora é muito pouco. — Você vai ver que não, e eu vou brincar mais com você.
 
-No dia seguinte Carolina recebeu um e-mail, era dos bandidos, no e-mail eles escreveram que um helicóptero do Crock ia passar e jogar brindes na quadra do prédio dela, mas que ela tinha que descer sem ninguém ver. Carolina desceu para a quadra sem a mãe ver. Os bandidos, que estavam observando a quadra, aproveitaram para agir. Ligaram para a casa de Carolina dizendo que a tinham sequestrado e pediram dinheiro para libertá-la. A mãe ficou tão apavorada que passou o dinheiro para eles.
-
-Depois de esperar um tempão, Carolina ficou com fome e resolveu subir rapidinho para comer algo. Quando chegou em casa a mãe contou do sequestro e Carolina disse que não tinha sido sequestrada e que estava na quadra. Então a mãe perguntou porque ela não contou que ia para a quadra e Carolina falou sobre o e-mail e então se lembrou da advertência de descer para a quadra sem contar para ninguém. Assim a mãe entendeu o que aconteceu. Os pais de Carolina investigaram a origem do e-mail e chamaram a polícia para pegar o bandido.
-
-A polícia conseguiu encontrar o esconderijo dos bandidos e recuperar o dinheiro.
-
-Mais tarde os policiais retornaram à casa de Carolina e explicaram para ela o perigo de digitar informações pessoais na internet.
+A rotina do menino mudou. Pedrinho jogava bola com o pai, brincava com jogos de tabuleiro, desenhava. Um belo dia, ele disse: — Papai, é mais legal brincar com você do que com o celular. — Verdade, filho, eu também me divirto mais. Assim, Pedrinho aprendeu os perigos de clicar em mensagens e ao mesmo tempo viu como era bom ter mais tempo com o pai.
 
 [<--](./)
