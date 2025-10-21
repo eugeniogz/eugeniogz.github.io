@@ -1,6 +1,6 @@
 # Crônicas
 
-- [Amor consciente](./amor-consciente.html) <span class="word-count">[3 min]</span>
+- [Amor consciente](./amor-consciente.html) <span class="word-count">[2.5 min]</span>
 - [Café da Tanzânia](./cafe-da-tanzania.html) <span class="word-count">[1 min]</span>
 - [Mente presente](./mente-presente.html) <span class="word-count">[1.5 min]</span>
 - [Singelas letras da imprecisão](./singelas-letras-da-imprecisao.html) <span class="word-count">[2 min]</span>

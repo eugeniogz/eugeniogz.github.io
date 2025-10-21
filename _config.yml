@@ -9,7 +9,7 @@ plugins:
   - jekyll-remote-theme
   - jekyll-feed
   - jekyll-sitemap
-
+markdown: kramdown
 #########################################################################################
 ######### Nothing below needs to be changed (unless you know what you're doing) #########
 #########################################################################################

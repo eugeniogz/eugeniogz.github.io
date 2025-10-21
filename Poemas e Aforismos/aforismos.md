@@ -7,6 +7,7 @@ tags:
   - Amor
   - Natureza
   - Mente
+  - Atenção plena
 --- 
 
 
@@ -75,6 +76,6 @@ Brilham alegrias em infinitas cosmogonias. <!--08/10/25-->
 
 ***
 
-🖋️ Do que escrevo, rara originalidade, seiva da liberdade. <!--10/07/22-->
+🖋️ Do que escrevo, rara a originalidade, seiva da liberdade. <!--10/07/22-->
 
 [<--](./)

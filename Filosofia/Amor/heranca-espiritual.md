@@ -13,7 +13,7 @@ tags:
 
 ## Herança espiritual
 
-“Os nossos cérebros e as nossas mentes não são tablae rasae quando nascemos. Contudo, também não são, na sua totalidade, geneticamente determinados.  A sombra genética tem um grande alcance, mas não é completa”. (Antônio Damásio)
+“Os nossos cérebros e as nossas mentes não são *tablae rasae* quando nascemos. Contudo, também não são, na sua totalidade, geneticamente determinados.  A sombra genética tem um grande alcance, mas não é completa”. (Antônio Damásio) 
 
 O primeiro sopro de vida já carrega a herança de suas raízes. À sombra dos frondosos galhos dos antepassados  ilumina o incipiente entendimento. Mais tarde, as atitudes demonstram comportamentos que remetem a essas raízes. Traços que podem vir de profundas fundações. Essa herança cria as primeiras luzes do espírito, que vive na mente e se torna presente no pulsar do coração. Um conceito que não é etéreo, mas que ascende a ele no poder do caráter.
 
