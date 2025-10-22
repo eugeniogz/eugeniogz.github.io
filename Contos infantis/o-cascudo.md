@@ -1,6 +1,9 @@
 ---
 layout: default
 title: "O Cascudo"
+tags:
+  - Natureza
+  - Família
 --- 
 
 
@@ -8,8 +11,6 @@ title: "O Cascudo"
 [Contos infantis](./)
 
 ## O Cascudo
-
-Fevereiro 11, 2008
 
 Fábiana e Rafaela são duas irmãs. Elas adoram passar férias na fazenda do vovô José. Lá  vivem muitos animais: cavalos, bois, galinhas, gatos, cachorros, porcos, passarinhos… Mas o que elas mais gostam é do rio. No rio existem muitos peixes.
 

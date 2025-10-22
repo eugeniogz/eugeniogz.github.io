@@ -4,6 +4,7 @@ title: "Espaço e tempo"
 tags:
   - Tempo
   - Vida
+  - Amor
 --- 
 
 
@@ -25,6 +26,11 @@ outros que nunca terei.
 Tempo de outros caminhos,  
 rotas do desconhecido espaço,  
 vida alheia que brilha,  
-no infinito que eu não sei.
+no infinito que eu não sei.  
+  
+Encontros no espaço,  
+tempo que se entrelaça.  
+Amor se une no abraço —  
+calor infinito serei.
 
 [<--](./)

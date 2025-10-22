@@ -13,22 +13,22 @@ tags:
 
 ## Tecer alegria
 
-Suor criativo  
+Mente ativa  
 fonte da arte  
 refúgio sagrado  
-da mente brilhante
+ofício brilhante
 
 Ocaso do cinza  
 da monotonia  
 cores que bailam  
 pintam sinfonia
 
-Estudar cada dia  
+Razão do aprender  
 colher o saber  
 ensinar a cultura  
 brindar o prazer
 
-Viver como artista  
+Vida de artista  
 criar todo dia  
 razão do humano  
 tecer alegria

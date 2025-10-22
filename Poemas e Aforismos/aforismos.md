@@ -22,6 +22,8 @@ A ciência ilumina a metafísica com os dourados fios do conhecimento. <!--16/09
 
 Informação exige validade, conhecimento clama liberdade. <!--17/10/25-->
 
+Conhecimento ativo, sabedoria viva. <!--22/10/25-->
+
 Descobrir é raro, reinventar é caro. <!--08/10/25-->
 
 ***

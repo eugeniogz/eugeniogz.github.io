@@ -1,6 +1,10 @@
 ---
 layout: default
 title: "Aventura de bicicleta"
+tags:
+  - Família
+  - Ensinar
+  - Escutar
 --- 
 
 
@@ -8,8 +12,6 @@ title: "Aventura de bicicleta"
 [Contos infantis](./)
 
 ## Aventura de bicicleta
-
-Fevereiro 11, 2008
 
 Era uma vez duas irmãs, Clara e Alice, que gostavam muito de andar de bicicleta. Clara tinha 8 anos e Alice 10 anos. Com esforço, já sabiam andar sem as rodinhas. Como prêmio pelas boas notas na escola, no fim do ano, ganharam novas bicicletas. Modernas e confortáveis com dez marchas. Elas gostavam muito de andar nas magrelas, ainda mais com estas novas, tão incrementadas. O lugar que elas mais iam andar de bicicleta era o parque, mas elas tomavam cuidados ao andar no parque, obedecendo ao conselho dos pais. Elas prestavam atenção para não trombar com outras bicicletas e também para não andar em locais onde havia pessoas caminhando e correndo, pois podiam atropelar alguém. As meninas já estavam craques na bicicleta nova. Sabiam aproveitar as marchas da bicicleta, escolhendo as marchas mais leves e as mais pesadas de acordo com a necessidade.
 

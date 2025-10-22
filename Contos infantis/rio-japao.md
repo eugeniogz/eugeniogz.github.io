@@ -1,6 +1,9 @@
 ---
 layout: default
 title: "Rio Japão"
+tags:
+  - Natureza
+  - Família
 --- 
 
 
