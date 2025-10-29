@@ -1,4 +1,4 @@
-<h1>Nuvem de Tags</h1>
+<h2>Nuvem de Tags</h2>
 
 {% comment %} 
     Ação: Corrige o problema do array aninhado (["Tag1", "Tag2"])
@@ -133,25 +133,40 @@
   // Função para mostrar a lista de tags clicada e ocultar todas as outras
   function showTagList(tagSlug) {
     const containers = document.querySelectorAll('.tag-list-container');
+    // 1. Encontra o container do conteúdo principal
+    const mainContent = document.getElementById('main-content');
+    
+    // 2. Encontra o container oculto com a lista de posts da tag selecionada
     const selectedContainer = document.getElementById(tagSlug + '-container');
 
     // 1. Oculta todos os containers
-    containers.forEach(container => {
-      container.style.display = 'none';
-    });
+    //containers.forEach(container => {
+    //  container.style.display = 'none';
+    //});
 
     // 2. Exibe o container da tag clicada
-    if (selectedContainer) {
-      selectedContainer.style.display = 'block';
-      
+    //if (selectedContainer) {
+    //  selectedContainer.style.display = 'block';
+    // 3. Se ambos os elementos existirem, substitui o conteúdo principal
+    if (mainContent && selectedContainer) {
+      // Copia o HTML da lista de posts para o conteúdo principal
+      mainContent.innerHTML = selectedContainer.innerHTML;
+       
       // 3. Rola a página para o título da lista (para melhor UX)
       // Usamos setTimeout para garantir que a rolagem ocorra após a exibição
-       setTimeout(() => {
-         const targetElement = document.getElementById(tagSlug);
-         if (targetElement) {
-           targetElement.scrollIntoView({ behavior: 'smooth' });
-         }
-       }, 0);
+      // setTimeout(() => {
+      //   const targetElement = document.getElementById(tagSlug);
+      //   if (targetElement) {
+      //     targetElement.scrollIntoView({ behavior: 'smooth' });
+      //   }
+      // }, 0);
+      // 4. Rola a página para o topo do conteúdo principal para uma melhor UX
+      // Usamos setTimeout para garantir que a rolagem ocorra após a atualização do DOM
+      setTimeout(() => {
+        if (mainContent) {
+          mainContent.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 0);
     }
   }
 </script>

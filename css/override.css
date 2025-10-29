@@ -77,6 +77,9 @@ hr {
     border-radius: 4px;
 }
 
+a.button {
+  color: #007bff;
+}
 .tag-cloud a:hover {
     color: #007bff; /* Cor primária do seu site */
 }
