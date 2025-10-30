@@ -2,7 +2,7 @@
 layout: default
 title: "Wingene: O futuro da herança anscestral"
 tags:
-  - Serena Euforia
+  - Serena euforia
   - Conhecimento
   - Evolução
   - Wingene
@@ -58,13 +58,15 @@ Revisar os valores, cientes da imperfeição humana, é importante para orientar
 
 ### **O Poder de Descobrir**
 
-A vida se amplia na ação de inventar — *Invenire*, do latim, que tem como significado literal descobrir. Tomei contato com essa sutileza estudando a biografia de Jorge Luís Borges. O ofício do artista criador não é diminuído ao posicioná-lo como um desbravador. Criar é, talvez, a mais pura fonte da eudaimonia. Caminhos para obras-primas são sempre descobertas do mundo. Científicas ou metafísicas, as respostas estão no universo, aguardando que mentes criativas as revelem.
+A vida se amplia na ação de inventar — *Invenire*, do latim, que tem como significado literal descobrir. Tomei contato com essa sutileza estudando a biografia de Jorge Luís Borges. O ofício do artista criador não é diminuído se seu trabalho é desbravar, pois buscar soluções permanece um desafio. Explorar novos destinos, navegar no oceano natural. Criar é, portanto, a mais pura fonte da eudaimonia — a felicidade de encontrar a terra desconhecida. Caminhos para obras-primas são sempre descobertas do mundo. As respostas estão no universo, aguardando que mentes criativas as revelem.
 
-Teorias físicas são modelos, a antiga música das esferas — postulada há quase três mil anos — se tornou elíptica com Newton e avançou ainda mais com a relatividade de Einstein. A teoria unificadora repousa encoberta, ansiando que o esforço em vislumbrá-la ilumine novas fronteiras da ciência.
+Teorias físicas são modelos, a antiga música das esferas — postulada há quase três mil anos — se tornou elíptica com Newton e avançou ainda mais com a relatividade de Einstein. Essa última, por sua vez, cede lugar ao modelo quântico para a explicação da música das partículas — o imenso e o minúsculo, duas soluções que coexistem — A teoria unificadora repousa encoberta, ansiando que o esforço em vislumbrá-la ilumine novas fronteiras da ciência.
 
-Novas filosofias permanecem à espera. Navegadores do mar metafísico procuram respostas, que já existem em continentes inexplorados. Por enquanto, parecem perdidos, ofuscados por soluções cada vez mais ousadas da ciência e por conteúdos de autoajuda que propagam como pragas.
+Novas filosofias permanecem à espera. Navegadores do mar metafísico procuram respostas, que já existem em continentes inexplorados. Por enquanto, parecem perdidos, ofuscados por soluções cada vez mais ousadas da ciência e por conteúdos de autoajuda que se propagam como pragas.
 
-Novas descobertas seguirão acontecendo. Nossa bagagem cultural é o trampolim que permite cada salto — às vezes modesto, outras ousado. A Wingene acontece a cada dia, apesar dos fracassos e da desilusão. A sabedoria natural está presente no universo, aguardando inventores. Nesse exato momento, gestam-se em muitos recantos, porções de saber, ideias brilhantes — faróis para o futuro do humano viver.
+Artistas da palavra aos do mármore descortinam obras-primas, criações que refletem o indescritível baile de suas mentes. Tecendo criações com fios dourados do mundo físico, no esforço de explicar as belezas ocultas sob o véu invisível aos olhos alheios. Assim, a humanidade mantém a herança cultural — fruto do natural — que é oferecida às gerações futuras para sua Wingene.
+
+As descobertas seguirão acontecendo, ampliando o conhecimento, operando mudanças no entendimento. Nossa bagagem cultural é o trampolim que permite cada salto — às vezes modesto, outras ousado. A Wingene acontece a cada dia, apesar dos fracassos e da desilusão. A sabedoria natural está presente no universo, aguardando inventores. Nesse exato momento, gestam-se em muitos recantos, porções de saber, ideias brilhantes — faróis para o futuro do humano viver.
 
 ### **Infinitas Cosmogonias**
 
