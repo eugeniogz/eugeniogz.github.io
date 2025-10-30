@@ -44,22 +44,14 @@ function principal() {
   ROOT_DESTINATION_FOLDER = pastaDestinoRaiz.getName();
 
   Logger.log(`Iniciando CONVERSÃO e INDEXAÇÃO de Docs...`);
+  // A chamada agora é direta para a função recursiva única:
   const totalFilesChanged = converterPastaParaMarkdown(pastaFonte, pastaDestinoRaiz);
 
-  Logger.log(`\nIniciando LIMPEZA de arquivos excluídos em SUBPASTAS...`);
+  Logger.log(`\nIniciando LIMPEZA de arquivos excluídos em TODA a hierarquia...`);
+  
+  // Chamada única para a função de limpeza recursiva
+  limparArquivosExcluidos(pastaDestinoRaiz, pastaFonte);
 
-  // Limpeza: Itera sobre subpastas da RAIZ de destino e chama a limpeza.
-  const subpastasDestinoRaiz = pastaDestinoRaiz.getFolders();
-  while (subpastasDestinoRaiz.hasNext()) {
-      const subpastaDestino = subpastasDestinoRaiz.next();
-      const nomeSubpasta = subpastaDestino.getName();
-
-      const subpastasFonteIterator = pastaFonte.getFoldersByName(nomeSubpasta);
-
-      if (subpastasFonteIterator.hasNext()) {
-          limparArquivosExcluidos(subpastaDestino, subpastasFonteIterator.next());
-      }
-  }
 
   const urlDestino = pastaDestinoRaiz.getUrl();
   const msgSucesso = `
@@ -67,6 +59,11 @@ function principal() {
   Total de arquivos Markdown alterados (criados/atualizados):** ${totalFilesChanged} arquivos.
   [SUCESSO] Sincronização concluída! Verifique os arquivos Markdown aqui: ${urlDestino}`;
   Logger.log(msgSucesso);
+  
+  // Recomendo enviar a notificação por e-mail, se for útil:
+  // if (totalFilesChanged > 0) {
+  //    enviarNotificacaoEmail(totalFilesChanged);
+  // }
 }
 
 /**
@@ -176,13 +173,10 @@ function procurarArquivoMdEmTodaHierarquia(pasta, nomeMarkdown) {
 }
 
 // --- FUNÇÕES DE CONVERSÃO E INDEXAÇÃO ---
-///////
-///////Alteracao
-///////
-// --- FUNÇÕES DE CONVERSÃO E INDEXAÇÃO ---
 
 /**
- * Função recursiva para converter Google Docs para Markdown e salvar na pasta de destino.
+ * Função recursiva para converter Google Docs para Markdown, criar o index.md e 
+ * processar subpastas recursivamente.
  * @returns {number} O total de arquivos .md que foram criados ou atualizados.
  */
 function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
@@ -190,34 +184,34 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
     const arquivosDoc = pastaFonte.getFilesByType(MIME_GOOGLE_DOCS);
     let filesConverted = 0;
     
-    // Lista para armazenar metadados e conteúdo de TODOS os arquivos na pasta, antes de ordená-los.
+    // Lista para armazenar metadados e conteúdo de TODOS os arquivos na pasta.
     const arquivosParaProcessar = []; 
-    const arquivosIndexados = []; // Mantida para o index.md
+    const arquivosIndexados = []; 
+    const comentarioPasta = splitComentario(pastaFonte.getName());
 
     // 1. PRIMEIRA PASSAGEM: Coleta metadados, calcula o conteúdo e a necessidade de conversão
     while (arquivosDoc.hasNext()) {
         const arquivoDoc = arquivosDoc.next();
 
         const nomeDocOriginal = arquivoDoc.getName();
-        if (nomeDocOriginal === 'Config') continue;
-        if (nomeDocOriginal === 'index') continue;
+        if (nomeDocOriginal === 'Config' || nomeDocOriginal === 'index') continue;
 
         const nomeSlug = slugifyFileName(nomeDocOriginal);
         const nomeMarkdown = `${nomeSlug}.md`;
         
         totalFiles++;
 
-        // 1.1. EXTRAÇÃO DE CONTEÚDO E SCORE SEMÂNTICO (Sem rodapé de navegação ainda)
+        // 1.1. EXTRAÇÃO DE CONTEÚDO E SCORE SEMÂNTICO
         const {
-            markdownContent, // Conteúdo bruto sem navegação
+            markdownContent, 
             semanticOrderScore,
             tempoLeitura,
             nomeSemData
         } = getMarkdownAndScoreFromDoc(arquivoDoc, nomeDocOriginal, nomeSlug, pastaDestino);
 
-        // 1.2. Tenta encontrar o arquivo .md de destino
+        // 1.2. Tenta encontrar o arquivo .md de destino e verifica a data
         const arquivosMdDestino = pastaDestino.getFilesByName(nomeMarkdown);
-        let deveConverter = true;
+        let deveConverter = converterTodos; // Assume converterTodos (global) como padrão
         let arquivoMdDestino = null;
 
         if (arquivosMdDestino.hasNext()) {
@@ -225,21 +219,20 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
             const dataDocFonte = arquivoDoc.getLastUpdated().getTime();
             const dataMdDestino = arquivoMdDestino.getLastUpdated().getTime();
             
-            if (dataMdDestino >= dataDocFonte) {
-                deveConverter = converterTodos;
-                if (deveConverter) {
-                  Logger.log(`[ATUALIZANDO] Doc "${nomeDocOriginal}". converterTodos.`);
-                }
-            } else {
+            if (dataMdDestino < dataDocFonte) {
                 Logger.log(`[ATUALIZANDO] Doc "${nomeDocOriginal}". Doc fonte é mais recente.`);
                 deveConverter = true;
+            } else if (deveConverter) {
+                Logger.log(`[ATUALIZANDO] Doc "${nomeDocOriginal}". converterTodos=true.`);
+            } else {
+                // Logger.log(`[IGNORANDO] Doc "${nomeDocOriginal}". Nenhuma alteração detectada.`);
             }
         } else {
             Logger.log(`[NOVO] Doc "${nomeDocOriginal}". Arquivo MD de destino não encontrado.`);
             deveConverter = true;
         }
 
-        // 1.3. Armazena os dados para a segunda passagem
+        // 1.3. Armazena os dados
         arquivosParaProcessar.push({
             original: nomeDocOriginal,
             slug: nomeSlug,
@@ -250,83 +243,150 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
             deveConverter: deveConverter,
             arquivoMdDestino: arquivoMdDestino,
             nomeSemData: nomeSemData,
-            docFile: arquivoDoc // Mantém referência ao objeto File
+            docFile: arquivoDoc 
         });
 
-        // 1.4. Adiciona metadados para indexação (após a ordenação, será a mesma lista)
-        if ( nomeSlug !== 'index') {
-            arquivosIndexados.push({
-                original: nomeDocOriginal,
-                slug: nomeSlug,
-                link: `./${nomeSlug}.html`,
-                time: tempoLeitura,
-                semanticOrder: semanticOrderScore
-            });
-        }
+        // 1.4. Adiciona metadados para indexação (lista paralela)
+        arquivosIndexados.push({
+            original: nomeDocOriginal,
+            slug: nomeSlug,
+            link: `./${nomeSlug}.html`,
+            time: tempoLeitura,
+            semanticOrder: semanticOrderScore
+        });
     }
 
     // 2. ORDENAÇÃO
-    arquivosParaProcessar.sort((a, b) => {
-      if (a.score !== b.score) {
-        return a.score - b.score;
-      }
-      return a.nomeSlug.localeCompare(b.nomeSlug);
-    });
+    const aforismosSlug = 'aforismos';
 
-    // Também ordena a lista de indexação (para o index.md)
-    arquivosIndexados.sort((a, b) => {
-      if (a.score !== b.score) {
-        return a.score - b.score;
-      }
-      return a.nomeSlug.localeCompare(b.nomeSlug);
-    });
+    // Função de ordenação base
+    const sortDocs = (a, b) => {
+      if (a.score !== b.score) return a.score - b.score;
+      if (a.semanticOrder !== b.semanticOrder) return a.semanticOrder - b.semanticOrder;
+      return a.original.localeCompare(b.original);
+    };
 
-    // Lógica de 'aforismos' no topo do index (mantida)
-    const aforismosIndexIndex = arquivosIndexados.findIndex(doc => doc.slug === 'aforismos');
-    if (aforismosIndexIndex > 0) {
-        const aforismosDoc = arquivosIndexados[aforismosIndexIndex];
-        arquivosIndexados.splice(aforismosIndexIndex, 1);
-        arquivosIndexados.unshift(aforismosDoc);
-    }
-    // E a mesma lógica para a lista de processamento
-    const aforismosIndexProc = arquivosParaProcessar.findIndex(doc => doc.slug === 'aforismos');
-    if (aforismosIndexProc > 0) {
-        const aforismosDoc = arquivosParaProcessar[aforismosIndexProc];
-        arquivosParaProcessar.splice(aforismosIndexProc, 1);
-        arquivosParaProcessar.unshift(aforismosDoc);
-    }
-
-
-    // 3. SEGUNDA PASSAGEM: SALVA E ADICIONA LINKS DE NAVEGAÇÃO
-    for (let i = 0; i < arquivosParaProcessar.length; i++) {
-        const docInfo = arquivosParaProcessar[i];
-
-        if (docInfo.deveConverter) {
-            
-            // Determina Anterior e Próximo
-            const anterior = i > 0 ? arquivosParaProcessar[i - 1] : null;
-            const proximo = i < arquivosParaProcessar.length - 1 ? arquivosParaProcessar[i + 1] : null;
-
-            // Gera o rodapé de navegação
-            const navegacaoRodape = gerarNavegacaoRodape(anterior, proximo);
-
-            // Conteúdo final
-            const finalContent = docInfo.content + navegacaoRodape;
-
-            // Salva/Atualiza o arquivo com o novo conteúdo
-            if (docInfo.arquivoMdDestino) {
-                docInfo.arquivoMdDestino.setContent(finalContent);
-            } else {
-                pastaDestino.createFile(docInfo.markdownName, finalContent, MIME_MARKDOWN);
-            }
-            filesConverted++;
+    // Ordena listas
+    arquivosParaProcessar.sort(sortDocs);
+    arquivosIndexados.sort(sortDocs);
+    
+    // Lógica de 'aforismos' no topo (mantida)
+    for (const lista of [arquivosParaProcessar, arquivosIndexados]) {
+        const index = lista.findIndex(doc => doc.slug === aforismosSlug);
+        if (index > 0) {
+            const doc = lista[index];
+            lista.splice(index, 1);
+            lista.unshift(doc);
         }
     }
 
-    // 4. Processa as subpastas recursivamente
-    filesConverted += converterRecursivoMarkDown(pastaFonte, pastaDestino, arquivosIndexados);
+
+    // 3. SEGUNDA PASSAGEM (Inicial): SALVA E ADICIONA LINKS DE NAVEGAÇÃO
+    function executarPassagemDeConversao(force = false) {
+      let filesUpdated = 0;
+      for (let i = 0; i < arquivosParaProcessar.length; i++) {
+          const docInfo = arquivosParaProcessar[i];
+
+          if (docInfo.deveConverter || force) {
+              
+              // Determina Anterior e Próximo com a lista JÁ ORDENADA
+              const anterior = i > 0 ? arquivosParaProcessar[i - 1] : null;
+              const proximo = i < arquivosParaProcessar.length - 1 ? arquivosParaProcessar[i + 1] : null;
+
+              // Salva/Atualiza o arquivo com o novo conteúdo e navegação
+              salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDestino);
+              filesUpdated++;
+          }
+      }
+      return filesUpdated;
+    }
+    
+    // Executa a conversão baseada em data/converterTodos (Passo 3)
+    filesConverted += executarPassagemDeConversao(false);
+
+
+    // 4. PROCESSA SUBPASTAS RECURSIVAMENTE E COLETA METADADOS
+    const subpastasIndexadas = [];
+    const subpastasFonte = pastaFonte.getFolders();
+    
+    while (subpastasFonte.hasNext()) {
+        const subpastaFonte = subpastasFonte.next();
+        let nomeSubpastaCompleto = subpastaFonte.getName();
+        if (nomeSubpastaCompleto.startsWith("_")) continue;
+
+        const nomeComentarioSubpasta = splitComentario(nomeSubpastaCompleto.replace(/_/g, ' '));
+        const nomeSubpasta = nomeComentarioSubpasta[0];
+        const comentario = nomeComentarioSubpasta.length > 1 ? nomeComentarioSubpasta[1] : "";
+
+        // Tenta encontrar a pasta de destino
+        let subpastasDestinoIterator = pastaDestino.getFoldersByName(nomeSubpasta);
+        let subpastaDestino;
+
+        if (subpastasDestinoIterator.hasNext()) {
+            subpastaDestino = subpastasDestinoIterator.next();
+        } else {
+            subpastaDestino = pastaDestino.createFolder(nomeSubpasta);
+        }
+
+        // 4.1. Chamada Recursiva: Converte os arquivos dentro da subpasta
+        filesConverted += converterPastaParaMarkdown(subpastaFonte, subpastaDestino);
+
+        // 4.2. Extrai Semantic Score do Config.doc da subpasta
+        let semanticOrderScore = 999;
+        const arquivosConfig = subpastaFonte.getFilesByName("Config");
+        if (arquivosConfig.hasNext()) {
+          const arquivoConfig = arquivosConfig.next();
+          const docConteudo = DocumentApp.openById(arquivoConfig.getId());
+          const textoConfig = docConteudo.getBody().getText();
+          const scoreMatch = textoConfig.match(REGEX_ORDENACAO);
+          if (scoreMatch) {
+            const scoreStr = scoreMatch[1].replace(',', '.');
+            semanticOrderScore = parseFloat(scoreStr) || semanticOrderScore;
+          }
+        }
+        
+        // 4.3. Adiciona subpasta para indexação
+        subpastasIndexadas.push({
+          name: nomeSubpasta,
+          comentario: comentario,
+          link: `./${nomeSubpasta}/${NOME_INDEX}`,
+          semanticOrder: semanticOrderScore
+        });
+    }
+
+    subpastasIndexadas.sort((a, b) => a.semanticOrder - b.semanticOrder);
+
+    // 5. CRIA/ATUALIZA O INDEX.MD
+    const comentarioPastaTexto = comentarioPasta.length > 1 ? comentarioPasta[1] : "";
+    const indexAlterado = criarIndexMarkdown(pastaDestino, arquivosIndexados, subpastasIndexadas, comentarioPastaTexto);
+    
+    // 6. VERIFICA O REQUISITO DE RECONVERSÃO
+    if (indexAlterado && arquivosParaProcessar.length > 0) {
+        Logger.log(`[FORÇANDO RECONVERSÃO] Index.md em ${pastaDestino.getName()} foi alterado. Reconvertendo arquivos desta pasta para atualizar a navegação.`);
+        // Força a segunda passagem de conversão para todos os arquivos da pasta (Passo 3 repetido)
+        filesConverted += executarPassagemDeConversao(true);
+    }
 
     return filesConverted;
+}
+
+/**
+ * Salva/Atualiza o arquivo .md com o rodapé de navegação Anterior/Próximo.
+ */
+function salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDestino) {
+    
+    // Gera o rodapé de navegação
+    const navegacaoRodape = gerarNavegacaoRodape(anterior, proximo);
+
+    // Conteúdo final
+    const finalContent = docInfo.content + navegacaoRodape;
+
+    // Salva/Atualiza o arquivo com o novo conteúdo
+    if (docInfo.arquivoMdDestino) {
+        docInfo.arquivoMdDestino.setContent(finalContent);
+    } else {
+        pastaDestino.createFile(docInfo.markdownName, finalContent, MIME_MARKDOWN);
+    }
 }
 
 
@@ -557,73 +617,20 @@ function splitComentario(texto) {
     return [texto];
   }
 }
-function converterRecursivoMarkDown(pastaFonte, pastaDestino, arquivosIndexados) {
-  const subpastasFonte = pastaFonte.getFolders();
-  const subpastasIndexadas = [];
-  let filesConverted = 0;
-  comentarioPasta = splitComentario(pastaFonte.getName());
-  comentarioPasta = (comentarioPasta.length>1)?comentarioPasta[1]:"";
-  while (subpastasFonte.hasNext()) {
-    const subpastaFonte = subpastasFonte.next();
-    let nomeSubpasta = subpastaFonte.getName();
-    if (nomeSubpasta.startsWith("_")) continue;
-    nomeComentarioSubpasta = splitComentario(nomeSubpasta.replace(/_/g, ' '));
-    nomeSubpasta = nomeComentarioSubpasta[0];
-    comentario = (nomeComentarioSubpasta.length>1)?nomeComentarioSubpasta[1]:"";
 
-    const arquivosConfig = subpastaFonte.getFilesByName("Config");
-    let semanticOrderScore = 999;
-    if (arquivosConfig.hasNext()) {
-      const arquivoConfig = arquivosConfig.next();
-      const docConteudo = DocumentApp.openById(arquivoConfig.getId());
-      const textoConfig = docConteudo.getBody().getText();
-      const scoreMatch = textoConfig.match(REGEX_ORDENACAO);
-      if (scoreMatch) {
-        const scoreStr = scoreMatch[1].replace(',', '.');
-        semanticOrderScore = parseFloat(scoreStr) || semanticOrderScore;
-      } else {
-        semanticOrderScore = 999;
-      }
-    }
-    let subpastasDestinoIterator = pastaDestino.getFoldersByName(nomeSubpasta);
-    let subpastaDestino;
-
-    if (subpastasDestinoIterator.hasNext()) {
-      subpastaDestino = subpastasDestinoIterator.next();
-    } else {
-      subpastaDestino = pastaDestino.createFolder(nomeSubpasta);
-    }
-
-    filesConverted += converterPastaParaMarkdown(subpastaFonte, subpastaDestino);
-
-    
-    subpastasIndexadas.push({
-      name: nomeSubpasta,
-      comentario: comentario,
-      link: `./${nomeSubpasta}/${NOME_INDEX}`,
-      semanticOrder: semanticOrderScore
-    });
-  }
-
-  subpastasIndexadas.sort((a, b) => a.semanticOrder - b.semanticOrder);
-  // Cria/Atualiza o arquivo index.md
-  criarIndexMarkdown(pastaDestino, arquivosIndexados, subpastasIndexadas, comentarioPasta);
-
-  return filesConverted;
-
-}
 /**
  * Gera e salva/atualiza o arquivo index.md na pasta de destino.
+ * @returns {boolean} True se o index.md foi criado ou teve seu conteúdo alterado.
  */
 function criarIndexMarkdown(pastaDestino, arquivos, subpastas, comentario) {
 
     // Não gera index na pasta se não houver conteúdo nela
     if (arquivos.length === 0 && subpastas.length === 0) { 
-      return;
+      return false;
     }
     const isRootFolder = pastaDestino.getId() === ROOT_DESTINATION_FOLDER_ID;
 
-    let indexContent = isRootFolder?'':'## ' + pastaDestino.getName()  + '\n\n';
+    let indexContent = isRootFolder?'':'## ' + pastaDestino.getName().replace(/_/g, ' ')  + '\n\n';
     if (comentario!=="" && !isRootFolder) indexContent += "#### " + comentario + "\n\n";
     
     if (arquivos.length > 0) {
@@ -631,19 +638,6 @@ function criarIndexMarkdown(pastaDestino, arquivos, subpastas, comentario) {
         //   let documentsTitle = "Documentos";
         //   indexContent += `## ${documentsTitle}\n`;
         // }
-
-        // ORDENAÇÃO SEMÂNTICA - Do menor score (introdutório) para o maior (conclusivo)
-        //Já foi indexado antes
-        //arquivos.sort((a, b) => a.semanticOrder - b.semanticOrder);
-
-        // Lógica de 'aforismos' no topo (mantida)
-        const aforismosIndex = arquivos.findIndex(doc => doc.slug === 'aforismos');
-        if (aforismosIndex > 0) {
-            const aforismosDoc = arquivos[aforismosIndex];
-            arquivos.splice(aforismosIndex, 1);
-            arquivos.unshift(aforismosDoc);
-        }
-
         arquivos.forEach(doc => {
             const timeFormat = `<span class="word-count">[${doc.time} min]</span>`;
             let nome_descr = splitComentario(doc.original);
@@ -663,9 +657,6 @@ function criarIndexMarkdown(pastaDestino, arquivos, subpastas, comentario) {
 
     // 2. ADICIONA LINK DE VOLTA
     let finalContent = indexContent.trim();
-    // if (pastaDestino.getId() !== ROOT_DESTINATION_FOLDER_ID) {
-    //   finalContent += '\n\n[<--](../)';
-    // }
 
     // 3. VERIFICA E ATUALIZA
     const arquivosIndex = pastaDestino.getFilesByName(NOME_INDEX);
@@ -676,24 +667,25 @@ function criarIndexMarkdown(pastaDestino, arquivos, subpastas, comentario) {
         const existingContent = indexFile.getBlob().getDataAsString();
 
         if (existingContent.trim() === finalContent.trim()) {
-            return false;
+            return false; // Não foi alterado
         }
 
         indexFile.setContent(finalContent);
         Logger.log(`Index.md ATUALIZADO em: ${pastaDestino.getName()} (Conteúdo alterado).`);
+        return true; // Foi atualizado
     } else {
         // ARQUIVO NÃO EXISTE: Cria
         pastaDestino.createFile(NOME_INDEX, finalContent, MIME_MARKDOWN);
         Logger.log(`Index.md CRIADO em: ${pastaDestino.getName()}.`);
+        return true; // Foi criado
     }
-    return true;
 }
 
 // --- FUNÇÕES DE LIMPEZA ---
 
 /**
  * Função recursiva para limpar arquivos .md no destino que não têm um Doc original na fonte.
- * Otimizado: Pré-calcula os slugs da fonte para evitar iteração de DriveApp.getFiles() dentro do loop.
+ * Itera em toda a hierarquia de forma recursiva.
  */
 function limparArquivosExcluidos(pastaDestino, pastaFonte) {
 
@@ -705,7 +697,7 @@ function limparArquivosExcluidos(pastaDestino, pastaFonte) {
         slugsFonteValidos.add(slugifyFileName(doc.getName()));
     }
 
-    // 2. Itera pelos arquivos .md no destino e verifica se o slug existe na lista pré-calculada.
+    // 2. Itera pelos arquivos .md no destino.
     const arquivos = pastaDestino.getFiles();
     while (arquivos.hasNext()) {
         const arquivoMd = arquivos.next();

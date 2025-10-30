@@ -36,6 +36,6 @@ calor no infinito serei.
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./aforismos.html">Aforismos</a>
-  <a href="./quadro-azul.html">Quadro azul</a>
+  <a href="./vida-consciente.html">Vida consciente</a>
+  <a href="./tecer-alegria.html">Tecer alegria</a>
 </div>

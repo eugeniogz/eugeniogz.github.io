@@ -36,6 +36,6 @@ tecer alegria
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./vida-consciente.html">Vida consciente</a>
+  <a href="./vidas-no-infinito.html">Vidas no infinito</a>
   <a href="./essencia-oculta.html">Essência oculta</a>
 </div>

@@ -64,5 +64,5 @@ Ordenacao: 2
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./quadro-azul.html">Quadro azul</a>
-  <a href="./tecer-alegria.html">Tecer alegria</a>
+  <a href="./vidas-no-infinito.html">Vidas no infinito</a>
 </div>

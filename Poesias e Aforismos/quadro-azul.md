@@ -51,6 +51,6 @@ Ordenção: 4
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./vidas-no-infinito.html">Vidas no infinito</a>
+  <a href="./aforismos.html">Aforismos</a>
   <a href="./vida-consciente.html">Vida consciente</a>
 </div>

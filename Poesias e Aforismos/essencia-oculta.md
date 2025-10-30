@@ -28,5 +28,5 @@ Detalhes tecem o destino
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./tecer-alegria.html">Tecer alegria</a>
-  <a href="./musica-urbana.html">Música urbana</a>
+  <a href="./musica-soberana.html">Música soberana</a>
 </div>
