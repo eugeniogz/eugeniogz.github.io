@@ -26,7 +26,7 @@ A “eudaimonia” do grego (*eu* = bem e *daimon* = espírito) é o florescimen
 
 Devo esclarecer que meu conceito de espírito não é metafísico. Ele existe no corpo vivente, manifestando-se nos processos biológicos, guardando valores e puras emoções no sítio da mente. A poderosa máquina mental pode parecer, em alguns casos, extrapolar o limite corporal, viajando nas ondas extasiadas das inúmeras conexões neuronais. Mas sua substância é material.
 
-Ainda assim, o mundo que habita em cada mente é repleto de árvores viçosas que pulsam em harmonia. Das raízes às folhas, a floresta é um todo, criando o complexo sistema consciente, regido por leis próprias. Dançando incessantemente, sentindo e pensando, parecendo por isso, ter presença éterea.
+Ainda assim, o mundo que habita em cada mente é repleto de árvores viçosas que pulsam em harmonia, enraizadas em cada membro; as copas sentem, comandam e pensam. Das raízes às folhas, a floresta é um todo — o complexo sistema consciente, regido por suas leis próprias. Dançando incessantemente, parecendo por isso ter presença etérea.
 
 A herança genética cria as primeiras luzes do espírito — “Os nossos cérebros e as nossas mentes não são *tabulae rasae* quando nascemos. Contudo, também não são, na sua totalidade, geneticamente determinados. A sombra genética tem um grande alcance, mas não é completa.” — Antônio Damásio.
 
