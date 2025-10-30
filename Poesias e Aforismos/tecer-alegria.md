@@ -37,5 +37,5 @@ tecer alegria
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./vida-consciente.html">Vida consciente</a>
-  <a href="./aquarela-de-uma-valsa.html">Aquarela de uma valsa</a>
+  <a href="./essencia-oculta.html">Essência oculta</a>
 </div>

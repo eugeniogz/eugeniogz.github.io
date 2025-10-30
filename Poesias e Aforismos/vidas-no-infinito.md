@@ -37,5 +37,5 @@ calor no infinito serei.
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./aforismos.html">Aforismos</a>
-  <a href="./essencia-oculta.html">Essência oculta</a>
+  <a href="./quadro-azul.html">Quadro azul</a>
 </div>

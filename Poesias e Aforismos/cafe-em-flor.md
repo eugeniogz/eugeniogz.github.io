@@ -22,5 +22,5 @@ Renascendo em novas estrelas, vistosos cafezais. Esquentando porcelanas, sumo de
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./musica-urbana.html">Música urbana</a>
-  <a href="./quadro-azul.html">Quadro azul</a>
+  <a href="./aquarela-de-uma-valsa.html">Aquarela de uma valsa</a>
 </div>

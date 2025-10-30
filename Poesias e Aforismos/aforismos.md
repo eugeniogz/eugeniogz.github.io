@@ -82,4 +82,4 @@ Brilham alegrias em infinitas cosmogonias. <!--08/10/25-->
 
 ---
 
-[Vida no infinito](./vida-no-infinito.html)
+[Vidas no infinito](./vidas-no-infinito.html)

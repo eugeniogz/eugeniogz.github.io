@@ -46,9 +46,11 @@ o céu que aquece,
 os prédios e as árvores —  
 o quadro azul acontece.
 
+Ordenção: 4
+
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./aforismos.html">Aforismos</a>
-  <a href="./essencia-oculta.html">Essência oculta</a>
+  <a href="./vidas-no-infinito.html">Vidas no infinito</a>
+  <a href="./vida-consciente.html">Vida consciente</a>
 </div>
