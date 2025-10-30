@@ -11,38 +11,44 @@ tags:
 
 ## Quadro azul
 
-Meu olhar pinta vários prédios,  
-uns pequenos, outros altos,  
-árvores de todos os tipos.
+Meu olhar pinta prédios,  
+ora pequenos, ora altos,  
+árvores de todos os tipos.  
+A visão serena recria.
 
 De repente,  
 uma pincelada precisa.  
 A pomba risca a tela  
-e se apaga da minha visão.
+se apagando na borda.
 
 Momentos depois,  
 bem ao longe,  
-um urubu aparece.
+a negra tinta  
+do urubu brilha.
 
-Ele faz círculos no céu,  
-some encoberto pelos prédios,  
-reaparece em seguida.
+Faz círculos no céu,  
+some detrás dos prédios,  
+reaparece no pincel,  
+tingindo outro ponto.
 
-Longe, apenas um ponto preto  
-no imenso azul.  
-Próximo, exibe a harmonia  
-das longas asas.
+Distante, um ponto preto  
+na imensa cor azul.  
+Próximo, traça a harmonia  
+de longas asas.
 
-O voo singular permanece  
-por um bom tempo,  
-até que a ave desaparece,  
-deixando para trás  
-o quadro do céu ensolarado,  
-dos prédios e das árvores.
+O voo singular cresce  
+povoando a pintura,  
+até que desaparece,  
+sumindo da tela.  
+  
+Quieto o olhar cria  
+o céu que aquece,  
+os prédios e as árvores —  
+o quadro azul acontece.
 
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./cafe-em-flor.html">Café em flor</a>
-  <a href="./vida-consciente.html">Vida consciente</a>
+  <a href="./aforismos.html">Aforismos</a>
+  <a href="./essencia-oculta.html">Essência oculta</a>
 </div>
