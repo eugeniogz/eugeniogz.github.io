@@ -25,4 +25,4 @@ Transcrevo o instante. Pescando palavras, inventando o sentimento. Uma tarefa fl
 
 ---
 
-[Quebrando a monotonia](./quebrando-a-monotonia.html)
+[Pintura modesta](./pintura-modesta.html)

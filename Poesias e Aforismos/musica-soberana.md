@@ -17,6 +17,6 @@ Martelos retumbam em coro frenético, pausam e retomam, em compasso medido, marr
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./essencia-oculta.html">Essência oculta</a>
+  <a href="./quadro-azul.html">Quadro azul</a>
   <a href="./cafe-em-flor.html">Café em flor</a>
 </div>

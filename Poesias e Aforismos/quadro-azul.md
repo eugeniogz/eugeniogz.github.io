@@ -46,11 +46,9 @@ o céu que aquece,
 os prédios e as árvores —  
 o quadro azul acontece.
 
-Ordenção: 4
-
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./aforismos.html">Aforismos</a>
-  <a href="./vida-consciente.html">Vida consciente</a>
+  <a href="./essencia-oculta.html">Essência oculta</a>
+  <a href="./musica-soberana.html">Música soberana</a>
 </div>

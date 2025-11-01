@@ -28,4 +28,4 @@ Recolhendo-se na varanda, o físico sente o sol. O ruído se abranda, abrindo ca
 
 ---
 
-[Aconchego sereno](./aconchego-sereno.html)
+[As gavetas mentais](./as-gavetas-mentais.html)

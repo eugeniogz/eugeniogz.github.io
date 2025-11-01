@@ -31,6 +31,6 @@ Quando o mundo for menos desigual, a vida das formiguinhas se transformará. Com
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./dedicada-rotina.html">Dedicada rotina</a>
+  <a href="./singelas-letras-da-imprecisao.html">Singelas letras da imprecisão</a>
   <a href="./realidade-na-mesa-de-todos.html">Realidade na mesa de todos</a>
 </div>

@@ -18,6 +18,6 @@ Enfim no conforto, longe do vento, observo as nuvens, lembro do sofrimento. Calo
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./mente-presente.html">Mente presente</a>
-  <a href="./pensamento-cotidiano.html">Pensamento cotidiano</a>
+  <a href="./relogios-e-cafes.html">Relógios e cafés</a>
+  <a href="./quebrando-a-monotonia.html">Quebrando a monotonia</a>
 </div>

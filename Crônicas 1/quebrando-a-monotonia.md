@@ -23,13 +23,11 @@ O ciclo se repete, mas o que se vive em cada fase é único.
 
 A vida pode apresentar de nuances sutis a mudanças bruscas, que podem passar despercebidas. Notar a paisagem a se alternar a cada dia é incomum, um prédio pode surgir longe dos nossos olhos, de repente podemos notá-lo. Um filho aprende a andar, pronuncia a primeira palavra, mais tarde passa de rabiscos no papel à escrita do próprio nome. Eventos como esse permanecem gravados para sempre em nossa mente.
 
-Esses momentos inesquecíveis dão mais cor à vida, mas assim podem ser, também, as nuances, como uma tonalidade a mais no pôr do sol do dia seguinte. A monotonia pode existir em nós, mas cada dia traz uma experiência diferente. O mais importante é encontrar esse colorido tão especial: existir é perceber os detalhes que quebram a monotonia.
-
-(11/08/25)
+Esses momentos inesquecíveis dão mais cor à vida, mas assim podem ser, também, as nuances, como uma tonalidade a mais no pôr do sol do dia seguinte. A monotonia pode existir em nós, mas cada dia traz uma experiência diferente. O mais importante é encontrar esse colorido tão especial — existir é perceber os detalhes que quebram a monotonia, de um pôr do sol inédito à melodia inesperada de um pássaro.
 
 ---
 
 <div style="display: flex; justify-content: space-between;">
+  <a href="./aconchego-sereno.html">Aconchego sereno</a>
   <a href="./pintura-modesta.html">Pintura modesta</a>
-  <a href="./atento-descanso.html">Atento descanso</a>
 </div>

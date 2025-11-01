@@ -27,6 +27,6 @@ Detalhes tecem o destino
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./tecer-alegria.html">Tecer alegria</a>
-  <a href="./musica-soberana.html">Música soberana</a>
+  <a href="./vida-consciente.html">Vida consciente</a>
+  <a href="./quadro-azul.html">Quadro azul</a>
 </div>
