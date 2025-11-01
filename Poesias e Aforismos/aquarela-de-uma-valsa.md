@@ -44,8 +44,6 @@ orienta o porvir:
 vivem a terna valsa,  
 aquarela do amar.
 
-(03/10/25)
-
 ---
 
 [Café em flor](./cafe-em-flor.html)
