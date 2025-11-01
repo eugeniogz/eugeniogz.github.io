@@ -448,8 +448,10 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         const words = fullText.split(/\s+/).filter(word => word.length > 0);
         const wordCount = words.length;
         const rawTime = wordCount / 200.0;
-        const roundedTime = Math.round(rawTime * 2) / 2;
-        tempoLeitura = Math.max(0.5, roundedTime);
+        //const roundedTime = Math.round(rawTime * 2) / 2;
+        //tempoLeitura = Math.max(0.5, roundedTime);
+        const roundedTime = Math.max(1, Math.round(rawTime));
+        tempoLeitura = roundedTime;
 
         
         let contentElementsInReverse = [];
@@ -694,43 +696,30 @@ function limparArquivosExcluidos(pastaDestino, pastaFonte) {
     const arquivosDocFonte = pastaFonte.getFilesByType(MIME_GOOGLE_DOCS);
     while (arquivosDocFonte.hasNext()) {
         const doc = arquivosDocFonte.next();
-        slugsFonteValidos.add(slugifyFileName(doc.getName()));
+        slugsFonteValidos.add(slugifyFileName(doc.getName())+".md");
     }
-
-    // 2. Itera pelos arquivos .md no destino.
-    const arquivos = pastaDestino.getFiles();
-    while (arquivos.hasNext()) {
-        const arquivoMd = arquivos.next();
+    // 2. Limpeza: Itera apenas nos arquivos .md do destino.
+    const arquivosDestino = pastaDestino.getFiles();
+    while (arquivosDestino.hasNext()) {
+        const arquivoMd = arquivosDestino.next();
         const nomeArquivoMd = arquivoMd.getName();
 
-        if (nomeArquivoMd.toLowerCase().endsWith('.md')) {
-
-            if (nomeArquivoMd === NOME_INDEX) {
-                continue;
-            }
-
-            const nomeSlug = nomeArquivoMd.slice(0, -3);
-            
-            // Consulta de alta performance: O(1)
-            const docFonteExiste = slugsFonteValidos.has(nomeSlug);
-
-            if (!docFonteExiste) {
+        if (nomeArquivoMd.toLowerCase().endsWith('.md') && nomeArquivoMd !== NOME_INDEX) {    
+            if (!slugsFonteValidos.has(nomeArquivoMd)) {
                 Logger.log(`[LIMPEZA] Arquivo .md "${nomeArquivoMd}" (em ${pastaDestino.getName()}) movido para lixeira.`);
                 arquivoMd.setTrashed(true);
             }
         }
     }
-
     // 3. Processa as subpastas recursivamente
-    const subpastasDestino = pastaDestino.getFolders();
-    while (subpastasDestino.hasNext()) {
-        const subpastaDestino = subpastasDestino.next();
-        const nomeSubpasta = subpastaDestino.getName();
+    const subpastasFonte = pastaFonte.getFolders();
+    while (subpastasFonte.hasNext()) {
+        const subpastaFonte = subpastasFonte.next();
+        const nomeSubpasta = splitComentario(subpastaFonte.getName().replace(/_/g, ' '))[0];
+        const subpastasDestinoIterator = pastaDestino.getFoldersByName(nomeSubpasta);
 
-        const subpastasFonteIterator = pastaFonte.getFoldersByName(nomeSubpasta);
-
-        if (subpastasFonteIterator.hasNext()) {
-            limparArquivosExcluidos(subpastaDestino, subpastasFonteIterator.next());
+        if (subpastasDestinoIterator.hasNext()) {
+            limparArquivosExcluidos(subpastasDestinoIterator.next(), subpastaFonte);
         }
     }
 }

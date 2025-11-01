@@ -12,7 +12,7 @@ tags:
 
 ## Pintura modesta
 
-Buscando manter o estado de serena euforia mesmo quando os sentidos tamborilham minha mente. O barulho da TV alta que o idoso escuta. A tendinite teimosa que dói em meu braço. Mas o céu está vistoso, um convite ao aconchego desta mente que vibra, se sacia de vida, acima dos ouvidos, da dor aguda que permanece.
+Buscando manter a serena euforia quando os sentidos tamborilham minha mente. O barulho da TV alta que o idoso escuta. A tendinite teimosa que dói em meu braço. Mas o céu está vistoso, um convite ao aconchego desta mente que vibra, se sacia de vida, acima dos ouvidos, da dor aguda que permanece.
 
 Satisfeito de ver o logro da alegria pura, da mente que voa, pensar brotando nas letras que escolhe. O arrepio dos neurônios não cessa. Não importa o ruído, a cabeça o sente, mas a mente é mais forte. Assim ela cresce, acima dos sentidos e dos simples pensamentos. Esses últimos me fazem criar esse texto, singelo e tranquilo, retrato do estado. O brilho da mente é sublime, feliz e longo. Lindo e perene, não importa as cinzas nuvens, o sol que se esconde. Esse brilho ultrapassa o ser, sentido no corpo, irradiando o viver.
 
