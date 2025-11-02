@@ -70,6 +70,8 @@ As descobertas seguirão acontecendo, ampliando o conhecimento, operando mudanç
 
 ### **Infinitas Cosmogonias**
 
+*“Se me acompanhar, chegamos à borda do horizonte de um buraco negro, entramos, descemos ao fundo, onde o espaço e o tempo se fundem, atravessamo-lo, ressurgimos no buraco branco, onde o tempo se inverte, e dali emergimos no futuro.”* — Carlo Rovelli.
+
 Cultivando o valor do conhecimento, meu olhar para a possível gênese do Cosmos sempre se apoiou na ciência. Parecendo carecer de aprofundamento, no entanto, o futuro ocaso da vida terrestre e a possibilidade do fim do universo conhecido mudaram meu foco. Minha visão do eterno e do efêmero ganhou, então, novos significados. Primeiro, o efêmero se suavizou no horizonte temporal. Posteriormente, o eterno se cristalizou em infinitas cosmogonias.
 
 A minha cosmogonia reflete uma das postulações científicas mais profundas e radicais, onde um buraco negro pode ter na outra ponta um [*buraco branco*](https://pt.wikipedia.org/wiki/Buraco_branco). Nosso universo seria então um buraco branco. Imagino a existência de uma sequência infinita de pares de buracos brancos e negros. A vida pode existir em cada um desses buracos brancos. A dor da perda é mitigada pelo entendimento da eternidade desse ciclo. O possível renascimento de outros universos me leva a crer que o conhecimento é infinito e que, em cada novo ciclo, ele avança ainda mais.
