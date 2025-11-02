@@ -632,14 +632,16 @@ function criarIndexMarkdown(pastaDestino, arquivos, subpastas, comentario) {
     }
     const isRootFolder = pastaDestino.getId() === ROOT_DESTINATION_FOLDER_ID;
 
-    let indexContent = isRootFolder?'':'## ' + pastaDestino.getName().replace(/_/g, ' ')  + '\n\n';
-    if (comentario!=="" && !isRootFolder) indexContent += "#### " + comentario + "\n\n";
+    let indexContent = "";
+    if (isRootFolder) {
+      indexContent = "---\nlayout: default\ntitle: Índice\n--- \n\n";
+    } else {
+      indexContent = '## ' + pastaDestino.getName().replace(/_/g, ' ')  + '\n\n';
+      if (comentario!=="") indexContent += "#### " + comentario + "\n\n";
+    }
     
     if (arquivos.length > 0) {
-        // if (subpastas.length > 0) {
-        //   let documentsTitle = "Documentos";
-        //   indexContent += `## ${documentsTitle}\n`;
-        // }
+        
         arquivos.forEach(doc => {
             const timeFormat = `<span class="word-count">[${doc.time} min]</span>`;
             let nome_descr = splitComentario(doc.original);
@@ -650,7 +652,6 @@ function criarIndexMarkdown(pastaDestino, arquivos, subpastas, comentario) {
     }
 
     if (subpastas.length > 0) {
-        // if (arquivos.length>0) indexContent += `## Subpastas\n`;
         subpastas.forEach(sub => {
             indexContent += `### 📁 [${sub.name.replace(/_/g, ' ')}](${sub.link})\n`;
             if (sub.comentario.length>1) indexContent += `${sub.comentario}\n`;
