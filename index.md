@@ -3,9 +3,10 @@ layout: default
 title: Índice
 --- 
 
-### 📄 [Wingene](./wingene-o-futuro-da-heranca-ancestral.html) <span class="word-count">[9 min]</span>
+### 📄 [Wingene](./wingene-o-futuro-da-heranca-ancestral.html) <span class="word-count">[10 min]</span>
 O futuro da herança ancestral
-### 📄 [Tecendo a vida](./tecendo-a-vida.html) <span class="word-count">[9 min]</span>
+### 📄 [Tecendo a vida](./tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html) <span class="word-count">[9 min]</span>
+criando no íntimo uma obra pessoal
 
 ### 📁 [Crônicas 1](./Crônicas 1/index.md)
 A arte da atenção plena nos pequenos instantes

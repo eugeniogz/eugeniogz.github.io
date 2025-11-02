@@ -34,6 +34,8 @@ Essa sombra genética deve expandir-se gradualmente com a seiva cultural — cha
 
 ### **A Aurora da Mente e a Serena Euforia**
 
+*O azul se espalha pelas moradas de concreto, plantadas, imóveis, de tamanho e cor variados. Sob elas, tímidas copas de tom verde respiram e tecem a doce seiva da luz que me aquece. Minha mente tranquila observa; o pulsar sanguíneo é intenso, e os neurônios eriçados trazem a alegria: uma serena euforia. Sei aproveitar esse momento; entendo que não é perene e que voltará. Não é preciso o calmo azul, mas apenas a mente atenta — força interna acima do monótono cinza.*
+
 O espírito se amplia em instantes de intensa alegria — em experiências radiantes da mente sem pressa, que vive momentos além do comum. Uma grande euforia, contida e serena. Caloroso aconchego, fogo que não queima, não importa o lugar — no cinza urbano ou na tranquila pintura, que da seiva emana — quando os sentidos e os pensamentos não perturbam, a consciência flutua. Surge então, nesses serenos momentos, um estado de graça — quando sinapses se elevam, pulsando energia.
 
 Sentir essa dádiva é próprio do humano — mas poucos a buscam, presos nas densas nuvens das obrigações mundanas, o eterno castigo de Sísifo. Vendendo o suor para nutrir o ego. É preciso despertar a *eudaimonia*, dos velhos filósofos do mundo arcaico — que proclamavam a arte de agradar ao espírito. Hoje o progresso é visível, mas prioriza-se o fútil. Encobrindo o sonho ao alcance de todos: **florescer a felicidade da alma vivente**.
@@ -78,10 +80,10 @@ A minha cosmogonia reflete uma das postulações científicas mais profundas e r
 
 Voltando o olhar para a humanidade, não somos nada mais que duas centenas de milhares de anos dentro desses bilhões de anos do que se sabe da existência do Universo. Vamos perecer se não fizermos nada a respeito do ecossistema terrestre. A busca por um novo planeta aventada por alguns é utópica e paradoxalmente distópica. Essa imagem parece desesperadora para alguns, o fim da raça humana, mas a vida estará sempre ressurgindo, permanecendo por um tempo aqui mesmo na Terra ou em outras regiões do Cosmos.
 
-A vida que floresceu na nossa nave azul deve deixar de existir. A morada da Terra, de infinitos planetas, estrelas e tudo mais, também terá seu fim. Não viveremos de novo, tampouco voltaremos em outra oportunidade. Nosso prazo é o que temos, contado em respirações, no ritmo do coração. Alimentando a mente criativa a descobrir os mistérios, inventando a melodia que já ressoa no tempo e no espaço. Sinfonia da matéria e energia que se espalha e esfria, rumo à máxima entropia, destino do cosmos. Frio e vazio. Para onde irá toda a beleza — os quadros brilhantes da colorida natureza? Esse inevitável futuro não me causa sofrimento, pois enxergo no escuro de buracos massivos. Avistando neles, negros portais para invisíveis universos — novas cores, outras vidas.
+A vida que floresceu na nossa nave azul algum dia deixará de existir. A morada da Terra, de infinitos planetas, estrelas e tudo mais, também terá seu fim. Não viveremos de novo, tampouco voltaremos em outra oportunidade. Nosso prazo é o que temos: contado em respirações, no ritmo do coração. Alimentando a mente criativa a descobrir os mistérios, inventando a melodia que já ressoa no tempo e no espaço. Sinfonia da matéria e energia que se espalha e esfria, rumo à máxima entropia, destino do cosmos. Frio e vazio. Para onde irá toda a beleza — os quadros brilhantes da colorida natureza? Esse inevitável futuro não me causa sofrimento, pois enxergo no escuro de buracos massivos. Avistando neles, negros portais para invisíveis universos — novas cores, outras vidas.
 
 Permanece essa esperança otimista: de que novos inventores descubram sinfonias inéditas — desbravadores de mundos, arautos da busca que nunca termina. A mesma que move a nossa existência, movimentos da música que ressoam no eterno — uma sinfonia da finita existência que segue vibrando na vida sem fim.
 
 ---
 
-[Tecendo a vida](./tecendo-a-vida.html)
+[Tecendo a vida: criando no íntimo uma obra pessoal](./tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html)
