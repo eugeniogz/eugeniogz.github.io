@@ -17,4 +17,7 @@ Quando esses frios tijolos serão como as flores? Amarelas e homogêneas, nascen
 
 ---
 
-[Organizar a vida](./organizar-a-vida.html)
+<div style="display: flex; justify-content: space-between;">
+  <a href="./organizar-a-vida.html">Organizar a vida</a>
+  <a href="./pavimentando-o-futuro.html">Pavimentando o futuro</a>
+</div>

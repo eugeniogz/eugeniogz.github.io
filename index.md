@@ -1,5 +1,6 @@
 ### 📄 [Wingene](./wingene-o-futuro-da-heranca-anscestral.html) <span class="word-count">[9 min]</span>
 O futuro da herança anscestral
+### 📄 [Tecendo a vida](./tecendo-a-vida.html) <span class="word-count">[9 min]</span>
 
 ### 📁 [Crônicas 1](./Crônicas 1/index.md)
 A arte da atenção plena nos pequenos instantes

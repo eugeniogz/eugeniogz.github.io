@@ -7,3 +7,4 @@
 ### 📄 [Baleias e marujos](./baleias-e-marujos.html) <span class="word-count">[1 min]</span>
 ### 📄 [Organizar a vida](./organizar-a-vida.html) <span class="word-count">[1 min]</span>
 ### 📄 [Ipês e tijolos](./ipes-e-tijolos.html) <span class="word-count">[1 min]</span>
+### 📄 [Pavimentando o futuro](./pavimentando-o-futuro.html) <span class="word-count">[2 min]</span>
