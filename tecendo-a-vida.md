@@ -70,4 +70,4 @@ Cada dia é uma nova oportunidade de entrelaçar fios, de burilar a obra-prima q
 
 ---
 
-[Wingene: O futuro da herança anscestral](./wingene-o-futuro-da-heranca-anscestral.html)
+[Wingene: O futuro da herança ancestral](./wingene-o-futuro-da-heranca-ancestral.html)

@@ -1,5 +1,10 @@
-### 📄 [Wingene](./wingene-o-futuro-da-heranca-anscestral.html) <span class="word-count">[9 min]</span>
-O futuro da herança anscestral
+---
+layout: default
+title: Índice
+--- 
+
+### 📄 [Wingene](./wingene-o-futuro-da-heranca-ancestral.html) <span class="word-count">[9 min]</span>
+O futuro da herança ancestral
 ### 📄 [Tecendo a vida](./tecendo-a-vida.html) <span class="word-count">[9 min]</span>
 
 ### 📁 [Crônicas 1](./Crônicas 1/index.md)
