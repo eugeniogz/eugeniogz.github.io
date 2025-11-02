@@ -210,12 +210,34 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
         } = getMarkdownAndScoreFromDoc(arquivoDoc, nomeDocOriginal, nomeSlug, pastaDestino);
 
         // 1.2. Tenta encontrar o arquivo .md de destino e verifica a data
-        const arquivosMdDestino = pastaDestino.getFilesByName(nomeMarkdown);
+        const arquivosMdDestinoIterator = pastaDestino.getFilesByName(nomeMarkdown);
         let deveConverter = converterTodos; // Assume converterTodos (global) como padrão
         let arquivoMdDestino = null;
 
-        if (arquivosMdDestino.hasNext()) {
-            arquivoMdDestino = arquivosMdDestino.next();
+        const listaDeArquivosMd = [];
+        while (arquivosMdDestinoIterator.hasNext()) {
+            listaDeArquivosMd.push(arquivosMdDestinoIterator.next());
+        }
+
+        // Classifica a lista pelo nome. Isso garante que "xxx.md" venha antes de "xxx (2).md"
+        // na maioria dos sistemas de arquivos e é uma ordenação estável.
+        listaDeArquivosMd.sort((a, b) => a.getName().localeCompare(b.getName()));
+
+        for (let i = 0; i < listaDeArquivosMd.length; i++) {
+            const arquivoAtual = listaDeArquivosMd[i];
+
+            if (i === 0) {
+                // O primeiro arquivo na lista ordenada é o que consideramos o "oficial".
+                arquivoMdDestino = arquivoAtual;
+            } else {
+                // Todos os arquivos seguintes são duplicatas e devem ser movidos para a lixeira.
+                Logger.log(`[LIMPEZA DE DUPLICATA] Encontrado e movido para lixeira em ${pastaDestino.getName()}: "${arquivoAtual.getName()}".`);
+                arquivoAtual.setTrashed(true);
+            }
+        }
+
+        // Continua com a lógica de comparação de data/conversão usando o arquivo "oficial" (ou null se não encontrado)
+        if (arquivoMdDestino) {
             const dataDocFonte = arquivoDoc.getLastUpdated().getTime();
             const dataMdDestino = arquivoMdDestino.getLastUpdated().getTime();
             
