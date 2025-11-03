@@ -7,9 +7,13 @@ tags:
   - Evolução
   - Wingene
   - Cosmogonia
-  - Vida sem fim
   - Eudaimonia
   - Herança
+  - Vida
+  - Natureza
+  - Felicidade
+  - Alma
+  - Atenção plena
 --- 
 
 ## Wingene: O futuro da herança ancestral
