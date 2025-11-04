@@ -8,8 +8,6 @@ tags:
 
 ## Tecendo a vida: criando no íntimo uma obra pessoal
 
-### **Introdução**
-
 A arte de viver requer aprendizado constante. Compreendendo que os desafios que experimenta servem a um propósito individual, o artista precisa reconhecer que a obra nunca termina. A tapeçaria de reflexões poderá apresentar-se bela ao olhar do criador — uma beleza resplandecente no colorido entrelaçado de suas experiências. Ciente da sua infindável tarefa, sua obra, sua vida, por mais sem sentido que pareça, iluminará seu entendimento com valorosas compreensões sobre o aprimoramento de seu ofício.
 
 A felicidade surge ao descortinar o véu da ignorância ante a beleza da obra-prima que cria a dança da vida. Bailando em um universo multissensorial, cada ser constrói sua criação no confortável sítio da mente. Onde pulsam, muitas vezes despercebidos pelo artista, nobres sentimentos — solidificados com o conhecimento, o tempo e o futuro. Cabe ao artífice da vida aprender a consolidá-los, aumentando sua capacidade criadora, cuidando da galeria de sua obra, não para ser vista, mas para abrigar os valiosos fios tecidos — que se moldam nas vitórias e fracassos, amores e desavenças.
@@ -59,8 +57,6 @@ O artífice da vida, com a maturidade, compreende a sua obra em toda a sua ampli
 ### A dança eterna
 
 Cada dia é uma nova oportunidade de entrelaçar fios, de burilar a obra-prima que é a própria existência. O sítio mental permanece em constante transformação, abrigando novas compreensões e novas cores. O artista, ciente de sua infindável tarefa, abraça os desafios e as alegrias, celebrando cada momento com a leveza de uma dança. Que se cria e aprimora a cada passo, a cada respiração, em um universo de infinitas possibilidades. Nesse estado de atenção consciente, a cada movimento a obra se ilumina. E assim, no estado de plena felicidade, percebe que a obra, mesmo inacabada, sobreviverá ao seu criador. Vibrando em harmônica sintonia com a dança dos artistas do passado e do futuro em tonalidades ressonantes com a eterna criação humana.
-
-(04/09/25)
 
 ---
 
