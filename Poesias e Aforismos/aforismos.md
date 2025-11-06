@@ -20,6 +20,8 @@ tags:
 
 A ciência ilumina a metafísica com os dourados fios do conhecimento <!--16/09/25-->
 
+Divino consciente, sobrenatural inexistente <!--06/11/25-->
+
 Informação exige validade, conhecimento clama liberdade <!--17/10/25-->
 
 Conhecimento ativo, sabedoria viva <!--22/10/25-->
@@ -30,7 +32,7 @@ Descobrir é raro, reinventar é caro <!--08/10/25-->
 
 ### 🧠 Consciência e Criação
 
-Mente, broto genético — floresce dialético <!--05/11/25-->
+Consciência, broto genético — floresce dialético <!--05/11/25-->
 
 A atenção consciente é fugaz, sua busca deve ser tenaz <!--30/09/25-->
 
