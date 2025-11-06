@@ -46,4 +46,7 @@ aquarela do amar.
 
 ---
 
-[Café em flor](./cafe-em-flor.html)
+<div style="display: flex; justify-content: space-between;">
+  <a href="./cafe-em-flor.html">Café em flor</a>
+  <a href="./divino-consciente.html">Divino consciente</a>
+</div>
