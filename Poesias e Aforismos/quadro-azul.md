@@ -14,7 +14,7 @@ tags:
 Meu olhar pinta prédios,  
 ora pequenos, ora altos,  
 árvores de todos os tipos.  
-A visão serena recria.
+crias da visão serena.
 
 De repente,  
 uma pincelada precisa.  
@@ -29,17 +29,17 @@ do urubu brilha.
 Faz círculos no céu,  
 some detrás dos prédios,  
 reaparece no pincel,  
-tingindo outro ponto.
+tingindo outro canto.
 
-Distante, um ponto preto  
-na imensa cor azul.  
-Próximo, traça a harmonia  
-de longas asas.
+Distante, ponto preto  
+no imenso azul.  
+Próximo, longas asas  
+em escura harmonia.
 
 O voo singular cresce  
 povoando a pintura,  
 até que desaparece,  
-sumindo da tela.  
+sumindo da moldura.  
   
 Quieto o olhar cria  
 o céu que aquece,  

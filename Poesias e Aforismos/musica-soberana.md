@@ -12,30 +12,30 @@ tags:
 
 ## Música soberana
 
-Martelos retumbam em coro frenético,  
-pausam e retomam, em compasso medido,  
+Martelos em coro frenético,  
+retumbam em compasso medido,  
 marretas graves, martelo agudo.  
-Uma buzina ecoa, martelos continuam.
+Buzinas correm, coro continua.
 
 Um cachorro late.  
 Um gigante se ergue,  
 batidos alucinados,  
-o pulsar do concreto.
+pulsando o concreto.
 
-Uma matilha diversa canta protesto.  
-Crianças gritam, melodias sem nexo.  
+Uma matilha canta protesto.  
+Crianças gritam sem nexo.  
 As batidas esvanecem,  
 assim como o grito.
 
-A batalha sonora, vez ou outra, volta à tona.  
-Luta que ressoa e prevalece,  
-música urbana,  
-um gênero que silencia a alegria dos bandos.
+A batalha vez ou outra à tona.  
+Ressoando no ferro que prevalece,  
+música urbana de sons conhecidos.  
+Gênero ecoa, abafando os bandos.
 
-A harmonia das flores emudece, mas voltará oportuna,  
-anunciando a beleza ancestral.  
-No fim, como sempre,  
-regerá soberana a sinfonia natural.
+A harmonia das flores permanece,  
+espalhando o perfume ancestral.  
+Musical, a natureza aparece,  
+Soberana magia — sinfonia natural.
 
 ---
 

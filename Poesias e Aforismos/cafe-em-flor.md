@@ -12,11 +12,33 @@ tags:
 
 ## Café em flor
 
-Viçoso jasmim do cafezal. Pulsando a seiva que as folhas adoçam. Baila ao vento, exala o aroma. Néctar saudável. Nutrindo déboras em cortejo de amor. Enlace ansiado, o desejo perfuma. Beijo aguardado enseja calor.
+Viçoso jasmim do cafezal.  
+Pulsando a seiva  
+que as folhas adoçam.  
+Baila, exala o aroma.
 
-Nasce branca estrela. Sem noção do porvir, somente vive, vegetal e serena. Aproveita os momentos, observa a cena. Morre o perfume, nasce singela fruta. Da espécie, a esperança. Criando sementes filhas. O outrora broto, agora doce futuro.
+Néctar saudável.  
+Nutrindo déboras no amor.  
+Perfuma o ansiado enlace.  
+Beijo que enseja calor.
 
-Renascendo em novas estrelas, vistosos cafezais. Esquentando porcelanas, sumo de dourados grãos. Delícia que pinta o sabor, forjado na herança da flor.
+Nasce branca estrela.  
+Vive vegetal serena.  
+Sem noção do porvir,  
+aproveita a cena.
+
+Morre perfume,  
+nasce fruto.  
+Doce esperança.  
+Futuro do outrora broto.
+
+Renascendo estrelas,  
+vistosos cafezais.  
+Esquentando porcelanas,  
+sumo de dourados grãos.
+
+Delícia que pinta o sabor —  
+forjado na herança da flor.
 
 ---
 
