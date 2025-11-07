@@ -219,21 +219,19 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
             listaDeArquivosMd.push(arquivosMdDestinoIterator.next());
         }
 
-        // Classifica a lista pelo nome. Isso garante que "xxx.md" venha antes de "xxx (2).md"
-        // na maioria dos sistemas de arquivos e é uma ordenação estável.
-        listaDeArquivosMd.sort((a, b) => a.getName().localeCompare(b.getName()));
-
-        for (let i = 0; i < listaDeArquivosMd.length; i++) {
-            const arquivoAtual = listaDeArquivosMd[i];
-
-            if (i === 0) {
-                // O primeiro arquivo na lista ordenada é o que consideramos o "oficial".
-                arquivoMdDestino = arquivoAtual;
-            } else {
-                // Todos os arquivos seguintes são duplicatas e devem ser movidos para a lixeira.
-                Logger.log(`[LIMPEZA DE DUPLICATA] Encontrado e movido para lixeira em ${pastaDestino.getName()}: "${arquivoAtual.getName()}".`);
-                arquivoAtual.setTrashed(true);
-            }
+        if (listaDeArquivosMd.length === 1) {
+          arquivoMdDestino = listaDeArquivosMd[0];
+        } else {
+          for (let i = 0; i < listaDeArquivosMd.length; i++) {
+              const arquivoAtual = listaDeArquivosMd[i];
+              if (/.*\([0-9]+\).md/.test(arquivoAtual.getName())) {
+                  // Todos os arquivos seguintes são duplicatas e devem ser movidos para a lixeira.
+                  Logger.log(`[LIMPEZA DE DUPLICATA] Encontrado e movido para lixeira em ${pastaDestino.getName()}: "${arquivoAtual.getName()}".`);
+                  arquivoAtual.setTrashed(true);
+              } else {
+                  arquivoMdDestino = arquivoAtual;
+              }
+          }
         }
 
         // Continua com a lógica de comparação de data/conversão usando o arquivo "oficial" (ou null se não encontrado)
@@ -247,7 +245,7 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
             } else if (deveConverter) {
                 Logger.log(`[ATUALIZANDO] Doc "${nomeDocOriginal}". converterTodos=true.`);
             } else {
-                // Logger.log(`[IGNORANDO] Doc "${nomeDocOriginal}". Nenhuma alteração detectada.`);
+                //Logger.log(`[IGNORANDO] Doc "${nomeDocOriginal}". Nenhuma alteração detectada.`);
             }
         } else {
             Logger.log(`[NOVO] Doc "${nomeDocOriginal}". Arquivo MD de destino não encontrado.`);
@@ -729,6 +727,9 @@ function limparArquivosExcluidos(pastaDestino, pastaFonte) {
 
         if (nomeArquivoMd.toLowerCase().endsWith('.md') && nomeArquivoMd !== NOME_INDEX) {    
             if (!slugsFonteValidos.has(nomeArquivoMd)) {
+                Logger.log(`[LIMPEZA] Arquivo .md "${nomeArquivoMd}" (em ${pastaDestino.getName()}) movido para lixeira.`);
+                arquivoMd.setTrashed(true);
+            } else if (/.*\([0-9]+\).md/.test(nomeArquivoMd)) {
                 Logger.log(`[LIMPEZA] Arquivo .md "${nomeArquivoMd}" (em ${pastaDestino.getName()}) movido para lixeira.`);
                 arquivoMd.setTrashed(true);
             }
