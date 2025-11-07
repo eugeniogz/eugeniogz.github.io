@@ -3,6 +3,7 @@ layout: default
 title: "Café em flor"
 tags:
   - Herança
+  - Amor
   - Vida
 --- 
 
@@ -12,13 +13,13 @@ tags:
 
 ## Café em flor
 
-Viçoso jasmim do cafezal.  
+Viçoso jasmim.  
 Pulsando a seiva  
 que as folhas adoçam.  
 Baila, exala o aroma.
 
 Néctar saudável.  
-Nutrindo déboras no amor.  
+Déboras nutrindo amor.  
 Perfuma o ansiado enlace.  
 Beijo que enseja calor.
 
@@ -30,14 +31,14 @@ aproveita a cena.
 Morre perfume,  
 nasce fruto.  
 Doce esperança.  
-Futuro do outrora broto.
+semeia o futuro.
 
 Renascendo estrelas,  
-vistosos cafezais.  
+renovam-se cafezais.  
 Esquentando porcelanas,  
-sumo de dourados grãos.
+sabor de dourados grãos.
 
-Delícia que pinta o sabor —  
+Delícia que pinta o amor —  
 forjado na herança da flor.
 
 ---
