@@ -37,9 +37,11 @@ espalhando o perfume ancestral.
 Musical, a natureza aparece,  
 Soberana magia — sinfonia natural.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./quadro-azul.html">Quadro azul</a>
-  <a href="./cafe-em-flor.html">Café em flor</a>
+  <a href="./vidas-infinitas.html">&lt;&lt; Vidas infinitas</a>
+  <a href="./cafe-em-flor.html">Café em flor &gt;&gt;</a>
 </div>

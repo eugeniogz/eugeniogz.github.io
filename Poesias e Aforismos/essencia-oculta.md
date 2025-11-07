@@ -24,9 +24,11 @@ Mentiras não tolem a verdade
 Imperfeições não definem o humano  
 Detalhes tecem o destino
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./vida-consciente.html">Vida consciente</a>
-  <a href="./quadro-azul.html">Quadro azul</a>
+  <a href="./vida-consciente.html">&lt;&lt; Vida consciente</a>
+  <a href="./quadro-azul.html">Quadro azul &gt;&gt;</a>
 </div>

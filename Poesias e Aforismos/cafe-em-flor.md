@@ -41,9 +41,11 @@ sabor de dourados grãos.
 Delícia que pinta o amor —  
 forjado na herança da flor.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./musica-soberana.html">Música soberana</a>
-  <a href="./aquarela-de-uma-valsa.html">Aquarela de uma valsa</a>
+  <a href="./musica-soberana.html">&lt;&lt; Música soberana</a>
+  <a href="./aquarela-de-uma-valsa.html">Aquarela de uma valsa &gt;&gt;</a>
 </div>

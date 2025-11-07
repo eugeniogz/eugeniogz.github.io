@@ -46,9 +46,11 @@ o céu que aquece,
 os prédios e as árvores —  
 o quadro azul acontece.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./essencia-oculta.html">Essência oculta</a>
-  <a href="./musica-soberana.html">Música soberana</a>
+  <a href="./essencia-oculta.html">&lt;&lt; Essência oculta</a>
+  <a href="./vidas-infinitas.html">Vidas infinitas &gt;&gt;</a>
 </div>

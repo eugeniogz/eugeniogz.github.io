@@ -44,9 +44,11 @@ orienta o porvir:
 vivem a terna valsa,  
 aquarela do amar.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./cafe-em-flor.html">Café em flor</a>
-  <a href="./divino-consciente.html">Divino consciente</a>
+  <a href="./cafe-em-flor.html">&lt;&lt; Café em flor</a>
+  <a href="./divino-consciente.html">Divino consciente &gt;&gt;</a>
 </div>

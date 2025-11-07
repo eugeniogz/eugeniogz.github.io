@@ -58,9 +58,11 @@ da fauna senciente.
 Exclamação etérea,  
 Ressoa na mente.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./tecer-alegria.html">Tecer alegria</a>
-  <a href="./essencia-oculta.html">Essência oculta</a>
+  <a href="./tecer-alegria.html">&lt;&lt; Tecer alegria</a>
+  <a href="./essencia-oculta.html">Essência oculta &gt;&gt;</a>
 </div>

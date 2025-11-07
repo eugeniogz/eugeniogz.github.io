@@ -33,9 +33,11 @@ tempo se entrelaça.
 Amor se une no abraço —  
 calor no infinito serei.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./aforismos.html">Aforismos</a>
-  <a href="./tecer-alegria.html">Tecer alegria</a>
+  <a href="./quadro-azul.html">&lt;&lt; Quadro azul</a>
+  <a href="./musica-soberana.html">Música soberana &gt;&gt;</a>
 </div>

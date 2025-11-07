@@ -201,15 +201,7 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
         
         totalFiles++;
 
-        // 1.1. EXTRAÇÃO DE CONTEÚDO E SCORE SEMÂNTICO
-        const {
-            markdownContent, 
-            semanticOrderScore,
-            tempoLeitura,
-            nomeSemData
-        } = getMarkdownAndScoreFromDoc(arquivoDoc, nomeDocOriginal, nomeSlug, pastaDestino);
-
-        // 1.2. Tenta encontrar o arquivo .md de destino e verifica a data
+        // 1.1. Tenta encontrar o arquivo .md de destino e verifica a data
         const arquivosMdDestinoIterator = pastaDestino.getFilesByName(nomeMarkdown);
         let deveConverter = converterTodos; // Assume converterTodos (global) como padrão
         let arquivoMdDestino = null;
@@ -234,6 +226,8 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
           }
         }
 
+        // --- INÍCIO DA LÓGICA DE DECISÃO DE CONVERSÃO/PROCESSAMENTO ---
+
         // Continua com a lógica de comparação de data/conversão usando o arquivo "oficial" (ou null se não encontrado)
         if (arquivoMdDestino) {
             const dataDocFonte = arquivoDoc.getLastUpdated().getTime();
@@ -245,12 +239,36 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
             } else if (deveConverter) {
                 Logger.log(`[ATUALIZANDO] Doc "${nomeDocOriginal}". converterTodos=true.`);
             } else {
-                //Logger.log(`[IGNORANDO] Doc "${nomeDocOriginal}". Nenhuma alteração detectada.`);
+                // Se deveConverter for false aqui, a conversão do corpo será evitada.
             }
         } else {
             Logger.log(`[NOVO] Doc "${nomeDocOriginal}". Arquivo MD de destino não encontrado.`);
             deveConverter = true;
         }
+
+        // 1.2. *** FLUXO OTIMIZADO: SÓ CONVERTE O CORPO SE NECESSÁRIO ***
+        let markdownContent = null;
+        let semanticOrderScore = 0.0;
+        let tempoLeitura = 1;
+        let nomeSemData = nomeDocOriginal;
+
+        if (deveConverter) {
+            // Conversão pesada (Corpo e Metadados)
+             ({
+                markdownContent, 
+                semanticOrderScore,
+                tempoLeitura,
+                nomeSemData
+            } = getMarkdownAndScoreFromDoc(arquivoDoc, nomeDocOriginal, nomeSlug, pastaDestino));
+        } else {
+            // Apenas extração leve de Metadados (Score, Tempo Leitura, Nome)
+             ({
+                semanticOrderScore,
+                tempoLeitura,
+                nomeSemData
+            } = getMetadataFromDocLite(arquivoDoc, nomeDocOriginal));
+        }
+
 
         // 1.3. Armazena os dados
         arquivosParaProcessar.push({
@@ -307,15 +325,18 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
       for (let i = 0; i < arquivosParaProcessar.length; i++) {
           const docInfo = arquivosParaProcessar[i];
 
+          // Se 'deveConverter' é true (novo/atualizado) OU se o rodapé está sendo forçado a ser reescrito
           if (docInfo.deveConverter || force) {
               
               // Determina Anterior e Próximo com a lista JÁ ORDENADA
               const anterior = i > 0 ? arquivosParaProcessar[i - 1] : null;
               const proximo = i < arquivosParaProcessar.length - 1 ? arquivosParaProcessar[i + 1] : null;
 
-              // Salva/Atualiza o arquivo com o novo conteúdo e navegação
-              salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDestino);
-              filesUpdated++;
+              // **OTIMIZAÇÃO 3:** Só reescreve se o conteúdo (corpo OU navegação) for diferente
+              const wasChanged = salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDestino);
+              if (wasChanged) {
+                  filesUpdated++;
+              }
           }
       }
       return filesUpdated;
@@ -392,21 +413,52 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
 
 /**
  * Salva/Atualiza o arquivo .md com o rodapé de navegação Anterior/Próximo.
+ * * **OTIMIZAÇÃO 3:** Se o conteúdo não foi convertido (docInfo.content é null), 
+ * ele lê o arquivo existente para injetar o rodapé.
+ * * @returns {boolean} True se o arquivo foi criado ou alterado.
  */
 function salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDestino) {
     
-    // Gera o rodapé de navegação
     const navegacaoRodape = gerarNavegacaoRodape(anterior, proximo);
+    let finalContent = null;
+    let existingContent = null;
+    let fileChanged = false;
 
-    // Conteúdo final
-    const finalContent = docInfo.content + navegacaoRodape;
+    // Se o conteúdo NÃO foi convertido na primeira passagem, precisamos ler o .md existente
+    if (docInfo.content === null) {
+        if (!docInfo.arquivoMdDestino) {
+             // Isso nunca deve acontecer se a lógica de deveConverter estiver correta
+             Logger.log(`[ERRO CRÍTICO] Falha ao processar "${docInfo.original}". Content=null e arquivo MD não encontrado.`);
+             return false;
+        }
+        // Lê o conteúdo do arquivo MD existente (exclui o rodapé antigo, se houver)
+        existingContent = docInfo.arquivoMdDestino.getBlob().getDataAsString();
+        let bodyContent = existingContent.replace(/\n\n---\n\n[\s\S]*$/, '').trim();
+        finalContent = bodyContent + '\n\n' + navegacaoRodape;
 
+    } else {
+        // Usa o conteúdo fresco do Doc convertido
+        finalContent = docInfo.content + navegacaoRodape;
+    }
+    
     // Salva/Atualiza o arquivo com o novo conteúdo
     if (docInfo.arquivoMdDestino) {
-        docInfo.arquivoMdDestino.setContent(finalContent);
+        if (!existingContent) {
+           // Se existingContent for null, lemos para a comparação, exceto se já tivermos lido acima
+           existingContent = docInfo.arquivoMdDestino.getBlob().getDataAsString();
+        }
+        
+        if (existingContent.trim() !== finalContent.trim()) {
+            docInfo.arquivoMdDestino.setContent(finalContent);
+            fileChanged = true;
+        }
     } else {
+        // ARQUIVO NOVO: Cria
         pastaDestino.createFile(docInfo.markdownName, finalContent, MIME_MARKDOWN);
+        fileChanged = true;
     }
+
+    return fileChanged;
 }
 
 
@@ -415,35 +467,81 @@ function salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDest
  */
 function gerarNavegacaoRodape(anterior, proximo) {
     let rodape = '\n\n---\n\n'; // Separador visual
-    let navLinks = [];
     let navLinksHtml = [];
 
     if (anterior) {
         // Usa o nome sem data/formatação do index
         const nomeAnterior = anterior.nomeSemData; 
-        navLinks.push(`[${nomeAnterior}](./${anterior.slug}.html)`);
-        navLinksHtml.push(`<a href="./${anterior.slug}.html">${nomeAnterior}</a>`);
+        navLinksHtml.push(`<a href="./${anterior.slug}.html">&lt;&lt; ${nomeAnterior}</a>`);
+    } else {
+        navLinksHtml.push('<span></span>'); // Placeholder para manter o espaçamento
     }
 
     if (proximo) {
         const nomeProximo = proximo.nomeSemData;
-        navLinks.push(`[${nomeProximo}](./${proximo.slug}.html)`);
-        navLinksHtml.push(`<a href="./${proximo.slug}.html">${nomeProximo}</a>`);
+        navLinksHtml.push(`<a href="./${proximo.slug}.html">${nomeProximo} &gt;&gt;</a>`);
+    } else {
+        navLinksHtml.push('<span></span>'); // Placeholder para manter o espaçamento
     }
 
-    if (navLinks.length > 0) {
+    if (anterior || proximo) {
         // Coloca os links lado a lado se houver os dois, ou apenas um.
-        if (anterior && proximo) {
-            rodape += `<div style="display: flex; justify-content: space-between;">\n`;
-            rodape += `  ${navLinksHtml[0]}\n`;
-            rodape += `  ${navLinksHtml[1]}\n`;
-            rodape += `</div>\n`;
-        } else {
-            rodape += navLinks.join('\n') + '\n';
-        }
+        rodape += `<div style="display: flex; justify-content: space-between;">\n`;
+        rodape += `  ${navLinksHtml[0]}\n`;
+        rodape += `  ${navLinksHtml[1]}\n`;
+        rodape += `</div>\n`;
     }
 
     return rodape;
+}
+
+/**
+ * Extrai APENAS os metadados (score, tempo leitura, nome sem data) de um Google Doc.
+ * Evita a conversão completa para Markdown para economizar tempo.
+ */
+function getMetadataFromDocLite(docFile, originalFileName) {
+    let semanticOrderScore = 0.0;
+    let tempoLeitura = 1;
+    let nomeSemData = originalFileName; 
+    
+    try {
+        const doc = DocumentApp.openById(docFile.getId());
+        const body = doc.getBody();
+        
+        // 1. CÁLCULO DE TEMPO DE LEITURA
+        const fullText = body.getText().trim();
+        const words = fullText.split(/\s+/).filter(word => word.length > 0);
+        const wordCount = words.length;
+        const rawTime = wordCount / 200.0;
+        const roundedTime = Math.max(1, Math.round(rawTime));
+        tempoLeitura = roundedTime;
+
+        // 2. EXTRAÇÃO DE SCORE
+        const fullBodyText = body.getText();
+        const scoreMatch = fullBodyText.match(REGEX_ORDENACAO);
+        if (scoreMatch) {
+            const scoreStr = scoreMatch[1].replace(',', '.');
+            semanticOrderScore = parseFloat(scoreStr) || semanticOrderScore;
+        }
+
+        // 3. REMOÇÃO DA DATA DO NOME
+        const regex = /^\d{4}-\d{2}-\d{2}-/;
+        nomeSemData = originalFileName.replace(regex, '');
+
+        return {
+            semanticOrderScore: semanticOrderScore,
+            tempoLeitura: tempoLeitura,
+            nomeSemData: nomeSemData
+        };
+
+    } catch (e) {
+        Logger.log(`[ERRO LITE] Falha ao extrair metadados do Doc ${docFile.getName()}: ${e.toString()}`);
+        return {
+            semanticOrderScore: 0.0,
+            tempoLeitura: tempoLeitura,
+            nomeSemData: originalFileName
+        };
+    }
 }
 
 
@@ -468,8 +566,6 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         const words = fullText.split(/\s+/).filter(word => word.length > 0);
         const wordCount = words.length;
         const rawTime = wordCount / 200.0;
-        //const roundedTime = Math.round(rawTime * 2) / 2;
-        //tempoLeitura = Math.max(0.5, roundedTime);
         const roundedTime = Math.max(1, Math.round(rawTime));
         tempoLeitura = roundedTime;
 

@@ -84,6 +84,11 @@ Brilham alegrias em infinitas cosmogonias <!--08/10/25-->
 
 🖋️ Do que escrevo: rara a originalidade, seiva da liberdade <!--10/07/22-->
 
+
+
 ---
 
-[Vidas infinitas](./vidas-infinitas.html)
+<div style="display: flex; justify-content: space-between;">
+  <span></span>
+  <a href="./tecer-alegria.html">Tecer alegria &gt;&gt;</a>
+</div>

@@ -33,9 +33,11 @@ criar todo dia
 razão do humano  
 tecer alegria
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./vidas-infinitas.html">Vidas infinitas</a>
-  <a href="./vida-consciente.html">Vida consciente</a>
+  <a href="./aforismos.html">&lt;&lt; Aforismos</a>
+  <a href="./vida-consciente.html">Vida consciente &gt;&gt;</a>
 </div>

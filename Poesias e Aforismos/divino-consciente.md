@@ -35,6 +35,11 @@ explorando o infindável.
 
 Divino consciente — sobrenatural inexistente.
 
+
+
 ---
 
-[Aquarela de uma valsa](./aquarela-de-uma-valsa.html)
+<div style="display: flex; justify-content: space-between;">
+  <a href="./aquarela-de-uma-valsa.html">&lt;&lt; Aquarela de uma valsa</a>
+  <span></span>
+</div>
