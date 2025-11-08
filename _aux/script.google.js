@@ -174,6 +174,51 @@ function procurarArquivoMdEmTodaHierarquia(pasta, nomeMarkdown) {
 
 // --- FUNÇÕES DE CONVERSÃO E INDEXAÇÃO ---
 
+// Função de ordenação base harmonizada para usar 'semanticOrder'
+const sortDocs = (a, b) => {
+  // 1. Prioridade: a.semanticOrder
+  if (a.semanticOrder !== b.semanticOrder) return a.semanticOrder - b.semanticOrder; 
+  // 2. Critério de Desempate: Nome Original
+  return a.original.localeCompare(b.original);
+};
+
+
+/**
+ * Tenta ler os metadados (tempo_leitura, semantic_order) de um arquivo Markdown.
+ * Retorna um objeto com os valores extraídos ou padrões.
+ */
+function getMetadataFromMd(arquivoMdDestino) {
+    let tempoLeitura = 1;
+    let semanticOrderScore = 0.0;
+    
+    try {
+        const content = arquivoMdDestino.getBlob().getDataAsString();
+        // Regex básica para encontrar '---', capturar o conteúdo do YAML, e depois '---'
+        const yamlMatch = content.match(/^---\s*([\s\S]*?)\s*---/i);
+
+        if (yamlMatch && yamlMatch[1]) {
+            const yamlBlock = yamlMatch[1];
+            
+            // Regex para extrair reading_time
+            const timeMatch = yamlBlock.match(/reading_time:\s*(\d+)/i);
+            if (timeMatch) {
+                tempoLeitura = parseInt(timeMatch[1], 10) || 1;
+            }
+            
+            // Regex para extrair semantic_order
+            const scoreMatch = yamlBlock.match(/semantic_order:\s*(\d+([.,]\d+)?)/i);
+            if (scoreMatch) {
+                const scoreStr = scoreMatch[1].replace(',', '.');
+                semanticOrderScore = parseFloat(scoreStr) || 0.0;
+            }
+        }
+    } catch (e) {
+        Logger.log(`[ERRO METADATA MD] Falha ao ler metadados do MD ${arquivoMdDestino.getName()}: ${e.toString()}`);
+    }
+
+    return { semanticOrderScore: semanticOrderScore, tempoLeitura: tempoLeitura };
+}
+
 /**
  * Função recursiva para converter Google Docs para Markdown, criar o index.md e 
  * processar subpastas recursivamente.
@@ -261,12 +306,26 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
                 nomeSemData
             } = getMarkdownAndScoreFromDoc(arquivoDoc, nomeDocOriginal, nomeSlug, pastaDestino));
         } else {
-            // Apenas extração leve de Metadados (Score, Tempo Leitura, Nome)
-             ({
-                semanticOrderScore,
-                tempoLeitura,
-                nomeSemData
-            } = getMetadataFromDocLite(arquivoDoc, nomeDocOriginal));
+            // OTIMIZAÇÃO: Extrai Metadados do MD existente, evitando abrir o Google Doc
+            if (arquivoMdDestino) {
+                // LÊ DO ARQUIVO MD existente
+                 ({
+                    semanticOrderScore,
+                    tempoLeitura
+                } = getMetadataFromMd(arquivoMdDestino)); 
+                
+                // Extração leve do Doc apenas para nome (pode ser necessário para a navegação)
+                const regex = /^\d{4}-\d{2}-\d{2}-/;
+                nomeSemData = nomeDocOriginal.replace(regex, '');
+
+            } else {
+                 // Fallback: lê metadados do Doc se o MD não for encontrado
+                ({
+                    semanticOrderScore,
+                    tempoLeitura,
+                    nomeSemData
+                } = getMetadataFromDocLite(arquivoDoc, nomeDocOriginal));
+            }
         }
 
 
@@ -276,7 +335,7 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
             slug: nomeSlug,
             markdownName: nomeMarkdown,
             content: markdownContent,
-            score: semanticOrderScore,
+            semanticOrder: semanticOrderScore, // CHAVE UNIFICADA PARA ORDENAÇÃO
             time: tempoLeitura,
             deveConverter: deveConverter,
             arquivoMdDestino: arquivoMdDestino,
@@ -295,30 +354,10 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
     }
 
     // 2. ORDENAÇÃO
-    const aforismosSlug = 'aforismos';
-
-    // Função de ordenação base
-    const sortDocs = (a, b) => {
-      if (a.score !== b.score) return a.score - b.score;
-      if (a.semanticOrder !== b.semanticOrder) return a.semanticOrder - b.semanticOrder;
-      return a.original.localeCompare(b.original);
-    };
-
-    // Ordena listas
+    // Ordena listas com a função sortDocs harmonizada
     arquivosParaProcessar.sort(sortDocs);
     arquivosIndexados.sort(sortDocs);
     
-    // Lógica de 'aforismos' no topo (mantida)
-    for (const lista of [arquivosParaProcessar, arquivosIndexados]) {
-        const index = lista.findIndex(doc => doc.slug === aforismosSlug);
-        if (index > 0) {
-            const doc = lista[index];
-            lista.splice(index, 1);
-            lista.unshift(doc);
-        }
-    }
-
-
     // 3. SEGUNDA PASSAGEM (Inicial): SALVA E ADICIONA LINKS DE NAVEGAÇÃO
     function executarPassagemDeConversao(force = false) {
       let filesUpdated = 0;
@@ -548,6 +587,7 @@ function getMetadataFromDocLite(docFile, originalFileName) {
 /**
  * Converte o conteúdo de um Google Doc para uma string Markdown simples,
  * **SEM adicionar o rodapé de navegação Anterior/Próximo/Voltar Index.**
+ * Inclui metadados no Front Matter.
  * @returns {{markdownContent: string, semanticOrderScore: number, tempoLeitura: number, nomeSemData: string}}
  */
 function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDestino) {
@@ -612,10 +652,12 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         let isPost = nomeSemData !== originalFileName;
         
         // --- 2. MONTAGEM DO YAML FRONT MATTER ---
-        // (Sem mudanças, exceto pela extração do nomeSemData)
         markdown += `---\n`;
         markdown += `layout: default\n`;
         markdown += `title: "${nomeSemData}"\n`;
+        // ADIÇÃO DOS METADADOS PARA OTIMIZAÇÃO FUTURA
+        markdown += `reading_time: ${tempoLeitura}\n`;
+        markdown += `semantic_order: ${semanticOrderScore}\n`;
 
         if (tags.length > 0) {
             markdown += `tags:\n`;
