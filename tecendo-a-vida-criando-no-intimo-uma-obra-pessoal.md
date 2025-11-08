@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Tecendo a vida: criando no íntimo uma obra pessoal"
+reading_time: 8
+semantic_order: 5
 tags:
   - Vida
   - Caminho
@@ -60,4 +62,7 @@ Cada dia é uma nova oportunidade de entrelaçar fios, de burilar a obra-prima q
 
 ---
 
-[Wingene: O futuro da herança ancestral](./wingene-o-futuro-da-heranca-ancestral.html)
+<div style="display: flex; justify-content: space-between;">
+  <a href="./wingene-o-futuro-da-heranca-ancestral.html">&lt;&lt; Wingene: O futuro da herança ancestral</a>
+  <span></span>
+</div>

@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Invisível ganância"
+reading_time: 1
+semantic_order: 2
 tags:
   - Sociedade
 --- 
@@ -18,6 +20,6 @@ Mas, além dos muros altos e dos portões de ferro, a vida segue em um ritmo dif
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./divino-amor.html">Divino amor</a>
-  <a href="./baleias-e-marujos.html">Baleias e marujos</a>
+  <a href="./divino-amor.html">&lt;&lt; Divino amor</a>
+  <a href="./baleias-e-marujos.html">Baleias e marujos &gt;&gt;</a>
 </div>

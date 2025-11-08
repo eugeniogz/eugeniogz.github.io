@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Ipês e tijolos"
+reading_time: 1
+semantic_order: 19
 tags:
   - Sociedade
 --- 
@@ -18,6 +20,6 @@ Quando esses frios tijolos serão como as flores? Amarelas e homogêneas, nascen
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./organizar-a-vida.html">Organizar a vida</a>
-  <a href="./pavimentando-o-futuro.html">Pavimentando o futuro</a>
+  <a href="./organizar-a-vida.html">&lt;&lt; Organizar a vida</a>
+  <a href="./pavimentando-o-futuro.html">Pavimentando o futuro &gt;&gt;</a>
 </div>

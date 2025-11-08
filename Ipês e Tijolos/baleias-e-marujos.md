@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Baleias e marujos"
+reading_time: 1
+semantic_order: 4
 tags:
   - Sociedade
 --- 
@@ -20,6 +22,6 @@ Os temidos donos dos oceanos podem continuar sua trajetória, no entanto, sem in
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./invisivel-ganancia.html">Invisível ganância</a>
-  <a href="./organizar-a-vida.html">Organizar a vida</a>
+  <a href="./invisivel-ganancia.html">&lt;&lt; Invisível ganância</a>
+  <a href="./organizar-a-vida.html">Organizar a vida &gt;&gt;</a>
 </div>

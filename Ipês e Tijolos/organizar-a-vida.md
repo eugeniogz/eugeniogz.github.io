@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Organizar a vida"
+reading_time: 1
+semantic_order: 8
 tags:
   - Escravidão digital
 --- 
@@ -26,6 +28,6 @@ Assim, soberano, o tempo da vida livre será.
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./baleias-e-marujos.html">Baleias e marujos</a>
-  <a href="./ipes-e-tijolos.html">Ipês e tijolos</a>
+  <a href="./baleias-e-marujos.html">&lt;&lt; Baleias e marujos</a>
+  <a href="./ipes-e-tijolos.html">Ipês e tijolos &gt;&gt;</a>
 </div>

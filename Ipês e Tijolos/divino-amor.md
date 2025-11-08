@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Divino amor"
+reading_time: 1
+semantic_order: 0.1
 tags:
   - Alma
   - Amor
@@ -20,4 +22,7 @@ A força do divino alia-se ao vivo, marcando em cores eternas a história finita
 
 ---
 
-[Invisível ganância](./invisivel-ganancia.html)
+<div style="display: flex; justify-content: space-between;">
+  <span></span>
+  <a href="./invisivel-ganancia.html">Invisível ganância &gt;&gt;</a>
+</div>

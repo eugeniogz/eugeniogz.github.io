@@ -1,10 +1,13 @@
 ---
 layout: default
 title: "Vidas infinitas"
+reading_time: 1
+semantic_order: 6
 tags:
   - Tempo
   - Vida
   - Amor
+  - Infinito
 --- 
 
 
@@ -16,12 +19,12 @@ tags:
 Corro a vida na cidade,  
 trilhas que sempre faço,  
 outras que só uma vez.  
-Cores que nunca verei.
+Infinitas que nunca verei.
 
 Passam instantes solares,  
 uns que sempre recordo,  
 outros já esquecidos.  
-Momentos que nunca terei.
+Infinitos que nunca terei.
 
 Ecos de outros caminhos,  
 rotas do tempo escasso.  
@@ -32,8 +35,6 @@ Encontros no espaço,
 tempo se entrelaça.  
 Amor se une no abraço —  
 calor no infinito serei.
-
-
 
 ---
 

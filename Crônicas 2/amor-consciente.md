@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Amor consciente"
+reading_time: 3
+semantic_order: 90
 tags:
   - Amor
   - Atenção plena
@@ -30,6 +32,6 @@ Assim, no meio de tantas alegrias, as cores do amor nem sempre são vibrantes e 
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./realidade-na-mesa-de-todos.html">Realidade na mesa de todos</a>
-  <a href="./tapete-de-algodao.html">Tapete de algodão</a>
+  <a href="./realidade-na-mesa-de-todos.html">&lt;&lt; Realidade na mesa de todos</a>
+  <a href="./tapete-de-algodao.html">Tapete de algodão &gt;&gt;</a>
 </div>

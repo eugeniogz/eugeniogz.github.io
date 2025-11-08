@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Armadilhas da Internet"
+reading_time: 2
+semantic_order: 20
 tags:
   - Escravidão digital
   - Amor
@@ -25,4 +27,7 @@ A rotina do menino mudou. Pedrinho jogava bola com o pai, brincava com jogos de 
 
 ---
 
-[Diversão e colaboração](./diversao-e-colaboracao.html)
+<div style="display: flex; justify-content: space-between;">
+  <a href="./diversao-e-colaboracao.html">&lt;&lt; Diversão e colaboração</a>
+  <span></span>
+</div>

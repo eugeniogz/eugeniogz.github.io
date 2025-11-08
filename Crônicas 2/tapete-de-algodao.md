@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Tapete de algodão"
+reading_time: 2
+semantic_order: 140
 tags:
   - Sociedade
   - Escravidão digital
@@ -24,4 +26,7 @@ As velhas paineiras se renovam a cada estação, mas nesses tempos modernos, os 
 
 ---
 
-[Amor consciente](./amor-consciente.html)
+<div style="display: flex; justify-content: space-between;">
+  <a href="./amor-consciente.html">&lt;&lt; Amor consciente</a>
+  <span></span>
+</div>

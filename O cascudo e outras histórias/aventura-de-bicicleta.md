@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Aventura de bicicleta"
+reading_time: 4
+semantic_order: 10
 tags:
   - Família
   - Ensinar
@@ -38,6 +40,6 @@ Que aventura legal, como aproveitaram as garotas. E que gratidão sentiram por e
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./o-cascudo.html">O Cascudo</a>
-  <a href="./diversao-e-colaboracao.html">Diversão e colaboração</a>
+  <a href="./o-cascudo.html">&lt;&lt; O Cascudo</a>
+  <a href="./diversao-e-colaboracao.html">Diversão e colaboração &gt;&gt;</a>
 </div>

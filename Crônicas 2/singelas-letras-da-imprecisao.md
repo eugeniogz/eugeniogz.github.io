@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Singelas letras da imprecisão"
+reading_time: 2
+semantic_order: 66
 tags:
   - Trabalho
 --- 
@@ -24,6 +26,6 @@ O ofício do escritor é uma tarefa delicada, nem sempre transcreve a emoção, 
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./dedicada-rotina.html">Dedicada rotina</a>
-  <a href="./do-barulho-ao-canto.html">Do barulho ao canto</a>
+  <a href="./dedicada-rotina.html">&lt;&lt; Dedicada rotina</a>
+  <a href="./do-barulho-ao-canto.html">Do barulho ao canto &gt;&gt;</a>
 </div>

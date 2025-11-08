@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Do barulho ao canto"
+reading_time: 2
+semantic_order: 70
 tags:
   - Atenção plena
   - Sociedade
@@ -31,6 +33,6 @@ Quando o mundo for menos desigual, a vida das formiguinhas se transformará. Com
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./singelas-letras-da-imprecisao.html">Singelas letras da imprecisão</a>
-  <a href="./realidade-na-mesa-de-todos.html">Realidade na mesa de todos</a>
+  <a href="./singelas-letras-da-imprecisao.html">&lt;&lt; Singelas letras da imprecisão</a>
+  <a href="./realidade-na-mesa-de-todos.html">Realidade na mesa de todos &gt;&gt;</a>
 </div>

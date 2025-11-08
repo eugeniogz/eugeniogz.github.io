@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Dedicada rotina"
+reading_time: 2
+semantic_order: 0.1
 tags:
   - Atenção plena
   - Sociedade
@@ -28,4 +30,7 @@ Quase tudo pronto para o almoço, pensa em preparar um bolo para assar à tarde.
 
 ---
 
-[Singelas letras da imprecisão](./singelas-letras-da-imprecisao.html)
+<div style="display: flex; justify-content: space-between;">
+  <span></span>
+  <a href="./singelas-letras-da-imprecisao.html">Singelas letras da imprecisão &gt;&gt;</a>
+</div>

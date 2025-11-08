@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "O Cascudo"
+reading_time: 2
+semantic_order: 5
 tags:
   - Natureza
   - Família
@@ -27,6 +29,6 @@ Chegando lá, colocaram o peixe no aquário. Ele grudou a boca nas paredes do vi
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./rio-japao.html">Rio Japão</a>
-  <a href="./aventura-de-bicicleta.html">Aventura de bicicleta</a>
+  <a href="./rio-japao.html">&lt;&lt; Rio Japão</a>
+  <a href="./aventura-de-bicicleta.html">Aventura de bicicleta &gt;&gt;</a>
 </div>

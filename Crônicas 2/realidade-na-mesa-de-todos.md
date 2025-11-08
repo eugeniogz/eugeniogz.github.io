@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Realidade na mesa de todos"
+reading_time: 3
+semantic_order: 80
 tags:
   - Economia
   - Sociedade
@@ -29,6 +31,6 @@ Enquanto dividiam a sobremesa, o salmão no cardápio já não parecia um prato 
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./do-barulho-ao-canto.html">Do barulho ao canto</a>
-  <a href="./amor-consciente.html">Amor consciente</a>
+  <a href="./do-barulho-ao-canto.html">&lt;&lt; Do barulho ao canto</a>
+  <a href="./amor-consciente.html">Amor consciente &gt;&gt;</a>
 </div>

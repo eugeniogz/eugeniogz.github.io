@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Rio Japão"
+reading_time: 3
+semantic_order: 1
 tags:
   - Natureza
   - Família
@@ -28,4 +30,7 @@ Após a leitura, o sábio avô complementa dizendo: — A natureza fala conosco,
 
 ---
 
-[O Cascudo](./o-cascudo.html)
+<div style="display: flex; justify-content: space-between;">
+  <span></span>
+  <a href="./o-cascudo.html">O Cascudo &gt;&gt;</a>
+</div>

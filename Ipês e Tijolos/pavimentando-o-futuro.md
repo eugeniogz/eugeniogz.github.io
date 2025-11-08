@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Pavimentando o futuro"
+reading_time: 2
+semantic_order: 40
 tags:
   - Sociedade
   - Escravidão digital
@@ -22,4 +24,7 @@ Apesar dos problemas que enfrentaremos, essa perversa máquina será vencida com
 
 ---
 
-[Ipês e tijolos](./ipes-e-tijolos.html)
+<div style="display: flex; justify-content: space-between;">
+  <a href="./ipes-e-tijolos.html">&lt;&lt; Ipês e tijolos</a>
+  <span></span>
+</div>

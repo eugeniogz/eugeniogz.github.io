@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Diversão e colaboração"
+reading_time: 2
+semantic_order: 15
 tags:
   - Família
   - Colaboração
@@ -31,6 +33,6 @@ Assim passaram-se os dias, uma louça lavada com cuidado, ajudando na limpeza e 
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./aventura-de-bicicleta.html">Aventura de bicicleta</a>
-  <a href="./armadilhas-da-internet.html">Armadilhas da Internet</a>
+  <a href="./aventura-de-bicicleta.html">&lt;&lt; Aventura de bicicleta</a>
+  <a href="./armadilhas-da-internet.html">Armadilhas da Internet &gt;&gt;</a>
 </div>

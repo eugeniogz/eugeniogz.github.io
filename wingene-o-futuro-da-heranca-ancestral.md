@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Wingene: O futuro da herança ancestral"
+reading_time: 10
+semantic_order: 1
 tags:
   - Serena euforia
   - Conhecimento
@@ -14,6 +16,7 @@ tags:
   - Felicidade
   - Alma
   - Atenção plena
+  - Infinito
 --- 
 
 ## Wingene: O futuro da herança ancestral
@@ -86,4 +89,7 @@ Permanece essa esperança otimista: de que novos inventores descubram sinfonias 
 
 ---
 
-[Tecendo a vida: criando no íntimo uma obra pessoal](./tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html)
+<div style="display: flex; justify-content: space-between;">
+  <span></span>
+  <a href="./tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html">Tecendo a vida: criando no íntimo uma obra pessoal &gt;&gt;</a>
+</div>

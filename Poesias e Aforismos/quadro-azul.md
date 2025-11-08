@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Quadro azul"
+reading_time: 1
+semantic_order: 4
 tags:
   - Atenção plena
 --- 
