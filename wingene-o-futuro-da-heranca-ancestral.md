@@ -87,6 +87,8 @@ A vida que floresceu na nossa nave azul algum dia deixará de existir. A morada 
 
 Permanece essa esperança otimista: de que novos inventores descubram sinfonias inéditas — desbravadores de mundos, arautos da busca que nunca termina. A mesma que move a nossa existência, movimentos da música que ressoam no eterno — uma sinfonia da finita existência que segue vibrando na vida sem fim.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">

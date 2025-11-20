@@ -429,7 +429,7 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
         subpastasIndexadas.push({
           name: nomeSubpasta,
           comentario: comentario,
-          link: `./${nomeSubpasta}/${NOME_INDEX}`,
+          link: `./${nomeSubpasta}/`,
           semanticOrder: semanticOrderScore
         });
     }
