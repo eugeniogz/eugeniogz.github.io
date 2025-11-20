@@ -60,6 +60,8 @@ O artífice da vida, com a maturidade, compreende a sua obra em toda a sua ampli
 
 Cada dia é uma nova oportunidade de entrelaçar fios, de burilar a obra-prima que é a própria existência. O sítio mental permanece em constante transformação, abrigando novas compreensões e novas cores. O artista, ciente de sua infindável tarefa, abraça os desafios e as alegrias, celebrando cada momento com a leveza de uma dança. Que se cria e aprimora a cada passo, a cada respiração, em um universo de infinitas possibilidades. Nesse estado de atenção consciente, a cada movimento a obra se ilumina. E assim, no estado de plena felicidade, percebe que a obra, mesmo inacabada, sobreviverá ao seu criador. Vibrando em harmônica sintonia com a dança dos artistas do passado e do futuro em tonalidades ressonantes com a eterna criação humana.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">

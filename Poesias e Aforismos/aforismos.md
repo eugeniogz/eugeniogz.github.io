@@ -22,7 +22,7 @@ tags:
 
 A ciência ilumina a metafísica com os dourados fios do conhecimento <!--16/09/25-->
 
-Divino consciente, sobrenatural inexistente <!--06/11/25-->
+Divina consciência — divina inexistência <!--06/11/25-->
 
 Informação exige validade, conhecimento clama liberdade <!--17/10/25-->
 
@@ -35,8 +35,6 @@ Descobrir é raro, reinventar é caro <!--08/10/25-->
 ### 🧠 Consciência e Criação
 
 Consciência, broto genético — floresce dialético <!--05/11/25-->
-
-A atenção consciente é fugaz, sua busca deve ser tenaz <!--30/09/25-->
 
 Sentimentos lúdicos, pensamentos lúcidos <!--09/10/25-->
 
@@ -70,6 +68,10 @@ Viver em lúdica atenção floresce felicidade <!--07/07/24-->
 
 Todos os caminhos levam a Roma, somente a verdade eleva ao amor <!--22/09/25-->
 
+A atenção consciente é fugaz, sua busca deve ser tenaz <!--30/09/25-->
+
+inconsciência: tempo sem cor, vida sem flor <!--16/11/25-->
+
 ***
 
 ### 🌿 Natureza e Existência
@@ -85,8 +87,6 @@ Brilham alegrias em infinitas cosmogonias <!--08/10/25-->
 ***
 
 🖋️ Do que escrevo: rara a originalidade, seiva da liberdade <!--10/07/22-->
-
-
 
 ---
 

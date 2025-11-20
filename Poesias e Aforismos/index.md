@@ -11,4 +11,4 @@
 ### 📄 [Música soberana](./musica-soberana.html) <span class="word-count">[1 min]</span>
 ### 📄 [Café em flor](./cafe-em-flor.html) <span class="word-count">[1 min]</span>
 ### 📄 [Aquarela de uma valsa](./aquarela-de-uma-valsa.html) <span class="word-count">[1 min]</span>
-### 📄 [Divino consciente](./divino-consciente.html) <span class="word-count">[1 min]</span>
+### 📄 [Divina consciência](./divina-consciencia.html) <span class="word-count">[1 min]</span>

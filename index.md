@@ -18,3 +18,5 @@ A poesia do cotidiano e os laços que nos unem
 Vida consciente, amor e esperança
 ### 📁 [O cascudo e outras histórias](./O cascudo e outras histórias/index.md)
 Contos para pequenos aventureiros: Descobertas no rio, na fazenda e na cidade
+### 📁 [Crônicas 3](./Crônicas 3/index.md)
+Florescimento do espírito

@@ -20,7 +20,9 @@ As painas caídas formavam um delicado tapete, tufos de algodão escondendo o ve
 
 Durante os quinze minutos de conversa, no passo firme da mocidade, uma pausa na padaria para um gole de refresco e mais motivo para se entrosar. Já viviam meses do novo colégio, mas o assunto sempre rendia. Combinavam fins de semana de peteca, Ricardo, o mais alto, sempre vencia, mas o importante era a companhia. Naquela época, quase não existia videogame, e a conexão era o telefone. Único meio virtual e que somente a conversa transmitia.
 
-As velhas paineiras se renovam a cada estação, mas nesses tempos modernos, os novos estudantes quase não enxergam. A maioria vai de automóvel. Sentados e ocupados com os seus jogos digitais. O calor da amizade dos jogos de peteca é raridade. A esperança de uma transformação repousa silenciosa nas painas que ressurgem a cada ano. Pintando o futuro na totalidade de cores que o branco contém — a paz da contemplação reinará sobre a virtual prisão.
+Os anos passavam, o branco das árvores pintava tapetes nos passeios. Os velhos amigos levam os filhos em veículos modernos — novos estudantes que já não notavam a beleza natural, sentados e vidrados nas telas que empunhavam. Não havia caminhadas, nem o saudável calor das petecas. Bailando ao vento as painas clamavam olhares.
+
+Um sábado letivo uniu os velhos amigos, conversa animada, o convite para o jogo. No dia seguinte, Marcos e seu filho Pedro encontraram Ricardo e Alex na velha quadra. Um jogo de duplas longe das telas. Alegria no esporte, esperança de nova vida, que repousa silenciosa nos serenos tapetes. Pintando o futuro nas cores do branco — a textura doce do algodão desligando as frias telas.
 
 ---
 

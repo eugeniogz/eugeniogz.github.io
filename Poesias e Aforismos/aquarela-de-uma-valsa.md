@@ -52,5 +52,5 @@ aquarela do amar.
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./cafe-em-flor.html">&lt;&lt; Café em flor</a>
-  <a href="./divino-consciente.html">Divino consciente &gt;&gt;</a>
+  <a href="./divina-consciencia.html">Divina consciência &gt;&gt;</a>
 </div>

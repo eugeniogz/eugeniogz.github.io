@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Divino consciente"
+title: "Divina consciência"
 reading_time: 1
 semantic_order: 999.99
 tags:
@@ -13,7 +13,7 @@ tags:
 
 [Poesias e Aforismos](./)
 
-## Divino consciente
+## Divina consciência
 
 Consciência divina presente,  
 irradia brilhantes sentidos.  
@@ -28,16 +28,14 @@ encontros da boa ciência.
 A aurora da consciência  
 repousa no humano poder,  
 tecida em cores reais,  
-iluminada de puro saber.
+ilumina o puro saber.
 
-O sobrenatural não assusta,  
+O sobrenatural não existe,  
 nasce do inexplicável;  
 a verdade cresce e explica,  
 explorando o infindável.
 
-Divino consciente — sobrenatural inexistente.
-
-
+Divina consciência — divina inexistência.
 
 ---
 
