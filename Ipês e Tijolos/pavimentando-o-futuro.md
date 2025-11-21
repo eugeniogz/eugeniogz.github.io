@@ -22,9 +22,11 @@ O complexo sistema atual, no entanto, girando engrenagens que não avançam, nã
 
 Apesar dos problemas que enfrentaremos, essa perversa máquina será vencida com a sabedoria, que permitirá escolhas sensatas. Enfim, teremos uma gradual diminuição das desigualdades sociais e o conhecimento acerca da superação será então comum entre os seres humanos. Todos buscarão o aprimoramento pessoal, construindo com sabedoria a estrada pavimentada com a herança  ancestral.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./ipes-e-tijolos.html">&lt;&lt; Ipês e tijolos</a>
+  <a href="./odisseia-interior.html">&lt;&lt; Odisseia interior</a>
   <span></span>
 </div>
