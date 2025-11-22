@@ -1,21 +1,25 @@
 ---
 layout: null
+permalink: /search.json
 ---
+{%- assign all_content = site.pages | concat: site.posts -%}
+{%- assign items_with_layout = all_content | where: "layout", "default" -%}
+{%- assign searchable_items = items_with_layout | where_exp: "item", "item.search != false" -%}
+{%- assign no_index = searchable_items | where_exp: "item", "item.name != 'index.md'" -%}
+{%- assign filtered_items = no_index | where_exp: "item", "item.name != '404.html'" -%}
 [
-  {%- assign is_first = true -%}
-  {%- assign all_content = site.pages | concat: site.posts -%}
-  {%- for item in all_content -%}
-    {%- if item.search != false and item.title and item.url and item.url != '/' -%}
-      {%- unless is_first -%},{%- endunless -%}
-      {
-        "title": {{ item.title | jsonify }},
-        "url": {{ item.url | relative_url | jsonify }},
-        "content": {{ item.content | strip_html | strip_newlines | jsonify }},
-        "normalized_title": {{ item.title | downcase | replace: "á", "a" | replace: "é", "e" | replace: "í", "i" | replace: "ó", "o" | replace: "ú", "u" | replace: "â", "a" | replace: "ê", "e" | replace: "î", "i" | replace: "ô", "o" | replace: "û", "u" | replace: "à", "a" | replace: "ã", "a" | replace: "õ", "o" | replace: "ç", "c" | jsonify }},
-        "normalized_content": {{ item.content | strip_html | strip_newlines | downcase | replace: "á", "a" | replace: "é", "e" | replace: "í", "i" | replace: "ó", "o" | replace: "ú", "u" | replace: "â", "a" | replace: "ê", "e" | replace: "î", "i" | replace: "ô", "o" | replace: "û", "u" | replace: "à", "a" | replace: "ã", "a" | replace: "õ", "o" | replace: "ç", "c" | jsonify }},
-        "reading_time": {{ item.reading_time | default: '0' | jsonify }}
-      }
-      {%- assign is_first = false -%}
-    {%- endif -%}
+  {%- for item in filtered_items -%}
+    {
+      "title"    : {{ item.title | jsonify }},
+      "url"      : {{ item.url | relative_url | jsonify }},
+      "content"  : {{ item.content | strip_html | strip_newlines | jsonify }},
+      "reading_time"  : "{{ item.reading_time | default: 0 }}",
+      {% if item.date %}
+      "type"     : "post"
+      {% else %}
+      "type"     : "page"
+      {% endif %}
+    }
+    {%- unless forloop.last -%},{%- endunless -%}
   {%- endfor -%}
 ]

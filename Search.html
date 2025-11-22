@@ -19,11 +19,7 @@ search: false
     minimumLength: 2, // Permitir buscas com 2 ou mais caracteres
     stopWords: '', // Desabilitar a lista de palavras a serem ignoradas
     limit: 100,
-    fuzzy: true, // Ativa a busca por aproximação (fuzzy search)
-    searchFields: ['normalized_title', 'normalized_content'], // Define os campos a serem pesquisados
-    fuzzyThreshold: 0.3, // Define o quão rigorosa a busca "fuzzy" deve ser (0.0 = exato, 1.0 = qualquer coisa)
-    // Normaliza o termo de busca da mesma forma que o conteúdo
-    preProcess: function(input) { return input.toLowerCase().replace(/á/g, "a").replace(/é/g, "e").replace(/í/g, "i").replace(/ó/g, "o").replace(/ú/g, "u").replace(/â/g, "a").replace(/ê/g, "e").replace(/î/g, "i").replace(/ô/g, "o").replace(/û/g, "u").replace(/à/g, "a").replace(/ã/g, "a").replace(/õ/g, "o").replace(/ç/g, "c"); }
+    searchFields: ['title', 'content'], // Define os campos a serem pesquisados
   });
 </script>
 <a href="./">Voltar</a>
