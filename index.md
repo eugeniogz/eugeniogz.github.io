@@ -3,7 +3,7 @@ layout: default
 title: Índice
 --- 
 
-### 📄 [Wingene](./wingene-o-futuro-da-heranca-ancestral.html) <span class="word-count">[11 min]</span>
+### 📄 [Wingene](./wingene-o-futuro-da-heranca-ancestral.html) <span class="word-count">[12 min]</span>
 O futuro da herança ancestral
 ### 📄 [Tecendo a vida](./tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html) <span class="word-count">[8 min]</span>
 criando no íntimo uma obra pessoal
