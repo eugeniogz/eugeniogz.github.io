@@ -20,7 +20,7 @@ Boa parte da população mundial está conectada à grande rede de computadores.
 
 O sistema econômico atual, porém, mantém estruturas que sustentam privilégios de poucos às custas da maioria. Fomenta guerras e boicota a busca por um futuro sustentável, utilizando a desinformação para o seu proveito. A recente crise climática causada pelo aquecimento global é um exemplo de um fato concreto negado por muitos. Apesar de acordos internacionais como o de Paris, as emissões globais de CO₂ continuam crescendo, mostrando a insuficiência das medidas adotadas. Se não adotarmos um estilo de vida mais sustentável e rompermos com esse modelo econômico predatório, a sobrevivência humana estará comprometida.
 
-A superação desses desafios exigirá investimento massivo em educação científica, regulamentação das plataformas digitais e políticas redistributivas que reduzam as desigualdades estruturais. Dessa forma, será possível uma gradual diminuição da injustiça social e o conhecimento acerca da superação será então comum entre os seres humanos. Todos buscarão o aprimoramento pessoal, construindo com sabedoria a estrada pavimentada com a herança ancestral.
+A superação desses desafios exigirá investimento massivo em educação científica, regulamentação das plataformas digitais e políticas redistributivas que reduzam as desigualdades estruturais. Dessa forma, será possível uma gradual diminuição da injustiça social e o conhecimento acerca da superação será então comum entre os seres humanos. Todos buscarão o aprimoramento pessoal, pavimentando com sabedoria a estrada para o futuro.
 
 ---
 
