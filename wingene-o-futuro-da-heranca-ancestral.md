@@ -103,9 +103,11 @@ A vitória da herança que o filho recebe dos pais se constrói no esforço que 
 
 A *Wingene* revela-se assim em múltiplas camadas: no esforço evolutivo individual, na aurora da mente que nos eleva, no poder criativo de descobrir, no legado deixado às gerações futuras, e na esperança cósmica de que o conhecimento ressurja em novos universos. Cada atitude atenta tece esse fio dourado: decisões que superam as imperfeições, valores que moldam o caráter, a vida que compõe linhas de uma sinfonia. Nossa breve passagem pode ser mais que uma travessia — garantir notas harmônicas ao futuro universal.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <span></span>
+  <a href="./wingene-a-heranca-ancestral.html">&lt;&lt; Wingene: A Herança Ancestral</a>
   <a href="./tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html">Tecendo a vida: criando no íntimo uma obra pessoal &gt;&gt;</a>
 </div>
