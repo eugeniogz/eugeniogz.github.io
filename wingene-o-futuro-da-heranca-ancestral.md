@@ -97,17 +97,15 @@ A vida que floresceu na nossa nave azul algum dia deixará de existir. A morada 
 
 Permanece essa esperança otimista: de que novos inventores descubram sinfonias inéditas — desbravadores de mundos, arautos da *Wingene* que nunca termina. A mesma que move a nossa existência, movimentos da música que ressoam no eterno — uma sinfonia da finita existência que segue vibrando na vida sem fim.
 
-### **Epílogo**
+***
 
 A vitória da herança que o filho recebe dos pais se constrói no esforço que ele faz para sua evolução — que se completa com o aprendizado cultural. Somente assim, ele pode sentir a experiência transcendente da aurora da mente. Uma vivência única, que não aguarda pelo futuro, no entanto, passar adiante o legado ancestral será motivo de *eudaimonia*.
 
-A *Wingene* revela-se assim em múltiplas camadas: no esforço evolutivo individual, na aurora da mente que nos eleva, no poder criativo de descobrir, no legado deixado às gerações futuras, e na esperança cósmica de que o conhecimento ressurja em novos universos. Cada atitude atenta tece esse fio dourado: decisões que superam as imperfeições, valores que moldam o caráter, a vida que compõe linhas de uma sinfonia. Nossa breve passagem pode ser mais que uma travessia — garantir notas harmônicas ao futuro universal.
-
-
+A *Wingene* revela-se assim em múltiplas camadas: no esforço evolutivo individual, na aurora da mente que nos eleva, no poder criativo de descobrir, no legado deixado às gerações futuras, e na esperança cósmica de que o conhecimento ressurja em novos universos. Cada atitude atenta é parte de uma melodia: decisões que superam as imperfeições, valores que moldam o caráter, a vida que compõe linhas de uma sinfonia. Que nossa breve passagem seja mais que simples travessia — compassos que ecoem na música universal.
 
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./wingene-a-heranca-ancestral.html">&lt;&lt; Wingene: A Herança Ancestral</a>
+  <a href="./wingene-o-futuro-da-heranca-ancestral-abreviado.html">&lt;&lt; Wingene: O Futuro da Herança Ancestral (abreviado)</a>
   <a href="./tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html">Tecendo a vida: criando no íntimo uma obra pessoal &gt;&gt;</a>
 </div>
