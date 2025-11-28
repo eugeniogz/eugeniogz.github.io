@@ -14,9 +14,9 @@ tags:
 
 ## Odisseia interior
 
-Muitos se perdem em um labirinto de incertos caminhos, buscam a fuga voando nas frágeis asas da quimera, em um voo impossível. Perdidos na infindável monotonia da rotina, como Sísifo condenado a empurrar sua pedra montanha acima diariamente. A sombra da ignorância os mantém cativos, perseguidos pelo minotauro. Esse cativeiro sufoca a força e astúcia do Ulisses interior, náufrago no oceano da informação. A verdadeira odisseia não se realiza onde não há escolha, mesmo que difícil. A heroica jornada do navegante começa com a decisão de enfrentar Cila, o monstro de seis cabeças, ou Caríbdis, o colossal redemoinho.
+Muitos estão perdidos em um labirinto de caminhos. Buscam a fuga nas asas da quimera — um voo impossível. Presos na monotonia da rotina, como Sísifo, lutam diariamente. Mas o labirinto tem saída: basta enfrentar a ignorância, Minotauro que confunde a mente. Escapar do dédalo é apenas o início. A odisseia exige escolhas constantes, e o navegante — esse Ulisses interior — enfrenta seus dilemas: Cila ou Caríbdis?
 
-O Ulisses interior pode se apossar do leme dessa odisseia,  iluminando as trevas que encobriam e confundiam as trilhas da mente. Assim, surge a sabedoria de Atena, que repousa em cada ser, trazendo a chama que ilumina a consciência. Uma luz que descortina a bússola, mensageira do verdadeiro objetivo, o qual não está nas alturas do monte Olimpo — esse fatal destino das asas de cera de Ícaro. Seu norte orienta a jornada até o sereno sítio das Cárites que  conduzem o desabrochar da felicidade. Liberta do labirinto, a mente encontra o sentido da odisseia pessoal: navegar em eudaimonia no oceano interior.
+Esse Ulisses pode se apossar do leme, iluminando as trevas que encobrem as trilhas da mente. Assim, a sabedoria floresce na consciência como uma bússola imaterial. Sua agulha aponta o objetivo, que não habita as alturas do Olimpo — fatal destino de Ícaro. Ela conduz a jornada até o sereno sítio das Cárites, onde desabrocha a felicidade. Liberta do labirinto, a mente encontra o sentido da odisseia pessoal: navegar em eudaimonia no oceano interior.
 
 ---
 
