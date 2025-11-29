@@ -53,7 +53,7 @@ Revisar os valores, cientes da imperfeição humana, é importante para orientar
 
 Quando esse caminho é trilhado com dedicação — quando valores se alinham, imperfeições são enfrentadas, decisões são tomadas e atenção é cultivada — a consciência pode experimentar o extraordinário.
 
-*O azul se espalha pelas moradas de concreto, plantadas, imóveis, de tamanho e cor variados. Sob elas, tímidas copas de tom verde respiram e tecem a doce seiva da luz que me aquece. Minha mente tranquila observa; o pulsar sanguíneo é intenso, e os neurônios eriçados trazem a alegria: uma serena euforia. Sei aproveitar esse momento; entendo que não é perene e que voltará. Não é preciso o calmo azul, mas apenas a mente atenta — força interna acima do monótono cinza.*
+*O azul se espalha pelas moradas de concreto, plantadas, imóveis, de tamanho e cor variados. Sob elas, tímidas copas de tom verde respiram e tecem a doce seiva da luz que me aquece. Minha mente tranquila observa; o pulsar sanguíneo é intenso, e os neurônios eriçados trazem a alegria: uma serena euforia. Sei aproveitar esse momento; entendo que não é perene e que voltará. Não é preciso o calmo azul, mas apenas a mente atenta — força interna que colore o cinza.*
 
 A mente se amplia em instantes de intensa alegria — em experiências radiantes da mente sem pressa, que vive momentos além do comum. Uma grande euforia, contida e serena; um caloroso aconchego como fogo que não queima, persistindo no cinza urbano ou na tranquila pintura, que da seiva emana — os sentidos e os pensamentos não perturbam, a consciência flutua. Nesses momentos, surge um estado de graça — quando sinapses se elevam, pulsando energia.
 
@@ -99,7 +99,7 @@ Permanece essa esperança otimista: de que novos inventores descubram sinfonias 
 
 ***
 
-A vitória da herança que o filho recebe dos pais se constrói no esforço que ele faz para sua evolução — que se completa com o aprendizado cultural. Somente assim, ele pode sentir a experiência transcendente da aurora da mente. Uma vivência única, que não aguarda pelo futuro, no entanto, passar adiante o legado ancestral será motivo de *eudaimonia*.
+A vitória da herança que o filho recebe dos pais se constrói no esforço que ele faz para sua evolução — que se completa com o aprendizado cultural. Somente assim, ele pode sentir a experiência transcendente da aurora da mente. Uma vivência única, que não aguarda pelo futuro; no entanto, passar adiante o legado ancestral será motivo de *eudaimonia*.
 
 A *Wingene* revela-se assim em múltiplas camadas: no esforço evolutivo individual, na aurora da mente que nos eleva, no poder criativo de descobrir, no legado deixado às gerações futuras, e na esperança cósmica de que o conhecimento ressurja em novos universos. Cada atitude atenta é parte de uma melodia: decisões que superam as imperfeições, valores que moldam o caráter, a vida que compõe linhas de uma sinfonia. Que nossa breve passagem seja mais que simples travessia — compassos que ecoem na música universal.
 

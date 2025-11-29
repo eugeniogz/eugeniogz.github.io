@@ -27,13 +27,13 @@ A herança genética cria as primeiras luzes da mente. Segundo António Damásio
 
 Mas como, afinal, tecer essa Wingene no cotidiano? Como transformar herança genética e desejo de transcendência em passos concretos? A resposta está na própria palavra que nos move: VIDA, dela extraímos um acróstico que ilumina o caminho: Valores, Imperfeições, Decisões e Atenção.
 
-**Valores** são os princípios inegociáveis que orientam cada escolha e ação. São a bússola moral que nos mantém fiéis a nós mesmos, especialmente nos momentos de desafio.
+**Valores** são os princípios inegociáveis que orientam cada escolha e ação. A bússola moral que nos mantém fiéis a nós mesmos, especialmente nos momentos de desafio.
 
 **Imperfeições** compõem a vida: a impaciência com quem amamos, o orgulho que impede um pedido de desculpas. Aceitá-las não significa resignação, mas direção para o aperfeiçoamento.
 
-**Decisões** nos dão o poder de agarrar as rédeas do próprio destino. Mais do que desejar mudar, é o ato corajoso de escolher enfrentar as imperfeições, buscar a cada dia o aperfeiçoamento.
+**Decisões** nos dão o poder de agarrar as rédeas do próprio destino. O ato corajoso de escolher enfrentar as imperfeições buscando o aperfeiçoamento diário.
 
-**Atenção**, singular e única, acompanha todo caminho consciente. É a arte de viver no agora, percebendo os detalhes, escutando verdadeiramente.
+**Atenção**, singular e única, acompanha todo o caminho. A arte de viver no agora, percebendo os detalhes, escutando verdadeiramente.
 
 ***
 
