@@ -22,6 +22,6 @@ Quando esses frios tijolos serão como as flores? Amarelas e homogêneas, nascen
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./organizar-a-vida.html">&lt;&lt; Organizar a vida</a>
+  <a href="./extrapolar-o-virtual.html">&lt;&lt; Extrapolar o virtual</a>
   <a href="./odisseia-interior.html">Odisseia interior &gt;&gt;</a>
 </div>

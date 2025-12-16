@@ -26,5 +26,5 @@ A força do divino alia-se ao vivo, marcando em cores eternas a história finita
 
 <div style="display: flex; justify-content: space-between;">
   <span></span>
-  <a href="./invisivel-ganancia.html">Invisível ganância &gt;&gt;</a>
+  <a href="./servidao-e-liberdade.html">Servidão e liberdade &gt;&gt;</a>
 </div>

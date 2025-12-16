@@ -24,6 +24,8 @@ Os anos passavam, o branco das árvores pintava tapetes nos passeios. Os velhos 
 
 Um sábado letivo uniu os velhos amigos, conversa animada, o convite para o jogo. No dia seguinte, Marcos e seu filho Pedro encontraram Ricardo e Alex na velha quadra. Um jogo de duplas longe das telas. Alegria no esporte, esperança de nova vida, que repousa silenciosa nos serenos tapetes. Pintando o futuro nas cores do branco — a textura doce do algodão desligando as frias telas.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">

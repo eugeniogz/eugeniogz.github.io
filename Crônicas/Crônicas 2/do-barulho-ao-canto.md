@@ -28,6 +28,8 @@ Passando os dias em casa e estudando à noite, a rotina era outra. Da minha jane
 
 Agora as trilhas não são mais em duas rodas, mas tecidas pelos dedos ágeis. Os sonhos são entregues nos pacotes digitais, que ajudam pessoas, transformam rotinas. Meus clientes são gratos pelas soluções que dou — ainda formiguinha, mas feliz por quem sou. Na música das teclas, o barulho do trânsito se dissipou.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">

@@ -24,6 +24,6 @@ Os temidos donos dos oceanos podem continuar sua trajetória, no entanto, sem in
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./invisivel-ganancia.html">&lt;&lt; Invisível ganância</a>
-  <a href="./organizar-a-vida.html">Organizar a vida &gt;&gt;</a>
+  <a href="./servidao-e-liberdade.html">&lt;&lt; Servidão e liberdade</a>
+  <a href="./extrapolar-o-virtual.html">Extrapolar o virtual &gt;&gt;</a>
 </div>

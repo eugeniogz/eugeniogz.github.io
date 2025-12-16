@@ -29,6 +29,8 @@ Esses laços se fortaleceram com o nascimento de nossas filhas, que se beneficia
 
 Assim, no meio de tantas alegrias, as cores do amor nem sempre são vibrantes e quentes. Ruídos que interrompem a música da união, no entanto, não tornam os elos mais fracos, servem para dar contraste, acentuar a beleza da vida. Uma beleza que reflete no ritmo do coração e no pulsar da mente. Um amor que, antes de ser divino, é consciente — como uma valsa com pausas e harmonias pintada em cores de uma aquarela.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">

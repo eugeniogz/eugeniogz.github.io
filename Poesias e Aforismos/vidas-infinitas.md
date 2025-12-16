@@ -27,16 +27,15 @@ outros já esquecidos.
 Infinitos que nunca terei.
 
 Ecos de outros caminhos,  
-rotas do tempo escasso.  
-Vidas alheias brilham,  
+Brilhos de oculto luar.  
+Vidas alheias correm,  
 infinitas que não sei.
 
-Encontros no espaço,  
-tempo se entrelaça.  
+Encontros no espaço,
+
+instantes compartilhados.  
 Amor se une no abraço —  
 calor no infinito serei.
-
-
 
 ---
 

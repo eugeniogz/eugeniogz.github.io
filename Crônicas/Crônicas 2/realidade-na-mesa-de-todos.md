@@ -28,6 +28,8 @@ Marcos continuou: — A perfeição é utopia, mas um mundo mais justo é possí
 
 Enquanto dividiam a sobremesa, o salmão no cardápio já não parecia um prato tão distante da realidade de todos.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">

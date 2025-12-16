@@ -2,7 +2,7 @@
 layout: default
 title: "Quebrando a monotonia"
 reading_time: 2
-semantic_order: 600
+semantic_order: 750
 tags:
   - Atenção plena
 --- 
@@ -23,7 +23,7 @@ Nos pores do sol que virão, as nuvens e árvores diferirão do agora, até mesm
 
 O ciclo se repete, mas o que se vive em cada instante é único.
 
-A vida pode apresentar nuances sutis que podem passar despercebidas. Notar a paisagem a se alternar a cada dia é incomum, um prédio pode surgir longe dos nossos olhos, sem que  notemos. No entanto, situações memoráveis como um filho que aprende a andar, pronuncia a primeira palavra ou passa de rabiscos no papel à escrita do próprio nome. São eventos que permanecem gravados na nossa mente. Esses momentos inesquecíveis dão mais cor à vida, mas assim podem ser, também, as nuances, como uma tonalidade a mais no pôr do sol do dia seguinte. A monotonia pode existir em nós, mas cada dia traz uma experiência diferente. O mais importante é encontrar esse colorido tão especial — existir é perceber os detalhes que quebram a monotonia, de um pôr do sol inédito à melodia inesperada de um pássaro.
+A vida apresenta nuances sutis. Um prédio pode surgir longe dos nossos olhos, sem ser notado. No entanto, situações memoráveis como um filho que aprende a andar, pronuncia a primeira palavra ou passa de rabiscos no papel à escrita do próprio nome. São eventos que permanecem gravados na nossa mente. Esses momentos inesquecíveis dão mais cor à vida, mas assim podem ser, também, as nuances, como uma tonalidade a mais no pôr do sol do dia seguinte. A monotonia pode existir em nós, mas cada dia traz uma experiência diferente. O mais importante é encontrar esse colorido tão especial — existir é perceber os detalhes que quebram a monotonia, de um pôr do sol inédito à melodia inesperada de um pássaro.
 
 ---
 

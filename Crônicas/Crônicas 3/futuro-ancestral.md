@@ -17,6 +17,8 @@ Não importa o epílogo da vida terrestre, muito menos o cosmos dissolver-se em 
 
 Enquanto a pequena brinca, recordo como a iminência da morte não me preocupa. Não preciso buscar as vazias promessas de eterno viver. Vida é coisa boa, também por ter um fim. O tempo contado clama o saber: aprender para evoluir e ensinar. Crianças querem novidade — inata vontade. Assim demonstra a infante que prende meus olhos com seu vestido azul. A mente não nasce vazia. A sombra genética cumpre seu papel, mas o homem se forma ampliando a cultura, aprimorando a moral.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">

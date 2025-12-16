@@ -51,9 +51,9 @@ Revisar os valores, cientes da imperfeição humana, é importante para orientar
 
 ### **A Aurora da Mente**
 
-Quando esse caminho é trilhado com dedicação — quando valores se alinham, imperfeições são enfrentadas, decisões são tomadas e atenção é cultivada — a consciência pode experimentar o extraordinário.
+Quando esse caminho é trilhado com dedicação — quando valores se alinham, imperfeições são enfrentadas, decisões são tomadas e a atenção é cultivada — a consciência pode experimentar o extraordinário.
 
-*O azul se espalha pelas moradas de concreto, plantadas, imóveis, de tamanho e cor variados. Sob elas, tímidas copas de tom verde respiram e tecem a doce seiva da luz que me aquece. Minha mente tranquila observa; o pulsar sanguíneo é intenso, e os neurônios eriçados trazem a alegria: uma serena euforia. Sei aproveitar esse momento; entendo que não é perene e que voltará. Não é preciso o calmo azul, mas apenas a mente atenta — força interna que colore o cinza.*
+*O azul se espalha pelas moradas de concreto, plantadas, imóveis, diversas na altura e arquitetura. Sob elas, tímidas copas de tom verde respiram e tecem a doce seiva da luz que me aquece. Minha mente tranquila observa; o pulsar sanguíneo é intenso, e os neurônios eriçados trazem a alegria: uma serena euforia. A cor do momento é fugaz, mas permanece viva. Não é preciso o calmo azul, mas apenas a mente atenta — força interna que colore o cinza.*
 
 A mente se amplia em instantes de intensa alegria — em experiências radiantes da mente sem pressa, que vive momentos além do comum. Uma grande euforia, contida e serena; um caloroso aconchego como fogo que não queima, persistindo no cinza urbano ou na tranquila pintura, que da seiva emana — os sentidos e os pensamentos não perturbam, a consciência flutua. Nesses momentos, surge um estado de graça — quando sinapses se elevam, pulsando energia.
 

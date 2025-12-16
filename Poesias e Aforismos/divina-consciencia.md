@@ -15,18 +15,18 @@ tags:
 
 ## Divina consciência
 
-Consciência divina presente,  
+Divino ser consciente,  
 irradia brilhantes sentidos.  
 Corpóreo recinto da mente,  
 sítio do humano pensar.
 
 Escora-se em teogonias,  
 buscando respostas fáceis,  
-esquece belas descobertas,  
-encontros da boa ciência.
+esquece puras descobertas,  
+epistêmicas sabedorias.
 
 A aurora da consciência  
-repousa no humano poder,  
+repousa no interno ser,  
 tecida em cores reais,  
 ilumina o puro saber.
 

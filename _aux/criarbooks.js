@@ -47,7 +47,14 @@ function gerarLivroComDocumentos() {
         while (subpastas.hasNext()) {
             const subpasta = subpastas.next();
             if (subpasta.getName().startsWith("_")) continue;
-            compilarDoisLivrosDaPasta(pastaCompilados, subpasta);    
+            compilarDoisLivrosDaPasta(pastaCompilados, subpasta);
+            
+            const subSubPastas = subpasta.getFolders();
+            while (subSubPastas.hasNext()) {
+                const subSubPasta = subSubPastas.next();
+                if (subSubPasta.getName().startsWith("_")) continue;
+                compilarDoisLivrosDaPasta(pastaCompilados, subSubPasta);
+            }
         }
         
         Logger.log('Compilação de todos os livros concluída com sucesso.');
