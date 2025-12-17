@@ -28,13 +28,12 @@ Infinitos que nunca terei.
 
 Ecos de outros caminhos,  
 Brilhos de oculto luar.  
-Vidas alheias correm,  
+Correm vidas alheias,  
 infinitas que não sei.
 
-Encontros no espaço,
-
-instantes compartilhados.  
-Amor se une no abraço —  
+Encontros no espaço,  
+instantes partilhados.  
+Amor unido no abraço —  
 calor no infinito serei.
 
 ---
