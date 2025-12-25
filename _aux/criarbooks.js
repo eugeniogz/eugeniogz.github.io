@@ -332,6 +332,11 @@ function processarDocumentoFormatado(docId, corpoDestino) {
                 }
             }
 
+            if (textoCompleto.trim() === '***') {
+                corpoDestino.appendHorizontalRule();
+                continue;
+            }
+
             // 2. Criação do Novo Elemento
             let novoParagrafo;
             if (tipo === DocumentApp.ElementType.LIST_ITEM) {
