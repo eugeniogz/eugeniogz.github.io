@@ -13,6 +13,7 @@ let mouseY = 0;
 let isTyping = false;
 let textCursorX = 0;
 let textCursorY = 0;
+let lineStartX = 0;
 
 ctx.fillStyle = 'white';
 ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -46,9 +47,15 @@ window.addEventListener('mousemove', (e) => {
 });
 
 window.addEventListener('keydown', (e) => {
-    if (e.key.length === 1) { // Only printable characters
+    if (e.key === 'Enter') {
+        if (isTyping) {
+            textCursorY += 25; // Line height
+            textCursorX = lineStartX;
+        }
+    } else if (e.key.length === 1) { // Only printable characters
         if (!isTyping) {
             isTyping = true;
+            lineStartX = mouseX;
             textCursorX = mouseX;
             textCursorY = mouseY;
         }
