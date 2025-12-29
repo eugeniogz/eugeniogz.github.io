@@ -23,9 +23,11 @@ A floresta mental pode bailar nas copas mais altas, favorecendo a **serena eufor
 
 A aurora da mente pode acontecer todo dia, em interlúdios de paz e intensa alegria. São ocasiões memoráveis, de sentimentos pacíficos e pensamentos harmônicos. Não é o vazio de respirações marcadas, mas a dança suave acima do pensar e sentir. Quando a plateia e o palco não perturbam a mente — que se expande, numa grata sensação de ser por si só. Sem o clamor das sensações: **somente o baile de um ser consciente.**
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./odisseia-interior.html">&lt;&lt; Odisseia interior</a>
-  <a href="./pavimentando-o-futuro.html">Pavimentando o futuro &gt;&gt;</a>
+  <a href="./espirito-consciente.html">Espírito consciente &gt;&gt;</a>
 </div>

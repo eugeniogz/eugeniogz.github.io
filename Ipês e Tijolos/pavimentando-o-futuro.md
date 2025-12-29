@@ -25,9 +25,11 @@ O sistema atual, porém, mantém estruturas que sustentam privilégios de poucos
 
 A superação desses desafios exigirá investimento massivo em educação científica, regulamentação das plataformas digitais e políticas redistributivas. Assim será possível a gradual diminuição da injustiça social. O conhecimento necessário à superação se tornará comum, e todos buscarão o aprimoramento pessoal, pavimentando com sabedoria a estrada para o futuro.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./a-aurora-da-mente.html">&lt;&lt; A aurora da mente</a>
+  <a href="./espirito-consciente.html">&lt;&lt; Espírito consciente</a>
   <span></span>
 </div>

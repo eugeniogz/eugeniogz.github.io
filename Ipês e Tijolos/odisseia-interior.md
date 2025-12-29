@@ -20,9 +20,11 @@ Muitos estão perdidos em um labirinto de escolhas. Buscam uma fuga nas asas da 
 
 O Ulisses pode se apossar do leme, iluminando as trevas que encobrem as trilhas da mente. Assim, a sabedoria floresce como uma bússola imaterial. Sua agulha aponta o objetivo, que não habita as alturas do Olimpo — fatal destino de Ícaro. Ela conduz a jornada até o sereno sítio das Cárites, onde a felicidade floresce. Liberta do labirinto, a mente encontra o sentido da odisseia pessoal: navegar em eudaimonia no oceano interior.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./ipes-e-tijolos.html">&lt;&lt; Ipês e tijolos</a>
+  <a href="./temperando-a-ideologia.html">&lt;&lt; Temperando a ideologia</a>
   <a href="./a-aurora-da-mente.html">A aurora da mente &gt;&gt;</a>
 </div>

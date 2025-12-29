@@ -17,6 +17,8 @@ A luz tênue do sol de chumbo esfria os corações. O calor dos motores não aqu
 
 Além dos muros altos e dos portões de ferro, a vida segue em um ritmo diferente. Pássaros, alheios à corrida insana, voam livres entre as nuvens. Seus ninhos nos galhos mais altos das árvores estão longe do latido ensurdecedor. Cortam os céus, de um lado para o outro, sentindo o calor do sol e o frescor do vento. A cada voo, um novo horizonte se abre. Os latidos da servidão são apenas um eco distante. No seu lugar, o canto das aves inatingíveis pelo ódio daqueles que se contentam com as sobras.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">
