@@ -358,13 +358,16 @@ function processarDocumentoFormatado(docId, corpoDestino) {
                 // Copia atributos de parágrafo (alinhamento, espaçamento)
                 try {
                     novoParagrafo.setAttributes(paragrafoOrigem.getAttributes());
+                    let currentOffset = 0;
                     for (let j = 0; j < paragrafoOrigem.getNumChildren(); j++) {
                       const child = paragrafoOrigem.getChild(j);
                       if (child.getType() === DocumentApp.ElementType.TEXT) {
                           const textElement = child.asText();
                           const textContent = textElement.getText();
                           const textNovo = novoParagrafo.editAsText();
+                          const totalLen = textNovo.getText().length;
                           for (let k = 0; k < textContent.length; k++) {
+                              if (currentOffset + k >= totalLen) break;
                               const isBold = textElement.isBold(k);
                               const isItalic = textElement.isItalic(k);
                               const attributesToSet = {};
@@ -375,11 +378,10 @@ function processarDocumentoFormatado(docId, corpoDestino) {
 
                               if (isBold || isItalic) {
                                 // Aplicamos APENAS os atributos de BOLD e ITALIC que nos interessam
-                                textNovo.setAttributes(k, k, attributesToSet);
+                                textNovo.setAttributes(currentOffset + k, currentOffset + k, attributesToSet);
                               }
                           }
-                              
-                          
+                          currentOffset += textContent.length;
                       }
                     }
                     // 4. Cópia da Formatação de Texto em Nível de Caractere/Palavra
@@ -424,6 +426,39 @@ function processarDocumentoFormatado(docId, corpoDestino) {
                       }
                   }
                 }
+
+            // 4. Processar Links (Markdown) DEPOIS da formatação
+            const regexLink = /\[([^)]+)\]\(([^\]]+)\)/g;
+            const matches = [];
+            let match;
+            while ((match = regexLink.exec(textoCompleto)) !== null) {
+                matches.push({
+                    index: match.index,
+                    fullMatch: match[0],
+                    text: match[1],
+                    url: match[2]
+                });
+            }
+            
+            if (matches.length > 0) {
+                const textObj = novoParagrafo.editAsText();
+                // Iterate backwards to preserve indices
+                for (let i = matches.length - 1; i >= 0; i--) {
+                    const m = matches[i];
+                    const start = m.index;
+                    const end = m.index + m.fullMatch.length - 1;
+                    const textLen = m.text.length;
+                    
+                    try {
+                        // Delete `)[url]` part first
+                        textObj.deleteText(start + 1 + textLen, end);
+                        // Delete `(`
+                        textObj.deleteText(start, start);
+                        // Apply link to TEXT
+                        textObj.setLinkUrl(start, start + textLen - 1, m.url);
+                    } catch (e) { /* Ignora */ }
+                }
+            }
         }       
         // 5. Processar Tabelas (Cópia direta de elemento)
         else if (tipo === DocumentApp.ElementType.TABLE) {

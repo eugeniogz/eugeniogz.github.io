@@ -13,13 +13,13 @@ tags:
 
 ## Extrapolar o virtual
 
-Fios entrelaçados povoam a mesa em desordem caótica. Inertes, têm a energia a fluir em suas veias. Ligam aparelhos, numa frenética troca, transportam somente, sem saber o que importa.
+Fios entrelaçados povoam a mesa em desordem caótica. A energia flui em suas veias, mas eles não retêm nada — apenas conectam e conduzem. Receber informações, passar adiante, rolar as telas em busca da próxima novidade para propagar.
 
-Pessoas podem ser condutores, em seu interior só o metal, que nada retém. Conectam e conduzem, sem julgar. Recebem, passam adiante e nada acrescentam. Rolando as telas, ávidos em encontrar uma novidade para propagar.
+Quanto mais nos dedicamos a esse fluxo incessante, mais o senso crítico se esvai. Seduzidos pelo brilho do imediato, trocamos a reflexão pela pronta resposta, o questionamento pela repetição. As telas nos oferecem o mundo inteiro, mas será que estamos realmente presentes nele?
 
-Quanto mais se dedicam a esse prazer, envoltas como fios enrolados, mais o senso crítico se esvai. Emaranhadas no fútil que seduz com seu brilho tentador, desprezam o saber pela pronta resposta.
+O pensamento crítico é o que nos distingue dos simples condutores de informação. Nele repousa nossa capacidade de interpretar, criar, discordar. Extrapolar o virtual significa deixar de ser apenas parte do circuito para participar ativamente da realidade. Não se trata de abandonar a tecnologia, mas de reorganizar o emaranhado: escolher quando conectar e quando desconectar, quando absorver e quando refletir.
 
-Buscar soluções no órgão máximo pode parecer antiquado. Mas é nele que repousa o que somos. A consciência é superior a todos os aparelhos, nela flui a verdadeira energia que nos faz humanos. Extrapolar o virtual e deixar de ser parte, para participar, sentir mais a realidade. Organizar o emaranhado.  Superar a teia que embola, ser maior que a tela que cola. Assim, soberano, o tempo da vida livre será.
+Assim, donos do nosso tempo, podemos habitar tanto o digital quanto o real, criando conhecimento e contribuindo para o legado cultural.
 
 ---
 

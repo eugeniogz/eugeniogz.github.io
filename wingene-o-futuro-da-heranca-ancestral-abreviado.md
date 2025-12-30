@@ -41,7 +41,7 @@ A mente atenta permite não somente perceber as falhas, mas também sentir exper
 
 Sentir essa dádiva é próprio do humano — mas poucos a buscam, rolando a mesma pedra no eterno castigo de Sísifo. Mesmo sob o peso da rocha, a aurora da mente permanece acessível: basta atenção. A mente, densa floresta enraizada no corpo, pode bailar nas copas mais altas, favorecendo sua aurora. Pois ela está à espera da deixa da delicada dança — valsa de neurônios em sintonia.
 
-A serena euforia pode acontecer todo dia, em interlúdios de paz e intensa alegria. Não é o vazio de respirações marcadas, mas a dança suave acima do pensar e sentir. Sem o clamor das sensações: somente o baile de um ser consciente. Mas essa experiência não pode permanecer estática — a mente que floresce transforma contemplação em criação.
+A serena euforia pode acontecer todo dia, em interlúdios de paz e intensa alegria. Não exige o vazio de respirações marcadas, mas a dança suave acima do pensar e sentir. Sem o clamor das sensações: somente o baile de um ser consciente. Mas essa experiência não pode permanecer estática — a mente que floresce transforma contemplação em criação.
 
 ***
 
@@ -62,6 +62,12 @@ Permanece a esperança otimista: que novos inventores revelem sinfonias inédita
 ***
 
 A *Wingene* revela-se assim em múltiplas camadas: no esforço evolutivo individual, na aurora da mente que nos eleva, no poder criativo de descobrir, no legado deixado às gerações futuras, e na esperança cósmica de que o conhecimento ressurja em novos universos. Cada atitude atenta tece esse fio dourado: decisões que superam as imperfeições, valores que moldam o caráter, a vida que compõe linhas de uma sinfonia. Que nossa breve passagem seja mais que simples travessia — compassos que ecoem na música universal.
+
+***
+
+© José Eugênio
+
+2025
 
 ---
 
