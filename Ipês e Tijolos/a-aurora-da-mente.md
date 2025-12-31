@@ -21,7 +21,7 @@ Sentir essa dádiva é próprio do humano — mas poucos a buscam, presos às nu
 
 A consciência pode bailar além dos sentidos, onde o corpo é somente o palco silencioso dos passos da mente. Basta que estes flutuem no tablado, sem notar a plateia. No conforto do lar, no movimento do trabalho, até em tediosas rotinas, a peça pode seguir. Pois a mente aguarda a deixa da delicada dança — **valsa de neurônios em sintonia**.
 
-A aurora da mente pode acontecer em ocasiões memoráveis, de sentimentos pacíficos e pensamentos harmônicos. Não exige o vazio de respirações marcadas, mas a dança suave além do pensar e do sentir. Acontece quando a plateia e o palco não ofuscam a mente, que se expande numa grata sensação de ser em si. Sem o clamor das sensações — **apenas o baile de um ser consciente.**
+A aurora da mente pode acontecer em ocasiões memoráveis, de sentimentos pacíficos e pensamentos harmônicos. Não exige o vazio de respirações marcadas, mas a dança suave além do pensar e do sentir. Acontece quando a plateia e o palco não ofuscam a mente, que se expande numa grata sensação de ser em si. Sem o clamor das sensações — **apenas o baile da consciência.**
 
 ---
 
