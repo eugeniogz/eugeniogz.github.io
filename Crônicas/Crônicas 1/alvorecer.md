@@ -42,6 +42,8 @@ Depois da pausa para o café, começam os preparativos para o almoço. Já havia
 
 Quase tudo pronto para o almoço, pensa no bolo. Procura a farinha na gaveta de baixo e não encontra. Sobe a escada e olha as prateleiras de cima. Nada. O forno, ainda quente, esperava a massa, inexistente na falta do ingrediente principal. Será que o seu Marcos poderá voltar ao supermercado? Desliga o forno, aguardando o retorno do patrão. A rotina interrompida permite ao seu coração alegre contemplar a beleza que invade a janela. No parapeito, os viçosos vasos que cultivou.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">

@@ -25,6 +25,8 @@ O verde na tela desaparece. O artista ao teclado retoma, corpo agradecido. Novas
 
 Transcrevo o instante. Pescando palavras, inventando o sentimento. Traduzindo o breve momento. O som de sabiás e bem-te-vis, a monotonia dos latidos. Sereno e tranquilo, desliza o pensar. Preenchendo o vazio com teclas vibrantes. Pulsação real da mente atenta. Dez minutos de paz em um minuto escrito. Voador solitário, o invertebrado passa, sem dores nem tensões — breve pensamento no horizonte infinito.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">

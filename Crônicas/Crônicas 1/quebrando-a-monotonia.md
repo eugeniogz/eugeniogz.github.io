@@ -25,6 +25,8 @@ O ciclo se repete, mas o que se vive em cada instante é único.
 
 A vida apresenta nuances sutis. Um prédio pode surgir longe dos nossos olhos, sem ser notado. No entanto, situações memoráveis como um filho que aprende a andar, pronuncia a primeira palavra ou passa de rabiscos no papel à escrita do próprio nome. São eventos que permanecem gravados na nossa mente. Esses momentos inesquecíveis dão mais cor à vida, mas assim podem ser, também, as nuances, como uma tonalidade a mais no pôr do sol do dia seguinte. A monotonia pode existir em nós, mas cada dia traz uma experiência diferente. O mais importante é encontrar esse colorido tão especial — existir é perceber os detalhes que quebram a monotonia, de um pôr do sol inédito à melodia inesperada de um pássaro.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">

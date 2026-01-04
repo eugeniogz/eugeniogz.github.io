@@ -17,6 +17,8 @@ O cinzento dominava o céu — nenhuma fresta de azul. As copas dançavam. O fri
 
 Enfim no conforto, longe do vento, observo as nuvens, lembro do sofrimento. Caloroso aconchego invade o pensamento. A mente recobra a harmonia. Aquecida a face, cheia de alegria. A valsa agora é nas copas internas. A floresta mental, embalada no fluxo, sente a brisa natural. Valsando suavemente — pulsando a doce seiva do conhecimento. Nas trilhas vastas, no bosque infinito. Sentir e pensar existiam sem incomodar. O frio cortante, o barulho, o grito, no exterior contido. A mente atenta abriu espaço para a real meditação. Aquela alheia à respiração, de olhos abertos. Pensando e sentindo, no íntimo do ser. Alçando voo acima das nuvens, sem deixar o solo e ciente das tristezas. As sensações não machucavam. Sem dores a açoitar, sem pensamentos a castigar. Assim, no sítio da mente, a floresta sentiu o sol, acima do frio das ruas. No sossego do lar, longe do frio, a mente novamente venceu — mas nem todos aquecidos conseguem voar.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">

@@ -31,6 +31,8 @@ Esse entulho se forma em conteúdos sem importância, que se acumulam em horas r
 
 Gavetas que se enchem alegres em um passeio a dois, observando e dialogando sobre a vida — ou em um momento com um café. Aquele preparado com ciência, de onde se extrai do pó a sua essência. Aquecendo a água, visualizando nas bolhas a temperatura ideal, derramada, em seguida, sobre o coador em despejos controlados. Enfim, saborear a deliciosa bebida que, um dia, já detestei.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">

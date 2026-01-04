@@ -14,19 +14,19 @@ tags:
 
 ## Mente presente
 
-A mão sente o peso transparente da asa. O cristalino foca na imagem vibrante do líquido, que evapora ondas bailando em calor. Pernas cruzadas pressionam a panturrilha direita. O fumegante sabor povoa a boca, esquenta o paladar.
+A mão sente o peso da xícara. O líquido evapora em ondas de fumaça. As pernas cruzadas pressionam a panturrilha. O fumegante sabor esquenta o paladar.
 
-O corpo repousa sereno, sem sentir o peso que sustenta. No primeiro e longo gole, a íris se move, fitando a buganvília rosada. Admirando a beleza enquanto sente o gosto marcante.
+O corpo repousa sereno, sem sentir o peso que sustenta. No primeiro e longo gole, o olhar se volta para a buganvília rosa. Admirando a beleza enquanto sente o gosto marcante.
 
-Uma melodia doce acompanha o ritual, ditando o ritmo do paciente degustar. A varanda mostra o azul que se entorna sobre incontáveis prédios. Abrigando alheios sentidos, xícaras que se esvaziam, mentes que se saciam.
+Uma melodia doce acompanha o ritual, ditando o ritmo paciente. A varanda mostra o azul que se entorna sobre incontáveis prédios. Neles, muitas xícaras que se esvaziam displicentes.
 
 Ao fim dos suaves goles, a sensação se mantém, a mente radiante acompanha a caminhada. Momento de paz em árvores floridas. Saudável exercício contado em pegadas. Partilhado em família.
 
-A trilha é tranquila, o tempo se alonga. Conversas da vida ressoam no tímpano, embaladas pelo som de bicos e latidos. Cada volta avista os duros frutos gelados. Verdes e redondos, encerram a doce água — prêmio merecido no coco guardado.
+A trilha é tranquila, o tempo se alonga. Conversas da vida ressoam no ouvido, embaladas pelo som de bicos e latidos. Cada volta encerra com a lembrança do coco gelado — prêmio aguardado.
 
-O exercício termina. O suave gelado encerra o ritmo. Leves passadas retornam ao lar. Em casa, recebidas pela televisão gritante. O poder da atenção se dissipa na cacofonia que polui a audição. O aparelho ligado seduz a mente, que perde o sossego.
+O exercício termina. O suave gelado encerra o ritmo. Leves passadas retornam ao lar. Em casa, recebidas pela televisão gritante. O poder da atenção se dissipa na cacofonia que polui a audição.
 
-Recolhendo-se na varanda, o físico sente o sol. O ruído se abranda, abrindo caminho para a sutil sensação. Avistando o horizonte, a mente acalma. A consciência flutua além do sentir e pensar. Os prédios respiram, pulsando sentidos — nem todos presentes.
+Retornando à varanda, o físico sente o sol. O ruído se abranda. Avistando o horizonte, a mente acalma.
 
 ---
 

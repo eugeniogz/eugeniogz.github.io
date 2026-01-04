@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Espírito consciente"
+title: "Espírito material"
 reading_time: 2
 semantic_order: 37
 tags:
@@ -11,7 +11,7 @@ tags:
 
 [Ipês e Tijolos](./)
 
-## Espírito consciente
+## Espírito material
 
 Meu conceito de espírito não é metafísico: ele habita o corpo vivente, manifesta-se nos processos biológicos e guarda valores e emoções puras no sítio da mente. A poderosa máquina mental pode parecer, em alguns casos, extrapolar o limite corporal, viajando nas ondas extasiadas das inúmeras conexões neuronais. Mas sua substância é material. Mesmo assim, o mundo que habita em cada mente é uma densa floresta — árvores enraizadas no corpo inteiro que sentem, comandam e pensam. Das raízes às folhas, a floresta é o lar de incontáveis espécies — complexo sistema que dança incessantemente, parecendo por isso ter presença etérea. A mente pode transcender em experiência espiritual sem deixar de ser floresta real.
 

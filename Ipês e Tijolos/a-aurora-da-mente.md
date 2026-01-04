@@ -23,9 +23,11 @@ A consciência pode bailar além dos sentidos, onde o corpo é somente o palco s
 
 A aurora da mente pode acontecer em ocasiões memoráveis, de sentimentos pacíficos e pensamentos harmônicos. Não exige o vazio de respirações marcadas, mas a dança suave além do pensar e do sentir. Acontece quando a plateia e o palco não ofuscam a mente, que se expande numa grata sensação de ser em si. Sem o clamor das sensações — **apenas o baile da consciência.**
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./odisseia-interior.html">&lt;&lt; Odisseia interior</a>
-  <a href="./espirito-consciente.html">Espírito consciente &gt;&gt;</a>
+  <a href="./espirito-material.html">Espírito material &gt;&gt;</a>
 </div>

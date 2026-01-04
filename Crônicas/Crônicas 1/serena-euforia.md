@@ -19,6 +19,8 @@ A consciência pode bailar além dos sentidos, onde o corpo é somente o palco s
 
 A aurora da mente pode acontecer em ocasiões memoráveis, de sentimentos pacíficos e pensamentos harmônicos. Não exige o vazio de respirações marcadas, mas a dança suave além do pensar e do sentir. O baile da consciência segue com este conjunto de crônicas que ilustram esse estado sublime no cotidiano.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">
