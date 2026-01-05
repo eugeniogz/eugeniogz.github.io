@@ -640,10 +640,6 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
             }
             
             contentElementsInReverse.push(element);
-            
-            if ((tagsFound || scoreFound) && element.getType() !== DocumentApp.ElementType.PARAGRAPH) {
-                 break; 
-            }
         }
         
         // Remove a data do nome para o título (ex: "2023-10-27-Titulo" vira "Titulo")
@@ -742,6 +738,59 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                         default: markdown += `${text}\n\n`; break;
                     }
                 }
+            } else if (elementType === DocumentApp.ElementType.LIST_ITEM) {
+                const listItem = element.asListItem();
+                const nesting = listItem.getNestingLevel();
+                const glyph = listItem.getGlyphType();
+                let prefix = '';
+                for (let n = 0; n < nesting; n++) prefix += '  ';
+                
+                if (glyph === DocumentApp.GlyphType.BULLET || glyph === DocumentApp.GlyphType.HOLLOW_BULLET || glyph === DocumentApp.GlyphType.SQUARE_BULLET) {
+                    prefix += '* ';
+                } else {
+                    prefix += '1. ';
+                }
+
+                let rawText = '';
+                let inBoldRun = false;
+                let inItalicRun = false;
+                let inBoldItalicRun = false;
+                for (let j = 0; j < listItem.getNumChildren(); j++) {
+                    const child = listItem.getChild(j);
+                    if (child.getType() === DocumentApp.ElementType.TEXT) {
+                        const textElement = child.asText();
+                        const textContent = textElement.getText();
+                        for (let k = 0; k < textContent.length; k++) {
+                            const char = textContent[k];
+                            const isBold = textElement.isBold(k);
+                            const isItalic = textElement.isItalic(k);
+                            
+                            if (char===' ' && inBoldItalicRun) { 
+                              rawText +="*** "; 
+                              inBoldItalicRun = false; inBoldRun = false; inItalicRun = false;
+                              continue;
+                            }
+
+                            if (isBold && !inBoldRun && char!==' ') { rawText += '**'; inBoldRun = true; } 
+                            else if (!isBold && inBoldRun) { rawText += '**'; inBoldRun = false; }
+                            
+                            if (isItalic && !inItalicRun && char!==' ') { rawText += '*'; inItalicRun = true; } 
+                            else if (!isItalic && inItalicRun) {   rawText += '*'; inItalicRun = false; }
+                            
+                            if (!inBoldItalicRun) {
+                              inBoldItalicRun = inItalicRun && inBoldRun;
+                            }
+
+                            rawText += char;
+                        }
+                        if (inBoldRun) { rawText += '**'; inBoldRun = false; }
+                        if (inItalicRun) { rawText += '*'; inItalicRun = false; }
+                    } else {
+                        rawText += child.getText ? child.getText() : '';
+                    }
+                }
+                let text = rawText.replace(/(\r\n|\r|\n)/g, '  \n').trim();
+                if (text) markdown += `${prefix}${text}\n\n`;
             }
         }
         // O link de retorno ao index da pasta será adicionado na função que gera o rodapé.

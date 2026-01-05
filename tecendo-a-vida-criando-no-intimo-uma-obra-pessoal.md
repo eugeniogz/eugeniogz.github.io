@@ -66,9 +66,11 @@ Cada dia é uma nova oportunidade de entrelaçar fios, de burilar a obra-prima q
 
 2025
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./wingene-o-futuro-da-heranca-ancestral.html">&lt;&lt; Wingene: O futuro da herança ancestral</a>
-  <span></span>
+  <a href="./o-metodo-vida-a-wingene-em-pratica.html">O método VIDA: a Wingene em prática &gt;&gt;</a>
 </div>
