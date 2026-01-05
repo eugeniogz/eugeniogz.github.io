@@ -3,6 +3,11 @@ layout: default
 title: "O método VIDA: a Wingene em prática"
 reading_time: 14
 semantic_order: 200
+tags:
+  - Wingene
+  - Vida
+  - Atenção
+  - Aperfeiçoamento
 --- 
 
 ## O método VIDA: a Wingene em prática
