@@ -697,6 +697,18 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                             const isItalic = textElement.isItalic(k);
                             
                             // Lógica de itálico/negrito
+                            if (char === '\r' || char === '\n') {
+                                if (inBoldItalicRun) {
+                                    rawText += "***";
+                                    inBoldItalicRun = false; inBoldRun = false; inItalicRun = false;
+                                } else {
+                                    if (inBoldRun) { rawText += '**'; inBoldRun = false; }
+                                    if (inItalicRun) { rawText += '*'; inItalicRun = false; }
+                                }
+                                rawText += char;
+                                continue;
+                            }
+
                             if (char===' ' && inBoldItalicRun) { 
                               rawText +="*** "; 
                               inBoldItalicRun = false,  inBoldRun = false; inItalicRun = false;
@@ -765,6 +777,18 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                             const isBold = textElement.isBold(k);
                             const isItalic = textElement.isItalic(k);
                             
+                            if (char === '\r' || char === '\n') {
+                                if (inBoldItalicRun) {
+                                    rawText += "***";
+                                    inBoldItalicRun = false; inBoldRun = false; inItalicRun = false;
+                                } else {
+                                    if (inBoldRun) { rawText += '**'; inBoldRun = false; }
+                                    if (inItalicRun) { rawText += '*'; inItalicRun = false; }
+                                }
+                                rawText += char;
+                                continue;
+                            }
+
                             if (char===' ' && inBoldItalicRun) { 
                               rawText +="*** "; 
                               inBoldItalicRun = false; inBoldRun = false; inItalicRun = false;
