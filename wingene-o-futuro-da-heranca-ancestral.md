@@ -77,7 +77,7 @@ As descobertas seguem acontecendo, ampliando o conhecimento, operando mudanças 
 
 ### **Futuro Ancestral**
 
-A busca pela *eudaimonia* nos impele a realizar a *Wingene*; no entanto, esse objetivo se esvazia na brevidade da vida. No espaço curto da existência, a mente não consegue fazer muito. Girar a roda do acróstico V.I.D.A. — alinhando valores, imperfeições, decisões e atenção — pode até guiar a evolução, mas será sempre um passo breve na escala do tempo.
+A busca pela *eudaimonia* nos impele a realizar a *Wingene*; no entanto, esse objetivo se esvazia na brevidade da vida. No espaço curto da existência, a mente não consegue fazer muito. Girar a roda do acróstico VIDA — alinhando valores, imperfeições, decisões e atenção — pode até guiar a evolução, mas será sempre um passo breve na escala do tempo.
 
 Por que lutar para o aprimoramento se não seremos nós a desfrutar do futuro? A resposta está inicialmente no que teceram nossos ancestrais. Como eles, seremos a base das novas gerações, garantindo o seu futuro. Assim, pode-se pensar em uma *Wingene *coletiva, onde cada geração prepara o terreno para o florescimento de uma sociedade cada vez mais evoluída. Uma humanidade que gradativamente se extasia em plena eudaimonia.
 

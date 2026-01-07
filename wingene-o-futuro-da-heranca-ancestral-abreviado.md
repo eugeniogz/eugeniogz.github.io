@@ -51,7 +51,7 @@ Artistas descortinam obras-primas, tecendo com fios do mundo físico aquilo que 
 
 ***
 
-A busca pela *eudaimonia* nos impele a realizar a *Wingene*; no entanto, esse objetivo se esvazia na brevidade da vida. No espaço curto da existência, a mente não é capaz de fazer muito. Girar a roda do acróstico V.I.D.A. pode guiar a evolução, mas será sempre um passo breve na escala do tempo.
+A busca pela *eudaimonia* nos impele a realizar a *Wingene*; no entanto, esse objetivo se esvazia na brevidade da vida. No espaço curto da existência, a mente não é capaz de fazer muito. Girar a roda do acróstico VIDA pode guiar a evolução, mas será sempre um passo breve na escala do tempo.
 
 Por que lutar para o aprimoramento se não seremos nós a desfrutar do futuro? A resposta está inicialmente no que teceram nossos ancestrais. Nós devemos ser a base das novas gerações, garantindo o seu futuro. Assim, pode-se pensar em uma *Wingene* coletiva, onde cada geração prepara o terreno para o florescimento de uma sociedade cada vez mais evoluída.
 
@@ -68,8 +68,6 @@ A *Wingene* revela-se assim em múltiplas camadas: no esforço evolutivo individ
 © José Eugênio
 
 2025
-
-
 
 ---
 
