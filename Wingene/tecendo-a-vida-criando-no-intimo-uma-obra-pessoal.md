@@ -70,12 +70,6 @@ O artista da vida não tece sozinho. Seus fios entrelaçam-se com os de outros �
 
 Essa dança eterna tem um nome: Wingene — a herança ancestral que cada geração tece e transmite. Mais que metáfora, é caminho prático de vida consciente. Nas páginas seguintes, exploraremos essa herança em profundidade, desde sua raiz filosófica até sua aplicação cotidiana.
 
-***
-
-© José Eugênio
-
-2025
-
 ---
 
 <div style="display: flex; justify-content: space-between;">

@@ -53,7 +53,7 @@ Atenção, singular e única, acompanha todo caminho consciente. É a arte de vi
 
 Revisar os valores, cientes da imperfeição humana, é importante para orientar as decisões. Pois assim como o ser é imperfeito, também é a cultura. Portanto, erros podem ser fruto de incorretas premissas. Os pilares do método científico e do aprendizado constante são a direção para a mente atenta.
 
-Um ensaio detalhando um método ético-existencial pode ser lido em: [O método VIDA](./o-metodo-vida-a-wingene-em-pratica.html).
+Esse método ético-existencial para praticar essa Wingene está detalhado adiante.
 
 ### **A Aurora da Mente**
 
@@ -106,12 +106,6 @@ Permanece essa esperança otimista: infinitas cosmogonias à espera de novos inv
 A vitória da herança que o filho recebe dos pais se constrói no esforço que ele faz para sua evolução — que se completa com o aprendizado cultural. Somente assim, ele pode sentir a experiência transcendente da aurora da mente. Uma vivência única, que não aguarda pelo futuro; no entanto, passar adiante o legado ancestral será motivo de *eudaimonia*.
 
 A *Wingene* revela-se assim em múltiplas camadas: no esforço evolutivo individual, na aurora da mente que nos eleva, no poder criativo de descobrir, no legado deixado às gerações futuras, e na esperança cósmica de novos universos. Cada atitude atenta é parte de uma melodia: decisões que superam as imperfeições, valores que moldam o caráter, a vida que compõe linhas de uma sinfonia. Que nossa breve passagem seja mais que simples travessia — compassos que ecoem na música universal.
-
-***
-
-© José Eugênio
-
-2025
 
 ---
 

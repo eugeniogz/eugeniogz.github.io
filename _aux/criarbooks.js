@@ -101,9 +101,10 @@ function compilarDoisLivrosDaPasta(pastaFinalizados, pastaDestino) {
 
     // 1. Coletar documentos EXCLUSIVAMENTE para este livro/pasta.
     const listaDocs = [];
+    const extraContent = { prefacio: null, posfacio: null };
     
     // Passa o NOME_PASTA como o nome da raiz do livro
-    const tipoSaidaLivro = coletarConteudoDePasta(pastaDestino, NOME_PASTA, true, listaDocs); 
+    const tipoSaidaLivro = coletarConteudoDePasta(pastaDestino, NOME_PASTA, true, listaDocs, extraContent); 
     
     if (!verificarNecessidadeCompilacao(pastaFinalizados, NOME_LIVRO_FORMATADO, listaDocs)) {
       return;
@@ -113,10 +114,10 @@ function compilarDoisLivrosDaPasta(pastaFinalizados, pastaDestino) {
     
     
     // 3. Gerar Livro Puro
-    // gerarLivro(NOME_LIVRO_PURO, pastaFinalizados, listaDocs, 'PURO', tipoSaidaLivro);
+    // gerarLivro(NOME_LIVRO_PURO, pastaFinalizados, listaDocs, 'PURO', tipoSaidaLivro, extraContent);
 
     // 4. Gerar Livro Formatado
-    gerarLivro(NOME_LIVRO_FORMATADO, pastaFinalizados, listaDocs, 'FORMATADO', tipoSaidaLivro);
+    gerarLivro(NOME_LIVRO_FORMATADO, pastaFinalizados, listaDocs, 'FORMATADO', tipoSaidaLivro, extraContent);
 
     Logger.log('Compilação para "' + NOME_PASTA + '" concluída.');
 }
@@ -174,7 +175,7 @@ function splitComentario(texto) {
 /**
  * Cria ou atualiza um único livro (Puro ou Formatado).
  */
-function gerarLivro(nomeLivroComSubtitulo, pastaDestino, listaDocs, tipo, tipoSaidaLivro) {
+function gerarLivro(nomeLivroComSubtitulo, pastaDestino, listaDocs, tipo, tipoSaidaLivro, extraContent) {
     let arquivoLivro = null;
     let livro = null;
     let titulos = splitComentario(nomeLivroComSubtitulo);
@@ -203,6 +204,15 @@ function gerarLivro(nomeLivroComSubtitulo, pastaDestino, listaDocs, tipo, tipoSa
         if (titulos.length>1) corpoLivro.appendParagraph(titulos[1]).setHeading(DocumentApp.ParagraphHeading.SUBTITLE).setAlignment(DocumentApp.HorizontalAlignment.CENTER);
         corpoLivro.appendParagraph("© José Eugênio").setHeading(DocumentApp.ParagraphHeading.HEADING1).setAlignment(DocumentApp.HorizontalAlignment.CENTER);
         if (tipoSaidaLivro) corpoLivro.appendPageBreak();
+
+        if (extraContent && extraContent.prefacio) {
+             corpoLivro.appendParagraph('Prefácio')
+                .setHeading(DocumentApp.ParagraphHeading.HEADING1)
+                .setAlignment(DocumentApp.HorizontalAlignment.CENTER);
+             corpoLivro.appendParagraph(extraContent.prefacio)
+                .setAlignment(DocumentApp.HorizontalAlignment.JUSTIFY);
+             if (tipoSaidaLivro) corpoLivro.appendPageBreak();
+        }
         
         // 3. Inserir conteúdo dos documentos
         let isFirstContentAfterCover = true;
@@ -211,6 +221,8 @@ function gerarLivro(nomeLivroComSubtitulo, pastaDestino, listaDocs, tipo, tipoSa
         let epigrafeInserted = false;
 
         listaDocs.forEach(docMeta => {
+            if (docMeta.ignoreContent) return;
+
             let newChapterCoverInserted = false; 
             let isRootLevel = docMeta.isRootFolder;
 
@@ -291,10 +303,22 @@ function gerarLivro(nomeLivroComSubtitulo, pastaDestino, listaDocs, tipo, tipoSa
                     livro = DocumentApp.openById(arquivoLivro.getId());
                     corpoLivro = livro.getBody();
                 } catch (e) {
-                     corpoLivro.appendParagraph('ERRO: Falha na cópia de conteúdo formatado do documento "' + docMeta.nomeArquivo + '".');
+                     const erroMsg = 'ERRO: Falha na cópia de conteúdo formatado do documento "' + docMeta.nomeArquivo + '". Detalhes: ' + e.toString();
+                     Logger.log(erroMsg);
+                     if (e.stack) Logger.log('Stack: ' + e.stack);
                 }
             }
         });
+
+        if (extraContent && extraContent.posfacio) {
+             if (tipoSaidaLivro) corpoLivro.appendPageBreak();
+             corpoLivro.appendParagraph('Posfácio')
+                .setHeading(DocumentApp.ParagraphHeading.HEADING1)
+                .setAlignment(DocumentApp.HorizontalAlignment.CENTER);
+             corpoLivro.appendParagraph(extraContent.posfacio)
+                .setAlignment(DocumentApp.HorizontalAlignment.JUSTIFY);
+        }
+
         livro.saveAndClose();
                     
     } catch (e) {
@@ -317,7 +341,12 @@ function processarDocumentoFormatado(docId, corpoDestino) {
 
         if (tipo === DocumentApp.ElementType.PARAGRAPH || tipo === DocumentApp.ElementType.LIST_ITEM) {
             
-            const paragrafoOrigem = elementoOrigem.asParagraph() || elementoOrigem.asListItem();
+            let paragrafoOrigem;
+            if (tipo === DocumentApp.ElementType.PARAGRAPH) {
+                paragrafoOrigem = elementoOrigem.asParagraph();
+            } else {
+                paragrafoOrigem = elementoOrigem.asListItem();
+            }
             if (!paragrafoOrigem) continue; 
             
             const heading = paragrafoOrigem.getHeading();
@@ -339,11 +368,12 @@ function processarDocumentoFormatado(docId, corpoDestino) {
 
             // 2. Criação do Novo Elemento
             let novoParagrafo;
+
             if (tipo === DocumentApp.ElementType.LIST_ITEM) {
-                // Para List Item, precisamos usar o texto completo para criar
                 novoParagrafo = corpoDestino.appendListItem(textoCompleto);
                 try {
-                    novoParagrafo.setNestingLevel(elementoOrigem.asListItem().getNestingLevel());
+                    novoParagrafo.setNestingLevel(paragrafoOrigem.getNestingLevel());
+                    novoParagrafo.setGlyphType(paragrafoOrigem.getGlyphType());
                 } catch (e) { /* Ignora */ }
             } else {
                 // Cria o parágrafo com o texto completo
@@ -543,7 +573,7 @@ function processarDocumentoFormatadoOld(docId, corpoDestino) {
  * @param {Array<Object>} listaDocs A lista que armazena os metadados.
  * @param {object} livroMeta Metadados do livro, incluindo ordenacaoCapitulo.
  */
-function coletarConteudoDePasta(pasta, pastaPaiNomeAtual, isRootFolder, listaDocs) {
+function coletarConteudoDePasta(pasta, pastaPaiNomeAtual, isRootFolder, listaDocs, extraContent) {
     const arquivos = pasta.getFiles();
     const NOME_ARQUIVO_CONFIG = 'Config';
     const ORDENACAO_PADRAO_DOCUMENTO = 99999; 
@@ -570,6 +600,26 @@ function coletarConteudoDePasta(pasta, pastaPaiNomeAtual, isRootFolder, listaDoc
             if (matchTipoSaida) {
                 tipoSaidaLivro = false;
             }
+
+            if (isRootFolder && extraContent) {
+                 const matchPrefacio = configText.match(/Prefácio:\s*([\s\S]*?)(?=\s*(?:Ordenação|Epígrafe|TipoSaida|Posfácio|Tags):|$)/i);
+                 if (matchPrefacio) extraContent.prefacio = matchPrefacio[1].trim();
+                 
+                 const matchPosfacio = configText.match(/Posfácio:\s*([\s\S]*?)(?=\s*(?:Ordenação|Epígrafe|TipoSaida|Prefácio|Tags):|$)/i);
+                 if (matchPosfacio) extraContent.posfacio = matchPosfacio[1].trim();
+            }
+
+            listaDocs.push({
+                id: arquivoConfig.getId(),
+                nomeArquivo: NOME_ARQUIVO_CONFIG,
+                pastaPaiNomeAtual: pastaPaiNomeAtual,
+                epigrafe : '',
+                isRootFolder: isRootFolder,
+                ordenacaoCapitulo: -1,
+                ordenacao: -1,
+                textoLimpo: '',
+                ignoreContent: true
+            });
             
         } catch (e) {
             Logger.log(`AVISO: Falha ao ler Config para "${nomePasta}": ${e.toString()}`);
@@ -641,7 +691,7 @@ function coletarConteudoDePasta(pasta, pastaPaiNomeAtual, isRootFolder, listaDoc
     while (subpastas.hasNext()) {
         const subpastaFilha = subpastas.next();
         // Passa o nome da raiz, o nome da subpasta filha e isRootFolder=false
-        tipoSaidaLivro=coletarConteudoDePasta(subpastaFilha, subpastaFilha.getName(), false, listaDocs) && tipoSaidaLivro;
+        tipoSaidaLivro=coletarConteudoDePasta(subpastaFilha, subpastaFilha.getName(), false, listaDocs, extraContent) && tipoSaidaLivro;
     }
     return tipoSaidaLivro;
 }
