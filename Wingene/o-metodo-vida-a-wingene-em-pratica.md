@@ -17,6 +17,10 @@ tags:
   - Mente
 --- 
 
+
+
+[Wingene](./)
+
 ## O método VIDA: a Wingene em prática
 
 Herdamos um corpo, uma mente e uma cultura — mas não herdamos, prontos, os critérios para viver bem. Esses precisam ser construídos. Esse é o objetivo da [Wingene](./wingene-o-futuro-da-heranca-ancestral.html): o aperfeiçoamento da herança. O método VIDA nasce dessa constatação: **a vida exige direção, mas também lucidez diante da imperfeição e presença no instante**.
@@ -340,8 +344,6 @@ O ciclo se reinicia continuamente, aprofundando o florescimento individual e col
 O método VIDA não promete transcendência fora do mundo, mas **consciência dentro dele**. É uma prática ética compatível com a finitude humana e com a esperança de que cada gesto atento, cada decisão coerente e cada valor vivido se tornem parte da herança cultural transmitida às gerações futuras.
 
 Essa é a Wingene em sua forma prática: **a vitória da herança realizada no presente.**
-
-
 
 ---
 

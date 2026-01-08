@@ -21,9 +21,11 @@ O espírito presente e material permite enfrentar desafios. Ele nos ilumina não
 
 A felicidade é um estado espiritual. Mas o bosque não cresce sozinho. As flores da alegria são individuais, no entanto, podem ser compartilhadas em interações pessoais que afetam outras florestas. Ações que cativam outros bosques ressoam internamente. Elas realimentam o florescimento de novos brotos. Mesmo que os contatos tenham posições variadas, pode-se compartilhar vivências — vínculos positivos para o crescimento pessoal. Assim, o espírito materializado no ecossistema mental pode se expandir em eudaimonia.
 
+
+
 ---
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./a-aurora-da-mente.html">&lt;&lt; A aurora da mente</a>
-  <a href="./pavimentando-o-futuro.html">Pavimentando o futuro &gt;&gt;</a>
+  <a href="./panteao-mental.html">Panteão mental &gt;&gt;</a>
 </div>

@@ -28,6 +28,6 @@ Mas seria ingênuo acreditar que a pavimentação será concluída em nossa gera
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./espirito-material.html">&lt;&lt; Espírito material</a>
+  <a href="./panteao-mental.html">&lt;&lt; Panteão mental</a>
   <span></span>
 </div>

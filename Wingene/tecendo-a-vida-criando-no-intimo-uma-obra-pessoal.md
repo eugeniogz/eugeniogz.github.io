@@ -2,11 +2,15 @@
 layout: default
 title: "Tecendo a vida: criando no íntimo uma obra pessoal"
 reading_time: 8
-semantic_order: 5
+semantic_order: 1
 tags:
   - Vida
   - Caminho
 --- 
+
+
+
+[Wingene](./)
 
 ## Tecendo a vida: criando no íntimo uma obra pessoal
 
@@ -64,6 +68,8 @@ Cada dia é uma nova oportunidade de entrelaçar fios, de burilar a obra-prima q
 
 O artista da vida não tece sozinho. Seus fios entrelaçam-se com os de outros — pais, filhos, amigos, mestres. A obra individual ressoa com obras alheias, criando uma tapeçaria coletiva que atravessa gerações. Cada gesto consciente adiciona beleza não apenas à própria vida, mas à herança cultural humana. E assim, mesmo inacabada, a obra transcende seu criador: permanece vibrando em harmonia com a dança eterna da humanidade.
 
+Essa dança eterna tem um nome: Wingene — a herança ancestral que cada geração tece e transmite. Mais que metáfora, é caminho prático de vida consciente. Nas páginas seguintes, exploraremos essa herança em profundidade, desde sua raiz filosófica até sua aplicação cotidiana.
+
 ***
 
 © José Eugênio
@@ -74,5 +80,5 @@ O artista da vida não tece sozinho. Seus fios entrelaçam-se com os de outros �
 
 <div style="display: flex; justify-content: space-between;">
   <span></span>
-  <a href="./wingene-o-futuro-da-heranca-ancestral-abreviado.html">Wingene: O futuro da herança ancestral (abreviado) &gt;&gt;</a>
+  <a href="./wingene-o-futuro-da-heranca-ancestral.html">Wingene: O futuro da herança ancestral &gt;&gt;</a>
 </div>

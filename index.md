@@ -3,15 +3,11 @@ layout: default
 title: Índice
 --- 
 
-### 📄 [Tecendo a vida](./tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html) <span class="word-count">[8 min]</span>
-criando no íntimo uma obra pessoal
-### 📄 [Wingene](./wingene-o-futuro-da-heranca-ancestral-abreviado.html) <span class="word-count">[5 min]</span>
-O futuro da herança ancestral (abreviado)
-### 📄 [Wingene](./wingene-o-futuro-da-heranca-ancestral.html) <span class="word-count">[12 min]</span>
+### 📄 [Wingene](./wingene-o-futuro-da-heranca-ancestral.html) <span class="word-count">[5 min]</span>
 O futuro da herança ancestral
-### 📄 [O método VIDA](./o-metodo-vida-a-wingene-em-pratica.html) <span class="word-count">[14 min]</span>
-a Wingene em prática
 
+### 📁 [Wingene](./Wingene/)
+Filosofia e Prática da Herança Consciente
 ### 📁 [Poesias e Aforismos](./Poesias e Aforismos/)
 Vida consciente, amor e esperança
 ### 📁 [Crônicas](./Crônicas/)
