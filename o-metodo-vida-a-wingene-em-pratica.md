@@ -300,10 +300,10 @@ O método se valida na prática por meio de perguntas essenciais:
 *Isso favorece uma vida lúcida, serena e responsável?*
 
 **I — Imperfeições**  
-*- **Cognitivas**:*** *Estou defendendo uma crença ou buscando compreender?*  
-*- **Emocionais**:*** *Estou reagindo ou escolhendo minha resposta?*  
-*- **Morais**:*** *Se minha ação fosse pública, eu a manteria?*  
-*- **Atencionais**:*** *Estou no piloto automático ou estou consciente?*
+*- **Cognitivas**: Estou defendendo uma crença ou buscando compreender?*  
+*- **Emocionais**: Estou reagindo ou escolhendo minha resposta?*  
+*- **Morais**: Se minha ação fosse pública, eu a manteria?*  
+*- **Atencionais**: Estou no piloto automático ou estou consciente?*
 
 **D — Decisões**  
 *Que atitude concreta posso assumir agora?*
@@ -339,11 +339,13 @@ O ciclo se reinicia continuamente, aprofundando o florescimento individual e col
 
 O método VIDA não promete transcendência fora do mundo, mas **consciência dentro dele**. É uma prática ética compatível com a finitude humana e com a esperança de que cada gesto atento, cada decisão coerente e cada valor vivido se tornem parte da herança cultural transmitida às gerações futuras.
 
-Essa é a Wingene em sua forma prática: **a vitória da herança realizada no agora.**
+Essa é a Wingene em sua forma prática: **a vitória da herança realizada no presente.**
+
+
 
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html">&lt;&lt; Tecendo a vida: criando no íntimo uma obra pessoal</a>
+  <a href="./wingene-o-futuro-da-heranca-ancestral.html">&lt;&lt; Wingene: O futuro da herança ancestral</a>
   <span></span>
 </div>

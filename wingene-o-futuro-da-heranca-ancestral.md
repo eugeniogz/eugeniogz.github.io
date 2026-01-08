@@ -2,7 +2,7 @@
 layout: default
 title: "Wingene: O futuro da herança ancestral"
 reading_time: 12
-semantic_order: 1
+semantic_order: 20
 tags:
   - Serena euforia
   - Conhecimento
@@ -89,19 +89,19 @@ Nosso tempo é contado nas poucas décadas da finita existência. Temos essa opo
 
 A *Wingene* coletiva pode parecer inútil no tempo cósmico. Que torna a existência humana um breve instante, um suspiro de vida no tempo universal. Meu olhar para a possível gênese do Cosmos sempre se apoiou na ciência. Ele carecia de aprofundamento. No entanto, o futuro ocaso da vida terrestre e a possibilidade do fim do universo conhecido mudaram meu foco. Minha visão do eterno e do efêmero ganhou, então, novos significados. Primeiro, o efêmero se suavizou no horizonte temporal. Posteriormente, o eterno se cristalizou em infinitas cosmogonias.
 
-A minha cosmogonia reflete uma das postulações científicas mais profundas e radicais, onde um buraco negro pode ter na outra ponta um buraco branco. Como descreve [Carlo Rovelli](https://www.bertrand.pt/ebook/buracos-brancos-carlo-rovelli/29284630): *“Se me acompanhar, chegamos à borda do horizonte de um buraco negro, entramos, descemos ao fundo, onde o espaço e o tempo se fundem, atravessamo-lo, ressurgimos no buraco branco, onde o tempo se inverte, e dali emergimos no futuro.”* Nosso universo poderia ser então um buraco branco. Imagino a existência de uma sequência infinita de pares de buracos brancos e negros. A vida pode existir em cada um desses buracos brancos. A dor da perda é mitigada pelo entendimento da eternidade desse ciclo. O possível renascimento de outros universos me leva a crer que o conhecimento, em cada novo ciclo, pode avançar ainda mais.
+A minha cosmogonia reflete uma das postulações científicas mais profundas e radicais, onde um buraco negro pode ter na outra ponta um buraco branco. Como descreve [Carlo Rovelli](https://www.bertrand.pt/ebook/buracos-brancos-carlo-rovelli/29284630): *“Se me acompanhar, chegamos à borda do horizonte de um buraco negro, entramos, descemos ao fundo, onde o espaço e o tempo se fundem, atravessamo-lo, ressurgimos no buraco branco, onde o tempo se inverte, e dali emergimos no futuro.”* Nosso universo poderia ser então um buraco branco. Imagino a existência de uma sequência infinita de pares de buracos brancos e negros. A vida pode existir em cada um desses buracos brancos. A dor da perda é mitigada pelo entendimento da eternidade desse ciclo.
 
 Voltando o olhar para a humanidade, não somos nada mais que três centenas de milhares de anos dentro desses bilhões de anos da existência universal. Pereceremos em breve por negligenciar o ecossistema. A busca por um novo planeta aventada por alguns é utópica e paradoxalmente distópica. Essa imagem parece desesperadora para alguns: o fim da raça humana. No entanto, a vida permanecerá por mais um tempo aqui mesmo na Terra, e estará sempre existindo ou ressurgindo em outras regiões do Cosmos.
 
 A vida que floresceu na nossa nave azul algum dia deixará de existir. A morada da Terra, de infinitos planetas, estrelas e tudo mais, também terá seu fim. Não viveremos de novo, tampouco voltaremos em outra oportunidade. Nosso prazo é o que temos: contado em respirações, no ritmo do coração. Nesse tempo, é possível alimentar a mente criativa, descobrir mistérios, inventar a melodia que ressoa no espaço. Sinfonia da matéria e energia que se espalha e esfria, rumo à máxima entropia, o destino do cosmos: frio e vazio. Para onde irá toda a beleza — os quadros brilhantes da colorida natureza? Esse inevitável futuro não me causa sofrimento, pois enxergo no escuro de buracos massivos, avistando neles negros portais para invisíveis universos — novas cores, outras vidas.
 
-Permanece essa esperança otimista: de que novos inventores descubram sinfonias inéditas — desbravadores de mundos, arautos da *Wingene* que nunca termina. A mesma que move a nossa existência, movimentos da música que ressoam no eterno — uma sinfonia da finita existência que segue vibrando na vida sem fim.
+Permanece essa esperança otimista: infinitas cosmogonias à espera de novos inventores que descubram sinfonias inéditas — desbravadores de mundos, arautos da *Wingene* que nunca termina. A mesma que move a nossa existência, movimentos da música que ressoam no eterno — uma sinfonia da finita existência que segue vibrando na vida sem fim.
 
 ***
 
 A vitória da herança que o filho recebe dos pais se constrói no esforço que ele faz para sua evolução — que se completa com o aprendizado cultural. Somente assim, ele pode sentir a experiência transcendente da aurora da mente. Uma vivência única, que não aguarda pelo futuro; no entanto, passar adiante o legado ancestral será motivo de *eudaimonia*.
 
-A *Wingene* revela-se assim em múltiplas camadas: no esforço evolutivo individual, na aurora da mente que nos eleva, no poder criativo de descobrir, no legado deixado às gerações futuras, e na esperança cósmica de que o conhecimento ressurja em novos universos. Cada atitude atenta é parte de uma melodia: decisões que superam as imperfeições, valores que moldam o caráter, a vida que compõe linhas de uma sinfonia. Que nossa breve passagem seja mais que simples travessia — compassos que ecoem na música universal.
+A *Wingene* revela-se assim em múltiplas camadas: no esforço evolutivo individual, na aurora da mente que nos eleva, no poder criativo de descobrir, no legado deixado às gerações futuras, e na esperança cósmica de novos universos. Cada atitude atenta é parte de uma melodia: decisões que superam as imperfeições, valores que moldam o caráter, a vida que compõe linhas de uma sinfonia. Que nossa breve passagem seja mais que simples travessia — compassos que ecoem na música universal.
 
 ***
 
@@ -112,6 +112,6 @@ A *Wingene* revela-se assim em múltiplas camadas: no esforço evolutivo individ
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./wingene-o-futuro-da-heranca-ancestral-abreviado.html">&lt;&lt; Wingene: O Futuro da Herança Ancestral (abreviado)</a>
-  <a href="./tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html">Tecendo a vida: criando no íntimo uma obra pessoal &gt;&gt;</a>
+  <a href="./wingene-o-futuro-da-heranca-ancestral-abreviado.html">&lt;&lt; Wingene: O futuro da herança ancestral (abreviado)</a>
+  <a href="./o-metodo-vida-a-wingene-em-pratica.html">O método VIDA: a Wingene em prática &gt;&gt;</a>
 </div>

@@ -721,10 +721,8 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                             if (isItalic && !inItalicRun & char!==' ') { rawText += '*'; inItalicRun = true; } 
                             else if (!isItalic && inItalicRun) {   rawText += '*'; inItalicRun = false; }
                             
-                            if (!inBoldItalicRun) {
-                              inBoldItalicRun = inItalicRun && inBoldRun;
-                            }
-
+                            inBoldItalicRun = inItalicRun && inBoldRun;
+                            
                             rawText += char;
                         }
                         if (inBoldRun) { rawText += '**'; inBoldRun = false; }
