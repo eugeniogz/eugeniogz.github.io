@@ -3,7 +3,6 @@ layout: default
 title: Índice
 --- 
 
-### 📄 [Documento sem título](./documento-sem-titulo.html) <span class="word-count">[1 min]</span>
 ### 📄 [Wingene](./wingene-o-manifesto-da-heranca-ancestral.html) <span class="word-count">[4 min]</span>
 O manifesto da herança ancestral
 
