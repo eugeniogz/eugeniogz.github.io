@@ -21,11 +21,11 @@ tags:
 
 ## Wingene: O manifesto da herança ancestral
 
-Criei a palavra *Wingene* da fusão entre *win* e *gene* — vitória e herança. Mas seu sentido ultrapassa o triunfo genético: expande-se na eterna busca pelo saber — nossa herança ancestral. O conhecimento se completa quando se torna prática, rumo ao aperfeiçoamento pessoal. Uma trilha que nunca termina: cada instante brinda cores de um novo ideal, florescendo em plena eudaimonia — *eu* (bem) e *daimon* (espírito). Entendo “espírito” não como substância imaterial, mas como emergência de processos neurais. A experiência de transcendência brota da matéria viva. Nesse sentido, a eudaimonia é felicidade serena — um estado natural que nasce no recinto mental.
+Criei a palavra *Wingene* da fusão entre *win* e *gene* — vitória e herança. Mas seu sentido ultrapassa o triunfo genético: expande-se na eterna busca pelo saber — nossa herança ancestral. O conhecimento se completa quando se torna prática, rumo ao aperfeiçoamento pessoal. Uma trilha que nunca termina: cada instante nos aproxima do utópico ideal, florescendo em plena eudaimonia — *eu* (bem) e *daimon* (espírito). Entendo “espírito” não como substância imaterial, mas como emergência de processos neurais. A experiência de transcendência brota da matéria viva. Nesse sentido, a eudaimonia é felicidade serena — um estado natural que nasce no recinto mental.
 
 A herança genética cria as primeiras luzes da mente. Segundo António Damásio: “Os nossos cérebros e as nossas mentes não são *tabulae rasae* quando nascemos. Contudo, também não são, na sua totalidade, geneticamente determinados.” Esse legado biológico deve expandir-se gradualmente com o conhecimento — chave para o aperfeiçoamento moral.
 
-Mas como, afinal, tecer essa Wingene no cotidiano? Como transformar herança genética e desejo de transcendência em passos concretos? A resposta está na própria palavra que nos move: [VIDA](./o-metodo-vida-a-wingene-em-pratica.html), dela extraímos um acróstico que ilumina o caminho: Valores, Imperfeições, Decisões e Atenção.
+Mas como, afinal, tecer essa Wingene no cotidiano? Como transformar herança genética e desejo de transcendência em passos concretos? A resposta está num acróstico que ilumina o caminho: **V**alores, **I**mperfeições, **D**ecisões e **A**tenção — [VIDA](./o-metodo-vida-a-wingene-em-pratica.html).
 
 **Valores** são os princípios inegociáveis que orientam cada escolha e ação. A bússola moral que nos mantém fiéis a nós mesmos, especialmente nos momentos de desafio.
 
@@ -67,11 +67,5 @@ A *Wingene* revela-se assim em múltiplas camadas: no esforço evolutivo individ
 
 2025
 
-
-
 ---
 
-<div style="display: flex; justify-content: space-between;">
-  <a href="./documento-sem-titulo.html">&lt;&lt; Documento sem título</a>
-  <span></span>
-</div>
