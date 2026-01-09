@@ -2,7 +2,7 @@
 layout: default
 title: "Wingene: O futuro da herança ancestral"
 reading_time: 12
-semantic_order: 20
+semantic_order: 17
 tags:
   - Serena euforia
   - Conhecimento
@@ -47,9 +47,9 @@ Mas como, afinal, tecer essa Wingene no cotidiano? Como transformar herança gen
 
 **Decisões** nos dão o poder de agarrar as rédeas do próprio destino. Guiados pelos valores, combatemos as imperfeições. Mais do que desejar mudar, é o ato corajoso de escolher enfrentá-las, buscar a cada dia o aperfeiçoamento. São o ponto de partida para atitudes melhores, como a colaboração no lar ou a disponibilidade em ajudar colegas de trabalho. As novas posturas não se cristalizam nos primeiros esforços, visando a meta desejada, deve-se estar ciente de que retroceder e recomeçar faz parte do processo. As decisões orientam o destino, as escolhas e as mudanças.
 
-**Atenção**, singular e única, acompanha todo caminho consciente. É a arte de viver no agora, percebendo os detalhes, escutando verdadeiramente. Viver o presente em sua riqueza e complexidade, quebrando a rotina do piloto automático. Saber que a mente pode perdê-la não deve ser motivo para deixar de buscá-la, em cada instante da imperfeita jornada. A mente atenta permite não somente perceber as falhas, mas também sentir experiências únicas.
+**Atenção**, singular e única, acompanha todo caminho consciente. É a arte de viver no agora, percebendo os detalhes, escutando verdadeiramente. Viver o presente em sua riqueza e complexidade, quebrando a rotina do piloto automático. Saber que a mente pode perdê-la não deve ser motivo para deixar de buscá-la, em cada instante da imperfeita jornada. A mente atenta permite não somente perceber as falhas, mas também sentir experiências únicas. Apreciar uma paisagem pode transcender para experiências de pura alegria: a aurora da mente.
 
-Revisar os valores, cientes da imperfeição humana, é importante para orientar as decisões. Pois assim como o ser é imperfeito, também é a cultura. Portanto, erros podem ser fruto de incorretas premissas. Os pilares do método científico e do aprendizado constante são a direção para a mente atenta. Esse processo contínuo pode transcender para experiências de pura alegria: a aurora da mente.
+Revisar os valores, cientes da imperfeição humana, é importante para orientar as decisões. Pois assim como o ser é imperfeito, também é a cultura. Portanto, erros podem ser fruto de incorretas premissas. Os pilares do método científico e do aprendizado constante são a direção para a mente atenta.
 
 Esse método ético-existencial para praticar a Wingene está detalhado adiante.
 
@@ -59,7 +59,7 @@ Quando esse caminho é trilhado com dedicação, quando valores se alinham, impe
 
 A mente se amplia em instantes de intensa alegria em experiências radiantes além do comum. Uma grande euforia, contida e serena; um caloroso aconchego como fogo que não queima, persistindo no cinza urbano ou na tranquila pintura, que da seiva emana — os sentidos e os pensamentos não perturbam, a consciência flutua. Nesses momentos, surge um estado de graça — quando sinapses se elevam, pulsando energia.
 
-Sentir essa dádiva é próprio do humano — mas poucos a buscam, presos nas nuvens das obrigações mundanas, o eterno castigo de Sísifo: rolando a mesma pedra diariamente. Muitas vezes, o peso da rocha cresce com a injustiça social moderna. Isso supera a simples monotonia, tornando-se o flagelo da maioria. Apesar disso, o brilho da vida pode favorecer a todos, permitindo o despertar da *eudaimonia*, meta dos filósofos do mundo arcaico. Hoje o progresso é visível, mas prioriza-se o fútil. Isso encobre uma aspiração universal: **florescer a felicidade**.
+Sentir essa dádiva é próprio do humano — mas poucos a buscam, presos nas nuvens das obrigações mundanas, o eterno castigo de Sísifo: rolando a mesma pedra diariamente. Muitas vezes, o peso da rocha cresce com a injustiça social moderna. Isso supera a simples monotonia, tornando-se o negro flagelo da maioria. Apesar disso, o brilho da vida pode favorecer a todos, permitindo o despertar da *eudaimonia*, meta dos filósofos do mundo arcaico. Hoje o progresso é visível, mas prioriza-se o fútil. Isso encobre uma aspiração universal: **florescer a felicidade**.
 
 A floresta mental pode bailar nas copas mais altas, favorecendo a **serena euforia**, onde o corpo é somente o palco dos passos da mente. Basta que estes flutuem no tablado, sem notar a plateia. No conforto do lar, no movimento do trabalho, até em tediosas rotinas, a peça pode seguir. Pois a mente aguarda a deixa da delicada dança — **valsa de neurônios em sintonia**.
 

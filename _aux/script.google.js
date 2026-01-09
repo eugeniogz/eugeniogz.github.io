@@ -473,7 +473,7 @@ function salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDest
         // Lê o conteúdo do arquivo MD existente (exclui o rodapé antigo, se houver)
         existingContent = docInfo.arquivoMdDestino.getBlob().getDataAsString();
         let bodyContent = existingContent.replace(/\n\n---\n\n[\s\S]*$/, '').trim();
-        finalContent = bodyContent + '\n\n' + navegacaoRodape;
+        finalContent = bodyContent + navegacaoRodape;
 
     } else {
         // Usa o conteúdo fresco do Doc convertido
