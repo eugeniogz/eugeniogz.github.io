@@ -493,7 +493,8 @@ function salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDest
         }
     } else {
         // ARQUIVO NOVO: Cria
-        pastaDestino.createFile(docInfo.markdownName, finalContent, MIME_MARKDOWN);
+        const novoArquivo = pastaDestino.createFile(docInfo.markdownName, finalContent, MIME_MARKDOWN);
+        docInfo.arquivoMdDestino = novoArquivo;
         fileChanged = true;
     }
 

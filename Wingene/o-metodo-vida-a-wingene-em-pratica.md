@@ -23,7 +23,7 @@ tags:
 
 ## O método VIDA: a Wingene em prática
 
-Herdamos um corpo, uma mente e uma cultura — mas não herdamos, prontos, os critérios para viver bem. Esses precisam ser construídos. Esse é o objetivo da Wingene o aperfeiçoamento da herança ancestral. O método VIDA nasce dessa constatação: **a vida exige direção, mas também lucidez diante da imperfeição e presença no instante**.
+Herdamos um corpo, uma mente e uma cultura — mas não herdamos, prontos, os critérios para viver bem. Esses precisam ser construídos. Esse é o objetivo da Wingene: o aperfeiçoamento da herança ancestral. O método VIDA nasce dessa constatação: **a vida exige direção, mas também lucidez diante da imperfeição e presença no instante**.
 
 A herança biológica fornece as primeiras luzes da mente; a cultura amplia o horizonte; a experiência testa o caráter. Ainda assim, muitos atravessam a existência em modo automático, reagindo mais do que escolhendo, repetindo hábitos sem interrogar seus fundamentos. O resultado é um viver fragmentado: valores difusos, decisões adiadas e uma atenção capturada pelo ruído do imediato.
 
