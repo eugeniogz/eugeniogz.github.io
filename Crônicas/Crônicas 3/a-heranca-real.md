@@ -2,7 +2,10 @@
 layout: default
 title: "A herança real"
 reading_time: 3
-semantic_order: 0
+semantic_order: 10
+tags:
+  - Wingene
+  - Logosofia
 --- 
 
 
@@ -11,7 +14,7 @@ semantic_order: 0
 
 ## A herança real
 
-Nosso veículo corta o dédalo de ruas e avenidas da cidade. Como de costume, conduzimos o Sr. Carlos e Dona Eunice em direção à fundação de [Logosofia](https://pt.wikipedia.org/wiki/Logosofia). Eu e minha esposa Clara temos um relacionamento fraternal com esse casal. Morar em uma cidade nova, longe de parentes e amigos, é um desafio que se suaviza convivendo com esse exemplar casal de idosos. No caminho, comento: — Tenho que abrir uma empresa. — Já sabe que nome vai dar? — Questiona o Sr. Carlos, do banco de trás. — Wingene — O que significa? — É a união de Win e Gene, vitória e herança. — E o que é a base dessa vitória? — O conhecimento — respondo. Seguindo o caminho, o semáforo fecha. Parados, continuamos o diálogo, enquanto veículos cortam a avenida à nossa frente, iluminando destinos de apressados.
+Nosso veículo corta o dédalo de ruas e avenidas da cidade. Como de costume, conduzimos o Sr. Carlos e Dona Eunice em direção à fundação de [Logosofia](https://pt.wikipedia.org/wiki/Logosofia). Eu e minha esposa Clara temos um relacionamento fraternal com esse casal. Morar em uma cidade nova, longe de parentes e amigos, é um desafio que se suaviza convivendo com esse exemplar casal de idosos. No caminho, comento: — Tenho que abrir uma empresa. — Já sabe que nome vai dar? — Questiona o Sr. Carlos, do banco de trás. — [Wingene](/wingene-o-futuro-ancestral-manifesto.html) — O que significa? — É a união de Win e Gene, vitória e herança. — E o que é a base dessa vitória? — O conhecimento — respondo. Seguindo o caminho, o semáforo fecha. Parados, continuamos o diálogo, enquanto veículos cortam a avenida à nossa frente, iluminando destinos de apressados.
 
 O Sr. Carlos questiona: — Como surge o conhecimento? — É uma dádiva ancestral. — Certamente, Marcos, “A única herança real”, como nos ensina [Pecotche](https://pt.wikipedia.org/wiki/Carlos_Bernardo_Gonz%C3%A1lez_Pecotche). Os painéis de LED do caminho brilham multicoloridos, um legado de porções de saber desbravadas por gigantes. Clara observa um anúncio em um deles e comenta: — Olhem esses painéis, quanta tecnologia. — Verdade, Clara. — Concordo e acrescento: — Quando cursei engenharia, demorei para entender a ciência da microeletrônica. — Na nossa época, não existia isso, as primeiras televisões eram caras e sem cor — observa Dona Eunice, olhando com ternura para o velho esposo. Saindo da avenida movimentada, seguimos para outro bairro. Os painéis eletrônicos ficam menos frequentes e o trânsito mais calmo. Quando passamos por uma loja, Dona Eunice comenta: — Olhem aquele reclame! Acima da vitrine, a foto enorme de um bebê engatinhando com a frase: “Alô, bebê!”. A simplicidade do anúncio contrasta com a sofisticação dos que ficaram para trás. Aquela singela fotografia e a simplicidade do slogan cativam os passageiros.
 
@@ -22,6 +25,6 @@ O trânsito frenético e as lojas cedem lugar gradativamente a casas e sobrados.
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <span></span>
-  <a href="./felicidade-singelo-trinado.html">Felicidade — singelo trinado &gt;&gt;</a>
+  <a href="./futuro-ancestral.html">&lt;&lt; Futuro ancestral</a>
+  <a href="./momentos-que-tecem-a-vida.html">Momentos que tecem a vida &gt;&gt;</a>
 </div>

@@ -74,5 +74,5 @@ Essa dança eterna tem um nome: Wingene — a herança ancestral que cada geraç
 
 <div style="display: flex; justify-content: space-between;">
   <span></span>
-  <a href="./wingene-o-futuro-da-heranca-ancestral.html">Wingene: O futuro da herança ancestral &gt;&gt;</a>
+  <a href="./wingene-o-futuro-ancestral.html">Wingene: O futuro ancestral &gt;&gt;</a>
 </div>

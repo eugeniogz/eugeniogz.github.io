@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Wingene: O futuro da herança ancestral"
+title: "Wingene: O futuro ancestral"
 reading_time: 12
 semantic_order: 17
 tags:
@@ -23,9 +23,9 @@ tags:
 
 [Wingene](./)
 
-## Wingene: O futuro da herança ancestral
+## Wingene: O futuro ancestral
 
-### **Wingene: A Herança Ancestral**
+### **Wingene: A vitória ancestral**
 
 Criei a palavra ***Wingene*** da fusão entre **win** e **gene** — vitória e herança. Mas seu sentido ultrapassa o triunfo genético: expande-se na eterna busca pelo significado da vida. Um anseio humano, gravado em fios dourados desde o seio materno.
 
@@ -33,7 +33,7 @@ O homem carrega desde a infância questões que incitam; o eterno aprender é he
 
 A *eudaimonia*, do grego *eu* (bem) e *daimon* (espírito), representa o florescimento da felicidade — um estado perene e sereno, que nasce das forças internas. Alinha-se ao estoicismo, no qual a alegria vem do interior, sendo firme e sólida. O primeiro passo para esse florescimento é o conhecimento, que conduz ao caminho da evolução pessoal. Apesar de meu ávido desejo de aprender, foi com a [Logosofia](https://pt.wikipedia.org/wiki/Logosofia) que esse ímpeto se solidificou, pois encarei com maior seriedade o desafio do aprimoramento moral — objetivo principal da obra de Carlos Pecotche.
 
-Meu conceito de espírito não é metafísico: ele habita o corpo vivente, manifesta-se nos processos biológicos e guarda valores e emoções puras na mente. A poderosa máquina mental pode parecer, em alguns casos, extrapolar o limite corporal, viajando nas ondas das inúmeras conexões neuronais. Mas sua substância é material. A mente é uma densa floresta, com árvores enraizadas no corpo inteiro que sentem, comandam e pensam. Das raízes às folhas, a floresta é um todo — complexo sistema consciente que dança incessantemente, parecendo por isso ter presença etérea.
+Meu conceito de espírito não é metafísico: ele habita o corpo vivente, manifesta-se nos processos biológicos e guarda valores e emoções puras na mente. A poderosa máquina mental pode parecer, em alguns casos, extrapolar o limite corporal, viajando nas ondas das inúmeras conexões neuronais. Mas sua substância é material. Ainda assim, a mente é uma densa floresta, com árvores enraizadas no corpo inteiro que sentem, comandam e pensam. Das raízes às folhas, a floresta é um todo — complexo sistema consciente que dança incessantemente, parecendo por isso ter presença etérea.
 
 A herança genética cria as primeiras luzes da mente. Segundo [António Damásio](https://pt.wikipedia.org/wiki/O_Erro_de_Descartes): “*Os nossos cérebros e as nossas mentes não são tabulae rasae quando nascemos. Contudo, também não são, na sua totalidade, geneticamente determinados. A sombra genética tem um grande alcance, mas não é completa.*” Esse legado biológico deve expandir-se gradualmente com a cultura — chave do aperfeiçoamento moral. Assim, o conhecimento saciará o ser, oferecendo-lhe a oportunidade ímpar do triunfo pessoal.
 

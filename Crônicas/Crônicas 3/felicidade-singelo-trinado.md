@@ -2,7 +2,9 @@
 layout: default
 title: "Felicidade — singelo trinado"
 reading_time: 1
-semantic_order: 0
+semantic_order: 1
+tags:
+  - Felicidade
 --- 
 
 
@@ -19,11 +21,9 @@ As maritacas aproveitam as mangas de vez, quando o Carlos pousa bem no alto, esp
 
 Os homens continuam sua confusão, caminhando ou dentro das carruagens. O sol já está alto. Os cachorros latem a todo momento, no entanto, meu canto suave ora e outra ainda se impõe, marcando instantes. Tranquilo como toda ave, não lembro do ontem, nem temo o amanhã. Levando a vida que só depende do agora — felicidade brota no chamado e floresce no trinado.
 
-
-
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./a-heranca-real.html">&lt;&lt; A herança real</a>
+  <span></span>
   <a href="./futuro-ancestral.html">Futuro ancestral &gt;&gt;</a>
 </div>

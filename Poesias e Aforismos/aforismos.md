@@ -36,6 +36,8 @@ Serena euforia: horizonte que amplia <!--09/10/25-->
 
 Viver tece tons indescritíveis <!--03/07/13-->
 
+Existir é perceber os detalhes que quebram a monotonia. <!--09/01/25-->
+
 ***
 
 ### 🌺 Felicidade e Amor

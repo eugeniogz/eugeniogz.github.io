@@ -458,15 +458,19 @@ function processarDocumentoFormatado(docId, corpoDestino) {
                 }
 
             // 4. Processar Links (Markdown) DEPOIS da formatação
-            const regexLink = /\[([^)]+)\]\(([^\]]+)\)/g;
+            const regexLink = /\[([^\]]+)\]\(([^)]+)\)/g;
             const matches = [];
             let match;
             while ((match = regexLink.exec(textoCompleto)) !== null) {
+                let url = match[2];
+                if (!url.startsWith('http')) {
+                    url = 'https://blog.wingene.com.br' + url;
+                }
                 matches.push({
                     index: match.index,
                     fullMatch: match[0],
                     text: match[1],
-                    url: match[2]
+                    url: url
                 });
             }
             

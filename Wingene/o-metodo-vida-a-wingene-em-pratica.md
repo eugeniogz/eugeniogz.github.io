@@ -348,6 +348,6 @@ Essa é a Wingene em sua forma prática: **a vitória da herança realizada no p
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./wingene-o-futuro-da-heranca-ancestral.html">&lt;&lt; Wingene: O futuro da herança ancestral</a>
+  <a href="./wingene-o-futuro-ancestral.html">&lt;&lt; Wingene: O futuro ancestral</a>
   <span></span>
 </div>

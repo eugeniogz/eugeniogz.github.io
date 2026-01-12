@@ -3,8 +3,8 @@ layout: default
 title: Índice
 --- 
 
-### 📄 [Wingene](./wingene-o-manifesto-da-heranca-ancestral.html) <span class="word-count">[4 min]</span>
-O manifesto da herança ancestral
+### 📄 [Wingene](./wingene-o-futuro-ancestral-manifesto.html) <span class="word-count">[4 min]</span>
+o futuro ancestral (manifesto)
 
 ### 📁 [Wingene](./Wingene/)
 Filosofia e Prática da Herança Consciente
