@@ -47,7 +47,7 @@ Um guia para calibrar a bússola dos valores do VIDA se estabelece a partir de q
 Um valor deve respeitar limites cognitivos, emocionais e biológicos. Não se pode exigir aquilo que viola a constituição do ser.
 
 1. **Eudaimonia**  
-O valor deve favorecer uma vida estável, serena, significativa e realizada.
+O valor deve favorecer uma vida estável, serena, significativa e realizada. Se não contribui para a eudaimonia, esse valor precisa ser revisto.
 
 1. **Facilitar a convivência**  
 Um valor não pode inviabilizar a convivência, e sim aumentar a cooperação e harmonia social.

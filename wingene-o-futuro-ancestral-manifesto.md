@@ -37,15 +37,11 @@ Mas como, afinal, tecer essa Wingene no cotidiano? Como transformar herança gen
 
 ***
 
-A mente atenta permite não somente perceber as falhas, mas também sentir experiências únicas. Apreciar uma paisagem pode transcender para experiências de pura alegria: a serena euforia, a aurora consciente. Esses instantes intensos são vida além do comum — de um caloroso aconchego, de um fogo que não queima.
-
-Sentir essa dádiva é próprio do humano — mas poucos a buscam, rolando a mesma pedra no eterno castigo de Sísifo. Mesmo sob o peso da rocha, a aurora da mente permanece acessível: basta atenção. A mente, densa floresta enraizada no corpo, pode bailar nas copas mais altas, favorecendo sua aurora. Pois ela está à espera da deixa da delicada dança — valsa de neurônios em sintonia.
-
-A serena euforia pode acontecer todo dia, em interlúdios de paz e intensa alegria. Não exige o vazio de respirações marcadas, mas a dança suave acima do pensar e sentir. Sem o clamor das sensações: somente o baile de um ser consciente. Mas essa experiência não pode permanecer estática — a mente que floresce transforma contemplação em criação.
+A mente atenta permite não somente perceber as falhas, mas também sentir experiências únicas. Um evento simples, como apreciar uma paisagem, pode transcender para uma experiência de pura alegria: a serena euforia. Essa experiência é o reflexo da eudaimonia: o florescimento da felicidade interior. Uma felicidade que surge na consciência que cultiva as virtudes e se completa no poder de criar.
 
 ***
 
-**Criar é descobrir.** A vida se amplia na ação de inventar — *Invenire*, do latim, que tem como significado literal descobrir. Explorar novos destinos, navegar no oceano natural. Criar é, portanto, a mais pura fonte da eudaimonia — a felicidade de encontrar a terra desconhecida. Caminhos para obras-primas são descobertas do mundo. As respostas já existem — aguardam quem as revele.
+**Criar é descobrir.** A vida se amplia na ação de inventar — *Invenire*, do latim, descobrir. Explorar novos destinos, navegar no oceano natural. Criar é, portanto, a mais pura fonte da eudaimonia — a felicidade de encontrar a terra desconhecida. Caminhos para obras-primas são descobertas do mundo. As respostas já existem — aguardam quem as revele.
 
 Artistas descortinam obras-primas, tecendo com fios do mundo físico aquilo que dança invisível em suas mentes — a herança cultural oferecida às gerações futuras. As descobertas ampliam o conhecimento. Nossa bagagem cultural é o trampolim que permite cada salto — às vezes modesto, outras ousado. A sabedoria natural está presente no universo, aguardando inventores.
 
