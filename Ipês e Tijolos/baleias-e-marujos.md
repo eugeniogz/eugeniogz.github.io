@@ -21,8 +21,6 @@ Os temidos donos dos oceanos podem continuar sua trajetória, no entanto, sem di
 
 O oceano jamais será completamente sereno — tal promessa seria ilusória. Mas a tempestade não precisa engolir apenas os que nasceram sem navio. A navegação mais justa exige coragem para repensar as estruturas: por que alguns mantêm frotas inteiras enquanto outros sequer possuem um remo?
 
-
-
 ---
 
 <div style="display: flex; justify-content: space-between;">

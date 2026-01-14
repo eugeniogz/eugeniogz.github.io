@@ -21,8 +21,6 @@ Os latidos da servidão são apenas um eco distante. Mas quantos podem escolher 
 
 No canto das aves ressoa uma pergunta: quando todos terão asas para voar?
 
-
-
 ---
 
 <div style="display: flex; justify-content: space-between;">

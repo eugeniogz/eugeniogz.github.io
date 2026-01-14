@@ -21,8 +21,6 @@ O pensamento crítico é o que nos distingue dos simples condutores de informaç
 
 Assim, donos do nosso tempo, podemos habitar tanto o digital quanto o real, criando conhecimento e contribuindo para o legado cultural.
 
-
-
 ---
 
 <div style="display: flex; justify-content: space-between;">

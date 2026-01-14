@@ -20,8 +20,6 @@ Mas o amor e a alma são inseparáveis, o primeiro divino, o segundo o que anima
 
 A força do divino alia-se ao vivo, marcando em cores eternas a história finita. De seres normais, de corpo mortal, para sempre o calor. O humano se eleva ao divino num panteão expandido. Iluminando o caminho dos deuses, da alma e do amor, almas eternas, um só coração.
 
-
-
 ---
 
 <div style="display: flex; justify-content: space-between;">

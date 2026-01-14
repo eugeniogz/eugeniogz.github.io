@@ -17,8 +17,6 @@ tags:
 
 Quando esses frios tijolos serão como as flores? Amarelas e homogêneas, nascendo em cada ramo. Pintando cada ipê com a mesma cor em toda a copa. Sem discriminar o galho que as sustenta. Um mundo humano natural, espalhando alegria em cada esquina. Gerando deliciosos frutos para cada um. Abrindo suas fronteiras e vivendo em paz. Onde os diversos galhos, homens de cada nação, não sejam podados. Florescendo a alegria e espalhando o perfume da equidade.
 
-
-
 ---
 
 <div style="display: flex; justify-content: space-between;">

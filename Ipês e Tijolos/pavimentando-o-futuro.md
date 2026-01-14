@@ -23,8 +23,6 @@ A rota pode retomar seu curso. Investimentos massivos em educação científica 
 
 Mas seria ingênuo acreditar que a pavimentação será concluída em nossa geração. A estrada é longa, e cada pedra colocada hoje poderá ser arrancada amanhã por aqueles que lucram com o caos. Mesmo assim, vale a pena pavimentar. Porque o futuro não se constrói sozinho — exige mãos que trabalhem, mentes que pensem, e coragem para enfrentar quem prefere o mundo em ruínas.
 
-
-
 ---
 
 <div style="display: flex; justify-content: space-between;">
