@@ -12,3 +12,5 @@
 ### 📄 [Espírito material](./espirito-material.html) <span class="word-count">[2 min]</span>
 ### 📄 [Panteão mental](./panteao-mental.html) <span class="word-count">[1 min]</span>
 ### 📄 [Pavimentando o futuro](./pavimentando-o-futuro.html) <span class="word-count">[1 min]</span>
+### 📄 [A Eudaimonia Social](./a-eudaimonia-social-quando-as-florestas-mentais-se-encontram.html) <span class="word-count">[1 min]</span>
+Quando as florestas mentais se encontram

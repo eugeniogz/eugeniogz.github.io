@@ -35,17 +35,11 @@ Mas como, afinal, tecer essa Wingene no cotidiano? Como transformar herança gen
 
 **Atenção**, singular e única, acompanha todo o caminho. A arte de viver no agora, percebendo os detalhes, escutando verdadeiramente.
 
-***
-
 A mente atenta permite não somente perceber as falhas, mas também sentir experiências únicas. Um evento simples, como apreciar uma paisagem, pode transcender para uma experiência de pura alegria: a serena euforia. Essa experiência é o reflexo da eudaimonia: o florescimento da felicidade interior. Uma felicidade que surge na consciência que cultiva as virtudes e se completa no poder de criar.
-
-***
 
 **Criar é descobrir.** A vida se amplia na ação de inventar — *Invenire*, do latim, descobrir. Explorar novos destinos, navegar no oceano natural. Criar é, portanto, a mais pura fonte da eudaimonia — a felicidade de encontrar a terra desconhecida. Caminhos para obras-primas são descobertas do mundo. As respostas já existem — aguardam quem as revele.
 
 Artistas descortinam obras-primas, tecendo com fios do mundo físico aquilo que dança invisível em suas mentes — a herança cultural oferecida às gerações futuras. As descobertas ampliam o conhecimento. Nossa bagagem cultural é o trampolim que permite cada salto — às vezes modesto, outras ousado. A sabedoria natural está presente no universo, aguardando inventores.
-
-***
 
 A busca pela *eudaimonia* nos impele a realizar a *Wingene*; no entanto, esse objetivo se esvazia na brevidade da vida. No espaço curto da existência, a mente não é capaz de fazer muito. Girar a roda do acróstico VIDA pode guiar a evolução, mas será sempre um passo breve na escala do tempo.
 
