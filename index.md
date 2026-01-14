@@ -3,7 +3,7 @@ layout: default
 title: Índice
 --- 
 
-### 📄 [Wingene](./wingene-o-futuro-ancestral-manifesto.html) <span class="word-count">[4 min]</span>
+### 📄 [Wingene](./wingene-o-futuro-ancestral-manifesto.html) <span class="word-count">[3 min]</span>
 o futuro ancestral (manifesto)
 
 ### 📁 [Wingene](./Wingene/)

@@ -103,7 +103,7 @@ Permanece essa esperança otimista: infinitas cosmogonias à espera de novos inv
 
 A vitória da herança que o filho recebe dos pais se constrói no esforço que ele faz para sua evolução — que se completa com o aprendizado cultural. Somente assim, ele pode sentir a experiência transcendente da aurora da mente. Uma vivência única, que não aguarda pelo futuro; no entanto, passar adiante o legado ancestral será motivo de *eudaimonia*.
 
-A *Wingene* revela-se assim em múltiplas camadas: no esforço evolutivo individual, na aurora da mente que nos eleva, no poder criativo de descobrir, no legado deixado às gerações futuras, e na esperança cósmica de novos universos. Cada atitude atenta é parte de uma melodia: decisões que superam as imperfeições, valores que moldam o caráter, a vida que compõe linhas de uma sinfonia. Que nossa breve passagem seja mais que simples travessia — compassos que ecoem na música universal.
+A *Wingene* se realiza em múltiplas camadas: no esforço evolutivo individual, na serena euforia que nos eleva, no poder criativo de descobrir, no legado deixado às gerações futuras e na esperança cósmica de novos universos. Cada atitude atenta rege o ritmo da vida: decisões que superam as imperfeições, valores que moldam o caráter, a existência que compõe linhas de uma sinfonia. Que nossa breve passagem seja mais que simples travessia — compassos que ecoem na música universal.
 
 ---
 

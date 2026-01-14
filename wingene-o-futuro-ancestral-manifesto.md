@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Wingene: o futuro ancestral (manifesto)"
-reading_time: 4
+reading_time: 3
 semantic_order: 1
 tags:
   - Serena euforia
@@ -46,10 +46,6 @@ A busca pela *eudaimonia* nos impele a realizar a *Wingene*; no entanto, esse ob
 Por que lutar para o aprimoramento se não seremos nós a desfrutar do futuro? A resposta está inicialmente no que teceram nossos ancestrais. Nós devemos ser a base das novas gerações, garantindo o seu futuro. Assim, pode-se pensar em uma *Wingene* coletiva, onde cada geração prepara o terreno para o florescimento de uma sociedade cada vez mais evoluída.
 
 Nosso tempo é contado nas poucas décadas da finita existência. Temos essa oportunidade para descobrir tudo que pudermos. Inventar a cultura e aprimorar a moral não precisa de motivo. Está escrito em nossa herança: a tocha do conhecimento deve seguir iluminando o futuro — mesmo que essa luz precise atravessar a escuridão total para brilhar outra vez. Como sugere o físico Carlo Rovelli, buracos negros podem gerar novos universos. Infinitas cosmogonias à espera de novos inventores que revelem sinfonias inéditas — a música da finita existência que segue vibrando na vida sem fim.
-
-***
-
-A *Wingene* revela-se assim em múltiplas camadas: no esforço evolutivo individual, na aurora da mente que nos eleva, no poder criativo de descobrir, no legado deixado às gerações futuras, e na esperança cósmica de novos universos. Cada atitude atenta rege o ritmo da vida: decisões que superam as imperfeições, valores que moldam o caráter, a vida que compõe linhas de uma sinfonia. Que nossa breve passagem seja mais que simples travessia — compassos que ecoem na música universal.
 
 [Wingene: filosofia e prática da herança consciente](/Wingene)
 
