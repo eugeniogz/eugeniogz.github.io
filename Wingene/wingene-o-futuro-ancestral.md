@@ -25,7 +25,7 @@ tags:
 
 ## Wingene: O futuro ancestral
 
-### **Wingene: A vitória ancestral**
+### **A vitória ancestral**
 
 Criei a palavra ***Wingene*** da fusão entre **win** e **gene** — vitória e herança. Mas seu sentido ultrapassa o triunfo genético: expande-se na eterna busca pelo significado da vida. Um anseio humano, gravado em fios dourados desde o seio materno.
 
