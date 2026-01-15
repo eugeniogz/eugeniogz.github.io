@@ -11,7 +11,7 @@ title: Índice
 <script>
   var allPosts = [
     {% for post in site.posts %}
-      {{ post.content | strip_html | strip_newlines | truncatewords: 60 | jsonify }},
+      {{ post.content | strip_html | strip_newlines | truncatewords: 240 | jsonify }},
     {% endfor %}
   ];
 
@@ -59,9 +59,9 @@ title: Índice
 
 <h3>Últimas postagens</h3>
 
+<!-- Opção de listar os posts paginados
 {% for post in paginator.posts %}
-<h3>📄 {{ post.title }}</h3>
-<p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+<p>{{ post.content | strip_html | truncatewords: 240 }}</p>
 {% endfor %}
 
 <div style="display: flex; justify-content: space-between; margin-top: 20px;">
@@ -75,3 +75,4 @@ title: Índice
     <a href="{{ paginator.next_page_path | relative_url }}">Antigos &gt;&gt;</a>
   {% endif %}
 </div>
+-->
