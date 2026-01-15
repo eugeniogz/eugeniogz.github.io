@@ -19,6 +19,7 @@ const REGEX_ORDENACAO = /Ordenação:\s*(\d+([.,]\d+)?)/i;
 // VARIÁVEL GLOBAL PARA RASTREAR A PASTA RAIZ DE DESTINO
 let ROOT_DESTINATION_FOLDER_ID = null;
 let ROOT_DESTINATION_FOLDER = null;
+let AFORISMOS_DOC_ID = null;
 let totalFiles = 0;
 
 // --- FUNÇÕES PRINCIPAIS E DE GESTÃO DE PASTAS ---
@@ -242,7 +243,21 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
         if (nomeDocOriginal === 'Config' || nomeDocOriginal === 'index') continue;
 
         const nomeSlug = slugifyFileName(nomeDocOriginal);
-        const nomeMarkdown = `${nomeSlug}.md`;
+        let nomeMarkdown = `${nomeSlug}.md`;
+
+        if (nomeDocOriginal === 'Aforismos') {
+            AFORISMOS_DOC_ID = arquivoDoc.getId();
+        }
+
+        // Lógica específica para a pasta _posts: Adiciona data ao nome do arquivo
+        if (pastaDestino.getName() === '_posts') {
+             const dateObj = arquivoDoc.getLastUpdated();
+             const dateStr = Utilities.formatDate(dateObj, Session.getScriptTimeZone(), "yyyy-MM-dd");
+             // Evita duplicar a data se o nome do arquivo já começar com o padrão de data
+             if (!/^\d{4}-\d{2}-\d{2}-/.test(nomeSlug)) {
+                 nomeMarkdown = `${dateStr}-${nomeSlug}.md`;
+             }
+        }
         
         totalFiles++;
 
@@ -365,6 +380,8 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
     // 3. SEGUNDA PASSAGEM (Inicial): SALVA E ADICIONA LINKS DE NAVEGAÇÃO
     function executarPassagemDeConversao(force = false) {
       let filesUpdated = 0;
+      const isPostsFolder = pastaDestino.getName() === '_posts';
+
       for (let i = 0; i < arquivosParaProcessar.length; i++) {
           const docInfo = arquivosParaProcessar[i];
 
@@ -372,8 +389,8 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
           if (docInfo.deveConverter || force) {
               
               // Determina Anterior e Próximo com a lista JÁ ORDENADA
-              const anterior = i > 0 ? arquivosParaProcessar[i - 1] : null;
-              const proximo = i < arquivosParaProcessar.length - 1 ? arquivosParaProcessar[i + 1] : null;
+              const anterior = (!isPostsFolder && i > 0) ? arquivosParaProcessar[i - 1] : null;
+              const proximo = (!isPostsFolder && i < arquivosParaProcessar.length - 1) ? arquivosParaProcessar[i + 1] : null;
 
               // **OTIMIZAÇÃO 3:** Só reescreve se o conteúdo (corpo OU navegação) for diferente
               const wasChanged = salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDestino);
@@ -396,9 +413,13 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
     while (subpastasFonte.hasNext()) {
         const subpastaFonte = subpastasFonte.next();
         let nomeSubpastaCompleto = subpastaFonte.getName();
-        if (nomeSubpastaCompleto.startsWith("_")) continue;
+        if (nomeSubpastaCompleto.startsWith("_") && nomeSubpastaCompleto !== "_posts") continue;
 
-        const nomeComentarioSubpasta = splitComentario(nomeSubpastaCompleto.replace(/_/g, ' '));
+        let nomeParaProcessar = nomeSubpastaCompleto;
+        if (nomeSubpastaCompleto !== '_posts') {
+            nomeParaProcessar = nomeSubpastaCompleto.replace(/_/g, ' ');
+        }
+        const nomeComentarioSubpasta = splitComentario(nomeParaProcessar);
         const nomeSubpasta = nomeComentarioSubpasta[0];
         const comentario = nomeComentarioSubpasta.length > 1 ? nomeComentarioSubpasta[1] : "";
 
@@ -510,6 +531,7 @@ function salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDest
  * Gera o rodapé de navegação (Anterior/Próximo)
  */
 function gerarNavegacaoRodape(anterior, proximo) {
+    if (!anterior && !proximo) return "";
     let rodape = '\n\n---\n\n'; // Separador visual
     let navLinksHtml = [];
 
@@ -604,8 +626,6 @@ function gerarPostsAforismos(docFile) {
     const doc = DocumentApp.openById(docFile.getId());
     const body = doc.getBody();
     const paragraphs = body.getParagraphs();
-    
-    const dateObj = docFile.getLastUpdated();
 
     for (let i = 0; i < paragraphs.length; i++) {
         const p = paragraphs[i];
@@ -640,9 +660,59 @@ function gerarPostsAforismos(docFile) {
         
         const content = `---\nlayout: post\ntitle: "${title}"\ndate: ${dateTimeStr}\n---\n\n${text}`;
         
-        // Cria ou atualiza o arquivo (sobrescreve se existir)
-        postsFolder.createFile(fileName, content, MIME_MARKDOWN);
+        // VERIFICAÇÃO DE EXISTÊNCIA PARA EVITAR DUPLICATAS
+        const existingFiles = postsFolder.getFilesByName(fileName);
+        if (existingFiles.hasNext()) {
+            const file = existingFiles.next();
+            if (file.getBlob().getDataAsString() !== content) {
+                file.setContent(content);
+            }
+            // Remove duplicatas extras se houver (limpeza de execuções anteriores)
+            while (existingFiles.hasNext()) {
+                existingFiles.next().setTrashed(true);
+            }
+        } else {
+            postsFolder.createFile(fileName, content, MIME_MARKDOWN);
+        }
     }
+}
+
+/**
+ * Helper para obter os nomes de arquivos que seriam gerados pelo Aforismos.
+ * Usado para evitar que a limpeza apague esses arquivos.
+ */
+function obterNomesArquivosAforismos(docFile) {
+    const nomes = [];
+    const doc = DocumentApp.openById(docFile.getId());
+    const body = doc.getBody();
+    const paragraphs = body.getParagraphs();
+
+    for (let i = 0; i < paragraphs.length; i++) {
+        const p = paragraphs[i];
+        let text = p.getText().trim();
+        
+        if (!text || p.getHeading() !== DocumentApp.ParagraphHeading.NORMAL) continue;
+
+        const matchDate = text.match(/<!--\s*(\d{2})\/(\d{2})\/(\d{2,4})\s*-->$/);
+        if (!matchDate) continue;
+
+        const day = parseInt(matchDate[1], 10);
+        const month = parseInt(matchDate[2], 10) - 1;
+        let year = parseInt(matchDate[3], 10);
+        if (year < 100) year += 2000;
+
+        const customDate = new Date(year, month, day, 12, 0, 0);
+        const dateStr = Utilities.formatDate(customDate, Session.getScriptTimeZone(), "yyyy-MM-dd");
+        
+        text = text.substring(0, matchDate.index).trim();
+        if (!text) continue;
+
+        let slug = slugifyFileName(text);
+        if (slug.length > 50) slug = slug.substring(0, 50).replace(/-$/, '');
+        
+        nomes.push(`${dateStr}-${slug}.md`);
+    }
+    return nomes;
 }
 
 /**
@@ -657,6 +727,7 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
     let semanticOrderScore = 0.0;
     let tempoLeitura = 1;
     let nomeSemData = originalFileName; // Inicializa com o nome original
+    const isPostsFolder = pastaDestino.getName() === '_posts';
 
     try {
         const doc = DocumentApp.openById(docFile.getId());
@@ -710,7 +781,7 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         
         // --- 2. MONTAGEM DO YAML FRONT MATTER ---
         markdown += `---\n`;
-        markdown += `layout: default\n`;
+        markdown += `layout: ${isPostsFolder ? 'post' : 'default'}\n`;
         markdown += `title: "${nomeSemData}"\n`;
         // ADIÇÃO DOS METADADOS PARA OTIMIZAÇÃO FUTURA
         markdown += `reading_time: ${tempoLeitura}\n`;
@@ -722,13 +793,19 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                 markdown += `  - ${tag}\n`;
             });
         }
+
+        if (isPostsFolder) {
+             const dateObj = docFile.getLastUpdated();
+             const dateTimeStr = Utilities.formatDate(dateObj, Session.getScriptTimeZone(), "yyyy-MM-dd HH:mm:ss");
+             markdown += `date: ${dateTimeStr}\n`;
+        }
         markdown += `--- \n\n`;
 
         // --- 3. CONVERSÃO DO CORPO (LIMPO) PARA MARKDOWN ---
 
         if (fileSlug !== 'index') {
             const pastaNome = pastaDestino.getName().replace(/_/g, ' ');
-            if (!isPost && pastaNome !== ROOT_DESTINATION_FOLDER) markdown += `\n\n[${pastaNome}](./)\n\n`;
+            if (!isPost && !isPostsFolder && pastaNome !== ROOT_DESTINATION_FOLDER) markdown += `\n\n${pastaNome}\n\n`;
             markdown += `## ${nomeSemData}\n\n`;
         }
 
@@ -922,6 +999,7 @@ function criarIndexMarkdown(pastaDestino, arquivos, subpastas, comentario) {
     }
     const isRootFolder = pastaDestino.getId() === ROOT_DESTINATION_FOLDER_ID;
     if (isRootFolder) return false;
+    if (pastaDestino.getName() === '_posts') return false;
 
     let indexContent = '## ' + pastaDestino.getName().replace(/_/g, ' ')  + '\n\n';
     if (comentario!=="") indexContent += "#### " + comentario + "\n\n";
@@ -981,10 +1059,33 @@ function limparArquivosExcluidos(pastaDestino, pastaFonte) {
     // 1. Otimização: Coleta todos os slugs válidos da pasta fonte.
     const slugsFonteValidos = new Set();
     const arquivosDocFonte = pastaFonte.getFilesByType(MIME_GOOGLE_DOCS);
+    
+    const isPostsFolder = pastaDestino.getName() === '_posts';
+
     while (arquivosDocFonte.hasNext()) {
         const doc = arquivosDocFonte.next();
-        slugsFonteValidos.add(slugifyFileName(doc.getName())+".md");
+        let slug = slugifyFileName(doc.getName());
+        
+        if (isPostsFolder) {
+             const dateObj = doc.getLastUpdated();
+             const dateStr = Utilities.formatDate(dateObj, Session.getScriptTimeZone(), "yyyy-MM-dd");
+             if (!/^\d{4}-\d{2}-\d{2}-/.test(slug)) {
+                 slug = `${dateStr}-${slug}`;
+             }
+        }
+        slugsFonteValidos.add(slug + ".md");
     }
+
+    if (isPostsFolder && AFORISMOS_DOC_ID) {
+         try {
+             const aforismosDoc = DriveApp.getFileById(AFORISMOS_DOC_ID);
+             const nomesAforismos = obterNomesArquivosAforismos(aforismosDoc);
+             nomesAforismos.forEach(nome => slugsFonteValidos.add(nome));
+         } catch(e) {
+             Logger.log("Erro ao ler Aforismos na limpeza: " + e);
+         }
+    }
+
     // 2. Limpeza: Itera apenas nos arquivos .md do destino.
     const arquivosDestino = pastaDestino.getFiles();
     while (arquivosDestino.hasNext()) {
@@ -1005,7 +1106,13 @@ function limparArquivosExcluidos(pastaDestino, pastaFonte) {
     const subpastasFonte = pastaFonte.getFolders();
     while (subpastasFonte.hasNext()) {
         const subpastaFonte = subpastasFonte.next();
-        const nomeSubpasta = splitComentario(subpastaFonte.getName().replace(/_/g, ' '))[0];
+        let nomeSubpastaCompleto = subpastaFonte.getName();
+        let nomeParaProcessar = nomeSubpastaCompleto;
+        if (nomeSubpastaCompleto !== '_posts') {
+            nomeParaProcessar = nomeSubpastaCompleto.replace(/_/g, ' ');
+        }
+        
+        const nomeSubpasta = splitComentario(nomeParaProcessar)[0];
         const subpastasDestinoIterator = pastaDestino.getFoldersByName(nomeSubpasta);
 
         if (subpastasDestinoIterator.hasNext()) {
