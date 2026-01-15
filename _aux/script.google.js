@@ -305,6 +305,10 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
                 tempoLeitura,
                 nomeSemData
             } = getMarkdownAndScoreFromDoc(arquivoDoc, nomeDocOriginal, nomeSlug, pastaDestino));
+
+            if (nomeDocOriginal === 'Aforismos') {
+                gerarPostsAforismos(arquivoDoc);
+            }
         } else {
             // OTIMIZAÇÃO: Extrai Metadados do MD existente, evitando abrir o Google Doc
             if (arquivoMdDestino) {
@@ -584,6 +588,62 @@ function getMetadataFromDocLite(docFile, originalFileName) {
     }
 }
 
+/**
+ * Gera posts individuais na pasta _posts para cada parágrafo do documento Aforismos.
+ */
+function gerarPostsAforismos(docFile) {
+    const rootFolder = DriveApp.getFolderById(ROOT_DESTINATION_FOLDER_ID);
+    let postsFolder;
+    const postsIter = rootFolder.getFoldersByName('_posts');
+    if (postsIter.hasNext()) {
+        postsFolder = postsIter.next();
+    } else {
+        postsFolder = rootFolder.createFolder('_posts');
+    }
+
+    const doc = DocumentApp.openById(docFile.getId());
+    const body = doc.getBody();
+    const paragraphs = body.getParagraphs();
+    
+    const dateObj = docFile.getLastUpdated();
+
+    for (let i = 0; i < paragraphs.length; i++) {
+        const p = paragraphs[i];
+        let text = p.getText().trim();
+        
+        // Ignora parágrafos vazios ou títulos (assume que aforismos são texto normal)
+        if (!text || p.getHeading() !== DocumentApp.ParagraphHeading.NORMAL) continue;
+
+        // Verifica se existe data customizada no formato <!--dd/mm/yy--> no final
+        const matchDate = text.match(/<!--\s*(\d{2})\/(\d{2})\/(\d{2,4})\s*-->$/);
+        
+        if (!matchDate) continue;
+
+        const day = parseInt(matchDate[1], 10);
+        const month = parseInt(matchDate[2], 10) - 1;
+        let year = parseInt(matchDate[3], 10);
+        if (year < 100) year += 2000;
+
+        const customDate = new Date(year, month, day, 12, 0, 0);
+        const dateStr = Utilities.formatDate(customDate, Session.getScriptTimeZone(), "yyyy-MM-dd");
+        const dateTimeStr = Utilities.formatDate(customDate, Session.getScriptTimeZone(), "yyyy-MM-dd HH:mm:ss");
+        
+        // Remove a data do texto
+        text = text.substring(0, matchDate.index).trim();
+        if (!text) continue;
+
+        let slug = slugifyFileName(text);
+        if (slug.length > 50) slug = slug.substring(0, 50).replace(/-$/, '');
+        
+        const fileName = `${dateStr}-${slug}.md`;
+        const title = text.length > 30 ? text.substring(0, 30) + "..." : text;
+        
+        const content = `---\nlayout: post\ntitle: "${title}"\ndate: ${dateTimeStr}\n---\n\n${text}`;
+        
+        // Cria ou atualiza o arquivo (sobrescreve se existir)
+        postsFolder.createFile(fileName, content, MIME_MARKDOWN);
+    }
+}
 
 /**
  * Converte o conteúdo de um Google Doc para uma string Markdown simples,
@@ -861,14 +921,10 @@ function criarIndexMarkdown(pastaDestino, arquivos, subpastas, comentario) {
       return false;
     }
     const isRootFolder = pastaDestino.getId() === ROOT_DESTINATION_FOLDER_ID;
+    if (isRootFolder) return false;
 
-    let indexContent = "";
-    if (isRootFolder) {
-      indexContent = "---\nlayout: default\ntitle: Índice\n--- \n\n";
-    } else {
-      indexContent = '## ' + pastaDestino.getName().replace(/_/g, ' ')  + '\n\n';
-      if (comentario!=="") indexContent += "#### " + comentario + "\n\n";
-    }
+    let indexContent = '## ' + pastaDestino.getName().replace(/_/g, ' ')  + '\n\n';
+    if (comentario!=="") indexContent += "#### " + comentario + "\n\n";
     
     if (arquivos.length > 0) {
         
