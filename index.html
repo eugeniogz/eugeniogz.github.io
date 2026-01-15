@@ -1,0 +1,77 @@
+---
+layout: default
+title: Índice
+---
+
+<div id="random-post-container" style="border: 1px solid #e1e4e8; border-radius: 6px; padding: 16px; margin-bottom: 24px; background-color: #f6f8fa; cursor: pointer;">
+  <div id="random-post-text" style="font-size: 16px; line-height: 1.5; color: #24292e; font-style: italic;"></div>
+  <div id="random-post-status" style="font-size: 12px; color: #586069; margin-top: 8px; text-align: right;">Atualiza a cada 30s (Clique para pausar)</div>
+</div>
+
+<script>
+  var allPosts = [
+    {% for post in site.posts %}
+      {{ post.content | strip_html | strip_newlines | truncatewords: 60 | jsonify }},
+    {% endfor %}
+  ];
+
+  var container = document.getElementById('random-post-container');
+  var textDiv = document.getElementById('random-post-text');
+  var statusDiv = document.getElementById('random-post-status');
+  var isPaused = false;
+
+  function displayRandomPost() {
+    if (allPosts.length === 0) return;
+    var randomIndex = Math.floor(Math.random() * allPosts.length);
+    textDiv.innerText = allPosts[randomIndex];
+  }
+
+  setInterval(function() {
+    if (!isPaused) displayRandomPost();
+  }, 30000);
+
+  container.addEventListener('click', function() {
+    isPaused = !isPaused;
+    statusDiv.innerText = isPaused ? "Pausado (Clique para continuar)" : "Atualiza a cada 30s (Clique para pausar)";
+  });
+
+  // Inicializar
+  displayRandomPost();
+</script>
+
+<h3>📄 <a href="./wingene-o-futuro-ancestral-manifesto.html">Wingene</a></h3>
+<p>o futuro ancestral (manifesto)</p>
+
+<h3>📁 <a href="./Wingene/">Wingene</a></h3>
+<p>Filosofia e Prática da Herança Consciente</p>
+
+<h3>📁 <a href="./Poesias e Aforismos/">Poesias e Aforismos</a></h3>
+<p>Vida consciente, amor e esperança</p>
+
+<h3>📁 <a href="./Crônicas/">Crônicas</a></h3>
+<p>Sentimentos e filosofia no cotidiano</p>
+
+<h3>📁 <a href="./Ipês e Tijolos/">Ipês e Tijolos</a></h3>
+<p>Reflexões sobre o humano entre o concreto e o ideal</p>
+
+<h3>📁 <a href="./O cascudo e outras histórias/">O cascudo e outras histórias</a></h3>
+<p>Contos para pequenos aventureiros: Descobertas no rio, na fazenda e na cidade</p>
+
+<h3>Últimas postagens</h3>
+
+{% for post in paginator.posts %}
+<h3>📄 {{ post.title }}</h3>
+<p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+{% endfor %}
+
+<div style="display: flex; justify-content: space-between; margin-top: 20px;">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">&lt;&lt; Recentes</a>
+  {% else %}
+    <span></span>
+  {% endif %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">Antigos &gt;&gt;</a>
+  {% endif %}
+</div>

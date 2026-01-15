@@ -28,5 +28,5 @@ O Estado se preocupará com o florescimento das virtudes e da serenidade coletiv
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./pavimentando-o-futuro.html">&lt;&lt; Pavimentando o futuro</a>
-  <span></span>
+  <a href="./o-fogo-de-prometeu.html">O fogo de Prometeu &gt;&gt;</a>
 </div>
