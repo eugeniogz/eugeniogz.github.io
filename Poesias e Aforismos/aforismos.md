@@ -36,7 +36,13 @@ Serena euforia: horizonte que amplia <!--09/10/25-->
 
 Viver tece tons indescritíveis <!--03/07/13-->
 
-Existir é perceber os detalhes que quebram a monotonia. <!--09/01/25-->
+Existir é perceber os detalhes que quebram a monotonia <!--09/01/25-->
+
+Espírito: matéria que baila consciente <!--15/01/26-->
+
+A matéria é instrumento; a sinapse é música <!--15/01/26-->
+
+Eudaimonia: cadência entre pulsar e pensar <!--15/01/26-->
 
 ***
 
@@ -50,6 +56,8 @@ Amor: divino que habita o humano <!--30/09/25-->
 
 Evolução: revolução constante, utopia distante <!--20/09/25-->
 
+O efêmero se amplia no legado <!--15/01/26-->
+
 ***
 
 ### 🌿 Natureza e Existência
@@ -57,6 +65,8 @@ Evolução: revolução constante, utopia distante <!--20/09/25-->
 O natural rasga o frio asfalto <!--16/07/22-->
 
 Brilham alegrias em infinitas cosmogonias <!--08/10/25-->
+
+Futuro: broto que a morte semeou <!--15/01/26-->
 
 ***
 

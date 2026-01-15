@@ -29,5 +29,5 @@ A rotina do menino mudou. Pedrinho jogava bola com o pai, brincava com jogos de 
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./diversao-e-colaboracao.html">&lt;&lt; Diversão e colaboração</a>
-  <span></span>
+  <a href="./marcando-o-proprio-tempo.html">Marcando o próprio tempo &gt;&gt;</a>
 </div>
