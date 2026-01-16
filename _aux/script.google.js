@@ -515,6 +515,10 @@ function salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDest
         if (existingContent.trim() !== finalContent.trim()) {
             docInfo.arquivoMdDestino.setContent(finalContent);
             fileChanged = true;
+        } else if (docInfo.deveConverter) {
+            // Atualiza o timestamp para evitar reprocessamento eterno se o conteúdo for idêntico
+            docInfo.arquivoMdDestino.setContent(finalContent);
+            Logger.log(`[SYNC] Timestamp atualizado para "${docInfo.markdownName}" (conteúdo idêntico).`);
         }
     } else {
         // ARQUIVO NOVO: Cria
@@ -806,7 +810,7 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         if (fileSlug !== 'index') {
             const pastaNome = pastaDestino.getName().replace(/_/g, ' ');
             if (!isPost && !isPostsFolder && pastaNome !== ROOT_DESTINATION_FOLDER) markdown += `\n\n${pastaNome}\n\n`;
-            markdown += `## ${nomeSemData}\n\n`;
+            if (!isPostsFolder) markdown += `## ${nomeSemData}\n\n`;
         }
 
         const contentElements = contentElementsInReverse.reverse();
