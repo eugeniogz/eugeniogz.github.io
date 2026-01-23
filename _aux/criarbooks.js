@@ -591,12 +591,12 @@ function coletarConteudoDePasta(pasta, pastaPaiNomeAtual, isRootFolder, listaDoc
             const configDoc = DocumentApp.openById(arquivoConfig.getId());
             const configText = configDoc.getBody().getText();
             
-            const matchOrdenacao = configText.match(/Ordenação:\s*(\d+)/i);
+            const matchOrdenacao = configText.match(/Ordenação:\s*(\d+\.+\d+)/i);
             const matchEpigrafe = configText.match(/Epígrafe:\s*(.*)/i);
             const matchTipoSaida = configText.match(/TipoSaida:\s*Artigo\s*/i);
             
             if (matchOrdenacao) {
-                ordenacaoCapitulo = parseInt(matchOrdenacao[1]*100, 10);
+                ordenacaoCapitulo = parseFloat(matchOrdenacao[1]);
             }
             if (matchEpigrafe) {
                 epigrafeCapitulo = matchEpigrafe[1].trim().split('\n')[0].trim();
@@ -647,7 +647,7 @@ function coletarConteudoDePasta(pasta, pastaPaiNomeAtual, isRootFolder, listaDoc
                 let ordenacao = ORDENACAO_PADRAO_DOCUMENTO;
                 
                 const linhas = textoCompleto.split('\n');
-                const regexOrdenacao = /^Ordenação:\s*(\d+)/i; 
+                const regexOrdenacao = /^Ordenação:\s*(\d+\.+\d+)/i; 
                 
                 // Extrair Ordenação: NNN
                 const limite = Math.max(0, linhas.length - 5); 
@@ -655,7 +655,7 @@ function coletarConteudoDePasta(pasta, pastaPaiNomeAtual, isRootFolder, listaDoc
                     const linha = linhas[i].trim();
                     const matchOrdenacao = linha.match(regexOrdenacao);
                     if (matchOrdenacao) {
-                        ordenacao = parseInt(matchOrdenacao[1]*100, 10);
+                        ordenacao = parseFloat(matchOrdenacao[1]);
                         break; 
                     }
                 }
