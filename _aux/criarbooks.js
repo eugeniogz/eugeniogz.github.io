@@ -596,7 +596,7 @@ function coletarConteudoDePasta(pasta, pastaPaiNomeAtual, isRootFolder, listaDoc
             const matchTipoSaida = configText.match(/TipoSaida:\s*Artigo\s*/i);
             
             if (matchOrdenacao) {
-                ordenacaoCapitulo = parseInt(matchOrdenacao[1], 10);
+                ordenacaoCapitulo = parseInt(matchOrdenacao[1]*100, 10);
             }
             if (matchEpigrafe) {
                 epigrafeCapitulo = matchEpigrafe[1].trim().split('\n')[0].trim();
@@ -655,7 +655,7 @@ function coletarConteudoDePasta(pasta, pastaPaiNomeAtual, isRootFolder, listaDoc
                     const linha = linhas[i].trim();
                     const matchOrdenacao = linha.match(regexOrdenacao);
                     if (matchOrdenacao) {
-                        ordenacao = parseInt(matchOrdenacao[1], 10);
+                        ordenacao = parseInt(matchOrdenacao[1]*100, 10);
                         break; 
                     }
                 }
