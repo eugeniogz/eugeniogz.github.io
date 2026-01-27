@@ -28,11 +28,11 @@ title: Índice
 
   setInterval(function() {
     if (!isPaused) displayRandomPost();
-  }, 30000);
+  }, 10000);
 
   container.addEventListener('click', function() {
     isPaused = !isPaused;
-    statusDiv.innerText = isPaused ? "Pausado (Clique para continuar)" : "Atualiza a cada 30s (Clique para pausar)";
+    statusDiv.innerText = isPaused ? "Pausado (Clique para continuar)" : "Atualiza a cada 10s (Clique para pausar)";
   });
 
   // Inicializar
