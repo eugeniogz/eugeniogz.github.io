@@ -2,7 +2,7 @@
 layout: default
 title: "Odisseia interior"
 reading_time: 1
-semantic_order: 30
+semantic_order: 38
 tags:
   - Felicidade
   - Mente
@@ -10,7 +10,7 @@ tags:
 
 
 
-[Ipês e Tijolos](./)
+### [Ipês e Tijolos](./)
 
 ## Odisseia interior
 
@@ -23,6 +23,6 @@ O Ulisses pode se apossar do leme, iluminando as trevas que encobrem as trilhas 
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./temperando-a-ideologia.html">&lt;&lt; Temperando a ideologia</a>
-  <a href="./espirito-material.html">Espírito material &gt;&gt;</a>
+  <a href="./ipes-e-tijolos.html">&lt;&lt; Ipês e tijolos</a>
+  <a href="./servidao-e-liberdade.html">Servidão e liberdade &gt;&gt;</a>
 </div>

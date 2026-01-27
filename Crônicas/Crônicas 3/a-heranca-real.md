@@ -10,7 +10,7 @@ tags:
 
 
 
-[Crônicas 3](./)
+### [Crônicas 3](./)
 
 ## A herança real
 

@@ -9,7 +9,7 @@ tags:
 
 
 
-[Poesias e Aforismos](./)
+### [Poesias e Aforismos](./)
 
 ## Quadro azul
 
@@ -47,8 +47,6 @@ Quieto o olhar cria
 o céu que aquece,  
 os prédios e as árvores —  
 o quadro azul acontece.
-
-
 
 ---
 

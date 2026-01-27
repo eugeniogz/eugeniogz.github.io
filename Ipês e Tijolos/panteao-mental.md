@@ -2,7 +2,7 @@
 layout: default
 title: "Panteão mental"
 reading_time: 1
-semantic_order: 39
+semantic_order: 30
 tags:
   - Divino
   - Mente
@@ -12,7 +12,7 @@ tags:
 
 
 
-[Ipês e Tijolos](./)
+### [Ipês e Tijolos](./)
 
 ## Panteão mental
 
@@ -26,5 +26,5 @@ Libertar a consciência é possível. O primeiro passo é entender os mitos como
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./espirito-material.html">&lt;&lt; Espírito material</a>
-  <a href="./pavimentando-o-futuro.html">Pavimentando o futuro &gt;&gt;</a>
+  <a href="./extrapolar-o-virtual.html">Extrapolar o virtual &gt;&gt;</a>
 </div>

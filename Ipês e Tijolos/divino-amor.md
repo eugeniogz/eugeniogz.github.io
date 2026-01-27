@@ -2,7 +2,7 @@
 layout: default
 title: "Divino amor"
 reading_time: 1
-semantic_order: 0.1
+semantic_order: 10
 tags:
   - Alma
   - Amor
@@ -10,7 +10,7 @@ tags:
 
 
 
-[Ipês e Tijolos](./)
+### [Ipês e Tijolos](./)
 
 ## Divino amor
 
@@ -24,5 +24,5 @@ A força do divino alia-se ao vivo, marcando em cores eternas a história finita
 
 <div style="display: flex; justify-content: space-between;">
   <span></span>
-  <a href="./servidao-e-liberdade.html">Servidão e liberdade &gt;&gt;</a>
+  <a href="./espirito-material.html">Espírito material &gt;&gt;</a>
 </div>

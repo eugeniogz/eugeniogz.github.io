@@ -2,14 +2,14 @@
 layout: default
 title: "Baleias e marujos"
 reading_time: 1
-semantic_order: 4
+semantic_order: 50
 tags:
   - Sociedade
 --- 
 
 
 
-[Ipês e Tijolos](./)
+### [Ipês e Tijolos](./)
 
 ## Baleias e marujos
 
@@ -24,6 +24,6 @@ O oceano jamais será completamente sereno — tal promessa seria ilusória. Mas
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./servidao-e-liberdade.html">&lt;&lt; Servidão e liberdade</a>
-  <a href="./extrapolar-o-virtual.html">Extrapolar o virtual &gt;&gt;</a>
+  <a href="./temperando-a-ideologia.html">&lt;&lt; Temperando a ideologia</a>
+  <a href="./o-fogo-de-prometeu.html">O fogo de Prometeu &gt;&gt;</a>
 </div>

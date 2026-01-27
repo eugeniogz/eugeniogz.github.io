@@ -2,7 +2,7 @@
 layout: default
 title: "Amor consciente"
 reading_time: 3
-semantic_order: 90
+semantic_order: 50
 tags:
   - Amor
   - Atenção plena
@@ -11,7 +11,7 @@ tags:
 
 
 
-[Crônicas 2](./)
+### [Crônicas 2](./)
 
 ## Amor consciente
 
@@ -28,8 +28,6 @@ Após esse intervalo contigo, voltei a escrever. Relembrando os momentos difíce
 Esses laços se fortaleceram com o nascimento de nossas filhas, que se beneficiaram da preocupação compartilhada de como educá-las. Uma busca constante que precedeu a primeira gravidez. — Será que seremos capazes de criar e educar nossos filhos? — Precisamos nos capacitar. Estudando e conversando, sempre pensando no esforço de melhorar como pais. A realização de ver o resultado alimenta ainda mais o compromisso e a felicidade.
 
 Assim, no meio de tantas alegrias, as cores do amor nem sempre são vibrantes e quentes. Ruídos que interrompem a música da união, no entanto, não tornam os elos mais fracos, servem para dar contraste, acentuar a beleza da vida. Uma beleza que reflete no ritmo do coração e no pulsar da mente. Um amor que, antes de ser divino, é consciente — como uma valsa com pausas e harmonias pintada em cores de uma aquarela.
-
-
 
 ---
 

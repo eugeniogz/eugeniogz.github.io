@@ -9,7 +9,7 @@ tags:
 
 
 
-[Crônicas 3](./)
+### [Crônicas 3](./)
 
 ## Futuro ancestral
 
@@ -22,6 +22,6 @@ Enquanto a pequena brinca, recordo como a iminência da morte não me preocupa. 
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./felicidade-singelo-trinado.html">&lt;&lt; Felicidade — singelo trinado</a>
+  <a href="./bioma-mental.html">&lt;&lt; Bioma mental</a>
   <a href="./a-heranca-real.html">A herança real &gt;&gt;</a>
 </div>

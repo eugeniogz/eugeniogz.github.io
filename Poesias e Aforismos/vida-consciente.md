@@ -11,7 +11,7 @@ tags:
 
 
 
-[Poesias e Aforismos](./)
+### [Poesias e Aforismos](./)
 
 ## Vida consciente
 
@@ -59,8 +59,6 @@ Segredo oculto,
 da fauna senciente.  
 Exclamação etérea,  
 Ressoa na mente.
-
-
 
 ---
 

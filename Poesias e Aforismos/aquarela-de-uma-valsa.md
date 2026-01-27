@@ -7,7 +7,7 @@ semantic_order: 20
 
 
 
-[Poesias e Aforismos](./)
+### [Poesias e Aforismos](./)
 
 ## Aquarela de uma valsa
 
@@ -45,8 +45,6 @@ Nave suave brisa,
 orienta o porvir:  
 vivem a terna valsa,  
 aquarela do amar.
-
-
 
 ---
 

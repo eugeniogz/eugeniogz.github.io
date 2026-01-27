@@ -2,7 +2,7 @@
 layout: default
 title: "Realidade na mesa de todos"
 reading_time: 3
-semantic_order: 80
+semantic_order: 40
 tags:
   - Economia
   - Sociedade
@@ -10,7 +10,7 @@ tags:
 
 
 
-[Crônicas 2](./)
+### [Crônicas 2](./)
 
 ## Realidade na mesa de todos
 
@@ -27,8 +27,6 @@ Após algum tempo, refeitos os ânimos. Carlos tomou a palavra, dizendo: — A i
 Marcos continuou: — A perfeição é utopia, mas um mundo mais justo é possível. Não digo que todos aproveitarão as chances, mas a esperança de um futuro digno precisa ser alcançável para todos. Carlos ponderou: — Talvez haja espaço para empresas mais conscientes… Pedro completou: — E um estado mais eficiente… Os três se entreolharam e, pela primeira vez, viram não adversários, mas companheiros buscando o mesmo objetivo por caminhos que podiam, sim, se encontrar. A mente dos dois passou a enxergar as falhas no que defendiam e como poderiam ser complementares.
 
 Enquanto dividiam a sobremesa, o salmão no cardápio já não parecia um prato tão distante da realidade de todos.
-
-
 
 ---
 

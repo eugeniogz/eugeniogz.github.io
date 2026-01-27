@@ -2,14 +2,14 @@
 layout: default
 title: "Servidão e liberdade"
 reading_time: 1
-semantic_order: 2
+semantic_order: 39
 tags:
   - Sociedade
 --- 
 
 
 
-[Ipês e Tijolos](./)
+### [Ipês e Tijolos](./)
 
 ## Servidão e liberdade
 
@@ -24,6 +24,6 @@ No canto das aves ressoa uma pergunta: quando todos terão asas para voar?
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./divino-amor.html">&lt;&lt; Divino amor</a>
-  <a href="./baleias-e-marujos.html">Baleias e marujos &gt;&gt;</a>
+  <a href="./odisseia-interior.html">&lt;&lt; Odisseia interior</a>
+  <a href="./temperando-a-ideologia.html">Temperando a ideologia &gt;&gt;</a>
 </div>

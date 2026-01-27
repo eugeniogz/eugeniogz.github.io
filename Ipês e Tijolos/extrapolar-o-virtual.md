@@ -2,14 +2,14 @@
 layout: default
 title: "Extrapolar o virtual"
 reading_time: 1
-semantic_order: 8
+semantic_order: 35
 tags:
   - Escravidão digital
 --- 
 
 
 
-[Ipês e Tijolos](./)
+### [Ipês e Tijolos](./)
 
 ## Extrapolar o virtual
 
@@ -24,6 +24,6 @@ Assim, donos do nosso tempo, podemos habitar tanto o digital quanto o real, cria
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./baleias-e-marujos.html">&lt;&lt; Baleias e marujos</a>
+  <a href="./panteao-mental.html">&lt;&lt; Panteão mental</a>
   <a href="./ipes-e-tijolos.html">Ipês e tijolos &gt;&gt;</a>
 </div>

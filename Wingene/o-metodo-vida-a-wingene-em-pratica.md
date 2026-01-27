@@ -19,7 +19,7 @@ tags:
 
 
 
-[Wingene](./)
+### [Wingene](./)
 
 ## O método VIDA: a Wingene em prática
 
@@ -28,6 +28,8 @@ Herdamos um corpo, uma mente e uma cultura — mas não herdamos todos os crité
 Como garantir que a seiva cultural contribua para a Wingene? A resposta está num acróstico: **V**alores, **I**mperfeições, **D**ecisões e **A**tenção — VIDA. Os valores fornecem a direção; as imperfeições revelam as incoerências do percurso; as decisões convertem propósitos em ação; e a atenção permite perceber onde atuar e certificar-se dos avanços e fracassos. Esses eixos operam em um movimento contínuo.
 
 O VIDA é um método ético-existencial fundamentado nesses quatro eixos interdependentes. Não se trata de um sistema fechado nem de uma doutrina moral. Trata-se de uma estrutura simples e revisável, compatível com a natureza falível do ser humano e orientada pelo ideal da Wingene.
+
+O cultivo das virtudes não é um conceito original - permeia a filosofia há milênios. O método VIDA não pretende reinventar a ética, mas oferecer uma estrutura prática para o aperfeiçoamento moral.
 
 ## Valores
 
@@ -39,15 +41,12 @@ Os valores emergem de um **naturalismo ético**: reconhecem os limites biológic
 
 Valores cumprem o papel de bússola. Eles não indicam caminhos detalhados, mas orientam a direção. São os valores que permitem distinguir entre o conveniente e o correto. Contudo, valores podem permanecer latentes ou deformados. Cultura, medo, hábito e conveniência podem abafá-los. Por isso não são imutáveis, mas frutos de um **trabalho constante de revisão**.
 
-### **Quatro critérios para arbitrar valores**
+### **Três critérios para arbitrar valores**
 
-Um guia para calibrar a bússola dos valores do VIDA se estabelece a partir de quatro princípios:
+Um guia para calibrar a bússola dos valores do VIDA se estabelece a partir de três princípios:
 
 1. **Respeito ao ser**  
-Um valor deve respeitar limites cognitivos, emocionais e biológicos. Não se pode exigir aquilo que viola a constituição do ser.
-
-1. **Eudaimonia**  
-O valor deve favorecer uma vida estável, serena, significativa e realizada. Se não contribui para a eudaimonia, esse valor precisa ser revisto.
+Um valor deve respeitar limites cognitivos, emocionais e biológicos. Não se pode exigir aquilo que viola a constituição do ser..
 
 1. **Facilitar a convivência**  
 Um valor não pode inviabilizar a convivência, e sim aumentar a cooperação e harmonia social.
@@ -55,7 +54,7 @@ Um valor não pode inviabilizar a convivência, e sim aumentar a cooperação e 
 1. **Ajuste constante**  
 Vieses cognitivos, crenças não verificadas, confusão entre fato e opinião, pensamentos que distorcem a realidade comprometem os valores. Assim, eles devem ser revistos continuamente.
 
-Esses princípios tornam a gestão dos valores realizável sem sacrifícios, orientada pela eudaimonia, comprometida com a boa convivência e livre das amarras do dogmatismo.
+Esses princípios tornam a gestão dos valores realizável sem sacrifícios, comprometida com a boa convivência e livre das amarras do dogmatismo.
 
 ### **Valores como fundamento**
 
@@ -192,7 +191,6 @@ O método se valida na prática por meio de perguntas essenciais:
 
 **V — Valores**  
 **- Respeito ao ser**: *Essas atitudes estão de acordo com minha saúde e bem-estar?*  
-- **Eudaimonia**: *Sou mais realizado cultivando esse valor?*  
 - **Convivência**: *Esse valor permite uma melhor convivência com os demais?*  
 - **Revisão**: *Tenho revisado meus valores de acordo com as evidências e a ciência?*
 
@@ -216,7 +214,7 @@ Imagine alguém que valoriza a honestidade (V), mas percebe que frequentemente e
 
 O método VIDA nasce da constatação de que a existência humana não evolui por acúmulo de intenções, mas por **alinhamento entre valores, consciência das falhas, decisão prática e presença atenta**. Esses quatro eixos não operam em sequência linear, mas como um **sistema dinâmico**, no qual cada elemento sustenta e tensiona os demais.
 
-Esse método reconhece que a transformação ética não é linear nem definitiva. A roda do VIDA gira continuamente. Cada giro aprofunda o caráter, refina a consciência e amplia a herança cultural transmitida. Assim, viver segundo não é buscar perfeição, mas **visar o ótimo**. É transformar a existência cotidiana em espaço de aprendizado, criação e responsabilidade. Nesse processo, o indivíduo não apenas floresce, mas participa da construção de uma herança consciente que ultrapassa sua própria existência.
+Esse método reconhece que a transformação ética não é linear nem definitiva. A roda do VIDA gira continuamente. Cada giro aprofunda o caráter, refina a consciência e amplia a herança cultural transmitida. Assim, viver não é buscar perfeição, mas **visar o ótimo**. É transformar a existência cotidiana em espaço de aprendizado, criação e responsabilidade. Essa transformação permite florescer a eudaimonia. Nesse processo, o indivíduo não apenas floresce, mas participa da construção de uma herança consciente que ultrapassa sua própria existência.
 
 O método não oferece redenção, mas direção. Não promete perfeição, mas coerência possível. E na prática dessa coerência — reiterada, imperfeita, atenta — inscreve-se a Wingene: o futuro ancestral construído no presente.
 

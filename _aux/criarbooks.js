@@ -493,8 +493,28 @@ function processarDocumentoFormatado(docId, corpoDestino) {
                     } catch (e) { /* Ignora */ }
                 }
             }
+
+            // 5. Remover Comentários HTML (<!-- -->)
+            const textObj = novoParagrafo.editAsText();
+            const textStr = textObj.getText();
+            const regexComment = /<!--[\s\S]*?-->/g;
+            const commentMatches = [];
+            let cMatch;
+            while ((cMatch = regexComment.exec(textStr)) !== null) {
+                commentMatches.push({
+                    start: cMatch.index,
+                    end: cMatch.index + cMatch[0].length - 1
+                });
+            }
+            
+            for (let i = commentMatches.length - 1; i >= 0; i--) {
+                const m = commentMatches[i];
+                try {
+                    textObj.deleteText(m.start, m.end);
+                } catch (e) { /* Ignora */ }
+            }
         }       
-        // 5. Processar Tabelas (Cópia direta de elemento)
+        // 6. Processar Tabelas (Cópia direta de elemento)
         else if (tipo === DocumentApp.ElementType.TABLE) {
             try {
                 const tabelaCopiada = elementoOrigem.copy();
@@ -591,7 +611,7 @@ function coletarConteudoDePasta(pasta, pastaPaiNomeAtual, isRootFolder, listaDoc
             const configDoc = DocumentApp.openById(arquivoConfig.getId());
             const configText = configDoc.getBody().getText();
             
-            const matchOrdenacao = configText.match(/Ordenação:\s*(\d+\.+\d+)/i);
+            const matchOrdenacao = configText.match(/Ordenação:\s*(\d+(?:[.,]\d+)?)/i);
             const matchEpigrafe = configText.match(/Epígrafe:\s*(.*)/i);
             const matchTipoSaida = configText.match(/TipoSaida:\s*Artigo\s*/i);
             
@@ -647,7 +667,7 @@ function coletarConteudoDePasta(pasta, pastaPaiNomeAtual, isRootFolder, listaDoc
                 let ordenacao = ORDENACAO_PADRAO_DOCUMENTO;
                 
                 const linhas = textoCompleto.split('\n');
-                const regexOrdenacao = /^Ordenação:\s*(\d+\.+\d+)/i; 
+                const regexOrdenacao = /^Ordenação:\s*(\d+(?:[.,]\d+)?)/i; 
                 
                 // Extrair Ordenação: NNN
                 const limite = Math.max(0, linhas.length - 5); 
@@ -661,7 +681,8 @@ function coletarConteudoDePasta(pasta, pastaPaiNomeAtual, isRootFolder, listaDoc
                 }
                 
                 // Recriar o texto limpo (removendo tags de Ordenação/Tags)
-                const textoLimpo = linhas.filter(l => !l.trim().match(/^(Ordenação|Tags):/i)).join('\n').trim();
+                let textoLimpo = linhas.filter(l => !l.trim().match(/^(Ordenação|Tags):/i)).join('\n').trim();
+                textoLimpo = textoLimpo.replace(/<!--[\s\S]*?-->/g, '');
 
                 listaDocs.push({
                     id: arquivo.getId(),

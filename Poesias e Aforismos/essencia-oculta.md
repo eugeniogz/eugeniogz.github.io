@@ -7,7 +7,7 @@ semantic_order: 3
 
 
 
-[Poesias e Aforismos](./)
+### [Poesias e Aforismos](./)
 
 ## Essência oculta
 
@@ -25,8 +25,6 @@ Tristezas não dissolvem a esperança
 Mentiras não tolem a verdade  
 Imperfeições não definem o humano  
 Detalhes tecem o destino
-
-
 
 ---
 

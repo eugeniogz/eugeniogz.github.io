@@ -2,7 +2,7 @@
 layout: default
 title: "O fogo de Prometeu"
 reading_time: 1
-semantic_order: 150
+semantic_order: 60
 tags:
   - Sociedade
   - Conhecimento
@@ -11,7 +11,7 @@ tags:
 
 
 
-[Ipês e Tijolos](./)
+### [Ipês e Tijolos](./)
 
 ## O fogo de Prometeu
 
@@ -22,6 +22,6 @@ O espírito, baile material da consciência, alcança novos horizontes com a sab
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./a-eudaimonia-social-quando-as-florestas-mentais-se-encontram.html">&lt;&lt; A Eudaimonia Social: Quando as florestas mentais se encontram</a>
-  <span></span>
+  <a href="./baleias-e-marujos.html">&lt;&lt; Baleias e marujos</a>
+  <a href="./pavimentando-o-futuro.html">Pavimentando o futuro &gt;&gt;</a>
 </div>

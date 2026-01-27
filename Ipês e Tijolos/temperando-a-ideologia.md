@@ -2,14 +2,14 @@
 layout: default
 title: "Temperando a ideologia"
 reading_time: 1
-semantic_order: 25
+semantic_order: 40
 tags:
   - Sociedade
 --- 
 
 
 
-[Ipês e Tijolos](./)
+### [Ipês e Tijolos](./)
 
 ## Temperando a ideologia
 
@@ -18,6 +18,6 @@ Os oceanos das ideologias espalham-se em inúmeros mares pelo mundo. Dos gélido
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./ipes-e-tijolos.html">&lt;&lt; Ipês e tijolos</a>
-  <a href="./odisseia-interior.html">Odisseia interior &gt;&gt;</a>
+  <a href="./servidao-e-liberdade.html">&lt;&lt; Servidão e liberdade</a>
+  <a href="./baleias-e-marujos.html">Baleias e marujos &gt;&gt;</a>
 </div>

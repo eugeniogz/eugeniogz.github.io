@@ -2,7 +2,7 @@
 layout: default
 title: "Pavimentando o futuro"
 reading_time: 1
-semantic_order: 40
+semantic_order: 70
 tags:
   - Sociedade
   - Evolução
@@ -11,7 +11,7 @@ tags:
 
 
 
-[Ipês e Tijolos](./)
+### [Ipês e Tijolos](./)
 
 ## Pavimentando o futuro
 
@@ -26,6 +26,6 @@ Mas seria ingênuo acreditar que a pavimentação será concluída em nossa gera
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./panteao-mental.html">&lt;&lt; Panteão mental</a>
+  <a href="./o-fogo-de-prometeu.html">&lt;&lt; O fogo de Prometeu</a>
   <a href="./a-eudaimonia-social-quando-as-florestas-mentais-se-encontram.html">A Eudaimonia Social: Quando as florestas mentais se encontram &gt;&gt;</a>
 </div>

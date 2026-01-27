@@ -14,7 +14,7 @@ tags:
 
 
 
-Poesias e Aforismos
+### [Poesias e Aforismos](./)
 
 ## Aforismos
 
@@ -24,15 +24,17 @@ A ciência ilumina a metafísica com os dourados fios do conhecimento <!--16/09/
 
 Informação exige validade, conhecimento clama liberdade <!--17/10/25-->
 
-Descobrir é inventar o raro <!--08/10/25-->
+Dogma: cárcere da verdade <!--16/01/26-->
 
-***
+Descobrir é inventar o raro <!--08/10/25-->
 
 ### 🧠 Consciência e Criação
 
 Pensamento: sentir que a razão refinou <!--09/10/25-->
 
 Serena euforia: horizonte que amplia <!--09/10/25-->
+
+Serena euforia: a mente transcende a mente <!--21/01/26-->
 
 Viver tece tons indescritíveis <!--03/07/13-->
 
@@ -42,9 +44,7 @@ Espírito: matéria que baila consciente <!--15/01/26-->
 
 A matéria é instrumento; a sinapse é música <!--15/01/26-->
 
-Eudaimonia: cadência entre pulsar e pensar <!--15/01/26-->
-
-***
+Eudaimonia: cadência do pulsar e pensar <!--15/01/26-->
 
 ### 🌺 Felicidade e Amor
 
@@ -56,9 +56,7 @@ Amor: divino que habita o humano <!--30/09/25-->
 
 Evolução: revolução constante, utopia distante <!--20/09/25-->
 
-O efêmero se amplia no legado <!--15/01/26-->
-
-***
+Exemplo: giz invisível <!--20/01/26-->
 
 ### 🌿 Natureza e Existência
 
@@ -66,7 +64,7 @@ O natural rasga o frio asfalto <!--16/07/22-->
 
 Brilham alegrias em infinitas cosmogonias <!--08/10/25-->
 
-Futuro: broto que a morte semeou <!--15/01/26-->
+Vida breve, rotas eternas <!--21/01/26-->
 
 ***
 
@@ -76,5 +74,5 @@ Futuro: broto que a morte semeou <!--15/01/26-->
 
 <div style="display: flex; justify-content: space-between;">
   <span></span>
-  <a href="./tecer-alegria.html">Tecer alegria &gt;&gt;</a>
+  <a href="./vida-breve-rotas-eternas.html">Vida breve, rotas eternas &gt;&gt;</a>
 </div>

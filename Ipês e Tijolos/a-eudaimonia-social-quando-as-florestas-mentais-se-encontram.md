@@ -2,7 +2,7 @@
 layout: default
 title: "A Eudaimonia Social: Quando as florestas mentais se encontram"
 reading_time: 1
-semantic_order: 100
+semantic_order: 80
 tags:
   - Sociedade
   - Wingene
@@ -10,7 +10,7 @@ tags:
 
 
 
-[Ipês e Tijolos](./)
+### [Ipês e Tijolos](./)
 
 ## A Eudaimonia Social: Quando as florestas mentais se encontram
 
@@ -28,5 +28,5 @@ O Estado se preocupará com o florescimento das virtudes e da serenidade coletiv
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./pavimentando-o-futuro.html">&lt;&lt; Pavimentando o futuro</a>
-  <a href="./o-fogo-de-prometeu.html">O fogo de Prometeu &gt;&gt;</a>
+  <a href="./honrando-a-heranca-ancestral.html">Honrando a herança ancestral &gt;&gt;</a>
 </div>

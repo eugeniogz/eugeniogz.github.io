@@ -2,14 +2,14 @@
 layout: default
 title: "Singelas letras da imprecisão"
 reading_time: 2
-semantic_order: 66
+semantic_order: 20
 tags:
   - Trabalho
 --- 
 
 
 
-[Crônicas 2](./)
+### [Crônicas 2](,/)
 
 ## Singelas letras da imprecisão
 
@@ -23,11 +23,9 @@ Os ouvidos tentam silenciar o ruído externo, às vezes sem sucesso. Uma pausa, 
 
 O ofício do escritor é uma tarefa delicada, nem sempre transcreve a emoção, o prazer e a dor da vida. Esse tempo que dedica nessas breves expressões serve para falar do esforço, do difícil processo criativo. Nessa arte, a utópica perfeição culmina nas singelas letras da imprecisão.
 
-
-
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <span></span>
+  <a href="./alegria-em-graos-selecionados.html">&lt;&lt; Alegria em grãos selecionados</a>
   <a href="./do-barulho-ao-canto.html">Do barulho ao canto &gt;&gt;</a>
 </div>

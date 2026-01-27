@@ -809,7 +809,7 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
 
         if (fileSlug !== 'index') {
             const pastaNome = pastaDestino.getName().replace(/_/g, ' ');
-            if (!isPost && !isPostsFolder && pastaNome !== ROOT_DESTINATION_FOLDER) markdown += `\n\n${pastaNome}\n\n`;
+            if (!isPost && !isPostsFolder && pastaNome !== ROOT_DESTINATION_FOLDER) markdown += `\n\n### [${pastaNome}](./)\n\n`;
             if (!isPostsFolder) markdown += `## ${nomeSemData}\n\n`;
         }
 

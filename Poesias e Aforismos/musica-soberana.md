@@ -10,7 +10,7 @@ tags:
 
 
 
-[Poesias e Aforismos](./)
+### [Poesias e Aforismos](./)
 
 ## Música soberana
 
@@ -38,8 +38,6 @@ A harmonia das flores permanece,
 espalhando o perfume ancestral.  
 Musical, a natureza aparece,  
 Soberana magia — sinfonia natural.
-
-
 
 ---
 

@@ -21,7 +21,7 @@ tags:
 
 
 
-[Wingene](./)
+##### [Wingene](./)
 
 ## Wingene: O futuro ancestral
 
@@ -31,7 +31,7 @@ Criei a palavra ***Wingene*** da fusão entre **win** e **gene** — vitória e 
 
 O homem carrega desde a infância questões que incitam; o eterno aprender é herança ancestral. Mas o conhecimento não é tudo, a vitória se completa na sua prática rumo ao aperfeiçoamento pessoal. A *Wingene* nunca termina, pois cada instante nos aproxima do utópico ideal. Novos triunfos alvorecem brilhantes, iluminando o novo ser ante ao que um dia ele foi. Assim, cada dia mais realizado, ele se extasia em plena *eudaimonia*.
 
-A *eudaimonia*, do grego *eu* (bem) e *daimon* (espírito), representa o florescimento da felicidade — um estado perene e sereno, que nasce das forças internas. Alinha-se ao estoicismo, no qual a alegria vem do interior, sendo firme e sólida. O primeiro passo para esse florescimento é o conhecimento, que conduz ao caminho da evolução pessoal. Apesar de meu ávido desejo de aprender, foi com a [Logosofia](https://pt.wikipedia.org/wiki/Logosofia) que esse ímpeto se solidificou, pois encarei com maior seriedade o desafio do aprimoramento moral — objetivo principal da obra de Carlos Pecotche.
+A *eudaimonia*, do grego *eu* (bem) e *daimon* (espírito), representa o florescimento da felicidade — um estado perene e sereno, que nasce das forças internas. Alinha-se ao estoicismo, no qual a alegria vem do interior, sendo firme e sólida. O aperfeiçoamento moral vem sendo debatido há milênios; a eudaimonia, segundo Aristóteles, é consequência de uma vida virtuosa. Não pretendemos reinventar esse sentido filosófico, mas utilizá-lo como base para a Wingene. O primeiro passo para esse florescimento é o conhecimento, que conduz ao caminho da evolução pessoal. Apesar de meu ávido desejo de aprender, foi com a [Logosofia](https://pt.wikipedia.org/wiki/Logosofia) que esse ímpeto se solidificou, pois encarei com maior seriedade o desafio do aprimoramento moral — objetivo principal da obra de Carlos Pecotche.
 
 Meu conceito de espírito não é metafísico: ele habita o corpo vivente, manifesta-se nos processos biológicos e guarda valores e emoções puras na mente. A poderosa máquina mental pode parecer, em alguns casos, extrapolar o limite corporal, viajando nas ondas das inúmeras conexões neuronais. Mas sua substância é material. Ainda assim, a mente é uma densa floresta, com árvores enraizadas no corpo inteiro que sentem, comandam e pensam. Das raízes às folhas, a floresta é um todo — complexo sistema consciente que dança incessantemente, parecendo por isso ter presença etérea.
 
@@ -55,7 +55,7 @@ Esse método ético-existencial para praticar a Wingene está detalhado adiante.
 
 ### **A Aurora da Mente**
 
-Quando esse caminho é trilhado com dedicação, quando valores se alinham, imperfeições são enfrentadas, decisões são tomadas e a atenção é cultivada — a consciência pode experimentar o extraordinário.
+Quando esse caminho é trilhado com dedicação, quando valores se alinham, imperfeições são enfrentadas, decisões são tomadas e a atenção é cultivada — a consciência pode experimentar o extraordinário. Essa experiência reflete a eudaimonia, que emerge do cultivo das virtudes.
 
 A mente se amplia em instantes de intensa alegria em experiências radiantes além do comum. Uma grande euforia, contida e serena; um caloroso aconchego como fogo que não queima, persistindo no cinza urbano ou na tranquila pintura, que da seiva emana — os sentidos e os pensamentos não perturbam, a consciência flutua. Nesses momentos, surge um estado de graça — quando sinapses se elevam, pulsando energia.
 

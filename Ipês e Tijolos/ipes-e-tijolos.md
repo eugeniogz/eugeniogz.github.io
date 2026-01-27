@@ -2,14 +2,14 @@
 layout: default
 title: "Ipês e tijolos"
 reading_time: 1
-semantic_order: 19
+semantic_order: 37
 tags:
   - Sociedade
 --- 
 
 
 
-[Ipês e Tijolos](./)
+### [Ipês e Tijolos](./)
 
 ## Ipês e tijolos
 
@@ -21,5 +21,5 @@ Quando esses frios tijolos serão como as flores? Amarelas e homogêneas, nascen
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./extrapolar-o-virtual.html">&lt;&lt; Extrapolar o virtual</a>
-  <a href="./temperando-a-ideologia.html">Temperando a ideologia &gt;&gt;</a>
+  <a href="./odisseia-interior.html">Odisseia interior &gt;&gt;</a>
 </div>

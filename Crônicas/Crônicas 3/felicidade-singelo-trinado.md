@@ -9,7 +9,7 @@ tags:
 
 
 
-[Crônicas 3](./)
+### [Crônicas 3](./)
 
 ## Felicidade — singelo trinado
 
@@ -25,5 +25,5 @@ Os homens continuam sua confusão, caminhando ou dentro das carruagens. O sol j�
 
 <div style="display: flex; justify-content: space-between;">
   <span></span>
-  <a href="./futuro-ancestral.html">Futuro ancestral &gt;&gt;</a>
+  <a href="./bioma-mental.html">Bioma mental &gt;&gt;</a>
 </div>

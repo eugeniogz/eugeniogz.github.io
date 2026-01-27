@@ -2,14 +2,14 @@
 layout: default
 title: "Espírito material"
 reading_time: 2
-semantic_order: 37
+semantic_order: 20
 tags:
   - Espírito
 --- 
 
 
 
-[Ipês e Tijolos](./)
+### [Ipês e Tijolos](./)
 
 ## Espírito material
 
@@ -24,6 +24,6 @@ A felicidade é um estado espiritual. Mas o bosque não cresce sozinho. As flore
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./odisseia-interior.html">&lt;&lt; Odisseia interior</a>
+  <a href="./divino-amor.html">&lt;&lt; Divino amor</a>
   <a href="./panteao-mental.html">Panteão mental &gt;&gt;</a>
 </div>

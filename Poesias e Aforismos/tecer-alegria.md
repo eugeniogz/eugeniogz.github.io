@@ -11,7 +11,7 @@ tags:
 
 
 
-[Poesias e Aforismos](./)
+### [Poesias e Aforismos](./)
 
 ## Tecer alegria
 
@@ -35,11 +35,9 @@ criar todo dia
 razão do humano  
 tecer alegria
 
-
-
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./aforismos.html">&lt;&lt; Aforismos</a>
+  <a href="./eudaimonia-a-se-destilar.html">&lt;&lt; Eudaimonia a se destilar</a>
   <a href="./vida-consciente.html">Vida consciente &gt;&gt;</a>
 </div>

@@ -2,7 +2,7 @@
 layout: default
 title: "Do barulho ao canto"
 reading_time: 2
-semantic_order: 70
+semantic_order: 30
 tags:
   - Atenção plena
   - Sociedade
@@ -10,7 +10,7 @@ tags:
 
 
 
-[Crônicas 2](./)
+### [Crônicas 2](./)
 
 ## Do barulho ao canto
 
@@ -27,8 +27,6 @@ Vendi minha moto para o curso pagar. Seis meses de esforço para aprender a prog
 Passando os dias em casa e estudando à noite, a rotina era outra. Da minha janela, ouvia os periquitos em algazarra todas as manhãs, lembrando daquele dia que mudou meu destino. Estudei com afinco, me tornei um programador. Consegui um bom emprego.
 
 Agora as trilhas não são mais em duas rodas, mas tecidas pelos dedos ágeis. Os sonhos são entregues nos pacotes digitais, que ajudam pessoas, transformam rotinas. Meus clientes são gratos pelas soluções que dou — ainda formiguinha, mas feliz por quem sou. Na música das teclas, o barulho do trânsito se dissipou.
-
-
 
 ---
 
