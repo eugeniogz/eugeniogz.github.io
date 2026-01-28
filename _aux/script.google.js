@@ -510,8 +510,16 @@ function sincronizarAssets(pastaFonte, pastaDestino) {
                 // Se o arquivo fonte for mais recente, atualiza
                 if (arquivo.getLastUpdated().getTime() > arquivoDestino.getLastUpdated().getTime()) {
                     Logger.log(`[ASSET ATUALIZADO] ${nomeArquivo} em ${pastaDestino.getName()}`);
-                    arquivoDestino.setTrashed(true);
-                    arquivo.makeCopy(nomeArquivo, pastaDestino);
+                    try {
+                        // Atualização atômica usando Advanced Drive Service (Drive API)
+                        // Requer adicionar o serviço "Drive API" no editor do Apps Script
+                        Drive.Files.update({
+                            title: nomeArquivo,
+                            mimeType: mime
+                        }, arquivoDestino.getId(), arquivo.getBlob());
+                    } catch (e) {
+                        Logger.log(`[ERRO] Falha ao atualizar asset via Drive API: ${e.toString()}. Verifique se o Serviço Avançado 'Drive' está ativado.`);
+                    }
                 }
             } else {
                 Logger.log(`[ASSET NOVO] ${nomeArquivo} em ${pastaDestino.getName()}`);
@@ -619,7 +627,7 @@ function getMetadataFromDocLite(docFile, originalFileName) {
     let semanticOrderScore = 0.0;
     let tempoLeitura = 1;
     let nomeSemData = originalFileName; 
-    let noIndex = false;
+    let noIndex = true;
     
     try {
         const doc = DocumentApp.openById(docFile.getId());
@@ -639,10 +647,7 @@ function getMetadataFromDocLite(docFile, originalFileName) {
         if (scoreMatch) {
             const scoreStr = scoreMatch[1].replace(',', '.');
             semanticOrderScore = parseFloat(scoreStr) || semanticOrderScore;
-        }
-
-        if (/^não indexar/i.test(fullText)) {
-            noIndex = true;
+            noIndex = false;
         }
 
         // 3. REMOÇÃO DA DATA DO NOME
@@ -785,7 +790,7 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
     let tempoLeitura = 1;
     let nomeSemData = originalFileName; // Inicializa com o nome original
     const isPostsFolder = pastaDestino.getName() === '_posts';
-    let noIndex = false;
+    let noIndex = true;
 
     try {
         const doc = DocumentApp.openById(docFile.getId());
@@ -825,23 +830,12 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                     const scoreStr = scoreMatch[1].replace(',', '.');
                     semanticOrderScore = parseFloat(scoreStr) || semanticOrderScore;
                     scoreFound = true;
+                    noIndex = false;
                     continue;
                 }
             }
             
             contentElementsInReverse.push(element);
-        }
-        
-        // Verifica se o primeiro elemento (último do array reverso) é "não indexar"
-        if (contentElementsInReverse.length > 0) {
-            const firstElem = contentElementsInReverse[contentElementsInReverse.length - 1];
-            if (firstElem.getType() === DocumentApp.ElementType.PARAGRAPH) {
-                const text = firstElem.asParagraph().getText().trim();
-                if (/^não indexar/i.test(text)) {
-                    noIndex = true;
-                    contentElementsInReverse.pop(); // Remove o elemento para não ir para o MD
-                }
-            }
         }
 
         // Remove a data do nome para o título (ex: "2023-10-27-Titulo" vira "Titulo")

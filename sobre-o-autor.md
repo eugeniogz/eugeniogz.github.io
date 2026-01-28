@@ -8,9 +8,9 @@ no_index: true
 
 ## Sobre o autor
 
-![José Eugênio, 2024-07-15](./avatar.png)
+![Foto de José Eugênio, Julho de 2024](./avatar.png)
 
-Engenheiro eletricista ([UFMG](https://ufmg.br)), Mestre em computação ([USP](https://ime.usp.br)) e Doutor em Ciência da Informação ([UFMG](https://eci.ufmg.br)). Analista de sistemas desde 1990, leciona computação em uma escola infantil. Tem como hobby escrever textos, alguns deles alimentam esse site desde 2025.
+Engenheiro eletricista ([UFMG](https://ufmg.br)), Mestre em Ciência da Computação ([USP](https://ime.usp.br)) e Doutor em Gestão & Organização do Conhecimento ([UFMG](https://eci.ufmg.br)). Analista de sistemas desde 1990, leciona computação em uma escola infantil. No tempo livre, além de curtir momentos com a família e amigos, estuda e escreve. Mantém esse site desde 2025 com foco na [Wingene](./wingene-o-futuro-ancestral-manifesto.html), o futuro ancestral, baseado na evolução das virtudes como o caminho para a eudaimonia — que não deve ser somente pessoal, mas [social](./Ipês%20e%20Tijolos/a-eudaimonia-social-quando-as-florestas-mentais-se-encontram.html).
 
 Contato: [eugeniog@gmail.com](mailto:eugeniog@gmail.com)
 
