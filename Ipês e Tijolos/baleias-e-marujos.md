@@ -24,6 +24,6 @@ O oceano jamais será completamente sereno — tal promessa seria ilusória. Mas
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./temperando-a-ideologia.html">&lt;&lt; Temperando a ideologia</a>
+  <a href="./servidao-e-liberdade.html">&lt;&lt; Servidão e liberdade</a>
   <a href="./o-fogo-de-prometeu.html">O fogo de Prometeu &gt;&gt;</a>
 </div>

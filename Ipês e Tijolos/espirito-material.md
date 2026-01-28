@@ -24,6 +24,6 @@ A felicidade é um estado espiritual. Mas o bosque não cresce sozinho. As flore
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./divino-amor.html">&lt;&lt; Divino amor</a>
+  <span></span>
   <a href="./panteao-mental.html">Panteão mental &gt;&gt;</a>
 </div>

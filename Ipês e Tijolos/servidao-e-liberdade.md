@@ -25,5 +25,5 @@ No canto das aves ressoa uma pergunta: quando todos terão asas para voar?
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./odisseia-interior.html">&lt;&lt; Odisseia interior</a>
-  <a href="./temperando-a-ideologia.html">Temperando a ideologia &gt;&gt;</a>
+  <a href="./baleias-e-marujos.html">Baleias e marujos &gt;&gt;</a>
 </div>
