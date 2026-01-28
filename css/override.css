@@ -46,7 +46,17 @@ hr {
 
 .search-link-header {
   position: absolute;
-  top: 40px; /* Alinha verticalmente com o título */
+  top: 25px; /* Alinha verticalmente com o título */
+  right: 0;
+  color: white !important; /* !important para garantir a prioridade sobre outras regras */
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.sobre-autor-link-header {
+  position: absolute;
+  top: 45px;
   right: 0;
   color: white !important; /* !important para garantir a prioridade sobre outras regras */
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;

@@ -2,7 +2,7 @@ title: "Wingene"
 author: "José Eugênio de Assis Gonçalves"
 show_downloads: false
 google_analytics: G-VV8V7GTRPD
-description: "José Eugênio" # This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
+# description: "José Eugênio" # This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
 #remote_theme: pages-themes/modernist@v0.2.0
 remote_theme: pages-themes/architect@v0.2.0
 plugins:

@@ -191,6 +191,7 @@ const sortDocs = (a, b) => {
 function getMetadataFromMd(arquivoMdDestino) {
     let tempoLeitura = 1;
     let semanticOrderScore = 0.0;
+    let noIndex = false;
     
     try {
         const content = arquivoMdDestino.getBlob().getDataAsString();
@@ -212,12 +213,17 @@ function getMetadataFromMd(arquivoMdDestino) {
                 const scoreStr = scoreMatch[1].replace(',', '.');
                 semanticOrderScore = parseFloat(scoreStr) || 0.0;
             }
+
+            // Regex para extrair no_index
+            if (/no_index:\s*true/i.test(yamlBlock)) {
+                noIndex = true;
+            }
         }
     } catch (e) {
         Logger.log(`[ERRO METADATA MD] Falha ao ler metadados do MD ${arquivoMdDestino.getName()}: ${e.toString()}`);
     }
 
-    return { semanticOrderScore: semanticOrderScore, tempoLeitura: tempoLeitura };
+    return { semanticOrderScore: semanticOrderScore, tempoLeitura: tempoLeitura, noIndex: noIndex };
 }
 
 /**
@@ -311,6 +317,7 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
         let semanticOrderScore = 0.0;
         let tempoLeitura = 1;
         let nomeSemData = nomeDocOriginal;
+        let noIndex = false;
 
         if (deveConverter) {
             // Conversão pesada (Corpo e Metadados)
@@ -318,7 +325,8 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
                 markdownContent, 
                 semanticOrderScore,
                 tempoLeitura,
-                nomeSemData
+                nomeSemData,
+                noIndex
             } = getMarkdownAndScoreFromDoc(arquivoDoc, nomeDocOriginal, nomeSlug, pastaDestino));
 
             if (nomeDocOriginal === 'Aforismos') {
@@ -330,7 +338,8 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
                 // LÊ DO ARQUIVO MD existente
                  ({
                     semanticOrderScore,
-                    tempoLeitura
+                    tempoLeitura,
+                    noIndex
                 } = getMetadataFromMd(arquivoMdDestino)); 
                 
                 // Extração leve do Doc apenas para nome (pode ser necessário para a navegação)
@@ -342,7 +351,8 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
                 ({
                     semanticOrderScore,
                     tempoLeitura,
-                    nomeSemData
+                    nomeSemData,
+                    noIndex
                 } = getMetadataFromDocLite(arquivoDoc, nomeDocOriginal));
             }
         }
@@ -359,18 +369,24 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
             deveConverter: deveConverter,
             arquivoMdDestino: arquivoMdDestino,
             nomeSemData: nomeSemData,
-            docFile: arquivoDoc 
+            docFile: arquivoDoc,
+            noIndex: noIndex
         });
 
         // 1.4. Adiciona metadados para indexação (lista paralela)
-        arquivosIndexados.push({
-            original: nomeDocOriginal,
-            slug: nomeSlug,
-            link: `./${nomeSlug}.html`,
-            time: tempoLeitura,
-            semanticOrder: semanticOrderScore
-        });
+        if (!noIndex) {
+            arquivosIndexados.push({
+                original: nomeDocOriginal,
+                slug: nomeSlug,
+                link: `./${nomeSlug}.html`,
+                time: tempoLeitura,
+                semanticOrder: semanticOrderScore
+            });
+        }
     }
+
+    // 1.5. SINCRONIZAR ASSETS (Imagens e Vídeos)
+    sincronizarAssets(pastaFonte, pastaDestino);
 
     // 2. ORDENAÇÃO
     // Ordena listas com a função sortDocs harmonizada
@@ -476,6 +492,36 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
 }
 
 /**
+ * Sincroniza arquivos estáticos (JPG, PNG, Vídeos) da fonte para o destino.
+ */
+function sincronizarAssets(pastaFonte, pastaDestino) {
+    const arquivos = pastaFonte.getFiles();
+    while (arquivos.hasNext()) {
+        const arquivo = arquivos.next();
+        const mime = arquivo.getMimeType();
+        
+        // Verifica se é JPG, PNG ou Vídeo
+        if (mime === MimeType.JPEG || mime === MimeType.PNG || mime.startsWith('video/')) {
+            const nomeArquivo = arquivo.getName();
+            const arquivosDestino = pastaDestino.getFilesByName(nomeArquivo);
+            
+            if (arquivosDestino.hasNext()) {
+                const arquivoDestino = arquivosDestino.next();
+                // Se o arquivo fonte for mais recente, atualiza
+                if (arquivo.getLastUpdated().getTime() > arquivoDestino.getLastUpdated().getTime()) {
+                    Logger.log(`[ASSET ATUALIZADO] ${nomeArquivo} em ${pastaDestino.getName()}`);
+                    arquivoDestino.setTrashed(true);
+                    arquivo.makeCopy(nomeArquivo, pastaDestino);
+                }
+            } else {
+                Logger.log(`[ASSET NOVO] ${nomeArquivo} em ${pastaDestino.getName()}`);
+                arquivo.makeCopy(nomeArquivo, pastaDestino);
+            }
+        }
+    }
+}
+
+/**
  * Salva/Atualiza o arquivo .md com o rodapé de navegação Anterior/Próximo.
  * * **OTIMIZAÇÃO 3:** Se o conteúdo não foi convertido (docInfo.content é null), 
  * ele lê o arquivo existente para injetar o rodapé.
@@ -573,6 +619,7 @@ function getMetadataFromDocLite(docFile, originalFileName) {
     let semanticOrderScore = 0.0;
     let tempoLeitura = 1;
     let nomeSemData = originalFileName; 
+    let noIndex = false;
     
     try {
         const doc = DocumentApp.openById(docFile.getId());
@@ -594,6 +641,10 @@ function getMetadataFromDocLite(docFile, originalFileName) {
             semanticOrderScore = parseFloat(scoreStr) || semanticOrderScore;
         }
 
+        if (/^não indexar/i.test(fullText)) {
+            noIndex = true;
+        }
+
         // 3. REMOÇÃO DA DATA DO NOME
         const regex = /^\d{4}-\d{2}-\d{2}-/;
         nomeSemData = originalFileName.replace(regex, '');
@@ -601,7 +652,8 @@ function getMetadataFromDocLite(docFile, originalFileName) {
         return {
             semanticOrderScore: semanticOrderScore,
             tempoLeitura: tempoLeitura,
-            nomeSemData: nomeSemData
+            nomeSemData: nomeSemData,
+            noIndex: noIndex
         };
 
     } catch (e) {
@@ -609,7 +661,8 @@ function getMetadataFromDocLite(docFile, originalFileName) {
         return {
             semanticOrderScore: 0.0,
             tempoLeitura: tempoLeitura,
-            nomeSemData: originalFileName
+            nomeSemData: originalFileName,
+            noIndex: false
         };
     }
 }
@@ -732,6 +785,7 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
     let tempoLeitura = 1;
     let nomeSemData = originalFileName; // Inicializa com o nome original
     const isPostsFolder = pastaDestino.getName() === '_posts';
+    let noIndex = false;
 
     try {
         const doc = DocumentApp.openById(docFile.getId());
@@ -778,6 +832,18 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
             contentElementsInReverse.push(element);
         }
         
+        // Verifica se o primeiro elemento (último do array reverso) é "não indexar"
+        if (contentElementsInReverse.length > 0) {
+            const firstElem = contentElementsInReverse[contentElementsInReverse.length - 1];
+            if (firstElem.getType() === DocumentApp.ElementType.PARAGRAPH) {
+                const text = firstElem.asParagraph().getText().trim();
+                if (/^não indexar/i.test(text)) {
+                    noIndex = true;
+                    contentElementsInReverse.pop(); // Remove o elemento para não ir para o MD
+                }
+            }
+        }
+
         // Remove a data do nome para o título (ex: "2023-10-27-Titulo" vira "Titulo")
         const regex = /^\d{4}-\d{2}-\d{2}-/;
         nomeSemData = originalFileName.replace(regex, '');
@@ -790,6 +856,10 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         // ADIÇÃO DOS METADADOS PARA OTIMIZAÇÃO FUTURA
         markdown += `reading_time: ${tempoLeitura}\n`;
         markdown += `semantic_order: ${semanticOrderScore}\n`;
+
+        if (noIndex) {
+            markdown += `no_index: true\n`;
+        }
 
         if (tags.length > 0) {
             markdown += `tags:\n`;
@@ -963,7 +1033,8 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
             markdownContent: markdown.trim(),
             semanticOrderScore: semanticOrderScore,
             tempoLeitura: tempoLeitura,
-            nomeSemData: nomeSemData // Retorna o nome sem data para uso na navegação
+            nomeSemData: nomeSemData, // Retorna o nome sem data para uso na navegação
+            noIndex: noIndex
         };
 
     } catch (e) {
@@ -972,7 +1043,8 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
             markdownContent: `\n\n[ERRO NA CONVERSÃO]: ${e.toString()}\n\n`,
             semanticOrderScore: 0.0,
             tempoLeitura: tempoLeitura,
-            nomeSemData: originalFileName // Retorna o nome original em caso de erro
+            nomeSemData: originalFileName, // Retorna o nome original em caso de erro
+            noIndex: false
         };
     }
 }
