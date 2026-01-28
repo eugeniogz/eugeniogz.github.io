@@ -15,19 +15,19 @@ tags:
 
 ## Vida breve, rotas eternas
 
-Pegadas leves no tempo humano.  
-Tempo pequeno no verso oceano.  
-Universo efêmero na negra entropia.  
+Pegadas leves no tempo humano,  
+tempo pequeno no verso oceano,  
+universo efêmero na negra entropia.  
 Virtudes para quê? A noite é fatal.
 
-Ocaso do ser, destino final.  
-Caráter quebrado, tristeza real.  
-Criar alegria, das virtudes o sal.  
-Polir o caráter, o futuro ancestral.
+Ocaso do ser, destino final,  
+caráter quebrado, tristeza real.  
+Criar alegria, das virtudes o sal,  
+polir o caráter, o futuro ancestral.
 
-Rotas diárias tecem as vidas.  
-Valor para viver o alegre pulsar.  
-Enxergar sentido nas rotas criadas.  
+Rotas diárias tecem as vidas,  
+valor para viver o alegre pulsar.  
+Enxergar sentido nas rotas criadas,  
 Mapas eternos do porvir navegar.
 
 ---

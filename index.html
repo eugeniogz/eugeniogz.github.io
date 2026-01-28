@@ -19,16 +19,19 @@ title: Índice
   var textDiv = document.getElementById('random-post-text');
   var statusDiv = document.getElementById('random-post-status');
   var isPaused = false;
+  var index = Math.floor(Math.random() * allPosts.length);
 
-  function displayRandomPost() {
-    if (allPosts.length === 0) return;
-    var randomIndex = Math.floor(Math.random() * allPosts.length);
-    textDiv.innerText = allPosts[randomIndex];
+  function displayNextPost() {
+    if (index > allPosts.length) index = 0;
+    textDiv.innerText = allPosts[index];
+    if (index === allPosts.length - 1) index = 0;
+    else index++;
+    
   }
 
   setInterval(function() {
-    if (!isPaused) displayRandomPost();
-  }, 10000);
+    if (!isPaused) displayNextPost();
+  }, 5000);
 
   container.addEventListener('click', function() {
     isPaused = !isPaused;
