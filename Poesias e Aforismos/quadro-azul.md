@@ -15,7 +15,7 @@ tags:
 
 Meu olhar pinta prédios,  
 ora pequenos, ora altos,  
-árvores de todos os tipos.  
+árvores de todos os tipos,  
 crias da visão serena.
 
 De repente,  

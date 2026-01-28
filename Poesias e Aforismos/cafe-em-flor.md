@@ -17,10 +17,10 @@ tags:
 
 Baila o jasmim do café.  
 Pulsando a seiva  
-que as folhas adoçam.  
+que as folhas adoçam,  
 exala ao vento o aroma.
 
-Brinda do néctar o doce.  
+Brinda do néctar o doce,  
 déboras nutrindo amor.  
 Perfuma o ansiado enlace.  
 Beijo que enseja calor.

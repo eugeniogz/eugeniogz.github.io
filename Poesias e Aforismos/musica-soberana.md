@@ -32,7 +32,7 @@ assim como o grito.
 A batalha vez ou outra à tona.  
 Ressoando no ferro que prevalece,  
 música urbana de sons conhecidos.  
-Gênero ecoa, abafando os bandos.
+O cinza ecoa, abafando os bandos.
 
 A harmonia das flores permanece,  
 espalhando o perfume ancestral.  

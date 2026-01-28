@@ -27,7 +27,7 @@ outros já esquecidos.
 Infinitos que nunca terei.
 
 Ecos de outros caminhos,  
-Brilhos de oculto luar.  
+brilhos de oculto luar.  
 Correm vidas alheias,  
 infinitas que não sei.
 
