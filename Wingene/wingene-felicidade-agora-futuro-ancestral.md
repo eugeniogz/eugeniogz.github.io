@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Wingene: Felicidade agora, futuro ancestral"
-reading_time: 12
+reading_time: 11
 semantic_order: 17
 tags:
   - Serena euforia
@@ -63,7 +63,7 @@ Quando esse caminho é trilhado com dedicação, quando valores se alinham, impe
 
 A mente se amplia em instantes de intensa alegria em experiências radiantes além do comum. Uma grande euforia, contida e serena; um caloroso aconchego como fogo que não queima, persistindo no cinza urbano ou na tranquila pintura, que da seiva emana — os sentidos e os pensamentos não perturbam, a consciência flutua. Nesses momentos, surge um estado de graça — quando sinapses se elevam, pulsando energia.
 
-Sentir essa dádiva é próprio do humano — mas poucos a buscam, presos nas nuvens das obrigações mundanas, o eterno castigo de Sísifo: rolando a mesma pedra diariamente. Muitas vezes, o peso da rocha cresce com a injustiça social moderna. Isso supera a simples monotonia, tornando-se o negro flagelo da maioria. Apesar disso, o brilho da vida pode favorecer a todos, permitindo o despertar da *eudaimonia*, meta dos filósofos do mundo arcaico. Hoje o progresso é visível, mas prioriza-se o fútil. Isso encobre uma aspiração universal: **florescer a felicidade**.
+Sentir essa dádiva é próprio do humano — mas poucos a buscam, presos nas nuvens das obrigações mundanas, o eterno castigo de Sísifo: rolando a mesma pedra diariamente. Muitas vezes, o peso da rocha cresce com a injustiça social moderna. Isso supera a simples monotonia, tornando-se o negro flagelo da maioria. Apesar disso, o brilho da vida pode favorecer a todos, permitindo florescer a felicidade.
 
 A floresta mental pode bailar nas copas mais altas, favorecendo a **serena euforia**, onde o corpo é somente o palco dos passos da mente. Basta que estes flutuem no tablado, sem notar a plateia. No conforto do lar, no movimento do trabalho, até em tediosas rotinas, a peça pode seguir. Pois a mente aguarda a deixa da delicada dança — **valsa de neurônios em sintonia**.
 
@@ -83,9 +83,7 @@ As descobertas seguem acontecendo, nossa bagagem cultural é o trampolim que per
 
 ### **Futuro Ancestral**
 
-A busca pela felicidade nos impele a realizar a *Wingene*; no entanto, esse objetivo se esvazia na brevidade da vida. No espaço curto da existência, a mente não consegue fazer muito. Girar a roda do acróstico VIDA — alinhando valores, imperfeições, decisões e atenção — pode até guiar a evolução, mas será sempre um passo breve na escala do tempo.
-
-Por que lutar para o aprimoramento se não seremos nós a desfrutar do futuro?  A resposta está na eudaimonia como experiência presente dessa luta e no que teceram nossos ancestrais. Como eles, seremos a base das novas gerações, garantindo a sua evolução. Assim, pode-se pensar em uma *Wingene* coletiva, onde cada geração prepara o terreno para o florescimento de uma sociedade cada vez mais realizada. Uma humanidade que gradativamente se extasia em plena eudaimonia.
+Por que lutar para o aprimoramento se não seremos nós a desfrutar do futuro?  A resposta está na eudaimonia como experiência presente dessa luta e no que teceram nossos ancestrais. Como eles, seremos a base das novas gerações, garantindo a sua evolução. Assim, pode-se pensar em uma Wingene coletiva, onde cada geração prepara o terreno para que a próxima floresça em eudaimonia.
 
 Essa sociedade tem um prazo para florescer, a raça humana ruma para um horizonte finito. A urgência na dedicação em evoluir é ditada pelo tempo, pois a seiva cultural não irá pulsar para sempre. A vida humana desaparecerá algum dia, depois ruirá também toda a biologia terrestre. Não colonizaremos outros planetas em tempo hábil; até mesmo as máquinas, nossas herdeiras de silício, eventualmente apagarão.
 
