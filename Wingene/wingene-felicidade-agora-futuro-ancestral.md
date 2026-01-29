@@ -25,7 +25,7 @@ tags:
 
 ## Wingene: Felicidade agora, futuro ancestral
 
-### **A vitória ancestral**
+### **Vitória das virtudes**
 
 Esse ensaio pretende mostrar uma visão de mundo que começou a se desenhar em setembro de 1998 com a criação de um neologismo: ***Wingene***, a fusão entre **win** e **gene** — vitória e herança. Seu sentido ultrapassa o triunfo genético: expande-se na eterna busca pelo significado da vida. Um anseio humano, gravado em fios dourados desde o seio materno.
 
@@ -33,7 +33,7 @@ O homem carrega desde a infância questões que incitam; o eterno aprender é he
 
 A *eudaimonia*, do grego *eu* (bem) e *daimon* (espírito), representa o florescimento da felicidade — um estado perene e sereno, que nasce das forças internas. Alinha-se ao estoicismo, no qual a alegria vem do interior, sendo firme e sólida. O aperfeiçoamento moral vem sendo debatido há milênios; a eudaimonia, segundo Aristóteles, é consequência de uma vida virtuosa. Não pretendemos reinventar esse sentido filosófico, mas utilizá-lo como base para a *Wingene*. O primeiro passo para esse florescimento é o conhecimento, que conduz ao caminho da evolução pessoal. Apesar de meu ávido desejo de aprender, foi com a Logosofia que esse ímpeto se solidificou, pois encarei com maior seriedade o desafio do aprimoramento moral — objetivo principal da obra de Carlos Pecotche¹.
 
-A *Wingene* se apoia em bases naturalistas, rejeitando a metafísica. Por isso, meu conceito de espírito não é metafísico: ele habita o corpo vivente, manifesta-se nos processos biológicos e guarda valores e emoções puras na mente. A poderosa máquina mental pode parecer, em alguns casos, extrapolar o limite corporal, viajando nas ondas das inúmeras conexões neuronais. Mas sua substância é material. Ainda assim, a mente é uma densa floresta, com árvores enraizadas no corpo inteiro que sentem, comandam e pensam. Das raízes às folhas, a floresta é um todo — complexo sistema consciente que dança incessantemente.
+A *Wingene* se apoia em bases naturalistas. Por isso, meu conceito de espírito não é metafísico: ele habita o corpo vivente, manifesta-se nos processos biológicos e guarda valores e emoções puras na mente. A poderosa máquina mental pode parecer, em alguns casos, extrapolar o limite corporal, viajando nas ondas das inúmeras conexões neuronais. Mas sua substância é material. Ainda assim, a mente é uma densa floresta, com árvores enraizadas no corpo inteiro que sentem, comandam e pensam. Das raízes às folhas, a floresta é um todo — complexo sistema consciente que dança incessantemente.
 
 Mas se tanto a filosofia clássica quanto a Logosofia já contemplam o aperfeiçoamento humano, por que Wingene? A resposta está em três ênfases modernas: (1) a herança genética como ponto de partida material, (2) a responsabilidade intergeracional explícita — nossa evolução é legado futuro, e (3) a integração entre ciência e filosofia prática. Wingene é eudaimonia sem metafísica, com raízes genéticas que florescem no futuro ancestral.
 
@@ -69,7 +69,7 @@ A floresta mental pode bailar nas copas mais altas, favorecendo a **serena eufor
 
 A serena euforia pode acontecer em ocasiões memoráveis, de sentimentos pacíficos e pensamentos harmônicos. Não exige o vazio de respirações marcadas, mas a dança suave além do pensar e sentir. Quando a plateia e o palco não perturbam a mente que se expande, numa grata sensação de ser por si. Sem o clamor das sensações: **somente o baile de um ser consciente**. Mas essa experiência não pode permanecer estática — a mente que floresce anseia por expandir-se por meio da criação.
 
-### **O Poder de Descobrir**
+### **Poder da criação**
 
 A vida se amplia na ação de inventar — *Invenire*, do latim, que tem como significado literal descobrir. Tomei contato com essa sutileza estudando a biografia de Jorge Luís Borges. O ofício do artista criador não é diminuído se seu trabalho é desbravar, pois buscar soluções permanece um desafio. Explorar novos destinos, navegar no oceano natural. Criar é, portanto, a mais pura fonte da *eudaimonia* — a felicidade de encontrar a terra desconhecida. Caminhos para obras-primas são sempre descobertas do mundo. As respostas estão no universo, aguardando que mentes criativas as revelem.
 
