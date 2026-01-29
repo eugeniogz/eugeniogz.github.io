@@ -221,6 +221,6 @@ O método não oferece redenção, mas direção. Não promete perfeição, mas 
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./wingene-o-futuro-ancestral.html">&lt;&lt; Wingene: O futuro ancestral</a>
+  <a href="./wingene-felicidade-agora-futuro-ancestral.html">&lt;&lt; Wingene: Felicidade agora, futuro ancestral</a>
   <span></span>
 </div>
