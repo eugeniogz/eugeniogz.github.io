@@ -31,13 +31,13 @@ Esse ensaio pretende mostrar uma visão de mundo que começou a se desenhar em s
 
 O homem carrega desde a infância questões que incitam; o eterno aprender é herança ancestral. Mas o conhecimento não é tudo, a vitória se completa na sua prática rumo ao aperfeiçoamento pessoal — que nunca termina, pois cada passo mira um utópico ideal. Triunfos alvorecem brilhantes, iluminando o ser que, cada dia mais realizado, se extasia em plena *eudaimonia*.
 
-A *eudaimonia*, do grego *eu* (bem) e *daimon* (espírito), representa o florescimento da felicidade — um estado perene e sereno, que nasce das forças internas. Alinha-se ao estoicismo, no qual a alegria vem do interior, sendo firme e sólida. O aperfeiçoamento moral vem sendo debatido há milênios; a eudaimonia, segundo Aristóteles, é consequência de uma vida virtuosa. Não pretendemos reinventar esse sentido filosófico, mas utilizá-lo como base para a *Wingene*. O primeiro passo para esse florescimento é o conhecimento, que conduz ao caminho da evolução pessoal. Apesar de meu ávido desejo de aprender, foi com a Logosofia que esse ímpeto se solidificou, pois encarei com maior seriedade o desafio do aprimoramento moral — objetivo principal da obra de Carlos Pecotche¹.
+A *eudaimonia*, do grego *eu* (bem) e *daimon* (espírito), representa o florescimento da felicidade — um estado perene e sereno, que nasce das forças internas. Alinha-se ao estoicismo, no qual a alegria vem do interior, sendo firme e sólida. O aperfeiçoamento moral vem sendo debatido há milênios; a eudaimonia, segundo Aristóteles¹, é consequência de uma vida virtuosa. Não pretendemos reinventar esse sentido filosófico, mas utilizá-lo como base para a *Wingene*. O primeiro passo para esse florescimento é o conhecimento, que conduz ao caminho da evolução pessoal. Apesar de meu ávido desejo de aprender, foi com a Logosofia que esse ímpeto se solidificou, pois encarei com maior seriedade o desafio do aprimoramento moral — objetivo principal da obra de Carlos Pecotche².
 
 A *Wingene* se apoia em bases naturalistas. Por isso, meu conceito de espírito não é metafísico: ele habita o corpo vivente, manifesta-se nos processos biológicos e guarda valores e emoções puras na mente. A poderosa máquina mental pode parecer, em alguns casos, extrapolar o limite corporal, viajando nas ondas das inúmeras conexões neuronais. Mas sua substância é material. Ainda assim, a mente é uma densa floresta, com árvores enraizadas no corpo inteiro que sentem, comandam e pensam. Das raízes às folhas, a floresta é um todo — complexo sistema consciente que dança incessantemente.
 
 Mas se tanto a filosofia clássica quanto a Logosofia já contemplam o aperfeiçoamento humano, por que Wingene? A resposta está em três ênfases modernas: (1) a herança genética como ponto de partida material, (2) a responsabilidade intergeracional explícita — nossa evolução é legado futuro, e (3) a integração entre ciência e filosofia prática. Wingene é eudaimonia sem metafísica, com raízes genéticas que florescem no futuro ancestral.
 
-A herança genética cria as primeiras luzes da mente. Segundo António Damásio²: “*Os nossos cérebros e as nossas mentes não são tabulae rasae quando nascemos. Contudo, também não são, na sua totalidade, geneticamente determinados. A sombra genética tem um grande alcance, mas não é completa.*” Esse legado biológico deve expandir-se gradualmente com a cultura — chave do aperfeiçoamento moral. Assim, o conhecimento saciará o ser, oferecendo-lhe a oportunidade ímpar do triunfo pessoal.
+A herança genética cria as primeiras luzes da mente. Segundo António Damásio³: “*Os nossos cérebros e as nossas mentes não são tabulae rasae quando nascemos. Contudo, também não são, na sua totalidade, geneticamente determinados. A sombra genética tem um grande alcance, mas não é completa.*” Esse legado biológico deve expandir-se gradualmente com a cultura — chave do aperfeiçoamento moral. Assim, o conhecimento saciará o ser, oferecendo-lhe a oportunidade ímpar do triunfo pessoal.
 
 Esse naturalismo ético reconhece limites biológicos sem determinismo. Nascemos com predisposições — temperamento, capacidades, vulnerabilidades — mas a cultura as modela. A Wingene opera nessa fronteira: entre o que herdamos (gene) e o que construímos (win). Entre a sombra genética e a luz cultural.
 
@@ -93,7 +93,7 @@ Nosso tempo é contado nas poucas décadas da finita existência. Temos essa opo
 
 A Wingene coletiva pode parecer inútil no tempo cósmico, que torna a existência humana um breve instante. Como encontrar sentido se o fim é inevitável? Meu olhar para a gênese do Cosmos sempre se apoiou na ciência, mas carecia de dimensão existencial. Foi o futuro ocaso da vida terrestre que me forçou a confrontar: qual esperança sustenta o esforço se o universo terá um fim? A resposta veio de uma especulação cosmológica ousada — não como verdade científica, mas como possibilidade que reconforta o espírito: e se a morte de um universo fosse o nascimento de outro?
 
-Essa especulação reflete uma das postulações científicas mais profundas e radicais, onde um buraco negro pode ter na outra ponta um buraco branco. Como descreve Carlo Rovelli³: *“se vierem comigo, vamos chegar à fronteira do horizonte de um buraco negro, entrar, descer até o fundo, onde espaço e tempo se dissolvem, atravessá-lo, desembocar no buraco branco, onde o tempo é invertido, e dali sair no futuro.”* Nosso universo poderia ser então um buraco branco. Imagino a existência de uma sequência infinita de pares de buracos brancos e negros. A vida pode surgir em cada um desses buracos brancos. A dor da perda é mitigada pelo entendimento da eternidade desse ciclo.
+Essa especulação reflete uma das postulações científicas mais profundas e radicais, onde um buraco negro pode ter na outra ponta um buraco branco. Como descreve Carlo Rovelli⁴: *“se vierem comigo, vamos chegar à fronteira do horizonte de um buraco negro, entrar, descer até o fundo, onde espaço e tempo se dissolvem, atravessá-lo, desembocar no buraco branco, onde o tempo é invertido, e dali sair no futuro.”* Nosso universo poderia ser então um buraco branco. Imagino a existência de uma sequência infinita de pares de buracos brancos e negros. A vida pode surgir em cada um desses buracos brancos. A dor da perda é mitigada pelo entendimento da eternidade desse ciclo.
 
 O que brotou na nossa nave azul algum dia será cinzas. Não viveremos de novo, tampouco voltaremos em outra oportunidade. Nosso prazo é o que temos: contado em respirações, no ritmo do coração. Para onde irá toda a beleza — os quadros brilhantes da colorida natureza? Esse inevitável futuro não me causa sofrimento, pois enxergo no escuro de buracos massivos, avistando neles negros portais para invisíveis universos — novas cores, outras vidas.
 
@@ -101,7 +101,7 @@ Permanece essa esperança otimista: infinitas cosmogonias à espera de novos inv
 
 ***
 
-A vitória da herança genética e cultural se constrói no esforço para a evolução. Somente assim pode-se sentir a serena euforia no presente. Passar adiante o legado, porém, também é fonte de eudaimonia — felicidade agora, futuro ancestral.
+A vitória das virtudes se constrói no esforço diário. Somente assim pode-se sentir a serena euforia no presente. Passar adiante o legado, porém, também é fonte de eudaimonia — felicidade agora, futuro ancestral.
 
 A *Wingene* se realiza em múltiplas camadas: no esforço evolutivo individual, na serena euforia que nos eleva, no poder criativo de descobrir, no legado deixado às gerações futuras e na esperança cósmica de novos universos. Cada atitude atenta rege o ritmo da vida: decisões que superam as imperfeições, valores que moldam o caráter, a existência que compõe linhas de uma sinfonia. Que nossa breve passagem seja mais que simples travessia — compassos que ecoem na música universal.
 
@@ -109,11 +109,13 @@ A *Wingene* se realiza em múltiplas camadas: no esforço evolutivo individual, 
 
 **Notas**
 
-¹ PECOTCHE, Carlos. *Deficiências e propensões do ser humano*. São Paulo: Editora Logosófica, 2014.
+¹ ARISTÓTELES. *Ética a Nicômaco.* Rio de Janeiro: Editora Vozes, 2024.
 
-² DAMÁSIO, António. *O Erro de Descartes: emoção, razão e o cérebro humano*. São Paulo: Companhia das Letras, 2012.
+² PECOTCHE, Carlos. *Deficiências e propensões do ser humano*. São Paulo: Editora Logosófica, 2014.
 
-³ ROVELLI, Carlo. *Buracos brancos: dentro do horizonte*. Tradução de Silvana Cobucci Leite. Rio de Janeiro: Objetiva, 2024.
+³ DAMÁSIO, António. *O Erro de Descartes: emoção, razão e o cérebro humano*. São Paulo: Companhia das Letras, 2012.
+
+⁴ ROVELLI, Carlo. *Buracos brancos: dentro do horizonte*. Tradução de Silvana Cobucci Leite. Rio de Janeiro: Objetiva, 2024.
 
 ---
 
