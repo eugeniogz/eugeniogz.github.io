@@ -27,5 +27,5 @@ Mas seria ingênuo acreditar que a pavimentação será concluída em nossa gera
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./o-fogo-de-prometeu.html">&lt;&lt; O fogo de Prometeu</a>
-  <a href="./a-eudaimonia-social-quando-as-florestas-mentais-se-encontram.html">A Eudaimonia Social: Quando as florestas mentais se encontram &gt;&gt;</a>
+  <a href="./eudaimonia-social.html">Eudaimonia Social &gt;&gt;</a>
 </div>

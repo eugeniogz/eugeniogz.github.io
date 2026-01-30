@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Wingene: Felicidade agora, futuro ancestral"
-reading_time: 11
+reading_time: 12
 semantic_order: 17
 tags:
   - Serena euforia
@@ -85,6 +85,8 @@ As descobertas seguem acontecendo, nossa bagagem cultural é o trampolim que per
 
 Por que lutar para o aprimoramento se não seremos nós a desfrutar do futuro?  A resposta está na eudaimonia como experiência presente dessa luta e no que teceram nossos ancestrais. Como eles, seremos a base das novas gerações, garantindo a sua evolução. Assim, pode-se pensar em uma Wingene coletiva, onde cada geração prepara o terreno para que a próxima floresça em eudaimonia.
 
+O filósofo Ailton Krenak⁴ observa que o futuro é ancestral: os ecossistemas que sustentam a vida precedem a própria humanidade. Preservar esse futuro ancestral natural é fundamental, ainda que não impeça o eventual ocaso de nossa civilização.
+
 Essa sociedade tem um prazo para florescer, a raça humana ruma para um horizonte finito. A urgência na dedicação em evoluir é ditada pelo tempo, pois a seiva cultural não irá pulsar para sempre. A vida humana desaparecerá algum dia, depois ruirá também toda a biologia terrestre. Não colonizaremos outros planetas em tempo hábil; até mesmo as máquinas, nossas herdeiras de silício, eventualmente apagarão.
 
 Nosso tempo é contado nas poucas décadas da finita existência. Temos essa oportunidade para descobrir tudo que pudermos. Inventar a cultura e aprimorar a moral não precisa de motivo. Está escrito em nossa herança: o fogo de Prometeu permanecerá aceso, iluminando o futuro ancestral — mesmo que sua luz precise atravessar a escuridão total para brilhar outra vez.
@@ -93,7 +95,7 @@ Nosso tempo é contado nas poucas décadas da finita existência. Temos essa opo
 
 A Wingene coletiva pode parecer inútil no tempo cósmico, que torna a existência humana um breve instante. Como encontrar sentido se o fim é inevitável? Meu olhar para a gênese do Cosmos sempre se apoiou na ciência, mas carecia de dimensão existencial. Foi o futuro ocaso da vida terrestre que me forçou a confrontar: qual esperança sustenta o esforço se o universo terá um fim? A resposta veio de uma especulação cosmológica ousada — não como verdade científica, mas como possibilidade que reconforta o espírito: e se a morte de um universo fosse o nascimento de outro?
 
-Essa especulação reflete uma das postulações científicas mais profundas e radicais, onde um buraco negro pode ter na outra ponta um buraco branco. Como descreve Carlo Rovelli⁴: *“se vierem comigo, vamos chegar à fronteira do horizonte de um buraco negro, entrar, descer até o fundo, onde espaço e tempo se dissolvem, atravessá-lo, desembocar no buraco branco, onde o tempo é invertido, e dali sair no futuro.”* Nosso universo poderia ser então um buraco branco. Imagino a existência de uma sequência infinita de pares de buracos brancos e negros. A vida pode surgir em cada um desses buracos brancos. A dor da perda é mitigada pelo entendimento da eternidade desse ciclo.
+Essa especulação reflete uma das postulações científicas mais profundas e radicais, onde um buraco negro pode ter na outra ponta um buraco branco. Como descreve Carlo Rovelli⁵: *“se vierem comigo, vamos chegar à fronteira do horizonte de um buraco negro, entrar, descer até o fundo, onde espaço e tempo se dissolvem, atravessá-lo, desembocar no buraco branco, onde o tempo é invertido, e dali sair no futuro.”* Nosso universo poderia ser então um buraco branco. Imagino a existência de uma sequência infinita de pares de buracos brancos e negros. A vida pode surgir em cada um desses buracos brancos. A dor da perda é mitigada pelo entendimento da eternidade desse ciclo.
 
 O que brotou na nossa nave azul algum dia será cinzas. Não viveremos de novo, tampouco voltaremos em outra oportunidade. Nosso prazo é o que temos: contado em respirações, no ritmo do coração. Para onde irá toda a beleza — os quadros brilhantes da colorida natureza? Esse inevitável futuro não me causa sofrimento, pois enxergo no escuro de buracos massivos, avistando neles negros portais para invisíveis universos — novas cores, outras vidas.
 
@@ -115,7 +117,9 @@ A *Wingene* se realiza em múltiplas camadas: no esforço evolutivo individual, 
 
 ³ DAMÁSIO, António. *O Erro de Descartes: emoção, razão e o cérebro humano*. São Paulo: Companhia das Letras, 2012.
 
-⁴ ROVELLI, Carlo. *Buracos brancos: dentro do horizonte*. Tradução de Silvana Cobucci Leite. Rio de Janeiro: Objetiva, 2024.
+⁴ KRENAK, Ailton. *Futuro ancestral*. São Paulo: Companhia das Letras, 2022.
+
+⁵ ROVELLI, Carlo. *Buracos brancos: dentro do horizonte*. Tradução de Silvana Cobucci Leite. Rio de Janeiro: Objetiva, 2024.
 
 ---
 

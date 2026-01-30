@@ -26,6 +26,6 @@ Honrar o ancestral não implica preservar tábuas apodrecidas, mas navegar com a
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./a-eudaimonia-social-quando-as-florestas-mentais-se-encontram.html">&lt;&lt; A Eudaimonia Social: Quando as florestas mentais se encontram</a>
+  <a href="./eudaimonia-social.html">&lt;&lt; Eudaimonia Social</a>
   <span></span>
 </div>

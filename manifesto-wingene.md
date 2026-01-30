@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Wingene: o futuro ancestral (manifesto)"
+title: "Manifesto Wingene"
 reading_time: 3
 semantic_order: 1
 tags:
@@ -19,7 +19,7 @@ tags:
   - Espírito
 --- 
 
-## Wingene: o futuro ancestral (manifesto)
+## Manifesto Wingene
 
 Criei a palavra *Wingene* da fusão entre *win* e *gene* — vitória e herança. Mas seu sentido ultrapassa o triunfo genético: expande-se na eterna busca pelo saber — nossa herança ancestral. O conhecimento se completa quando se torna prática, que leva ao aperfeiçoamento pessoal. Uma trilha que nunca termina: cada instante nos aproxima do utópico ideal, florescendo em plena eudaimonia — *eu* (bem) e *daimon* (espírito). Entendo “espírito” não como substância imaterial, mas como emergência de processos neurais. A experiência de transcendência brota da matéria viva. Nesse sentido, a eudaimonia é felicidade serena — um estado natural que nasce no recinto mental.
 
@@ -45,15 +45,11 @@ A busca pela *eudaimonia* nos impele a realizar a *Wingene*; no entanto, esse ob
 
 Por que lutar para o aprimoramento se não seremos nós a desfrutar do futuro? A resposta está no que teceram nossos ancestrais e na eudaimonia como experiência presente dessa luta. Nós devemos ser a base das novas gerações, garantindo o seu futuro. Assim, pode-se pensar em uma *Wingene* coletiva, onde cada geração prepara o terreno para o florescimento de uma sociedade cada vez mais evoluída.
 
-Nosso tempo é contado nas poucas décadas da finita existência. Temos essa oportunidade para descobrir tudo que pudermos. Inventar a cultura e aprimorar a moral não precisa de motivo. Está escrito em nossa herança: a tocha do conhecimento deve seguir iluminando o futuro — mesmo que essa luz precise atravessar a escuridão total para brilhar outra vez. Como sugere o físico Carlo Rovelli², buracos negros podem gerar novos universos. Infinitas cosmogonias à espera de novos inventores que revelem sinfonias inéditas — a música da finita existência que segue vibrando na vida sem fim.
-
 [Wingene: filosofia e prática da herança consciente](/Wingene)
 
 **Notas**
 
 ¹ DAMÁSIO, António. *O Erro de Descartes: emoção, razão e o cérebro humano*. São Paulo: Companhia das Letras, 2012.
-
-² ROVELLI, Carlo. *Buracos brancos: dentro do horizonte*. Tradução de Silvana Cobucci Leite. Rio de Janeiro: Objetiva, 2024.
 
 ---
 

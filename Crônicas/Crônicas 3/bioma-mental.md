@@ -24,5 +24,5 @@ A cadeira acolhe o corpo salgado. Marcos observa o oceano beijar o azul. Recorda
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./felicidade-singelo-trinado.html">&lt;&lt; Felicidade — singelo trinado</a>
-  <a href="./futuro-ancestral.html">Futuro ancestral &gt;&gt;</a>
+  <a href="./vestido-azul.html">Vestido azul &gt;&gt;</a>
 </div>

@@ -15,7 +15,7 @@ tags:
 
 ## Momentos que tecem a vida
 
-A luz da manhã atravessa o vidro da janela, decompondo-se em cores na parede branca da sala. Marcos observa a poeira dançar na luz, um pequeno ecossistema de instantes suspensos. Pensa no seu neologismo: [Wingene](/wingene-o-futuro-ancestral-manifesto.html). Naquele momento, o peso da xícara de café em sua mão, o calor que sobe pelos dedos, representam seu significado: a vitória da vida que se aperfeiçoa.
+A luz da manhã atravessa o vidro da janela, decompondo-se em cores na parede branca da sala. Marcos observa a poeira dançar na luz, um pequeno ecossistema de instantes suspensos. Pensa na sua filosofia: [Wingene](/manifesto-wingene.html). Naquele momento, o peso da xícara de café em sua mão, o calor que sobe pelos dedos, representam seu significado: a vitória da vida que se aperfeiçoa.
 
 Ele sabe que herdou mais do que traços físicos; carrega séculos de perguntas e descobertas. Conhecimentos que alimentam a decisão de polir as arestas do próprio caráter naquela terça-feira comum. Termina o café apreciando os instantes; a mente voa tranquila no vapor que emana do líquido. A hora da sua consulta se aproxima, toma um banho revigorante e se apronta para sair.
 

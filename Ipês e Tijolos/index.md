@@ -11,6 +11,5 @@
 ### 📄 [Baleias e marujos](./baleias-e-marujos.html) <span class="word-count">[1 min]</span>
 ### 📄 [O fogo de Prometeu](./o-fogo-de-prometeu.html) <span class="word-count">[1 min]</span>
 ### 📄 [Pavimentando o futuro](./pavimentando-o-futuro.html) <span class="word-count">[1 min]</span>
-### 📄 [A Eudaimonia Social](./a-eudaimonia-social-quando-as-florestas-mentais-se-encontram.html) <span class="word-count">[1 min]</span>
-Quando as florestas mentais se encontram
+### 📄 [Eudaimonia Social](./eudaimonia-social.html) <span class="word-count">[2 min]</span>
 ### 📄 [Honrando a herança ancestral](./honrando-a-heranca-ancestral.html) <span class="word-count">[1 min]</span>
