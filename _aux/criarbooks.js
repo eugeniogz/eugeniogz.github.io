@@ -109,6 +109,10 @@ function compilarDoisLivrosDaPasta(pastaFinalizados, pastaDestino) {
     if (!verificarNecessidadeCompilacao(pastaFinalizados, NOME_LIVRO_FORMATADO, listaDocs)) {
       return;
     }
+    
+    Logger.log('Carregando conteúdo e metadados dos documentos...');
+    carregarConteudoDocs(listaDocs);
+
     // 2. Ordenar os documentos internos (USANDO SOMENTE METADADOS)
     listaDocs.sort(compararDocs());
     
@@ -219,6 +223,7 @@ function gerarLivro(nomeLivroComSubtitulo, pastaDestino, listaDocs, tipo, tipoSa
         let lastChapterName = null; 
         
         let epigrafeInserted = false;
+        let docsProcessedCount = 0;
 
         listaDocs.forEach(docMeta => {
             if (docMeta.ignoreContent) return;
@@ -299,9 +304,13 @@ function gerarLivro(nomeLivroComSubtitulo, pastaDestino, listaDocs, tipo, tipoSa
                 
                 try {
                     processarDocumentoFormatado(docMeta.id, corpoLivro);
-                    livro.saveAndClose();
-                    livro = DocumentApp.openById(arquivoLivro.getId());
-                    corpoLivro = livro.getBody();
+                    
+                    docsProcessedCount++;
+                    if (docsProcessedCount % 20 === 0) {
+                        livro.saveAndClose();
+                        livro = DocumentApp.openById(arquivoLivro.getId());
+                        corpoLivro = livro.getBody();
+                    }
                 } catch (e) {
                      const erroMsg = 'ERRO: Falha na cópia de conteúdo formatado do documento "' + docMeta.nomeArquivo + '". Detalhes: ' + e.toString();
                      Logger.log(erroMsg);
@@ -341,18 +350,10 @@ function processarDocumentoFormatado(docId, corpoDestino) {
 
         if (tipo === DocumentApp.ElementType.PARAGRAPH || tipo === DocumentApp.ElementType.LIST_ITEM) {
             
-            let paragrafoOrigem;
-            if (tipo === DocumentApp.ElementType.PARAGRAPH) {
-                paragrafoOrigem = elementoOrigem.asParagraph();
-            } else {
-                paragrafoOrigem = elementoOrigem.asListItem();
-            }
-            if (!paragrafoOrigem) continue; 
+            const paragrafoOrigem = (tipo === DocumentApp.ElementType.PARAGRAPH) ? elementoOrigem.asParagraph() : elementoOrigem.asListItem();
+            const textoCompleto = paragrafoOrigem.getText();
             
             const heading = paragrafoOrigem.getHeading();
-            const textoCompleto = paragrafoOrigem.getText();
-
-            //if (textoCompleto.trim().length === 0) continue; 
 
             // 1. Remoção de Metadados (Condicional)
             if (heading === DocumentApp.ParagraphHeading.NORMAL || heading === DocumentApp.ParagraphHeading.UNSUPPORTED) {
@@ -366,96 +367,23 @@ function processarDocumentoFormatado(docId, corpoDestino) {
                 continue;
             }
 
-            // 2. Criação do Novo Elemento
-            let novoParagrafo;
-
-            if (tipo === DocumentApp.ElementType.LIST_ITEM) {
-                novoParagrafo = corpoDestino.appendListItem(textoCompleto);
-                try {
-                    novoParagrafo.setNestingLevel(paragrafoOrigem.getNestingLevel());
-                    novoParagrafo.setGlyphType(paragrafoOrigem.getGlyphType());
-                } catch (e) { /* Ignora */ }
+            // 2. Cópia Otimizada (Element Copy)
+            // Usa copy() para evitar iterar caractere por caractere, o que é muito lento.
+            const copia = elementoOrigem.copy();
+            let novoElemento;
+            
+            if (tipo === DocumentApp.ElementType.PARAGRAPH) {
+                novoElemento = corpoDestino.appendParagraph(copia);
             } else {
-                // Cria o parágrafo com o texto completo
-                novoParagrafo = corpoDestino.appendParagraph(textoCompleto);
+                novoElemento = corpoDestino.appendListItem(copia);
             }
 
             // 3. Padronização de Headers e Cópia de Estilos de Parágrafo
+            // Nota: copy() já traz os estilos, só precisamos ajustar o Heading se necessário.
             if (heading !== DocumentApp.ParagraphHeading.NORMAL && heading !== DocumentApp.ParagraphHeading.UNSUPPORTED) {
                 // Padroniza o Header
-                novoParagrafo.setHeading(DocumentApp.ParagraphHeading.HEADING2);
-            } else {
-                // Copia atributos de parágrafo (alinhamento, espaçamento)
-                try {
-                    novoParagrafo.setAttributes(paragrafoOrigem.getAttributes());
-                    let currentOffset = 0;
-                    for (let j = 0; j < paragrafoOrigem.getNumChildren(); j++) {
-                      const child = paragrafoOrigem.getChild(j);
-                      if (child.getType() === DocumentApp.ElementType.TEXT) {
-                          const textElement = child.asText();
-                          const textContent = textElement.getText();
-                          const textNovo = novoParagrafo.editAsText();
-                          const totalLen = textNovo.getText().length;
-                          for (let k = 0; k < textContent.length; k++) {
-                              if (currentOffset + k >= totalLen) break;
-                              const isBold = textElement.isBold(k);
-                              const isItalic = textElement.isItalic(k);
-                              const attributesToSet = {};
-                          
-                              // Copia o valor booleano ou null (usando || false para segurança)
-                              attributesToSet[DocumentApp.Attribute.BOLD] = isBold || false;
-                              attributesToSet[DocumentApp.Attribute.ITALIC] = isItalic || false;
-
-                              if (isBold || isItalic) {
-                                // Aplicamos APENAS os atributos de BOLD e ITALIC que nos interessam
-                                textNovo.setAttributes(currentOffset + k, currentOffset + k, attributesToSet);
-                              }
-                          }
-                          currentOffset += textContent.length;
-                      }
-                    }
-                    // 4. Cópia da Formatação de Texto em Nível de Caractere/Palavra
-                    // try {
-                    //   // Obtém a interface Text do parágrafo original
-                    //   const textOrigem = paragrafoOrigem.editAsText();
-                    //   const textNovo = novoParagrafo.editAsText();
-                    //   const len = textoCompleto.length;
-                      
-                    //   // Itera sobre o texto para copiar a formatação caractere por caractere
-                    //   for (let j = 0; j < len; j++) {
-                    //       // Obtém o mapa completo de atributos no índice j
-                    //       // const attributes = textOrigem.getAttributes(j); 
-                          
-                    //       // // Verifica explicitamente BOLD e ITALIC no mapa de atributos
-                    //       // const isBold = attributes[DocumentApp.Attribute.BOLD];
-                    //       // const isItalic = attributes[DocumentApp.Attribute.ITALIC];
-                    //       const isBold = textOrigem.isBold(j); 
-                    //       const isItalic = textOrigem.isItalic(j); 
-
-                    //       const attributesToSet = {};
-                          
-                    //       // Copia o valor booleano ou null (usando || false para segurança)
-                    //       attributesToSet[DocumentApp.Attribute.BOLD] = isBold || false;
-                    //       attributesToSet[DocumentApp.Attribute.ITALIC] = isItalic || false;
-
-                    //       if (isBold || isItalic) {
-                    //         // Aplicamos APENAS os atributos de BOLD e ITALIC que nos interessam
-                    //         textNovo.setAttributes(j, j, attributesToSet);
-                    //       }
-                    //   }
-                  } catch (e) {
-                      // Este bloco agora só serve para o fallback, pois a lógica de cópia é mais direta
-                      Logger.log('Aviso: Cópia caractere por caractere detalhada falhou (' + e.toString() + '). Tentando cópia de nível de parágrafo...');
-                      
-                      // Fallback para cópia total de atributos (perde fidelidade)
-                      try {
-                          const allTextAttributes = paragrafoOrigem.getAttributes(); 
-                          novoParagrafo.setAttributes(allTextAttributes);
-                      } catch (e2) {
-                          Logger.log('Aviso: Cópia de nível de parágrafo falhou: ' + e2.toString());
-                      }
-                  }
-                }
+                novoElemento.setHeading(DocumentApp.ParagraphHeading.HEADING2);
+            }
 
             // 4. Processar Links (Markdown) DEPOIS da formatação
             const regexLink = /\[([^\]]+)\]\(([^)]+)\)/g;
@@ -475,7 +403,7 @@ function processarDocumentoFormatado(docId, corpoDestino) {
             }
             
             if (matches.length > 0) {
-                const textObj = novoParagrafo.editAsText();
+                const textObj = novoElemento.editAsText();
                 // Iterate backwards to preserve indices
                 for (let i = matches.length - 1; i >= 0; i--) {
                     const m = matches[i];
@@ -495,7 +423,7 @@ function processarDocumentoFormatado(docId, corpoDestino) {
             }
 
             // 5. Remover Comentários HTML (<!-- -->)
-            const textObj = novoParagrafo.editAsText();
+            const textObj = novoElemento.editAsText();
             const textStr = textObj.getText();
             const regexComment = /<!--[\s\S]*?-->/g;
             const commentMatches = [];
@@ -586,6 +514,67 @@ function processarDocumentoFormatadoOld(docId, corpoDestino) {
     }
 }
 
+/**
+ * Carrega o conteúdo e metadados (Ordenação) dos documentos apenas se necessário.
+ */
+function carregarConteudoDocs(listaDocs) {
+    const ORDENACAO_PADRAO_DOCUMENTO = 99999;
+    const props = PropertiesService.getScriptProperties();
+    
+    listaDocs.forEach(doc => {
+        if (doc.ignoreContent) return;
+        if (doc.textoLimpo !== null) return; // Já carregado
+
+        // Tenta usar Cache para Ordenação para evitar abrir o documento
+        const cacheKey = 'doc_ord_' + doc.id;
+        const cachedData = props.getProperty(cacheKey);
+        if (cachedData) {
+            try {
+                const cachedObj = JSON.parse(cachedData);
+                if (cachedObj.ts === doc.timestamp) {
+                    doc.ordenacao = cachedObj.ord;
+                    return; // Pula a abertura do documento (textoLimpo fica null, ok para FORMATADO)
+                }
+            } catch(e) {}
+        }
+
+        try {
+            const docConteudo = DocumentApp.openById(doc.id);
+            const textoCompleto = docConteudo.getBody().getText();
+            
+            let ordenacao = ORDENACAO_PADRAO_DOCUMENTO;
+            
+            const linhas = textoCompleto.split('\n');
+            const regexOrdenacao = /^Ordenação:\s*(\d+(?:[.,]\d+)?)/i; 
+            
+            const limite = Math.max(0, linhas.length - 5); 
+            for (let i = linhas.length - 1; i >= limite; i--) {
+                const linha = linhas[i].trim();
+                const matchOrdenacao = linha.match(regexOrdenacao);
+                if (matchOrdenacao) {
+                    ordenacao = parseFloat(matchOrdenacao[1]);
+                    break; 
+                }
+            }
+            
+            let textoLimpo = linhas.filter(l => !l.trim().match(/^(Ordenação|Tags):/i)).join('\n').trim();
+            textoLimpo = textoLimpo.replace(/<!--[\s\S]*?-->/g, '');
+
+            doc.ordenacao = ordenacao;
+            doc.textoLimpo = textoLimpo;
+            
+            // Salva no Cache
+            props.setProperty(cacheKey, JSON.stringify({
+                ts: doc.timestamp,
+                ord: ordenacao
+            }));
+
+        } catch (e) {
+            Logger.log('ERRO ao ler documento "' + doc.nomeArquivo + '": ' + e.toString());
+            doc.textoLimpo = 'ERRO: ' + e.toString();
+        }
+    });
+}
 
 /**
  * Função recursiva para coletar documentos, extrair metadados (Ordenação:, Tags:), 
@@ -659,55 +648,17 @@ function coletarConteudoDePasta(pasta, pastaPaiNomeAtual, isRootFolder, listaDoc
         }
 
         if (tipoMime === MimeType.GOOGLE_DOCS) { 
-            
-            try {
-                const docConteudo = DocumentApp.openById(arquivo.getId());
-                const textoCompleto = docConteudo.getBody().getText();
-                
-                let ordenacao = ORDENACAO_PADRAO_DOCUMENTO;
-                
-                const linhas = textoCompleto.split('\n');
-                const regexOrdenacao = /^Ordenação:\s*(\d+(?:[.,]\d+)?)/i; 
-                
-                // Extrair Ordenação: NNN
-                const limite = Math.max(0, linhas.length - 5); 
-                for (let i = linhas.length - 1; i >= limite; i--) {
-                    const linha = linhas[i].trim();
-                    const matchOrdenacao = linha.match(regexOrdenacao);
-                    if (matchOrdenacao) {
-                        ordenacao = parseFloat(matchOrdenacao[1]);
-                        break; 
-                    }
-                }
-                
-                // Recriar o texto limpo (removendo tags de Ordenação/Tags)
-                let textoLimpo = linhas.filter(l => !l.trim().match(/^(Ordenação|Tags):/i)).join('\n').trim();
-                textoLimpo = textoLimpo.replace(/<!--[\s\S]*?-->/g, '');
-
-                listaDocs.push({
-                    id: arquivo.getId(),
-                    nomeArquivo: nomeArquivo,
-                    pastaPaiNomeAtual: pastaPaiNomeAtual, // O nome da pasta atual (para a capa Nível 2)
-                    epigrafe : epigrafeCapitulo,
-                    isRootFolder: isRootFolder,
-                    ordenacaoCapitulo: ordenacaoCapitulo,
-                    ordenacao: ordenacao, // Ordem NNN do GDoc
-                    textoLimpo: textoLimpo
-                });
-                
-            } catch (e) {
-                Logger.log('ERRO ao ler ou processar o documento "' + nomeArquivo + '": ' + e.toString());
-                listaDocs.push({
-                    id: arquivo.getId(),
-                    nomeArquivo: nomeArquivo,
-                    pastaPaiNomeAtual: pastaPaiNomeAtual,
-                    epigrafe : '',
-                    isRootFolder: isRootFolder,
-                    ordenacaoCapitulo: 999,
-                    ordenacao: ORDENACAO_PADRAO_DOCUMENTO,
-                    textoLimpo: 'ERRO: Falha na cópia de conteúdo do documento "' + nomeArquivo + '". Mensagem: ' + e.toString()
-                });
-            }
+            listaDocs.push({
+                id: arquivo.getId(),
+                timestamp: arquivo.getLastUpdated().getTime(),
+                nomeArquivo: nomeArquivo,
+                pastaPaiNomeAtual: pastaPaiNomeAtual, // O nome da pasta atual (para a capa Nível 2)
+                epigrafe : epigrafeCapitulo,
+                isRootFolder: isRootFolder,
+                ordenacaoCapitulo: ordenacaoCapitulo,
+                ordenacao: ORDENACAO_PADRAO_DOCUMENTO, // Será carregado depois se necessário
+                textoLimpo: null // Será carregado depois se necessário
+            });
         }
     }
 
