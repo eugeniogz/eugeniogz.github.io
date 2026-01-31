@@ -7,7 +7,7 @@ semantic_order: 3
 
 
 
-### [Poesias e Aforismos](./)
+### [Poesias e Aforimos](./)
 
 ## Essência oculta
 

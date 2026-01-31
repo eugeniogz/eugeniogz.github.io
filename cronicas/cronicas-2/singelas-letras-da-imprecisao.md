@@ -9,7 +9,7 @@ tags:
 
 
 
-### [Crônicas 2](,/)
+### [Crônicas 2](./)
 
 ## Singelas letras da imprecisão
 

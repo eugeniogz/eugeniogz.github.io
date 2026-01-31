@@ -9,7 +9,7 @@ tags:
 
 
 
-### [Poesias e Aforismos](./)
+### [Poesias e Aforimos](./)
 
 ## Quadro azul
 

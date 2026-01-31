@@ -34,8 +34,6 @@ Noto grupos de pessoas caminhando, certamente colegas de trabalho, para um almo�
 
 Retornando ao lar, as plumagens sem cor arrulham na calçada, caminho até o elevador, a porta se abre, dentro o zelador com uma vasilha de solvente na mão. O cheiro impregna a cabine, misturando-se ao sabor do café que repousa em minha boca.  Chegando, sinto o aroma do almoço. Meu relógio marca 12:00 — um tempo que se esticou. Uma hora sentida em instantes de alegria.
 
-
-
 ---
 
 <div style="display: flex; justify-content: space-between;">

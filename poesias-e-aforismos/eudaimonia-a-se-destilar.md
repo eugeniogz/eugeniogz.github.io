@@ -11,7 +11,7 @@ tags:
 
 
 
-### [Poesias e Aforismos](./)
+### [Poesias e Aforimos](./)
 
 ## Eudaimonia a se destilar
 

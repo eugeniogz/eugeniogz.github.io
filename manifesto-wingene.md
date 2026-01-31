@@ -25,7 +25,7 @@ Criei a palavra *Wingene* da fusão entre *win* e *gene* — vitória e herança
 
 A herança genética cria as primeiras luzes da mente. Segundo António Damásio¹: “Os nossos cérebros e as nossas mentes não são *tabulae rasae* quando nascemos. Contudo, também não são, na sua totalidade, geneticamente determinados.” Esse legado biológico deve expandir-se gradualmente com o conhecimento — chave para o aperfeiçoamento moral.
 
-Mas como, afinal, tecer essa Wingene no cotidiano? Como transformar herança genética e desejo de transcendência em passos concretos? A resposta está num acróstico que ilumina o caminho: **V**alores, **I**mperfeições, **D**ecisões e **A**tenção — [VIDA](/Wingene/o-metodo-vida-a-wingene-em-pratica.html).
+Mas como, afinal, tecer essa Wingene no cotidiano? Como transformar herança genética e desejo de transcendência em passos concretos? A resposta está num acróstico que ilumina o caminho: **V**alores, **I**mperfeições, **D**ecisões e **A**tenção — [VIDA](/wingene/o-metodo-vida-a-wingene-em-pratica.html).
 
 **Valores** são os princípios inegociáveis que orientam cada escolha e ação. A bússola moral que nos mantém fiéis a nós mesmos, especialmente nos momentos de desafio.
 
@@ -45,7 +45,7 @@ A busca pela *eudaimonia* nos impele a realizar a *Wingene*; no entanto, esse ob
 
 Por que lutar para o aprimoramento se não seremos nós a desfrutar do futuro? A resposta está no que teceram nossos ancestrais e na eudaimonia como experiência presente dessa luta. Nós devemos ser a base das novas gerações, garantindo o seu futuro. Assim, pode-se pensar em uma *Wingene* coletiva, onde cada geração prepara o terreno para o florescimento de uma sociedade cada vez mais evoluída.
 
-[Wingene: filosofia e prática da herança consciente](/Wingene)
+[Wingene: filosofia e prática da herança consciente](/wingene)
 
 **Notas**
 

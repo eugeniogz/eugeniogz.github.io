@@ -14,7 +14,7 @@ tags:
 
 
 
-### [Poesias e Aforismos](./)
+### Poesias e Aforismos
 
 ## Aforismos
 
@@ -32,7 +32,7 @@ Descobrir é inventar o raro <!--08/10/25-->
 
 Pensamento: sentir que a razão refinou <!--09/10/25-->
 
-Serena euforia: horizonte que amplia <!--09/10/25-->
+Serena euforia: aurora noturna <!--31/01/26-->
 
 Serena euforia: a mente transcende a mente <!--21/01/26-->
 

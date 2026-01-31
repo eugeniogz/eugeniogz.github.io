@@ -7,7 +7,7 @@ semantic_order: 20
 
 
 
-### [Poesias e Aforismos](./)
+### [Poesias e Aforimos](./)
 
 ## Aquarela de uma valsa
 

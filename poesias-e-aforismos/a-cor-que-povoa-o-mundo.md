@@ -10,7 +10,7 @@ tags:
 
 
 
-### [Poesias e Aforismos](./)
+### [Poesias e Aforimos](./)
 
 ## A cor que povoa o mundo
 
