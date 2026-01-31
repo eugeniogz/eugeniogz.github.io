@@ -16,7 +16,7 @@ tags:
 
 ![Morro de São Paulo, Cairu, BA - 2ª praia, piscinas naturais](./2apraia.jpg)
 
-A cadeira acolhe o corpo salgado. Marcos observa o oceano beijar o azul. Recorda-se do mergulho recente. Os peixes são visíveis na água refrescante e cristalina. Cardumes variados nadando tranquilos. Em frente à praia, o coral é uma barreira para a força das ondas. Em alguns momentos, as ondas vencem o obstáculo, derramando-se em brancas espumas. No entanto, nesse pedaço do mar, o pequeno bioma vive feliz. Marcos sorri. Sua consciência é um bioma particular e as virtudes são o coral. Assim como os cardumes, respira felicidade — abrigado por seu coral.
+A cadeira acolhe o corpo salgado. O oceano beija o azul. Marcos recorda-se do mergulho recente. Os peixes são visíveis na água refrescante e cristalina. Cardumes variados nadando tranquilos. Em frente à praia, o coral é uma barreira para a força das ondas. Em alguns momentos, elas vencem o obstáculo, derramando-se em brancas espumas. Apesar delas, nesse pedaço do mar, o pequeno bioma vive feliz. Marcos observa a cena e sorri. Sua consciência é um bioma particular e suas virtudes são seu coral. Assim como os cardumes, respira felicidade — abrigado pelo coral.
 
 “A felicidade não é a recompensa da virtude, mas a própria virtude.” — Espinosa.
 
