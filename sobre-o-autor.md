@@ -5,7 +5,7 @@ reading_time: 1
 semantic_order: 0
 no_index: true
 --- 
-
+ 
 ## Sobre o autor
 
 ![José Eugênio, 2024-07-15](/avatar.png)
