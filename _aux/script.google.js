@@ -53,6 +53,8 @@ function principal() {
   // Chamada única para a função de limpeza recursiva
   limparArquivosExcluidos(pastaDestinoRaiz, pastaFonte);
 
+  // GERA SITEMAP
+  gerarSitemap(pastaDestinoRaiz);
 
   const urlDestino = pastaDestinoRaiz.getUrl();
   const msgSucesso = `
@@ -239,7 +241,11 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
     // Lista para armazenar metadados e conteúdo de TODOS os arquivos na pasta.
     const arquivosParaProcessar = []; 
     const arquivosIndexados = []; 
-    const comentarioPasta = splitComentario(pastaFonte.getName());
+    let nomePastaFonte = pastaFonte.getName();
+    if (nomePastaFonte !== '_posts') {
+        nomePastaFonte = nomePastaFonte.replace(/_/g, ' ');
+    }
+    const comentarioPasta = splitComentario(nomePastaFonte);
 
     // 1. PRIMEIRA PASSAGEM: Coleta metadados, calcula o conteúdo e a necessidade de conversão
     while (arquivosDoc.hasNext()) {
@@ -327,7 +333,7 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
                 tempoLeitura,
                 nomeSemData,
                 noIndex
-            } = getMarkdownAndScoreFromDoc(arquivoDoc, nomeDocOriginal, nomeSlug, pastaDestino));
+            } = getMarkdownAndScoreFromDoc(arquivoDoc, nomeDocOriginal, nomeSlug, pastaDestino, comentarioPasta[0]));
 
             if (nomeDocOriginal === 'Aforismos') {
                 gerarPostsAforismos(arquivoDoc);
@@ -439,14 +445,19 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
         const nomeSubpasta = nomeComentarioSubpasta[0];
         const comentario = nomeComentarioSubpasta.length > 1 ? nomeComentarioSubpasta[1] : "";
 
+        let nomeDestino = nomeSubpasta;
+        if (nomeSubpastaCompleto !== '_posts') {
+            nomeDestino = slugifyFileName(nomeSubpasta);
+        }
+
         // Tenta encontrar a pasta de destino
-        let subpastasDestinoIterator = pastaDestino.getFoldersByName(nomeSubpasta);
+        let subpastasDestinoIterator = pastaDestino.getFoldersByName(nomeDestino);
         let subpastaDestino;
 
         if (subpastasDestinoIterator.hasNext()) {
             subpastaDestino = subpastasDestinoIterator.next();
         } else {
-            subpastaDestino = pastaDestino.createFolder(nomeSubpasta);
+            subpastaDestino = pastaDestino.createFolder(nomeDestino);
         }
 
         // 4.1. Chamada Recursiva: Converte os arquivos dentro da subpasta
@@ -470,7 +481,7 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
         subpastasIndexadas.push({
           name: nomeSubpasta,
           comentario: comentario,
-          link: `./${nomeSubpasta}/`,
+          link: `./${nomeDestino}/`,
           semanticOrder: semanticOrderScore
         });
     }
@@ -479,7 +490,9 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
 
     // 5. CRIA/ATUALIZA O INDEX.MD
     const comentarioPastaTexto = comentarioPasta.length > 1 ? comentarioPasta[1] : "";
-    const indexAlterado = criarIndexMarkdown(pastaDestino, arquivosIndexados, subpastasIndexadas, comentarioPastaTexto);
+    
+    const tituloIndex = comentarioPasta[0];
+    const indexAlterado = criarIndexMarkdown(pastaDestino, tituloIndex, arquivosIndexados, subpastasIndexadas, comentarioPastaTexto);
     
     // 6. VERIFICA O REQUISITO DE RECONVERSÃO
     if (indexAlterado && arquivosParaProcessar.length > 0) {
@@ -527,6 +540,92 @@ function sincronizarAssets(pastaFonte, pastaDestino) {
             }
         }
     }
+}
+
+/**
+ * Gera um sitemap XML com os arquivos Markdown convertidos (mapeados para .html).
+ * Ignora pastas começando com '_' (exceto _posts) ou '.' (padrão Jekyll).
+ */
+function gerarSitemap(pastaRaiz) {
+  const URL_BASE = "https://eugeniogz.github.io/";
+  const NOME_SITEMAP = "sitemap.eugeniogz.xml";
+  
+  Logger.log(`[SITEMAP] Iniciando geração de ${NOME_SITEMAP}...`);
+
+  let xmlContent = '<?xml version="1.0" encoding="UTF-8"?>\n';
+  xmlContent += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+
+  function traverse(pasta, caminhoRelativo) {
+    const isPostsFolder = pasta.getName() === '_posts';
+
+    // 1. Arquivos
+    const arquivos = pasta.getFiles();
+    while (arquivos.hasNext()) {
+      const arquivo = arquivos.next();
+      const nome = arquivo.getName();
+      
+      if (nome.toLowerCase().endsWith('.md')) {
+        let urlPath = '';
+        let shouldAdd = false;
+
+        if (isPostsFolder) {
+           // _posts: YYYY-MM-DD-slug.md -> YYYY/MM/DD/slug.html
+           const match = nome.match(/^(\d{4})-(\d{2})-(\d{2})-(.+)\.md$/);
+           if (match) {
+               urlPath = `${match[1]}/${match[2]}/${match[3]}/${match[4]}.html`;
+               shouldAdd = true;
+           }
+        } else {
+           // Normal: slug.md -> path/slug.html (ou path/ se index)
+           if (nome === 'index.md') {
+              urlPath = caminhoRelativo; 
+           } else {
+              urlPath = caminhoRelativo + nome.substring(0, nome.length - 3) + '.html';
+           }
+           shouldAdd = true;
+        }
+        
+        if (shouldAdd) {
+           const lastMod = Utilities.formatDate(arquivo.getLastUpdated(), Session.getScriptTimeZone(), "yyyy-MM-dd");
+           xmlContent += '  <url>\n';
+           xmlContent += `    <loc>${URL_BASE}${urlPath}</loc>\n`;
+           xmlContent += `    <lastmod>${lastMod}</lastmod>\n`;
+           xmlContent += '  </url>\n';
+        }
+      }
+    }
+    
+    // 2. Subpastas
+    const subpastas = pasta.getFolders();
+    while (subpastas.hasNext()) {
+      const subpasta = subpastas.next();
+      const nomeSub = subpasta.getName();
+      
+      if (nomeSub.startsWith('.')) continue;
+
+      if (nomeSub === '_posts') {
+          traverse(subpasta, caminhoRelativo);
+      } else if (nomeSub.startsWith('_')) {
+          continue;
+      } else {
+          traverse(subpasta, caminhoRelativo + nomeSub + '/');
+      }
+    }
+  }
+
+  traverse(pastaRaiz, "");
+  
+  xmlContent += '</urlset>';
+  
+  // Salva/Atualiza
+  const arquivosSitemap = pastaRaiz.getFilesByName(NOME_SITEMAP);
+  if (arquivosSitemap.hasNext()) {
+    arquivosSitemap.next().setContent(xmlContent);
+    Logger.log(`[SITEMAP] Atualizado com sucesso.`);
+  } else {
+    pastaRaiz.createFile(NOME_SITEMAP, xmlContent, 'application/xml');
+    Logger.log(`[SITEMAP] Criado com sucesso.`);
+  }
 }
 
 /**
@@ -783,7 +882,7 @@ function obterNomesArquivosAforismos(docFile) {
  * Inclui metadados no Front Matter.
  * @returns {{markdownContent: string, semanticOrderScore: number, tempoLeitura: number, nomeSemData: string}}
  */
-function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDestino) {
+function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDestino, tituloPasta) {
     let markdown = '';
     let tags = [];
     let semanticOrderScore = 0.0;
@@ -872,8 +971,7 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         // --- 3. CONVERSÃO DO CORPO (LIMPO) PARA MARKDOWN ---
 
         if (fileSlug !== 'index') {
-            const pastaNome = pastaDestino.getName().replace(/_/g, ' ');
-            if (!isPost && !isPostsFolder && pastaNome !== ROOT_DESTINATION_FOLDER) markdown += `\n\n### [${pastaNome}](./)\n\n`;
+            if (!isPost && !isPostsFolder && pastaDestino.getId() !== ROOT_DESTINATION_FOLDER_ID) markdown += `\n\n### ${tituloPasta}\n\n`;
             if (!isPostsFolder) markdown += `## ${nomeSemData}\n\n`;
         }
 
@@ -1061,7 +1159,7 @@ function splitComentario(texto) {
  * Gera e salva/atualiza o arquivo index.md na pasta de destino.
  * @returns {boolean} True se o index.md foi criado ou teve seu conteúdo alterado.
  */
-function criarIndexMarkdown(pastaDestino, arquivos, subpastas, comentario) {
+function criarIndexMarkdown(pastaDestino, titulo, arquivos, subpastas, comentario) {
 
     // Não gera index na pasta se não houver conteúdo nela
     if (arquivos.length === 0 && subpastas.length === 0) { 
@@ -1071,7 +1169,7 @@ function criarIndexMarkdown(pastaDestino, arquivos, subpastas, comentario) {
     if (isRootFolder) return false;
     if (pastaDestino.getName() === '_posts') return false;
 
-    let indexContent = '## ' + pastaDestino.getName().replace(/_/g, ' ')  + '\n\n';
+    let indexContent = '## ' + titulo + '\n\n';
     if (comentario!=="") indexContent += "#### " + comentario + "\n\n";
     
     if (arquivos.length > 0) {
@@ -1183,7 +1281,13 @@ function limparArquivosExcluidos(pastaDestino, pastaFonte) {
         }
         
         const nomeSubpasta = splitComentario(nomeParaProcessar)[0];
-        const subpastasDestinoIterator = pastaDestino.getFoldersByName(nomeSubpasta);
+        
+        let nomeDestino = nomeSubpasta;
+        if (nomeSubpastaCompleto !== '_posts') {
+            nomeDestino = slugifyFileName(nomeSubpasta);
+        }
+
+        const subpastasDestinoIterator = pastaDestino.getFoldersByName(nomeDestino);
 
         if (subpastasDestinoIterator.hasNext()) {
             limparArquivosExcluidos(subpastasDestinoIterator.next(), subpastaFonte);
