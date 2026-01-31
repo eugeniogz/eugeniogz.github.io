@@ -971,7 +971,7 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         // --- 3. CONVERSÃO DO CORPO (LIMPO) PARA MARKDOWN ---
 
         if (fileSlug !== 'index') {
-            if (!isPost && !isPostsFolder && pastaDestino.getId() !== ROOT_DESTINATION_FOLDER_ID) markdown += `\n\n### ${tituloPasta}\n\n`;
+            if (!isPost && !isPostsFolder && pastaDestino.getId() !== ROOT_DESTINATION_FOLDER_ID) markdown += `\n\n### [${tituloPasta}](./)\n\n`;
             if (!isPostsFolder) markdown += `## ${nomeSemData}\n\n`;
         }
 
