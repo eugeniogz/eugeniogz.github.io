@@ -66,7 +66,7 @@ O natural rasga o frio asfalto <!--16/07/22-->
 
 Brilham alegrias em infinitas cosmogonias <!--08/10/25-->
 
-[Vida breve, rotas eternas](./vida-breve-rotas-eternas.html) <!--21/01/26-->
+[Vida breve, rotas eternas](/poesias-e-aforismos/vida-breve-rotas-eternas.html) <!--21/01/26-->
 
 ***
 
