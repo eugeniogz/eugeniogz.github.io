@@ -93,3 +93,6 @@ a.button {
 .tag-cloud a:hover {
     color: #007bff; /* Cor primária do seu site */
 }
+table td, table th {
+    padding: 12px 15px; /* Adiciona espaço em cima/baixo e nas laterais */
+}

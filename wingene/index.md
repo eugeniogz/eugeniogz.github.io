@@ -6,5 +6,5 @@
 criando no íntimo uma obra pessoal
 ### 📄 [Wingene](./wingene-felicidade-agora-futuro-ancestral.html) <span class="word-count">[12 min]</span>
 Felicidade agora, futuro ancestral
-### 📄 [O método VIDA](./o-metodo-vida-a-wingene-em-pratica.html) <span class="word-count">[10 min]</span>
+### 📄 [O método VIDA](./o-metodo-vida-a-wingene-em-pratica.html) <span class="word-count">[13 min]</span>
 a Wingene em prática
