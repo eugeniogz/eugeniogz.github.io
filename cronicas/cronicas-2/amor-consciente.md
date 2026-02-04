@@ -32,6 +32,6 @@ Assim, no meio de tantas alegrias, as cores do amor nem sempre são vibrantes e 
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./realidade-na-mesa-de-todos.html">&lt;&lt; Realidade na mesa de todos</a>
+  <a href="./saciando-a-mente.html">&lt;&lt; Saciando a mente</a>
   <a href="./tapete-de-algodao.html">Tapete de algodão &gt;&gt;</a>
 </div>
