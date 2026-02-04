@@ -197,16 +197,11 @@ O método se valida na prática por meio de perguntas essenciais:
 
 A tabela abaixo resume os quatro eixos do método VIDA, com sua categorização:
 
-| Eixo | 1º Nível | 2º Nível | 3º Nível | 4º Nível |
-
-| :--- | :--- | :--- | :--- | :--- |
-
-| **Valores** | **Limites pessoais**: Respeito à integridade do ser. | **Convivência**: Facilitar a convivência harmônica. | **Revisão contínua**: Ajuste frequente e humilde. | |
-
-| **Imperfeições** | **Pessoais**: Negligências ao próprio ser. | **Emocionais**: Problemas no gerenciamento dos afetos. | **Morais**: Incoerência entre valores e ações. | **Atencionais**: Domínio do piloto automático. |
-
-| **Decisões** | **Reativas**: Interromper padrões nocivos. | **Construtivas**: Cultivar novos hábitos. | **Adaptativas**: Aprimoramento contínuo. | |
-
+| Eixo | 1º Nível | 2º Nível | 3º Nível | 4º Nível |  
+| :--- | :--- | :--- | :--- | :--- |  
+| **Valores** | **Limites pessoais**: Respeito à integridade do ser. | **Convivência**: Facilitar a convivência harmônica. | **Revisão contínua**: Ajuste frequente e humilde. | |  
+| **Imperfeições** | **Pessoais**: Negligências ao próprio ser. | **Emocionais**: Problemas no gerenciamento dos afetos. | **Morais**: Incoerência entre valores e ações. | **Atencionais**: Domínio do piloto automático. |  
+| **Decisões** | **Reativas**: Interromper padrões nocivos. | **Construtivas**: Cultivar novos hábitos. | **Adaptativas**: Aprimoramento contínuo. | |  
 | **Atenção** | **Ao ser**: Observação dos estados internos. | **Aos outros**: Escuta e ética relacional. | **Ao mundo**: Presença sensível. | |
 
 ## **VIDA em Ação: Um Exemplo**
