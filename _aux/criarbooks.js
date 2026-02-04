@@ -1,16 +1,14 @@
 /**
- * Compila documentos em subpastas da pasta 'Pessoal/Meus.Textos/Finalizados',
+ * Compila documentos em subpastas da pasta 'Pessoal/Meus.Textos/[nomePastaRaiz]',
  * criando DOIS livros individuais para cada subpasta, usando um arquivo 'Config'
  * para Epígrafe e Ordenação do Livro.
  */
-function gerarLivroComDocumentos() {
-    
-    const NOME_PASTA_RAIZ = 'Finalizados';
+function gerarLivroComDocumentos(nomePastaRaiz = 'Wingene') {
     
     let idPastaRaiz = null;
 
     try { 
-        Logger.log('Procurando a pasta raiz: Pessoal/Meus.Textos/Finalizados');
+        Logger.log('Procurando a pasta raiz: Pessoal/Meus.Textos/'+ nomePastaRaiz);
         
         // --- 1. Localizar a pasta raiz ---
         const folders = DriveApp.getFoldersByName('Pessoal');
@@ -19,7 +17,7 @@ function gerarLivroComDocumentos() {
             const pastasTextosIter = pastaPessoal.getFoldersByName('Meus.Textos');
             while (pastasTextosIter.hasNext()) {
                 const pastaMeusTextos = pastasTextosIter.next();
-                const pastasFinalizados = pastaMeusTextos.getFoldersByName(NOME_PASTA_RAIZ);
+                const pastasFinalizados = pastaMeusTextos.getFoldersByName(nomePastaRaiz);
                 if (pastasFinalizados.hasNext()) {
                     idPastaRaiz = pastasFinalizados.next().getId();
                     break;
@@ -29,7 +27,7 @@ function gerarLivroComDocumentos() {
         }
 
         if (!idPastaRaiz) {
-            Logger.log('Pasta raiz "Pessoal/Meus.Textos/Finalizados" não encontrada.');
+            Logger.log('Pasta raiz "Pessoal/Meus.Textos/' + nomePastaRaiz + '" não encontrada.');
             return;
         }
 
@@ -41,7 +39,7 @@ function gerarLivroComDocumentos() {
         if (compilados.hasNext()) {
           pastaCompilados = compilados.next();
         } else {
-          Logger.log('Pasta raiz "Pessoal/Meus.Textos/Finalizados/_compilados" não encontrada.');
+          Logger.log('Pasta raiz "Pessoal/Meus.Textos/' + nomePastaRaiz + '/_compilados" não encontrada.');
           return;
         }
         while (subpastas.hasNext()) {

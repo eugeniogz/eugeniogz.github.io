@@ -1,7 +1,3 @@
-/**
- * O CAMINHO COMPLETO da pasta fonte no Google Drive.
- */
-const CAMINHO_PASTA_FONTE = "Pessoal/Meus.Textos/Finalizados";
 const converterTodos = false;
 /**
  * O CAMINHO COMPLETO da pasta de destino no Google Drive.
@@ -24,11 +20,12 @@ let totalFiles = 0;
 
 // --- FUNÇÕES PRINCIPAIS E DE GESTÃO DE PASTAS ---
 
-function principal() {
+function principal(nomePastaRaiz = "Wingene") {
 
-  const pastaFonte = encontrarCriarPastaPorCaminho(CAMINHO_PASTA_FONTE, false);
+  const caminhoPastaFonte = "Pessoal/Meus.Textos/" + nomePastaRaiz;
+  const pastaFonte = encontrarCriarPastaPorCaminho(caminhoPastaFonte, false);
   if (!pastaFonte) {
-    const msg = `[ERRO] A pasta fonte "${CAMINHO_PASTA_FONTE}" não foi encontrada. Verifique o caminho.`;
+    const msg = `[ERRO] A pasta fonte "${caminhoPastaFonte}" não foi encontrada. Verifique o caminho.`;
     Logger.log(msg);
     return;
   }
