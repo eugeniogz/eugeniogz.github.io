@@ -32,5 +32,5 @@ Enquanto dividiam a sobremesa, o salmão no cardápio já não parecia um prato 
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./do-barulho-ao-canto.html">&lt;&lt; Do barulho ao canto</a>
-  <a href="./saciando-a-mente.html">Saciando a mente &gt;&gt;</a>
+  <a href="./fe-e-atencao.html">Fé e atenção &gt;&gt;</a>
 </div>

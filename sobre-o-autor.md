@@ -8,11 +8,11 @@ no_index: true
 
 ## Sobre o autor
 
-![José Eugênio, 2024-07-15](/avatar.png)
+![José Assis, 2024-07-15](/avatar.png)
 
-Engenheiro eletricista ([UFMG](https://ufmg.br)), Mestre em Ciência da Computação ([USP](https://ime.usp.br)) e Doutor em Gestão & Organização do Conhecimento ([UFMG](https://eci.ufmg.br)). Analista de sistemas desde 1990, leciona computação e robótica básica em uma escola infantil. No tempo livre, além de curtir momentos com a família e amigos, estuda e escreve. Mantém esse site desde 2025 com foco na [Wingene](/manifesto-wingene.html), uma filosofia naturalista que descreve o caminho para a eudaimonia — que não deve ser somente pessoal, mas [social](/ipes-e-tijolos/eudaimonia-social.html).
+José Assis é engenheiro eletricista ([UFMG](https://ufmg.br)), mestre em Ciência da Computação ([USP](https://ime.usp.br)) e doutor em Gestão e Organização do Conhecimento ([UFMG](https://eci.ufmg.br)). Analista de sistemas desde 1990, leciona computação e robótica básica em uma escola infantil. No tempo livre, além de curtir momentos com a família e amigos, estuda e escreve. Mantém esse site desde 2025 com foco na [Wingene](/manifesto-wingene.html), uma filosofia naturalista que descreve o caminho para a eudaimonia — que não deve ser somente pessoal, mas [social](/ipes-e-tijolos/eudaimonia-social.html).
 
-Contato: [eugeniog@gmail.com](mailto:eugeniog@gmail.com)
+Contato: [jose@wingene.com.br](mailto:jose@wingene.com.br)
 
 ---
 

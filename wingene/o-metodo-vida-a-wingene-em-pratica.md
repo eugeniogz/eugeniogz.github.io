@@ -15,6 +15,7 @@ tags:
   - Futuro
   - Herança
   - Mente
+  - Método VIDA
 --- 
 
 
