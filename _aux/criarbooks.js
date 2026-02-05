@@ -204,7 +204,7 @@ function gerarLivro(nomeLivroComSubtitulo, pastaDestino, listaDocs, tipo, tipoSa
         // 2. Inserir Capa Padrão
         corpoLivro.appendParagraph(titulos[0]).setHeading(DocumentApp.ParagraphHeading.TITLE).setAlignment(DocumentApp.HorizontalAlignment.CENTER);
         if (titulos.length>1) corpoLivro.appendParagraph(titulos[1]).setHeading(DocumentApp.ParagraphHeading.SUBTITLE).setAlignment(DocumentApp.HorizontalAlignment.CENTER);
-        corpoLivro.appendParagraph("© José Eugênio").setHeading(DocumentApp.ParagraphHeading.HEADING1).setAlignment(DocumentApp.HorizontalAlignment.CENTER);
+        corpoLivro.appendParagraph("© José Assis").setHeading(DocumentApp.ParagraphHeading.HEADING1).setAlignment(DocumentApp.HorizontalAlignment.CENTER);
         if (tipoSaidaLivro) corpoLivro.appendPageBreak();
 
         if (extraContent && extraContent.prefacio) {

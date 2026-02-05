@@ -10,7 +10,7 @@ tags:
 
 
 
-### [Poesias e Aforimos](./)
+### [Poesias e Aforismos](./)
 
 ## A cor que povoa o mundo
 
@@ -30,9 +30,9 @@ Vejo no escuro o azulado tom.
 Liberta da agonia, a cor é o som.
 
 O cinza se aquece no dia vazio.  
-O canto marrom mostra a cor.  
-Singelas penas quebrando chumbo,  
-O sol colorido povoando o mundo.
+Um canto marrom mostra a cor.  
+Singela pena quebrando chumbo,  
+Sol colorido povoando o mundo.
 
 ---
 
