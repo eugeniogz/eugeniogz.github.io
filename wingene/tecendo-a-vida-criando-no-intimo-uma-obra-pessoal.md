@@ -2,7 +2,7 @@
 layout: default
 title: "Tecendo a vida: criando no íntimo uma obra pessoal"
 reading_time: 7
-semantic_order: 1
+semantic_order: 300
 tags:
   - Vida
   - Caminho
@@ -66,11 +66,11 @@ Cada dia é uma nova oportunidade de entrelaçar fios, de burilar a obra-prima d
 
 O artista da vida não tece sozinho. Seus fios entrelaçam-se com os de outros — pais, filhos, amigos, mestres. A obra individual ressoa com obras alheias, criando uma tapeçaria coletiva que atravessa gerações. Cada gesto consciente enriquece não apenas a própria vida, mas a herança transmitida às próximas gerações. E assim, mesmo inacabada, a obra sobrevive ao seu criador: vibrando em harmonia no compasso da humanidade.
 
-Essa dança tem um nome: *Wingene* — fruto das virtudes que cada geração tece e transmite. Mais que conceito, *Wingene* é uma visão de mundo, um caminho prático para a felicidade pelo aperfeiçoamento do tecido pessoal e coletivo. Nas páginas seguintes, exploraremos esse conceito em profundidade, desde sua raiz filosófica até sua aplicação cotidiana.
+Essa dança tem um nome: [*Wingene*](/wingene/wingene-felicidade-agora-futuro-ancestral) — fruto das virtudes que cada geração tece e transmite. Mais que conceito, *Wingene* é uma visão de mundo, um caminho prático para a felicidade pelo aperfeiçoamento do tecido pessoal e coletivo.
 
 ---
 
 <div style="display: flex; justify-content: space-between;">
+  <a href="./o-metodo-vida-a-wingene-em-pratica.html">&lt;&lt; O método VIDA: a Wingene em prática</a>
   <span></span>
-  <a href="./wingene-felicidade-agora-futuro-ancestral.html">Wingene: Felicidade agora, futuro ancestral &gt;&gt;</a>
 </div>

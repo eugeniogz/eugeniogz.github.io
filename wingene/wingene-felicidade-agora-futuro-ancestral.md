@@ -125,6 +125,6 @@ A *Wingene* se realiza em múltiplas camadas: no esforço evolutivo individual, 
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html">&lt;&lt; Tecendo a vida: criando no íntimo uma obra pessoal</a>
+  <span></span>
   <a href="./o-metodo-vida-a-wingene-em-pratica.html">O método VIDA: a Wingene em prática &gt;&gt;</a>
 </div>
