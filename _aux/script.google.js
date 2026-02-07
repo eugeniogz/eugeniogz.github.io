@@ -489,7 +489,14 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
     const comentarioPastaTexto = comentarioPasta.length > 1 ? comentarioPasta[1] : "";
     
     const tituloIndex = comentarioPasta[0];
-    const indexAlterado = criarIndexMarkdown(pastaDestino, tituloIndex, arquivosIndexados, subpastasIndexadas, comentarioPastaTexto);
+    
+    let indexAlterado = false;
+    const arquivosIndexFonte = pastaFonte.getFilesByName("index");
+    if (arquivosIndexFonte.hasNext()) {
+        indexAlterado = copiarIndexMdFonte(arquivosIndexFonte.next(), pastaDestino);
+    } else {
+        indexAlterado = criarIndexMarkdown(pastaDestino, tituloIndex, arquivosIndexados, subpastasIndexadas, comentarioPastaTexto);
+    }
     
     // 6. VERIFICA O REQUISITO DE RECONVERSÃO
     if (indexAlterado && arquivosParaProcessar.length > 0) {
@@ -544,8 +551,8 @@ function sincronizarAssets(pastaFonte, pastaDestino) {
  * Ignora pastas começando com '_' (exceto _posts) ou '.' (padrão Jekyll).
  */
 function gerarSitemap(pastaRaiz) {
-  const URL_BASE = "https://eugeniogz.github.io/";
-  const NOME_SITEMAP = "sitemap.eugeniogz.xml";
+  const URL_BASE = "https://blog.wingene.com.br/";
+  const NOME_SITEMAP = "sitemap.xml";
   
   Logger.log(`[SITEMAP] Iniciando geração de ${NOME_SITEMAP}...`);
 
@@ -1150,6 +1157,31 @@ function splitComentario(texto) {
   } else {
     return [texto];
   }
+}
+
+/**
+ * Copia o arquivo index.md da pasta fonte para a pasta destino se ele existir.
+ * Retorna true se o arquivo foi criado ou atualizado.
+ */
+function copiarIndexMdFonte(arquivoFonte, pastaDestino) {
+    const conteudoFonte = DocumentApp.openById(arquivoFonte.getId()).getBody().getText();
+    const arquivosDestino = pastaDestino.getFilesByName(NOME_INDEX);
+
+    if (arquivosDestino.hasNext()) {
+        const arquivoDestino = arquivosDestino.next();
+        const conteudoDestino = arquivoDestino.getBlob().getDataAsString();
+        
+        if (conteudoFonte !== conteudoDestino) {
+            arquivoDestino.setContent(conteudoFonte);
+            Logger.log(`[INDEX] ${NOME_INDEX} copiado da fonte e ATUALIZADO em ${pastaDestino.getName()}`);
+            return true;
+        }
+        return false;
+    } else {
+        pastaDestino.createFile(NOME_INDEX, conteudoFonte, MIME_MARKDOWN);
+        Logger.log(`[INDEX] ${NOME_INDEX} copiado da fonte e CRIADO em ${pastaDestino.getName()}`);
+        return true;
+    }
 }
 
 /**
