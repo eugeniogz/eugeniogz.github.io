@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/print.css' | relative_url }}" media="print" type="text/css">
     <link rel="stylesheet" href="{{ '/css/override.css' | relative_url }}" media="screen" type="text/css">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -20,11 +21,18 @@
 
   <body>
     <header>
-      <div class="inner">
-        <a href="{{ '/' | absolute_url }}">
-          <h1>{{ site.title | default: site.github.repository_name }}</h1>
-        </a>
-        <h2>{{ site.description | default: site.github.project_tagline }}</h2>
+      <div class="inner" style="display: flex; align-items: center; justify-content: space-between;">
+        <div style="display: flex; align-items: center;">
+          <a href="{{ '/' | absolute_url }}" style="margin-right: 1rem; text-decoration: none;">
+            <img src="Wingene.png" alt="Wingene Logo, polígono regular de 12 vértices (12/5- vermelho (a herança ancestral)) e estrelas geradas com (12/4 - verde,12/3- amarelo e 12/2- azul (o espírito material), 4 cores, 4 pilares do método VIDA)" style="height: 5rem; width: auto;"/>
+          </a>
+          <div style="display: flex; flex-direction: column; justify-content: center;">
+            <a href="{{ '/' | absolute_url }}">
+              <h1 style="margin: 0; line-height: 1.2;">{{ site.title | default: site.github.repository_name }}</h1>
+            </a>
+            <h2 style="margin: 0; line-height: 1.2;">{{ site.description | default: site.github.project_tagline }}</h2>
+          </div>
+        </div>
         <a href="{{ '/Search.html' | relative_url }}" class="search-link-header">🔍 Pesquisa</a>
       </div>
     </header>
