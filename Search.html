@@ -10,16 +10,21 @@ search: false
 <ul id="results-container"></ul>
 <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
 <script>
-  window.simpleJekyllSearch = new SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    json: '{{ "/search.json" | relative_url }}',
-    searchResultTemplate: '<li><a href="{url}">{title} ({reading_time} min)</a></li>', // O template para cada resultado
-    noResultsText: '<li>Nenhum resultado encontrado</li>', // Mensagem para quando não há resultados
-    minimumLength: 2, // Permitir buscas com 2 ou mais caracteres
-    stopWords: '', // Desabilitar a lista de palavras a serem ignoradas
-    limit: 100,
-    searchFields: ['title', 'content'], // Define os campos a serem pesquisados
-  });
+  fetch('{{ "/search.json" | relative_url }}')
+    .then(response => response.json())
+    .then(json => {
+      const filteredJson = json.filter(item => !item.url.endsWith('/'));
+      window.simpleJekyllSearch = new SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: filteredJson,
+        searchResultTemplate: '<li><a href="{url}">{title} ({reading_time} min)</a></li>', // O template para cada resultado
+        noResultsText: '<li>Nenhum resultado encontrado</li>', // Mensagem para quando não há resultados
+        minimumLength: 2, // Permitir buscas com 2 ou mais caracteres
+        stopWords: '', // Desabilitar a lista de palavras a serem ignoradas
+        limit: 100,
+        searchFields: ['title', 'content'], // Define os campos a serem pesquisados
+      });
+    });
 </script>
 <a href="./">Voltar</a>

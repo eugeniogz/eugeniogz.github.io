@@ -45,9 +45,9 @@ hr {
 }
 
 .search-link-header {
-  position: absolute;
-  top: 25px; /* Alinha verticalmente com o título */
-  right: 0;
+  /* position: absolute; */
+  /* top: 145px; Alinha verticalmente com o título */
+  /* right: 0; para alinha à direita*/
   color: white !important; /* !important para garantir a prioridade sobre outras regras */
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 18px;
