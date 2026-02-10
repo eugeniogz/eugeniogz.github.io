@@ -3,9 +3,9 @@
 #### A arte da atenção plena nos pequenos instantes
 
 ### 📄 [Serena euforia](./serena-euforia.html) <span class="word-count">[1 min]</span>
-### 📄 [Alvorecer](./alvorecer.html) <span class="word-count">[5 min]</span>
+### 📄 [Alvorecer](./alvorecer.html) <span class="word-count">[3 min]</span>
 ### 📄 [Mente presente](./mente-presente.html) <span class="word-count">[1 min]</span>
-### 📄 [Manhã de domingo](./manha-de-domingo.html) <span class="word-count">[3 min]</span>
+### 📄 [Manhã de domingo](./manha-de-domingo.html) <span class="word-count">[2 min]</span>
 ### 📄 [Relógios e cafés](./relogios-e-cafes.html) <span class="word-count">[3 min]</span>
 ### 📄 [As gavetas mentais](./as-gavetas-mentais.html) <span class="word-count">[2 min]</span>
 ### 📄 [Cinza vazio](./cinza-vazio.html) <span class="word-count">[1 min]</span>

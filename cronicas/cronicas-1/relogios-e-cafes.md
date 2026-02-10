@@ -18,9 +18,7 @@ Onze horas, o trabalho não rende. Recordo-me dos três relógios levados ontem 
   
 No caminho, passo por uma conhecida cafeteria. Sento-me ao sol, a gerente, amiga de outros cafés, se aproxima: — O que deseja para hoje? — Qual café você recomenda? — Temos o bourbon amarelo, está muito bom. — Por favor, traga uma xícara desse. — Aceita um macaron para acompanhar? — Não, obrigado, somente o café. Leio um pouco, o café chega, continuo a ler. Instantes depois, saboreio o café. Antes de solicitar a conta, digo: — Pode embrulhar 3 macarons, vou levar para a minha filha.  
   
-Passo na livraria ao lado, pergunto sobre um vendedor, meu amigo. Ainda trabalha ali? Respondem: trabalhar, trabalhar mesmo, não sei, ele fica por aqui. Ele não estava da última vez que comprei um livro. Subitamente, aparece descendo a escada em caracol. Conversamos um pouco, conto da família.  
-  
-Uma pomba com plumagem em tons cinza, vistosa, ciscava, enquanto outra, toda preta, se banhava na fonte em frente. Vários jatos d’água a jorrar alcançavam alturas variadas. Noto as lojas e árvores, que continuam como ontem, o que mudou na paisagem foram pessoas, pássaros, veículos e motos no frenesi típico da região.  
+Sigo para a relojoaria, no caminho, uma pomba com plumagem em tons cinza, vistosa, ciscava, enquanto outra, toda preta, se banhava na fonte em frente. Vários jatos d’água a jorrar alcançavam alturas variadas. Noto as lojas e árvores, que continuam como ontem, o que mudou na paisagem foram pessoas, pássaros, veículos e motos no frenesi típico da região.  
   
 A fonte me obriga a desviar o caminho ligeiramente. Atravesso a avenida com cuidado, do outro lado, a segunda fonte, singela como a primeira. Por perto, gente sentada a conversar, sem ligar para os outros ao redor. Sigo até o destino. Quase chegando, um garoto passa ao meu lado. Pronuncia algo ininteligível em voz alta, me assustando.  
   
@@ -28,11 +26,9 @@ Na loja é rápido, o atendente já tinha o orçamento. Diz que fica pronto na q
   
 No retorno da relojoaria, observo as vitrines. Na fonte oposta, vejo três daquelas aves que povoam o ambiente, aproveitando a água fria. Estavam ali quando passei anteriormente? Das vitrines, passo a olhar os prédios, cumes de várias alturas, numa variação displicente. Uma sensação boa olhar para o alto.  
   
-Continuo a andar, percorrendo agora uma subida suave, em direção ao meu apartamento. Já vejo o alto do prédio vermelho e branco. Mais uma avenida a atravessar. Freio a minha pressa ao ver um motoqueiro avançando o semáforo, vindo em minha direção. Ele passa como um raio ante meu olhar desaprovador.  
+Continuo a andar, percorrendo agora uma subida suave, em direção ao meu apartamento. Já vejo o alto do prédio vermelho e branco. Mais uma avenida a atravessar. Freio a minha pressa ao ver um motoqueiro avançando o semáforo. Ele passa como um raio, cortando meu olhar desaprovador.  
   
-Noto grupos de pessoas caminhando, certamente colegas de trabalho, para um almoço conjunto. Na minha rua, a vendedora de panos passa por mim, cumprimentando-me sem tirar os olhos do celular. Uma revoada no chão, um mar de pedras e penas cinzas.
-
-Retornando ao lar, as plumagens sem cor arrulham na calçada, caminho até o elevador, a porta se abre, dentro o zelador com uma vasilha de solvente na mão. O cheiro impregna a cabine, misturando-se ao sabor do café que repousa em minha boca.  Chegando, sinto o aroma do almoço. Meu relógio marca 12:00 — um tempo que se esticou. Uma hora sentida em instantes de alegria.
+Retornando ao lar, caminho até o elevador, a porta se abre, revelando o zelador com uma vasilha de solvente na mão. O cheiro impregna a cabine, misturando-se ao sabor do café que repousa em minha boca.  Chegando, sinto o aroma do almoço. Meu relógio marca 12:00 — um tempo que se esticou. Uma hora sentida em instantes de alegria.
 
 ---
 

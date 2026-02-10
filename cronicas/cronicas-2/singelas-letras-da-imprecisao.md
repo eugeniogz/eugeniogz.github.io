@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Singelas letras da imprecisão"
-reading_time: 2
+reading_time: 1
 semantic_order: 20
 tags:
   - Trabalho
@@ -17,9 +17,7 @@ A inspiração criativa nem sempre está presente, por isso a mente concentrada 
 
 Embalada pelos ruídos, a arte do escritor continua tecendo — a mesma que povoa as galerias. Pode ter brilho diferente, mas ressoa no leitor inspirações semelhantes. Nuvens têm obscurecido o azul nesses dias de primavera. Mas o artista sabe que ele está lá, atrás do branco acinzentado que não chove. Recorda que já usou a metáfora nublada para descrever o triunfo sobre a melancolia, as cores vibrantes que pintam a monotonia. Escuta, de repente, um martelo. Será uma distração ou parte da sinfonia? A percepção e a intenção do verso podem fazer do barulho melodia.
 
-Criar observações é fácil, extrair delas filosofia, nem tanto. Já passou do meio-dia e o que escrevem os dedos não parece grande coisa, mas a mente insiste. Quer explicar o inexplicável: a difícil tarefa de se expressar com palavras pinçadas no tempo. Os parágrafos surgem em ritmo de poesia, mas o olhar na tela só enxerga o vazio. Espaço branco ofuscando as sentenças no enorme monitor. O esforço consciente aumenta. A busca pela frase certa também.
-
-Os ouvidos tentam silenciar o ruído externo, às vezes sem sucesso. Uma pausa, um pensamento, a respiração suave. De repente, a mente sossega, encontra caminhos animadores. A música das letras retoma o processo. Não é fácil escrever, pior se nada escrevesse, mais triste ainda se ninguém lesse. Esse é um trabalho de pouco tempo, de um intervalo nas atividades profissionais. Aquelas que também lhe agradam, das quais escreverá um dia.
+Criar observações é fácil, extrair delas filosofia, nem tanto. Já passou do meio-dia e o que escrevem os dedos não parece grande coisa, mas a mente insiste. Quer explicar o inexplicável, o olhar na tela só enxerga o vazio. Espaço branco ofuscando as sentenças no enorme monitor. O esforço consciente aumenta. A busca pela frase certa também.
 
 O ofício do escritor é uma tarefa delicada, nem sempre transcreve a emoção, o prazer e a dor da vida. Esse tempo que dedica nessas breves expressões serve para falar do esforço, do difícil processo criativo. Nessa arte, a utópica perfeição culmina nas singelas letras da imprecisão.
 

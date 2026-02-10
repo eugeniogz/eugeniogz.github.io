@@ -13,7 +13,7 @@ tags:
 
 ## Serena euforia
 
-*O azul se espalha pelas moradas de concreto, plantadas e imóveis, diversas na altura e arquitetura. Sob elas, tímidas copas verdes tecem a seiva doce da luz que me aquece. O pulsar sanguíneo é intenso, e os neurônios eriçados trazem a alegria: uma serena euforia. A cor do momento é fugaz, mas permanece viva. A mente sabe que esse estado não demanda o azul, mas apenas a consciência atenta — força interna que colore o cinza.*
+*O azul se espalha pelas moradas de concreto, plantadas e imóveis, diversas na altura e arquitetura. Sob elas, tímidas copas verdes tecem a seiva doce da luz que me aquece. O pulsar sanguíneo é intenso, e os neurônios eriçados trazem a alegria: uma serena euforia. A cor do momento é fugaz, mas permanece viva. Esse estado não demanda o azul, mas apenas a consciência atenta — força interna que colore o cinza.*
 
 Qualquer momento pode trazer a serena euforia, um estado que não demanda esvaziar a mente, deixar de pensar ou sentir. Também não se apoia em estimulantes artificiais. Ela acontece quando a consciência experimenta a felicidade — não como alegria passageira, mas como a perene sensação de plenitude. A serena euforia reflete a eudaimonia que brota da virtude, florescendo na mente e no coração. Nesses instantes, a consciência dança suavemente acima do pensar e do sentir, num baile harmônico que nutre o ser com o calor do instante.
 

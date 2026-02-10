@@ -19,8 +19,6 @@ Na sala, o ruído estridente da telenovela. Não tenho vontade de assistir ao cr
 
 Deito-me de bruços, mantendo a escrita em uma posição mais confortável. O dormitório acolhe outros elementos que deixo à imaginação do leitor recriar. Concentro-me na escrita. Cerro a porta, tornando tênue o som perturbante. O cômodo tranquilo passa a ser um refúgio onde o pensamento flui. A sensação de paz por estar longe do círculo vicioso aumenta.
 
-Das nuvens da rotina surge o azul inesperado — aquele que só enxerga a mente consciente.
-
 Passo uma noite tranquila, mas acordo absorto nas monótonas nuvens do cotidiano, ligado no piloto automático. De repente, a conexão com a internet cai; desconectado, sou impelido a olhar ao redor. Noto-a se preparando para caminhar, apronto-me e saímos juntos, andando até a praça. Os ipês estão floridos, algumas flores rosadas caídas decoram o chão. Formando tapetes que ganham vida com o vento suave. Pessoas andam, outras correm. O clima é ameno, sem ser frio. Após minutos intensos de conversa e exercício, retornamos para casa.
 
 Do lado da cama, o computador acende-se. Olho para o grande monitor, sentindo as teclas que a mente escolhe. O sistema e os programas que povoam a tela foram decisões minhas — pequenos faróis de liberdade que tornam agradáveis as tarefas diárias. A tela é amena, pois não brilham em meus olhos anúncios que distraem a atenção.
