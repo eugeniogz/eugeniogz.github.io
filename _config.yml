@@ -1,6 +1,6 @@
 title: "Wingene"
 author: "José Eugênio de Assis Gonçalves"
-description: "Filosofia e prática da herança consciente."
+description: "Felicidade é criar o futuro ancestral."
 show_downloads: false
 google_analytics: G-VV8V7GTRPD
 url: "https://blog.wingene.com.br"
@@ -31,7 +31,7 @@ kramdown:
 
 # Social media user names used by the minima theme:
 # All of these are optional and can be removed or commented out
-#email: "eugeniog@gmail.com"
+email: "jose@wingene.com.br"
 #twitter_username: "eugeniog"
 #github_username: "githubuser"
 #linkedin_username: "linkedinuser"
