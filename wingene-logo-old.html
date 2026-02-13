@@ -6,7 +6,7 @@ layout: default
     <script src="gif.js"></script>
     <script type="application/javascript">
         /* 
-        - Fatores de aumento baseados em senos de números primos para harmonia natural.
+        - Fatores de redução baseados em números primos (23, 31, 47) para harmonia natural.
         - Red (12/5): Valores (Base Ancestral)
         - Yellow (12/4): Imperfeições (Alerta)
         - Green (12/3): Decisões (Ação)
@@ -24,18 +24,18 @@ layout: default
         var tamanhoSubEstrela3 = (Math.sqrt(3) - Math.sqrt(1)) / 2;
         var tamanhoSubEstrela2 = (Math.sqrt(6) - Math.sqrt(2)) / (2 * Math.sqrt(3));
         //Aumenta o tamanho num fator (2*seno(X))
-        var angulo4 = 53;
+        var angulo4 = 51;
         var angulo3 = 61;
-        var angulo2 = 67;
+        var angulo2 = 71;
         var tamanhoFinal4 = tamanhoSubEstrela4 * 2 * Math.sin(angulo4 * rad);
         var tamanhoFinal3 = tamanhoSubEstrela3 * 2 * Math.sin(angulo3 * rad);
         var tamanhoFinal2 = tamanhoSubEstrela2 * 2 * Math.sin(angulo2 * rad);
-        var blue = "#1010b0";
-        var red  = "#b01010";
-        var green = "#0f9010";
-        var yellow = "#b0b010";
-        var white = "rgba(255,255,255,0.8)";
-        var opacidadeAzul = 0.7;
+        var blue = "#337dcc";
+        var red  = "#cc3333";
+        var green = "#33cc33";
+        var yellow = "#cccc33";
+        var white = "#ffffff";
+
         function draw() {
             var size = document.forms.form1.strSize.value * 1.0;
             var canvas = document.getElementById("canvas");
@@ -46,16 +46,16 @@ layout: default
             drawStar(ctx, 12, 5, size, 0, 1, red, center);
             drawStar(ctx, 12, 4, size * tamanhoFinal4, 15, 4, yellow, center);
             drawStar(ctx, 12, 3, size * tamanhoFinal3, 0, 3, green, center);
-            drawStar(ctx, 12, 2, size * tamanhoFinal2, 15, 2, blue, center, opacidadeAzul);
+            drawStar(ctx, 12, 2, size * tamanhoFinal2, 15, 2, blue, center);
         }
         function downloadSVG() {
             var size = document.forms.form1.strSize.value * 1.0;
             var center = size / 2;
             var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' + size + '" height="' + size + '" viewBox="0 0 ' + size + ' ' + size + '">';
-            svg += '<path d="' + getStarPath(12, 5, size, 0, 1, center) + '" stroke="'+red+'" fill="'+red+'" opacity="1" />';       
-            svg += '<path d="' + getStarPath(12, 4, size * tamanhoFinal4, 15, 4, center) + '" stroke="'+yellow+'" fill="'+yellow+'" opacity="1" />';
-            svg += '<path d="' + getStarPath(12, 3, size * tamanhoFinal3, 0, 3, center) + '" stroke="'+green+'" fill="'+green+'" opacity="1" />';
-            svg += '<path d="' + getStarPath(12, 2, size * tamanhoFinal2, 15, 2, center) + '" stroke="'+blue+'" fill="'+blue+'" opacity="'+opacidadeAzul+'" />';
+            svg += '<path d="' + getStarPath(12, 5, size, 0, 1, center) + '" stroke="'+red+'" fill="'+red+'" />';       
+            svg += '<path d="' + getStarPath(12, 4, size * tamanhoFinal4, 15, 4, center) + '" stroke="'+yellow+'" fill="'+yellow+'" />';
+            svg += '<path d="' + getStarPath(12, 3, size * tamanhoFinal3, 0, 3, center) + '" stroke="'+green+'" fill="'+green+'" />';
+            svg += '<path d="' + getStarPath(12, 2, size * tamanhoFinal2, 15, 2, center) + '" stroke="'+blue+'" fill="'+blue+'" />';
             svg += '</svg>';
             var blob = new Blob([svg], {type: "image/svg+xml"});
             var url = URL.createObjectURL(blob);
@@ -76,9 +76,9 @@ layout: default
             drawStar(ctx, 12, 2, size * fator50, 0, 2, red, center);
             drawStar(ctx, 12, 2, size * fator40, 0, 2, white, center);
             drawStar(ctx, 12, 2, size * fator30, 0, 2, green, center);
+            drawStar(ctx, 12, 2, size * fator20, 0, 2, white, center);
+            ctx.strokeColor = "#000000";
             drawStar(ctx, 12, 2, size * fator10, 0, 2, blue, center);
-            
-            //drawStar(ctx, 12, 2, size * fator10, 0, 2, blue, center);
         }
         function downloadSVGSimples() {
             var size = document.forms.form1.strSize.value * fator50;
@@ -87,8 +87,8 @@ layout: default
             svg += '<path d="' + getStarPath(12, 2, size * fator50, 0, 2, center) + '" stroke="'+red+'" fill="'+red+'" />';       
             svg += '<path d="' + getStarPath(12, 2, size * fator40, 0, 2, center) + '" stroke="'+white+'" fill="'+white+'" />';
             svg += '<path d="' + getStarPath(12, 2, size * fator30, 0, 2, center) + '" stroke="'+green+'" fill="'+green+'" />';
+            svg += '<path d="' + getStarPath(12, 2, size * fator20, 0, 2, center) + '" stroke="'+white+'" fill="'+white+'" />';
             svg += '<path d="' + getStarPath(12, 2, size * fator10, 0, 2, center) + '" stroke="'+blue+'" fill="'+blue+'" />';
-            //svg += '<path d="' + getStarPath(12, 2, size * fator10, 0, 2, center) + '" stroke="'+blue+'" fill="'+blue+'" />';
             svg += '</svg>';
             var blob = new Blob([svg], {type: "image/svg+xml"});
             var url = URL.createObjectURL(blob);
@@ -122,15 +122,11 @@ layout: default
             }
             return path;
         }
-        function drawStar(ctx, n, p, size, startAngle, repeticao, fillColor, center, opacidade) {
+        function drawStar(ctx, n, p, size, startAngle, repeticao, fillColor, center) {
             var len = (size / 2) * 0.95;
             var centro = center !== undefined ? center : size / 2;
-            var opacity = opacidade !== undefined ? opacidade : 1;
             var angle = 180 - 180 * (n - 2 * p) / n;
 
-            ctx.save();
-            ctx.globalAlpha = opacity;
-            ctx.strokeColor = fillColor;
             ctx.beginPath();
             var i = 0;
             var actualAngle = startAngle;
@@ -153,11 +149,10 @@ layout: default
 
             if (fillColor) {
                 ctx.fillStyle = fillColor;
+                ctx.strokeStyle = fillColor;
                 ctx.fill();
-            } else {
-                ctx.stroke();
             }
-            ctx.restore();
+            ctx.stroke();
         }
 
         // Variáveis de controle da animação
@@ -219,14 +214,14 @@ layout: default
         function downloadGif() {
             var size = document.forms.form1.strSize.value * 1.0;
             var canvas = document.getElementById("canvas");
-            canvas.willReadFrequently = true;
+            
             // Inicializa o objeto GIF
             var gif = new GIF({
                 workers: 2,
                 quality: 10,
                 width: size,
                 height: size,
-                workerScript: "{{ '/gif.worker.js' | absolute_url }}"
+                workerScript: "gif.worker.js"
             });
 
             console.log("A capturar frames para o GIF...");
@@ -245,7 +240,7 @@ layout: default
                 link.click();
                 
                 // Volta ao estado final do desenho
-                //draw(); 
+                draw(); 
             });
 
             gif.render();
@@ -257,19 +252,18 @@ layout: default
     <h3>O Logotipo da Wingene</h3>
     <p>O Logotipo é formado por um polígono estrelado regular de 12 vértices (12/5) vermelho e 
         os compostos polígonais gerados internamente nesse polígono estrelado (12/4, 12/3, 12/2). 
-        Os raios dos compostos são aumentados segundo fatores, que representam o diâmetro do polígono original 
+        Os raios dps compostos são aumentados segundo fatores, que representam o diâmetro do polígono original 
         vezes seno(51⁰), seno(47⁰) e seno(37⁰), respecticamente. Todas as formas são preenchidas com uma cor:</p>
 
         <ul>
         <li>(12/5) - Vermelho: a herança ancestral, os Valores éticos (O polígono).</li>
         <li>(12/4) - Amarelo: as Imperfeições (4 triângulos).</li>
         <li>(12/5) - Verde: as Decisões (3 quadrados).</li>
-        <li>(12/2) - Azul com opacidade 0,7: a Atenção — o espírito (2 hexágonos).</li>
+        <li>(12/2) - Azul: a Atenção — o espírito (2 hexágonos).</li>
         </ul>
        
-        <p>A versão simplificada utiliza apenas três compostos polígonais (12/2) com separação em branco entre
-            o vermelho e o verde, omitindo o amarelo. Na visualização em tamanhos reduzidos o amarelo surge 
-            de forma subliminar.
+        <p>A versão simplificada utiliza apenas compostos polígonais (12/2) com separações em branco e omite 
+            o amarelo. Na visualização em tamanhos reduzidos o amarelo surge de forma subliminar.
             </p>
         
         

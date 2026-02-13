@@ -517,8 +517,8 @@ function sincronizarAssets(pastaFonte, pastaDestino) {
         const arquivo = arquivos.next();
         const mime = arquivo.getMimeType();
         
-        // Verifica se é JPG, PNG ou Vídeo
-        if (mime === MimeType.JPEG || mime === MimeType.PNG || mime.startsWith('video/')) {
+        // Verifica se é para copiar diretamente
+        if (mime === MimeType.JAVASCRIPT || mime === MimeType.HTML || mime === MimeType.JPEG || mime === MimeType.PNG || mime.startsWith('video/')) {
             const nomeArquivo = arquivo.getName();
             const arquivosDestino = pastaDestino.getFilesByName(nomeArquivo);
             
