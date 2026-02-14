@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Geometria da VIDA"
-reading_time: 2
+reading_time: 3
 semantic_order: 0
 no_index: true
 --- 
@@ -11,6 +11,8 @@ no_index: true
 ### [Geometria](./)
 
 ## Geometria da VIDA
+
+### O logotipo padrão
 
 Esse é o logotipo padrão da Wingene:
 
@@ -33,6 +35,18 @@ O amarelo, as imperfeições, vêm logo em seguida como uma estrela {12/4}. Incr
 O verde é um chamado à ação, a força de decidir enfrentar as imperfeições enquadradas no radar pela atenção. Os brotos dos valores que lutam contra as imperfeições por atitudes reiteradas contra as mesmas.
 
 O azul, a atenção, se estende como hexágonos num plano, cobrindo todas as áreas da vida, permitindo detectar o amarelo que se esconde na presunção individual. Sua opacidade é um lembrete para a fugacidade da presença.
+
+### A harmonia matemática
+
+No universo dos polígonos estrelados, o {12/5} é o "limite harmônico". Ele é o último a manter a simetria perfeita antes que a complexidade se torne caótica. Para a Wingene, isso significa que a base ancestral é a estrutura mais complexa possível que ainda permite a ordem total interna.
+
+As figuras que compõem as estrelas internas, triângulos, quadrados e hexágonos, são as únicas figuras geométricas que, idênticas, podem ser replicadas para formar um plano infinito.
+
+Os triângulos e quadrados geram os únicos três politopos regulares possíveis em qualquer dimensão (Simplex, Hipercubo e Ortoplexo). As imperfeições (triângulos) e as decisões (quadrados) são blocos de construção da realidade, permitindo "dar volume" à existência, saindo do plano abstrato para o concreto da vida na quarta dimensão.
+
+Os hexágonos azuis representam a atenção que situa o espírito no horizonte material. A presença consciente, que enxerga os avanços e fracassos, e permite a evolução.
+
+### Imagem simplificada
 
 Para um ícone em tamanho reduzido, esse logotipo não é adequado. Então, foi criada uma versão simplificada utilizando estrelas poligonais {12/2}, quatro estrelas de dois hexágonos:
 
