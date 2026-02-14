@@ -40,6 +40,7 @@ title: "Wingene: os logotipos"
         var white = "rgba(255,255,255,0.8)";
         var opacidadeAzul = 0.7;
         function draw() {
+            cancelAnimationFrame(animationId);
             var size = document.forms.form1.strSize.value * 1.0;
             var canvas = document.getElementById("canvas");
             canvas.width = size;
@@ -70,6 +71,7 @@ title: "Wingene: os logotipos"
             document.body.removeChild(a);
         }
         function drawSimples() {
+            cancelAnimationFrame(animationId);
             var size = document.forms.form1.strSize.value * 1.0;
             var canvas = document.getElementById("canvas");
             canvas.width = size* fator5;
@@ -176,16 +178,17 @@ title: "Wingene: os logotipos"
         function animate(currentTime) {
             if (!currentTime) currentTime = performance.now();
             var elapsed = currentTime - startTime;
-            var progress = Math.min(elapsed / duration, 1);
-
-            // Easing function para suavidade (Optional)
-            var ease = progress; 
-
-            renderFrame(ease);
-
-            if (progress < 1) {
-                animationId = requestAnimationFrame(animate);
+            var t = (elapsed % duration) / duration;
+            var progress;
+            
+            if (t < 0.5) {
+                progress = t * 2;
+            } else {
+                progress = (1 - t) * 2;
             }
+
+            renderFrame(progress);
+            animationId = requestAnimationFrame(animate);
         }
 
         function renderFrame(progress) {
@@ -219,6 +222,7 @@ title: "Wingene: os logotipos"
         // Para o Download em GIF, recomendo usar a lib GIF.js. 
         // Como não posso carregar libs externas aqui, preparei a estrutura lógica:
         function downloadGif() {
+            cancelAnimationFrame(animationId);
             var size = document.forms.form1.strSize.value * 1.0;
             var canvas = document.getElementById("canvas");
             canvas.willReadFrequently = true;
@@ -285,7 +289,7 @@ title: "Wingene: os logotipos"
             <p>
                 Existe ainda uma versão com animação. Ela começa com as estrelas poligonais 
                 12/4, 12,/3 e 12/2 no tamanho original aumentando até a versão do logotipo padrão. 
-                Na animação em GIF o aumento gradual segue-se de uma diminuição gradual, em um ciclo 
+                O aumento gradual segue-se de uma diminuição gradual, em um ciclo 
                 de 3,1 segundos. Essa é a versão que ilustra o banner deste site.
             </p>
         
