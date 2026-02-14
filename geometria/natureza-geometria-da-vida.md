@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Natureza: geometria da VIDA"
-reading_time: 1
+reading_time: 2
 semantic_order: 0
 no_index: true
 --- 
@@ -12,13 +12,13 @@ no_index: true
 
 ## Natureza: geometria da VIDA
 
-O ícone do site Wingene surgiu da simplificação do logo:
+O logotipo da Wingene:
 
-![Logotipo original da Wingene](./wingene.png)
+<img src="/wingene.svg" alt="Logotipo padrão da Wingene" width="150" height="150">
 
 Esse logotipo representa os quatro eixos do acróstico [VIDA](/wingene/o-metodo-vida-a-wingene-em-pratica.html) colorindo o polígono estrelado de doze vértices (12/5) e suas estrelas poligonais conforme abaixo:
 
-* (12/5) - Vermelho: a herança ancestral, os valores éticos. O polígono estrelado.
+* (12/5) - Vermelho: os valores éticos. O polígono estrelado.
 
 * (12/3) - Amarelo: as imperfeições. Quatro triângulos.
 
@@ -26,18 +26,22 @@ Esse logotipo representa os quatro eixos do acróstico [VIDA](/wingene/o-metodo-
 
 * (12/2) - Azul: a Atenção. Dois hexágonos.
 
-Para um ícone de favorito, que tem tamanho reduzido na aba dos navegadores, decidi simplificar a figura. Que ficou assim:
+O vermelho, a herança biológica e cultural, como o polígono 12/5, é a base que gera todas as demais estrelas poligonais. Um sinal indelével para a conduta ética definida pelos valores da nossa herança ancestral.
 
-![Favicon do site Wingene](./wingene-simplified.png)
+O amarelo, as imperfeições, vêm logo em seguida como uma estrela 12/4. Incrustado no vermelho, nos recorda não somente as nossas falhas, como também as inconsistências que podem ser trazidas nessa herança.
 
-Na simplificação, as imperfeições, o amarelo, foram extirpadas da imagem. Apesar disso, para visualizações à distância ou para tamanhos pequenos da imagem, o amarelo surge como uma mistura subliminar do verde e do vermelho. Isso faz lembrar do perfeito utópico, que impede que as imperfeições sejam totalmente eliminadas. Além disso, serve como um alerta da dificuldade pessoal em reconhecê-las. Muitas vezes, elas estão mais nítidas para quem nos vê de fora.
+O verde é um chamado à ação, a força de decidir enfrentar as imperfeições enquadradas no radar pela atenção. Os brotos dos valores que lutam contra as imperfeições por atitudes reiteradas contra as mesmas.
 
-O ícone reduzido fica assim: <span>![Favicon do site Wingene](./wingene-simplified-fav.png)</span> Consegue enxergar o amarelo?
+O azul, a atenção, se estende como hexágonos num plano, cobrindo todas as áreas da vida, permitindo detectar o amarelo que se esconde na presunção individual.
 
-A atenção se estende como hexágonos num plano, cobrindo todas as áreas da vida, permitindo detectar o amarelo que se esconde.
+Para um ícone de favorito, que tem tamanho reduzido na aba dos navegadores, esse logotipo não é adequado. Então, foi criada uma versão simplificada utilizando estrelas poligonais 12/2:
 
-As decisões motivam a ação, como sinaleiros verdes que abrem para o nosso caminho de superação.
+<img src="/wingene-simplified.svg" alt="Logotipo simplificado da Wingene" width="150" height="150">
 
-Finalmente, o vermelho, a herança biológica e cultural, é a base que gera todos os demais eixos. Um sinal indelével para a conduta ética definida pelos valores da nossa herança ancestral.
+Na simplificação, o amarelo foi extirpado da imagem. Apesar disso, visualizações à distância ou em tamanhos pequenos trazem a ilusão subliminar do mesmo entre o verde e o vermelho. Um alerta para a dificuldade pessoal em reconhecer as imperfeições. Muitas vezes, tão mais nítidas para quem as vê de fora.
 
-Detalhes técnicos e o programa responsável pela geração das imagens podem ser visto em: [Wingene: os logotipos](/wingene-logo.html)
+Abaixo, o ícone reduzido, onde é possível ver o halo amarelo subliminar:
+
+<img src="/wingene-simplified.svg" alt="Logotipo simplificado da Wingene" width="50" height="50">
+
+Detalhes técnicos e a página responsável pela geração das imagens, com o código que faz a geração, podem ser vistos em: [Wingene: os logotipos](/wingene-logo.html)

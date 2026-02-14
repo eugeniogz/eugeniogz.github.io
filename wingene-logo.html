@@ -14,12 +14,14 @@ title: "Wingene: os logotipos"
         - Blue (12/2): Atenção (Calma/Expansão Hexagonal)
         */
         var rad = Math.PI / 180;
-        var grau50 = 37;
-        var fator50 = 1;
-        var fator40 = Math.sin(31 * rad)/Math.sin(grau50 * rad);
-        var fator30 = Math.sin(29 * rad)/Math.sin(grau50 * rad);
-        var fator20 = Math.sin(23 * rad)/Math.sin(grau50 * rad);
-        var fator10 = Math.sin(19 * rad)/Math.sin(grau50 * rad);
+        //Geração dos tamanhos das estrelas do logo simplificado
+        var tipoEstrelaSimples = 2; //Estrela 12/2
+        var repeticaoEstrelaSimples = 2; // 2 Hexágonos
+        var fator5 = 1;
+        var anguloDivisor = 37;
+        var fator4 = Math.sin(31 * rad)/Math.sin(anguloDivisor * rad);
+        var fator3 = Math.sin(29 * rad)/Math.sin(anguloDivisor * rad);
+        var fator2 = Math.sin(23 * rad)/Math.sin(anguloDivisor * rad);
         //Tamanhos originais das subestrelas no 12/5 de size=1
         var tamanhoSubEstrela4 = (Math.sqrt(6) - Math.sqrt(2)) / 2;
         var tamanhoSubEstrela3 = (Math.sqrt(3) - Math.sqrt(1)) / 2;
@@ -70,26 +72,25 @@ title: "Wingene: os logotipos"
         function drawSimples() {
             var size = document.forms.form1.strSize.value * 1.0;
             var canvas = document.getElementById("canvas");
-            canvas.width = size* fator50;
-            canvas.height = size* fator50;
+            canvas.width = size* fator5;
+            canvas.height = size* fator5;
             var ctx = canvas.getContext('2d');
-            var center = size * fator50 / 2;
-            drawStar(ctx, 12, 2, size * fator50, 0, 2, red, center);
-            drawStar(ctx, 12, 2, size * fator40, 0, 2, white, center);
-            drawStar(ctx, 12, 2, size * fator30, 0, 2, green, center);
-            drawStar(ctx, 12, 2, size * fator10, 0, 2, blue, center);
+            var center = size * fator5 / 2;
+            drawStar(ctx, 12, tipoEstrelaSimples, size * fator5, 0, repeticaoEstrelaSimples, red, center);
+            drawStar(ctx, 12, tipoEstrelaSimples, size * fator4, 0, repeticaoEstrelaSimples, white, center);
+            drawStar(ctx, 12, tipoEstrelaSimples, size * fator3, 0, repeticaoEstrelaSimples, green, center);
+            drawStar(ctx, 12, tipoEstrelaSimples, size * fator2, 0, repeticaoEstrelaSimples, blue, center);
             
             //drawStar(ctx, 12, 2, size * fator10, 0, 2, blue, center);
         }
         function downloadSVGSimples() {
-            var size = document.forms.form1.strSize.value * fator50;
-            var center = size * fator50 / 2;
-            var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' + size* fator50 + '" height="' + size* fator50 + '" viewBox="0 0 ' + size * fator50+ ' ' + size * fator50+ '">';
-            svg += '<path d="' + getStarPath(12, 2, size * fator50, 0, 2, center) + '" stroke="'+red+'" fill="'+red+'" />';       
-            svg += '<path d="' + getStarPath(12, 2, size * fator40, 0, 2, center) + '" stroke="'+white+'" fill="'+white+'" />';
-            svg += '<path d="' + getStarPath(12, 2, size * fator30, 0, 2, center) + '" stroke="'+green+'" fill="'+green+'" />';
-            svg += '<path d="' + getStarPath(12, 2, size * fator10, 0, 2, center) + '" stroke="'+blue+'" fill="'+blue+'" />';
-            //svg += '<path d="' + getStarPath(12, 2, size * fator10, 0, 2, center) + '" stroke="'+blue+'" fill="'+blue+'" />';
+            var size = document.forms.form1.strSize.value * fator5;
+            var center = size * fator5 / 2;
+            var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' + size* fator5 + '" height="' + size* fator5 + '" viewBox="0 0 ' + size * fator5+ ' ' + size * fator5+ '">';
+            svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fator5, 0, repeticaoEstrelaSimples, center) + '" stroke="'+red+'" fill="'+red+'" />';       
+            svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fator4, 0, repeticaoEstrelaSimples, center) + '" stroke="'+white+'" fill="'+white+'" />';
+            svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fator3, 0, repeticaoEstrelaSimples, center) + '" stroke="'+green+'" fill="'+green+'" />';
+            svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fator2, 0, repeticaoEstrelaSimples, center) + '" stroke="'+blue+'" fill="'+blue+'" />';
             svg += '</svg>';
             var blob = new Blob([svg], {type: "image/svg+xml"});
             var url = URL.createObjectURL(blob);
@@ -265,8 +266,9 @@ title: "Wingene: os logotipos"
     <h3>Os Logotipos da Wingene</h3>
     <p>O Logotipo padrão é formado por um polígono estrelado regular de 12 vértices (12/5) vermelho e 
         os compostos polígonais gerados internamente nesse polígono estrelado (12/4, 12/3, 12/2). 
-        Os raios dos compostos são aumentados segundo fatores, que representam o diâmetro do polígono original 
-        vezes seno(53⁰), seno(61⁰) e seno(67⁰), respecticamente. Todas as formas são preenchidas com uma cor:</p>
+        Os raios dos compostos são aumentados segundo fatores, que representam o diâmetro do 
+        polígono original vezes seno(53⁰), seno(61⁰) e seno(67⁰), respecticamente. 
+        Todas as formas são preenchidas com uma cor:</p>
 
         <ul>
         <li>(12/5) - Vermelho: a herança ancestral, os Valores éticos (O polígono).</li>
@@ -275,17 +277,16 @@ title: "Wingene: os logotipos"
         <li>(12/2) - Azul com opacidade 0,7: a Atenção — o espírito (2 hexágonos).</li>
         </ul>
        
-        <p>A versão simplificada utiliza apenas três compostos polígonais (12/2) com separação em branco entre
-            o vermelho e o verde, omitindo o amarelo. Na visualização em tamanhos reduzidos o amarelo surge 
-            de forma subliminar.
+        <p>A versão simplificada utiliza apenas três compostos polígonais (12/2) com separação em branco 
+            entre o vermelho e o verde, omitindo o amarelo. Na visualização em tamanhos reduzidos o 
+            amarelo surge de forma subliminar.
             </p>
 
             <p>
-                Existe ainda uma versão com animação. Ela começa com as estrelas poligonais 12/4, 12,/3 e 12/2 no
-                tamanho
-                original aumentando até a versão do logotipo padrão. Na animação em GIF o aumento gradual segue-se
-                de uma diminuição gradual, em um ciclo de 3,1 segundos. Essa é a versão que ilustra o banner deste
-                site.
+                Existe ainda uma versão com animação. Ela começa com as estrelas poligonais 
+                12/4, 12,/3 e 12/2 no tamanho original aumentando até a versão do logotipo padrão. 
+                Na animação em GIF o aumento gradual segue-se de uma diminuição gradual, em um ciclo 
+                de 3,1 segundos. Essa é a versão que ilustra o banner deste site.
             </p>
         
         
@@ -294,6 +295,10 @@ title: "Wingene: os logotipos"
    o hexágono é a o polígono regular de menor número de vértices que não gera politopes em nenhuma dimensão.
    Além disso, o hexágono é o polígono regular de maior número de vértices que permite a disposição infinita de 
    formas idênticas em um plano.
+   </p>
+
+   <p>
+    Para mais detalhes, acesse <a href="/geometria/natureza-geometria-da-vida.html">Natureza: geometria da VIDA → </a>
    </p>
 
    <form id="form1">
