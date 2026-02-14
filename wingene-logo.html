@@ -2,6 +2,7 @@
 layout: default
 title: "Wingene: os logotipos"
 ---
+
 <html>
 <head>
     <script src="gif.js"></script>
@@ -264,66 +265,95 @@ title: "Wingene: os logotipos"
             ctx.clearRect(0, 0, size, size);
         }
     </script>
+    <style>
+        .control-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .control-row {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        input[type="button"] {
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        input[type="button"]:hover {
+            background-color: #e0e0e0;
+        }
+        input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 
 <body>
     <h3>Os Logotipos da Wingene</h3>
-    <p>O Logotipo padrão é formado por um polígono estrelado regular de 12 vértices (12/5) vermelho e 
-        os compostos polígonais gerados internamente nesse polígono estrelado (12/4, 12/3, 12/2). 
-        Os raios dos compostos são aumentados segundo fatores, que representam o diâmetro do 
-        polígono original vezes seno(53⁰), seno(61⁰) e seno(67⁰), respecticamente. 
+    <p>O Logotipo padrão é formado por um polígono estrelado regular de 12 vértices ({12/5}) vermelho e 
+        as três estrelas poligonais geradas internamente nesse polígono estrelado ({12/4}, {12/3}, {12/2}). 
+        Os raios das estrela internas são aumentados por duas vezes os senos de 53⁰, 61⁰ e 67⁰, respectivamente. 
         Todas as formas são preenchidas com uma cor:</p>
 
         <ul>
         <li>(12/5) - Vermelho: a herança ancestral, os Valores éticos (O polígono).</li>
-        <li>(12/4) - Amarelo: as Imperfeições (4 triângulos).</li>
-        <li>(12/5) - Verde: as Decisões (3 quadrados).</li>
-        <li>(12/2) - Azul com opacidade 0,7: a Atenção — o espírito (2 hexágonos).</li>
+        <li>(12/4) - Amarelo: as Imperfeições (estrela de 4 triângulos).</li>
+        <li>(12/3) - Verde: as Decisões (estrela de 3 quadrados).</li>
+        <li>(12/2) - Azul com opacidade 0,7: a Atenção — o espírito (estrela de 2 hexágonos).</li>
         </ul>
        
-        <p>A versão simplificada utiliza apenas três compostos polígonais (12/2) com separação em branco 
+        <p>A versão simplificada utiliza apenas três compostos polígonais {12/2} com separação em branco 
             entre o vermelho e o verde, omitindo o amarelo. Na visualização em tamanhos reduzidos o 
             amarelo surge de forma subliminar.
             </p>
 
             <p>
                 Existe ainda uma versão com animação. Ela começa com as estrelas poligonais 
-                12/4, 12,/3 e 12/2 no tamanho original aumentando até a versão do logotipo padrão. 
+                {12/4}, {12/3} e {12/2} no tamanho original aumentando até a versão do logotipo padrão. 
                 O aumento gradual segue-se de uma diminuição gradual, em um ciclo 
                 de 3,1 segundos. Essa é a versão que ilustra o banner deste site.
             </p>
         
         
    <p>
-   Observação geométrica: Triângulos e quadrados são a semente dos 3 politopes possíveis em qualquer dimensão.
-   o hexágono é a o polígono regular de menor número de vértices que não gera politopes em nenhuma dimensão.
-   Além disso, o hexágono é o polígono regular de maior número de vértices que permite a disposição infinita de 
-   formas idênticas em um plano.
-   </p>
-
-   <p>
-    Para mais detalhes, acesse <a href="/geometria/natureza-geometria-da-vida.html">Natureza: geometria da VIDA → </a>
+   Observações:<br/>
+    O {12/5} é o único poligono estrelado regular que gera exatamente 3 estrelas internas
+    compostas por polígonos perfeitos.<br/><br/>
+    Triângulos e quadrados são a semente dos 3 politopes possíveis em qualquer dimensão.<br/><br/>
+    O hexágono é primeiro polígono regular em número de vértices a partir do qual não existem politopes em nenhuma dimensão.<br/><br/>
+    Além disso, o hexágono é o polígono regular de maior número de vértices que permite a disposição infinita de 
+    formas idênticas em um plano.
    </p>
 
    <form id="form1">
-        <TABLE>
-            <TR>
-                <TD>Size:</TD>
-                <TD><input name="strSize" id="strSize" type="text" value="150" onchange="draw()"></TD>
-            </TR>
-            <TR>
-                <TD><input type="button" onclick="draw()" value="Gerar"></TD>
-                <TD> <input type="button" onclick="downloadSVG()" value="Baixar SVG"></TD>
-            </TR>
-            <TR>
-                <TD><input type="button" onclick="drawSimples()" value="Gerar Simplificado"></TD>
-                <TD> <input type="button" onclick="downloadSVGSimples()" value="Baixar SVG Simplificado"></TD>
-            </TR>
-            <TR>
-                <TD><input type="button" onclick="drawAnimated()" value="Gerar animação"></TD>
-                <TD><input type="button" onclick="downloadGif()" value="Baixar GIF da animação"></TD>
-            </TR>
-        </TABLE>
+        <div class="control-panel">
+            <div class="control-row">
+                <label for="strSize">Size:</label>
+                <input name="strSize" id="strSize" type="text" value="150" onchange="draw()">
+            </div>
+            <div class="control-row">
+                <input type="button" onclick="draw()" value="Gerar">
+                <input type="button" onclick="downloadSVG()" value="Baixar SVG">
+            </div>
+            <div class="control-row">
+                <input type="button" onclick="drawSimples()" value="Gerar Simplificado">
+                <input type="button" onclick="downloadSVGSimples()" value="Baixar SVG Simplificado">
+            </div>
+            <div class="control-row">
+                <input type="button" onclick="drawAnimated()" value="Gerar animação">
+                <input type="button" onclick="downloadGif()" value="Baixar GIF da animação">
+            </div>
+        </div>
     </form>
     <canvas id="canvas"></canvas>
 </body>
