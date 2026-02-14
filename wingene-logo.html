@@ -300,26 +300,26 @@ title: "Wingene: os logotipos"
 
 <body>
     <h3>Os Logotipos da Wingene</h3>
-    <p>O Logotipo padrão é formado por um polígono estrelado regular de 12 vértices ({12/5}) vermelho e 
+    <p>O logotipo padrão é formado por um polígono estrelado regular de 12 vértices ({12/5}) vermelho e 
         as três estrelas poligonais geradas internamente nesse polígono estrelado ({12/4}, {12/3}, {12/2}). 
         Os raios das estrela internas são aumentados por duas vezes os senos de 53⁰, 61⁰ e 67⁰, respectivamente. 
         Todas as formas são preenchidas com uma cor:</p>
 
         <ul>
-        <li>(12/5) - Vermelho: a herança ancestral, os Valores éticos (O polígono).</li>
+        <li>(12/5) - Vermelho: a herança ancestral, os valores éticos (o polígono).</li>
         <li>(12/4) - Amarelo: as Imperfeições (estrela de 4 triângulos).</li>
         <li>(12/3) - Verde: as Decisões (estrela de 3 quadrados).</li>
         <li>(12/2) - Azul com opacidade 0,7: a Atenção — o espírito (estrela de 2 hexágonos).</li>
         </ul>
        
-        <p>A versão simplificada utiliza apenas três compostos polígonais {12/2} com separação em branco 
-            entre o vermelho e o verde, omitindo o amarelo. Na visualização em tamanhos reduzidos o 
+        <p>A versão simplificada utiliza apenas três compostos poligonais {12/2} com separação em branco 
+            entre o vermelho e o verde, omitindo o amarelo. Na visualização em tamanhos reduzidos, o 
             amarelo surge de forma subliminar.
             </p>
 
             <p>
-                Existe ainda uma versão com animação. Ela começa com as estrelas poligonais 
-                {12/4}, {12/3} e {12/2} no tamanho original aumentando até a versão do logotipo padrão. 
+                Uma versão com animação foi criada. Ela começa com as estrelas poligonais 
+                {12/4}, {12/3} e {12/2} no tamanho original, aumentando até a versão do logotipo padrão. 
                 O aumento gradual segue-se de uma diminuição gradual, em um ciclo 
                 de 3,1 segundos. Essa é a versão que ilustra o banner deste site.
             </p>
@@ -327,10 +327,10 @@ title: "Wingene: os logotipos"
         
    <p>
    Observações:<br/>
-    O {12/5} é o único poligono estrelado regular que gera exatamente 3 estrelas internas
+    O {12/5} é o único polígono estrelado regular que gera exatamente 3 estrelas internas
     compostas por polígonos perfeitos.<br/><br/>
-    Triângulos e quadrados são a semente dos 3 politopes possíveis em qualquer dimensão.<br/><br/>
-    O hexágono é primeiro polígono regular em número de vértices a partir do qual não existem politopes em nenhuma dimensão.<br/><br/>
+    Triângulos e quadrados são a semente dos 3 politopos possíveis em qualquer dimensão.<br/><br/>
+    O hexágono é o primeiro polígono regular em número de vértices a partir do qual não existem politopos em nenhuma dimensão.<br/><br/>
     Além disso, o hexágono é o polígono regular de maior número de vértices que permite a disposição infinita de 
     formas idênticas em um plano.
    </p>
@@ -338,20 +338,26 @@ title: "Wingene: os logotipos"
    <form id="form1">
         <div class="control-panel">
             <div class="control-row">
+                <p>Gerar as imagens dos logotipos:</p>
+            </div>
+            <div class="control-row">
                 <label for="strSize">Size:</label>
                 <input name="strSize" id="strSize" type="text" value="150" onchange="draw()">
             </div>
             <div class="control-row">
+                <label for="strSize">Logotipo padrão:</label>
                 <input type="button" onclick="draw()" value="Gerar">
-                <input type="button" onclick="downloadSVG()" value="Baixar SVG">
+                <input type="button" onclick="downloadSVG()" value="Baixar">
             </div>
             <div class="control-row">
-                <input type="button" onclick="drawSimples()" value="Gerar Simplificado">
-                <input type="button" onclick="downloadSVGSimples()" value="Baixar SVG Simplificado">
+                <label for="strSize">Logotipo Simplificado:</label>
+                <input type="button" onclick="drawSimples()" value="Gerar">
+                <input type="button" onclick="downloadSVGSimples()" value="Baixar">
             </div>
             <div class="control-row">
-                <input type="button" onclick="drawAnimated()" value="Gerar animação">
-                <input type="button" onclick="downloadGif()" value="Baixar GIF da animação">
+                <label for="strSize">Logotipo com animação:</label>
+                <input type="button" onclick="drawAnimated()" value="Gerar">
+                <input type="button" onclick="downloadGif()" value="Baixar">
             </div>
         </div>
     </form>
