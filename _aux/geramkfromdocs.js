@@ -475,12 +475,14 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
         }
         
         // 4.3. Adiciona subpasta para indexação
-        subpastasIndexadas.push({
-          name: nomeSubpasta,
-          comentario: comentario,
-          link: `./${nomeDestino}/`,
-          semanticOrder: semanticOrderScore
-        });
+        if (nomeSubpasta.toLowerCase() !== 'figuras') {
+            subpastasIndexadas.push({
+              name: nomeSubpasta,
+              comentario: comentario,
+              link: `./${nomeDestino}/`,
+              semanticOrder: semanticOrderScore
+            });
+        }
     }
 
     subpastasIndexadas.sort((a, b) => a.semanticOrder - b.semanticOrder);
@@ -518,7 +520,7 @@ function sincronizarAssets(pastaFonte, pastaDestino) {
         const mime = arquivo.getMimeType();
         
         // Verifica se é para copiar diretamente
-        if (mime === MimeType.JAVASCRIPT || mime === MimeType.HTML || mime === MimeType.JPEG || mime === MimeType.PNG || mime.startsWith('video/')) {
+        if (mime === MimeType.JAVASCRIPT || mime === MimeType.HTML || mime === MimeType.JPEG || mime === MimeType.PNG || mime === MimeType.PDF || mime.startsWith('video/')) {
             const nomeArquivo = arquivo.getName();
             const arquivosDestino = pastaDestino.getFilesByName(nomeArquivo);
             
