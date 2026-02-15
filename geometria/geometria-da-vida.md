@@ -63,4 +63,4 @@ Abaixo, o ícone reduzido, onde é possível ver o halo amarelo subliminar:
 
 Detalhes técnicos da geração das imagens e mais observações geométricas podem ser vistos na página que contém o código: [Wingene: os logotipos](/wingene-logo.html).
 
-Uma análise matemática do dodecagrama pode ser lida no artigo: (Teorema do dodecagrama regular)[./Teorema_dodecagrama_regular.pdf]
+Uma análise matemática do dodecagrama pode ser lida no artigo: [Teorema do dodecagrama regular](./Teorema_dodecagrama_regular.pdf)
