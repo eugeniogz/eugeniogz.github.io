@@ -55,7 +55,7 @@ Para um ícone em tamanho reduzido, esse logotipo não é adequado. Então, foi 
 
 <img src="./wingene-simplified.png" alt="Logotipo simplificado da Wingene">
 
-Na simplificação, o amarelo foi extirpado da imagem, sendo substituído por um branco com uma pequena opacidade. Uma simplificação adequada para a sua finalidade. Apesar disso, visualizações à distância ou em tamanhos pequenos trazem a ilusão subliminar do mesmo entre o verde e o vermelho. Um alerta para a dificuldade pessoal em reconhecer as imperfeições. Muitas vezes, tão nítidas para quem observa de fora.
+Na simplificação, o amarelo foi extirpado da imagem, sendo substituído por uma estrela branca com uma pequena opacidade. Apesar disso, a visualização à distância ou em tamanhos pequenos traz a ilusão subliminar do amarelo entre o verde e o vermelho. Um alerta para a dificuldade pessoal em reconhecer as imperfeições. Muitas vezes, tão nítidas para quem observa de fora.
 
 Este é o ícone reduzido, onde é possível ver o halo amarelo subliminar: <span><img src="./wingene-simplified.png" alt="Logotipo simplificado da Wingene" width="50" height="50"></span>
 

@@ -1045,6 +1045,10 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                 }
 
                 let text = rawText.replace(/(\r\n|\r|\n)/g, '  \n');
+                
+                // Formata imagens com !! para 50% de largura, flutuando à esquerda, com clear para evitar sobreposição
+                text = text.replace(/!!\[(.*?)\]\((.*?)\)/g, '<div style="clear: both;"></div><img src="$2" alt="$1" style="float: left; width: 50%; margin-right: 15px; margin-bottom: 10px;">');
+                
                 text = text.trim();
 
                 if (text) {
