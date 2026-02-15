@@ -56,6 +56,6 @@ Na simplificação, o amarelo foi extirpado da imagem, sendo substituído pelo b
 
 Abaixo, o ícone reduzido, onde é possível ver o halo amarelo subliminar:
 
-<img src="/wingene-simplified.svg" alt="Logotipo simplificado da Wingene" width="45" height="45">
+<img src="/wingene-simplified.svg" alt="Logotipo simplificado da Wingene" width="25" height="25" >
 
 Detalhes técnicos da geração das imagens e mais observações geométricas podem ser vistos na página que contém o código: [Wingene: os logotipos](/wingene-logo.html)
