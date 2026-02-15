@@ -739,7 +739,8 @@ function getMetadataFromDocLite(docFile, originalFileName) {
         const body = doc.getBody();
         
         // 1. CÁLCULO DE TEMPO DE LEITURA
-        const fullText = body.getText().trim();
+        let fullText = body.getText().trim();
+        fullText = fullText.replace(/\[.*?\]\(.*?\)/g, '');
         const words = fullText.split(/\s+/).filter(word => word.length > 0);
         const wordCount = words.length;
         const rawTime = wordCount / 200.0;
@@ -902,7 +903,8 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         const body = doc.getBody();
         
         // CÁLCULO DE TEMPO DE LEITURA (INTEGRADO)
-        const fullText = body.getText().trim();
+        let fullText = body.getText().trim();
+        fullText = fullText.replace(/\[.*?\]\(.*?\)/g, '');
         const words = fullText.split(/\s+/).filter(word => word.length > 0);
         const wordCount = words.length;
         const rawTime = wordCount / 200.0;
@@ -1046,8 +1048,8 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
 
                 let text = rawText.replace(/(\r\n|\r|\n)/g, '  \n');
                 
-                // Formata imagens com !! para 50% de largura, flutuando à esquerda, com clear para evitar sobreposição
-                text = text.replace(/!!\[(.*?)\]\((.*?)\)/g, '<div style="clear: both;"></div><img src="$2" alt="$1" style="float: left; width: 50%; margin-right: 15px; margin-bottom: 10px;">');
+                // Formata imagens com !! para 60% de largura, flutuando à esquerda, com clear para evitar sobreposição
+                text = text.replace(/!!\[(.*?)\]\((.*?)\)/g, '<div style="clear: both;"></div><img src="$2" alt="$1" style="float: left; width: 60%; margin-right: 10px; margin-bottom: 10px;">');
                 
                 text = text.trim();
 
