@@ -741,6 +741,7 @@ function getMetadataFromDocLite(docFile, originalFileName) {
         // 1. CÁLCULO DE TEMPO DE LEITURA
         let fullText = body.getText().trim();
         fullText = fullText.replace(/\[.*?\]\(.*?\)/g, '');
+        fullText = fullText.replace(/<div[^>]*>|<\/div>/gi, '');
         const words = fullText.split(/\s+/).filter(word => word.length > 0);
         const wordCount = words.length;
         const rawTime = wordCount / 200.0;
@@ -905,6 +906,7 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         // CÁLCULO DE TEMPO DE LEITURA (INTEGRADO)
         let fullText = body.getText().trim();
         fullText = fullText.replace(/\[.*?\]\(.*?\)/g, '');
+        fullText = fullText.replace(/<div[^>]*>|<\/div>/gi, '');
         const words = fullText.split(/\s+/).filter(word => word.length > 0);
         const wordCount = words.length;
         const rawTime = wordCount / 200.0;
@@ -1048,8 +1050,12 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
 
                 let text = rawText.replace(/(\r\n|\r|\n)/g, '  \n');
                 
-                // Formata imagens com !! para 60% de largura, flutuando à esquerda, com clear para evitar sobreposição
-                text = text.replace(/!!\[(.*?)\]\((.*?)\)/g, '<div style="clear: both;"></div><img src="$2" alt="$1" style="float: left; width: 60%; margin-right: 10px; margin-bottom: 10px;">');
+                // Formata imagens com hNN% (largura) ou vNN% (altura)
+                // hr e vr alinham a figura a direita
+                text = text.replace(/!\[h(\d+)%\s*(.*?)\]\((.*?)\)/g, '<img src="$3" alt="$2" style="float: left; width: $1%; margin-right: 10px; margin-bottom: 10px;">');
+                text = text.replace(/!\[v(\d+)%\s*(.*?)\]\((.*?)\)/g, '<img src="$3" alt="$2" style="float: left; height: $1%; margin-right: 10px; margin-bottom: 10px;">');
+                text = text.replace(/!\[hr(\d+)%\s*(.*?)\]\((.*?)\)/g, '<img src="$3" alt="$2" style="float: right; width: $1%; margin-left: 10px; margin-bottom: 10px;">');
+                text = text.replace(/!\[vr(\d+)%\s*(.*?)\]\((.*?)\)/g, '<img src="$3" alt="$2" style="float: right; height: $1%; margin-left: 10px; margin-bottom: 10px;">');
                 
                 text = text.trim();
 

@@ -169,7 +169,7 @@ title: "Wingene: os logotipos"
         // Variáveis de controle da animação
         var animationId;
         var startTime;
-        const duration = 3000; // 3 segundos de animação
+        const duration = 7770; // 7,77 segundos de animação
 
         function drawAnimated() {
             cancelAnimationFrame(animationId);
@@ -242,14 +242,17 @@ title: "Wingene: os logotipos"
 
             console.log("A capturar frames para o GIF...");
 
-            // Captura a animação em 30 frames (exemplo)
-            for (let i = 0; i <= 1; i += 0.033) {
+            // Captura a animação
+            var delay = 50;
+            var step = (delay * 2) / duration;
+
+            for (let i = 0; i <= 1; i += step) {
                 renderFrame(i); // A sua função que desenha o estado da animação
-                gif.addFrame(canvas, {copy: true, delay: 50});
+                gif.addFrame(canvas, {copy: true, delay: delay});
             }
-            for (let i = 1; i > 0; i -= 0.033) {
+            for (let i = 1; i > 0; i -= step) {
                 renderFrame(i); // A sua função que desenha o estado da animação
-                gif.addFrame(canvas, {copy: true, delay: 50});
+                gif.addFrame(canvas, {copy: true, delay: delay});
             }
             gif.on('finished', function(blob) {
                 // Cria um link de download automático
@@ -323,7 +326,7 @@ title: "Wingene: os logotipos"
                 Uma versão com animação foi criada. Ela começa com as estrelas poligonais 
                 {12/4}, {12/3} e {12/2} no tamanho original, aumentando até a versão do logotipo padrão. 
                 O aumento gradual segue-se de uma diminuição gradual, em um ciclo 
-                de 3,1 segundos. Essa é a versão que ilustra o banner deste site.
+                de 7,77 segundos. Essa é a versão que ilustra o banner deste site.
             </p>
         
         

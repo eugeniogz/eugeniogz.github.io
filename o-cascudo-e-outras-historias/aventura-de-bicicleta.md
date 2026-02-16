@@ -15,6 +15,8 @@ tags:
 
 ## Aventura de bicicleta
 
+<div style="text-transform: uppercase;" markdown="1">
+
 As irmãs Clara e Alice gostavam muito de andar de bicicleta. Quando Clara completou 8 anos e Alice já estava com 10, ganharam bicicletas novas, mais modernas e com dez marchas. Com pouco tempo, as meninas já estavam craques nas bicicletas novas, aproveitando as marchas para aumentar ou diminuir o esforço ou a velocidade. Alice era mais cuidadosa, não corria muito, já Clara, volta e meia, se esborrachava no chão fazendo manobras radicais.
 
 Andavam na pracinha e no parque perto de casa. O parque era enorme, por isso suas aventuras nele eram apenas em um espaço pequeno. Certo dia, resolveram fazer uma trilha maior no parque. Quando explicaram a ideia para o pai, ele disse: — Vocês conseguem andar tanto com suas bicicletas? Elas responderam em uníssono: — Sim! A mãe também advertiu: — Lembrem-se, vocês precisam poupar energias para chegar até o fim. As meninas pensaram. Clara disse: — A gente poupa. Alice completou: — Vamos sem pressa para cansar menos. Havia mapas na entrada, elas correram e pegaram um, definindo o trajeto com paradas obrigatórias na cachoeira, no recanto de pássaros e no bosque dos macacos-prego.
@@ -26,6 +28,8 @@ Após aproveitar o banho refrescante, se trocaram e seguiram seu caminho. Precis
 O próximo destino estava mais próximo, parecia fácil. Venceram a primeira parte com algum esforço, mas, quando chegavam perto, havia uma subida muito alta. As meninas, valentes, começaram a pedalar, mas aos poucos foram se cansando, parecia que nunca chegariam ao fim. No meio do caminho, tiveram que descer das bicicletas, não aguentavam mais… Seguiram subindo a pé, empurrando suas bicicletas até conquistarem o topo do morro. Naquele local dava para ver toda a cidade. Enquanto tomavam fôlego, avistaram os macaquinhos saltando nas árvores. Ficaram ali admirando a paisagem, ofegantes. Um macaco passou com um filhote nas costas, outro se segurava a um galho pelo rabo. Que bonitinhos!
 
 Após um tempo, Clara lembrou: — Precisamos ir, temos que chegar antes de anoitecer. E as meninas desceram o último morro desta história. Com cuidado e mais algumas pedaladas, elas já estavam com o papai e mamãe. Suas pernas tremiam de cansaço, o suor escorria pelo rosto das meninas. Clara pensava na próxima aventura, enquanto Alice só queria um bom copo de suco com pão de queijo.
+
+</div>
 
 ---
 
