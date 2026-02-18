@@ -24,23 +24,27 @@ title: "Wingene: os logotipos"
         var fator3 = Math.sin(29 * rad)/Math.sin(anguloDivisor * rad);
         var fator2 = Math.sin(23 * rad)/Math.sin(anguloDivisor * rad);
         //Tamanhos originais das subestrelas no 12/5 de size=1
-        var tamanhoSubEstrela4 = (Math.sqrt(6) - Math.sqrt(2)) / 2;
-        var tamanhoSubEstrela3 = (Math.sqrt(3) - Math.sqrt(1)) / 2;
-        var tamanhoSubEstrela2 = (Math.sqrt(6) - Math.sqrt(2)) / (2 * Math.sqrt(3));
+        var tamanhoEstrela4 = (Math.sqrt(6) - Math.sqrt(2)) / 2;
+        var tamanhoEstrela3 = (Math.sqrt(3) - Math.sqrt(1)) / 2;
+        var tamanhoEstrela2 = (Math.sqrt(6) - Math.sqrt(2)) / (2 * Math.sqrt(3));
         //var tamanhoSubEstrela1 =  2 * Math.sqrt(3) // ≈ 26,79%
         //Aumenta o tamanho num fator (2*seno(X))
         var angulo4 = 53;
         var angulo3 = 61;
         var angulo2 = 67;
-        var tamanhoFinal4 = tamanhoSubEstrela4 * 2 * Math.sin(angulo4 * rad);
-        var tamanhoFinal3 = tamanhoSubEstrela3 * 2 * Math.sin(angulo3 * rad);
-        var tamanhoFinal2 = tamanhoSubEstrela2 * 2 * Math.sin(angulo2 * rad);
+        var tamanhoFinal4 = calcSize(-5);
+        var tamanhoFinal3 = calcSize(-8);
+        var tamanhoFinal2 = calcSize(-12);
         var blue = "#1010b0";
         var red  = "#b01010";
         var green = "#0f9010";
         var yellow = "#b0b010";
         var white = "rgba(255,255,255,0.8)";
         var opacidadeAzul = 0.7;
+        
+        function calcSize(n) {
+            return 1  * Math.pow(2, n / 12);
+        }
         function draw() {
             cancelAnimationFrame(animationId);
             var size = document.forms.form1.strSize.value * 1.0;
@@ -169,7 +173,7 @@ title: "Wingene: os logotipos"
         // Variáveis de controle da animação
         var animationId;
         var startTime;
-        const duration = 7770; // 7,77 segundos de animação
+        const duration = 8430; // 8,43 segundos de animação
 
         function drawAnimated() {
             cancelAnimationFrame(animationId);
@@ -192,8 +196,40 @@ title: "Wingene: os logotipos"
             renderFrame(progress);
             animationId = requestAnimationFrame(animate);
         }
-
+        
         function renderFrame(progress) {
+    var size = document.forms.form1.strSize.value * 1.0;
+    var canvas = document.getElementById("canvas");
+    canvas.width = size;
+    canvas.height = size;
+    var ctx = canvas.getContext('2d');
+    var center = size / 2;
+    
+    ctx.clearRect(0, 0, size, size);
+
+    // 1. Estrela Base (Valores - C) - Sempre estática
+    drawStar(ctx, 12, 5, size, 0, 1, red, center);
+
+    // 2. Cálculo dos tamanhos animados (Interpolação)
+    // Parte do tamanho geométrico original (tamanhoEstrelaN) 
+    // até o tamanho da nota musical (tamanhoFinalN)
+    
+    // Amarelo: Imperfeições (Nota E)
+    var s4 = (tamanhoFinal4 - tamanhoEstrela4) * progress + tamanhoEstrela4;
+    
+    // Verde: Decisões (Nota G)
+    var s3 = (tamanhoFinal3 - tamanhoEstrela3) * progress + tamanhoEstrela3;
+    
+    // Azul: Atenção (Nota c)
+    var s2 = (tamanhoFinal2 - tamanhoEstrela2) * progress + tamanhoEstrela2;
+
+    // 3. Desenho das subestrelas animadas
+    drawStar(ctx, 12, 4, size * s4, 15, 4, yellow, center);
+    drawStar(ctx, 12, 3, size * s3, 0, 3, green, center);
+    drawStar(ctx, 12, 2, size * s2, 15, 2, blue, center, opacidadeAzul);
+}
+
+        function renderFrameOld(progress) {
             var size = document.forms.form1.strSize.value * 1.0;
             var canvas = document.getElementById("canvas");
             canvas.width = size;
@@ -210,15 +246,15 @@ title: "Wingene: os logotipos"
             // O tamanho inicial é o tamanhoSubEstrelaN (proporção natural no 12/5)
             // O tamanho final é tamanhoSubEstrelaN * (2 * Math.sin(grau))
             
-            var s4 = tamanhoSubEstrela4 * (1 + (2 * Math.sin(angulo4 * rad) - 1) * progress);
-            var s3 = tamanhoSubEstrela3 * (1 + (2 * Math.sin(angulo3 * rad) - 1) * progress);
-            var s2 = tamanhoSubEstrela2 * (1 + (2 * Math.sin(angulo2 * rad) - 1) * progress);
+            var s4 = (calcSize(-2)-calcSize(-5))* progress+calcSize(-5);
+            var s3 = (calcSize(-4)-calcSize (-7))* progress+calcSize(-7);
+            var s2 = (calcSize(-8)-calcSize (-12))* progress+calcSize(-12);
 
             // 3. Desenho das subestrelas animadas
             // Mantendo os ângulos de ajuste (15º) que você definiu para o alinhamento
             drawStar(ctx, 12, 4, size * s4, 15, 4, yellow, center);
             drawStar(ctx, 12, 3, size * s3, 0, 3, green, center);
-            drawStar(ctx, 12, 2, size * s2, 15, 2, blue, center);
+           drawStar(ctx, 12, 2, size * s2, 15, 2, blue, center,  opacidadeAzul);
         }
 
         // Para o Download em GIF, recomendo usar a lib GIF.js. 
@@ -326,21 +362,8 @@ title: "Wingene: os logotipos"
                 Uma versão com animação foi criada. Ela começa com as estrelas poligonais 
                 {12/4}, {12/3} e {12/2} no tamanho original, aumentando até a versão do logotipo padrão. 
                 O aumento gradual segue-se de uma diminuição gradual, em um ciclo 
-                de 7,77 segundos. Essa é a versão que ilustra o banner deste site.
+                de 8,43 segundos. Essa é a versão que ilustra o banner deste site.
             </p>
-        
-        
-   <p>
-   Observações:<br/>
-    O {12/5} é o único polígono estrelado regular {n/k} onde os k-1 anéis gerados correspondem a 
-    exatamente 3 estrelas internas compostas por polígonos regulares (4 triângulos, 3 quadrados
-    e 2 hexágonos) e o polígono regular de n vértices, nesse caso, o dodecágono regular.
-    <br/><br/>
-    Triângulos e quadrados são a semente dos 3 politopos possíveis em qualquer dimensão.<br/><br/>
-    O hexágono é o primeiro polígono regular em número de vértices a partir do qual não existem politopos em nenhuma dimensão.<br/><br/>
-    Além disso, o triângulo, o quadrado e o hexágono são os únicos polígonos regulares que permitem a disposição infinita de 
-    formas idênticas em um plano.
-   </p>
 
    <form id="form1">
         <div class="control-panel">
