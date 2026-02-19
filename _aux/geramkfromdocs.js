@@ -238,6 +238,10 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
     // Lista para armazenar metadados e conteúdo de TODOS os arquivos na pasta.
     const arquivosParaProcessar = []; 
     const arquivosIndexados = []; 
+    // Listas para a versão UPPERCASE (Caixa Alta)
+    const arquivosUpperParaProcessar = [];
+    const arquivosUpperIndexados = [];
+
     let nomePastaFonte = pastaFonte.getName();
     if (nomePastaFonte !== '_posts') {
         nomePastaFonte = nomePastaFonte.replace(/_/g, ' ');
@@ -386,6 +390,62 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
                 semanticOrder: semanticOrderScore
             });
         }
+
+        // --- LÓGICA ESPECÍFICA: VERSÃO CAIXA ALTA (UPPER) ---
+        // Apenas para a pasta solicitada
+        if (pastaDestino.getName() === 'o-cascudo-e-outras-historias') {
+            const nomeSlugUpper = nomeSlug + '-upper';
+            const nomeMarkdownUpper = nomeSlugUpper + '.md';
+            
+            // Verifica se o arquivo Upper já existe
+            let arquivoMdDestinoUpper = null;
+            const iterUpper = pastaDestino.getFilesByName(nomeMarkdownUpper);
+            if (iterUpper.hasNext()) arquivoMdDestinoUpper = iterUpper.next();
+
+            let deveConverterUpper = converterTodos;
+            if (arquivoMdDestinoUpper) {
+                if (arquivoMdDestinoUpper.getLastUpdated().getTime() < arquivoDoc.getLastUpdated().getTime()) {
+                    deveConverterUpper = true;
+                }
+            } else {
+                deveConverterUpper = true;
+            }
+
+            let contentUpper = null;
+            if (deveConverterUpper) {
+                // Se já convertemos o normal, reaproveitamos o conteúdo trocando apenas o layout
+                if (markdownContent) {
+                    contentUpper = markdownContent.replace(/^layout: .*$/m, 'layout: uppercase');
+                } else {
+                    // Se não convertemos o normal (estava atualizado), precisamos converter agora para o Upper
+                    const resUpper = getMarkdownAndScoreFromDoc(arquivoDoc, nomeDocOriginal, nomeSlugUpper, pastaDestino, comentarioPasta[0], 'uppercase');
+                    contentUpper = resUpper.markdownContent;
+                }
+            }
+
+            arquivosUpperParaProcessar.push({
+                original: nomeDocOriginal,
+                slug: nomeSlugUpper,
+                markdownName: nomeMarkdownUpper,
+                content: contentUpper,
+                semanticOrder: semanticOrderScore,
+                time: tempoLeitura,
+                deveConverter: deveConverterUpper,
+                arquivoMdDestino: arquivoMdDestinoUpper,
+                nomeSemData: nomeSemData, // Mantém o nome visual normal, o layout fará o uppercase visual
+                noIndex: noIndex
+            });
+
+            if (!noIndex) {
+                arquivosUpperIndexados.push({
+                    original: nomeDocOriginal,
+                    slug: nomeSlugUpper,
+                    link: `./${nomeSlugUpper}.html`,
+                    time: tempoLeitura,
+                    semanticOrder: semanticOrderScore
+                });
+            }
+        }
     }
 
     // 1.5. SINCRONIZAR ASSETS (Imagens e Vídeos)
@@ -395,6 +455,8 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
     // Ordena listas com a função sortDocs harmonizada
     arquivosParaProcessar.sort(sortDocs);
     arquivosIndexados.sort(sortDocs);
+    arquivosUpperParaProcessar.sort(sortDocs);
+    arquivosUpperIndexados.sort(sortDocs);
     
     // 3. SEGUNDA PASSAGEM (Inicial): SALVA E ADICIONA LINKS DE NAVEGAÇÃO
     function executarPassagemDeConversao(force = false) {
@@ -423,6 +485,23 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
     
     // Executa a conversão baseada em data/converterTodos (Passo 3)
     filesConverted += executarPassagemDeConversao(false);
+
+    // 3.1. PASSAGEM DE CONVERSÃO PARA ARQUIVOS UPPER (Se houver)
+    if (arquivosUpperParaProcessar.length > 0) {
+        for (let i = 0; i < arquivosUpperParaProcessar.length; i++) {
+            const docInfo = arquivosUpperParaProcessar[i];
+            if (docInfo.deveConverter) {
+                const anterior = (i > 0) ? arquivosUpperParaProcessar[i - 1] : null;
+                const proximo = (i < arquivosUpperParaProcessar.length - 1) ? arquivosUpperParaProcessar[i + 1] : null;
+                
+                const wasChanged = salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDestino);
+                if (wasChanged) filesConverted++;
+            }
+        }
+        // Gera o index-upper.md
+        const tituloIndexUpper = comentarioPasta[0] + " (CAIXA ALTA)";
+        criarIndexMarkdown(pastaDestino, tituloIndexUpper, arquivosUpperIndexados, [], comentarioPastaTexto, "index-upper.md");
+    }
 
 
     // 4. PROCESSA SUBPASTAS RECURSIVAMENTE E COLETA METADADOS
@@ -695,7 +774,7 @@ function salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDest
  */
 function gerarNavegacaoRodape(anterior, proximo) {
     if (!anterior && !proximo) return "";
-    let rodape = '\n\n---\n\n'; // Separador visual
+    let rodape = '\n<div style="clear: both;"></div>\n\n---\n\n'; // Separador visual com clear fix
     let navLinksHtml = [];
 
     if (anterior) {
@@ -890,7 +969,7 @@ function obterNomesArquivosAforismos(docFile) {
  * Inclui metadados no Front Matter.
  * @returns {{markdownContent: string, semanticOrderScore: number, tempoLeitura: number, nomeSemData: string}}
  */
-function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDestino, tituloPasta) {
+function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDestino, tituloPasta, customLayout = null) {
     let markdown = '';
     let tags = [];
     let semanticOrderScore = 0.0;
@@ -954,7 +1033,7 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         
         // --- 2. MONTAGEM DO YAML FRONT MATTER ---
         markdown += `---\n`;
-        markdown += `layout: ${isPostsFolder ? 'post' : 'default'}\n`;
+        markdown += `layout: ${customLayout ? customLayout : (isPostsFolder ? 'post' : 'default')}\n`;
         markdown += `title: "${nomeSemData}"\n`;
         // ADIÇÃO DOS METADADOS PARA OTIMIZAÇÃO FUTURA
         markdown += `reading_time: ${tempoLeitura}\n`;
@@ -1202,7 +1281,7 @@ function copiarIndexMdFonte(arquivoFonte, pastaDestino) {
  * Gera e salva/atualiza o arquivo index.md na pasta de destino.
  * @returns {boolean} True se o index.md foi criado ou teve seu conteúdo alterado.
  */
-function criarIndexMarkdown(pastaDestino, titulo, arquivos, subpastas, comentario) {
+function criarIndexMarkdown(pastaDestino, titulo, arquivos, subpastas, comentario, nomeArquivoIndex = "index.md") {
 
     // Não gera index na pasta se não houver conteúdo nela
     if (arquivos.length === 0 && subpastas.length === 0) { 
@@ -1237,7 +1316,7 @@ function criarIndexMarkdown(pastaDestino, titulo, arquivos, subpastas, comentari
     let finalContent = indexContent.trim();
 
     // 3. VERIFICA E ATUALIZA
-    const arquivosIndex = pastaDestino.getFilesByName(NOME_INDEX);
+    const arquivosIndex = pastaDestino.getFilesByName(nomeArquivoIndex);
 
     if (arquivosIndex.hasNext()) {
         const indexFile = arquivosIndex.next();
@@ -1249,12 +1328,12 @@ function criarIndexMarkdown(pastaDestino, titulo, arquivos, subpastas, comentari
         }
 
         indexFile.setContent(finalContent);
-        Logger.log(`Index.md ATUALIZADO em: ${pastaDestino.getName()} (Conteúdo alterado).`);
+        Logger.log(`${nomeArquivoIndex} ATUALIZADO em: ${pastaDestino.getName()} (Conteúdo alterado).`);
         return true; // Foi atualizado
     } else {
         // ARQUIVO NÃO EXISTE: Cria
-        pastaDestino.createFile(NOME_INDEX, finalContent, MIME_MARKDOWN);
-        Logger.log(`Index.md CRIADO em: ${pastaDestino.getName()}.`);
+        pastaDestino.createFile(nomeArquivoIndex, finalContent, MIME_MARKDOWN);
+        Logger.log(`${nomeArquivoIndex} CRIADO em: ${pastaDestino.getName()}.`);
         return true; // Foi criado
     }
 }
@@ -1284,6 +1363,10 @@ function limparArquivosExcluidos(pastaDestino, pastaFonte) {
                  slug = `${dateStr}-${slug}`;
              }
         }
+        // Proteção para os arquivos UpperCase na pasta específica
+        if (pastaDestino.getName() === 'o-cascudo-e-outras-historias') {
+            slugsFonteValidos.add(slug + "-upper.md");
+        }
         slugsFonteValidos.add(slug + ".md");
     }
 
@@ -1303,7 +1386,7 @@ function limparArquivosExcluidos(pastaDestino, pastaFonte) {
         const arquivoMd = arquivosDestino.next();
         const nomeArquivoMd = arquivoMd.getName();
 
-        if (nomeArquivoMd.toLowerCase().endsWith('.md') && nomeArquivoMd !== NOME_INDEX) {    
+        if (nomeArquivoMd.toLowerCase().endsWith('.md') && nomeArquivoMd !== NOME_INDEX && nomeArquivoMd !== 'index-upper.md') {    
             if (!slugsFonteValidos.has(nomeArquivoMd)) {
                 Logger.log(`[LIMPEZA] Arquivo .md "${nomeArquivoMd}" (em ${pastaDestino.getName()}) movido para lixeira.`);
                 arquivoMd.setTrashed(true);
