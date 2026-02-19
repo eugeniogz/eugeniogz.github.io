@@ -207,20 +207,20 @@ title: "Wingene: os logotipos"
     
     ctx.clearRect(0, 0, size, size);
 
-    // 1. Estrela Base (Valores - C) - Sempre estática
+    // 1. Estrela Base (Valores - c) - Sempre estática
     drawStar(ctx, 12, 5, size, 0, 1, red, center);
 
     // 2. Cálculo dos tamanhos animados (Interpolação)
     // Parte do tamanho geométrico original (tamanhoEstrelaN) 
     // até o tamanho da nota musical (tamanhoFinalN)
     
-    // Amarelo: Imperfeições (Nota E)
+    // Amarelo: Imperfeições (Nota G)
     var s4 = (tamanhoFinal4 - tamanhoEstrela4) * progress + tamanhoEstrela4;
     
-    // Verde: Decisões (Nota G)
+    // Verde: Decisões (Nota E)
     var s3 = (tamanhoFinal3 - tamanhoEstrela3) * progress + tamanhoEstrela3;
     
-    // Azul: Atenção (Nota c)
+    // Azul: Atenção (Nota C)
     var s2 = (tamanhoFinal2 - tamanhoEstrela2) * progress + tamanhoEstrela2;
 
     // 3. Desenho das subestrelas animadas
@@ -342,7 +342,8 @@ title: "Wingene: os logotipos"
     <h3>Os Logotipos da Wingene</h3>
     <p>O logotipo padrão é formado por um polígono estrelado regular de 12 vértices ({12/5}) vermelho e 
         as três estrelas poligonais geradas internamente nesse polígono estrelado ({12/4}, {12/3}, {12/2}). 
-        Os raios das estrelas internas são aumentados de acordo com o acorde de Dó maior c G  E C. 
+        Os raios das estrelas internas são aumentados de acordo com o acorde de Dó maior G  E C, com a estrela
+        {12/5} sendo a nota C uma oitava acima. 
         Todas as formas são preenchidas com uma cor:</p>
 
         <ul>
