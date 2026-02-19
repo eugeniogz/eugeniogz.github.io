@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="conteudo-caixa-alta">
+  {{ content }}
+</div>
+
+<style>
+  /* Aplica caixa alta em todo o texto dentro deste container */
+  .conteudo-caixa-alta {
+    text-transform: uppercase;
+  }
+
+  /* Opcional: Garante que links e botões também fiquem em caixa alta */
+  .conteudo-caixa-alta a,
+  .conteudo-caixa-alta p,
+  .conteudo-caixa-alta h1,
+  .conteudo-caixa-alta h2,
+  .conteudo-caixa-alta h3,
+  .conteudo-caixa-alta li {
+    text-transform: uppercase;
+  }
+
+  /* Exceção (Opcional): Se quiser manter códigos ou caminhos de imagem normais */
+  .conteudo-caixa-alta code,
+  .conteudo-caixa-alta pre {
+    text-transform: none;
+  }
+</style>
