@@ -217,6 +217,8 @@ Esse método reconhece que a transformação ética não é linear nem definitiv
 
 O método não oferece redenção, mas direção. Não promete perfeição, mas coerência possível. E na prática dessa coerência — reiterada, imperfeita, atenta — inscreve-se a Wingene: o futuro ancestral construído no presente.
 
+***[Logotipo*** ***Wingene:*** ***representação*** ***geométrica*** ***do*** ***método*** ***VIDA](/geometria/geometria-e-o-metodo-vida.html)***
+
 ## Apêndice: Aplicações Práticas do Método VIDA
 
 ### **Imperfeições contemporâneas comuns**
