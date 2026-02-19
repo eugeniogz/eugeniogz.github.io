@@ -485,6 +485,9 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
     
     // Executa a conversão baseada em data/converterTodos (Passo 3)
     filesConverted += executarPassagemDeConversao(false);
+    // 5. CRIA/ATUALIZA O INDEX.MD
+    const comentarioPastaTexto = comentarioPasta.length > 1 ? comentarioPasta[1] : "";
+
 
     // 3.1. PASSAGEM DE CONVERSÃO PARA ARQUIVOS UPPER (Se houver)
     if (arquivosUpperParaProcessar.length > 0) {
@@ -566,8 +569,6 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
 
     subpastasIndexadas.sort((a, b) => a.semanticOrder - b.semanticOrder);
 
-    // 5. CRIA/ATUALIZA O INDEX.MD
-    const comentarioPastaTexto = comentarioPasta.length > 1 ? comentarioPasta[1] : "";
     
     const tituloIndex = comentarioPasta[0];
     
