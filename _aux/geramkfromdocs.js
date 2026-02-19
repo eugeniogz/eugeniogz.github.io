@@ -416,6 +416,7 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
                 // Se já convertemos o normal, reaproveitamos o conteúdo trocando apenas o layout
                 if (markdownContent) {
                     contentUpper = markdownContent.replace(/^layout: .*$/m, 'layout: uppercase');
+                    contentUpper = contentUpper.replace(`### [${comentarioPasta[0]}](./)`, `### [${comentarioPasta[0]}](index-upper.html)`);
                 } else {
                     // Se não convertemos o normal (estava atualizado), precisamos converter agora para o Upper
                     const resUpper = getMarkdownAndScoreFromDoc(arquivoDoc, nomeDocOriginal, nomeSlugUpper, pastaDestino, comentarioPasta[0], 'uppercase');
@@ -1061,7 +1062,11 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         // --- 3. CONVERSÃO DO CORPO (LIMPO) PARA MARKDOWN ---
 
         if (fileSlug !== 'index') {
-            if (!isPost && !isPostsFolder && pastaDestino.getId() !== ROOT_DESTINATION_FOLDER_ID) markdown += `\n\n### [${tituloPasta}](./)\n\n`;
+            let linkIndex = "./";
+            if (customLayout === 'uppercase') {
+                linkIndex = "index-upper.html";
+            }
+            if (!isPost && !isPostsFolder && pastaDestino.getId() !== ROOT_DESTINATION_FOLDER_ID) markdown += `\n\n### [${tituloPasta}](${linkIndex})\n\n`;
             if (!isPostsFolder) markdown += `## ${nomeSemData}\n\n`;
         }
 
