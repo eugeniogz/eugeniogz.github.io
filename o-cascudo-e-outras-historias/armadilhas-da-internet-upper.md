@@ -11,7 +11,7 @@ tags:
 
 
 
-### [O cascudo e outras histórias](./)
+### [O cascudo e outras histórias](./index-upper.html)
 
 ## Armadilhas da Internet
 
