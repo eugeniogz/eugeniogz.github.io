@@ -1062,9 +1062,18 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         // NOVO: Se o documento tiver apenas uma linha de texto, trata como um redirecionamento.
         if (fullText.length > 0 && !fullText.includes('\n')) {
             const redirectSlug = slugifyFileName(fullText);
-            const redirectScript = `<script>window.location.href="./${redirectSlug}.html"</script>`;
+            
+            // Monta o conteúdo do arquivo de redirecionamento com front matter
+            let redirectMarkdown = `---\n`;
+            redirectMarkdown += `title: "${originalFileName}"\n`;
+            redirectMarkdown += `layout: null\n`; // Não usa um layout do Jekyll
+            redirectMarkdown += `no_index: true\n`; // Impede a indexação pelo nosso script
+            redirectMarkdown += `search: false\n`; // Impede a indexação pela busca do Jekyll
+            redirectMarkdown += `---\n\n`;
+            redirectMarkdown += `<script>window.location.href="./${redirectSlug}.html"</script>`;
+
             return {
-                markdownContent: redirectScript,
+                markdownContent: redirectMarkdown,
                 semanticOrderScore: 9999,
                 tempoLeitura: 0,
                 nomeSemData: originalFileName,

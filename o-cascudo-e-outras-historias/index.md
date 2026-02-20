@@ -2,9 +2,6 @@
 
 #### Contos para pequenos aventureiros: Descobertas no rio, na fazenda e na cidade
 
-### 📄 [Armadilhas da internet](./armadilhas-da-internet.html) <span class="word-count">[1 min]</span>
-### 📄 [Diversão e colaboração](./diversao-e-colaboracao.html) <span class="word-count">[1 min]</span>
-### 📄 [Marcando o próprio tempo](./marcando-o-proprio-tempo.html) <span class="word-count">[1 min]</span>
 ### 📄 [Rio Japão](./rio-japao.html) <span class="word-count">[2 min]</span>
 ### 📄 [O Cascudo](./o-cascudo.html) <span class="word-count">[2 min]</span>
 ### 📄 [O relógio de bolso](./o-relogio-de-bolso.html) <span class="word-count">[1 min]</span>
