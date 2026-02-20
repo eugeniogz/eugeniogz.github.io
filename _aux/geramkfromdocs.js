@@ -818,9 +818,20 @@ function getMetadataFromDocLite(docFile, originalFileName) {
     try {
         const doc = DocumentApp.openById(docFile.getId());
         const body = doc.getBody();
+        let fullText = body.getText().trim();
+
+        // Se o documento contiver apenas um script de redirecionamento, marque-o como noIndex.
+        const redirectRegex = /^<script>\s*location\.href\s*=\s*['"].*?['"]\s*<\/script>$/i;
+        if (redirectRegex.test(fullText)) {
+            return {
+                semanticOrderScore: 9999,
+                tempoLeitura: 0,
+                nomeSemData: originalFileName,
+                noIndex: true
+            };
+        }
         
         // 1. CÁLCULO DE TEMPO DE LEITURA
-        let fullText = body.getText().trim();
         fullText = fullText.replace(/\[.*?\]\(.*?\)/g, '');
         fullText = fullText.replace(/<div[^>]*>|<\/div>/gi, '');
         const words = fullText.split(/\s+/).filter(word => word.length > 0);
@@ -983,6 +994,19 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
     try {
         const doc = DocumentApp.openById(docFile.getId());
         const body = doc.getBody();
+        let fullTextForRedirectCheck = body.getText().trim();
+
+        // Se o documento contiver apenas um script de redirecionamento, marque-o como noIndex e retorne.
+        const redirectRegex = /^<script>\s*location\.href\s*=\s*['"].*?['"]\s*<\/script>$/i;
+        if (redirectRegex.test(fullTextForRedirectCheck)) {
+            return {
+                markdownContent: fullTextForRedirectCheck,
+                semanticOrderScore: 9999,
+                tempoLeitura: 0,
+                nomeSemData: originalFileName.replace(/^\d{4}-\d{2}-\d{2}-/, ''),
+                noIndex: true
+            };
+        }
         
         // CÁLCULO DE TEMPO DE LEITURA (INTEGRADO)
         let fullText = body.getText().trim();
