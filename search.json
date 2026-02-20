@@ -6,7 +6,8 @@ permalink: /search.json
 {%- assign items_with_layout = all_content | where: "layout", "default" -%}
 {%- assign searchable_items = items_with_layout | where_exp: "item", "item.search != false" -%}
 {%- assign no_index = searchable_items | where_exp: "item", "item.name != 'index.md'" -%}
-{%- assign filtered_items = no_index | where_exp: "item", "item.name != '404.html'" -%}
+{%- assign no_index_upper  = no_index | where_exp: "item", "item.name != 'index-upper.md'" -%}
+{%- assign filtered_items = no_index_upper | where_exp: "item", "item.name != '404.html'" -%}
 [
   {%- for item in filtered_items -%}
     {
