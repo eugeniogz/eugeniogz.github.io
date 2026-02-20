@@ -6,7 +6,7 @@ semantic_order: 20
 tags:
   - Aprender
   - Ensinar
-  - Método VIDA
+  - método VIDA
 --- 
 
 
@@ -24,7 +24,6 @@ Emburrado, Marquinhos foi para a sala de jantar. — Pedro, o Marquinhos já sab
 <img src="./figuras/o-barquinho-amarelo/mae-ensina-dobrar.png" alt="A mãe ensina a dobrar o chapéu em barco." style="float: right; width: 50%; margin-left: 10px; margin-bottom: 10px; border-radius: 15px;">Após o almoço, Marquinhos pegou o chapéu de papel jogado no canto da sala. A mãe mostrava como fazer as três etapas que faltavam, enquanto ele dobrava com atenção. — Agora eu sei fazer, não vou mais esquecer.
 
 À tardinha, seu pai convidou Marquinhos para lhe ensinar a nadar e desceram para a piscina do prédio. O menino levou sua recente criação de papel. Enquanto brincava com o pai na água refrescante, a folha amarela flutuava ao lado na piscina azul. <img src="./figuras/o-barquinho-amarelo/piscina-com-pai.png" alt="Na piscina com o pai e o barquinho de papel." style="float: left; width: 50%; margin-right: 10px; margin-bottom: 10px; border-radius: 15px;">
-<div style="clear: both;"></div>
 <div style="clear: both;"></div>
 
 ---

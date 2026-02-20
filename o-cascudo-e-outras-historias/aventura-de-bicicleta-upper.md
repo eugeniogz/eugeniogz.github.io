@@ -8,7 +8,7 @@ tags:
   - Aprender
   - Ensinar
   - Escutar
-  - Método VIDA
+  - método VIDA
 --- 
 
 

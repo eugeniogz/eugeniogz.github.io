@@ -6,7 +6,7 @@ semantic_order: 1
 tags:
   - Natureza
   - Família
-  - Método VIDA
+  - método VIDA
 --- 
 
 
@@ -26,9 +26,6 @@ As represas eram cuidadosamente construídas com pedrinhas e areia. Uma entrada 
 <img src="./figuras/rio-japao/meninos-com-aurelio-no-rio.png" alt="Vovô com os netos no rio." style="float: right; width: 40%; margin-left: 10px; margin-bottom: 10px; border-radius: 15px;"> Algumas vezes, vovô Aurélio acompanhava os meninos até o rio. Todos recordam do dia em que, agachado, olhando o rio, perguntou: — Já imaginaram se essa água fosse petróleo? Os netos ficaram pensativos por um tempo, até que Arthur disse: — Os peixes iam morrer. João concordou: — Não vai dar para fazer represas. Enfim, Marcos afirmou: — Prefiro essa água aqui. O avô sorriu satisfeito.
 
 <img src="./figuras/rio-japao/leitura-de-mil-e-uma-noites.png" alt="Leitura das mil e uma noites para os netos." style="float: left; width: 60%; margin-right: 10px; margin-bottom: 10px; border-radius: 15px;"> À noite, após o jantar, vovô Aurélio foi até sua estante e pegou um grosso livro, As mil e uma noites. Folheou calmamente e disse: — Hoje vou ler a história do homem que sabia a língua dos pássaros. A fábula contava sobre um homem que recebe a dádiva de entender a linguagem dos animais. Com o seu dom, o homem aprendia com os pássaros e outras criaturas. Certo dia, ele ouve os pássaros discutindo a chegada de uma seca. O homem, então, com a ajuda de amigos, consegue preservar um oásis importante — sustento para toda a vida da região durante a estiagem.
-<div style="clear: both;"></div>
-<div style="clear: both;"></div>
-<div style="clear: both;"></div>
 <div style="clear: both;"></div>
 
 ---

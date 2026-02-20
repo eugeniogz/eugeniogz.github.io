@@ -8,7 +8,7 @@ tags:
   - Vida
   - Herança
   - Wingene
-  - Método VIDA
+  - método VIDA
 --- 
 
 
@@ -30,5 +30,5 @@ tags:
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./o-cascudo-upper.html">&lt;&lt; O Cascudo</a>
-  <a href="./o-barquinho-amarelo-upper.html">O barquinho amarelo &gt;&gt;</a>
+  <a href="./o-barquinho-amarelo-upper.html">O Barquinho Amarelo &gt;&gt;</a>
 </div>

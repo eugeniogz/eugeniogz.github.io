@@ -17,7 +17,7 @@ tags:
   - Atenção plena
   - Infinito
   - Espírito
-  - Método VIDA
+  - método VIDA
 --- 
 
 

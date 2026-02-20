@@ -6,7 +6,7 @@ semantic_order: 20
 tags:
   - Aprender
   - Ensinar
-  - Método VIDA
+  - método VIDA
 --- 
 
 

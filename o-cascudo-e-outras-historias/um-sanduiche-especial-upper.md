@@ -6,7 +6,7 @@ semantic_order: 30
 tags:
   - Família
   - Colaboração
-  - Método VIDA
+  - método VIDA
 --- 
 
 

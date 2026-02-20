@@ -8,7 +8,7 @@ tags:
   - Vida
   - Herança
   - Wingene
-  - Método VIDA
+  - método VIDA
 --- 
 
 
@@ -24,10 +24,6 @@ tags:
 <img src="./figuras/marcando-o-proprio-tempo/dando-corda.png" alt="Avô mostrando como dar corda no relógio para o neto." style="float: right; width: 60%; margin-left: 10px; margin-bottom: 10px; border-radius: 15px;"> Vovô Aurélio entregou a Marcos o relógio. Ele mostrou ao neto como dar corda, girando um botão devagar. Subitamente, o ponteiro dos segundos começou a se mover. — Viu? — disse o vovô. — O relógio é uma herança que recebi do meu pai, que recebeu do meu avô Geraldo. Os relógios de bolso eram muito valiosos. — Agora eu sei dar a atenção que ele precisa. — afirmou Marcos, entusiasmado. — Saber disso também é uma herança, a mais importante.
 
 <img src="./figuras/marcando-o-proprio-tempo/observando-os-segundos.png" alt="Marcos observa o relógio funcionando." style="float: left; width: 60%; margin-right: 10px; margin-bottom: 10px; border-radius: 15px;"> Marcos olhou para o velho relógio. O ponteiro girava suave — seu pensamento refletia cada segundo.
-<div style="clear: both;"></div>
-<div style="clear: both;"></div>
-<div style="clear: both;"></div>
-<div style="clear: both;"></div>
 <div style="clear: both;"></div>
 
 ---

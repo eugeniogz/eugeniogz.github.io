@@ -6,7 +6,7 @@ semantic_order: 30
 tags:
   - Família
   - Colaboração
-  - Método VIDA
+  - método VIDA
 --- 
 
 
@@ -30,7 +30,6 @@ Na hora de ir para a praia, a madrinha pegou uma cadeira e disse: — Quem quise
 Os primos aproveitaram o dia. A areia fina e macia crescia em elaborados castelos de areia. As ondas desafiadoras, mas não tão gigantes, convidavam para o banho de mar, mergulhos e pulos. Na beira, conchinhas de todos os tamanhos enchiam as sacolas dos meninos. Alegria para valer. Em casa, no fim do dia, uma nova experiência. O suco do jantar foi obra dos primos.
 
 Assim passaram-se os dias, uma louça lavada com cuidado, o sanduíche e o suco cada dia mais saborosos. Castelos de areia, mergulhos e conchinhas. Diversão com colaboração.
-<div style="clear: both;"></div>
 <div style="clear: both;"></div>
 
 ---
