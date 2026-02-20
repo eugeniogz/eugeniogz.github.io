@@ -32,10 +32,12 @@ Os primos aproveitaram o dia. A areia fina e macia crescia em elaborados castelo
 Assim passaram-se os dias, uma louça lavada com cuidado, o sanduíche e o suco cada dia mais saborosos. Castelos de areia, mergulhos e conchinhas. Diversão com colaboração.
 <div style="clear: both;"></div>
 <div style="clear: both;"></div>
+<div style="clear: both;"></div>
+<div style="clear: both;"></div>
 
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./o-barquinho-amarelo.html">&lt;&lt; O barquinho amarelo</a>
-  <a href="./as-bicicletas-no-parque.html">As Bicicletas no parque &gt;&gt;</a>
+  <a href="./o-barquinho-amarelo.html">&lt;&lt; O Barquinho Amarelo</a>
+  <a href="./aventura-de-bicicleta.html">Aventura de bicicleta &gt;&gt;</a>
 </div>

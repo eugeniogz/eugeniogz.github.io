@@ -27,6 +27,8 @@ As represas eram cuidadosamente construídas com pedrinhas e areia. Uma entrada 
 
 <img src="./figuras/rio-japao/leitura-de-mil-e-uma-noites.png" alt="Leitura das mil e uma noites para os netos." style="float: left; width: 60%; margin-right: 10px; margin-bottom: 10px; border-radius: 15px;"> À noite, após o jantar, vovô Aurélio foi até sua estante e pegou um grosso livro, As mil e uma noites. Folheou calmamente e disse: — Hoje vou ler a história do homem que sabia a língua dos pássaros. A fábula contava sobre um homem que recebe a dádiva de entender a linguagem dos animais. Com o seu dom, o homem aprendia com os pássaros e outras criaturas. Certo dia, ele ouve os pássaros discutindo a chegada de uma seca. O homem, então, com a ajuda de amigos, consegue preservar um oásis importante — sustento para toda a vida da região durante a estiagem.
 <div style="clear: both;"></div>
+<div style="clear: both;"></div>
+<div style="clear: both;"></div>
 
 ---
 

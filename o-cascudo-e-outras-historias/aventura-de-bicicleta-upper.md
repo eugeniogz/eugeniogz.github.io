@@ -1,6 +1,6 @@
 ---
-layout: default
-title: "As Bicicletas no parque"
+layout: uppercase
+title: "Aventura de bicicleta"
 reading_time: 3
 semantic_order: 40
 tags:
@@ -13,9 +13,9 @@ tags:
 
 
 
-### [O cascudo e outras histórias](./)
+### [O cascudo e outras histórias](index-upper.html)
 
-## As Bicicletas no parque
+## Aventura de bicicleta
 
 <img src="./figuras/as-bicicletas-no-parque/inicio-da-aventura.png" alt="Clara e Alice com os pais preparando para a aventura" style="float: right; width: 60%; margin-left: 10px; margin-bottom: 10px; border-radius: 15px;">As irmãs Clara e Alice gostavam muito de andar de bicicleta. Quando Clara completou 8 anos e Alice já estava com 10, ganharam bicicletas novas, mais modernas e com dez marchas. Com pouco tempo, as meninas já estavam craques nas bicicletas novas, aproveitando as marchas para aumentar ou diminuir o esforço ou a velocidade. Alice era mais cuidadosa, não corria muito, já Clara, volta e meia, se esborrachava no chão fazendo manobras radicais.
 
@@ -29,11 +29,10 @@ Andavam na pracinha e no parque perto de casa. O parque era enorme, por isso sua
 
 <img src="./figuras/as-bicicletas-no-parque/piquenique-com-os-pais.png" alt="Piquenique com os pais" style="float: right; width: 60%; margin-left: 10px; margin-bottom: 10px; border-radius: 15px;"> Após um tempo, Clara lembrou: — Precisamos ir, temos que chegar antes de anoitecer. E as meninas desceram o último morro desta história. Com cuidado e mais algumas pedaladas, elas já estavam com o papai e mamãe. Suas pernas tremiam de cansaço, o suor escorria pelo rosto das meninas. Clara pensava na próxima aventura, enquanto Alice só queria um bom copo de suco com pão de queijo.
 <div style="clear: both;"></div>
-<div style="clear: both;"></div>
 
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./um-sanduiche-especial.html">&lt;&lt; Um sanduíche especial</a>
-  <a href="./o-clube-dos-pinguins.html">O clube dos pinguins &gt;&gt;</a>
+  <a href="./um-sanduiche-especial-upper.html">&lt;&lt; Um sanduíche especial</a>
+  <a href="./o-clube-dos-pinguins-upper.html">O clube dos pinguins &gt;&gt;</a>
 </div>

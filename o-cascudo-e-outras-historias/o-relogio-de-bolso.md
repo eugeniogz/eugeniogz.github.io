@@ -26,10 +26,12 @@ tags:
 <img src="./figuras/marcando-o-proprio-tempo/observando-os-segundos.png" alt="Marcos observa o relógio funcionando." style="float: left; width: 60%; margin-right: 10px; margin-bottom: 10px; border-radius: 15px;"> Marcos olhou para o velho relógio. O ponteiro girava suave — seu pensamento refletia cada segundo.
 <div style="clear: both;"></div>
 <div style="clear: both;"></div>
+<div style="clear: both;"></div>
+<div style="clear: both;"></div>
 
 ---
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./o-cascudo.html">&lt;&lt; O Cascudo</a>
-  <a href="./o-barquinho-amarelo.html">O barquinho amarelo &gt;&gt;</a>
+  <a href="./o-barquinho-amarelo.html">O Barquinho Amarelo &gt;&gt;</a>
 </div>

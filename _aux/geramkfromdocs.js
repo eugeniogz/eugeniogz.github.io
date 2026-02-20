@@ -651,7 +651,20 @@ function gerarSitemap(pastaRaiz) {
       const arquivo = arquivos.next();
       const nome = arquivo.getName();
       
-      if (nome.toLowerCase().endsWith('.md')) {
+      if (nome.toLowerCase().endsWith('.md') && !nome.startsWith('~')) {
+        // NOVO: Verifica se o arquivo deve ser excluído do sitemap
+        try {
+            const content = arquivo.getBlob().getDataAsString();
+            // Se o arquivo tiver 'no_index: true' no frontmatter, pula ele.
+            if (/no_index:\s*true/i.test(content)) {
+                Logger.log(`[SITEMAP] Ignorando (no_index: true): ${caminhoRelativo}${nome}`);
+                continue;
+            }
+        } catch (e) {
+            Logger.log(`[SITEMAP] Erro ao ler o arquivo ${nome}, pulando. Detalhes: ${e.toString()}`);
+            continue;
+        }
+
         let urlPath = '';
         let shouldAdd = false;
 

@@ -27,10 +27,12 @@ Olhou o jogo do filho e viu as mensagens que prometiam prêmios e pontos. Descon
 Marquinhos relutou no começo, sempre tinha vontade de jogar no celular. Os pais o lembravam do combinado. Ele insistia. Com o tempo, a rotina do menino mudou. Marquinhos jogava bola com os amigos, brincava com jogos de tabuleiro e desenhava com os pais. Um dia, jogando xadrez, após um cheque-mate, ele disse: — Mamãe, é mais legal brincar assim do que com o celular. — Verdade, filho, e você está ficando craque no xadrez.
 <div style="clear: both;"></div>
 <div style="clear: both;"></div>
+<div style="clear: both;"></div>
+<div style="clear: both;"></div>
 
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./as-bicicletas-no-parque.html">&lt;&lt; As Bicicletas no parque</a>
+  <a href="./aventura-de-bicicleta.html">&lt;&lt; Aventura de bicicleta</a>
   <span></span>
 </div>
