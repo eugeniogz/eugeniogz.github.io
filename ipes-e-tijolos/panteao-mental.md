@@ -21,6 +21,7 @@ O panteão não está no monte Olimpo, mas na mente consciente. No entanto, esse
 Quando grande parte da humanidade cultivar um panteão que liberte sua consciência, a vida de todos será melhor. Estamos longe de alcançar isso, pois o maior bloqueio está na própria mente. Aquela que nutre os panteões, sem se dar conta de que eles escondem a estrutura de poder que as escraviza.
 
 Libertar a consciência é possível. O primeiro passo é entender os mitos como metáforas para a vida, em seguida adotar o ritual de cultivar a ética. Finalmente, a crença deixará de ser focada no sobrenatural e passará a se apoiar no método científico. Nossa breve existência terá valido a pena se realizarmos essa virada — a razão além dos mitos.
+<div style="clear: both;"></div>
 
 ---
 

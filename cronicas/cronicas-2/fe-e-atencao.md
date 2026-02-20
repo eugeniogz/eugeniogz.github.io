@@ -25,6 +25,7 @@ Pago as compras e me sento com ele, que já havia devorado boa parte de uma tort
 Pedro ainda alimenta o guardanapo pensativo. Reinicio a conversa dizendo: — Não adianta ter propósitos, você precisa tentar cumpri-los. Não importa se um dia você erra, em outro dia você pode acertar. Outra coisa, o que você pensa que precisa para acertar? — Ter fé. — Não, a fé não é o mais importante, mas a atenção. Ele se surpreende, eu continuo: — Estar vigilante é o que nos ajuda a saber como estamos agindo, senão ficamos no piloto automático. Acordamos, comemos, dormimos, andamos, sem perceber. Sobre a fé, lembrei-me de uma música do Raul Seixas, acho que é [‘Meu Amigo Pedro’](https://open.spotify.com/intl-pt/track/5Fydh31AheclytAjf3ae2o). Nela, eu imagino que o cantor seria Deus, um amigo que está sempre ao lado.
 
 Procuro no meu celular para mostrar a música, Pedro encontra antes e me diz que achou, coloca para tocar e ficamos ouvindo e comentando. Terminada a música, apertamos as mãos e nos despedimos: — Boa sorte, Pedro, prazer em conhecer.
+<div style="clear: both;"></div>
 
 ---
 

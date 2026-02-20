@@ -25,6 +25,7 @@ Tristezas não dissolvem a esperança
 Mentiras não tolem a verdade  
 Imperfeições não definem o humano  
 Detalhes tecem o destino
+<div style="clear: both;"></div>
 
 ---
 

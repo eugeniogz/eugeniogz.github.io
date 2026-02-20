@@ -47,6 +47,7 @@ Quieto o olhar cria
 o céu que aquece,  
 os prédios e as árvores —  
 o quadro azul acontece.
+<div style="clear: both;"></div>
 
 ---
 

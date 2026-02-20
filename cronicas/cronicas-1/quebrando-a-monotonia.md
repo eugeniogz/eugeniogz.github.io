@@ -20,6 +20,7 @@ Algumas horas depois, as luzes dos prédios se acendem, assim como a iluminaçã
 Nos pores do sol que virão, as nuvens e árvores diferirão do agora, até mesmo os prédios podem mudar. Os urubus farão voos diferentes, quem sabe voarão em horizontes distintos. No emprego, seu ganha-pão, pessoas viverão novas experiências. A juventude alegre se encontrará no fim do dia, experimentando outros prazeres, estudando e aprendendo novidades. Os pais ouvirão dos filhos narrativas novas, algumas anedóticas, enchendo de alegria e amor seus corações.
 
 A vida apresenta nuances sutis. Um prédio pode surgir longe dos nossos olhos, sem ser notado. No entanto, situações memoráveis como um filho que aprende a andar, pronuncia a primeira palavra ou passa de rabiscos no papel à escrita do próprio nome. São eventos que permanecem gravados na nossa mente. Esses momentos inesquecíveis dão mais cor à vida, mas assim podem ser, também, as nuances, como uma tonalidade a mais no pôr do sol do dia seguinte. A monotonia pode existir em nós, mas cada dia traz uma experiência diferente. O mais importante é encontrar esse colorido tão especial — existir é perceber os detalhes que quebram a monotonia, de um pôr do sol inédito à melodia inesperada de um pássaro.
+<div style="clear: both;"></div>
 
 ---
 

@@ -38,6 +38,7 @@ A harmonia das flores permanece,
 espalhando o perfume ancestral.  
 Musical, a natureza aparece,  
 Soberana magia — sinfonia natural.
+<div style="clear: both;"></div>
 
 ---
 

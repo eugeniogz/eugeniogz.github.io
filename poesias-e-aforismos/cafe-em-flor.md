@@ -42,6 +42,7 @@ sabor de dourados grãos.
 
 Delícia que pinta o amor —  
 forjado na herança da flor.
+<div style="clear: both;"></div>
 
 ---
 

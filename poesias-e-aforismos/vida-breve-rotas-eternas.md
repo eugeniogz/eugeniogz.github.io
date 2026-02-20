@@ -29,6 +29,7 @@ Rotas diárias tecem as vidas,
 valor para viver o alegre pulsar.  
 Enxergar sentido nas rotas criadas,  
 Mapas eternos do porvir navegar.
+<div style="clear: both;"></div>
 
 ---
 

@@ -22,6 +22,7 @@ O mundo cada vez mais conectado é uma revolução sem precedentes. Porém, há 
 A rota pode retomar seu curso. Investimentos massivos em educação científica desenvolverão a capacidade crítica, evitando a propagação dessas inverdades. A regulamentação das plataformas digitais e políticas redistributivas permitirão a gradual diminuição da injustiça social. Assim, o conhecimento necessário se tornará mais comum, pavimentando com discernimento a estrada para tempos melhores.
 
 Mas seria ingênuo acreditar que a pavimentação será concluída em nossa geração. A estrada é longa, e cada pedra colocada hoje poderá ser arrancada amanhã por aqueles que lucram com o caos. Mesmo assim, vale a pena pavimentar. Porque o futuro não se constrói sozinho — exige mãos que trabalhem, mentes que pensem, e coragem para enfrentar quem prefere o mundo em ruínas.
+<div style="clear: both;"></div>
 
 ---
 

@@ -29,6 +29,7 @@ No retorno da relojoaria, observo as vitrines. Na fonte oposta, vejo três daque
 Continuo a andar, percorrendo agora uma subida suave, em direção ao meu apartamento. Já vejo o alto do prédio vermelho e branco. Mais uma avenida a atravessar. Freio a minha pressa ao ver um motoqueiro avançando o semáforo. Ele passa como um raio, cortando meu olhar desaprovador.  
   
 Retornando ao lar, caminho até o elevador, a porta se abre, revelando o zelador com uma vasilha de solvente na mão. O cheiro impregna a cabine, misturando-se ao sabor do café que repousa em minha boca.  Chegando, sinto o aroma do almoço. Meu relógio marca 12:00 — um tempo que se esticou. Uma hora sentida em instantes de alegria.
+<div style="clear: both;"></div>
 
 ---
 

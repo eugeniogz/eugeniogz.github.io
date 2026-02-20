@@ -67,6 +67,7 @@ Cada dia é uma nova oportunidade de entrelaçar fios, de burilar a obra-prima d
 O artista da vida não tece sozinho. Seus fios entrelaçam-se com os de outros — pais, filhos, amigos, mestres. A obra individual ressoa com obras alheias, criando uma tapeçaria coletiva que atravessa gerações. Cada gesto consciente enriquece não apenas a própria vida, mas a herança transmitida às próximas gerações. E assim, mesmo inacabada, a obra sobrevive ao seu criador: vibrando em harmonia no compasso da humanidade.
 
 Essa dança tem um nome: [*Wingene*](/wingene/wingene-felicidade-agora-futuro-ancestral) — fruto das virtudes que cada geração tece e transmite. Mais que conceito, *Wingene* é uma visão de mundo, um caminho prático para a felicidade pelo aperfeiçoamento do tecido pessoal e coletivo.
+<div style="clear: both;"></div>
 
 ---
 

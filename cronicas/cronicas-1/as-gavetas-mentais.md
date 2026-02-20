@@ -28,6 +28,7 @@ Numa pausa para descanso, abro uma gaveta, deparando-me com recibos antigos, cup
 Esse entulho se forma em conteúdos sem importância, que se acumulam em horas rolando telas ou jogando conversa fora. O segredo está em evitar que eles sejam o que ocupa nossas gavetas.
 
 Gavetas que se enchem alegres em um passeio a dois, observando e dialogando sobre a vida — ou em um momento com um café. Aquele preparado com ciência, de onde se extrai do pó a sua essência. Aquecendo a água, visualizando nas bolhas a temperatura ideal, derramada, em seguida, sobre o coador em despejos controlados. Enfim, saborear a deliciosa bebida que, um dia, já detestei.
+<div style="clear: both;"></div>
 
 ---
 

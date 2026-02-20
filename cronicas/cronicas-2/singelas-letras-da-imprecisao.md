@@ -20,6 +20,7 @@ Embalada pelos ruídos, a arte do escritor continua tecendo — a mesma que povo
 Criar observações é fácil, extrair delas filosofia, nem tanto. Já passou do meio-dia e o que escrevem os dedos não parece grande coisa, mas a mente insiste. Quer explicar o inexplicável, o olhar na tela só enxerga o vazio. Espaço branco ofuscando as sentenças no enorme monitor. O esforço consciente aumenta. A busca pela frase certa também.
 
 O ofício do escritor é uma tarefa delicada, nem sempre transcreve a emoção, o prazer e a dor da vida. Esse tempo que dedica nessas breves expressões serve para falar do esforço, do difícil processo criativo. Nessa arte, a utópica perfeição culmina nas singelas letras da imprecisão.
+<div style="clear: both;"></div>
 
 ---
 

@@ -20,6 +20,7 @@ Além dos muros altos e dos portões de ferro, a vida segue em um ritmo diferent
 Os latidos da servidão são apenas um eco distante. Mas quantos podem escolher o voo? A corrente que prende não discrimina entre dourada ou enferrujada. Reconhecer as próprias grades é o início da jornada. Não para desprezar quem guarda portões, mas para questionar quem ergueu os muros que separam cães e pássaros.
 
 No canto das aves ressoa uma pergunta: quando todos terão asas para voar?
+<div style="clear: both;"></div>
 
 ---
 

@@ -20,6 +20,7 @@ No asfalto, as carruagens barulhentas dos homens já circulam com faróis brilha
 As maritacas aproveitam as mangas de vez, quando o Carlos pousa bem no alto, espantando o bando, arrulhando solitário, tomando conta da mangueira. Lá embaixo, os humanos continuam a correr. A maioria nem percebe a alegria do passaredo. O Carlos bate asas para outro lugar. Canto chamando a família, voando para um galho. Frutas saborosas reluzem no alto da copa. O doce amarelo alimenta a todos. Satisfeitos, rasgamos o espaço voltando para nosso ninho.
 
 Os homens continuam sua confusão, caminhando ou dentro das carruagens. O sol já está alto. Os cachorros latem a todo momento, no entanto, meu canto suave ora e outra ainda se impõe, marcando instantes. Tranquilo como toda ave, não lembro do ontem, nem temo o amanhã. Levando a vida que só depende do agora — felicidade brota no chamado e floresce no trinado.
+<div style="clear: both;"></div>
 
 ---
 

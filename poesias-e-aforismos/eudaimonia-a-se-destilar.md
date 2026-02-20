@@ -26,6 +26,7 @@ O ritmo é cadente no coração
 A mente vibra em sensações
 
 Serena euforia, pulso e pensar — Eudaimonia a se destilar
+<div style="clear: both;"></div>
 
 ---
 

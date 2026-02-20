@@ -18,6 +18,7 @@ Um frio artificial penetrava meus braços. Os olhos ardiam. Uma dezena de cadeir
 O florescer da vida enche os espaços. Assim como a menina ocupa várias cadeiras, a alegria preenche minha mente. Agora mesmo, nesta sala que espera, minha mente vibra nessa cena. Pensamentos que alimentam a alma, saciando o ser. O vestido azul é um símbolo de minha felicidade momentânea.
 
 A pequena ensaia um choro de reclamação. Sua alma protesta contra a monotonia, que não condiz com a urgência infantil pelo novo. Ela quer novidade — inata vontade. Assim demonstra a menina que prende meus olhos com seu vestido azul.
+<div style="clear: both;"></div>
 
 ---
 

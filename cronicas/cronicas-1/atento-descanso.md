@@ -24,6 +24,7 @@ Retornando ao escritório, seis minutos luzem no equipamento. Ansiedade contida 
 O verde na tela desaparece. O artista ao teclado retoma, corpo agradecido. Novas criações lhe trarão alegria. Não basta criar, é preciso amar o físico. Recordar que não é máquina. Evoluir na disciplina, saber repousar, para que, agradecido, respire.
 
 Transcrevo o instante. Pescando palavras, inventando o sentimento. Traduzindo o breve momento. O som de sabiás e bem-te-vis, a monotonia dos latidos. Sereno e tranquilo, desliza o pensar. Preenchendo o vazio com teclas vibrantes. Pulsação real da mente atenta. Dez minutos de paz em um minuto escrito. Voador solitário, o invertebrado passa, sem dores nem tensões — breve pensamento no horizonte infinito.
+<div style="clear: both;"></div>
 
 ---
 

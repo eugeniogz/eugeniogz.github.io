@@ -27,6 +27,7 @@ A trilha é tranquila, o tempo se alonga. Conversas da vida ressoam no ouvido, e
 O exercício termina. O suave gelado encerra o ritmo. Leves passadas retornam ao lar. Em casa, recebidas pela televisão gritante. O poder da atenção se dissipa na cacofonia que polui a audição.
 
 Retornando à varanda, o físico sente o sol. O ruído se abranda. Avistando o horizonte, a mente acalma.
+<div style="clear: both;"></div>
 
 ---
 

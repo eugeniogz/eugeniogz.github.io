@@ -25,6 +25,7 @@ Emburrado, Marquinhos foi para a sala de jantar. — Pedro, o Marquinhos já sab
 
 À tardinha, seu pai convidou Marquinhos para lhe ensinar a nadar e desceram para a piscina do prédio. O menino levou sua recente criação de papel. Enquanto brincava com o pai na água refrescante, a folha amarela flutuava ao lado na piscina azul. <img src="./figuras/o-barquinho-amarelo/piscina-com-pai.png" alt="Na piscina com o pai e o barquinho de papel." style="float: left; width: 50%; margin-right: 10px; margin-bottom: 10px; border-radius: 15px;">
 <div style="clear: both;"></div>
+<div style="clear: both;"></div>
 
 ---
 

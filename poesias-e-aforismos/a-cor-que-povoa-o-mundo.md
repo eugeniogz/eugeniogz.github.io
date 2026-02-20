@@ -33,6 +33,7 @@ O cinza se aquece no dia vazio.
 Um canto marrom mostra a cor.  
 Singela pena quebrando chumbo,  
 Sol colorido povoando o mundo.
+<div style="clear: both;"></div>
 
 ---
 

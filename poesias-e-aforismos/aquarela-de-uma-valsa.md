@@ -45,6 +45,7 @@ Nave suave brisa,
 orienta o porvir:  
 vivem a terna valsa,  
 aquarela do amar.
+<div style="clear: both;"></div>
 
 ---
 

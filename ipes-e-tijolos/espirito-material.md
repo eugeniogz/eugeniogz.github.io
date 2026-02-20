@@ -20,6 +20,7 @@ Como surge a espiritualidade se a mesma está presa à biologia? Ela é inerente
 O espírito presente e material permite enfrentar desafios. Ele nos ilumina não somente na alegria, mas também em momentos difíceis. Como uma força consciente, o espírito acalma e consola. Nesses instantes não existe alegria, não se extasia, mas a floresta permanece viçosa. A fauna vibrante completa o ecossistema mental, garantindo o crescimento de novos brotos. Os processos mentais inundados pela tristeza encontram abrigo no espírito. Ele ampara o sofrimento e semeia a seara onde crescem as flores da alegria.
 
 A felicidade é um estado espiritual. Mas o bosque não cresce sozinho. As flores da alegria são individuais, no entanto, podem ser compartilhadas em interações pessoais que afetam outras florestas. Ações que cativam outros bosques ressoam internamente. Elas realimentam o florescimento de novos brotos. Mesmo que os contatos tenham posições variadas, pode-se compartilhar vivências — vínculos positivos para o crescimento pessoal. Assim, o espírito materializado no ecossistema mental pode se expandir em eudaimonia.
+<div style="clear: both;"></div>
 
 ---
 

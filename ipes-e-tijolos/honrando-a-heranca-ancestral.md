@@ -22,6 +22,7 @@ Nem sempre as tábuas antigas são obsoletas, mas não adianta guardar peças ap
 Os ipês florescem e murcham, mas suas sementes perpetuam a espécie. Os tijolos se desgastam, mas a arquitetura se renova. A herança ancestral não é museu — é oficina.
 
 Honrar o ancestral não implica preservar tábuas apodrecidas, mas navegar com a coragem legada. Assim, ipês e tijolos se reconciliam: a beleza natural da eudaimonia encontra seu lugar nas cidades, não contra elas, mas através de seu aprimoramento consciente.
+<div style="clear: both;"></div>
 
 ---
 

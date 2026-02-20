@@ -27,6 +27,7 @@ Ainda foram muitos dias de entrega, juntando trocados. Fiz serviços de pintor, 
 Passando os dias em casa e estudando à noite, a rotina era outra. Da minha janela, ouvia os periquitos em algazarra todas as manhãs, lembrando daquele dia que mudou meu destino. Estudei com afinco, me tornei um programador. Consegui um bom emprego.
 
 Agora a velocidade não está nas rodas, mas nas teclas ágeis. Os sonhos são entregues nos pacotes digitais, que ajudam pessoas, transformam rotinas. Meus clientes são gratos pelas soluções que dou — ainda formiguinha, mas feliz por quem sou. Na música das teclas, o barulho do trânsito se dissipou.
+<div style="clear: both;"></div>
 
 ---
 

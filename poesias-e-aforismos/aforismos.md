@@ -79,6 +79,7 @@ Viver: ausência presente <!--07/02/26-->
 ***
 
 🖋️ Do que escrevo: rara a originalidade, seiva da liberdade <!--10/07/22-->
+<div style="clear: both;"></div>
 
 ---
 

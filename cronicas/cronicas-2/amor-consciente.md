@@ -26,6 +26,7 @@ Mas essa sonora cor que ressoa nos sentidos provoca sensações sem igual. Na te
 Nossos laços se fortaleceram com o nascimento de nossas filhas, que se beneficiaram da preocupação compartilhada de como educá-las. Uma busca constante que precedeu a primeira gravidez. Estudando e conversando, sempre buscamos melhorar como pais.
 
 Assim, no meio de tantas alegrias, as cores do amor nem sempre são vibrantes e quentes. Ruídos interrompem a música da união, no entanto, não tornam os elos mais fracos, servem para dar contraste, acentuar a beleza da vida. Um amor que, antes de ser divino, é consciente — como uma valsa com pausas e harmonias pintada em cores de uma aquarela.
+<div style="clear: both;"></div>
 
 ---
 

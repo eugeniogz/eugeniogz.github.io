@@ -34,6 +34,7 @@ Vida de artista
 criar todo dia  
 razão do humano  
 tecer alegria
+<div style="clear: both;"></div>
 
 ---
 

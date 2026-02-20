@@ -20,6 +20,7 @@ Um sistema político forte e coeso precisa de um Estado capaz de suplantar a for
 Os temidos donos dos oceanos podem continuar sua trajetória, no entanto, sem ditar o destino de todas as embarcações. Sua missão será regulada pelo Estado, aquele que, por sua vez, deverá garantir aos navegantes os meios para uma jornada mais equilibrada.
 
 O oceano jamais será completamente sereno — tal promessa seria ilusória. Mas a tempestade não precisa engolir apenas os que nasceram sem navio. A navegação mais justa exige coragem para repensar as estruturas: por que alguns mantêm frotas inteiras enquanto outros sequer possuem um remo?
+<div style="clear: both;"></div>
 
 ---
 

@@ -27,6 +27,7 @@ Após algum tempo, refeitos os ânimos. Carlos, ainda irritado, tomou a palavra,
 Um silêncio incômodo persistiu por alguns minutos. Até que Marcos continuou: — A perfeição é utopia, mas um mundo melhor é possível. Carlos, mais calmo, ponderou: — Talvez… talvez haja espaço para empresas mais conscientes… Pedro completou: — E um estado mais eficiente… Os três se entreolharam e, pela primeira vez, viram não adversários, mas companheiros buscando o mesmo objetivo por caminhos que podiam, sim, se encontrar. A mente dos três passou a enxergar as falhas no que defendiam e como poderiam ser complementares. Carlos se serve com um pouco de suco e oferece a Pedro. A serenidade das lâmpadas mornas invade o íntimo dos amigos.
 
 Enquanto dividiam a sobremesa, o salmão no cardápio já não parecia um prato tão distante da realidade de todos.
+<div style="clear: both;"></div>
 
 ---
 

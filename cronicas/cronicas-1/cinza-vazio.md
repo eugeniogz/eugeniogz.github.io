@@ -20,6 +20,7 @@ No movimento automático, toma o maço e retira o próximo a queimar. O maço se
 Sérgio sai para comprar outro maço. No caminho, um pedinte o aborda: — Me ajuda com o almoço. — Não tenho trocado. Diz, sem olhar para o pobre homem. Retorna impassível, sem notar as cores do trajeto. Os ipês floridos despejam o amarelo no chão. Os pássaros tecem melodias. Sua consciência, limitada às próprias dores, não permite sentir o viço matinal. Seus pulmões enegrecidos ofegam a cada passada.
 
 O novo maço está cheio. A manhã está pela metade. A piscina continua vazia. Sérgio acende outro cigarro, alheio à beleza das árvores e à alegria dos pássaros. Um bem-te-vi pousa no seu jardim cantando, permanece observando por um tempo, depois voa. Seu gato roça a sua perna dengoso. Ele levanta e, sem tirar o cigarro da mão, coloca a ração no prato. O gato olha a ração sem interesse, o que quer é atenção.
+<div style="clear: both;"></div>
 
 ---
 

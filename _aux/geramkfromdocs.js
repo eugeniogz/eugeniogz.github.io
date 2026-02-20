@@ -103,6 +103,49 @@ Seu Script de Sincronização.
     Logger.log(`[EMAIL] Notificação enviada para ${ownerEmail}. Total de alterações: ${totalAlteracoes}`);
 }
 
+/**
+ * FUNÇÃO DE MANUTENÇÃO: Limpa todos os arquivos 'index.md' e 'index-upper.md'
+ * da pasta de destino. Útil para forçar a regeneração completa de todos os
+ * índices e remover dados de versões antigas do script.
+ * Pode ser executada manualmente pelo editor do Apps Script.
+ */
+function limparTodosOsIndices() {
+  Logger.log("--- INICIANDO LIMPEZA DE TODOS OS ARQUIVOS DE ÍNDICE ---");
+  const pastaRaiz = encontrarCriarPastaPorCaminho(CAMINHO_PASTA_DESTINO, false);
+  if (!pastaRaiz) {
+    Logger.log("[ERRO] Não foi possível encontrar a pasta raiz para a limpeza de índices.");
+    return;
+  }
+  
+  let totalDeletado = 0;
+
+  function apagarRecursivamente(pasta) {
+    // Apaga index.md
+    const indices = pasta.getFilesByName("index.md");
+    while (indices.hasNext()) {
+      indices.next().setTrashed(true);
+      totalDeletado++;
+      Logger.log(`Índice "index.md" em "${pasta.getName()}" movido para a lixeira.`);
+    }
+
+    // Apaga index-upper.md
+    const indicesUpper = pasta.getFilesByName("index-upper.md");
+    while (indicesUpper.hasNext()) {
+      indicesUpper.next().setTrashed(true);
+      totalDeletado++;
+      Logger.log(`Índice "index-upper.md" em "${pasta.getName()}" movido para a lixeira.`);
+    }
+
+    // Chama para subpastas
+    const subpastas = pasta.getFolders();
+    while (subpastas.hasNext()) {
+      apagarRecursivamente(subpastas.next());
+    }
+  }
+
+  apagarRecursivamente(pastaRaiz);
+  Logger.log(`--- LIMPEZA DE ÍNDICES CONCLUÍDA: ${totalDeletado} arquivos movidos para a lixeira. ---`);
+}
 
 /**
  * Tenta encontrar ou criar um objeto Folder do DriveApp navegando por um caminho de pastas.
@@ -740,6 +783,7 @@ function salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDest
     let finalContent = null;
     let existingContent = null;
     let fileChanged = false;
+    let bodyContent;
 
     // Se o conteúdo NÃO foi convertido na primeira passagem, precisamos ler o .md existente
     if (docInfo.content === null) {
@@ -750,14 +794,20 @@ function salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDest
         }
         // Lê o conteúdo do arquivo MD existente (exclui o rodapé antigo, se houver)
         existingContent = docInfo.arquivoMdDestino.getBlob().getDataAsString();
-        let bodyContent = existingContent.replace(/\n\n---\n\n[\s\S]*$/, '').trim();
-        finalContent = bodyContent + navegacaoRodape;
+        bodyContent = existingContent.replace(/\n\n---\n\n[\s\S]*$/, '').trim();
 
     } else {
         // Usa o conteúdo fresco do Doc convertido
-        finalContent = docInfo.content + navegacaoRodape;
+        bodyContent = docInfo.content;
     }
+
+    // NOVO: Remove qualquer <div style="clear: both;"></div> do final do conteúdo do corpo
+    // para evitar duplicação, já que o rodapé de navegação irá adicioná-lo.
+    const clearDivRegex = /(\s*<div style="clear: both;"><\/div>\s*)+$/;
+    bodyContent = bodyContent.replace(clearDivRegex, '').trim();
     
+    finalContent = bodyContent + navegacaoRodape;
+
     // Salva/Atualiza o arquivo com o novo conteúdo
     if (docInfo.arquivoMdDestino) {
         if (!existingContent) {

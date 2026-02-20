@@ -21,6 +21,7 @@ O Sr. Carlos questiona: — De onde vem o conhecimento, Marcos? — É uma dádi
 A grande fotografia ainda está visível, duas crianças pequenas passam. Eu observo: — O bebê que engatinha, em meses, já ensaia passinhos. — Eu aprendi a andar com onze meses — completa Dona Eunice. — Aprender é criar nossa herança — continua o Sr. Carlos. — Concordo — digo. No horizonte, a lua em quarto crescente iluminava a noite. Dona Eunice aponta: — Olhem como a lua está bonita! — A lua me lembra o infinito. Após uma pausa, contemplando o instante, acrescento: — O cosmos infinito e a vida breve. Clara pondera: — E muitos a gastam sem olhar para o futuro. — O que importa é que concordamos em deixar essa herança real.
 
 O trânsito frenético e as lojas cedem lugar gradativamente a casas e sobrados. Destacando-se na penumbra das ruas vazias, uma pequena placa iluminada e o logotipo amarelo anunciam o destino. Estaciono nas proximidades e desembarcamos para mais uma noite de intercâmbio animado sobre a obra logosófica. Entramos, a porta se fecha, o labirinto fica para trás.
+<div style="clear: both;"></div>
 
 ---
 

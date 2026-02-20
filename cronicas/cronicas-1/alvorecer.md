@@ -37,6 +37,7 @@ Caminha alguns quarteirões e chega ao prédio. Na cozinha, a chaleira intocada 
 Marcos prepara o seu café com a meticulosidade habitual. Sílvia sente o aroma, notando que o patrão havia coado uma porção generosa. Sabendo da resposta, pergunta: — Posso experimentar? — Claro, Sílvia, está mesmo uma delícia — responde Marcos. Sentada na copa, saboreia a bebida, observando nos galhos da árvore os pássaros. Seu pensamento voa nas sensações, sua face ensaia um sorriso puro. Esse sentimento permanece enquanto segue preparando o almoço.
 
 Quando está quase tudo pronto, pensa no bolo. Procura a farinha e não encontra. Será que o seu Marcos poderá voltar ao supermercado? A rotina interrompida permite ao seu coração contemplar a beleza que invade a janela. No parapeito, os viçosos vasos que cultivou.
+<div style="clear: both;"></div>
 
 ---
 

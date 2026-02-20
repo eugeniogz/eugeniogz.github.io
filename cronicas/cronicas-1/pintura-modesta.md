@@ -21,6 +21,7 @@ Transcrevo o momento. A serenidade da consciência permanece. Pesco as letras qu
 O olhar atento tece cores na retina mental. O azul derrama-se sobre as telhas inertes. Bandos voam em harmonia. Os pardais conversam em cantoria. Garotos correm brincando e gritando. O som da bola quicando na quadra. Uma máquina corta o celeste. Um rastro efêmero sinaliza sua passagem. Um bando de asas negras paira distante, bailando sem predadores que ameacem seu dia.
 
 O caloroso ambiente envolve o humano, a plácida euforia está na lembrança. Sei que posso vivê-la novamente. Feliz sinto o dia, descanso o pensar. O rastro permanece no ar. Assim como o rastro, haverá novos registros na tela modesta.
+<div style="clear: both;"></div>
 
 ---
 

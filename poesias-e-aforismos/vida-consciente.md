@@ -59,6 +59,7 @@ Segredo oculto,
 da fauna senciente.  
 Exclamação etérea,  
 Ressoa na mente.
+<div style="clear: both;"></div>
 
 ---
 

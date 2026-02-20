@@ -35,6 +35,7 @@ Encontros no espaço,
 instantes partilhados.  
 Amor unido no abraço —  
 calor no infinito serei.
+<div style="clear: both;"></div>
 
 ---
 

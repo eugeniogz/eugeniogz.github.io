@@ -23,6 +23,7 @@ Durante os quinze minutos de conversa, no passo firme da mocidade, uma pausa na 
 Os anos passavam, o branco das árvores pintava os passeios. Os velhos amigos levam os filhos em veículos modernos — novos estudantes que já não notavam a beleza natural, sentados e vidrados nas telas que empunhavam. Não havia caminhadas, nem o saudável calor das petecas.
 
 Um sábado letivo uniu os velhos amigos, conversa animada, o convite para o jogo. No dia seguinte, Marcos e seu filho Pedro encontraram Ricardo e Alex na velha quadra. Um jogo de duplas, alegria no esporte, esperança de nova vida. Pintando o futuro na textura do branco.
+<div style="clear: both;"></div>
 
 ---
 

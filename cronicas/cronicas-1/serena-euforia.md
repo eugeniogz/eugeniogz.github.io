@@ -18,6 +18,7 @@ tags:
 Qualquer momento pode trazer a serena euforia, um estado que não demanda esvaziar a mente, deixar de pensar ou sentir. Também não se apoia em estimulantes artificiais. Ela acontece quando a consciência experimenta a felicidade — não como alegria passageira, mas como a perene sensação de plenitude. A serena euforia reflete a eudaimonia que brota da virtude, florescendo na mente e no coração. Nesses instantes, a consciência dança suavemente acima do pensar e do sentir, num baile harmônico que nutre o ser com o calor do instante.
 
 O baile da consciência segue com este conjunto de crônicas que ilustram esse estado sublime no cotidiano.
+<div style="clear: both;"></div>
 
 ---
 

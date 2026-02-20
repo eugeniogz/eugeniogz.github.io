@@ -121,6 +121,7 @@ A *Wingene* se realiza em múltiplas camadas: no esforço evolutivo individual, 
 ⁴ KRENAK, Ailton. *Futuro ancestral*. São Paulo: Companhia das Letras, 2022.
 
 ⁵ ROVELLI, Carlo. *Buracos brancos: dentro do horizonte*. Tradução de Silvana Cobucci Leite. Rio de Janeiro: Objetiva, 2024.
+<div style="clear: both;"></div>
 
 ---
 

@@ -24,6 +24,7 @@ O semáforo fecha, o sedã para suavemente. De repente, o barulho, o automóvel 
 Marcos se aproxima do SUV. — Bom dia, não viu o semáforo? — Desculpa, me distraí com o rádio. Marcos repreende serenamente — Você sabe que estava errado. Não é? — Verdade, me responsabilizo pelo prejuízo. — Tudo bem, me passe seu telefone. O dono da SUV entrega um papel: — Toma aqui meu cartão, pode ligar mais tarde. — Ok, bom dia.
 
 Tudo acertado, retomam seus caminhos. Marcos segue, a rota ainda é monótona, mas sua mente descortina a gratidão por sua atitude. O céu revelava nuvens vibrantes.
+<div style="clear: both;"></div>
 
 ---
 

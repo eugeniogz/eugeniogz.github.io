@@ -36,6 +36,7 @@ a verdade cresce e explica,
 explorando o infindável.
 
 Divina consciência — divina inexistência.
+<div style="clear: both;"></div>
 
 ---
 

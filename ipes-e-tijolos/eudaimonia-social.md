@@ -25,6 +25,7 @@ A adoção ampla de valores éticos pode parecer utópica. Sempre haverá abutre
 As grandes empresas também podem se beneficiar dos que seguem a rota do aperfeiçoamento. Ao investir no bem-estar social, colhem reconhecimento e crescimento sustentável, criando valor compartilhado para colaboradores e sociedade.
 
 O Estado, ciente da importância do florescimento das virtudes, criará leis e recursos para incentivá-lo. Isso auxiliará o progresso da sociedade — aquele que define a rota do porvir. Assim, o poder público também colherá os frutos da eudaimonia social.
+<div style="clear: both;"></div>
 
 ---
 

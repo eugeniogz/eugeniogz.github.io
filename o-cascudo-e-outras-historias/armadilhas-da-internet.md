@@ -1,6 +1,7 @@
 <script>window.location.href="./o-clube-dos-pinguins.html"</script>
 <div style="clear: both;"></div>
 <div style="clear: both;"></div>
+<div style="clear: both;"></div>
 
 ---
 

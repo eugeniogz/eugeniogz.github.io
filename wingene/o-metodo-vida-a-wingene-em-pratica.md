@@ -264,6 +264,7 @@ Valorizando o pensamento crítico (V), uma pessoa percebe que evita perspectivas
 
 * **Superficialidade das interações presenciais**  
 Valorizando conexões autênticas (V), alguém nota que suas conversas presenciais são apressadas ou superficiais (I). Decide dedicar a atenção aos outros em seus encontros (D) e pratica a presença atenta e genuína nesses momentos (A).
+<div style="clear: both;"></div>
 
 ---
 

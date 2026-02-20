@@ -30,6 +30,7 @@ Ouço o canto da asa-branca, minha filha mais nova acorda, cumprimentando o avô
 Nos reunimos no cômodo do avô, conversando e ouvindo o seu rádio, que toca músicas típicas de domingo. O almoço é servido, momentos intensos em família transcorrem. As visitas se vão, nos recolhemos para descansar. Já passam das dezesseis.
 
 De volta aos meus aposentos, olho para a janela e vejo a asa-branca voando. Ela dá voltas no ar, some atrás de um prédio, reaparece e segue seu voo, sumindo no azul infinito, enquanto o canto do sabiá se mistura ao coro dos pássaros descortinando o entardecer.
+<div style="clear: both;"></div>
 
 ---
 
