@@ -25,6 +25,7 @@ Após o almoço, Marquinhos pegou o chapéu de papel jogado no canto da sala. A 
 
 A tardinha, seu pai convidou Marquinhos para lhe ensinar a nadar e desceram para a piscina do prédio. O menino levou sua recente criação de papel. Enquanto brincava com o pai na água refrescante, a folha amarela flutuava ao lado na piscina azul.
 <div style="clear: both;"></div>
+<div style="clear: both;"></div>
 
 ---
 

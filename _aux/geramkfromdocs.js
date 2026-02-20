@@ -818,11 +818,11 @@ function getMetadataFromDocLite(docFile, originalFileName) {
     try {
         const doc = DocumentApp.openById(docFile.getId());
         const body = doc.getBody();
-        let fullText = body.getText().trim();
+        const fullText = body.getText().trim();
 
-        // Se o documento contiver apenas um script de redirecionamento, marque-o como noIndex.
-        const redirectRegex = /^<script>\s*location\.href\s*=\s*['"].*?['"]\s*<\/script>$/i;
-        if (redirectRegex.test(fullText)) {
+        // NOVO: Se o documento tiver apenas uma linha de texto, trata como um redirecionamento.
+        // Apenas marca como noIndex para otimização, a conversão real acontece em getMarkdownAndScoreFromDoc.
+        if (fullText.length > 0 && !fullText.includes('\n')) {
             return {
                 semanticOrderScore: 9999,
                 tempoLeitura: 0,
@@ -832,9 +832,9 @@ function getMetadataFromDocLite(docFile, originalFileName) {
         }
         
         // 1. CÁLCULO DE TEMPO DE LEITURA
-        fullText = fullText.replace(/\[.*?\]\(.*?\)/g, '');
-        fullText = fullText.replace(/<div[^>]*>|<\/div>/gi, '');
-        const words = fullText.split(/\s+/).filter(word => word.length > 0);
+        let textForReadingTime = fullText.replace(/\[.*?\]\(.*?\)/g, '');
+        textForReadingTime = textForReadingTime.replace(/<div[^>]*>|<\/div>/gi, '');
+        const words = textForReadingTime.split(/\s+/).filter(word => word.length > 0);
         const wordCount = words.length;
         const rawTime = wordCount / 200.0;
         const roundedTime = Math.max(1, Math.round(rawTime));
@@ -994,25 +994,25 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
     try {
         const doc = DocumentApp.openById(docFile.getId());
         const body = doc.getBody();
-        let fullTextForRedirectCheck = body.getText().trim();
+        const fullText = body.getText().trim();
 
-        // Se o documento contiver apenas um script de redirecionamento, marque-o como noIndex e retorne.
-        const redirectRegex = /^<script>\s*location\.href\s*=\s*['"].*?['"]\s*<\/script>$/i;
-        if (redirectRegex.test(fullTextForRedirectCheck)) {
+        // NOVO: Se o documento tiver apenas uma linha de texto, trata como um redirecionamento.
+        if (fullText.length > 0 && !fullText.includes('\n')) {
+            const redirectSlug = slugifyFileName(fullText);
+            const redirectScript = `<script>window.location.href="./${redirectSlug}.html"</script>`;
             return {
-                markdownContent: fullTextForRedirectCheck,
+                markdownContent: redirectScript,
                 semanticOrderScore: 9999,
                 tempoLeitura: 0,
-                nomeSemData: originalFileName.replace(/^\d{4}-\d{2}-\d{2}-/, ''),
+                nomeSemData: originalFileName,
                 noIndex: true
             };
         }
         
         // CÁLCULO DE TEMPO DE LEITURA (INTEGRADO)
-        let fullText = body.getText().trim();
-        fullText = fullText.replace(/\[.*?\]\(.*?\)/g, '');
-        fullText = fullText.replace(/<div[^>]*>|<\/div>/gi, '');
-        const words = fullText.split(/\s+/).filter(word => word.length > 0);
+        let textForReadingTime = fullText.replace(/\[.*?\]\(.*?\)/g, '');
+        textForReadingTime = textForReadingTime.replace(/<div[^>]*>|<\/div>/gi, '');
+        const words = textForReadingTime.split(/\s+/).filter(word => word.length > 0);
         const wordCount = words.length;
         const rawTime = wordCount / 200.0;
         const roundedTime = Math.max(1, Math.round(rawTime));

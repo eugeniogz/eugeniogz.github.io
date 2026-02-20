@@ -1,6 +1,6 @@
 ---
 layout: uppercase
-title: "O Rio Japão"
+title: "Rio Japão"
 reading_time: 2
 semantic_order: 1
 tags:
@@ -13,7 +13,7 @@ tags:
 
 ### [O cascudo e outras histórias](index-upper.html)
 
-## O Rio Japão
+## Rio Japão
 
 <img src="./figuras/rio-japao/vovo-e-os-meninos.png" alt="Vovó com os netos." style="float: left; width: 60%; margin-right: 10px; margin-bottom: 10px; border-radius: 15px;"> O pequeno Marcos e seus dois irmãos, contavam as horas para as costumeiras viagens à terra natal dos seus pais. Eles viviam intensos momentos na companhia dos avós Aurélio e Dirce. Vovó Dirce fazia quitandas de milho e de trigo, deliciosas broas e biscoitos, assados em um grande forno ao lado do paiol. Fora os doces de leite, sempre encontrados no pote da sala de jantar, que, por coincidência, ficava no caminho entre a cozinha e a entrada da casa, por mais que comessem, parecia estar sempre cheio. Do pote de doces, eles corriam pelo quintal em divertidas brincadeiras da vida do campo.
 
@@ -31,6 +31,6 @@ As represas eram cuidadosamente construídas com pedrinhas e areia. Uma entrada 
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <span></span>
+  <a href="./marcando-o-proprio-tempo-upper.html">&lt;&lt; Marcando o próprio tempo</a>
   <a href="./o-cascudo-upper.html">O Cascudo &gt;&gt;</a>
 </div>

@@ -29,6 +29,7 @@ Andavam na pracinha e no parque perto de casa. O parque era enorme, por isso sua
 
 <img src="./figuras/as-bicicletas-no-parque/piquenique-com-os-pais.png" alt="Piquenique com os pais" style="float: right; width: 60%; margin-left: 10px; margin-bottom: 10px; border-radius: 15px;"> Após um tempo, Clara lembrou: — Precisamos ir, temos que chegar antes de anoitecer. E as meninas desceram o último morro desta história. Com cuidado e mais algumas pedaladas, elas já estavam com o papai e mamãe. Suas pernas tremiam de cansaço, o suor escorria pelo rosto das meninas. Clara pensava na próxima aventura, enquanto Alice só queria um bom copo de suco com pão de queijo.
 <div style="clear: both;"></div>
+<div style="clear: both;"></div>
 
 ---
 

@@ -31,6 +31,7 @@ Os primos aproveitaram o dia. A areia fina e macia crescia em elaborados castelo
 
 Assim passaram-se os dias, uma louça lavada com cuidado, o sanduíche e o suco cada dia mais saborosos. Castelos de areia, mergulhos e conchinhas. Diversão com colaboração.
 <div style="clear: both;"></div>
+<div style="clear: both;"></div>
 
 ---
 

@@ -31,10 +31,11 @@ Tratavam dos peixes todo dia. Porém, com o tempo, o vidro dos peixes começou a
 
 No sábado, as irmãs levaram os peixinhos de volta ao rio e soltaram com cuidado, observando cada mergulho na água cristalina.
 <div style="clear: both;"></div>
+<div style="clear: both;"></div>
 
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./o-rio-japao.html">&lt;&lt; O Rio Japão</a>
+  <a href="./rio-japao.html">&lt;&lt; Rio Japão</a>
   <a href="./o-relogio-de-bolso.html">O relógio de bolso &gt;&gt;</a>
 </div>

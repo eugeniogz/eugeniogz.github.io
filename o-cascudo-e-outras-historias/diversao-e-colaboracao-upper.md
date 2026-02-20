@@ -1,18 +1,4 @@
----
-layout: uppercase
-title: "Diversão e colaboração"
-reading_time: 1
-semantic_order: 0
-no_index: true
---- 
-
-
-
-### [O cascudo e outras histórias](index-upper.html)
-
-## Diversão e colaboração
-
-<script>window.location.href = “./um-sanduiche-especial.html”</script>
+<script>window.location.href="./um-sanduiche-especial.html"</script>
 <div style="clear: both;"></div>
 
 ---
