@@ -87,7 +87,7 @@ title: "Wingene: os logotipos"
             drawStar(ctx, 12, tipoEstrelaSimples, size * fator5, 0, repeticaoEstrelaSimples, red, center);
             drawStar(ctx, 12, tipoEstrelaSimples, size * fator4, 0, repeticaoEstrelaSimples, white, center);
             drawStar(ctx, 12, tipoEstrelaSimples, size * fator3, 0, repeticaoEstrelaSimples, green, center);
-            drawStar(ctx, 12, tipoEstrelaSimples, size * fator2, 0, repeticaoEstrelaSimples, blue, center);
+            drawStar(ctx, 12, tipoEstrelaSimples, size * fator2, 0, repeticaoEstrelaSimples, blue, center, opacidadeAzul);
             
             //drawStar(ctx, 12, 2, size * fator10, 0, 2, blue, center);
         }
@@ -98,7 +98,7 @@ title: "Wingene: os logotipos"
             svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fator5, 0, repeticaoEstrelaSimples, center) + '" stroke="'+red+'" fill="'+red+'" />';       
             svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fator4, 0, repeticaoEstrelaSimples, center) + '" stroke="'+white+'" fill="'+white+'" />';
             svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fator3, 0, repeticaoEstrelaSimples, center) + '" stroke="'+green+'" fill="'+green+'" />';
-            svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fator2, 0, repeticaoEstrelaSimples, center) + '" stroke="'+blue+'" fill="'+blue+'" />';
+            svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fator2, 0, repeticaoEstrelaSimples, center) + '" stroke="'+blue+'" fill="'+blue+'" opacity="'+opacidadeAzul+'" />';
             svg += '</svg>';
             var blob = new Blob([svg], {type: "image/svg+xml"});
             var url = URL.createObjectURL(blob);

@@ -1,18 +1,19 @@
 ---
-layout: default
-title: "Diversão e colaboração"
+layout: uppercase
+title: "Um sanduíche especial"
 reading_time: 2
-semantic_order: 15
+semantic_order: 30
 tags:
   - Família
   - Colaboração
+  - Método VIDA
 --- 
 
 
 
-### [O cascudo e outras histórias](./)
+### [O cascudo e outras histórias](index-upper.html)
 
-## Diversão e colaboração
+## Um sanduíche especial
 
 Marquinhos costumava viajar com seus pais para o litoral nas férias. Normalmente, os pais alugavam uma casa grande juntamente com seus tios. Eram três famílias convivendo na mesma casa. Passava momentos muito agradáveis, indo para a praia de manhã e brincando com os primos o dia todo.
 
@@ -29,10 +30,11 @@ Na hora de ir para a praia, a madrinha pegou uma cadeira e disse: — Quem quise
 Os primos aproveitaram o dia. A areia fina e macia crescia em elaborados castelos de areia. As ondas desafiadoras, mas não tão gigantes, convidavam para o banho de mar, mergulhos e pulos. Na beira, conchinhas de todos os tamanhos enchiam as sacolas dos meninos. Alegria para valer. Em casa, no fim do dia, uma nova experiência. O suco do jantar foi obra dos primos.
 
 Assim passaram-se os dias, uma louça lavada com cuidado, o sanduíche e o suco cada dia mais saborosos. Castelos de areia, mergulhos e conchinhas. Diversão com colaboração.
+<div style="clear: both;"></div>
 
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./aventura-de-bicicleta.html">&lt;&lt; Aventura de bicicleta</a>
-  <a href="./armadilhas-da-internet.html">Armadilhas da Internet &gt;&gt;</a>
+  <a href="./o-barquinho-amarelo-upper.html">&lt;&lt; O barquinho amarelo</a>
+  <a href="./as-bicicletas-no-parque-upper.html">As Bicicletas no parque &gt;&gt;</a>
 </div>

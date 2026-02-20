@@ -49,7 +49,7 @@ Os triângulos e quadrados geram os únicos três politopos regulares possíveis
 
 Os hexágonos azuis representam a atenção que situa o espírito no horizonte material. A presença consciente, que enxerga os avanços e fracassos, e permite a evolução.
 
-O dodecagrama é o único polígono estrelado regular {n/k} onde os k-1 anéis gerados correspondem a exatamente k-2 estrelas internas compostas por polígonos regulares (4 triângulos, 3 quadrados e 2 hexágonos) e o polígono regular de n vértices, nesse caso, o dodecágono regular. Uma prova matemática pode ser vista no artigo: [Dodecagram Polygonal Harmony Uniqueness](./Teorema_dodecagrama_regular.pdf))
+O dodecagrama é o polígono estrelado regular {n/k} com maior número de vértices, onde os k-1 anéis gerados correspondem a exatamente k-2 estrelas internas compostas por polígonos regulares (4 triângulos, 3 quadrados e 2 hexágonos) e o polígono regular de 12 vértices, nesse caso, o dodecágono regular. Uma prova matemática pode ser vista no artigo: [Dodecagram Polygonal Theorem](./The_Dodecagram_Polygonal_Theorem.pdf).
 
 Triângulos e quadrados são a semente dos 3 politopos possíveis em qualquer dimensão. O hexágono é o primeiro polígono regular em número de vértices a partir do qual não existem politopos em nenhuma dimensão.
 

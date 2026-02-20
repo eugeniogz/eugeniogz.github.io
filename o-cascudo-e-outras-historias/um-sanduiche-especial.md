@@ -1,18 +1,19 @@
 ---
-layout: uppercase
-title: "Diversão e colaboração"
+layout: default
+title: "Um sanduíche especial"
 reading_time: 2
-semantic_order: 15
+semantic_order: 30
 tags:
   - Família
   - Colaboração
+  - Método VIDA
 --- 
 
 
 
-### [O cascudo e outras histórias](./index-upper.html)
+### [O cascudo e outras histórias](./)
 
-## Diversão e colaboração
+## Um sanduíche especial
 
 Marquinhos costumava viajar com seus pais para o litoral nas férias. Normalmente, os pais alugavam uma casa grande juntamente com seus tios. Eram três famílias convivendo na mesma casa. Passava momentos muito agradáveis, indo para a praia de manhã e brincando com os primos o dia todo.
 
@@ -34,6 +35,6 @@ Assim passaram-se os dias, uma louça lavada com cuidado, o sanduíche e o suco 
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./aventura-de-bicicleta-upper.html">&lt;&lt; Aventura de bicicleta</a>
-  <a href="./armadilhas-da-internet-upper.html">Armadilhas da Internet &gt;&gt;</a>
+  <a href="./o-barquinho-amarelo.html">&lt;&lt; O barquinho amarelo</a>
+  <a href="./as-bicicletas-no-parque.html">As Bicicletas no parque &gt;&gt;</a>
 </div>

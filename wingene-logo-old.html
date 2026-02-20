@@ -1,0 +1,197 @@
+---
+layout: default
+---
+<html>
+<head>
+    <script type="application/javascript">
+        /* 
+        - Fatores de redução baseados em números primos (23, 31, 47) para harmonia natural.
+        - Red (12/5): Valores (Base Ancestral)
+        - Yellow (12/3): Imperfeições (Alerta/Enquadramento)
+        - Green (12/4): Decisões (Ação/Play)
+        - Blue (12/2): Atenção (Calma/Expansão Hexagonal)
+        */
+        var rad = Math.PI / 180;
+        var grau50 = 37;
+        var fator50 = 1;
+        var fator40 = Math.sin(31 * rad)/Math.sin(grau50 * rad);
+        var fator30 = Math.sin(29 * rad)/Math.sin(grau50 * rad);
+        var fator20 = Math.sin(23 * rad)/Math.sin(grau50 * rad);
+        var fator10 = Math.sin(19 * rad)/Math.sin(grau50 * rad);
+        var fator4 = Math.sin(47 * rad);
+        var fator3 = Math.sin(31 * rad);
+        var fator2 = Math.sin(23 * rad);
+        var fator1 = Math.sin(19 * rad);
+        var blue = "#337dcc";
+        var red  = "#cc3333";
+        var green = "#33cc33";
+        var yellow = "#cccc33";
+        var white = "#ffffff";
+
+        function draw() {
+            var size = document.forms.form1.strSize.value * 1.0;
+            var canvas = document.getElementById("canvas");
+            canvas.width = size;
+            canvas.height = size;
+            var ctx = canvas.getContext('2d');
+            var center = size / 2;
+            drawStar(ctx, 12, 5, size, 0, 1, red, center);
+            drawStar(ctx, 12, 4, size * fator4, 0, 4, yellow, center);
+            drawStar(ctx, 12, 3, size * fator3, 0, 3, green, center);
+            drawStar(ctx, 12, 2, size * fator2, 0, 2, blue, center);
+        }
+        function downloadSVG() {
+            var size = document.forms.form1.strSize.value * 1.0;
+            var center = size / 2;
+            var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' + size + '" height="' + size + '" viewBox="0 0 ' + size + ' ' + size + '">';
+            svg += '<path d="' + getStarPath(12, 5, size, 0, 1, center) + '" stroke="'+red+'" fill="'+red+'" />';       
+            svg += '<path d="' + getStarPath(12, 4, size * fator4, 0, 4, center) + '" stroke="'+yellow+'" fill="'+yellow+'" />';
+            svg += '<path d="' + getStarPath(12, 3, size * fator3, 0, 3, center) + '" stroke="'+green+'" fill="'+green+'" />';
+            svg += '<path d="' + getStarPath(12, 2, size * fator2, 0, 2, center) + '" stroke="'+blue+'" fill="'+blue+'" />';
+            svg += '</svg>';
+            var blob = new Blob([svg], {type: "image/svg+xml"});
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement("a");
+            a.href = url;
+            a.download = "wingene.svg";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+        function drawSimples() {
+            var size = document.forms.form1.strSize.value * 1.0;
+            var canvas = document.getElementById("canvas");
+            canvas.width = size* fator50;
+            canvas.height = size* fator50;
+            var ctx = canvas.getContext('2d');
+            var center = size * fator50 / 2;
+            drawStar(ctx, 12, 2, size * fator50, 0, 2, red, center);
+            drawStar(ctx, 12, 2, size * fator40, 0, 2, white, center);
+            drawStar(ctx, 12, 2, size * fator30, 0, 2, green, center);
+            drawStar(ctx, 12, 2, size * fator20, 0, 2, white, center);
+            drawStar(ctx, 12, 2, size * fator10, 0, 2, blue, center);
+        }
+        function downloadSVGSimples() {
+            var size = document.forms.form1.strSize.value * fator50;
+            var center = size * fator50 / 2;
+            var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' + size* fator50 + '" height="' + size* fator50 + '" viewBox="0 0 ' + size * fator50+ ' ' + size * fator50+ '">';
+            svg += '<path d="' + getStarPath(12, 2, size * fator50, 0, 2, center) + '" stroke="'+red+'" fill="'+red+'" />';       
+            svg += '<path d="' + getStarPath(12, 2, size * fator40, 0, 2, center) + '" stroke="'+white+'" fill="'+white+'" />';
+            svg += '<path d="' + getStarPath(12, 2, size * fator30, 0, 2, center) + '" stroke="'+green+'" fill="'+green+'" />';
+            svg += '<path d="' + getStarPath(12, 2, size * fator20, 0, 2, center) + '" stroke="'+white+'" fill="'+white+'" />';
+            svg += '<path d="' + getStarPath(12, 2, size * fator10, 0, 2, center) + '" stroke="'+blue+'" fill="'+blue+'" />';
+            svg += '</svg>';
+            var blob = new Blob([svg], {type: "image/svg+xml"});
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement("a");
+            a.href = url;
+            a.download = "wingene-simplified.svg";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+        function getStarPath(n, p, size, startAngle, repeticao, center) {
+            var len = (size / 2) * 0.95;
+            var path = "";
+            var iter = 0;
+            var actualAngle = startAngle;
+            for (; iter < repeticao;) {
+                var xStart = len * Math.cos(actualAngle * rad);
+                var yStart = len * Math.sin(actualAngle * rad);
+                path += "M " + (xStart + center) + " " + (yStart + center) + " ";
+                var i = 0;
+                do {
+                    actualAngle = actualAngle + 360 * p / n;
+                    var x2 = len * Math.cos(actualAngle * rad);
+                    var y2 = len * Math.sin(actualAngle * rad);
+                    path += "L " + (x2 + center) + " " + (y2 + center) + " ";
+                    i++;
+                } while (i < n);
+                path += "Z ";
+                iter++;
+                actualAngle = startAngle + iter * (360 / n);
+            }
+            return path;
+        }
+        function drawStar(ctx, n, p, size, startAngle, repeticao, fillColor, center) {
+            var len = (size / 2) * 0.95;
+            var centro = center !== undefined ? center : size / 2;
+            var angle = 180 - 180 * (n - 2 * p) / n;
+
+            ctx.beginPath();
+            var i = 0;
+            var actualAngle = startAngle;
+            var iter = 0;
+            for (; iter < repeticao;) {
+                var xStart = len * Math.cos(actualAngle * rad);
+                var yStart = len * Math.sin(actualAngle * rad);
+                ctx.moveTo(xStart + centro, yStart + centro);
+                do {
+                    actualAngle = actualAngle + 360 * p / n;
+                    var x2 = len * Math.cos(actualAngle * rad);
+                    var y2 = len * Math.sin(actualAngle * rad);
+                    ctx.lineTo(x2 + centro, y2 + centro);
+                    i++;
+                } while (i < n);
+                iter++;
+                i = 0;
+                actualAngle = startAngle + iter * (360 / n);
+            }
+
+            if (fillColor) {
+                ctx.fillStyle = fillColor;
+                ctx.strokeStyle = fillColor;
+                ctx.fill();
+            }
+            ctx.stroke();
+        }
+
+    </script>
+</head>
+
+<body>
+    <h3>O Logotipo da Wingene</h3>
+    <p>O Logotipo é formado por um polígono estrelado regular de 12 vértices (12/5) vermelho e 
+        os compostos polígonais gerados internamente nesse polígono estrelado (12/4, 12/3, 12/2). 
+        Os compostos são aumentados segundo fatores, que representam o tamanho do polígono original vezes 
+        seno(47⁰), seno(31⁰) e seno(23⁰), respecticamente. Todas as formas são preenchidas com uma cor:</p>
+
+        <ul>
+        <li>(12/5) - Vermelho: a herança ancestral, os Valores éticos (O polígono).</li>
+        <li>(12/4) - Amarelo: as Imperfeições (4 triângulos).</li>
+        <li>(12/5) - Verde: as Decisões (3 quadrados).</li>
+        <li>(12/2) - Azul: a Atenção — o espírito (2 hexágonos).</li>
+        </ul>
+       
+        <p>A versão simplificada utiliza apenas compostos polígonais (12/2) com separações em branco e omite 
+            o amarelo. Na visualização em tamanhos reduzidos o amarelo surge de forma subliminar.
+            </p>
+        
+        
+   <p>
+   Observação geométrica: Triângulos e quadrados são a semente dos 3 politopes possíveis em qualquer dimensão.
+   o hexágono é a o polígono regular de menor número de vértices que não gera politopes em nenhuma dimensão.
+   Além disso, o hexágono é o polígono regular de maior número de vértices que permite a disposição infinita de 
+   formas idênticas em um plano.
+   </p>
+
+   <form id="form1">
+        <TABLE>
+            <TR>
+                <TD>Size:</TD>
+                <TD><input name="strSize" id="strSize" type="text" value="400" onchange="draw()"></TD>
+            </TR>
+            <TR>
+                <TD></TD>
+                <TD><input type="button" onclick="draw()" value="Gerar"> <input type="button" onclick="downloadSVG()" value="Baixar SVG"></TD>
+            </TR>
+            <TR>
+                <TD></TD>
+                <TD><input type="button" onclick="drawSimples()" value="Gerar Simplificado"> <input type="button" onclick="downloadSVGSimples()" value="Baixar SVG Simplificado"></TD>
+            </TR>
+        </TABLE>
+    </form>
+    <canvas id="canvas"></canvas>
+</body>
+
+</html>
