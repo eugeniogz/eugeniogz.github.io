@@ -1,6 +1,6 @@
 ## O cascudo e outras histórias
 
-#### Contos para pequenos aventureiros: Descobertas no rio, na fazenda e na cidade
+#### Contos para pequenos aventureiros: Experiências na fazenda, na praia e na cidade
 
 ### 📄 [Rio Japão](./rio-japao.html) <span class="word-count">[2 min]</span>
 ### 📄 [O Cascudo](./o-cascudo.html) <span class="word-count">[2 min]</span>

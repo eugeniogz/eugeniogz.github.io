@@ -31,10 +31,6 @@ Tratavam dos peixes todo dia. Porém, com o tempo, o vidro dos peixes começou a
 
 No sábado, as irmãs levaram os peixinhos de volta ao rio e soltaram com cuidado, observando cada mergulho na água cristalina.
 <div style="clear: both;"></div>
-<div style="clear: both;"></div>
-<div style="clear: both;"></div>
-<div style="clear: both;"></div>
-<div style="clear: both;"></div>
 
 ---
 

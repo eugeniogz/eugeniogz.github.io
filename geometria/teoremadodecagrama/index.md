@@ -1,3 +1,0 @@
-## TeoremaDodecagrama
-
-### 📁 [arXiv](./arxiv/)

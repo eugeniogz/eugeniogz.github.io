@@ -601,7 +601,8 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
         }
         
         // 4.3. Adiciona subpasta para indexação
-        if (nomeSubpasta.toLowerCase() !== 'figuras') {
+        if (nomeSubpasta.toLowerCase() !== 'figuras' && 
+            nomeSubpasta.toLowerCase() !== 'TeoremaDodecagrama') {
             subpastasIndexadas.push({
               name: nomeSubpasta,
               comentario: comentario,
