@@ -642,10 +642,10 @@ function sincronizarAssets(pastaFonte, pastaDestino) {
     while (arquivos.hasNext()) {
         const arquivo = arquivos.next();
         const mime = arquivo.getMimeType();
+        const nomeArquivo = arquivo.getName();
         
         // Verifica se é para copiar diretamente
-        if (mime === MimeType.JAVASCRIPT || mime === MimeType.HTML || mime === MimeType.JPEG || mime === MimeType.PNG || mime === MimeType.PDF || mime.startsWith('video/')) {
-            const nomeArquivo = arquivo.getName();
+        if (mime === MimeType.JAVASCRIPT || mime === MimeType.HTML || mime === MimeType.JPEG || mime === MimeType.PNG || mime === MimeType.PDF || mime.startsWith('video/') || mime === MimeType.GIF || mime === MimeType.SVG || mime === 'application/x-tex' || nomeArquivo.toLowerCase().endsWith('.tex')) {
             const arquivosDestino = pastaDestino.getFilesByName(nomeArquivo);
             
             if (arquivosDestino.hasNext()) {
