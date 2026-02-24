@@ -297,6 +297,7 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
 
         const nomeDocOriginal = arquivoDoc.getName();
         if (nomeDocOriginal === 'Config' || nomeDocOriginal === 'index') continue;
+        if (nomeDocOriginal.toLowerCase().endsWith('.tex')) continue;
 
         const nomeSlug = slugifyFileName(nomeDocOriginal);
         let nomeMarkdown = `${nomeSlug}.md`;
@@ -601,8 +602,7 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
         }
         
         // 4.3. Adiciona subpasta para indexação
-        if (nomeSubpasta.toLowerCase() !== 'figuras' && 
-            nomeSubpasta.toLowerCase() !== 'TeoremaDodecagrama') {
+        if (nomeSubpasta.toLowerCase() !== 'figuras') {
             subpastasIndexadas.push({
               name: nomeSubpasta,
               comentario: comentario,
@@ -1457,7 +1457,8 @@ function limparArquivosExcluidos(pastaDestino, pastaFonte) {
 
     while (arquivosDocFonte.hasNext()) {
         const doc = arquivosDocFonte.next();
-        let slug = slugifyFileName(doc.getName());
+        const nomeDoc = doc.getName();
+        let slug = slugifyFileName(nomeDoc);
         
         if (isPostsFolder) {
              const dateObj = doc.getLastUpdated();
