@@ -1,0 +1,215 @@
+---
+layout: default
+title: O Teorema Poligonal do Dodecagrama
+---
+
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>O Teorema Poligonal do Dodecagrama</title>
+
+<!-- MathJax -->
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+};
+</script>
+<script src="/tex-mml-chtml.js"></script>
+
+<style>
+body{
+  font-family: Georgia, "Times New Roman", serif;
+  max-width: 900px;
+  margin: 40px auto;
+  line-height: 1.6;
+  padding: 0 20px;
+}
+h1,h2,h3{color:#111;}
+.abstract{
+  border-left: 4px solid #888;
+  padding-left: 15px;
+  margin: 20px 0;
+  background:#f7f7f7;
+}
+.meta{
+  margin:10px 0;
+}
+.theorem,.lemma,.definition{
+  border-left:4px solid #444;
+  padding-left:12px;
+  margin:20px 0;
+  background:#fafafa;
+}
+.proof{
+  margin-left:20px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>O Teorema Poligonal do Dodecagrama</h1>
+
+<p><strong>José Eugênio A. G.</strong><br>
+<em>(jeugenio@ufmg.br)</em></p>
+
+<div class="abstract">
+<strong>Resumo.</strong>
+Estudamos polígonos estrelados regulares $\{n/k\}$ que satisfazem a relação diofantina
+$k = n/2 - 1$. Provamos que os únicos polígonos desse tipo cujos anéis internos
+não convexos são todos compostos são $\{8/3\}$ e $\{12/5\}$,
+e que $\{12/5\}$ é maximal em $n$. Isso identifica o dodecagrama regular
+como um limiar aritmético preciso na estrutura das estelações regulares.
+</div>
+
+<p class="meta"><strong>Palavras-chave:</strong> polígonos estrelados, estelação, dodecagrama, geometria discreta</p>
+
+<h2>1. Introdução</h2>
+
+<p>
+Polígonos estrelados regulares constituem um tópico clássico da geometria euclidiana
+e são denotados pelo símbolo de Schläfli $\{n/k\}$. Suas estelações geram anéis internos
+cujos componentes podem ser polígonos simples, polígonos estrelados ou uniões de múltiplos
+polígonos regulares. Tratamentos clássicos podem ser encontrados em
+Coxeter e outros autores.
+</p>
+
+<p>
+Introduzimos uma relação aritmética crítica entre $n$ e $k$ e mostramos que o
+dodecagrama $\{12/5\}$ ocupa uma posição estrutural máxima única dentro dessa família.
+</p>
+
+<h2>2. Preliminares</h2>
+
+<div class="definition">
+<strong>Definição.</strong>
+Um <em>polígono estrelado regular</em> $\{n/k\}$ consiste de $n$ vértices igualmente
+espaçados em um círculo, com arestas ligando cada vértice ao $k$-ésimo vértice
+subsequente, onde $\gcd(n,k)=1$ e $1<k<n/2$.
+</div>
+
+<div class="definition">
+<strong>Definição.</strong>
+Um <em>anel interno</em> de $\{n/k\}$ é a órbita, sob a ação do grupo diedral $D_n$,
+dos pontos de interseção distintos de pares de arestas não adjacentes e não paralelas
+que лежem em um mesmo círculo concêntrico.
+</div>
+
+<div class="definition">
+<strong>Definição.</strong>
+Um anel com passo $s$ é <em>composto</em> se $\gcd(n,s)>1$, caso em que consiste
+de $\gcd(n,s)$ polígonos regulares congruentes.
+Um anel é <em>simples</em> se $\gcd(n,s)=1$.
+</div>
+
+<h2>3. Relação Crítica</h2>
+
+<p>Impomos a condição diofantina</p>
+
+$$
+k = \frac{n}{2} - 1, \qquad n = 2(k+1).
+$$
+
+<h2>4. Geometria dos Anéis</h2>
+
+<div class="lemma">
+<strong>Lema (Raio explícito do anel).</strong><br>
+Para o polígono estrelado regular $\{n/k\}$ inscrito no círculo unitário,
+o raio do $m$-ésimo anel interno é
+$$
+r_m=
+\frac{
+\sin\left(\frac{\pi m}{n}\right)
+\sin\left(\frac{\pi (k-m)}{n}\right)
+}{
+\sin^2\left(\frac{\pi k}{n}\right)
+},
+\quad 1\le m\le k-1.
+$$
+</div>
+
+<div class="lemma">
+<strong>Lema (Monotonicidade).</strong><br>
+Para $1<k<n/2$, os raios satisfazem
+$$
+r_1<r_2<\cdots<r_{k-1}.
+$$
+</div>
+
+<div class="proof">
+<strong>Prova.</strong>
+Como o denominador é constante em $m$, basta estudar
+
+$$
+f(m)=\sin\left(\frac{\pi m}{n}\right)
+\sin\left(\frac{\pi(k-m)}{n}\right).
+$$
+
+Usando $\sin a\sin b=\tfrac12[\cos(a-b)-\cos(a+b)]$, obtemos
+
+$$
+f(m)=\frac12\left[
+\cos\left(\frac{\pi(2m-k)}{n}\right)
+-\cos\left(\frac{\pi k}{n}\right)
+\right].
+$$
+
+O segundo termo é constante, logo a monotonicidade segue do primeiro.
+</div>
+
+<h2>5. Lemas de Teoria dos Números</h2>
+
+<div class="lemma">
+<strong>Lema (Crescimento do primorial).</strong><br>
+Se $p\#$ denota o produto de todos os primos $\le p$, então para $p\ge5$,
+
+$$
+p\# > 2p.
+$$
+</div>
+
+<h2>6. Teorema Principal</h2>
+
+<div class="theorem">
+<strong>Teorema (Teorema Poligonal do Dodecagrama).</strong><br>
+Se $\{n/k\}$ satisfaz $k=n/2-1$, então as únicas soluções para as quais todos
+os anéis com $s\ge2$ são compostos são $(8,3)$ e $(12,5)$,
+e $\{12/5\}$ é maximal em $n$.
+</div>
+
+<div class="proof">
+<strong>Prova.</strong>
+Assuma $n=2(k+1)$ com $k$ ímpar.
+
+Os anéis internos correspondem a
+$$
+s\in\{1,2,\dots,k-1\}.
+$$
+
+Um anel é composto sse $\gcd(n,s)>1$.
+
+<strong>Casos pequenos.</strong>
+
+Para $k=3$, $n=8$ funciona.
+
+Para $k=5$, $n=12$ funciona.
+
+<strong>Caso geral $k\ge7$.</strong>
+
+Seja $q$ o maior primo que divide $n$ entre $3,5,\dots$.
+Então surge um $q'$ primo com $\gcd(n,q')=1$,
+produzindo um anel simples.
+
+Logo não há soluções para $k\ge7$.
+</div>
+
+<h2>7. Conclusão</h2>
+
+<p>
+Identificamos $\{12/5\}$ como o membro maximal de uma família de polígonos
+estrelados regulares cujos anéis internos não convexos permanecem totalmente
+compostos.
+</p>
+
+</body>
+</html>
