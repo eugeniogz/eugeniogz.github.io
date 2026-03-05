@@ -8,7 +8,6 @@ title: "Wingene: os logotipos"
     <script src="gif.js"></script>
     <script type="application/javascript">
         /* 
-        - Fatores de aumento baseados em senos de números primos para harmonia natural.
         - Red (12/5): Valores (Base Ancestral)
         - Yellow (12/4): Imperfeições (Alerta)
         - Green (12/3): Decisões (Ação)
@@ -32,6 +31,8 @@ title: "Wingene: os logotipos"
         var angulo4 = 53;
         var angulo3 = 61;
         var angulo2 = 67;
+        // Fatores de aumento baseados no acorde de Dó Maior: CEGc.
+        // com c sendo o maior tamanho = 1 (12/5)
         var tamanhoFinal4 = calcSize(-5);
         var tamanhoFinal3 = calcSize(-8);
         var tamanhoFinal2 = calcSize(-12);
@@ -56,6 +57,7 @@ title: "Wingene: os logotipos"
             drawStar(ctx, 12, 5, size, 0, 1, red, center);
             drawStar(ctx, 12, 4, size * tamanhoFinal4, 15, 4, yellow, center);
             drawStar(ctx, 12, 3, size * tamanhoFinal3, 0, 3, green, center);
+            drawStar(ctx, 12, 2, size * tamanhoFinal2, 15, 2, "#ffffff", center);
             drawStar(ctx, 12, 2, size * tamanhoFinal2, 15, 2, blue, center, opacidadeAzul);
         }
         function downloadSVG() {
@@ -65,6 +67,7 @@ title: "Wingene: os logotipos"
             svg += '<path d="' + getStarPath(12, 5, size, 0, 1, center) + '" stroke="'+red+'" fill="'+red+'" opacity="1" />';       
             svg += '<path d="' + getStarPath(12, 4, size * tamanhoFinal4, 15, 4, center) + '" stroke="'+yellow+'" fill="'+yellow+'" opacity="1" />';
             svg += '<path d="' + getStarPath(12, 3, size * tamanhoFinal3, 0, 3, center) + '" stroke="'+green+'" fill="'+green+'" opacity="1" />';
+                svg += '<path d="' + getStarPath(12, 2, size * tamanhoFinal2, 15, 2, center) + '" stroke="#ffffff" fill="#ffffff" opacity="1" />';
             svg += '<path d="' + getStarPath(12, 2, size * tamanhoFinal2, 15, 2, center) + '" stroke="'+blue+'" fill="'+blue+'" opacity="'+opacidadeAzul+'" />';
             svg += '</svg>';
             var blob = new Blob([svg], {type: "image/svg+xml"});
@@ -87,6 +90,7 @@ title: "Wingene: os logotipos"
             drawStar(ctx, 12, tipoEstrelaSimples, size * fator5, 0, repeticaoEstrelaSimples, red, center);
             drawStar(ctx, 12, tipoEstrelaSimples, size * fator4, 0, repeticaoEstrelaSimples, white, center);
             drawStar(ctx, 12, tipoEstrelaSimples, size * fator3, 0, repeticaoEstrelaSimples, green, center);
+            drawStar(ctx, 12, tipoEstrelaSimples, size * fator2, 0, repeticaoEstrelaSimples, "#ffffff", center);
             drawStar(ctx, 12, tipoEstrelaSimples, size * fator2, 0, repeticaoEstrelaSimples, blue, center, opacidadeAzul);
             
             //drawStar(ctx, 12, 2, size * fator10, 0, 2, blue, center);
@@ -98,6 +102,7 @@ title: "Wingene: os logotipos"
             svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fator5, 0, repeticaoEstrelaSimples, center) + '" stroke="'+red+'" fill="'+red+'" />';       
             svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fator4, 0, repeticaoEstrelaSimples, center) + '" stroke="'+white+'" fill="'+white+'" />';
             svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fator3, 0, repeticaoEstrelaSimples, center) + '" stroke="'+green+'" fill="'+green+'" />';
+            svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fator2, 0, repeticaoEstrelaSimples, center) + '" stroke="#ffffff" fill="#ffffff" />';
             svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fator2, 0, repeticaoEstrelaSimples, center) + '" stroke="'+blue+'" fill="'+blue+'" opacity="'+opacidadeAzul+'" />';
             svg += '</svg>';
             var blob = new Blob([svg], {type: "image/svg+xml"});
@@ -226,6 +231,7 @@ title: "Wingene: os logotipos"
     // 3. Desenho das subestrelas animadas
     drawStar(ctx, 12, 4, size * s4, 15, 4, yellow, center);
     drawStar(ctx, 12, 3, size * s3, 0, 3, green, center);
+    drawStar(ctx, 12, 2, size * s2, 15, 2, "#ffffff", center);
     drawStar(ctx, 12, 2, size * s2, 15, 2, blue, center, opacidadeAzul);
 }
 

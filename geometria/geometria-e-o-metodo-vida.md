@@ -21,7 +21,7 @@ Esse é o logotipo padrão da Wingene:
 
 <img src="/wingene.svg" alt="Logotipo padrão da Wingene" width="150" height="150">
 
-Ele representa os quatro eixos do acróstico [VIDA](/wingene/o-metodo-vida-a-wingene-em-pratica.html), sendo formado pelo dodecagrama e seus anéis poligonais, com tamanho aumentado. Cada estrela é preenchida com uma cor e sobreposta em sequência conforme abaixo:
+Ele representa os quatro eixos do acróstico [VIDA](/wingene/o-metodo-vida-a-wingene-em-pratica.html), sendo formado pelo dodecagrama e seus anéis poligonais, com tamanho aumentado de acordo com as frequências de um acorde de dó maior (CEGc). Cada estrela é preenchida com uma cor e sobreposta em sequência conforme abaixo:
 
 1. {12/5} - Vermelho: os valores éticos. O dodecagrama.
 
@@ -51,7 +51,7 @@ Para um ícone em tamanho reduzido, esse logotipo não é adequado. Então, foi 
 
 Na simplificação, o amarelo foi extirpado da imagem, sendo substituído por uma estrela branca com uma pequena opacidade. Apesar disso, a visualização à distância ou em tamanhos pequenos traz a ilusão subliminar do amarelo entre o verde e o vermelho. Um alerta para a dificuldade pessoal em reconhecer as imperfeições. Muitas vezes, tão nítidas para quem observa de fora.
 
-Este é o ícone reduzido, onde é possível ver o halo amarelo subliminar: <span><img src="./wingene-simplified.png" alt="Logotipo simplificado da Wingene" width="50" height="50"></span>
+Este é o ícone reduzido, onde é possível ver o halo amarelo subliminar: <span><img src="./wingene-simplified.png" alt="Logotipo simplificado da Wingene" width="45" height="45"></span>
 
 ### A harmonia matemática
 
