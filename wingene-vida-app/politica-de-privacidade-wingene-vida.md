@@ -12,8 +12,6 @@ no_index: true
 
 ## Política de Privacidade - Wingene VIDA
 
-### Política de Privacidade - Wingene VIDA
-
 **Data de vigência:** 21/03/2026
 
 A sua privacidade e a segurança dos seus dados são os princípios fundamentais do **Wingene VIDA**. Esta Política de Privacidade explica como suas informações são tratadas ao utilizar nosso aplicativo ("App").
