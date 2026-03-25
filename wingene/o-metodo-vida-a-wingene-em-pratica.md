@@ -15,7 +15,7 @@ tags:
   - Futuro
   - Herança
   - Mente
-  - Método VIDA
+  - método VIDA
 --- 
 
 
@@ -217,7 +217,9 @@ Esse método reconhece que a transformação ética não é linear nem definitiv
 
 O método não oferece redenção, mas direção. Não promete perfeição, mas coerência possível. E na prática dessa coerência — reiterada, imperfeita, atenta — inscreve-se a Wingene: o futuro ancestral construído no presente.
 
-***[Logotipo*** ***Wingene:*** ***representação*** ***geométrica*** ***do*** ***método*** ***VIDA](/geometria/geometria-e-o-metodo-vida.html)***
+## O logotipo e o Método VIDA
+
+O logotipo da Wingene foi desenhado para representar os quatro eixos do método. Uma análise detalhada pode ser vista em: [Geometria e o método VIDA](/geometria/geometria-e-o-metodo-vida.html)
 
 ## Apêndice: Aplicações Práticas do Método VIDA
 
@@ -269,6 +271,6 @@ Valorizando conexões autênticas (V), alguém nota que suas conversas presencia
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./wingene-felicidade-agora-futuro-ancestral.html">&lt;&lt; Wingene: Felicidade agora, futuro ancestral</a>
-  <a href="./tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html">Tecendo a vida: criando no íntimo uma obra pessoal &gt;&gt;</a>
+  <a href="./wingene-felicidade-agora-futuro-ancestral.html">&lt;&lt; Wingene</a>
+  <a href="./tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html">Tecendo a vida&gt;&gt;</a>
 </div>

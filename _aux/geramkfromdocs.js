@@ -845,14 +845,14 @@ function gerarNavegacaoRodape(anterior, proximo) {
 
     if (anterior) {
         // Usa o nome sem data/formatação do index
-        const nomeAnterior = anterior.nomeSemData; 
+        const nomeAnterior = anterior.nomeSemData.split(':')[0].trim();
         navLinksHtml.push(`<a href="./${anterior.slug}.html">&lt;&lt; ${nomeAnterior}</a>`);
     } else {
         navLinksHtml.push('<span></span>'); // Placeholder para manter o espaçamento
     }
 
     if (proximo) {
-        const nomeProximo = proximo.nomeSemData;
+        const nomeProximo = proximo.nomeSemData.split(':')[0].trim();
         navLinksHtml.push(`<a href="./${proximo.slug}.html">${nomeProximo} &gt;&gt;</a>`);
     } else {
         navLinksHtml.push('<span></span>'); // Placeholder para manter o espaçamento

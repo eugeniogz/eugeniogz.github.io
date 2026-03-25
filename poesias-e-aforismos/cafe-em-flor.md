@@ -11,17 +11,17 @@ tags:
 
 
 
-### [Poesias e Aforimos](./)
+### [Poesias e Aforismos](./)
 
 ## Café em flor
 
 Baila o jasmim do café.  
 Pulsando a seiva  
 que as folhas adoçam,  
-exala ao vento o aroma.
+exala o aroma da flor.
 
-Brinda do néctar o doce,  
-déboras nutrindo amor.  
+Brinda o doce néctar  
+nutrindo déboras no amor.  
 Perfuma o ansiado enlace.  
 Beijo que enseja calor.
 
@@ -31,17 +31,17 @@ Sem noção do porvir,
 respira a brisa amena.
 
 Morre perfume suave,  
-nasce róseo fruto.  
+nasce rubro fruto.  
 Doce polpa esperança,  
 brota verde futuro.
 
 Renasce alvas estrelas,  
 renovando os cafezais.  
-Esquentando porcelanas,  
-sabor de dourados grãos.
+Aquece as porcelanas,  
+sabor de torrados grãos.
 
 Delícia que pinta o amor —  
-forjado na herança da flor.
+herança da viçosa flor.
 <div style="clear: both;"></div>
 
 ---
