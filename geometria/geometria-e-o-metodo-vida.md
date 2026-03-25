@@ -51,7 +51,9 @@ Para um ícone em tamanho reduzido, esse logotipo não é adequado. Então, foi 
 
 Na simplificação, o amarelo foi substituído por uma estrela branca com uma pequena opacidade. Apesar disso, a visualização à distância ou em tamanhos pequenos traz a ilusão subliminar do amarelo entre o verde e o vermelho. Um alerta para a dificuldade pessoal em reconhecer as imperfeições. Muitas vezes, tão nítidas para quem observa de fora.
 
-Este é o ícone reduzido, onde é possível ver o halo amarelo subliminar: <span><img src="./wingene-simplified.png" alt="Logotipo simplificado da Wingene" width="45" height="45"></span>
+Este é o ícone reduzido, onde é possível ver o halo amarelo subliminar:
+
+<img src="./wingene-simplified.png" alt="Logotipo simplificado da Wingene" width="45" height="45">
 
 ### A harmonia matemática
 
