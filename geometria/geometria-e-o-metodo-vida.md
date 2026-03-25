@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Geometria e o método VIDA"
-reading_time: 4
+reading_time: 3
 semantic_order: 1
 tags:
   - Wingene
@@ -58,8 +58,6 @@ Este é o ícone reduzido, onde é possível ver o halo amarelo subliminar: <spa
 As figuras que compõem as estrelas internas, triângulos, quadrados e hexágonos, são os únicos polígonos regulares convexos que, idênticos, podem tesselar um plano infinito. O dodecágono invisível, no logotipo, participa de tesselações semi-regulares com a ajuda de combinações de triângulos, quadrados e hexágonos — em especial consideramos a combinação 3.4.6.12, que inclui todos os polígonos regulares do logotipo. Uma lembrança de que o legado não é só espiritual, mas construído pelas decisões e realçado pelas imperfeições.
 
 Os triângulos e quadrados aparecem como faces das três famílias infinitas de politopos regulares convexos que existem em qualquer dimensão (simplex, hipercubo e ortoplexo). As imperfeições (triângulos) e as decisões (quadrados) são blocos de construção da realidade, permitindo "dar volume" à existência, saindo do plano abstrato para o concreto da vida na quarta dimensão. Os hexágonos azuis representam a atenção que situa o espírito no plano material. A presença consciente, que enxerga os avanços e fracassos, e permite a evolução. O hexágono é o primeiro polígono regular que não aparece como face de politopos regulares convexos em qualquer dimensão.
-
-De acordo com o [Teorema Poligonal do Dodecagrama](./the-dodecagram-poligonal-theorem.html), o dodecagrama {12/5} é o polígono estrelado regular {n/k} com maior número de vértices, onde os k-1 anéis gerados correspondem a exatamente k-2 estrelas internas compostas por polígonos regulares (4 triângulos, 3 quadrados e 2 hexágonos) e o polígono regular de 12 vértices, nesse caso, o dodecágono regular. Assim, o {12/5} é o "limite harmônico". Ele marca um limite estrutural interno de harmonia poligonal convexa antes que a complexidade se torne caótica. Para a Wingene, isso significa que a base ancestral é a estrutura mais complexa possível que ainda permite essa ordem interna.
 
 O dodecagrama {12/5} é o “[limite harmônico](./the-dodecagram-poligonal-theorem.html)”: o polígono estrelado regular com maior número de vértices capaz de gerar, em seus anéis internos, apenas polígonos regulares — os mesmos triângulos, quadrados e hexágonos que formam o logotipo. Além dele, a ordem interna se desfaz.
 
