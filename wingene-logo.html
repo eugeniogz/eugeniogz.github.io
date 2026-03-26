@@ -7,8 +7,7 @@ title: "Wingene: os logotipos"
 <head>
     <script src="gif.js"></script>
     <script type="application/javascript">
-        /* 
-        - Red (12/5): Valores (Base Ancestral)
+        /* - Red (12/5): Valores (Base Ancestral)
         - Yellow (12/4): Imperfeições (Alerta)
         - Green (12/3): Decisões (Ação)
         - Green com transparência (12/2): Atenção (Calma/Expansão Hexagonal)
@@ -26,7 +25,7 @@ title: "Wingene: os logotipos"
         var tamanhoEstrela4 = (Math.sqrt(6) - Math.sqrt(2)) / 2;
         var tamanhoEstrela3 = (Math.sqrt(3) - Math.sqrt(1)) / 2;
         var tamanhoEstrela2 = (Math.sqrt(6) - Math.sqrt(2)) / (2 * Math.sqrt(3));
-        //var tamanhoSubEstrela1 =  2 * Math.sqrt(3) // ≈ 26,79%
+        
         //Aumenta o tamanho num fator (2*seno(X))
         var angulo4 = 53;
         var angulo3 = 61;
@@ -36,18 +35,27 @@ title: "Wingene: os logotipos"
         var tamanhoFinal4 = calcSize(-5);
         var tamanhoFinal3 = calcSize(-8);
         var tamanhoFinal2 = calcSize(-12);
-        var blue = "#0f9010"; //"#303080"; //Em 26/03/26 troquei o azul por verde.
+        
         var red  = "#b01010";
-        var green = "#0f9010";
         var yellow = "#b0b010";
+        var green = "#0f9010";
+        //Em 26/03/26 troquei o azul por verde.
+        //Atualizado agora para um Verde Esmeralda (#10b090) para diferenciar da Decisão.
+        var blue = "#10b090"; 
         var white = "rgba(255,255,255,0.8)";
-        var opacidadeAzul = 0.55;
+        var opacidadeAzul = 0.6; // Ajuste leve para destacar o novo tom
         
         function calcSize(n) {
             return 1  * Math.pow(2, n / 12);
         }
+
+        // Função de suavização (Easing) para um movimento mais natural
+        function easeOutCubic(t) {
+            return 1 - Math.pow(1 - t, 3);
+        }
+
         function draw() {
-            cancelAnimationFrame(animationId);
+            if (typeof animationId !== 'undefined') cancelAnimationFrame(animationId);
             var size = document.forms.form1.strSize.value * 1.0;
             var canvas = document.getElementById("canvas");
             canvas.width = size;
@@ -60,6 +68,7 @@ title: "Wingene: os logotipos"
             drawStar(ctx, 12, 2, size * tamanhoFinal2, 15, 2, "#ffffff", center);
             drawStar(ctx, 12, 2, size * tamanhoFinal2, 15, 2, blue, center, opacidadeAzul);
         }
+
         function downloadSVG() {
             var size = document.forms.form1.strSize.value * 1.0;
             var center = size / 2;
@@ -79,8 +88,9 @@ title: "Wingene: os logotipos"
             a.click();
             document.body.removeChild(a);
         }
+
         function drawSimples() {
-            cancelAnimationFrame(animationId);
+            if (typeof animationId !== 'undefined') cancelAnimationFrame(animationId);
             var size = document.forms.form1.strSize.value * 1.0;
             var canvas = document.getElementById("canvas");
             canvas.width = size* fator5;
@@ -90,11 +100,11 @@ title: "Wingene: os logotipos"
             drawStar(ctx, 12, tipoEstrelaSimples, size * fator5, 0, repeticaoEstrelaSimples, red, center);
             drawStar(ctx, 12, tipoEstrelaSimples, size * fator4, 0, repeticaoEstrelaSimples, white, center);
             drawStar(ctx, 12, tipoEstrelaSimples, size * fator3, 0, repeticaoEstrelaSimples, green, center);
-            drawStar(ctx, 12, tipoEstrelaSimples, size * fator2, 0, repeticaoEstrelaSimples, "#ffffff", center);
+            var fatorSeparacaoInterna = (fator3 + fator2) / 2;
+            drawStar(ctx, 12, tipoEstrelaSimples, size * fatorSeparacaoInterna, 0, repeticaoEstrelaSimples, "#ffffff", center);
             drawStar(ctx, 12, tipoEstrelaSimples, size * fator2, 0, repeticaoEstrelaSimples, blue, center, opacidadeAzul);
-            
-            //drawStar(ctx, 12, 2, size * fator10, 0, 2, blue, center);
         }
+
         function downloadSVGSimples() {
             var size = document.forms.form1.strSize.value * fator5;
             var center = size * fator5 / 2;
@@ -102,7 +112,8 @@ title: "Wingene: os logotipos"
             svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fator5, 0, repeticaoEstrelaSimples, center) + '" fill="'+red+'" />';       
             svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fator4, 0, repeticaoEstrelaSimples, center) + '" fill="'+white+'" />';
             svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fator3, 0, repeticaoEstrelaSimples, center) + '" fill="'+green+'" />';
-            svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fator2, 0, repeticaoEstrelaSimples, center) + '" fill="#ffffff" />';
+            var fatorSeparacaoInterna = (fator3 + fator2) / 2;
+            svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fatorSeparacaoInterna, 0, repeticaoEstrelaSimples, center) + '" fill="#ffffff" />';
             svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fator2, 0, repeticaoEstrelaSimples, center) + '" fill="'+blue+'" opacity="'+opacidadeAzul+'" />';
             svg += '</svg>';
             var blob = new Blob([svg], {type: "image/svg+xml"});
@@ -114,6 +125,7 @@ title: "Wingene: os logotipos"
             a.click();
             document.body.removeChild(a);
         }
+
         function getStarPath(n, p, size, startAngle, repeticao, center) {
             var len = (size / 2) * 0.95;
             var path = "";
@@ -137,15 +149,14 @@ title: "Wingene: os logotipos"
             }
             return path;
         }
+
         function drawStar(ctx, n, p, size, startAngle, repeticao, fillColor, center, opacidade) {
             var len = (size / 2) * 0.95;
             var centro = center !== undefined ? center : size / 2;
             var opacity = opacidade !== undefined ? opacidade : 1;
-            var angle = 180 - 180 * (n - 2 * p) / n;
 
             ctx.save();
             ctx.globalAlpha = opacity;
-            ctx.strokeColor = fillColor;
             ctx.beginPath();
             var i = 0;
             var actualAngle = startAngle;
@@ -175,13 +186,12 @@ title: "Wingene: os logotipos"
             ctx.restore();
         }
 
-        // Variáveis de controle da animação
         var animationId;
         var startTime;
         const duration = 8430; // 8,43 segundos de animação
 
         function drawAnimated() {
-            cancelAnimationFrame(animationId);
+            if (typeof animationId !== 'undefined') cancelAnimationFrame(animationId);
             startTime = performance.now();
             animate();
         }
@@ -203,39 +213,6 @@ title: "Wingene: os logotipos"
         }
         
         function renderFrame(progress) {
-    var size = document.forms.form1.strSize.value * 1.0;
-    var canvas = document.getElementById("canvas");
-    canvas.width = size;
-    canvas.height = size;
-    var ctx = canvas.getContext('2d');
-    var center = size / 2;
-    
-    ctx.clearRect(0, 0, size, size);
-
-    // 1. Estrela Base (Valores - c) - Sempre estática
-    drawStar(ctx, 12, 5, size, 0, 1, red, center);
-
-    // 2. Cálculo dos tamanhos animados (Interpolação)
-    // Parte do tamanho geométrico original (tamanhoEstrelaN) 
-    // até o tamanho da nota musical (tamanhoFinalN)
-    
-    // Amarelo: Imperfeições (Nota G)
-    var s4 = (tamanhoFinal4 - tamanhoEstrela4) * progress + tamanhoEstrela4;
-    
-    // Verde: Decisões (Nota E)
-    var s3 = (tamanhoFinal3 - tamanhoEstrela3) * progress + tamanhoEstrela3;
-    
-    // Azul: Atenção (Nota C)
-    var s2 = (tamanhoFinal2 - tamanhoEstrela2) * progress + tamanhoEstrela2;
-
-    // 3. Desenho das subestrelas animadas
-    drawStar(ctx, 12, 4, size * s4, 15, 4, yellow, center);
-    drawStar(ctx, 12, 3, size * s3, 0, 3, green, center);
-    drawStar(ctx, 12, 2, size * s2, 15, 2, "#ffffff", center);
-    drawStar(ctx, 12, 2, size * s2, 15, 2, blue, center, opacidadeAzul);
-}
-
-        function renderFrameOld(progress) {
             var size = document.forms.form1.strSize.value * 1.0;
             var canvas = document.getElementById("canvas");
             canvas.width = size;
@@ -245,34 +222,34 @@ title: "Wingene: os logotipos"
             
             ctx.clearRect(0, 0, size, size);
 
-            // 1. Estrela Base (Sempre estática)
+            // Suavização do progresso
+            var smoothProgress = easeOutCubic(progress);
+
+            // 1. Estrela Base (Valores - c) - Sempre estática
             drawStar(ctx, 12, 5, size, 0, 1, red, center);
 
-            // 2. Cálculo dos tamanhos animados
-            // O tamanho inicial é o tamanhoSubEstrelaN (proporção natural no 12/5)
-            // O tamanho final é tamanhoSubEstrelaN * (2 * Math.sin(grau))
-            
-            var s4 = (calcSize(-2)-calcSize(-5))* progress+calcSize(-5);
-            var s3 = (calcSize(-4)-calcSize (-7))* progress+calcSize(-7);
-            var s2 = (calcSize(-8)-calcSize (-12))* progress+calcSize(-12);
+            // 2. Cálculo dos tamanhos animados (Interpolação com easing)
+            // Amarelo: Imperfeições (Nota G)
+            var s4 = (tamanhoFinal4 - tamanhoEstrela4) * smoothProgress + tamanhoEstrela4;
+            // Verde: Decisões (Nota E)
+            var s3 = (tamanhoFinal3 - tamanhoEstrela3) * smoothProgress + tamanhoEstrela3;
+            // Azul: Atenção (Nota C)
+            var s2 = (tamanhoFinal2 - tamanhoEstrela2) * smoothProgress + tamanhoEstrela2;
 
             // 3. Desenho das subestrelas animadas
-            // Mantendo os ângulos de ajuste (15º) que você definiu para o alinhamento
             drawStar(ctx, 12, 4, size * s4, 15, 4, yellow, center);
             drawStar(ctx, 12, 3, size * s3, 0, 3, green, center);
-           drawStar(ctx, 12, 2, size * s2, 15, 2, blue, center,  opacidadeAzul);
+            drawStar(ctx, 12, 2, size * s2, 15, 2, "#ffffff", center);
+            drawStar(ctx, 12, 2, size * s2, 15, 2, blue, center, opacidadeAzul);
         }
 
-        // Para o Download em GIF, recomendo usar a lib GIF.js. 
-        // Como não posso carregar libs externas aqui, preparei a estrutura lógica:
         function downloadGif() {
-            cancelAnimationFrame(animationId);
+            if (typeof animationId !== 'undefined') cancelAnimationFrame(animationId);
             var size = document.forms.form1.strSize.value * 1.0;
             var canvas = document.getElementById("canvas");
             canvas.willReadFrequently = true;
             var ctx = canvas.getContext('2d');
 
-            // Inicializa o objeto GIF
             var gif = new GIF({
                 workers: 2,
                 quality: 10,
@@ -283,64 +260,33 @@ title: "Wingene: os logotipos"
             });
 
             console.log("A capturar frames para o GIF...");
-
-            // Captura a animação
             var delay = 50;
             var step = (delay * 2) / duration;
 
             for (let i = 0; i <= 1; i += step) {
-                renderFrame(i); // A sua função que desenha o estado da animação
+                renderFrame(i);
                 gif.addFrame(canvas, {copy: true, delay: delay});
             }
             for (let i = 1; i > 0; i -= step) {
-                renderFrame(i); // A sua função que desenha o estado da animação
+                renderFrame(i);
                 gif.addFrame(canvas, {copy: true, delay: delay});
             }
             gif.on('finished', function(blob) {
-                // Cria um link de download automático
                 var link = document.createElement('a');
                 link.href = URL.createObjectURL(blob);
                 link.download = 'wingene-animated.gif';
                 link.click();
-                
-                // Volta ao estado final do desenho
-                //draw(); 
             });
-
             gif.render();
             ctx.clearRect(0, 0, size, size);
         }
     </script>
     <style>
-        .control-panel {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin: 20px 0;
-        }
-        .control-row {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        input[type="button"] {
-            padding: 10px 20px;
-            background-color: #f0f0f0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: background-color 0.3s;
-        }
-        input[type="button"]:hover {
-            background-color: #e0e0e0;
-        }
-        input[type="text"] {
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+        .control-panel { display: flex; flex-direction: column; gap: 15px; margin: 20px 0; }
+        .control-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+        input[type="button"] { padding: 10px 20px; background-color: #f0f0f0; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; font-size: 14px; transition: background-color 0.3s; }
+        input[type="button"]:hover { background-color: #e0e0e0; }
+        input[type="text"] { padding: 8px; border: 1px solid #ccc; border-radius: 5px; }
     </style>
 </head>
 
@@ -349,19 +295,18 @@ title: "Wingene: os logotipos"
     <p>O logotipo padrão é formado por um polígono estrelado regular de 12 vértices ({12/5}) vermelho e 
         as três estrelas poligonais geradas internamente nesse polígono estrelado ({12/4}, {12/3}, {12/2}). 
         Os raios das estrelas internas são aumentados de acordo com o acorde de Dó maior G  E C, com a estrela
-        {12/5} sendo a nota C uma oitava acima. 
+        {12/5} sendo a nota C uma oitava acima.
         Todas as formas são preenchidas com uma cor:</p>
 
         <ul>
         <li>(12/5) - Vermelho: a herança ancestral, os valores éticos (o polígono).</li>
         <li>(12/4) - Amarelo: as Imperfeições (estrela de 4 triângulos).</li>
         <li>(12/3) - Verde: as Decisões (estrela de 3 quadrados).</li>
-        <li>(12/2) - O Verde das decisões com opacidade <span id="valorOpacidade"></span>: a Atenção — o espírito (estrela de 2 hexágonos).</li>
+        <li>(12/2) - O Verde Esmeralda com opacidade <span id="valorOpacidade"></span>: a Atenção — o espírito (estrela de 2 hexágonos).</li>
         </ul>
        
         <p>A versão simplificada utiliza quatro compostos poligonais {12/2} com o amarelo substituído 
-           por uma estrela branca com opacidade 0.8
-            entre o vermelho e o verde,. Na visualização em tamanhos reduzidos, o 
+           por uma estrela branca com opacidade 0.8 entre o vermelho e o verde. Na visualização em tamanhos reduzidos, o 
             amarelo surge de forma subliminar.
             </p>
 
@@ -369,30 +314,28 @@ title: "Wingene: os logotipos"
                 Uma versão com animação foi criada. Ela começa com as estrelas poligonais 
                 {12/4}, {12/3} e {12/2} no tamanho original, aumentando até a versão do logotipo padrão. 
                 O aumento gradual segue-se de uma diminuição gradual, em um ciclo 
-                de 8,43 segundos. Essa é a versão que ilustra o banner deste site.
+                de 8,43 segundos.
             </p>
 
    <form id="form1">
         <div class="control-panel">
-            <div class="control-row">
-                <p>Gerar as imagens dos logotipos:</p>
-            </div>
+            <div class="control-row"><p>Gerar as imagens dos logotipos:</p></div>
             <div class="control-row">
                 <label for="strSize">Size:</label>
                 <input name="strSize" id="strSize" type="text" value="150" onchange="draw()">
             </div>
             <div class="control-row">
-                <label for="strSize">Logotipo padrão:</label>
+                <label>Logotipo padrão:</label>
                 <input type="button" onclick="draw()" value="Gerar">
                 <input type="button" onclick="downloadSVG()" value="Baixar">
             </div>
             <div class="control-row">
-                <label for="strSize">Logotipo Simplificado:</label>
+                <label>Logotipo Simplificado:</label>
                 <input type="button" onclick="drawSimples()" value="Gerar">
                 <input type="button" onclick="downloadSVGSimples()" value="Baixar">
             </div>
             <div class="control-row">
-                <label for="strSize">Logotipo com animação:</label>
+                <label>Logotipo com animação:</label>
                 <input type="button" onclick="drawAnimated()" value="Gerar">
                 <input type="button" onclick="downloadGif()" value="Baixar">
             </div>
@@ -403,5 +346,4 @@ title: "Wingene: os logotipos"
         document.getElementById("valorOpacidade").innerHTML = opacidadeAzul;
     </script>
 </body>
-
 </html>
