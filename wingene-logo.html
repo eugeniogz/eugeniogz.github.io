@@ -11,7 +11,7 @@ title: "Wingene: os logotipos"
         - Red (12/5): Valores (Base Ancestral)
         - Yellow (12/4): Imperfeições (Alerta)
         - Green (12/3): Decisões (Ação)
-        - Blue (12/2): Atenção (Calma/Expansão Hexagonal)
+        - Green com transparência (12/2): Atenção (Calma/Expansão Hexagonal)
         */
         var rad = Math.PI / 180;
         //Geração dos tamanhos das estrelas do logo simplificado
@@ -36,12 +36,12 @@ title: "Wingene: os logotipos"
         var tamanhoFinal4 = calcSize(-5);
         var tamanhoFinal3 = calcSize(-8);
         var tamanhoFinal2 = calcSize(-12);
-        var blue = "#303080";
+        var blue = "#0f9010"; //"#303080"; //Em 26/03/26 troquei o azul por verde.
         var red  = "#b01010";
         var green = "#0f9010";
         var yellow = "#b0b010";
         var white = "rgba(255,255,255,0.8)";
-        var opacidadeAzul = 0.90;
+        var opacidadeAzul = 0.55;
         
         function calcSize(n) {
             return 1  * Math.pow(2, n / 12);
@@ -356,7 +356,7 @@ title: "Wingene: os logotipos"
         <li>(12/5) - Vermelho: a herança ancestral, os valores éticos (o polígono).</li>
         <li>(12/4) - Amarelo: as Imperfeições (estrela de 4 triângulos).</li>
         <li>(12/3) - Verde: as Decisões (estrela de 3 quadrados).</li>
-        <li>(12/2) - Azul com opacidade 0,7: a Atenção — o espírito (estrela de 2 hexágonos).</li>
+        <li>(12/2) - O Verde das decisões com opacidade <span id="valorOpacidade"></span>: a Atenção — o espírito (estrela de 2 hexágonos).</li>
         </ul>
        
         <p>A versão simplificada utiliza quatro compostos poligonais {12/2} com o amarelo substituído 
@@ -399,6 +399,9 @@ title: "Wingene: os logotipos"
         </div>
     </form>
     <canvas id="canvas"></canvas>
+    <script>
+        document.getElementById("valorOpacidade").innerHTML = opacidadeAzul;
+    </script>
 </body>
 
 </html>
