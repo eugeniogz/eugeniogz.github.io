@@ -29,7 +29,7 @@ Ele representa os quatro eixos do acróstico [VIDA](/wingene/o-metodo-vida-a-win
 
 1. {12/3} - Verde: as decisões. Estrela composta por três quadrados.
 
-1. {12/2} - O verde das decisões com 50% de opacidade: a atenção — o espírito. Estrela composta por dois hexágonos.
+1. {12/2} - Azul: a atenção — o espírito. Estrela composta por dois hexágonos.
 
 1. {12/1} - Transparente, dodecágono - o polígono regular de doze lados.
 
@@ -39,21 +39,19 @@ O amarelo, as imperfeições, vêm logo em seguida como uma estrela {12/4}. Incr
 
 O verde é um chamado à ação, a força de decidir enfrentar as imperfeições enquadradas pela atenção. Os brotos dos valores que lutam contra as imperfeições por atitudes reiteradas contra as mesmas.
 
-O verde semi-transparente, a atenção, se estende como hexágonos num plano, cobrindo todas as áreas da vida, permitindo detectar o amarelo que pode esconder-se na presunção individual. Sua pouca opacidade é um lembrete para a fugacidade da presença.
+O azul, a atenção, se estende como hexágonos num plano, cobrindo todas as áreas da vida, permitindo detectar o amarelo que pode esconder-se na presunção individual. Sua pouca opacidade é um lembrete para a fugacidade da presença.
 
 A transparência do dodecágono representa a herança espiritual, o legado que deixará cada um, que não é somente positivo, mas marcado pelas imperfeições — a semente de novos dodecagramas.
 
 ### Imagem simplificada
 
-Para um ícone em tamanho reduzido, esse logotipo não é adequado. Então, foi criada uma versão simplificada utilizando estrelas poligonais {12/2}, quatro estrelas de dois hexágonos:
-
-<img src="./wingene-simplified.png" alt="Logotipo simplificado da Wingene">
+Para um ícone em tamanho reduzido, esse logotipo não é adequado. Então, foi criada uma versão simplificada utilizando estrelas poligonais {12/2}, quatro estrelas de dois hexágonos.
 
 Na simplificação, o amarelo foi substituído por uma estrela branca com uma pequena opacidade. Apesar disso, a visualização à distância ou em tamanhos pequenos traz a ilusão subliminar do amarelo entre o verde e o vermelho. Um alerta para a dificuldade pessoal em reconhecer as imperfeições. Muitas vezes, tão nítidas para quem observa de fora.
 
-Este é o ícone reduzido, onde é possível ver o halo amarelo subliminar:
+Este é o ícone reduzido, onde é possível ver o halo amarelo subliminar, clique para ver a imagem maior:
 
-<img src="./wingene-simplified.png" alt="Logotipo simplificado da Wingene" width="45" height="45">
+<a href="./wingene-simplified.png" target="_blank"><img src="./wingene-simplified.png" alt="Logotipo simplificado da Wingene" width="45" height="45"></a>
 
 ### A harmonia matemática
 

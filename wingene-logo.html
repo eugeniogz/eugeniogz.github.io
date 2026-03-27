@@ -10,7 +10,7 @@ title: "Wingene: os logotipos"
         /* - Red (12/5): Valores (Base Ancestral)
         - Yellow (12/4): Imperfeições (Alerta)
         - Green (12/3): Decisões (Ação)
-        - Green com transparência (12/2): Atenção (Calma/Expansão Hexagonal)
+        - Blue com transparência (12/2): Atenção (Calma/Expansão Hexagonal)
         */
         var rad = Math.PI / 180;
         //Geração dos tamanhos das estrelas do logo simplificado
@@ -21,6 +21,13 @@ title: "Wingene: os logotipos"
         var fator4 = Math.sin(31 * rad)/Math.sin(anguloDivisor * rad);
         var fator3 = Math.sin(29 * rad)/Math.sin(anguloDivisor * rad);
         var fator2 = Math.sin(23 * rad)/Math.sin(anguloDivisor * rad);
+
+        var largura = 0.05;
+        var sfator4 = fator5 * 0.8;
+        var sfator3 = fator5 * 0.8-largura;
+        var sfator2 = fator5 * 0.8-largura-0.2;
+        var sfator1 = fator5 * 0.8-largura-0.204;
+
         //Tamanhos originais das subestrelas no 12/5 de size=1
         var tamanhoEstrela4 = (Math.sqrt(6) - Math.sqrt(2)) / 2;
         var tamanhoEstrela3 = (Math.sqrt(3) - Math.sqrt(1)) / 2;
@@ -39,11 +46,12 @@ title: "Wingene: os logotipos"
         var red  = "#b01010";
         var yellow = "#b0b010";
         var green = "#0f9010";
+        // Azul ajustado para harmonizar com a paleta (mantendo a luminosidade e saturação das outras cores)
         //Em 26/03/26 troquei o azul por verde.
         //Atualizado agora para um Verde Esmeralda (#10b090) para diferenciar da Decisão.
-        var blue = "#10b090"; 
+        var blue = "#303080"; // "#1040b0"; 
         var white = "rgba(255,255,255,0.8)";
-        var opacidadeAzul = 0.6; // Ajuste leve para destacar o novo tom
+        var opacidadeAzul = 0.9; // Ajuste leve para destacar o novo tom
         
         function calcSize(n) {
             return 1  * Math.pow(2, n / 12);
@@ -98,11 +106,10 @@ title: "Wingene: os logotipos"
             var ctx = canvas.getContext('2d');
             var center = size * fator5 / 2;
             drawStar(ctx, 12, tipoEstrelaSimples, size * fator5, 0, repeticaoEstrelaSimples, red, center);
-            drawStar(ctx, 12, tipoEstrelaSimples, size * fator4, 0, repeticaoEstrelaSimples, white, center);
-            drawStar(ctx, 12, tipoEstrelaSimples, size * fator3, 0, repeticaoEstrelaSimples, green, center);
-            var fatorSeparacaoInterna = (fator3 + fator2) / 2;
-            drawStar(ctx, 12, tipoEstrelaSimples, size * fatorSeparacaoInterna, 0, repeticaoEstrelaSimples, "#ffffff", center);
-            drawStar(ctx, 12, tipoEstrelaSimples, size * fator2, 0, repeticaoEstrelaSimples, blue, center, opacidadeAzul);
+            drawStar(ctx, 12, tipoEstrelaSimples, size * sfator4, 0, repeticaoEstrelaSimples, white, center);
+            drawStar(ctx, 12, tipoEstrelaSimples, size * sfator3, 0, repeticaoEstrelaSimples, green, center);
+            drawStar(ctx, 12, tipoEstrelaSimples, size * sfator2, 0, repeticaoEstrelaSimples, white, center);
+            drawStar(ctx, 12, tipoEstrelaSimples, size * sfator1, 0, repeticaoEstrelaSimples, blue, center, opacidadeAzul);
         }
 
         function downloadSVGSimples() {
@@ -110,11 +117,10 @@ title: "Wingene: os logotipos"
             var center = size * fator5 / 2;
             var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' + size* fator5 + '" height="' + size* fator5 + '" viewBox="0 0 ' + size * fator5+ ' ' + size * fator5+ '">';
             svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fator5, 0, repeticaoEstrelaSimples, center) + '" fill="'+red+'" />';       
-            svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fator4, 0, repeticaoEstrelaSimples, center) + '" fill="'+white+'" />';
-            svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fator3, 0, repeticaoEstrelaSimples, center) + '" fill="'+green+'" />';
-            var fatorSeparacaoInterna = (fator3 + fator2) / 2;
-            svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fatorSeparacaoInterna, 0, repeticaoEstrelaSimples, center) + '" fill="#ffffff" />';
-            svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * fator2, 0, repeticaoEstrelaSimples, center) + '" fill="'+blue+'" opacity="'+opacidadeAzul+'" />';
+            svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * sfator4, 0, repeticaoEstrelaSimples, center) + '" fill="'+white+'" />';
+            svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * sfator3, 0, repeticaoEstrelaSimples, center) + '" fill="'+green+'" />';
+            svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * sfator2, 0, repeticaoEstrelaSimples, center) + '" fill="'+white+'" />';
+            svg += '<path d="' + getStarPath(12, tipoEstrelaSimples, size * sfator1, 0, repeticaoEstrelaSimples, center) + '" fill="'+blue+'" opacity="'+opacidadeAzul+'" />';
             svg += '</svg>';
             var blob = new Blob([svg], {type: "image/svg+xml"});
             var url = URL.createObjectURL(blob);
@@ -302,7 +308,7 @@ title: "Wingene: os logotipos"
         <li>(12/5) - Vermelho: a herança ancestral, os valores éticos (o polígono).</li>
         <li>(12/4) - Amarelo: as Imperfeições (estrela de 4 triângulos).</li>
         <li>(12/3) - Verde: as Decisões (estrela de 3 quadrados).</li>
-        <li>(12/2) - O Verde Esmeralda com opacidade <span id="valorOpacidade"></span>: a Atenção — o espírito (estrela de 2 hexágonos).</li>
+        <li>(12/2) - O Azul com opacidade <span id="valorOpacidade"></span>: a Atenção — o espírito (estrela de 2 hexágonos).</li>
         </ul>
        
         <p>A versão simplificada utiliza quatro compostos poligonais {12/2} com o amarelo substituído 
