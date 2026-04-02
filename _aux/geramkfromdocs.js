@@ -234,6 +234,7 @@ function getMetadataFromMd(arquivoMdDestino) {
     let tempoLeitura = 1;
     let semanticOrderScore = 0.0;
     let noIndex = false;
+    let hasNavigationFooter = true;
     
     try {
         const content = arquivoMdDestino.getBlob().getDataAsString();
@@ -260,12 +261,15 @@ function getMetadataFromMd(arquivoMdDestino) {
             if (/no_index:\s*true/i.test(yamlBlock)) {
                 noIndex = true;
             }
+            if (/navigation_footer:\s*false/i.test(yamlBlock)) {
+                hasNavigationFooter = false;
+            }
         }
     } catch (e) {
         Logger.log(`[ERRO METADATA MD] Falha ao ler metadados do MD ${arquivoMdDestino.getName()}: ${e.toString()}`);
     }
 
-    return { semanticOrderScore: semanticOrderScore, tempoLeitura: tempoLeitura, noIndex: noIndex };
+    return { semanticOrderScore: semanticOrderScore, tempoLeitura: tempoLeitura, noIndex: noIndex, hasNavigationFooter: hasNavigationFooter };
 }
 
 /**
@@ -369,6 +373,7 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
         let tempoLeitura = 1;
         let nomeSemData = nomeDocOriginal;
         let noIndex = false;
+        let hasNavigationFooter = true;
 
         if (deveConverter) {
             // Conversão pesada (Corpo e Metadados)
@@ -377,7 +382,8 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
                 semanticOrderScore,
                 tempoLeitura,
                 nomeSemData,
-                noIndex
+                noIndex,
+                hasNavigationFooter
             } = getMarkdownAndScoreFromDoc(arquivoDoc, nomeDocOriginal, nomeSlug, pastaDestino, comentarioPasta[0]));
 
             if (nomeDocOriginal === 'Aforismos') {
@@ -390,7 +396,8 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
                  ({
                     semanticOrderScore,
                     tempoLeitura,
-                    noIndex
+                    noIndex,
+                    hasNavigationFooter
                 } = getMetadataFromMd(arquivoMdDestino)); 
                 
                 // Extração leve do Doc apenas para nome (pode ser necessário para a navegação)
@@ -403,7 +410,8 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
                     semanticOrderScore,
                     tempoLeitura,
                     nomeSemData,
-                    noIndex
+                    noIndex,
+                    hasNavigationFooter
                 } = getMetadataFromDocLite(arquivoDoc, nomeDocOriginal));
             }
         }
@@ -421,7 +429,8 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
             arquivoMdDestino: arquivoMdDestino,
             nomeSemData: nomeSemData,
             docFile: arquivoDoc,
-            noIndex: noIndex
+            noIndex: noIndex,
+            hasNavigationFooter: hasNavigationFooter
         });
 
         // 1.4. Adiciona metadados para indexação (lista paralela)
@@ -478,7 +487,8 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
                 deveConverter: deveConverterUpper,
                 arquivoMdDestino: arquivoMdDestinoUpper,
                 nomeSemData: nomeSemData, // Mantém o nome visual normal, o layout fará o uppercase visual
-                noIndex: noIndex
+                noIndex: noIndex,
+                hasNavigationFooter: hasNavigationFooter
             });
 
             if (!noIndex) {
@@ -780,7 +790,7 @@ function gerarSitemap(pastaRaiz) {
  */
 function salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDestino) {
     
-    const navegacaoRodape = gerarNavegacaoRodape(anterior, proximo);
+    const navegacaoRodape = docInfo.hasNavigationFooter === false ? "" : gerarNavegacaoRodape(anterior, proximo);
     let finalContent = null;
     let existingContent = null;
     let fileChanged = false;
@@ -878,6 +888,7 @@ function getMetadataFromDocLite(docFile, originalFileName) {
     let tempoLeitura = 1;
     let nomeSemData = originalFileName; 
     let noIndex = true;
+    let hasNavigationFooter = true;
     
     try {
         const doc = DocumentApp.openById(docFile.getId());
@@ -891,7 +902,8 @@ function getMetadataFromDocLite(docFile, originalFileName) {
                 semanticOrderScore: 9999,
                 tempoLeitura: 0,
                 nomeSemData: originalFileName,
-                noIndex: true
+                noIndex: true,
+                hasNavigationFooter: false
             };
         }
         
@@ -912,6 +924,11 @@ function getMetadataFromDocLite(docFile, originalFileName) {
             semanticOrderScore = parseFloat(scoreStr) || semanticOrderScore;
             noIndex = false;
         }
+        
+        const footerMatch = fullBodyText.match(/^(?:Footer|Fotter):\s*(n[ãa]o|no)/im);
+        if (footerMatch) {
+            hasNavigationFooter = false;
+        }
 
         // 3. REMOÇÃO DA DATA DO NOME
         const regex = /^\d{4}-\d{2}-\d{2}-/;
@@ -921,7 +938,8 @@ function getMetadataFromDocLite(docFile, originalFileName) {
             semanticOrderScore: semanticOrderScore,
             tempoLeitura: tempoLeitura,
             nomeSemData: nomeSemData,
-            noIndex: noIndex
+            noIndex: noIndex,
+            hasNavigationFooter: hasNavigationFooter
         };
 
     } catch (e) {
@@ -930,7 +948,8 @@ function getMetadataFromDocLite(docFile, originalFileName) {
             semanticOrderScore: 0.0,
             tempoLeitura: tempoLeitura,
             nomeSemData: originalFileName,
-            noIndex: false
+            noIndex: false,
+            hasNavigationFooter: true
         };
     }
 }
@@ -1054,6 +1073,7 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
     let nomeSemData = originalFileName; // Inicializa com o nome original
     const isPostsFolder = pastaDestino.getName() === '_posts';
     let noIndex = true;
+    let hasNavigationFooter = true;
 
     try {
         const doc = DocumentApp.openById(docFile.getId());
@@ -1078,7 +1098,8 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                 semanticOrderScore: 9999,
                 tempoLeitura: 0,
                 nomeSemData: originalFileName,
-                noIndex: true
+                noIndex: true,
+                hasNavigationFooter: false
             };
         }
         
@@ -1120,6 +1141,12 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                     noIndex = false;
                     continue;
                 }
+                
+                const footerMatch = text.match(/^(?:Footer|Fotter):\s*(n[ãa]o|no)/i);
+                if (footerMatch && hasNavigationFooter) {
+                    hasNavigationFooter = false;
+                    continue;
+                }
             }
             
             contentElementsInReverse.push(element);
@@ -1140,6 +1167,10 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
 
         if (noIndex) {
             markdown += `no_index: true\n`;
+        }
+        
+        if (!hasNavigationFooter) {
+            markdown += `navigation_footer: false\n`;
         }
 
         if (tags.length > 0) {
@@ -1326,7 +1357,8 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
             semanticOrderScore: semanticOrderScore,
             tempoLeitura: tempoLeitura,
             nomeSemData: nomeSemData, // Retorna o nome sem data para uso na navegação
-            noIndex: noIndex
+            noIndex: noIndex,
+            hasNavigationFooter: hasNavigationFooter
         };
 
     } catch (e) {
@@ -1336,7 +1368,8 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
             semanticOrderScore: 0.0,
             tempoLeitura: tempoLeitura,
             nomeSemData: originalFileName, // Retorna o nome original em caso de erro
-            noIndex: false
+            noIndex: false,
+            hasNavigationFooter: true
         };
     }
 }
