@@ -66,20 +66,20 @@ When someone recognizes their own impatience, the pride that prevents an apology
 
 Imperfection is what makes freedom possible. A perfect being does not decide; they execute. A fallible being can reflect, correct, and choose again. In this sense, imperfection is the **opening of the human ethical system**.
 
-The VIDA method assumes that making mistakes is part of the evolutionary process. If this error is unconscious, one does not learn from it, but if the error is perceived and confronted with values, it allows for learning and refinement. Applying the VIDA method is to constantly perceive these deviations in values, allowing for the decision to combat imperfections.
+The VIDA method assumes that making mistakes is part of the evolutionary process. If the error is unconscious, one does not learn from it, but if the error is perceived and confronted with values, it allows for learning and refinement. Applying the VIDA method is to constantly perceive these deviations in values, allowing for the decision to combat imperfections.
 
 ### **Fundamental types of imperfections**
 
 For practical purposes, VIDA distinguishes four major classes of imperfections:
 
 1. **Personal**  
-Attitudes that do not directly involve the other but harm one's own being—such as health neglect or disinterest in learning.1
+Attitudes that do not directly involve the other but harm one's own being—such as health neglect or disinterest in learning.
 
 1. **Emotional**  
-Related to the management of affects: impulsivity, reactivity, excessive fear, defensive pride.1
+Related to the management of affects: impulsivity, reactivity, excessive fear, defensive pride.
 
 1. **Moral**  
-Manifested in the inconsistency between values and actions: unkept promises, omissions for convenience, inappropriate behavior.1
+Manifested in the inconsistency between values and actions: unkept promises, omissions for convenience, inappropriate behavior.
 
 1. **Attentional**  
 Stemming from the mind's scattering: automatisms, chronic distraction, life on "autopilot".
@@ -88,7 +88,7 @@ Stemming from the mind's scattering: automatisms, chronic distraction, life on "
 
 Accepting imperfection is not justifying the error, but **recognizing the real starting point**. The obsessive search for perfection is one of the greatest enemies of evolution, as it generates denial, blame, and stagnation. VIDA proposes replacing the ideal of the perfect with a commitment to the **possible optimal**.
 
-Imperfection is transformed into a criterion for action: it shows where to act, what to adjust, and which values need strengthening. Thus, it prepares the ground for the third axis of the method: decision.
+Imperfection is transformed into a criterion for action: it shows where to act, what to adjust, and which values need strengthening. Thus, it prepares the ground for the third axis of the method: decisions.
 
 ## **Decis**ions
 
@@ -129,13 +129,13 @@ In this sense, the decision prepares the ground for the fourth axis of the metho
 
 ## Attention
 
-Attention is the presence that accompanies action. In the VIDA method, it is neither an isolated technique nor a mystical state, but an **operational condition of consciousness**. It is through attention that values remain accessible, that imperfections become visible, and that decisions are sustained over time. Without attention, life follows on autopilot; with it, it becomes experience.1
+Attention is the presence that accompanies action. In the VIDA method, it is neither an isolated technique nor a mystical state, but an **operational condition of consciousness**. It is through attention that values remain accessible, that imperfections become visible, and that decisions are sustained over time. Without attention, life follows on autopilot; with it, it becomes experience.
 
 Philosophy has always recognized the central role of attention. For the Stoics, living well required constant vigilance of the mind. In phenomenology, attention is what allows the world to appear clearly to consciousness. Contemporary neurosciences confirm: attention is a limited, fluctuating, and decisive resource for behavior. Ignoring it is compromising any method of transformation.
 
 ### Attention is not total control
 
-VIDA rejects the idea of attention as rigid vigilance or permanent effort. The human mind was not made to sustain continuous absolute focus. Distractions are part of the routine; seeking constant attention is futile, but it is possible to allow its presence frequently.1
+VIDA rejects the idea of attention as rigid vigilance or permanent effort. The human mind was not made to sustain continuous absolute focus. Distractions are part of the routine; seeking constant attention is futile, but it is possible to allow its presence frequently.
 
 In this sense, attention is not measured by the absence of distractions, but by the **speed of the return to presence**.
 
@@ -144,13 +144,13 @@ In this sense, attention is not measured by the absence of distractions, but by 
 To make attention practicable, the method distinguishes three levels of attention:
 
 1. **To the self**  
-It is the observation of one's own mental and emotional states: perceiving impulses before action, recognizing tensions, reactions, and justifications, and identifying inconsistencies between value and gesture. This level allows for the improvement of self-knowledge.1
+It is the observation of one's own mental and emotional states: perceiving impulses before action, recognizing tensions, reactions, and justifications, and identifying inconsistencies between value and gesture. This level allows for the improvement of self-knowledge.
 
 1. **To others**  
-It is genuine listening and the perception of the impact of one's own actions: listening without anticipating responses, recognizing the limits and needs of others, and adjusting conduct for coexistence. Here, attention is transformed into relational ethics.1
+It is genuine listening and the perception of the impact of one's own actions: listening without anticipating responses, recognizing the limits and needs of others, and adjusting conduct for coexistence. Here, attention is transformed into relational ethics.
 
 1. **To the world**  
-It is the sensitive presence in the environment: perceiving landscapes, rhythms, and details; moving away from utilitarian automatism; and allowing reality to present itself without haste. This level opens space for aesthetic experiences and serene euphoria.1
+It is the sensitive presence in the environment: perceiving landscapes, rhythms, and details; moving away from utilitarian automatism; and allowing reality to present itself without haste. This level opens space for aesthetic experiences and serene euphoria.
 
 ### **Attention and impermanence**
 
@@ -164,7 +164,7 @@ From the perspective of Wingene, attention is the simplest and most radical gest
 
 ## Validating the VIDA method
 
-**V — Values**1
+**Values**
 
 * **Personal Limits**: *Are these attitudes in accordance with my health and well-being?*
 
@@ -172,7 +172,7 @@ From the perspective of Wingene, attention is the simplest and most radical gest
 
 * **Continuous Revision**: *Have I been reviewing my values in accordance with evidence and science?*
 
-**I — Imperfections**1
+**Imperfections**
 
 * **Personal**: Are my attitudes contributing to my health, culture, and behavior?
 
@@ -182,11 +182,11 @@ From the perspective of Wingene, attention is the simplest and most radical gest
 
 * **Attentional**: Am I on autopilot, or am I conscious?
 
-**D — Decisions**
+**Decisions**
 
 *What concrete attitude can I take to cultivate this value?*
 
-**A — Attention**
+**Attention**
 
 *Am I attentive to the values I am cultivating and the imperfections I have decided to combat?*
 
@@ -205,7 +205,7 @@ The table below summarizes the four axes of the VIDA method, with their categori
 
 Imagine someone who values honesty (V), but realizes they frequently exaggerate professional achievements in conversations (I). Upon recognizing this imperfection, they decide (D) to start noticing when the impulse arises and contain it. With attention (A), they observe the exact moment the temptation appears—and, gradually, the inconsistency decreases. The method does not immediately eliminate the fault, but transforms automatic reaction into conscious choice.
 
-## VIDA — A unified method for conscious flourishing
+## VIDA: A unified method for conscious flourishing
 
 the VIDA method stems from the realization that human existence does not evolve through an accumulation of intentions, but through **alignment between values, awareness of flaws, practical decisions, and attentive presence**. These four axes do not operate in a linear sequence but as a **dynamic system** in which each element sustains and pressures the others.
 
