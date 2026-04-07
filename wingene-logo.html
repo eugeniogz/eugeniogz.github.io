@@ -22,11 +22,11 @@ title: "Wingene: os logotipos"
         var fator3 = Math.sin(29 * rad)/Math.sin(anguloDivisor * rad);
         var fator2 = Math.sin(23 * rad)/Math.sin(anguloDivisor * rad);
 
-        var largura = 0.05;
+        var largura = 0.07;
         var sfator4 = fator5 * 0.8;
         var sfator3 = fator5 * 0.8-largura;
         var sfator2 = fator5 * 0.8-largura-0.2;
-        var sfator1 = fator5 * 0.8-largura-0.204;
+        var sfator1 = fator5 * 0.8-0.04-0.2;
 
         //Tamanhos originais das subestrelas no 12/5 de size=1
         var tamanhoEstrela4 = (Math.sqrt(6) - Math.sqrt(2)) / 2;
@@ -49,9 +49,9 @@ title: "Wingene: os logotipos"
         // Azul ajustado para harmonizar com a paleta (mantendo a luminosidade e saturação das outras cores)
         //Em 26/03/26 troquei o azul por verde.
         //Atualizado agora para um Verde Esmeralda (#10b090) para diferenciar da Decisão.
-        var blue = "#303080"; // "#1040b0"; 
-        var white = "rgba(255,255,255,0.8)";
-        var opacidadeAzul = 0.9; // Ajuste leve para destacar o novo tom
+        var blue = "#1040b0"; 
+        var white = "rgba(255,255,255,0.6)";
+        var opacidadeAzul = 0.83; // Ajuste leve para destacar o novo tom
         
         function calcSize(n) {
             return 1  * Math.pow(2, n / 12);
