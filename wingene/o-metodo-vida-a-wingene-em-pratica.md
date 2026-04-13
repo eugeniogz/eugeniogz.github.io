@@ -272,5 +272,5 @@ Valorizando conexões autênticas (V), alguém nota que suas conversas presencia
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./wingene-felicidade-agora-futuro-ancestral.html">&lt;&lt; Wingene</a>
-  <a href="./tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html">Tecendo a vida&gt;&gt;</a>
+  <a href="./tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html">Tecendo a vida &gt;&gt;</a>
 </div>

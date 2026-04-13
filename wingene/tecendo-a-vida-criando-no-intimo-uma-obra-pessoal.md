@@ -72,6 +72,6 @@ Essa dança tem um nome: [*Wingene*](/wingene/wingene-felicidade-agora-futuro-an
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./o-metodo-vida-a-wingene-em-pratica.html">&lt;&lt; O método VIDA: a Wingene em prática</a>
+  <a href="./o-metodo-vida-a-wingene-em-pratica.html">&lt;&lt; O método VIDA</a>
   <span></span>
 </div>
