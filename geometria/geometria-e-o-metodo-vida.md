@@ -55,7 +55,7 @@ Este é o ícone reduzido, onde é possível ver o halo amarelo subliminar, cliq
 
 ### A harmonia matemática
 
-As figuras que compõem as estrelas internas, triângulos, quadrados e hexágonos, são os únicos polígonos regulares convexos que, idênticos, podem tesselar um plano infinito. O dodecágono invisível, no logotipo, participa de tesselações semi-regulares com a ajuda de combinações de triângulos, quadrados e hexágonos — em especial consideramos a combinação 3.4.6.12, que inclui todos os polígonos regulares do logotipo. Uma lembrança de que o legado não é só espiritual, mas construído pelas decisões e realçado pelas imperfeições.
+As figuras que compõem as estrelas internas, triângulos, quadrados e hexágonos, são os únicos polígonos regulares convexos que, idênticos, podem tesselar um plano infinito. O dodecágono invisível, no logotipo, participa de tesselações semi-regulares com a ajuda de combinações de triângulos, quadrados e hexágonos — em especial consideramos a combinação 3.4.6.12, que inclui todos os polígonos regulares do logotipo. Uma lembrança de que o legado não é somente espiritual, mas construído pelas decisões e marcado pelas imperfeições.
 
 Triângulos e quadrados são os blocos de construção da realidade em qualquer dimensão — faces das famílias universais de politopos que "dão volume" à existência, do plano abstrato ao concreto. Os hexágonos azuis têm natureza diferente: não constroem volume, situam o espírito no plano material — a atenção que vive a experiência do real.
 

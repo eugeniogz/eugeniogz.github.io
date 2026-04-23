@@ -279,7 +279,12 @@ function getMetadataFromMd(arquivoMdDestino) {
  */
 function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
 
-    const arquivosDoc = pastaFonte.getFilesByType(MIME_GOOGLE_DOCS);
+    const arquivosDocIter = pastaFonte.getFilesByType(MIME_GOOGLE_DOCS);
+    const listaArquivosDoc = [];
+    while (arquivosDocIter.hasNext()) {
+        listaArquivosDoc.push(arquivosDocIter.next());
+    }
+
     let filesConverted = 0;
     
     // Lista para armazenar metadados e conteúdo de TODOS os arquivos na pasta.
@@ -296,8 +301,8 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
     const comentarioPasta = splitComentario(nomePastaFonte);
 
     // 1. PRIMEIRA PASSAGEM: Coleta metadados, calcula o conteúdo e a necessidade de conversão
-    while (arquivosDoc.hasNext()) {
-        const arquivoDoc = arquivosDoc.next();
+    for (let docIdx = 0; docIdx < listaArquivosDoc.length; docIdx++) {
+        const arquivoDoc = listaArquivosDoc[docIdx];
 
         const nomeDocOriginal = arquivoDoc.getName();
         if (nomeDocOriginal === 'Config' || nomeDocOriginal === 'index') continue;
@@ -564,10 +569,14 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
 
     // 4. PROCESSA SUBPASTAS RECURSIVAMENTE E COLETA METADADOS
     const subpastasIndexadas = [];
-    const subpastasFonte = pastaFonte.getFolders();
+    const subpastasFonteIter = pastaFonte.getFolders();
+    const listaSubpastasFonte = [];
+    while (subpastasFonteIter.hasNext()) {
+        listaSubpastasFonte.push(subpastasFonteIter.next());
+    }
     
-    while (subpastasFonte.hasNext()) {
-        const subpastaFonte = subpastasFonte.next();
+    for (let fIdx = 0; fIdx < listaSubpastasFonte.length; fIdx++) {
+        const subpastaFonte = listaSubpastasFonte[fIdx];
         let nomeSubpastaCompleto = subpastaFonte.getName();
         if (nomeSubpastaCompleto.startsWith("_") && nomeSubpastaCompleto !== "_posts") continue;
 
@@ -599,16 +608,20 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
 
         // 4.2. Extrai Semantic Score do Config.doc da subpasta
         let semanticOrderScore = 999;
-        const arquivosConfig = subpastaFonte.getFilesByName("Config");
-        if (arquivosConfig.hasNext()) {
-          const arquivoConfig = arquivosConfig.next();
-          const docConteudo = DocumentApp.openById(arquivoConfig.getId());
-          const textoConfig = docConteudo.getBody().getText();
-          const scoreMatch = textoConfig.match(REGEX_ORDENACAO);
-          if (scoreMatch) {
-            const scoreStr = scoreMatch[1].replace(',', '.');
-            semanticOrderScore = parseFloat(scoreStr) || semanticOrderScore;
-          }
+        try {
+            const arquivosConfig = subpastaFonte.getFilesByName("Config");
+            if (arquivosConfig.hasNext()) {
+                const arquivoConfig = arquivosConfig.next();
+                const docConteudo = DocumentApp.openById(arquivoConfig.getId());
+                const textoConfig = docConteudo.getBody().getText();
+                const scoreMatch = textoConfig.match(REGEX_ORDENACAO);
+                if (scoreMatch) {
+                    const scoreStr = scoreMatch[1].replace(',', '.');
+                    semanticOrderScore = parseFloat(scoreStr) || semanticOrderScore;
+                }
+            }
+        } catch (e) {
+            Logger.log(`[AVISO] Falha temporária ao ler o arquivo Config da pasta "${nomeSubpastaCompleto}": ${e.toString()}`);
         }
         
         // 4.3. Adiciona subpasta para indexação
@@ -628,11 +641,15 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
     const tituloIndex = comentarioPasta[0];
     
     let indexAlterado = false;
-    const arquivosIndexFonte = pastaFonte.getFilesByName("index");
-    if (arquivosIndexFonte.hasNext()) {
-        indexAlterado = copiarIndexMdFonte(arquivosIndexFonte.next(), pastaDestino);
-    } else {
-        indexAlterado = criarIndexMarkdown(pastaDestino, tituloIndex, arquivosIndexados, subpastasIndexadas, comentarioPastaTexto);
+    try {
+        const arquivosIndexFonte = pastaFonte.getFilesByName("index");
+        if (arquivosIndexFonte.hasNext()) {
+            indexAlterado = copiarIndexMdFonte(arquivosIndexFonte.next(), pastaDestino);
+        } else {
+            indexAlterado = criarIndexMarkdown(pastaDestino, tituloIndex, arquivosIndexados, subpastasIndexadas, comentarioPastaTexto);
+        }
+    } catch (e) {
+        Logger.log(`[AVISO] Falha temporária ao verificar/criar o índice da pasta "${pastaDestino.getName()}": ${e.toString()}`);
     }
     
     // 6. VERIFICA O REQUISITO DE RECONVERSÃO
@@ -656,7 +673,7 @@ function sincronizarAssets(pastaFonte, pastaDestino) {
         const nomeArquivo = arquivo.getName();
         
         // Verifica se é para copiar diretamente
-        if (mime === MimeType.JAVASCRIPT || mime === MimeType.HTML || mime === MimeType.JPEG || mime === MimeType.PNG || mime === MimeType.PDF || mime.startsWith('video/') || mime === MimeType.GIF || mime === MimeType.SVG || mime === 'application/x-tex' || nomeArquivo.toLowerCase().endsWith('.tex')) {
+        if (mime === MimeType.JAVASCRIPT || mime === MimeType.HTML || mime === MimeType.JPEG || mime === MimeType.PNG || mime === MimeType.PDF || mime.startsWith('video/') || mime === MimeType.GIF || mime === MimeType.SVG || mime === 'application/x-tex' || nomeArquivo.toLowerCase().endsWith('.tex')  || nomeArquivo.toLowerCase().endsWith('.md')) {
             const arquivosDestino = pastaDestino.getFilesByName(nomeArquivo);
             
             if (arquivosDestino.hasNext()) {
@@ -1393,23 +1410,28 @@ function splitComentario(texto) {
  * Retorna true se o arquivo foi criado ou atualizado.
  */
 function copiarIndexMdFonte(arquivoFonte, pastaDestino) {
-    const conteudoFonte = DocumentApp.openById(arquivoFonte.getId()).getBody().getText();
-    const arquivosDestino = pastaDestino.getFilesByName(NOME_INDEX);
+    try {
+        const conteudoFonte = DocumentApp.openById(arquivoFonte.getId()).getBody().getText();
+        const arquivosDestino = pastaDestino.getFilesByName(NOME_INDEX);
 
-    if (arquivosDestino.hasNext()) {
-        const arquivoDestino = arquivosDestino.next();
-        const conteudoDestino = arquivoDestino.getBlob().getDataAsString();
-        
-        if (conteudoFonte !== conteudoDestino) {
-            arquivoDestino.setContent(conteudoFonte);
-            Logger.log(`[INDEX] ${NOME_INDEX} copiado da fonte e ATUALIZADO em ${pastaDestino.getName()}`);
+        if (arquivosDestino.hasNext()) {
+            const arquivoDestino = arquivosDestino.next();
+            const conteudoDestino = arquivoDestino.getBlob().getDataAsString();
+            
+            if (conteudoFonte !== conteudoDestino) {
+                arquivoDestino.setContent(conteudoFonte);
+                Logger.log(`[INDEX] ${NOME_INDEX} copiado da fonte e ATUALIZADO em ${pastaDestino.getName()}`);
+                return true;
+            }
+            return false;
+        } else {
+            pastaDestino.createFile(NOME_INDEX, conteudoFonte, MIME_MARKDOWN);
+            Logger.log(`[INDEX] ${NOME_INDEX} copiado da fonte e CRIADO em ${pastaDestino.getName()}`);
             return true;
         }
+    } catch (e) {
+        Logger.log(`[AVISO] Falha temporária ao copiar index da fonte para "${pastaDestino.getName()}": ${e.toString()}`);
         return false;
-    } else {
-        pastaDestino.createFile(NOME_INDEX, conteudoFonte, MIME_MARKDOWN);
-        Logger.log(`[INDEX] ${NOME_INDEX} copiado da fonte e CRIADO em ${pastaDestino.getName()}`);
-        return true;
     }
 }
 
@@ -1452,25 +1474,30 @@ function criarIndexMarkdown(pastaDestino, titulo, arquivos, subpastas, comentari
     let finalContent = indexContent.trim();
 
     // 3. VERIFICA E ATUALIZA
-    const arquivosIndex = pastaDestino.getFilesByName(nomeArquivoIndex);
+    try {
+        const arquivosIndex = pastaDestino.getFilesByName(nomeArquivoIndex);
 
-    if (arquivosIndex.hasNext()) {
-        const indexFile = arquivosIndex.next();
+        if (arquivosIndex.hasNext()) {
+            const indexFile = arquivosIndex.next();
 
-        const existingContent = indexFile.getBlob().getDataAsString();
+            const existingContent = indexFile.getBlob().getDataAsString();
 
-        if (existingContent.trim() === finalContent.trim()) {
-            return false; // Não foi alterado
+            if (existingContent.trim() === finalContent.trim()) {
+                return false; // Não foi alterado
+            }
+
+            indexFile.setContent(finalContent);
+            Logger.log(`${nomeArquivoIndex} ATUALIZADO em: ${pastaDestino.getName()} (Conteúdo alterado).`);
+            return true; // Foi atualizado
+        } else {
+            // ARQUIVO NÃO EXISTE: Cria
+            pastaDestino.createFile(nomeArquivoIndex, finalContent, MIME_MARKDOWN);
+            Logger.log(`${nomeArquivoIndex} CRIADO em: ${pastaDestino.getName()}.`);
+            return true; // Foi criado
         }
-
-        indexFile.setContent(finalContent);
-        Logger.log(`${nomeArquivoIndex} ATUALIZADO em: ${pastaDestino.getName()} (Conteúdo alterado).`);
-        return true; // Foi atualizado
-    } else {
-        // ARQUIVO NÃO EXISTE: Cria
-        pastaDestino.createFile(nomeArquivoIndex, finalContent, MIME_MARKDOWN);
-        Logger.log(`${nomeArquivoIndex} CRIADO em: ${pastaDestino.getName()}.`);
-        return true; // Foi criado
+    } catch (e) {
+        Logger.log(`[AVISO] Falha temporária ao criar/atualizar ${nomeArquivoIndex} em "${pastaDestino.getName()}": ${e.toString()}`);
+        return false;
     }
 }
 
@@ -1507,6 +1534,16 @@ function limparArquivosExcluidos(pastaDestino, pastaFonte) {
         slugsFonteValidos.add(slug + ".md");
     }
 
+    // Protege arquivos .md nativos que foram copiados diretamente da origem
+    const arquivosNativosFonte = pastaFonte.getFiles();
+    while (arquivosNativosFonte.hasNext()) {
+        const arq = arquivosNativosFonte.next();
+        const nomeArq = arq.getName();
+        if (nomeArq.toLowerCase().endsWith('.md')) {
+            slugsFonteValidos.add(nomeArq);
+        }
+    }
+
     if (isPostsFolder && AFORISMOS_DOC_ID) {
          try {
              const aforismosDoc = DriveApp.getFileById(AFORISMOS_DOC_ID);
@@ -1534,9 +1571,14 @@ function limparArquivosExcluidos(pastaDestino, pastaFonte) {
         }
     }
     // 3. Processa as subpastas recursivamente
-    const subpastasFonte = pastaFonte.getFolders();
-    while (subpastasFonte.hasNext()) {
-        const subpastaFonte = subpastasFonte.next();
+    const subpastasFonteIter = pastaFonte.getFolders();
+    const listaSubpastas = [];
+    while (subpastasFonteIter.hasNext()) {
+        listaSubpastas.push(subpastasFonteIter.next());
+    }
+
+    for (let fIdx = 0; fIdx < listaSubpastas.length; fIdx++) {
+        const subpastaFonte = listaSubpastas[fIdx];
         let nomeSubpastaCompleto = subpastaFonte.getName();
         let nomeParaProcessar = nomeSubpastaCompleto;
         if (nomeSubpastaCompleto !== '_posts') {

@@ -126,6 +126,6 @@ A *Wingene* se realiza em múltiplas camadas: no esforço evolutivo individual, 
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./o-fogo-de-prometeu-e-os-males-do-mundo.html">&lt;&lt; O Fogo de prometeu e os males do mundo</a>
+  <a href="./o-fogo-de-prometeu.html">&lt;&lt; O Fogo de Prometeu</a>
   <a href="./o-metodo-vida-a-wingene-em-pratica.html">O método VIDA &gt;&gt;</a>
 </div>

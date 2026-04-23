@@ -6,7 +6,7 @@ semantic_order: 50
 tags:
   - Escravidão digital
   - Amor
-  - Método VIDA
+  - método VIDA
   - Tempo
 --- 
 
@@ -18,7 +18,7 @@ tags:
 
 <img src="./figuras/o-clube-dos-pinguins/com-o-colega.png" alt="Pedro conversa com marcos" style="float: right; width: 60%; margin-left: 10px; margin-bottom: 10px; border-radius: 15px;">Pedro fazia de tudo para o seu filho, Marquinhos. Ele estava com 7 anos, era um garoto muito animado, mas quando estava em casa, não tinha amiguinhos para brincar. O pai brincava com ele, mas muitas vezes não tinha tempo. Nessas horas, acabava emprestando o celular para ele. Marquinhos se divertia com joguinhos que o pai colocava no celular. Um dia, um amigo disse: — Você conhece o clube dos pinguins? — O que é isso? Perguntou Marquinhos. — É um jogo muito legal, tem no celular da minha mãe.
 
-<img src="./figuras/o-clube-dos-pinguins/jogando-no-celular.png" alt="Marcos jogando clube dos pinguins" style="float: left; width: 60%; margin-right: 10px; margin-bottom: 10px; border-radius: 15px;">Quando chegou em casa, pediu ao pai: — Papai, pode pôr o clube dos pinguins para mim? O pai pesquisou no celular: — Achei um aqui, vou colocar para você. Pedro não sabia, mas o que tinha encontrado não era o jogo oficial. Marquinhos gostava do jogo, vivia de olhos atentos à tela, salvando e engordando os pinguins com peixinhos. — Marquinhos, vem lanchar. Deixa esse jogo um pouco. Chamava a mãe. Desafios coloridos piscavam a todo momento, outros jogadores chamavam para conversar. Nem ouvia a mãe. A mãe insistia: — Filho, já estamos na mesa. — Espera, deixa eu acabar essa fase.
+<img src="./figuras/o-clube-dos-pinguins/jogando-no-celular.png" alt="Marcos jogando clube dos pinguins" style="float: left; width: 60%; margin-right: 10px; margin-bottom: 10px; border-radius: 15px;">Quando chegou em casa, pediu ao pai: — Papai, pode pôr o clube dos pinguins para mim? O pai pesquisou no celular: — Achei aqui, vou colocar para você. Pedro não sabia, mas o que tinha encontrado não era o jogo oficial. Marquinhos gostava do jogo, vivia de olhos atentos à tela, salvando e engordando os pinguins com peixinhos. — Marquinhos, vem lanchar. Deixa esse jogo um pouco. Chamava a mãe. Desafios coloridos piscavam a todo momento, outros jogadores chamavam para conversar. Nem ouvia a mãe. A mãe insistia: — Filho, já estamos na mesa. — Espera, deixa eu acabar essa fase.
 
 Animado com o jogo, Marquinhos recebeu uma mensagem: “clique e ganhe 10 pontos”. Ele clicou, era um vírus. O celular do pai ficou infectado com um aplicativo do mal. O pai, sem perceber, continuou utilizando o aparelho. Mal sabia do vírus roubando seus dados. No dia seguinte, o pai foi pagar uma conta e levou um susto. Não tinha dinheiro suficiente. Ligando para o banco, informaram que havia pagamentos suspeitos na sua conta, que podia ser algum vírus no celular. Pedro pensou: será que é o jogo do Marquinhos?
 
