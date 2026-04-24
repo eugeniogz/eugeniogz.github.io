@@ -1,4 +1,9 @@
-# Wingene VIDA
+---
+layout: app
+title: Wingene VIDA APP
+---
+
+# Aplicativo Wingene VIDA
 
 **Diário de reflexão e prática do Método Ético-Existencial VIDA.**
 
