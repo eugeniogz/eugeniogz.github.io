@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "br.com.wingene.diario",
+      "sha256_cert_fingerprints": [
+        "E2:E7:E3:C3:B5:28:39:A6:C8:86:E8:9E:9A:CB:6A:0C:8B:29:4F:6E:AE:D6:1A:C9:3D:E8:07:0B:77:23:18:AC"
+      ]
+    }
+  }
+]
