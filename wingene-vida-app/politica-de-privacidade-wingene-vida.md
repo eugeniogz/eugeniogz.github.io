@@ -6,7 +6,7 @@ semantic_order: 0
 no_index: true
 --- 
 
-### [Wingene VIDA](./wingene=vida-app.html)
+### [Wingene VIDA](./wingene-vida-app.html)
 
 ## Política de Privacidade - Wingene VIDA
 
