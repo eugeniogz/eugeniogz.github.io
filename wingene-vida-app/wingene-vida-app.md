@@ -38,6 +38,10 @@ Os registros são classificados dentro de quatro pilares essenciais:
 
 A IA opera em modo anonimizado (Pay-tier), garantindo que os textos processados para análise não sejam usados para treinar os modelos fundacionais da Google. Além disso, todo backup exportado para a nuvem passa por criptografia forte baseada em uma chave gerada a partir da senha do usuário, que nunca sai do dispositivo.
 
+## 📞 Suporte e Contato
+
+Se você tiver dúvidas, encontrar algum problema no aplicativo ou quiser enviar sugestões, entre em contato conosco através do e-mail: **[eugenio@wingene.com.br](mailto:eugenio@wingene.com.br)**.
+
 ## 📄 Licença e Termos
 
 Consulte a [Política de Privacidade](https://blog.wingene.com.br/wingene-vida-app/politica-de-privacidade-wingene-vida.html) e o [Ensaio do Método VIDA](https://blog.wingene.com.br/wingene/o-metodo-vida-a-wingene-em-pratica.html) para mais informações conceituais.
