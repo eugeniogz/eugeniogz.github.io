@@ -38,6 +38,10 @@ Entries are classified within four essential pillars:
 
 The AI operates in anonymized mode (Pay-tier), ensuring that texts processed for analysis are not used to train Google's foundational models. Additionally, every backup exported to the cloud is encrypted using a strong key derived from the user's password — which never leaves the device.
 
-## 📄 Terms & License
+## 📞 Support & Contact
+
+If you have any questions, encounter any issues with the app, or would like to send suggestions, please contact us via email at: **[eugenio@wingene.com.br](mailto:eugenio@wingene.com.br)**.
+
+## � Terms & License
 
 See the [Privacy Policy](https://blog.wingene.com.br/wingene-vida-app/politica-de-privacidade-wingene-vida-en.html) and the [VIDA Method Essay](https://blog.wingene.com.br/wingene/the-vida-method.html) for further conceptual information.
