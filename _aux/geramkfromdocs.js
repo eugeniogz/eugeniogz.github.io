@@ -306,7 +306,8 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
 
         const nomeDocOriginal = arquivoDoc.getName();
         if (nomeDocOriginal === 'Config' || nomeDocOriginal === 'index') continue;
-        if (nomeDocOriginal.toLowerCase().endsWith('.tex')) continue;
+        if (nomeDocOriginal.toLowerCase().endsWith('.tex') || nomeDocOriginal.toLowerCase().endsWith('.md')
+        || nomeDocOriginal.toLowerCase().endsWith('.html')) continue;
 
         const nomeSlug = slugifyFileName(nomeDocOriginal);
         let nomeMarkdown = `${nomeSlug}.md`;
@@ -684,10 +685,16 @@ function sincronizarAssets(pastaFonte, pastaDestino) {
                     try {
                         // Atualização atômica usando Advanced Drive Service (Drive API)
                         // Requer adicionar o serviço "Drive API" no editor do Apps Script
+                        let blob = arquivo.getBlob();
+                        
+                        // Previne erro "Invalid MIME type" na API para arquivos .tex e .md customizados
+                        if (mime === 'application/x-tex' || nomeArquivo.toLowerCase().endsWith('.tex') || nomeArquivo.toLowerCase().endsWith('.md')) {
+                            blob.setContentType('text/plain');
+                        }
+                        
                         Drive.Files.update({
-                            title: nomeArquivo,
-                            mimeType: mime
-                        }, arquivoDestino.getId(), arquivo.getBlob());
+                            title: nomeArquivo
+                        }, arquivoDestino.getId(), blob);
                     } catch (e) {
                         Logger.log(`[ERRO] Falha ao atualizar asset via Drive API: ${e.toString()}. Verifique se o Serviço Avançado 'Drive' está ativado.`);
                     }
