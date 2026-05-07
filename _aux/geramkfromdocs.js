@@ -643,11 +643,21 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
     
     let indexAlterado = false;
     try {
-        const arquivosIndexFonte = pastaFonte.getFilesByName("index");
-        if (arquivosIndexFonte.hasNext()) {
-            indexAlterado = copiarIndexMdFonte(arquivosIndexFonte.next(), pastaDestino);
+        const arquivosIndexHtmlFonte = pastaFonte.getFilesByName("index.html");
+        if (arquivosIndexHtmlFonte.hasNext()) {
+            Logger.log(`[INDEX] "index.html" encontrado na fonte. Ignorando a geração de "index.md" em "${pastaDestino.getName()}".`);
+            // Remove o index.md existente caso ele tenha sido gerado anteriormente
+            const indexExistente = pastaDestino.getFilesByName(NOME_INDEX);
+            while (indexExistente.hasNext()) {
+                indexExistente.next().setTrashed(true);
+            }
         } else {
-            indexAlterado = criarIndexMarkdown(pastaDestino, tituloIndex, arquivosIndexados, subpastasIndexadas, comentarioPastaTexto);
+            const arquivosIndexFonte = pastaFonte.getFilesByName("index");
+            if (arquivosIndexFonte.hasNext()) {
+                indexAlterado = copiarIndexMdFonte(arquivosIndexFonte.next(), pastaDestino);
+            } else {
+                indexAlterado = criarIndexMarkdown(pastaDestino, tituloIndex, arquivosIndexados, subpastasIndexadas, comentarioPastaTexto);
+            }
         }
     } catch (e) {
         Logger.log(`[AVISO] Falha temporária ao verificar/criar o índice da pasta "${pastaDestino.getName()}": ${e.toString()}`);
