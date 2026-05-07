@@ -739,7 +739,7 @@ function gerarSitemap(pastaRaiz) {
       const arquivo = arquivos.next();
       const nome = arquivo.getName();
       
-      if (nome.toLowerCase().endsWith('.md') && !nome.startsWith('~')) {
+      if ((nome.toLowerCase().endsWith('.md') || nome.toLowerCase() === 'index.html') && !nome.startsWith('~')) {
         // NOVO: Verifica se o arquivo deve ser excluído do sitemap
         try {
             const content = arquivo.getBlob().getDataAsString();
@@ -765,7 +765,7 @@ function gerarSitemap(pastaRaiz) {
            }
         } else {
            // Normal: slug.md -> path/slug.html (ou path/ se index)
-           if (nome === 'index.md') {
+           if (nome === 'index.md' || nome.toLowerCase() === 'index.html') {
               urlPath = caminhoRelativo; 
            } else {
               urlPath = caminhoRelativo + nome.substring(0, nome.length - 3) + '.html';
