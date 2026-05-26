@@ -219,7 +219,7 @@ O método não oferece redenção, mas direção. Não promete perfeição, mas 
 
 ## O aplicativo Wingene VIDA
 
-O aplicativo Wingene VIDA é um diário reflexivo construído com base no método. Mais do que um caderno digital, ele permite acompanhar a prática do aprimoramento pessoal, transformando as anotações cotidianas em um espelho de padrões e oportunidades de crescimento. Utilizando inteligência artificial, o aplicativo analisa os registros pessoais para oferecer percepções e conselhos práticos. Tudo isso de forma totalmente anônima, garantindo que suas informações jamais sejam utilizadas para treinar modelos de IA. Para maiores detalhes, acesse: [Wingene Vida - Aplicativo](/wingene-vida-app)
+O aplicativo Wingene VIDA é um diário reflexivo construído com base no método. Mais do que um caderno digital, ele permite acompanhar a prática do aprimoramento pessoal, transformando as anotações cotidianas em um espelho de padrões e oportunidades de crescimento. Utilizando inteligência artificial, o aplicativo analisa os registros pessoais para oferecer percepções e conselhos práticos. Tudo isso de forma totalmente anônima, garantindo que suas informações jamais sejam utilizadas para treinar modelos de IA. Para maiores detalhes, acesse: [Wingene Vida - Aplicativo](/wingene-vida-app).
 
 ## O logotipo e o Método VIDA
 

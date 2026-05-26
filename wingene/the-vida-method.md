@@ -15,7 +15,7 @@ navigation_footer: false
 
 We inherit a body, a mind, and a culture—but we do not inherit all the criteria for living well. These must be built. This is the goal of Wingene: the refinement of ancestral heritage. Biological inheritance provides the first lights of the mind; learning expands the horizon, illuminating understanding with infinite colors. Even so, many traverse existence in automatic mode, reacting more than choosing, repeating habits without questioning their foundations.
 
-How do we ensure that cultural sap contributes to Wingene? The answer lies in an acronym: **V**alues, **I**mperfections, **D**ecisions, and **A**ttention — VIDA (LIFE). Values provide direction; imperfections reveal the inconsistencies of the journey; decisions convert purpose into action; and attention allows one to perceive where to act and to confirm advances and failures. These axes operate in a continuous movement.
+How do we ensure that cultural sap contributes to Wingene? The answer lies in an acronym: **V**alues, **I**mperfections, **D**ecisions, and Attention — VIDA (LIFE). Values provide direction; imperfections reveal the inconsistencies of the journey; decisions convert purpose into action; and attention allows one to perceive where to act and to confirm advances and failures. These axes operate in a continuous movement.
 
 VIDA is an ethical-existential method based on these four interdependent axes. It is not a closed system nor a moral doctrine. It is a simple, revisable structure, compatible with the fallible nature of the human being and guided by the ideal of Wingene.
 
@@ -23,22 +23,22 @@ The cultivation of virtues is not an original concept—it has permeated philoso
 
 ## Values
 
-No method of human improvement subsists without a normative axis. Before decisions, even before the recognition of imperfections, there is always a criterion—explicit or not—that guides action. This criterion is values. Values are neither inherited dogmas nor arbitrary preferences: they are **guidelines that orient the method**
+No method of human improvement subsists without a normative axis. Before decisions, even before the recognition of imperfections, there is always a criterion—explicit or not—that guides action. This criterion is values. Values are neither inherited dogmas nor arbitrary preferences: they are **guidelines that orient the method.**
 
 Values emerge from an **ethical naturalism**: they recognize the biological, psychological, and social limits of the human being and are guided by the Aristotelian ideal of *eudaimonia*—not as momentary pleasure but as **the unfolding of happiness**.
 
 ### **Values as a moral compass**
 
-Values serve as a compass. They do not indicate detailed paths, but they orient the direction. It is values that allow one to distinguish between the convenient and the correct. However, values can remain latent or deformed. Culture, fear, habit, and convenience can suppress them. This is why they are not immutable, but the result of a **constant work of revision**.
+Values serve as a compass. They do not indicate detailed paths, but they orient the direction. It is values that allow one to distinguish between the convenient and the correct. However, values can remain latent or deformed. Culture, fear, habit, and convenience can suppress them. This is why they are not immutable but the result of a **constant work of revision**.
 
 ### **Three criteria for arbitrating values**
 
 A guide to calibrate the VIDA values compass is established based on three criteria:
 
-1. **Personal Limits**  
+1. **Personal Limits:**  
 A value must respect cognitive, emotional, and biological limits. One cannot demand that which violates the constitution of the being.
 
-1. **Coexistence**  
+1. **Coexistence:**  
 A value must not make coexistence unviable; rather, it should increase cooperation and social harmony.
 
 1. **Continuous Revision**  
@@ -60,7 +60,7 @@ Moral philosophy recognized early on that error is not an exception but a condit
 
 Moral error is often confused with blame. VIDA rejects this confusion. Imperfection is an **informational signal**, not a condemnation. It points to weakened values, scattered attention, or avoided decisions.
 
-When someone recognizes their own impatience, the pride that prevents an apology, or the inconsistency between discourse and practice, they are not failing morally—they are **accessing relevant data about themselves**. The denial of imperfection, on the other hand, leads to the unconscious repetition of the error.
+When someone recognizes their impatience, the pride that prevents an apology, or the inconsistency between discourse and practice, they are not failing morally—they are **accessing relevant data about themselves**. The denial of imperfection, on the other hand, leads to the unconscious repetition of the error.
 
 ### **Imperfection as a condition for freedom**
 
@@ -75,18 +75,18 @@ For practical purposes, VIDA distinguishes four major classes of imperfections:
 1. **Personal**  
 Attitudes that do not directly involve the other but harm one's own being—such as health neglect or disinterest in learning.
 
-1. **Emotional**  
-Related to the management of affects: impulsivity, reactivity, excessive fear, defensive pride.
+1. **Emotional:**  
+Related to the management of affects: impulsivity, reactivity, excessive fear, and defensive pride.
 
 1. **Moral**  
 Manifested in the inconsistency between values and actions: unkept promises, omissions for convenience, inappropriate behavior.
 
 1. **Attentional**  
-Stemming from the mind's scattering: automatisms, chronic distraction, life on "autopilot".
+Stemming from the mind's scattering: automatisms, chronic distraction, life on “autopilot.”
 
 ### **Acceptance without resignation**
 
-Accepting imperfection is not justifying the error, but **recognizing the real starting point**. The obsessive search for perfection is one of the greatest enemies of evolution, as it generates denial, blame, and stagnation. VIDA proposes replacing the ideal of the perfect with a commitment to the **possible optimal**.
+Accepting imperfection is not justifying the error but **recognizing the real starting point**. The obsessive search for perfection is one of the greatest enemies of evolution, as it generates denial, blame, and stagnation. VIDA proposes replacing the ideal of the perfect with a commitment to the **possible optimal**.
 
 Imperfection is transformed into a criterion for action: it shows where to act, what to adjust, and which values need strengthening. Thus, it prepares the ground for the third axis of the method: decisions.
 
@@ -96,7 +96,7 @@ Recognizing values guides; recognizing imperfections clarifies. But nothing tran
 
 Philosophy has always recognized the centrality of decision. For Aristotle, virtue is not knowledge but a disposition acquired through repeated action. Modernity reinforced this view by understanding the human as an agent—a being who not only reacts but also chooses.
 
-In VIDA, decision is not understood as an isolated event but as a **continuous process of alignment between values and actions**.
+In VIDA, a decision is not understood as an isolated event but as a **continuous process of alignment between values and actions**.
 
 ### Classification of decisions
 
@@ -104,7 +104,7 @@ In VIDA, decision is not understood as an isolated event but as a **continuous p
 Decisions linked to the interruption of harmful patterns: lack of discipline with studying, impatience in dealing with others, and the desire to impose one's own thoughts and not listen to others.
 
 1. **Constructive**  
-Cultivation of new habits: learning to cook, reading books, exercising more frequently, visiting loved ones instead of commenting on a post online.
+Cultivation of new habits: learning to cook, reading books, exercising more frequently, and visiting loved ones instead of commenting on a post online.
 
 1. **Adaptive**  
 Understanding that attitudes considered consolidated can always be refined. Considering that the perfect is unattainable, the search for the optimal must be constant.
@@ -113,7 +113,7 @@ Understanding that attitudes considered consolidated can always be refined. Cons
 
 Desiring change is easy; deciding is costly. Desire moves on the plane of the ideal; decision requires confrontation. Deciding implies accepting the effort, the discomfort, and the possibility of failure. The intention to change is important, but it is the decision that moves VIDA as the first step to creating a virtue.
 
-Deciding is taking responsibility for one's own trajectory, recognizing limits, but refusing passivity. The decision marks the point at which the individual recognizes themselves as an agent of their own refinement.
+Deciding is taking responsibility for one's own trajectory, recognizing limits, but refusing passivity. The decision marks the point at which the individual recognizes themselves as an agent of their refinement.
 
 ### **Decision, habit, and relapse**
 
@@ -125,7 +125,7 @@ Deciding, therefore, is not a punctual heroic act but a **practice of reaffirmat
 
 The decision requires the participation of attention. Once decided to change, it becomes essential to observe oneself: to perceive impulses, identify automatisms, and recognize critical moments. Attention to decisions allows the decision to cease being sterile contemplation.
 
-In this sense, the decision prepares the ground for the fourth axis of the method: **attention** — the conscious presence that sustains the entire process.
+In this sense, the decision prepares the ground for the fourth axis of the method: attention—the conscious presence that sustains the entire process.
 
 ## Attention
 
@@ -137,7 +137,7 @@ Philosophy has always recognized the central role of attention. For the Stoics, 
 
 VIDA rejects the idea of attention as rigid vigilance or permanent effort. The human mind was not made to sustain continuous absolute focus. Distractions are part of the routine; seeking constant attention is futile, but it is possible to allow its presence frequently.
 
-In this sense, attention is not measured by the absence of distractions, but by the **speed of the return to presence**.
+In this sense, attention is not measured by the absence of distractions but by the **speed of the return to presence**.
 
 ### Three levels of attention
 
@@ -154,13 +154,13 @@ It is the sensitive presence in the environment: perceiving landscapes, rhythms,
 
 ### **Attention and impermanence**
 
-Attention also teaches about impermanence. Elevated states do not last; intense experiences pass. VIDA does not seek to freeze moments of fullness, but to **recognize them when they arise and let them go without attachment.**
+Attention also teaches about impermanence. Elevated states do not last; intense experiences pass. VIDA does not seek to freeze moments of fullness but to **recognize them when they arise and let them go without attachment.**
 
 The attentive mind learns to transit between the ordinary and the extraordinary without confusing one with the other.
 
 ### **Attention and Wingene**
 
-From the perspective of Wingene, attention is the simplest and most radical gesture. It requires no extra time or special conditions. It can occur in daily life, at work, in conviviality, in silent contemplation. Every moment of attention is an act of conscious heritage: it preserves what has been learned and opens space for what is yet to be discovered.
+From the perspective of Wingene, attention is the simplest and most radical gesture. It requires no extra time or special conditions. It can occur in daily life, at work, in conviviality, or in silent contemplation. Every moment of attention is an act of conscious heritage: it preserves what has been learned and opens space for what is yet to be discovered.
 
 ## Validating the VIDA method
 
@@ -196,26 +196,26 @@ The table below summarizes the four axes of the VIDA method, with their categori
 
 | Eixo | 1st Level | 2nd Level | 3rd Level | 4th Level |  
 | :--- | :--- | :--- | :--- | :--- |  
-| **Values** | **Personal Limits**: Respect for the integrity of the being | **Coexistence**: Facilitating harmonious coexistence. | **Continuous Revision: Frequent and humble adjustment.** | |  
-| **Imperfections** | **Personal**: Neglect of one's own being. | **Emotional**: Problems in managing affects. |  **Moral**: Inconsistency between values and actions.| **Attentional**: Dominance of autopilot. |  
+| **Values** | **Personal Limits**: Respect for the integrity of the being | **Coexistence**: Facilitating harmonious coexistence. | **Continuous Revision: **Frequent and humble adjustment. | |  
+| **Imperfections** | **Personal**: Neglect of one's own being. | **Emotional**: Problems in managing affects. | **Moral**: Inconsistency between values and actions. | **Attentional**: Dominance of autopilot. |  
 | **Decisions** | **Reactive**: Interrupting harmful patterns. | **Constructive**: Cultivating new habits. | **Adaptive**: Continuous refinement.| |  
 | **Attention** | To **the self**: Observation of internal states. | **To others**: Listening and relational ethics. | **To the world**: Sensitive presence. | |
 
 ## VIDA in Action: An Example
 
-Imagine someone who values honesty (V), but realizes they frequently exaggerate professional achievements in conversations (I). Upon recognizing this imperfection, they decide (D) to start noticing when the impulse arises and contain it. With attention (A), they observe the exact moment the temptation appears—and, gradually, the inconsistency decreases. The method does not immediately eliminate the fault, but transforms automatic reaction into conscious choice.
+Imagine someone who values honesty (V) but realizes they frequently exaggerate professional achievements in conversations (I). Upon recognizing this imperfection, they decide (D) to start noticing when the impulse arises and contain it. With attention (A), they observe the exact moment the temptation appears—and, gradually, the inconsistency decreases. The method does not immediately eliminate the fault but transforms automatic reaction into conscious choice.
 
 ## VIDA: A unified method for conscious flourishing
 
-the VIDA method stems from the realization that human existence does not evolve through an accumulation of intentions, but through **alignment between values, awareness of flaws, practical decisions, and attentive presence**. These four axes do not operate in a linear sequence but as a **dynamic system** in which each element sustains and pressures the others.
+The VIDA method stems from the realization that human existence does not evolve through an accumulation of intentions, but through **alignment between values, awareness of flaws, practical decisions, and attentive presence**. These four axes do not operate in a linear sequence but as a **dynamic system** in which each element sustains and pressures the others.
 
-This method recognizes that ethical transformation is neither linear nor definitive. The VIDA wheel spins continuously. Each rotation deepens character, refines consciousness, and expands the transmitted cultural heritage. Thus, living is not about seeking perfection, but **aiming for the optimal**. It is about transforming daily existence into a space of learning, creation, and responsibility. This transformation allows eudaimonia to flourish. In this process, the individual not only flourishes but participates in the construction of a conscious heritage that surpasses their own existence.
+This method recognizes that ethical transformation is neither linear nor definitive. The VIDA wheel spins continuously. Each rotation deepens character, refines consciousness, and expands the transmitted cultural heritage. Thus, living is not about seeking perfection but **aiming for the optimal**. It is about transforming daily existence into a space of learning, creation, and responsibility. This transformation allows eudaimonia to flourish. In this process, the individual not only flourishes but also participates in the construction of a conscious heritage that surpasses their existence.
 
 The method does not offer redemption, but direction. It does not promise perfection, but possible coherence. And in the practice of this coherence—reiterated, imperfect, attentive—is inscribed Wingene: the ancestral future built in the present.
 
 ## Wingene VIDA App
 
-The Wingene VIDA application is a reflective diary built on the method. More than a digital notebook, it allows you to monitor the practice of personal improvement, transforming daily notes into a mirror of patterns and growth opportunities. Using artificial intelligence, the application analyzes personal records to offer insights and practical advice. All of this is completely anonymous, ensuring that your information is never used to train AI models. For more details, visit [Wingene Vida - Aplicativo](/wingene-vida-app/index-en.html)
+The Wingene VIDA application is a reflective diary built on the method. More than a digital notebook, it allows you to monitor the practice of personal improvement, transforming daily notes into a mirror of patterns and growth opportunities. Using artificial intelligence, the application analyzes personal records to offer insights and practical advice. All of this is completely anonymous, ensuring that your information is never used to train AI models. For more details, visit the [Wingene Vida app](/wingene-vida-app/index-en.html) page.
 
 ## The logo and the VIDA Method
 
@@ -249,20 +249,20 @@ The Wingene logo was designed to represent the four axes of the method. A detail
 
 Each example illustrates how the four axes operate in an integrated manner:
 
-* **Digital distraction during family time**  
+* **Digital distraction during family time:**  
 A person values quality time with family (V) but realizes they get distracted by their phone during these moments (I). They decide to silence notifications during family meals (D) and use attention to notice when the impulse to check the phone arises (A).
 
-* **Excessive exposure on social media**  
-Someone notices they frequently comment on polarized posts, generating conflicts (I). They observe that more thoughtful friends avoid this behavior (A). They decide to comment only after reflecting on whether the interaction is constructive (D), cultivating the value of responsible communication (V).
+* **Excessive exposure on social media:**  
+Someone notices they frequently comment on polarized posts, generating conflicts (I). They observe that more thoughtful friends avoid this behavior (A). They decide to comment only after reflecting on whether the interaction is constructive (D) and cultivating the value of responsible communication (V).
 
-* **Propagation of unverified information**  
+* **Propagation of unverified information:**  
 A person shares an impactful news story without checking the source (I). Upon finding out it was false, they feel discomfort (A). They resolve to always verify information before sharing (D), strengthening the value of intellectual honesty (V).
 
-* **Attention captured by devices**  
-Practicing attention to their own behavior (A), someone notices compulsive smartphone use (I). They decide to establish screen-free hours (D), experiencing greater presence and well-being (V).
+* **Attention captured by devices:**  
+Practicing attention to their behavior (A), someone notices compulsive smartphone use (I). They decide to establish screen-free hours (D), experiencing greater presence and well-being (V).
 
-* **Confirmation bubbles**  
+* **Confirmation bubbles:**  
 Valuing critical thinking (V), a person notices they avoid divergent perspectives (I). They start actively seeking sources with different views (D) and remain attentive to the tendency to automatically reject the contradictory (A).
 
-* **Superficiality of in-person interactions**  
+* **Superficiality of in-person interactions:**  
 Valuing authentic connections (V), someone notices their in-person conversations are rushed or superficial (I). They decide to dedicate attention to others in their meetings (D) and practice attentive and genuine presence in those moments (A).
