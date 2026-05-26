@@ -1,0 +1,399 @@
+---
+layout: full
+title: "Wingene VIDA - app
+no_index: false
+---
+<!DOCTYPE html>
+<html lang="en-US">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Wingene VIDA — App</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red:    #b01010;
+    --green:  #0f9010;
+    --blue:   #1040b0;
+    --yellow: #c8a000;
+    --ink:    #1a1a18;
+    --mid:    #444440;
+    --muted:  #888880;
+    --rule:   #d8d4cc;
+    --bg:     #faf9f5;
+    --cream:  #f2f0ea;
+    --white:  #ffffff;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 300;
+    line-height: 1.65;
+    font-size: 17px;
+  }
+
+  /* ── SITE HEADER ── */
+  .site-header {
+    border-bottom: 1px solid var(--rule);
+    padding: 18px 0 14px;
+    text-align: center;
+    background: var(--white);
+  }
+  .site-header a { text-decoration: none; color: inherit; }
+  .site-logo { display: inline-block; width: 52px; height: 52px; margin-bottom: 8px; }
+  .site-name {
+    font-family: 'Lora', serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mid);
+  }
+  .site-tagline {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  /* ── BREADCRUMB ── */
+  .breadcrumb {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 10px 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--rule);
+  }
+  .breadcrumb a { color: var(--muted); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--blue); }
+  .breadcrumb span { margin: 0 6px; }
+
+  /* ── MAIN ── */
+  .page-wrap { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 52px 0 40px;
+    text-align: center;
+    border-bottom: 1px solid var(--rule);
+  }
+  .hero-logo {
+    width: 80px; height: 80px;
+    display: block; margin: 0 auto 24px;
+    animation: float 5s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-6px); }
+  }
+  .hero-kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.3em;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 16px;
+  }
+  .hero-title {
+    font-family: 'Lora', serif;
+    font-size: clamp(2.2rem, 6vw, 3.4rem);
+    font-weight: 600; line-height: 1.15;
+    color: var(--ink); margin-bottom: 8px;
+  }
+  .hero-title em { font-style: italic; font-weight: 400; color: var(--red); }
+  .hero-subtitle {
+    font-size: 1.1rem; font-style: italic;
+    color: var(--mid); margin-bottom: 36px; line-height: 1.55;
+  }
+  .store-buttons {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    justify-content: center; align-items: center;
+    margin-bottom: 24px;
+  }
+  .btn-text {
+    display: inline-block; font-family: 'Source Serif 4', serif;
+    font-size: 0.85rem; font-style: italic; color: var(--muted);
+    text-decoration: underline; text-underline-offset: 3px;
+    text-decoration-color: var(--rule); transition: color 0.2s;
+  }
+  .btn-text:hover { color: var(--blue); }
+  .badge-store {
+    display: inline-block;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .badge-store:hover { opacity: 0.85; transform: translateY(-1px); }
+  .badge-store img {
+    display: block;
+  }
+  .badge-play img {
+    height: 60px; /* Reduzido para igualar a parte visível ao badge da Apple */
+  }
+  .badge-apple img {
+    height: 46px;
+    margin: 8px 0; /* Equilibra a altura total para 60px, alinhando perfeitamente */
+  }
+
+  /* ── SECTIONS ── */
+  .section { padding: 44px 0; border-bottom: 1px solid var(--rule); }
+  .section:last-of-type { border-bottom: none; }
+  .section-kicker {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted);
+    margin-bottom: 20px; display: flex; align-items: center; gap: 12px;
+  }
+  .section-kicker::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+  h2.section-title {
+    font-family: 'Lora', serif; font-size: 1.6rem; font-weight: 600;
+    line-height: 1.25; margin-bottom: 16px; color: var(--ink);
+  }
+  .lead { font-size: 1.05rem; line-height: 1.7; color: var(--mid); margin-bottom: 20px; }
+
+  /* ── VIDA PILLARS ── */
+  .vida-pillars {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+    background: var(--rule); border: 1px solid var(--rule); margin-top: 28px;
+  }
+  @media (max-width: 500px) { .vida-pillars { grid-template-columns: 1fr; } }
+  .pillar { background: var(--white); padding: 28px 24px 24px; position: relative; }
+  .pillar-letter {
+    font-family: 'Lora', serif; font-size: 4rem; font-weight: 600;
+    line-height: 1; position: absolute; top: 16px; right: 20px; opacity: 0.07; color: var(--ink);
+  }
+  .pillar[data-c="red"]    { border-top: 3px solid var(--red); }
+  .pillar[data-c="blue"]   { border-top: 3px solid var(--blue); }
+  .pillar[data-c="green"]  { border-top: 3px solid var(--green); }
+  .pillar[data-c="yellow"] { border-top: 3px solid var(--yellow); }
+  .pillar[data-c="red"]    .pillar-letter { color: var(--red);    opacity: 0.13; }
+  .pillar[data-c="blue"]   .pillar-letter { color: var(--blue);   opacity: 0.13; }
+  .pillar[data-c="green"]  .pillar-letter { color: var(--green);  opacity: 0.13; }
+  .pillar[data-c="yellow"] .pillar-letter { color: var(--yellow); opacity: 0.18; }
+  .pillar-num {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    letter-spacing: 0.15em; color: var(--muted); text-transform: uppercase; margin-bottom: 6px;
+  }
+  .pillar-name { font-family: 'Lora', serif; font-size: 1.25rem; font-weight: 600; margin-bottom: 10px; }
+  .pillar-desc { font-size: 0.88rem; color: var(--mid); line-height: 1.65; }
+
+  /* ── FEATURES ── */
+  .feature-list { list-style: none; margin-top: 24px; display: flex; flex-direction: column; gap: 20px; }
+  .feature-list li { display: flex; gap: 16px; align-items: flex-start; }
+  .feat-icon { font-size: 1.2rem; line-height: 1.4; flex-shrink: 0; width: 28px; text-align: center; }
+  .feat-title { font-family: 'Lora', serif; font-weight: 600; font-size: 0.95rem; margin-bottom: 3px; }
+  .feat-desc { font-size: 0.88rem; color: var(--mid); line-height: 1.6; }
+
+  /* ── BLOCKQUOTE ── */
+  blockquote {
+    border-left: 3px solid var(--red); margin: 32px 0;
+    padding: 12px 0 12px 24px; font-style: italic;
+    font-size: 1.05rem; color: var(--mid); line-height: 1.6;
+  }
+  blockquote cite {
+    display: block; margin-top: 8px; font-size: 0.8rem; font-style: normal;
+    font-family: 'JetBrains Mono', monospace; letter-spacing: 0.05em; color: var(--muted);
+  }
+
+  /* ── PRIVACY BOX ── */
+  .privacy-box {
+    background: var(--cream); border: 1px solid var(--rule);
+    border-left: 3px solid var(--green); padding: 24px 24px 20px; margin-top: 24px;
+    font-size: 0.88rem; line-height: 1.65; color: var(--mid);
+  }
+  .privacy-box strong { font-family: 'Lora', serif; color: var(--ink); font-weight: 600; }
+  .privacy-row { margin-bottom: 14px; }
+  .privacy-row:last-child { margin-bottom: 0; }
+
+  /* ── TAGS ── */
+  .tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+  .tag {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 12px;
+    border: 1px solid var(--rule); border-radius: 2px; color: var(--muted);
+    background: var(--white); transition: border-color 0.2s, color 0.2s; cursor: default;
+  }
+  .tag:hover { color: var(--ink); border-color: var(--ink); }
+
+  /* ── FINAL CTA ── */
+  .final-cta { padding: 52px 0 16px; text-align: center; }
+  .final-cta h2 {
+    font-family: 'Lora', serif; font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 400; font-style: italic; line-height: 1.25; margin-bottom: 8px;
+  }
+  .final-cta p { font-size: 0.9rem; color: var(--muted); margin-bottom: 32px; }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    border-top: 1px solid var(--rule); padding: 20px 24px; text-align: center;
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    letter-spacing: 0.1em; color: var(--muted);
+  }
+  .site-footer a { color: var(--muted); text-decoration: none; }
+  .site-footer a:hover { color: var(--blue); }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+
+<main class="page-wrap">
+ <!--HERO -->
+  <div class="hero">
+    <svg class="hero-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+      <path d="M 487.5 250 L 368.75 455.6810333988042 L 131.25000000000006 455.6810333988042 L 12.5 250.00000000000003 L 131.2499999999999 44.31896660119588 L 368.75 44.318966601195825 L 487.5 249.99999999999994 L 368.74999999999994 455.68103339880423 L 131.25000000000017 455.6810333988043 L 12.5 250.00000000000009 L 131.25000000000006 44.3189666011958 L 368.7499999999998 44.31896660119571 L 487.5 249.9999999999999 Z M 455.6810333988042 368.75 L 250.00000000000003 487.5 L 44.3189666011958 368.75 L 44.318966601195825 131.24999999999997 L 249.99999999999994 12.5 L 455.6810333988041 131.2499999999999 L 455.6810333988042 368.75 L 250.00000000000009 487.5 L 44.31896660119577 368.74999999999994 L 44.31896660119571 131.2500000000002 L 249.9999999999999 12.5 L 455.6810333988042 131.25000000000003 L 455.6810333988043 368.7499999999998 Z " fill="#b01010" />
+      <path d="M 440 250 L 345 414.54482671904333 L 155.00000000000006 414.5448267190434 L 60 250.00000000000003 L 154.99999999999991 85.4551732809567 L 345 85.45517328095667 L 440 249.99999999999994 L 344.99999999999994 414.5448267190434 L 155.00000000000014 414.54482671904344 L 60 250.00000000000006 L 155.00000000000003 85.45517328095664 L 344.99999999999983 85.45517328095656 L 440 249.99999999999991 Z M 414.5448267190434 345 L 250 440 L 85.45517328095664 345 L 85.45517328095667 155 L 249.99999999999997 60 L 414.5448267190433 154.99999999999991 L 414.54482671904333 345 L 250.00000000000006 440 L 85.45517328095661 344.99999999999994 L 85.45517328095656 155.00000000000017 L 249.99999999999991 60 L 414.5448267190434 155 L 414.54482671904344 344.99999999999983 Z " fill="rgba(255,255,255,0.6)" />
+      <path d="M 423.375 250 L 336.6875 400.14715438112705 L 163.31250000000006 400.14715438112705 L 76.625 250.00000000000003 L 163.31249999999994 99.852845618873 L 336.6875 99.85284561887295 L 423.375 249.99999999999997 L 336.68749999999994 400.14715438112705 L 163.3125000000001 400.14715438112717 L 76.625 250.00000000000006 L 163.31250000000003 99.85284561887295 L 336.68749999999983 99.85284561887286 L 423.375 249.99999999999991 Z M 400.14715438112705 336.6875 L 250 423.375 L 99.85284561887295 336.6875 L 99.85284561887295 163.3125 L 249.99999999999997 76.625 L 400.147154381127 163.31249999999994 L 400.14715438112705 336.6875 L 250.00000000000006 423.375 L 99.85284561887292 336.68749999999994 L 99.85284561887286 163.31250000000014 L 249.99999999999991 76.625 L 400.14715438112705 163.3125 L 400.14715438112717 336.68749999999983 Z " fill="#0f9010" />
+      <path d="M 375.875 250 L 312.9375 359.0109477013662 L 187.06250000000003 359.0109477013662 L 124.125 250.00000000000003 L 187.06249999999994 140.98905229863382 L 312.9375 140.9890522986338 L 375.875 249.99999999999997 L 312.93749999999994 359.01094770136626 L 187.0625000000001 359.01094770136626 L 124.125 250.00000000000006 L 187.06250000000003 140.9890522986338 L 312.9374999999999 140.98905229863374 L 375.875 249.99999999999994 Z M 359.0109477013662 312.9375 L 250 375.875 L 140.9890522986338 312.9375 L 140.9890522986338 187.0625 L 249.99999999999997 124.125 L 359.01094770136615 187.06249999999994 L 359.0109477013662 312.9375 L 250.00000000000003 375.875 L 140.98905229863377 312.9375 L 140.98905229863374 187.0625000000001 L 249.99999999999994 124.125 L 359.0109477013662 187.0625 L 359.01094770136626 312.9374999999999 Z " fill="rgba(255,255,255,0.6)" />
+      <path d="M 383 250 L 316.5 365.1813787033303 L 183.50000000000003 365.1813787033303 L 117 250.00000000000003 L 183.49999999999994 134.81862129666968 L 316.5 134.81862129666968 L 383 249.99999999999997 L 316.49999999999994 365.1813787033304 L 183.5000000000001 365.18137870333044 L 117 250.00000000000006 L 183.50000000000003 134.81862129666965 L 316.4999999999999 134.8186212966696 L 383 249.99999999999994 Z M 365.1813787033303 316.5 L 250 383 L 134.81862129666965 316.5 L 134.81862129666968 183.5 L 249.99999999999997 117 L 365.1813787033303 183.49999999999994 L 365.1813787033303 316.5 L 250.00000000000003 383 L 134.81862129666962 316.5 L 134.8186212966696 183.5000000000001 L 249.99999999999994 117 L 365.1813787033303 183.5 L 365.18137870333044 316.4999999999999 Z " fill="#1040b0" opacity="0.83" />
+    </svg>
+
+    <p class="hero-kicker">App · VIDA Method</p>
+    <h1 class="hero-title">Wingene <em>VIDA</em></h1>
+    <p class="hero-subtitle">
+
+
+    <div class="store-buttons">
+      <a href="https://play.google.com/store/apps/details?id=br.com.wingene.diario" target="_blank" class="badge-store badge-play">
+        <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png">
+      </a>
+      <a href="https://apps.apple.com/app/wingene-vida/id6761666105" target="_blank" class="badge-store badge-apple">
+        <img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1719878400">
+      </a>
+    </div>
+    <a class="btn-text" href="https://blog.wingene.com.br/wingene-vida-app/wingene-vida-app.html" target="_blank">Read the full documentation →</a>
+  </div>
+
+  <section class="section">
+    <p class="section-kicker">About the app</p>
+    <h2 class="section-title">The journal that learns from you</h2>
+    <p class="lead">
+      <strong>Wingene VIDA</strong> is a reflective journal built upon the VIDA Ethical-Existential Method — a philosophical practice for personal improvement developed in the Wingene project. More than a digital notebook, the app transforms your everyday notes into a mirror of patterns, trends, and growth opportunities.
+    <p class="lead">
+      Artificial intelligence analyzes your own records to generate insights and practical advice — without ever exposing your data or using it to train models.
+    </pockquote>
+      May our brief passage be more than a crossing — beats that echo in the universal music.
+      <cite>— Wingene Manifest
+
+  <!-- PILLARS -->
+    <p class="section-kicker">The four pillars</p>
+    <h2 class="section-title">The Method<em style="font-style:italic;color:var(--red)">VIDA</em></h2>
+    <p class="lead">
+      <div class="pillar" data-c="red">
+        <span class="pillar-letter">V</span>
+        <p class="pillar-num">First pillar</p>
+         <h3 class="pillar-name">Values</h3>
+        <p class="pillar-desc">The moral compass. Identifying and reinforcing the principles that guide your choices — personal boundaries, coexistence, and continuous review.</p>
+     </div>
+      <div class="pillar" data-c="yellow">
+        <span class="pillar-letter">I</span>
+        <p class="pillar-num">Second pillar</p>
+        <h3 class="pillar-name">Imperfections</h3>
+        <p class="pillar-desc">Signals, not guilt. Recognizing areas for improvement with compassion — personal, emotional, moral, and attentional imperfections.</p>
+      </div>
+      <div class="pillar" data-c="green">
+        <span class="pillar-letter">I</span>
+        <p class="pillar-num">Third pillar</p>
+        <h3 class="pillar-name">Decisions</h3>
+        <p class="pillar-desc">Purpose in motion. Observing choice patterns — reactive, constructive, and adaptive decisions over time.</p>
+      </div>
+      <div class="pillar" data-c="blue">
+        <span class="pillar-letter">A</span>
+        <p class="pillar-num">Fourth pillar</p>
+        <h3 class="pillar-name">Attention</h3>
+        <p class="pillar-desc">Conscious presence. Cultivating attention to oneself, to others, and to the world — the practice that transforms the ordinary into learning.</p>
+      </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section">
+    <p class="section-kicker">Features</p>
+        <h2 class="section-title">One practice, multiple dimensions</h2>
+        <ul class="feature-list">
+          <li>
+        <span class="feat-icon">📝</span>
+        <div>
+          <p class="feat-title">Daily journaling</p>
+          <p class="feat-desc">Write down everyday perceptions, actions, and difficulties without judgment. The app suggests classifications within the method's pillars.</p>
+        </div>
+      </li>
+      <li>
+        <span class="feat-icon">🤖</span>
+        <div>
+          <p class="feat-title">AI Analysis</p>
+          <p class="feat-desc">Artificial intelligence (Gemini) reads your accounts and provides practical philosophical insights. Completely anonymous queries — never used to train models.</p>
+        </div>
+      </li>
+      <li>
+       <li>
+        <span class="feat-icon">📊</span>
+        <div>
+          <p class="feat-title">VIDA Radar and Heatmap</p>
+          <p class="feat-desc">Track the distribution of records across the four pillars and visualize your practice consistency over time.</p>
+        </div>
+      </li>
+      </li>
+      <li>
+        <span class="feat-icon">🌐</span>
+        <div>
+          <p class="feat-title">Offline first</p>
+          <p class="feat-desc">Works perfectly offline, syncing automatically with Google Drive as soon as the network is restored.</p>
+        </div>
+      </li>
+    </ul>
+  <!-- PRIVACY -->
+  <section class="section">
+    <p class="section-kicker">Privacy and security</p>
+    <h2 class="section-title">Your data is exclusively yours</h2>
+    <p class="lead">Wingene VIDA was built with privacy as a core principle, not an afterthought.</p>
+    <div class="privacy-box">
+      <p class="privacy-row"><strong>🔒 End-to-end encryption.</strong> All data is encrypted using a key generated from your personal password — which never leaves your device.</p>
+      <p class="privacy-row"><strong>☁️ Personal Google Drive.</strong> Backups are stored in a hidden folder within your own account — inaccessible to developers or third parties.</p>
+      <p class="privacy-row"><strong>🤖 Anonymous AI.</strong> Queries to the artificial intelligence are made in an anonymized mode and never used to train foundational models.</p>
+      <p class="privacy-row"><strong>📵 Biometrics and PIN.</strong> Support for biometric or device PIN lock for additional local protection.</p>
+    </div>
+  </section>
+
+  <!-- TAGS -->
+  <section class="section">
+    <p class="section-kicker">Themes</p>
+    <div class="tag-cloud">
+      <span class="tag">Evolution</span>
+      <span class="tag">Improvement</span>
+      <span class="tag">Artificial Intelligence</span>
+      <span class="tag">Method</span>
+      <span class="tag">Conscious practice</span>
+      <span class="tag">Self-knowledge</span>
+      <span class="tag">Privacy</span>
+      <span class="tag">Eudaimonia</span>
+      <span class="tag">Legacy</span>
+      <span class="tag">Mindfulness</span>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <div class="final-cta">
+    <h2>Start observing<br>your own journey.</h2>
+    <p>Android and iOS · 100% your data</p>
+    <div class="store-buttons">
+      <a href="https://play.google.com/store/apps/details?id=br.com.wingene.diario" target="_blank" class="badge-store badge-play">
+        <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png">
+      </a>
+      <a href="https://apps.apple.com/app/wingene-vida/id6761666105" target="_blank" class="badge-store badge-apple">
+        <img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/pt-br?size=250x83&amp;releaseDate=1719878400">
+      </a>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <a href="https://blog.wingene.com.br">blog.wingene.com.br</a>
+  &nbsp;·&nbsp;
+  <a href="https://blog.wingene.com.br/wingene-vida-app/politica-de-privacidade-wingene-vida-en.html" target="_blank">Política de Privacidade</a>
+  &nbsp;·&nbsp;
+  <a href="mailto:eugenio@wingene.com.br">eugenio@wingene.com.br</a>
+</footer>
+</body>
+</html>
