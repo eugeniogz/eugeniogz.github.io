@@ -11,7 +11,7 @@ semantic_order: 1
 
 ## O Fogo de Prometeu
 
-A alvorada descortina a radiante manhã após a tempestuosa noite. No dédalo da metrópole, milhares de pessoas se espalham. Poucas estão cientes do poder que possuem, agindo como autômatos perdidos no labirinto. A chama de Prometeu ilumina as mentes, mas os males liberados por Pandora ofuscam esse brilho. No entanto, o azul do firmamento, o verde que vence os tijolos, motivam o rubro pulsar em sentimentos de esperança. O pulsar descobre caminhos novos, inventando a ciência da posteridade. Momentos em que o fogo interior vence a tempestade, permitindo que a luz encarcere os males e os devolva a Zeus.
+A alvorada descortina a radiante manhã, a chuva da noite deixa seu rastro molhado. No dédalo da metrópole, milhares de pessoas se espalham. Poucas estão cientes do poder que possuem, agindo como autômatos perdidos no labirinto. A chama de Prometeu ilumina as mentes, mas os males liberados por Pandora ofuscam esse brilho. No entanto, o azul do firmamento, o verde que vence os tijolos, motivam o rubro pulsar em sentimentos de esperança. A vida da orbe descobre caminhos novos incessantemente, inventando a ciência, a real chama divina. O fogo interior pode vencer tempestades, permitindo que a luz encarcere os males e os devolva a Zeus.
 <div style="clear: both;"></div>
 
 ---
