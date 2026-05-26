@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "The VIDA method"
-reading_time: 13
+reading_time: 14
 semantic_order: 0
 no_index: true
 navigation_footer: false
@@ -212,6 +212,10 @@ the VIDA method stems from the realization that human existence does not evolve 
 This method recognizes that ethical transformation is neither linear nor definitive. The VIDA wheel spins continuously. Each rotation deepens character, refines consciousness, and expands the transmitted cultural heritage. Thus, living is not about seeking perfection, but **aiming for the optimal**. It is about transforming daily existence into a space of learning, creation, and responsibility. This transformation allows eudaimonia to flourish. In this process, the individual not only flourishes but participates in the construction of a conscious heritage that surpasses their own existence.
 
 The method does not offer redemption, but direction. It does not promise perfection, but possible coherence. And in the practice of this coherence—reiterated, imperfect, attentive—is inscribed Wingene: the ancestral future built in the present.
+
+## Wingene VIDA App
+
+The Wingene VIDA application is a reflective diary built on the method. More than a digital notebook, it allows you to monitor the practice of personal improvement, transforming daily notes into a mirror of patterns and growth opportunities. Using artificial intelligence, the application analyzes personal records to offer insights and practical advice. All of this is completely anonymous, ensuring that your information is never used to train AI models. For more details, visit [Wingene Vida - Aplicativo](/wingene-vida-app/index-en.html)
 
 ## The logo and the VIDA Method
 

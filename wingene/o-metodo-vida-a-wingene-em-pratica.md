@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "O método VIDA: a Wingene em prática"
-reading_time: 13
+reading_time: 14
 semantic_order: 200
 tags:
   - Wingene
@@ -216,6 +216,10 @@ O método VIDA nasce da constatação de que a existência humana não evolui po
 Esse método reconhece que a transformação ética não é linear nem definitiva. A roda do VIDA gira continuamente. Cada giro aprofunda o caráter, refina a consciência e amplia a herança cultural transmitida. Assim, viver não é buscar perfeição, mas **visar o ótimo**. É transformar a existência cotidiana em espaço de aprendizado, criação e responsabilidade. Essa transformação permite florescer a eudaimonia. Nesse processo, o indivíduo não apenas floresce, mas participa da construção de uma herança consciente que ultrapassa sua própria existência.
 
 O método não oferece redenção, mas direção. Não promete perfeição, mas coerência possível. E na prática dessa coerência — reiterada, imperfeita, atenta — inscreve-se a Wingene: o futuro ancestral construído no presente.
+
+## O aplicativo Wingene VIDA
+
+O aplicativo Wingene VIDA é um diário reflexivo construído com base no método. Mais do que um caderno digital, ele permite acompanhar a prática do aprimoramento pessoal, transformando as anotações cotidianas em um espelho de padrões e oportunidades de crescimento. Utilizando inteligência artificial, o aplicativo analisa os registros pessoais para oferecer percepções e conselhos práticos. Tudo isso de forma totalmente anônima, garantindo que suas informações jamais sejam utilizadas para treinar modelos de IA. Para maiores detalhes, acesse: [Wingene Vida - Aplicativo](/wingene-vida-app)
 
 ## O logotipo e o Método VIDA
 
