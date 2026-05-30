@@ -1,6 +1,7 @@
 ---
 layout: app
 title: Wingene VIDA APP
+no_index: false
 ---
 
 # Aplicativo Wingene VIDA

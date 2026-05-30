@@ -440,7 +440,7 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
         });
 
         // 1.4. Adiciona metadados para indexação (lista paralela)
-        if (!noIndex) {
+        if (!noIndex && hasNavigationFooter) {
             arquivosIndexados.push({
                 original: nomeDocOriginal,
                 slug: nomeSlug,
@@ -497,7 +497,7 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
                 hasNavigationFooter: hasNavigationFooter
             });
 
-            if (!noIndex) {
+            if (!noIndex && hasNavigationFooter) {
                 arquivosUpperIndexados.push({
                     original: nomeDocOriginal,
                     slug: nomeSlugUpper,
@@ -739,7 +739,7 @@ function gerarSitemap(pastaRaiz) {
       const arquivo = arquivos.next();
       const nome = arquivo.getName();
       
-      if ((nome.toLowerCase().endsWith('.md') || nome.toLowerCase() === 'index.html') && !nome.startsWith('~')) {
+      if ((nome.toLowerCase().endsWith('.md') || nome.toLowerCase().endsWith('.html')) && !nome.startsWith('~')) {
         // NOVO: Verifica se o arquivo deve ser excluído do sitemap
         try {
             const content = arquivo.getBlob().getDataAsString();
@@ -767,8 +767,10 @@ function gerarSitemap(pastaRaiz) {
            // Normal: slug.md -> path/slug.html (ou path/ se index)
            if (nome === 'index.md' || nome.toLowerCase() === 'index.html') {
               urlPath = caminhoRelativo; 
-           } else {
+           } else if (nome.toLowerCase().endsWith('.md')) {
               urlPath = caminhoRelativo + nome.substring(0, nome.length - 3) + '.html';
+           } else if (nome.toLowerCase().endsWith('.html')) {
+              urlPath = caminhoRelativo + nome;
            }
            shouldAdd = true;
         }
@@ -959,9 +961,10 @@ function getMetadataFromDocLite(docFile, originalFileName) {
             noIndex = false;
         }
         
-        const footerMatch = fullBodyText.match(/^(?:Footer|Fotter):\s*(n[ãa]o|no)/im);
+        const footerMatch = fullBodyText.match(/^\s*(?:Footer|Fotter):\s*(n[ãa]o|no)/im);
         if (footerMatch) {
             hasNavigationFooter = false;
+            noIndex = false;
         }
 
         // 3. REMOÇÃO DA DATA DO NOME
@@ -1159,12 +1162,14 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                 const paragraph = element.asParagraph();
                 const text = paragraph.getText().trim();
                 
-                const tagMatch = text.match(/^tags:\s*(.*)/i);
+                let isMetadata = false;
+
+                const tagMatch = text.match(/^\s*tags:\s*(.*)/im);
                 if (tagMatch && !tagsFound) {
                     const tagsString = tagMatch[1].replace(/\.\s*$/, "");
                     tags = tagsString.split(',').map(tag => tag.trim()).filter(tag => tag.length > 0);
                     tagsFound = true;
-                    continue; 
+                    isMetadata = true;
                 }
                 
                 const scoreMatch = text.match(REGEX_ORDENACAO);
@@ -1173,12 +1178,18 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                     semanticOrderScore = parseFloat(scoreStr) || semanticOrderScore;
                     scoreFound = true;
                     noIndex = false;
-                    continue;
+                    isMetadata = true;
                 }
                 
-                const footerMatch = text.match(/^(?:Footer|Fotter):\s*(n[ãa]o|no)/i);
+                const footerMatch = text.match(/^\s*(?:Footer|Fotter):\s*(n[ãa]o|no)/im);
                 if (footerMatch && hasNavigationFooter) {
                     hasNavigationFooter = false;
+                    noIndex = false;
+                    isMetadata = true;
+                }
+                
+                // Pula o parágrafo atual se ele continha alguma propriedade de metadados
+                if (isMetadata) {
                     continue;
                 }
             }

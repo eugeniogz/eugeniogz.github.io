@@ -1,24 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.wingene.com.br/wingene-logo.html</loc>
+    <lastmod>2026-04-07</lastmod>
+  </url>
+  <url>
     <loc>https://blog.wingene.com.br/</loc>
     <lastmod>2026-02-22</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.wingene.com.br/404.html</loc>
+    <lastmod>2026-02-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.wingene.com.br/Search.html</loc>
+    <lastmod>2026-02-09</lastmod>
   </url>
   <url>
     <loc>https://blog.wingene.com.br/manifesto-wingene.html</loc>
     <lastmod>2026-01-31</lastmod>
   </url>
   <url>
-    <loc>https://blog.wingene.com.br/wingene-vida-app/</loc>
-    <lastmod>2026-05-07</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.wingene.com.br/wingene-vida-app/wingene-vida-app-en.html</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://blog.wingene.com.br/wingene-vida-app/index-en.html</loc>
+    <lastmod>2026-05-30</lastmod>
   </url>
   <url>
     <loc>https://blog.wingene.com.br/wingene-vida-app/wingene-vida-app.html</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.wingene.com.br/wingene-vida-app/wingene-vida-app-en.html</loc>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.wingene.com.br/wingene-vida-app/</loc>
+    <lastmod>2026-05-07</lastmod>
   </url>
   <url>
     <loc>https://blog.wingene.com.br/geometria/geometria-e-o-metodo-vida.html</loc>
@@ -29,15 +45,23 @@
     <lastmod>2026-03-25</lastmod>
   </url>
   <url>
-    <loc>https://blog.wingene.com.br/wingene/o-metodo-vida-a-wingene-em-pratica.html</loc>
-    <lastmod>2026-05-26</lastmod>
+    <loc>https://blog.wingene.com.br/geometria/the-dodecagram-poligonal-theorem.html</loc>
+    <lastmod>2026-03-01</lastmod>
   </url>
   <url>
-    <loc>https://blog.wingene.com.br/wingene/o-fogo-de-prometeu.html</loc>
-    <lastmod>2026-05-26</lastmod>
+    <loc>https://blog.wingene.com.br/wingene/o-metodo-vida-a-wingene-em-pratica.html</loc>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.wingene.com.br/wingene/the-vida-method.html</loc>
+    <lastmod>2026-05-30</lastmod>
   </url>
   <url>
     <loc>https://blog.wingene.com.br/wingene/</loc>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.wingene.com.br/wingene/o-fogo-de-prometeu.html</loc>
     <lastmod>2026-05-26</lastmod>
   </url>
   <url>
@@ -105,6 +129,10 @@
     <lastmod>2026-02-22</lastmod>
   </url>
   <url>
+    <loc>https://blog.wingene.com.br/ipes-e-tijolos/eudaimonia-social.html</loc>
+    <lastmod>2026-05-30</lastmod>
+  </url>
+  <url>
     <loc>https://blog.wingene.com.br/ipes-e-tijolos/baleias-e-marujos.html</loc>
     <lastmod>2026-05-26</lastmod>
   </url>
@@ -146,10 +174,6 @@
   </url>
   <url>
     <loc>https://blog.wingene.com.br/ipes-e-tijolos/espirito-material.html</loc>
-    <lastmod>2026-02-22</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.wingene.com.br/ipes-e-tijolos/eudaimonia-social.html</loc>
     <lastmod>2026-02-22</lastmod>
   </url>
   <url>

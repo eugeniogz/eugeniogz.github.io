@@ -1,6 +1,7 @@
 ---
 layout: app
 title: Wingene VIDA
+no_index: false
 ---
 
 # Wingene VIDA

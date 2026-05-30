@@ -217,15 +217,15 @@ Esse método reconhece que a transformação ética não é linear nem definitiv
 
 O método não oferece redenção, mas direção. Não promete perfeição, mas coerência possível. E na prática dessa coerência — reiterada, imperfeita, atenta — inscreve-se a Wingene: o futuro ancestral construído no presente.
 
-## O aplicativo Wingene VIDA
+## Do florescimento pessoal à eudaimonia social
 
-O aplicativo Wingene VIDA é um diário reflexivo construído com base no método. Mais do que um caderno digital, ele permite acompanhar a prática do aprimoramento pessoal, transformando as anotações cotidianas em um espelho de padrões e oportunidades de crescimento. Utilizando inteligência artificial, o aplicativo analisa os registros pessoais para oferecer percepções e conselhos práticos. Tudo isso de forma totalmente anônima, garantindo que suas informações jamais sejam utilizadas para treinar modelos de IA. Para maiores detalhes, acesse: [Wingene Vida - Aplicativo](/wingene-vida-app).
+O método VIDA nasce no indivíduo, mas não termina nele. Cada valor cultivado, cada imperfeição reconhecida, cada decisão tomada com atenção consciente ultrapassa a esfera pessoal e alcança o entorno. O ser humano é, por natureza, um ser de relações — e sua transformação interior ressoa no grupo, na cultura e, em última instância, na humanidade.
 
-## O logotipo e o Método VIDA
+À medida que mais indivíduos percorrem essa rota, os benefícios deixam de ser pessoais e tornam-se coletivos. Grupos que compartilham valores comuns, reconhecem suas imperfeições culturais e decidem corrigi-las constroem, juntos, uma espiral progressiva. Culturas que institucionalizam esse processo — com leis revisáveis, instituições abertas à correção e espaço para a inovação — pavimentam o caminho para a eudaimonia social.
 
-O logotipo da Wingene foi desenhado para representar os quatro eixos do método. Uma análise detalhada pode ser vista em: [Geometria e o método VIDA](/geometria/geometria-e-o-metodo-vida.html)
+O VIDA, nesse sentido, é mais do que um método de aprimoramento pessoal. É uma forma sistemática de tecer virtudes que, disseminadas amplamente, transformam a cultura que as gerou.
 
-## Apêndice: Aplicações Práticas do Método VIDA
+## Aplicações Práticas do Método VIDA
 
 ### **Imperfeições contemporâneas comuns**
 
@@ -270,6 +270,14 @@ Valorizando o pensamento crítico (V), uma pessoa percebe que evita perspectivas
 
 * **Superficialidade das interações presenciais**  
 Valorizando conexões autênticas (V), alguém nota que suas conversas presenciais são apressadas ou superficiais (I). Decide dedicar a atenção aos outros em seus encontros (D) e pratica a presença atenta e genuína nesses momentos (A).
+
+## O aplicativo Wingene VIDA
+
+Um aplicativo foi concebido para guiar a aplicação do método, o Wingene VIDA, um diário eletrônico. Mais do que um caderno digital, ele permite acompanhar a prática do aprimoramento pessoal, transformando as anotações cotidianas em um espelho de padrões e oportunidades de crescimento. Utilizando inteligência artificial, o aplicativo analisa os registros pessoais para oferecer percepções e conselhos práticos. Tudo isso de forma totalmente anônima, garantindo que as informações pessoais jamais sejam utilizadas para treinar modelos de IA. Para maiores detalhes, acesse: [Wingene Vida - Aplicativo](/wingene-vida-app).
+
+## O logotipo e o Método
+
+O logotipo da Wingene foi desenhado para representar os quatro eixos do método. Uma análise detalhada pode ser vista em: [Geometria e o método VIDA](/geometria/geometria-e-o-metodo-vida.html)
 <div style="clear: both;"></div>
 
 ---

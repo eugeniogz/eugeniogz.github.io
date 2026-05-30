@@ -3,7 +3,6 @@ layout: default
 title: "The VIDA method"
 reading_time: 14
 semantic_order: 0
-no_index: true
 navigation_footer: false
 --- 
 
@@ -15,7 +14,7 @@ navigation_footer: false
 
 We inherit a body, a mind, and a culture—but we do not inherit all the criteria for living well. These must be built. This is the goal of Wingene: the refinement of ancestral heritage. Biological inheritance provides the first lights of the mind; learning expands the horizon, illuminating understanding with infinite colors. Even so, many traverse existence in automatic mode, reacting more than choosing, repeating habits without questioning their foundations.
 
-How do we ensure that cultural sap contributes to Wingene? The answer lies in an acronym: **V**alues, **I**mperfections, **D**ecisions, and Attention — VIDA (LIFE). Values provide direction; imperfections reveal the inconsistencies of the journey; decisions convert purpose into action; and attention allows one to perceive where to act and to confirm advances and failures. These axes operate in a continuous movement.
+How do we ensure that cultural sap contributes to Wingene? The answer lies in an acronym: **V**alues, **I**mperfections, **D**ecisions, and Attention—VIDA (LIFE). Values provide direction; imperfections reveal the inconsistencies of the journey; decisions convert purpose into action; and attention allows one to perceive where to act and to confirm advances and failures. These axes operate in a continuous movement.
 
 VIDA is an ethical-existential method based on these four interdependent axes. It is not a closed system nor a moral doctrine. It is a simple, revisable structure, compatible with the fallible nature of the human being and guided by the ideal of Wingene.
 
@@ -79,7 +78,7 @@ Attitudes that do not directly involve the other but harm one's own being—such
 Related to the management of affects: impulsivity, reactivity, excessive fear, and defensive pride.
 
 1. **Moral**  
-Manifested in the inconsistency between values and actions: unkept promises, omissions for convenience, inappropriate behavior.
+Manifested in the inconsistency between values and actions: unkept promises, omissions for convenience, and inappropriate behavior.
 
 1. **Attentional**  
 Stemming from the mind's scattering: automatisms, chronic distraction, life on “autopilot.”
@@ -213,13 +212,13 @@ This method recognizes that ethical transformation is neither linear nor definit
 
 The method does not offer redemption, but direction. It does not promise perfection, but possible coherence. And in the practice of this coherence—reiterated, imperfect, attentive—is inscribed Wingene: the ancestral future built in the present.
 
-## Wingene VIDA App
+## From personal flourishing to social eudaimonia
 
-The Wingene VIDA application is a reflective diary built on the method. More than a digital notebook, it allows you to monitor the practice of personal improvement, transforming daily notes into a mirror of patterns and growth opportunities. Using artificial intelligence, the application analyzes personal records to offer insights and practical advice. All of this is completely anonymous, ensuring that your information is never used to train AI models. For more details, visit the [Wingene Vida app](/wingene-vida-app/index-en.html) page.
+The VIDA method is born in the individual, but it does not end there. Every cultivated value, every recognized imperfection, and every decision made with conscious attention transcends the personal sphere and reaches the surroundings. Human beings are, by nature, relational beings—and their interior transformation resonates in the group, in the culture, and, ultimately, in humanity.
 
-## The logo and the VIDA Method
+As more individuals travel this path, the benefits cease to be personal and become collective. Groups that share common values, recognize their cultural imperfections, and decide to correct them build a progressive spiral together. Cultures that institutionalize this process—with revisable laws, institutions open to correction, and space for innovation—pave the way for social eudaimonia.
 
-The Wingene logo was designed to represent the four axes of the method. A detailed analysis can be seen at [Geometry and the VIDA method](/geometria/geometria-e-o-metodo-vida.html).
+In this sense, VIDA is more than a method of personal improvement. It is a systematic way of weaving virtues that, widely disseminated, transform the culture that generated them..
 
 ## Practical Applications of the VIDA Method
 
@@ -266,3 +265,7 @@ Valuing critical thinking (V), a person notices they avoid divergent perspective
 
 * **Superficiality of in-person interactions:**  
 Valuing authentic connections (V), someone notices their in-person conversations are rushed or superficial (I). They decide to dedicate attention to others in their meetings (D) and practice attentive and genuine presence in those moments (A).
+
+## Wingene VIDA App
+
+We developed the Wingene VIDA application, a reflective diary built on the method. More than a digital notebook, it allows you to monitor the practice of personal improvement, transforming daily notes into a mirror of patterns and growth opportunities. Using artificial intelligence, the application analyzes personal records to offer insights and practical advice. All of this is completely anonymous, ensuring that your information is never used to train AI models. For more details, visit the [Wingene Vida app](/wingene-vida-app/index-en.html) page.
