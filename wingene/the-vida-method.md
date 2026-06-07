@@ -193,7 +193,7 @@ From the perspective of Wingene, attention is the simplest and most radical gest
 
 The table below summarizes the four axes of the VIDA method, with their categorization:
 
-| Eixo | 1st Level | 2nd Level | 3rd Level | 4th Level |  
+| Axis | 1st Level | 2nd Level | 3rd Level | 4th Level |  
 | :--- | :--- | :--- | :--- | :--- |  
 | **Values** | **Personal Limits**: Respect for the integrity of the being | **Coexistence**: Facilitating harmonious coexistence. | **Continuous Revision: **Frequent and humble adjustment. | |  
 | **Imperfections** | **Personal**: Neglect of one's own being. | **Emotional**: Problems in managing affects. | **Moral**: Inconsistency between values and actions. | **Attentional**: Dominance of autopilot. |  
