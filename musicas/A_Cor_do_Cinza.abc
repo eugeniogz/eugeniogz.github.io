@@ -1,0 +1,40 @@
+X: 1
+T: A cor do cinza
+M: 3/4
+L: 1/4
+Q: 1/4=120
+K: G
+%%MIDI program 40
+V:1 name="Violino" sn="Vln." clef=treble
+%%MIDI control 10 40
+(BGE)|(BGE)|(BGA-|AF2)|(BGE)|
+(BGE)|(BGA-|AFE-|EDC)|
+(ECG)|(GAB)|(ED2)|z3    |
+z3     |z3    |z3   |z3    |
+(fga)|:(cda)|(fga)|(cde)|
+(fgA) |(FGA)   |(fgA) |
+(EFG)   |(DEF)   |(ED2)  |[1 (AGF)   |
+(GFE)   |(FED)   :|[2 (CDE)   |(EFG)   |
+(D2E-  |EF2)  |(F2 G ) |!p!(CDE)   |
+!p!E3 |F3 |G3 |(edc)|
+(ecg)|(gae)|(bge)|(bge)|
+(bga-|af2)|z3    |z3    |
+z3    |z3   |f3    |f3 |
+ g3 | (a3- |a3)  |]
+%%MIDI program 42
+V:2 clef=bass name="Violoncelo" sn="Cello"
+%%MIDI control 10 90
+[V:2]z3 |z3 |z3  |z3 |
+z3 |z3 |z3  |z3  |z3 |
+z3 |z3 |z3 |C,D,E,|
+F,G,A,|E,C,D,|E,F,2|D,E,F,|
+FGA|:A,B,C|DEF|A,B,C|
+DEF,|D,E,F,|DEF,|C,D,E,|
+B,,C,D,|C,B,,2|[1 F,E,D,|E,D,C,|
+D,C,B,,:|[2 A,,B,,C,|C,D,E,|B,,2C,-|
+C,D,2|D,2 E,|!p!A,,!p!B,,!p!C,|!p!C,3|
+D,3|E,3|z3 |z3 |
+z3 |z3 |z3 |z3  |
+z3 |D,E,F,|G,A,B,|F,D,E,|
+F,2G|G,F,2-|F,3| G,3|
+ A,3-|A,3 |]

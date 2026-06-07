@@ -1,0 +1,346 @@
+---
+layout: default
+title: Músicas — Wingene
+description: Composições, partituras e experimentos sonoros do projeto Wingene.
+---
+
+<div class="hero">
+  <p>Expressões sonoras da consciência, do tempo e da serena euforia.</p>
+</div>
+
+<hr>
+
+<div class="music-list">
+
+  <!-- 1. A Cor do Cinza -->
+  <div class="music-card">
+    <div class="music-header">
+      <span class="music-icon">🎼</span>
+      <h3>1. A Cor do Cinza</h3>
+    </div>
+    <p class="music-desc">Composição em três tempos para Violino e Violoncelo. Use o player abaixo para ouvir a gravação e acompanhe com a partitura interativa.</p>
+    
+    <div class="audio-container">
+      <audio controls src="./A_Cor_do_Cinza.wav" style="width: 100%;"></audio>
+    </div>
+
+    <div id="abc-paper-1" class="abc-paper-scroll">Carregando partitura...</div>
+    
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+      <a href="./A_Cor_do_Cinza.wav" class="music-download-btn" download>
+        📥 Baixar Áudio (WAV)
+      </a>
+      <a href="./A_Cor_do_Cinza.abc" class="music-download-btn" download>
+        📥 Baixar Partitura (ABC)
+      </a>
+    </div>
+  </div>
+
+  <!-- 2. Aurora da Mente -->
+  <div class="music-card">
+    <div class="music-header">
+      <span class="music-icon">🌅</span>
+      <h3>2. Aurora da Mente</h3>
+    </div>
+    <p class="music-desc">Uma jornada instrumental que evoca o despertar da consciência e a clareza mental do início de um novo dia. Composta para Harpa, Flauta, Violino e Violoncelo.</p>
+    
+    <div class="audio-container">
+      <audio controls src="./Aurora_da_Mente.wav" style="width: 100%;"></audio>
+    </div>
+
+    <div id="abc-paper-2" class="abc-paper-scroll">Carregando partitura...</div>
+    
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+      <a href="./Aurora_da_Mente.wav" class="music-download-btn" download>
+        📥 Baixar Áudio (WAV)
+      </a>
+      <a href="./Aurora_da_Mente.abc" class="music-download-btn" download>
+        📥 Baixar Partitura (ABC)
+      </a>
+    </div>
+  </div>
+
+  <!-- 3. Serena Euforia -->
+  <div class="music-card">
+    <div class="music-header">
+      <span class="music-icon">🍃</span>
+      <h3>3. Serena Euforia</h3>
+    </div>
+    <p class="music-desc">A expressão musical do estado de eudaimonia: uma alegria calma, profunda e em harmonia com a existência. Arranjo complexo para Piano, Violinos, Trombone, Tímpanos, Violoncelo, Flauta e Percussão.</p>
+    
+    <div class="audio-container">
+      <audio controls src="./Serena_Euforia.wav" style="width: 100%;"></audio>
+    </div>
+
+    <div id="abc-paper-3" class="abc-paper-scroll">Carregando partitura...</div>
+    
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+      <a href="./Serena_Euforia.wav" class="music-download-btn" download>
+        📥 Baixar Áudio (WAV)
+      </a>
+      <a href="./Serena_Euforia.abc" class="music-download-btn" download>
+        📥 Baixar Partitura (ABC)
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- Carrega a biblioteca abcjs da CDN -->
+<script src="https://cdn.jsdelivr.net/npm/abcjs@6.3.0/dist/abcjs-basic-min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function() {
+    // 1. A Cor do Cinza
+    var abc1 = `X: 1
+T: A cor do cinza
+M: 3/4
+L: 1/4
+Q: 1/4=120
+K: G
+%%MIDI program 40
+V:1 name="Violino" sn="Vln." clef=treble
+%%MIDI control 10 40
+(BGE)|(BGE)|(BGA-|AF2)|(BGE)|
+(BGE)|(BGA-|AFE-|EDC)|
+(ECG)|(GAB)|(ED2)|z3    |
+z3     |z3    |z3   |z3    |
+(fga)|:(cda)|(fga)|(cde)|
+(fgA) |(FGA)   |(fgA) |
+(EFG)   |(DEF)   |(ED2)  |[1 (AGF)   |
+(GFE)   |(FED)   :|[2 (CDE)   |(EFG)   |
+(D2E-  |EF2)  |(F2 G ) |!p!(CDE)   |
+!p!E3 |F3 |G3 |(edc)|
+(ecg)|(gae)|(bge)|(bge)|
+(bga-|af2)|z3    |z3    |
+z3    |z3   |f3    |f3 |
+ g3 | (a3- |a3)  |]
+%%MIDI program 42
+V:2 clef=bass name="Violoncelo" sn="Cello"
+%%MIDI control 10 90
+[V:2]z3 |z3 |z3  |z3 |
+z3 |z3 |z3  |z3  |z3 |
+z3 |z3 |z3 |C,D,E,|
+F,G,A,|E,C,D,|E,F,2|D,E,F,|
+FGA|:A,B,C|DEF|A,B,C|
+DEF,|D,E,F,|DEF,|C,D,E,|
+B,,C,D,|C,B,,2|[1 F,E,D,|E,D,C,|
+D,C,B,,:|[2 A,,B,,C,|C,D,E,|B,,2C,-|
+C,D,2|D,2 E,|!p!A,,!p!B,,!p!C,|!p!C,3|
+D,3|E,3|z3 |z3 |
+z3 |z3 |z3 |z3  |
+z3 |D,E,F,|G,A,B,|F,D,E,|
+F,2G|G,F,2-|F,3| G,3|
+ A,3-|A,3 |]`;
+
+    // 2. Aurora da Mente
+    var abc2 = `X:2
+T:Aurora da Mente
+M:4/4
+L:1/8
+Q:1/4=100
+K:C
+%%score 1 | 2 | 3 | 4
+V:1 clef=treble name="Harpa"
+%%MIDI program 46
+%%MIDI control 10 46
+!mp! G E C g e c c' e' | !ff! G E C g e c c' g | !ff! G E C c [egc']4 |
+G E C g e c c' e' | F A c f a c' f a | G E C G [ceg]4 |
+A f c f a a f c | a a f c [AFac]4 |G E C c e g e c |
+g g e c e g e c |A f c f [afc]4 | A, F c f a a f c' | 
+c e g g e g e c |A, F c f a f c A | A, F c f a f a f | 
+A, F c f a [fa]3  | A,/C/F/A/ c/f/a/c'/ [fa']4 |
+% Wingene motif 
+ !mp! c c e e g g c' c' | e' g' e e c c z2 |
+%end motif
+!p! A,/C/F/A/ c/f/a/c'/ [f'a']4 |  g e c e c g [e]2 |
+g e c G E C g e | g e c g e G E C | [cegc']4 z4|]
+V:2  clef=treble name="Flauta"
+%%MIDI program 73
+%%MIDI control 10 30
+z8 | z8 | z8 |
+ z8 | !p! e8 |  g8 |
+  f8 | a8 |   e8 |
+   g8 | f8 |    a8 |
+    g8 | a8 |     c'8 |
+     a8 | z8 |
+%motif
+      !pp! (c2 e2 g2 c'2| e'2 g'2 a2 g2 
+      %end motif
+      | e4 ) z4 |   e8 |    
+       c8 |   d8     | z8 |]
+V:3  clef=treble name="Violino"
+%%MIDI program 40
+%%MIDI control 10 90
+% Base do Violino (Sustentação harmônica)
+!pp! z8 | z8 | z8 |
+ C8 | F8 | C4 G4 |
+  F8 | z8 | C8 |
+   C8 | F4 C4 | F8 |
+    C8 | F8 | z8 |
+     z8 | C4 G4 |
+     %motif
+       !p! (C2 E2 G2 c2| e2 g2 a2 g2 | 
+       %end motif
+       e4) g4 | !pp! C,4 G,4 |
+        G,8 | E,8|C,4 z4|]
+%%MIDI program 42
+%%MIDI control 10 90
+% Base do Violoncelo (Sustentação harmônica)
+V:4 clef=bass name="Violoncelo"
+!pp! z8 | z8 | z8 |
+ C8 | F,8 | C4 G,4 |
+  F,8 | z8 | C,8 |
+   C,8 | F,4 C,4 | F,8 |
+    C,8 | F,8 | z8 |
+     z8 | C,4 G,4 |
+     %motif
+       !p! (C,2 E,2 G,2 C2| E2 G2 A2 G2 |
+       %end motif
+        E4) G4  | !pp! C4 G,4 |
+         G,8 | E8|C4 G4|]`;
+
+    // 3. Serena Euforia
+    var abc3 = `X:2
+T:Serena Euforia
+M:4/4
+L:1/8
+Q:1/4=100
+K:C
+%%score 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
+V:1 name="Piano" sn="Pno."
+%%MIDI program 1 0
+%%MIDI control 10 64
+!mp! [C,E,]4 [G,,G,]4 | !mf! C E G c G E C G, | !f! C E G c d e f g | 
+C E G c G E C G, | D F A d A F D A, | D F A d A F D A, | C E G c G E C G, |
+D F A d A F D A, | C E G c G E C G, | D F A d A F D A, | !mf! [FAc]2 f2 a f c A | 
+[Ace]2 a2 c' a e c |
+%motif
+  [C,E,G,C]8 | [C,E,G,C]8 |
+f2 c2 A2 z2 | [Ace]2 a2 e c A E | [FAc]2 f2 c A F C |
+A c e a e c A E | A c e a e c A E | F _A c f c _A F C | G B d g d B G D |
+[CEGc]8 | [CEGc]8 | !ff! [C,E,]8 | !mf! [C,E,]4 [G,,G,]4 | 
+!pp! C E G c G E C G, | [Q:1/4=80] C E G c [Q:1/4=60] G E [Q:1/4=40] c e |]
+V:2 name="Violino 1" sn="Vln. 1"
+%%MIDI program 2 40
+%%MIDI control 10 60
+ z8 | z8 | z8 |
+ !mf! C8 | D8 | D8 | C8 |
+  D8 | C8 | D8 | C8 | 
+  z8 | 
+  %motif
+   !f! C E G c  e g a g | !ff! e2 d2 c2 G2 |
+  z4 A4 | (A2 f2 c2 a2 | c2 f2 f2 a2 |
+   A2 f2 c2 a2 |   e2 g2 c2 e2) | _A4 F4 | G4 B4 |
+    d8 |   z8 | z8 | z8 | 
+    !mp! E8 | C8 |]
+V:3 name="Violino 2" sn="Vln. 2"
+%%MIDI control 10 60
+%%MIDI program 3 40
+ z8 | z8 | z8 |
+ !mp! E8 | F8 | F8 | E8 |
+  F8 | E8 | F8 | z8 | 
+  !mf! G4 z4 | 
+  %motif
+       !f! C E G c  e g a g | !ff! e2 d2 c2 G2 |
+  !mf! G8    | c8    | A8    |
+   c8    | c8    | _A8    | B8    |
+    z8 | z8 | z8 | z8 |
+     z8 | z8 |]
+V:4 name="Trombones" sn="Tbn." clef=bass
+%%MIDI control 10 80
+%%MIDI program 4 57
+ z8 | z8 | z8 |
+ !mf! [C,G,]8 | [D,A,]8 | [D,A,]8 | [C,G,]8 |
+  [D,A,]8 | z8 | z8 | z8 |
+   z8 |
+   %motif
+    !f! z8 | z2 E,6 |
+   !mf! [F,C]8 | [A,E]8 | [F,C]8 |
+    [A,E]8 | z8 | z8 | z8 |
+     z8 | z8 | z8 | z8 |
+      z8 |!pp! z8 |]
+V:5 name="Tímpanos" sn="Timp." clef=bass
+%%MIDI channel 5
+%%MIDI program 47
+%%MIDI control 10 64
+ z8 | z8 | z8 |
+ !mp! C,4 G,4 | D,4 A,4 | D,4 A,4 | C,4 G,4 | 
+ D,4 A,4 | C,4 G,4 | D,4 A,4 | z8 | 
+ z8 | 
+ %motif 
+ C,4 G,4 | D,4 A,4 |
+ !ff! F,2 F,2 C4 | A,2 A,2 E4 |  F,2 F,2 C4 |
+  A,2 A,2 E4 | A,2 A,2 E4 | F,2 F,2 C4 | !mp! G,4 D4 |
+   G,4 D4 | F,4 G,4 | z8 |  !pp! C,4 G,4 |
+    C,4 G,4 | C,4 G,4 |]
+V:6 name="Violoncelo" sn="Vc." clef=bass
+%%MIDI control 10 90
+%%MIDI program 6 42
+ z8 | z8 | z8 |
+ !mp! C,2 G,2 C2 E2 | D,2 A,2 D2 F2 | D,2 A,2 D2 F2 | C,2 G,2 C2 E2 |
+  D,2 A,2 D2 F2 | C,2 G,2 C2 E2 | D,2 A,2 D2 F2 | !pp! F,8 |
+   A,8 |
+   %motif
+    E2 G2 E,2 C,2 | G,2 E,4 z2 
+   !<(! | !ff! F,2 C2 F2 A2 !<)! | A,2 E2 A2 c2 | F,2 C2 F2 A2 |
+    A,2 E2 A2 c2 | A,2 E2 A2 c2 | F,2 C2 F2 _A2 | G,2 D2 G2 B2 |
+     C,2 G,2 C2 E2 | G2 E2 C2 G,2 | C,2 G,2 C2 G,2 | z8 |
+      z8 | z8 |]
+V:7 name="Flauta" sn="Fl."
+%%MIDI control 10 60
+%%MIDI program 7 73
+ z8 | z8 | z8 |
+ z8 | z8 | z8 | z8 |
+  z8 | z8 | z8 | z8 |
+   z8 | !f! 
+   %motif
+    e4 c4 
+   | a4 f4 |
+   c4 f4 | e4 c4 | a4 f4 |
+    e4 c4 | e4 a4 | c'4 _a4 | b4 g4 |
+     z8 | z8 | z8 | z8 |
+      z8 | z8 |]
+V:8 name="Percussão" sn="Perc." clef=perc
+%%MIDI channel 10
+%%MIDI program 0
+ z8 | z8 | z8 |
+ !pp! D,,2 D,,2 ^F,,2 D,,2 | D,,2 ^F,,2 D,,2 D,,2 | ^F,,2 D,,2 D,,2 ^F,,2 | D,,2 D,,2 ^F,,2 D,,2 |
+  D,,2 ^F,,2 D,,2 D,,2 | ^F,,2 D,,2 D,,2 ^F,,2 | D,,2 D,,2 ^F,,2 D,,2 | z8 |
+   !ff! z4 !<(! D,,/D,,/D,,/D,,/ D,,/D,,/D,,/D,,/ !<)! | 
+    !mf! D,,2 ^F,,2 D,,2 D,,2 | D,,2 D,,2 ^F,,2 D,,2 |
+    D,,2 D,,2 ^F,,2 D,,2 | D,,2 ^F,,2 D,,2 D,,2 | D,,2 D,,2 ^F,,2 D,,2 |
+    D,,2 D,,2 ^F,,2 D,,2 | D,,2 ^F,,2 D,,2 D,,2 | D,,2 D,,2 ^F,,2 D,,2 | z8 | 
+     z8 |  z8 | z8 | z8 |
+     z8 | z8 |]`;
+
+    var renderOptions = { 
+      responsive: "resize",
+      scale: 0.85,
+      add_classes: true
+    };
+
+    try {
+      ABCJS.renderAbc("abc-paper-1", abc1, renderOptions);
+    } catch (e) {
+      console.error("Erro ao renderizar partitura 1:", e);
+      document.getElementById("abc-paper-1").innerText = "Não foi possível carregar a partitura interativa.";
+    }
+
+    try {
+      ABCJS.renderAbc("abc-paper-2", abc2, renderOptions);
+    } catch (e) {
+      console.error("Erro ao renderizar partitura 2:", e);
+      document.getElementById("abc-paper-2").innerText = "Não foi possível carregar a partitura interativa.";
+    }
+
+    try {
+      ABCJS.renderAbc("abc-paper-3", abc3, renderOptions);
+    } catch (e) {
+      console.error("Erro ao renderizar partitura 3:", e);
+      document.getElementById("abc-paper-3").innerText = "Não foi possível carregar a partitura interativa.";
+    }
+  });
+</script>

@@ -1,0 +1,112 @@
+X:2
+T:Serena Euforia
+M:4/4
+L:1/8
+Q:1/4=100
+K:C
+%%score 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
+V:1 name="Piano" sn="Pno."
+%%MIDI program 1 0
+%%MIDI control 10 64
+!mp! [C,E,]4 [G,,G,]4 | !mf! C E G c G E C G, | !f! C E G c d e f g | 
+C E G c G E C G, | D F A d A F D A, | D F A d A F D A, | C E G c G E C G, |
+D F A d A F D A, | C E G c G E C G, | D F A d A F D A, | !mf! [FAc]2 f2 a f c A | 
+[Ace]2 a2 c' a e c |
+%motif
+  [C,E,G,C]8 | [C,E,G,C]8 |
+f2 c2 A2 z2 | [Ace]2 a2 e c A E | [FAc]2 f2 c A F C |
+A c e a e c A E | A c e a e c A E | F _A c f c _A F C | G B d g d B G D |
+[CEGc]8 | [CEGc]8 | !ff! [C,E,]8 | !mf! [C,E,]4 [G,,G,]4 | 
+!pp! C E G c G E C G, | [Q:1/4=80] C E G c [Q:1/4=60] G E [Q:1/4=40] c e |]
+V:2 name="Violino 1" sn="Vln. 1"
+%%MIDI program 2 40
+%%MIDI control 10 60
+ z8 | z8 | z8 |
+ !mf! C8 | D8 | D8 | C8 |
+  D8 | C8 | D8 | C8 | 
+  z8 | 
+  %motif
+   !f! C E G c  e g a g | !ff! e2 d2 c2 G2 |
+  z4 A4 | (A2 f2 c2 a2 | c2 f2 f2 a2 |
+   A2 f2 c2 a2 |   e2 g2 c2 e2) | _A4 F4 | G4 B4 |
+    d8 |   z8 | z8 | z8 | 
+    !mp! E8 | C8 |]
+V:3 name="Violino 2" sn="Vln. 2"
+%%MIDI control 10 60
+%%MIDI program 3 40
+ z8 | z8 | z8 |
+ !mp! E8 | F8 | F8 | E8 |
+  F8 | E8 | F8 | z8 | 
+  !mf! G4 z4 | 
+  %motif
+       !f! C E G c  e g a g | !ff! e2 d2 c2 G2 |
+  !mf! G8    | c8    | A8    |
+   c8    | c8    | _A8    | B8    |
+    z8 | z8 | z8 | z8 |
+     z8 | z8 |]
+V:4 name="Trombones" sn="Tbn." clef=bass
+%%MIDI control 10 80
+%%MIDI program 4 57
+ z8 | z8 | z8 |
+ !mf! [C,G,]8 | [D,A,]8 | [D,A,]8 | [C,G,]8 |
+  [D,A,]8 | z8 | z8 | z8 |
+   z8 |
+   %motif
+    !f! z8 | z2 E,6 |
+   !mf! [F,C]8 | [A,E]8 | [F,C]8 |
+    [A,E]8 | z8 | z8 | z8 |
+     z8 | z8 | z8 | z8 |
+      z8 |!pp! z8 |]
+V:5 name="Tímpanos" sn="Timp." clef=bass
+%%MIDI channel 5
+%%MIDI program 47
+%%MIDI control 10 64
+ z8 | z8 | z8 |
+ !mp! C,4 G,4 | D,4 A,4 | D,4 A,4 | C,4 G,4 | 
+ D,4 A,4 | C,4 G,4 | D,4 A,4 | z8 | 
+ z8 | 
+ %motif 
+ C,4 G,4 | D,4 A,4 |
+ !ff! F,2 F,2 C4 | A,2 A,2 E4 |  F,2 F,2 C4 |
+  A,2 A,2 E4 | A,2 A,2 E4 | F,2 F,2 C4 | !mp! G,4 D4 |
+   G,4 D4 | F,4 G,4 | z8 |  !pp! C,4 G,4 |
+    C,4 G,4 | C,4 G,4 |]
+V:6 name="Violoncelo" sn="Vc." clef=bass
+%%MIDI control 10 90
+%%MIDI program 6 42
+ z8 | z8 | z8 |
+ !mp! C,2 G,2 C2 E2 | D,2 A,2 D2 F2 | D,2 A,2 D2 F2 | C,2 G,2 C2 E2 |
+  D,2 A,2 D2 F2 | C,2 G,2 C2 E2 | D,2 A,2 D2 F2 | !pp! F,8 |
+   A,8 |
+   %motif
+    E2 G2 E,2 C,2 | G,2 E,4 z2 
+   !<(! | !ff! F,2 C2 F2 A2 !<)! | A,2 E2 A2 c2 | F,2 C2 F2 A2 |
+    A,2 E2 A2 c2 | A,2 E2 A2 c2 | F,2 C2 F2 _A2 | G,2 D2 G2 B2 |
+     C,2 G,2 C2 E2 | G2 E2 C2 G,2 | C,2 G,2 C2 G,2 | z8 |
+      z8 | z8 |]
+V:7 name="Flauta" sn="Fl."
+%%MIDI control 10 60
+%%MIDI program 7 73
+ z8 | z8 | z8 |
+ z8 | z8 | z8 | z8 |
+  z8 | z8 | z8 | z8 |
+   z8 | !f! 
+   %motif
+    e4 c4 
+   | a4 f4 |
+   c4 f4 | e4 c4 | a4 f4 |
+    e4 c4 | e4 a4 | c'4 _a4 | b4 g4 |
+     z8 | z8 | z8 | z8 |
+      z8 | z8 |]
+V:8 name="Percussão" sn="Perc." clef=perc
+%%MIDI channel 10
+%%MIDI program 0
+ z8 | z8 | z8 |
+ !pp! D,,2 D,,2 ^F,,2 D,,2 | D,,2 ^F,,2 D,,2 D,,2 | ^F,,2 D,,2 D,,2 ^F,,2 | D,,2 D,,2 ^F,,2 D,,2 |
+  D,,2 ^F,,2 D,,2 D,,2 | ^F,,2 D,,2 D,,2 ^F,,2 | D,,2 D,,2 ^F,,2 D,,2 | z8 |
+   !ff! z4 !<(! D,,/D,,/D,,/D,,/ D,,/D,,/D,,/D,,/ !<)! | 
+    !mf! D,,2 ^F,,2 D,,2 D,,2 | D,,2 D,,2 ^F,,2 D,,2 |
+    D,,2 D,,2 ^F,,2 D,,2 | D,,2 ^F,,2 D,,2 D,,2 | D,,2 D,,2 ^F,,2 D,,2 |
+    D,,2 D,,2 ^F,,2 D,,2 | D,,2 ^F,,2 D,,2 D,,2 | D,,2 D,,2 ^F,,2 D,,2 | z8 | 
+     z8 |  z8 | z8 | z8 |
+     z8 | z8 |]

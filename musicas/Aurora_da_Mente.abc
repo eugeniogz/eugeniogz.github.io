@@ -1,0 +1,65 @@
+X:2
+T:Aurora da Mente
+M:4/4
+L:1/8
+Q:1/4=100
+K:C
+%%score 1 | 2 | 3 | 4
+V:1 clef=treble name="Harpa"
+%%MIDI program 46
+%%MIDI control 10 46
+!mp! G E C g e c c' e' | !ff! G E C g e c c' g | !ff! G E C c [egc']4 |
+G E C g e c c' e' | F A c f a c' f a | G E C G [ceg]4 |
+A f c f a a f c | a a f c [AFac]4 |G E C c e g e c |
+g g e c e g e c |A f c f [afc]4 | A, F c f a a f c' | 
+c e g g e g e c |A, F c f a f c A | A, F c f a f a f | 
+A, F c f a [fa]3  | A,/C/F/A/ c/f/a/c'/ [fa']4 |
+% Wingene motif 
+ !mp! c c e e g g c' c' | e' g' e e c c z2 |
+%end motif
+!p! A,/C/F/A/ c/f/a/c'/ [f'a']4 |  g e c e c g [e]2 |
+g e c G E C g e | g e c g e G E C | [cegc']4 z4|]
+V:2  clef=treble name="Flauta"
+%%MIDI program 73
+%%MIDI control 10 30
+z8 | z8 | z8 |
+ z8 | !p! e8 |  g8 |
+  f8 | a8 |   e8 |
+   g8 | f8 |    a8 |
+    g8 | a8 |     c'8 |
+     a8 | z8 |
+%motif
+      !pp! (c2 e2 g2 c'2| e'2 g'2 a2 g2 
+      %end motif
+      | e4 ) z4 |   e8 |    
+       c8 |   d8     | z8 |]
+V:3  clef=treble name="Violino"
+%%MIDI program 40
+%%MIDI control 10 90
+% Base do Violino (Sustentação harmônica)
+!pp! z8 | z8 | z8 |
+ C8 | F8 | C4 G4 |
+  F8 | z8 | C8 |
+   C8 | F4 C4 | F8 |
+    C8 | F8 | z8 |
+     z8 | C4 G4 |
+     %motif
+       !p! (C2 E2 G2 c2| e2 g2 a2 g2 | 
+       %end motif
+       e4) g4 | !pp! C,4 G,4 |
+        G,8 | E,8|C,4 z4|]
+%%MIDI program 42
+%%MIDI control 10 90
+% Base do Violoncelo (Sustentação harmônica)
+V:4 clef=bass name="Violoncelo"
+!pp! z8 | z8 | z8 |
+ C8 | F,8 | C4 G,4 |
+  F,8 | z8 | C,8 |
+   C,8 | F,4 C,4 | F,8 |
+    C,8 | F,8 | z8 |
+     z8 | C,4 G,4 |
+     %motif
+       !p! (C,2 E,2 G,2 C2| E2 G2 A2 G2 |
+       %end motif
+        E4) G4  | !pp! C4 G,4 |
+         G,8 | E8|C4 G4|]

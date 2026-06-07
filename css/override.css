@@ -461,3 +461,119 @@ table th {
   color: var(--color-values-primary) !important;
   font-weight: 600;
 }
+
+/* ==========================================================================
+   PÁGINA DE MÚSICAS
+   ========================================================================== */
+
+.music-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.music-card {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 16px !important;
+  padding: 1.8rem !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02) !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.3s ease !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.music-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--color-attention-primary);
+  opacity: 0.8;
+}
+
+.music-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 10px 25px var(--border-focus) !important;
+  border-color: rgba(18, 62, 156, 0.2) !important;
+}
+
+.music-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.music-header h3 {
+  margin: 0 !important;
+  font-family: 'Outfit', sans-serif !important;
+  color: var(--color-values-primary) !important;
+  font-size: 1.4rem !important;
+  font-weight: 700 !important;
+}
+
+.music-icon {
+  font-size: 1.5rem;
+}
+
+.music-desc {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  color: var(--text-muted) !important;
+  margin-bottom: 1.2rem !important;
+}
+
+.audio-container {
+  background: rgba(0, 0, 0, 0.03);
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  margin-top: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .audio-container {
+    background: rgba(255, 255, 255, 0.03);
+  }
+}
+
+.music-download-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--color-attention-light) !important;
+  color: var(--color-attention-primary) !important;
+  padding: 8px 16px !important;
+  border-radius: 8px !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  margin-top: 12px !important;
+  border: 1px solid var(--border-light) !important;
+  transition: all 0.2s ease !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.music-download-btn:hover {
+  background-color: var(--color-attention-primary) !important;
+  color: #ffffff !important;
+  border-color: var(--color-attention-primary) !important;
+  box-shadow: 0 4px 10px rgba(18, 62, 156, 0.15) !important;
+}
+
+.abc-paper-scroll {
+  background: #ffffff !important;
+  padding: 15px;
+  border-radius: 12px;
+  overflow-x: auto;
+  border: 1px solid var(--border-light);
+  margin-top: 15px;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05);
+}
