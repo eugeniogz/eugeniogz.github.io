@@ -4,45 +4,75 @@ title: Wingene VIDA
 no_index: false
 ---
 
-# Wingene VIDA
+# Wingene VIDA App
 
-**Reflective journal and practice app for the VIDA Ethical-Existential Method.**
+**Reflective journal, purpose tracking, and practice app for the VIDA Ethical-Existential Method.**
 
-**Wingene VIDA** is a reflective journaling app focused on self-knowledge and human development, built around four structural pillars: **Values, Imperfections, Decisions, and Attention (VIDA)**.
+**Wingene VIDA** is a reflective journaling application designed for self-knowledge, ethical practice, and continuous personal development. Built around the VIDA Method (**Values, Imperfections, Decisions, and Attention**), it guides you to transform everyday experiences and thoughts into a structured path of human evolution.
 
-It transforms everyday existence into a space for practical learning, helping you understand behavioral patterns and make more conscious decisions.
+---
 
-## 🚀 Key Features
+## 🧭 How the Journey Works
 
-* **📝 Daily Journaling:** Record your perceptions, actions, and challenges from daily life — without judgment.
-* **🤖 AI-Powered Analysis:** The app uses Google's AI (Gemini) to read your entries, suggest classifications within the method, and provide practical philosophical insights and advice (Premium feature).
-* **💡 Insights & Trends:** Receive automatic reflections based on your history, organized into Action, Progress Recognition, and Panoramic Trends.
-* **📊 Charts & Progress:** Track your growth through the *VIDA Radar* (pillar distribution) and the *Heat Map* (usage consistency and daily impact).
-* **🔒 Absolute Privacy (E2EE):** Your data is end-to-end encrypted using your personal password and stored exclusively in a hidden folder on your own **Google Drive**. No one — not even the developers — has access to your files.
-* **🛡️ Local Security:** Supports app lock via device Biometrics or PIN.
-* **🌐 Offline First:** Works seamlessly offline, silently and automatically syncing with Google Drive once a connection is restored.
+The application serves as both a reflective mirror and a personal guide, integrating your daily practice into five distinct stages:
 
-## 🧭 The VIDA Method
+### 1. Observation & AI Analysis
+* **Daily Reflections:** Document your daily observations, feelings, interactions, and challenges without judgment.
+* **AI Classification & Insight:** Every entry is analyzed by artificial intelligence (Gemini), which suggests how it fits within the VIDA pillars and provides personalized feedback on how your conduct aligns with or can be improved using the method's ethical-existential principles.
 
-Entries are classified within four essential pillars:
+### 2. Purpose and Goal Management
+* **Define Purposes:** Create specific life purposes and short-, medium-, or long-term goals.
+* **Link Observations:** Group and link related daily entries to a specific purpose, allowing you to closely monitor your practical consistency and actions over time.
 
-1. **Values (V):** The moral compass.
-   * *Categories:* Personal boundaries, Coexistence, Continuous review.
-2. **Imperfections (I):** Signals, not guilt.
-   * *Categories:* Personal, Emotional, Moral, Attentional.
-3. **Decisions (D):** Purpose in motion.
-   * *Categories:* Reactive, Constructive, Adaptive.
-4. **Attention (A):** Conscious presence.
-   * *Categories:* To oneself, To others, To the world.
+### 3. Practical Insights & Trends
+* **Actions to Take:** Receive clear, practical suggestions for daily actions based on your entries.
+* **Recognized Progress:** The AI highlights subtle growth and positive shifts in your behavior that you might have otherwise missed.
+* **Identified Trends:** Visualize recurring thought patterns, triggers, or habits over time.
 
-## 🔒 Privacy Configuration
+### 4. Periodic Guidance
+* **Strengths & Successes:** The AI periodically consolidates your logs to highlight your positive actions and ethical alignment.
+* **Areas to Review:** Receive constructive advice on reactions or patterns that require more attention and ethical reflection.
 
-The AI operates in anonymized mode (Pay-tier), ensuring that texts processed for analysis are not used to train Google's foundational models. Additionally, every backup exported to the cloud is encrypted using a strong key derived from the user's password — which never leaves the device.
+### 5. Monthly Summary
+* **Closing Cycles:** At the beginning of each month, the app generates a comprehensive report summarizing the previous month's logs. This summary helps you measure the impact of your purposes and plan the upcoming month with clarity.
 
-## 📞 Support & Contact
+---
 
-If you have any questions, encounter any issues with the app, or would like to send suggestions, please contact us via email at: **[eugenio@wingene.com.br](mailto:eugenio@wingene.com.br)**.
+## 🚀 Technical Features
 
-## � Terms & License
+* **📊 Progress Charts:** Track your entry distribution across pillars with the *VIDA Radar* and monitor consistency using the *Heat Map*.
+* **🌐 Offline First:** Write and manage your journal anywhere, even without internet access. The app automatically and silently syncs your encrypted data with Google Drive once you are back online.
+* **🛡️ Security Lock:** Secure your private thoughts by enabling device Biometrics or PIN lock.
 
-See the [Privacy Policy](https://blog.wingene.com.br/wingene-vida-app/politica-de-privacidade-wingene-vida-en.html) and the [VIDA Method Essay](https://blog.wingene.com.br/wingene/the-vida-method.html) for further conceptual information.
+---
+
+## 🔒 Privacy and Encryption (E2EE)
+
+Wingene VIDA is built on the foundation of absolute privacy:
+* **Zero-Knowledge End-to-End Encryption:** Your entries are encrypted locally on your device with a strong key derived from your personal password. Your raw data is never uploaded to the cloud.
+* **Personal Google Drive Storage:** All backups and encrypted database files are stored in a hidden folder inside your own Google Drive. No one (not even the developers) can access your files.
+* **Secure AI Processing:** AI analyses are processed through a commercial Google Gemini API tier. Your queries are anonymized, and terms of service prohibit the use of your text entries for training foundational models.
+
+---
+
+## 📘 The VIDA Method
+
+The method structures your daily journaling into four essential pillars:
+1. **Values (V) - The moral compass:** Focus on personal boundaries, ethical coexistence, and continuous self-review.
+2. **Imperfections (I) - Signals, not guilt:** Compassionate recognition of personal, emotional, moral, or attentional challenges.
+3. **Decisions (D) - Purpose in motion:** Tracking choices in daily life (reactive, constructive, or adaptive).
+4. **Attention (A) - Conscious presence:** Cultivating mindful attention to oneself, others, and the world.
+
+---
+
+## 📞 Support and Contact
+
+If you have any questions, encounter any issues, or would like to suggest new features, feel free to reach out to us at:  
+✉️ **[eugenio@wingene.com.br](mailto:eugenio@wingene.com.br)**
+
+---
+
+## 📄 Documentation and Terms
+
+* [Privacy Policy](https://blog.wingene.com.br/wingene-vida-app/politica-de-privacidade-wingene-vida-en.html)
+* [The VIDA Method Essay](https://blog.wingene.com.br/wingene/the-vida-method.html)

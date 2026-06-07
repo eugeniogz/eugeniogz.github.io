@@ -14,8 +14,10 @@ search: false
     .then(response => response.json())
     .then(json => {
       const filteredJson = json.filter(item => !item.url.endsWith('/'));
+      const searchInput = document.getElementById('search-input');
+      
       window.simpleJekyllSearch = new SimpleJekyllSearch({
-        searchInput: document.getElementById('search-input'),
+        searchInput: searchInput,
         resultsContainer: document.getElementById('results-container'),
         json: filteredJson,
         searchResultTemplate: '<li><a href="{url}">{title} ({reading_time} min)</a></li>', // O template para cada resultado
@@ -25,6 +27,17 @@ search: false
         limit: 100,
         searchFields: ['title', 'content'], // Define os campos a serem pesquisados
       });
+
+      // Checa se há parâmetros de busca na URL (ex: ?q=minha_busca)
+      const urlParams = new URLSearchParams(window.location.search);
+      const query = urlParams.get('q');
+      if (query && searchInput) {
+        searchInput.value = query;
+        // Dispara o evento 'input' para rodar a pesquisa imediatamente após carregar
+        setTimeout(() => {
+          searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+        }, 100);
+      }
     });
 </script>
 <a href="./">Voltar</a>

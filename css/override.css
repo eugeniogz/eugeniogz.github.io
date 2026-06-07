@@ -567,3 +567,159 @@ table th {
   border-color: var(--color-attention-primary) !important;
   box-shadow: 0 4px 10px rgba(18, 62, 156, 0.15) !important;
 }
+
+/* ==========================================================================
+   MELHORIAS DA PÁGINA PRINCIPAL
+   ========================================================================== */
+
+/* 1. Barra de Pesquisa Hero */
+.hero-search-container {
+  margin: 1.8rem auto 0 auto;
+  max-width: 500px;
+  width: 100%;
+}
+
+.hero-search-form {
+  display: flex;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 30px;
+  padding: 4px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-search-form:focus-within {
+  border-color: var(--color-attention-primary);
+  box-shadow: 0 4px 20px var(--border-focus);
+}
+
+#search-input-hero {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 8px 18px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  outline: none;
+}
+
+#search-input-hero::placeholder {
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+.hero-search-btn {
+  background: var(--color-attention-light) !important;
+  color: var(--color-attention-primary) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: none !important;
+}
+
+.hero-search-btn:hover {
+  background: var(--color-attention-primary) !important;
+  color: #ffffff !important;
+  border-color: var(--color-attention-primary) !important;
+}
+
+/* 2. Cores das Bordas dos Cartões baseadas no Método VIDA */
+.card.card-values::before {
+  background: var(--color-values-primary) !important;
+}
+
+.card.card-decisions::before {
+  background: var(--color-decisions-primary) !important;
+}
+
+.card.card-attention::before {
+  background: var(--color-attention-primary) !important;
+}
+
+.card.card-imperfections::before {
+  background: var(--color-imperfections-primary) !important;
+}
+
+/* 3. Seção de Últimas Reflexões (Recent Posts) */
+.recent-posts-list {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.recent-post-item {
+  padding: 1.2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recent-post-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px var(--border-focus);
+}
+
+.recent-post-item .post-date {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  color: var(--color-values-primary);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.recent-post-item .post-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-attention-primary) !important;
+  border-bottom: none !important;
+}
+
+.recent-post-item .post-title:hover {
+  color: var(--color-attention-hover) !important;
+}
+
+.recent-post-item .post-snippet {
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem !important;
+  margin-bottom: 0 !important;
+  line-height: 1.6;
+}
+
+/* 4. Estilização do Quote Rotator (Watermark) */
+.quote-rotator {
+  position: relative;
+  overflow: hidden;
+  padding: 2.2rem 2.8rem !important;
+}
+
+.quote-rotator::before {
+  content: "“";
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  font-family: 'Lora', serif;
+  font-size: 6rem;
+  color: var(--color-values-primary);
+  opacity: 0.06;
+  line-height: 1;
+  pointer-events: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .quote-rotator::before {
+    opacity: 0.1;
+  }
+}

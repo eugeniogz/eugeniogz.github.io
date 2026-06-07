@@ -6,43 +6,73 @@ no_index: false
 
 # Aplicativo Wingene VIDA
 
-**Diário de reflexão e prática do Método Ético-Existencial VIDA.**
+**Diário de reflexão, propósitos e prática do Método Ético-Existencial VIDA.**
 
-O **Wingene VIDA** é um aplicativo de diário reflexivo focado no autoconhecimento e aprimoramento humano, baseado nos quatro eixos estruturais: **Valores, Imperfeições, Decisões e Atenção (VIDA)**.
+O **Wingene VIDA** é um aplicativo de diário reflexivo focado no autoconhecimento, na prática ética e no aprimoramento pessoal contínuo. Baseado no Método VIDA (**Valores, Imperfeições, Decisões e Atenção**), ele ajuda você a transformar suas vivências e reflexões cotidianas em um caminho estruturado de evolução humana.
 
-Ele transforma a existência cotidiana em um espaço de aprendizado prático, auxiliando na compreensão de padrões de comportamento e na tomada de decisões mais conscientes.
+---
 
-## 🚀 Funcionalidades Principais
+## 🧭 Como Funciona a Jornada de Uso
 
-* **📝 Registro Diário:** Anote suas percepções, ações e dificuldades do dia a dia, sem julgamentos.
-* **🤖 Análise Inteligente com IA:** O app utiliza a IA do Google (Gemini) para ler seus relatos, sugerir classificações dentro do método e fornecer insights e conselhos filosóficos práticos (recurso Premium).
-* **💡 Insights e Tendências:** Receba reflexões automáticas baseadas no seu histórico, divididas em Ação, Reconhecimento de Progresso e Tendências Panorâmicas.
-* **📊 Gráficos e Evolução:** Acompanhe seu progresso através do *Radar VIDA* (distribuição por pilares) e do *Mapa de Calor* (consistência de uso e impacto diário).
-* **🔒 Privacidade Absoluta (E2EE):** Seus dados são criptografados de ponta a ponta usando sua senha pessoal e armazenados exclusivamente em uma pasta oculta no seu próprio **Google Drive**. Ninguém, nem mesmo os desenvolvedores, tem acesso aos seus arquivos.
-* **🛡️ Segurança Local:** Suporte a bloqueio do aplicativo por Biometria ou PIN do dispositivo.
-* **🌐 Offline First:** Funciona perfeitamente offline, sincronizando os dados automaticamente e de forma silenciosa com o Google Drive assim que a conexão é restabelecida.
+O aplicativo funciona como um espelho reflexivo e um orientador pessoal, dividindo a prática em cinco etapas integradas:
 
-## 🧭 O Método VIDA
+### 1. Registro e Análise de Observações
+* **Anotações Cotidianas:** Registre suas observações sobre o dia a dia, sentimentos, interações e desafios.
+* **Classificação e Análise por IA:** Cada observação enviada é analisada por inteligência artificial (Gemini), que sugere a classificação nos eixos do método VIDA e oferece um retorno personalizado sobre como a conduta foi aplicada ou como pode ser aprimorada sob a ótica dos conceitos ético-existenciais do método.
 
-Os registros são classificados dentro de quatro pilares essenciais:
+### 2. Gestão de Propósitos e Metas
+* **Cadastro de Propósitos:** Defina propósitos de vida e objetivos de curto, médio ou longo prazo.
+* **Vínculo de Anotações:** Agrupe e vincule um conjunto de anotações diárias ao propósito correspondente, permitindo acompanhar de perto a evolução prática e a consistência das suas ações ligadas àquele objetivo.
 
-1. **Valores (V):** A bússola moral.
-   * *Categorias:* Limites pessoais, Convivência, Revisão contínua.
-2. **Imperfeições (I):** Sinais, não culpas.
-   * *Categorias:* Pessoais, Emocionais, Morais, Atencionais.
-3. **Decisões (D):** Propósito em movimento.
-   * *Categorias:* Reativas, Construtivas, Adaptativas.
-4. **Atenção (A):** Presença consciente.
-   * *Categorias:* Ao ser, Aos outros, Ao mundo.
+### 3. Insights Práticos e Tendências
+* **Ações a Tomar:** Receba sugestões claras de ações cotidianas baseadas em seus relatos.
+* **Avanços Reconhecidos:** A IA identifica e aponta o progresso sutil no seu comportamento e atitudes que talvez você não tenha percebido.
+* **Tendências Identificadas:** Visualize padrões recorrentes de pensamentos, gatilhos ou comportamentos ao longo do tempo.
 
-## 🔒 Configuração de Privacidade
+### 4. Orientações Periódicas
+* **Pontos de Destaque:** A IA consolida periodicamente as análises, destacando seus principais acertos.
+* **Pontos a Revisar:** Receba alertas construtivos sobre áreas ou reações que necessitam de mais atenção e revisão ética.
 
-A IA opera em modo anonimizado (Pay-tier), garantindo que os textos processados para análise não sejam usados para treinar os modelos fundacionais da Google. Além disso, todo backup exportado para a nuvem passa por criptografia forte baseada em uma chave gerada a partir da senha do usuário, que nunca sai do dispositivo.
+### 5. Resumo Mensal Consolidador
+* **Fechamento de Ciclos:** No início de cada mês, o aplicativo gera um relatório completo consolidando todas as experiências do mês anterior. Esse resumo ajuda a avaliar o impacto dos seus propósitos e a planejar o novo ciclo com mais clareza.
+
+---
+
+## 🚀 Funcionalidades Técnicas
+
+* **📊 Gráficos de Evolução:** Monitore a sua distribuição de registros pelos pilares através do *Radar VIDA* e visualize sua consistência no *Mapa de Calor*.
+* **🌐 Offline First:** Escreva e gerencie seus dados em qualquer lugar, mesmo sem internet. O aplicativo sincroniza tudo de maneira silenciosa e automática com a nuvem assim que a conexão for restabelecida.
+* **🛡️ Bloqueio de Segurança:** Proteja seu diário contra acessos não autorizados ativando a Biometria ou PIN do dispositivo.
+
+---
+
+## 🔒 Privacidade e Criptografia (E2EE)
+
+O Wingene VIDA foi desenhado sob o princípio de privacidade absoluta:
+* **Criptografia de Ponta a Ponta (Zero-Knowledge):** Seus registros são criptografados localmente com uma chave forte gerada a partir de sua senha pessoal. Seus dados nunca são enviados em texto claro para a nuvem.
+* **Nuvem Própria no Google Drive:** Seus backups e dados criptografados ficam armazenados em uma pasta oculta no seu próprio Google Drive. Ninguém (nem mesmo os criadores do app) tem acesso ao seu conteúdo.
+* **Uso Seguro de IA:** As análises utilizam conexões com a API paga do Google Gemini. Os dados são enviados de forma anônima e sob contratos comerciais que proíbem o uso dos seus textos para treinar modelos fundacionais.
+
+---
+
+## 📘 O Método VIDA
+
+O método organiza a sua reflexão diária em quatro pilares fundamentais:
+1. **Valores (V) - A bússola moral:** Foco em limites pessoais, convivência ética e revisão contínua.
+2. **Imperfeições (I) - Sinais, não culpas:** Reconhecimento compassivo de imperfeições pessoais, emocionais, morais ou atencionais.
+3. **Decisões (D) - Propósito em movimento:** Observação das escolhas cotidianas (reativas, construtivas ou adaptativas).
+4. **Atenção (A) - Presença consciente:** Exercício de atenção ao próprio ser, aos outros e ao mundo.
+
+---
 
 ## 📞 Suporte e Contato
 
-Se você tiver dúvidas, encontrar algum problema no aplicativo ou quiser enviar sugestões, entre em contato conosco através do e-mail: **[eugenio@wingene.com.br](mailto:eugenio@wingene.com.br)**.
+Se tiver dúvidas, encontrar algum comportamento inesperado ou quiser sugerir melhorias para o aplicativo, entre em contato diretamente pelo e-mail:  
+✉️ **[eugenio@wingene.com.br](mailto:eugenio@wingene.com.br)**
 
-## 📄 Licença e Termos
+---
 
-Consulte a [Política de Privacidade](https://blog.wingene.com.br/wingene-vida-app/politica-de-privacidade-wingene-vida.html) e o [Ensaio do Método VIDA](https://blog.wingene.com.br/wingene/o-metodo-vida-a-wingene-em-pratica.html) para mais informações conceituais.
+## 📄 Documentação e Termos
+
+* [Política de Privacidade](https://blog.wingene.com.br/wingene-vida-app/politica-de-privacidade-wingene-vida.html)
+* [O Ensaio do Método VIDA](https://blog.wingene.com.br/wingene/o-metodo-vida-a-wingene-em-pratica.html)

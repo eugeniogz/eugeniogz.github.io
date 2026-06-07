@@ -1,14 +1,8 @@
 ---
-layout: full
+layout: app
 title: "Wingene VIDA - app" 
 no_index: false
 ---
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>Wingene VIDA — App</title>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -23,6 +17,22 @@ no_index: false
     --bg:     #faf9f5;
     --cream:  #f2f0ea;
     --white:  #ffffff;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --red:    #ff6b6b;
+      --green:  #52c755;
+      --blue:   #6ab7ff;
+      --yellow: #e6cb22;
+      --ink:    #f9fafb;
+      --mid:    #d1d5db;
+      --muted:  #9ca3af;
+      --rule:   rgba(255, 255, 255, 0.12);
+      --bg:     #111113;
+      --cream:  #1c1c1f;
+      --white:  #1e1e24;
+    }
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -116,12 +126,13 @@ no_index: false
     margin-bottom: 24px;
   }
   .btn-text {
-    display: inline-block; font-family: 'Source Serif 4', serif;
-    font-size: 0.85rem; font-style: italic; color: var(--muted);
-    text-decoration: underline; text-underline-offset: 3px;
-    text-decoration-color: var(--rule); transition: color 0.2s;
+    display: inline-block !important; font-family: 'Source Serif 4', serif !important;
+    font-size: 0.85rem !important; font-style: italic !important; color: var(--muted) !important;
+    text-decoration: underline !important; text-underline-offset: 3px !important;
+    text-decoration-color: var(--rule) !important; transition: color 0.2s !important;
+    border-bottom: none !important;
   }
-  .btn-text:hover { color: var(--blue); }
+  .btn-text:hover { color: var(--blue) !important; }
   .badge-store {
     display: inline-block;
     transition: opacity 0.2s, transform 0.2s;
@@ -176,7 +187,14 @@ no_index: false
     font-family: 'JetBrains Mono', monospace; font-size: 10px;
     letter-spacing: 0.15em; color: var(--muted); text-transform: uppercase; margin-bottom: 6px;
   }
-  .pillar-name { font-family: 'Lora', serif; font-size: 1.25rem; font-weight: 600; margin-bottom: 10px; }
+  .pillar-name {
+    font-family: 'Lora', serif !important;
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+    color: var(--ink) !important;
+  }
   .pillar-desc { font-size: 0.88rem; color: var(--mid); line-height: 1.65; }
 
   /* ── FEATURES ── */
@@ -220,8 +238,9 @@ no_index: false
   /* ── FINAL CTA ── */
   .final-cta { padding: 52px 0 16px; text-align: center; }
   .final-cta h2 {
-    font-family: 'Lora', serif; font-size: clamp(1.8rem, 4vw, 2.6rem);
-    font-weight: 400; font-style: italic; line-height: 1.25; margin-bottom: 8px;
+    font-family: 'Lora', serif !important; font-size: clamp(1.8rem, 4vw, 2.6rem) !important;
+    font-weight: 400 !important; font-style: italic !important; line-height: 1.25 !important;
+    margin-top: 0 !important; margin-bottom: 8px !important; color: var(--ink) !important;
   }
   .final-cta p { font-size: 0.9rem; color: var(--muted); margin-bottom: 32px; }
 
@@ -234,8 +253,6 @@ no_index: false
   .site-footer a { color: var(--muted); text-decoration: none; }
   .site-footer a:hover { color: var(--blue); }
 </style>
-</head>
-<body>
 
 <!-- HEADER -->
 
@@ -403,5 +420,3 @@ no_index: false
   &nbsp;·&nbsp;
   <a href="mailto:eugenio@wingene.com.br">eugenio@wingene.com.br</a>
 </footer>
-</body>
-</html>

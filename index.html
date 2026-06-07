@@ -5,8 +5,16 @@ description: Wingene é um projeto filosófico sobre herança, consciência, cri
 ---
 
 <div class="hero">
-
   <p>Wingene: um projeto sobre o florescimento da herança — que, além da genética e do material, é sobretudo cultural e moral.</p>
+  
+  <!-- Barra de Pesquisa Minimalista -->
+  <div class="hero-search-container">
+    <form action="{{ '/Search.html' | relative_url }}" method="get" class="hero-search-form">
+      <input type="text" name="q" id="search-input-hero" placeholder="Pesquisar ensaios, poesias..." required autocomplete="off">
+      <button type="submit" class="hero-search-btn">🔍 Pesquisar</button>
+    </form>
+  </div>
+
   <div class="quote-rotator">
     <span id="quoteBox"></span>
   </div>
@@ -18,25 +26,25 @@ description: Wingene é um projeto filosófico sobre herança, consciência, cri
 
 <div class="cards">
 
-<div class="card">
+<div class="card card-values">
 <h3>📜 Manifesto Wingene</h3>
 <p>Uma declaração breve sobre herança, consciência e o futuro ancestral.</p>
 <a href="/manifesto-wingene.html">Ler o Manifesto →</a>
 </div>
 
-<div class="card">
+<div class="card card-values">
 <h3>📘 Wingene — felicidade agora, futuro ancestral</h3>
 <p>O ensaio principal sobre mente, eudaimonia, criação, legado e tempo cósmico.</p>
 <a href="/wingene/wingene-felicidade-agora-futuro-ancestral.html">Ler o Ensaio Principal →</a>
 </div>
 
-<div class="card">
+<div class="card card-decisions">
 <h3>📗 O Método VIDA — A Wingene em prática</h3>
 <p>Valores, Imperfeições, Decisões e Atenção como ética cotidiana e caminho de evolução.</p>
 <a href="/wingene/o-metodo-vida-a-wingene-em-pratica.html">Ler o Método VIDA →</a>
 </div>
 
-<div class="card">
+<div class="card card-decisions">
 <h3>🎨 Tecendo a Vida</h3>
 <p>Criando no íntimo uma obra pessoal.</p>
 <a href="/wingene/tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html">Ler Tecendo a vida →</a>
@@ -49,40 +57,45 @@ description: Wingene é um projeto filosófico sobre herança, consciência, cri
 
 <div class="cards">
 
-<div class="card">
+<div class="card card-values">
 <h3>📖 Ipês e tijolos</h3>
 <p>Reflexões sobre o humano entre o concreto e o ideal.</p>
 <a href="/ipes-e-tijolos/">Explorar →</a>
 </div>
 
-<div class="card">
+<div class="card card-imperfections">
 <h3>📝 Crônicas</h3>
 <p>Narrativas sobre vida cotidiana, percepção, memória e sensibilidade.</p>
 <a href="/cronicas/">Ler Crônicas →</a>
 </div>
 
-<div class="card">
+<div class="card card-attention">
 <h3>🎭 Poesias e Aforismos</h3>
 <p>Versos sobre mente, natureza, tempo, serena euforia e existência.</p>
 <a href="/poesias-e-aforismos/">Ler Poesias →</a>
 </div>
 
-<div class="card">
+<div class="card card-imperfections">
 <h3>🤽 O cascudo e outras histórias</h3>
 <p>Contos para pequenos aventureiros: Descobertas no rio, na fazenda e na cidade.</p>
 <a href="/o-cascudo-e-outras-historias/">Ler Contos →</a>
 <a href="/o-cascudo-e-outras-historias/index-upper.html">Ler CAIXA ALTA →</a>
 </div>
 
-<div class="card">
+<div class="card card-attention">
 <h3>🎵 Músicas</h3>
 <p>Composições instrumentais, partituras interativas e experimentos sonoros.</p>
 <a href="/musicas/">Ouvir Músicas →</a>
 </div>
+
+<div class="card card-decisions">
+<h3>📱 Aplicativos</h3>
+<p>Ferramentas interativas de autoconhecimento e prática cotidiana do método VIDA.</p>
+<a href="/wingene-vida-app/">Acessar Wingene VIDA →</a>
+</div>
 </div>
 
 
-<hr>
 
 <h2>Ensaios em destaque</h2>
 
@@ -113,28 +126,24 @@ José Eugênio é autor do projeto <strong>Wingene</strong>, ensaios filosófico
 <hr>
 
 <script>
-
   var quotes = [
     {% for post in site.posts %}
-      {{ post.content | strip_html | strip_newlines | truncatewords: 240 | jsonify }},
+      {{ post.content | strip_html | strip_newlines | truncatewords: 30 | jsonify }},
     {% endfor %}
   ];
 
+  let index = 0;
+  const box = document.getElementById("quoteBox");
 
+  function rotateQuote() {
+    box.style.opacity = 0;
+    setTimeout(() => {
+      box.innerText = "“" + quotes[index] + "”";
+      box.style.opacity = 1;
+      index = (index + 1) % quotes.length;
+    }, 450);
+  }
 
-
-let index = 0;
-const box = document.getElementById("quoteBox");
-
-function rotateQuote() {
-  box.style.opacity = 0;
-  setTimeout(() => {
-    box.innerText = "“" + quotes[index] + "”";
-    box.style.opacity = 1;
-    index = (index + 1) % quotes.length;
-  }, 450);
-}
-
-rotateQuote();
-setInterval(rotateQuote, 4200);
+  rotateQuote();
+  setInterval(rotateQuote, 4200);
 </script>

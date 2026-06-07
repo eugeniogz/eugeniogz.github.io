@@ -33,7 +33,9 @@
             <h2 style="margin: 0; line-height: 1.2;">{{ site.description | default: site.github.project_tagline }}</h2>
           </div>
         </div>
+        {% unless page.url == "/" or page.url == "/index.html" %}
         <a href="{{ '/Search.html' | relative_url }}" class="search-link-header">🔍 Pesquisar</a>
+        {% endunless %}
       </div>
     </header>
 
