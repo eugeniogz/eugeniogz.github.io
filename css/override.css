@@ -144,10 +144,10 @@ header h2 {
   }
 }
 
-#main-content h1, 
-#main-content h2, 
-#main-content h3, 
-#main-content h4 {
+#main-content:not(.custom-headings) h1, 
+#main-content:not(.custom-headings) h2, 
+#main-content:not(.custom-headings) h3, 
+#main-content:not(.custom-headings) h4 {
   font-family: 'Outfit', sans-serif !important;
   color: var(--color-values-primary) !important;
   font-weight: 700;
@@ -156,9 +156,9 @@ header h2 {
   margin-bottom: 0.6em;
 }
 
-#main-content h1 { font-size: 2.2rem; }
-#main-content h2 { font-size: 1.75rem; border-bottom: 1px solid var(--border-light); padding-bottom: 0.3em; }
-#main-content h3 { font-size: 1.4rem; }
+#main-content:not(.custom-headings) h1 { font-size: 2.2rem; }
+#main-content:not(.custom-headings) h2 { font-size: 1.75rem; border-bottom: 1px solid var(--border-light); padding-bottom: 0.3em; }
+#main-content:not(.custom-headings) h3 { font-size: 1.4rem; }
 
 #main-content p, 
 #main-content li {

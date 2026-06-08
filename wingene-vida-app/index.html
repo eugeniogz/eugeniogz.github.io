@@ -1,7 +1,9 @@
 ---
-layout: app
+layout: full
 title: "Wingene VIDA - Aplicativo"
 no_index: false
+custom_headings: true
+hide_header_logo: true
 ---
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
@@ -39,12 +41,38 @@ no_index: false
   html { scroll-behavior: smooth; }
 
   body {
-    background: var(--bg);
-    color: var(--ink);
-    font-family: 'Source Serif 4', Georgia, serif;
-    font-weight: 300;
-    line-height: 1.65;
-    font-size: 17px;
+    background: var(--bg) !important;
+    color: var(--ink) !important;
+    font-family: 'Source Serif 4', Georgia, serif !important;
+    font-weight: 300 !important;
+    line-height: 1.65 !important;
+    font-size: 17px !important;
+  }
+
+  .page-wrap h1, 
+  .page-wrap h2, 
+  .page-wrap h3, 
+  .page-wrap h4 {
+    font-family: 'Lora', serif !important;
+    color: var(--ink) !important;
+    font-weight: 600 !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: none !important;
+    text-shadow: none !important;
+    letter-spacing: normal !important;
+    box-shadow: none !important;
+    line-height: 1.25 !important;
+  }
+
+  /* Remove barras (/ ou //) injetadas pelo tema Architect via pseudo-elementos */
+  .page-wrap h1::before, .page-wrap h1::after,
+  .page-wrap h2::before, .page-wrap h2::after,
+  .page-wrap h3::before, .page-wrap h3::after,
+  .page-wrap h4::before, .page-wrap h4::after {
+    content: none !important;
+    display: none !important;
   }
 
   /* ── SITE HEADER ── */
@@ -110,12 +138,14 @@ no_index: false
     text-transform: uppercase; color: var(--muted); margin-bottom: 16px;
   }
   .hero-title {
-    font-family: 'Lora', serif;
-    font-size: clamp(2.2rem, 6vw, 3.4rem);
-    font-weight: 600; line-height: 1.15;
-    color: var(--ink); margin-bottom: 8px;
+    font-family: 'Lora', serif !important;
+    font-size: clamp(2.2rem, 6vw, 3.4rem) !important;
+    font-weight: 600 !important; line-height: 1.15 !important;
+    color: var(--ink) !important; 
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
   }
-  .hero-title em { font-style: italic; font-weight: 400; color: var(--red); }
+  .hero-title em { font-style: italic !important; font-weight: 400 !important; color: var(--red) !important; }
   .hero-subtitle {
     font-size: 1.1rem; font-style: italic;
     color: var(--mid); margin-bottom: 36px; line-height: 1.55;
@@ -159,8 +189,15 @@ no_index: false
   }
   .section-kicker::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
   h2.section-title {
-    font-family: 'Lora', serif; font-size: 1.6rem; font-weight: 600;
-    line-height: 1.25; margin-bottom: 16px; color: var(--ink);
+    font-family: 'Lora', serif !important; 
+    font-size: 1.6rem !important; 
+    font-weight: 600 !important;
+    line-height: 1.25 !important; 
+    color: var(--ink) !important;
+    margin-top: 0 !important;
+    margin-bottom: 16px !important;
+    border: none !important;
+    padding: 0 !important;
   }
   .lead { font-size: 1.05rem; line-height: 1.7; color: var(--mid); margin-bottom: 20px; }
 
@@ -268,7 +305,6 @@ no_index: false
       <path d="M 383 250 L 316.5 365.1813787033303 L 183.50000000000003 365.1813787033303 L 117 250.00000000000003 L 183.49999999999994 134.81862129666968 L 316.5 134.81862129666968 L 383 249.99999999999997 L 316.49999999999994 365.1813787033304 L 183.5000000000001 365.18137870333044 L 117 250.00000000000006 L 183.50000000000003 134.81862129666965 L 316.4999999999999 134.8186212966696 L 383 249.99999999999994 Z M 365.1813787033303 316.5 L 250 383 L 134.81862129666965 316.5 L 134.81862129666968 183.5 L 249.99999999999997 117 L 365.1813787033303 183.49999999999994 L 365.1813787033303 316.5 L 250.00000000000003 383 L 134.81862129666962 316.5 L 134.8186212966696 183.5000000000001 L 249.99999999999994 117 L 365.1813787033303 183.5 L 365.18137870333044 316.4999999999999 Z " fill="#1040b0" opacity="0.83" />
     </svg>
 
-    <p class="hero-kicker">Aplicativo · Método VIDA</p>
     <h1 class="hero-title">Wingene <em>VIDA</em></h1>
     <p class="hero-subtitle">
       Diário reflexivo com análises por IA para o seu<br>aprimoramento pessoal contínuo.

@@ -23,9 +23,11 @@
     <header style="height: auto;">
       <div class="inner" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
         <div style="display: flex; align-items: center;">
+          {% unless page.hide_header_logo %}
           <a href="{{ '/geometria/geometria-e-o-metodo-vida.html' | relative_url }}" style="margin-right: 1rem; text-decoration: none;">
             <img src="{{ '/wingene-animated.gif' | relative_url }}" alt="Wingene Logo, polígono regular de 12 vértices (12/5- vermelho (a herança ancestral)) e estrelas geradas com (12/4 - verde,12/3- amarelo e 12/2- azul (o espírito material), 4 cores, 4 pilares do método VIDA)" style="height: 7.2rem; width: auto;"/>
           </a>
+          {% endunless %}
           <div style="display: flex; flex-direction: column; justify-content: center;">
             <a href="{{ '/' | relative_url }}">
               <h1 style="margin: 0; line-height: 1.2;">{{ site.title | default: site.github.repository_name }}</h1>
@@ -38,7 +40,7 @@
 
     <div id="content-wrapper">
       <div class="inner clearfix">
-        <section id="main-content">
+        <section id="main-content" {% if page.custom_headings %}class="custom-headings"{% endif %}>
           {{ content }}
         </section>
       </div>
