@@ -11,7 +11,7 @@ tags:
 
 
 
-### [Poesias e Aforimos](./)
+### [Poesias e Aforismos](./)
 
 ## Vida breve, rotas eternas
 
@@ -21,19 +21,19 @@ universo efêmero na negra entropia.
 Virtudes para quê? A noite é fatal.
 
 Ocaso do ser, destino final,  
-caráter quebrado, tristeza real.  
+caráter quebrado, triste sinal.  
 Criar alegria, das virtudes o sal,  
 polir o caráter, o futuro ancestral.
 
 Rotas diárias tecem as vidas,  
 valor para viver o alegre pulsar.  
-Enxergar sentido nas rotas criadas,  
+Enxergar sentido nas obras criadas,  
 Mapas eternos do porvir navegar.
 <div style="clear: both;"></div>
 
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./aforismos.html">&lt;&lt; Aforismos</a>
+  <a href="./aquarela-de-uma-valsa.html">&lt;&lt; Aquarela de uma valsa</a>
   <a href="./a-cor-que-povoa-o-mundo.html">A cor que povoa o mundo &gt;&gt;</a>
 </div>

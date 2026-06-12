@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade - Cuidador Diário</title>
+  <meta name="description" content="Política de Privacidade do aplicativo Cuidador Diário. Saiba como protegemos seus dados e as informações de acompanhamento de idosos com criptografia ativa.">
+  
+  <!-- Fontes Premium -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Variáveis do Sistema de Design */
+    :root {
+      --color-primary: #0d9488;
+      --color-primary-dark: #115e59;
+      --color-primary-light: #ccfbf1;
+      --color-bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #115e59 100%);
+      --color-text-main: #1e293b;
+      --color-text-muted: #64748b;
+      --color-card-bg: rgba(255, 255, 255, 0.95);
+      --font-title: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    /* Reset Geral */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--color-text-main);
+      background: var(--color-bg-gradient);
+      background-attachment: fixed;
+      min-height: 100vh;
+      line-height: 1.6;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Barra de Progresso de Leitura */
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background-color: var(--color-primary);
+      width: 0%;
+      z-index: 1000;
+      transition: width 0.1s ease-out;
+    }
+
+    /* Container Principal */
+    .container {
+      max-width: 800px;
+      width: 100%;
+      background: var(--color-card-bg);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      padding: 48px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Header Styling */
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      border-bottom: 2px solid var(--color-primary-light);
+      padding-bottom: 24px;
+    }
+
+    .logo-container {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-primary-light);
+      color: var(--color-primary-dark);
+      width: 64px;
+      height: 64px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      font-size: 32px;
+      box-shadow: 0 8px 16px rgba(13, 148, 136, 0.2);
+      animation: pulse 2s infinite;
+    }
+
+    h1 {
+      font-family: var(--font-title);
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--color-primary-dark);
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    .last-updated {
+      font-size: 13px;
+      color: var(--color-text-muted);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Corpo do Texto */
+    .content-section {
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      font-family: var(--font-title);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 20px;
+      background-color: var(--color-primary);
+      border-radius: 3px;
+    }
+
+    p {
+      font-size: 15px;
+      color: var(--color-text-main);
+      margin-bottom: 16px;
+      text-align: justify;
+    }
+
+    /* Listas Customizadas */
+    ul {
+      list-style: none;
+      margin-bottom: 20px;
+      padding-left: 8px;
+    }
+
+    li {
+      position: relative;
+      font-size: 15px;
+      padding-left: 24px;
+      margin-bottom: 8px;
+      color: var(--color-text-main);
+    }
+
+    li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--color-primary);
+      font-weight: bold;
+    }
+
+    /* Alerta Premium (Criptografia / Direitos) */
+    .info-alert {
+      background-color: #f0fdfa;
+      border-left: 4px solid var(--color-primary);
+      padding: 16px 20px;
+      border-radius: 0 16px 16px 0;
+      margin: 24px 0;
+    }
+
+    .info-alert p {
+      margin-bottom: 0;
+      color: #0f766e;
+      font-weight: 500;
+    }
+
+    /* Rodapé do Cartão */
+    footer.card-footer {
+      margin-top: 48px;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 24px;
+      text-align: center;
+    }
+
+    .btn-contact {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--color-primary);
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 14px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
+    }
+
+    .btn-contact:hover {
+      background-color: var(--color-primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(13, 148, 136, 0.3);
+    }
+
+    /* Botão Voltar ao Topo */
+    #back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--color-primary);
+      color: white;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 999;
+      font-weight: bold;
+    }
+
+    #back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #back-to-top:hover {
+      background-color: var(--color-primary-dark);
+      transform: scale(1.1);
+    }
+
+    /* Animações */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.4);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(13, 148, 136, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(13, 148, 136, 0);
+      }
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      body {
+        padding: 20px 10px;
+      }
+      .container {
+        padding: 24px;
+        border-radius: 16px;
+      }
+      h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de Progresso -->
+  <div id="progress-bar"></div>
+
+  <!-- Container Principal -->
+  <main class="container" id="main-content">
+    
+    <header>
+      <div class="logo-container">➕</div>
+      <h1 id="privacy-title">Política de Privacidade</h1>
+      <div class="last-updated">Última atualização: Junho de 2026</div>
+    </header>
+
+    <!-- Seção 1: Introdução -->
+    <section class="content-section">
+      <h2 id="sec-intro">1. Introdução</h2>
+      <p>
+        Bem-vindo ao <strong>Cuidador Diário</strong>. Nós valorizamos imensamente a confiança depositada em nosso aplicativo por familiares e cuidadores no acompanhamento de idosos. Por isso, estamos totalmente comprometidos com a segurança e a confidencialidade de todas as informações registradas.
+      </p>
+      <p>
+        Esta Política de Privacidade explica detalhadamente quais dados coletamos, como eles são processados e armazenados, e os mecanismos de controle que você possui para assegurar sua privacidade, em total conformidade com a Lei Geral de Proteção de Dados (LGPD) e as diretrizes internacionais das lojas de aplicativos.
+      </p>
+    </section>
+
+    <!-- Seção 2: Informações Coletadas -->
+    <section class="content-section">
+      <h2 id="sec-data">2. Informações que Coletamos</h2>
+      <p>
+        Para prover as funcionalidades de monitoramento 24 horas, o Cuidador Diário coleta os seguintes tipos de informações:
+      </p>
+      <ul>
+        <li><strong>Dados Cadastrais do Usuário:</strong> Nome completo, endereço de e-mail e função declarada (Familiar ou Cuidador).</li>
+        <li><strong>Perfil do Idoso:</strong> Nome do idoso vinculado para fins exclusivos de relatórios e diário de atividades.</li>
+        <li><strong>Registros Diários de Acompanhamento:</strong> Informações de rotina alimentar, idas ao banheiro, aferição de sinais vitais (pressão arterial, temperatura, frequência cardíaca), observações escritas e o checklist de medicamentos administrados.</li>
+      </ul>
+    </section>
+
+    <!-- Seção 3: Criptografia e Segurança -->
+    <section class="content-section">
+      <h2 id="sec-security">3. Segurança dos Dados e Criptografia Ativa</h2>
+      <p>
+        Entendemos que os registros de saúde e rotina diária são informações altamente confidenciais. Portanto, o Cuidador Diário implementa um sistema robusto de proteção ativa:
+      </p>
+      <div class="info-alert">
+        <p>
+          🔒 <strong>Criptografia Ativa:</strong> Todas as informações inseridas sobre o idoso no diário e no checklist de remédios são protegidas por chaves criptográficas locais geradas no próprio dispositivo do usuário. Isso impede que terceiros não autorizados acessem os dados médicos e observações de rotina do paciente.
+        </p>
+      </div>
+      <p>
+        A transmissão dos dados é feita através de protocolos seguros HTTPS/TLS diretamente com os serviços na nuvem (Firestore), garantindo que as informações cheguem seguras de um cuidador para o familiar responsável.
+      </p>
+    </section>
+
+    <!-- Seção 4: Compartilhamento de Dados -->
+    <section class="content-section">
+      <h2 id="sec-sharing">4. Compartilhamento de Informações</h2>
+      <p>
+        <strong>Nós não vendemos nem compartilhamos seus dados com anunciantes ou terceiros.</strong>
+      </p>
+      <p>
+        O compartilhamento de registros e logs ocorre única e exclusivamente de forma interna no aplicativo, entre os usuários (familiares e cuidadores) que ativamente inserirem o <strong>Código de Convite do Idoso</strong> correspondente. Você tem total controle sobre quem possui acesso à visualização do painel do idoso através do gerenciamento deste código de convite.
+      </p>
+    </section>
+
+    <!-- Seção 5: Retenção e Exclusão de Contas -->
+    <section class="content-section">
+      <h2 id="sec-deletion">5. Controle e Exclusão Definitiva de Conta</h2>
+      <p>
+        Garantimos a você total propriedade e autonomia sobre seus dados pessoais e de acompanhamento. Em conformidade direta com a Diretriz de Revisão da Apple App Store (Diretriz 5.1.1(v)), você pode realizar as seguintes ações a qualquer momento:
+      </p>
+      <ul>
+        <li><strong>Acesso e Retificação:</strong> Corrigir seus dados pessoais diretamente no painel de perfil.</li>
+        <li><strong>Exclusão de Conta:</strong> Solicitar a exclusão definitiva de seu cadastro e informações de perfil diretamente no aplicativo. A opção está disponível clicando no ícone de Informação (ℹ) na barra superior do painel e selecionando <strong>"Excluir Minha Conta"</strong>.</li>
+      </ul>
+      <p>
+        Ao confirmar a exclusão da sua conta, o registro cadastral no banco de dados do Firestore e a credencial do Firebase Authentication correspondente são deletados de forma permanente de nossos servidores de produção, sem possibilidade de recuperação.
+      </p>
+    </section>
+
+    <!-- Seção 6: Alterações na Política -->
+    <section class="content-section">
+      <h2 id="sec-updates">6. Atualizações desta Política</h2>
+      <p>
+        Poderemos atualizar esta Política de Privacidade periodicamente para refletir mudanças no aplicativo, melhorias de segurança ou novas exigências legais. Quando modificada, atualizaremos a data da "Última atualização" listada no topo deste documento.
+      </p>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="card-footer">
+      <p style="text-align: center; margin-bottom: 20px; font-size: 13px; color: var(--color-text-muted);">
+        Se você tiver qualquer dúvida em relação a esta política ou se quiser solicitar suporte, entre em contato conosco.
+      </p>
+      <a href="mailto:contato@wingene.com.br" class="btn-contact" id="contact-link">
+        📧 Entre em Contato
+      </a>
+    </footer>
+
+  </main>
+
+  <!-- Botão voltar ao topo -->
+  <button id="back-to-top" title="Voltar ao topo" aria-label="Voltar ao topo">▲</button>
+
+  <!-- Script de Interatividade -->
+  <script>
+    // Barra de progresso ao rolar a página
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+
+      // Mostrar/Esconder botão de Voltar ao Topo
+      const backToTopBtn = document.getElementById('back-to-top');
+      if (winScroll > 300) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    });
+
+    // Ação do botão voltar ao topo
+    document.getElementById('back-to-top').addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html>

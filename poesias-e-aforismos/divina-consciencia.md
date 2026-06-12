@@ -41,6 +41,6 @@ Divina consciência — divina inexistência.
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./aquarela-de-uma-valsa.html">&lt;&lt; Aquarela de uma valsa</a>
+  <a href="./cafe-em-flor.html">&lt;&lt; Café em flor</a>
   <span></span>
 </div>
