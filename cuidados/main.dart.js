@@ -52868,7 +52868,7 @@ if(s==null)s=""
 r=a.d
 q=a1.a==="caregiver"?"Cuidador(a)":"Familiar"
 p=A.at(24)
-o=A.N("Convidar para o grupo",a0,a0,a0,A.cp().$2$color$fontWeight(B.C,B.o),B.aj,a0,a0)
+o=A.N("Convidar",a0,a0,a0,A.cp().$2$color$fontWeight(B.C,B.o),B.aj,a0,a0)
 n=a1.a
 m=a.c
 l=t.p
@@ -53296,7 +53296,7 @@ n=t.p
 m=A.bc(A.aY(A.a([A.N("Cuidando de:",j,j,j,A.bS(j,j,B.an,j,j,j,j,j,j,j,j,12,j,j,B.am,j,j,!0,j,j,j,j,j,j,j,j),j,j,j),B.d8,A.aH(A.a([new A.eX(1,B.bi,A.N(s.b,j,B.aE,j,A.cp().$3$color$fontSize$fontWeight(B.j,24,B.o),j,j,j),j),B.bM,A.cl(j,B.cU,B.Q6,j,j,new A.aG8(p,a,o,this.c),B.aA,j,"Selecionar Outro Idoso")],n),B.n,B.i,B.k,0,j)],n),B.aa,B.i,B.k,0,B.u),1)
 l=B.j.ew(0.18)
 k=A.at(20)
-i=A.bW(j,A.aY(A.a([A.aH(A.a([m,B.cf,A.bW(j,A.N(o.d==="caregiver"?"Cuidador(a)":"Fam\xedlia",j,j,j,B.a8O,j,j,j),B.r,j,j,new A.bP(l,j,j,k,j,j,B.O),j,j,j,B.th,j,j,j)],n),B.n,B.aR,B.k,0,j),B.bN,A.aWT(B.j.ew(0.15),1),B.U,A.aH(A.a([A.bc(A.h7(!1,j,!0,A.aH(A.a([A.cC(B.Pe,B.bY,j,16),B.bx,A.bc(A.N("Convidar para o grupo",j,B.aE,j,A.bS(j,j,B.an,j,j,j,j,j,j,j,j,12,j,j,B.b4,j,j,!0,j,j,j,j,j,j,j,j),j,j,j),1)],n),B.n,B.i,B.k,0,j),j,!0,j,j,j,j,j,j,j,j,j,j,new A.aG9(p,a,s),j,j,j,j,j,j,j),1),B.bM,A.h7(!1,A.at(8),!0,new A.aj(B.O6,A.aH(A.a([A.cC(B.P7,B.bY,j,14),B.hb,B.aaC],n),B.n,B.i,B.k,0,j),j),j,!0,j,j,j,j,j,j,j,j,j,j,new A.aGa(p,a),j,j,j,j,j,j,j)],n),B.n,B.aR,B.k,0,j)],n),B.aa,B.i,B.k,0,B.u),B.r,j,j,new A.bP(j,j,j,r,q,new A.vq(B.f6,B.qe,B.eW,i,j,j),B.O),j,j,j,B.dW,j,j,j)
+i=A.bW(j,A.aY(A.a([A.aH(A.a([m,B.cf,A.bW(j,A.N(o.d==="caregiver"?"Cuidador(a)":"Fam\xedlia",j,j,j,B.a8O,j,j,j),B.r,j,j,new A.bP(l,j,j,k,j,j,B.O),j,j,j,B.th,j,j,j)],n),B.n,B.aR,B.k,0,j),B.bN,A.aWT(B.j.ew(0.15),1),B.U,A.aH(A.a([A.bc(A.h7(!1,j,!0,A.aH(A.a([A.cC(B.Pe,B.bY,j,16),B.bx,A.bc(A.N("Convidar",j,B.aE,j,A.bS(j,j,B.an,j,j,j,j,j,j,j,j,12,j,j,B.b4,j,j,!0,j,j,j,j,j,j,j,j),j,j,j),1)],n),B.n,B.i,B.k,0,j),j,!0,j,j,j,j,j,j,j,j,j,j,new A.aG9(p,a,s),j,j,j,j,j,j,j),1),B.bM,A.h7(!1,A.at(8),!0,new A.aj(B.O6,A.aH(A.a([A.cC(B.P7,B.bY,j,14),B.hb,B.aaC],n),B.n,B.i,B.k,0,j),j),j,!0,j,j,j,j,j,j,j,j,j,j,new A.aGa(p,a),j,j,j,j,j,j,j)],n),B.n,B.aR,B.k,0,j)],n),B.aa,B.i,B.k,0,B.u),B.r,j,j,new A.bP(j,j,j,r,q,new A.vq(B.f6,B.qe,B.eW,i,j,j),B.O),j,j,j,B.dW,j,j,j)
 r=A.N("Registro R\xe1pido",j,j,j,A.cp().$3$color$fontSize$fontWeight(B.C,16,B.o),j,j,j)
 q=t.w
 o=A.af(a,j,q).w.a.a>=600?4:2
