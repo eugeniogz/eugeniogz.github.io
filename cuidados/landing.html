@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>+afeto - Acompanhamento Diário de Idosos</title>
+  <meta name="description" content="O aplicativo +afeto conecta familiares e cuidadores para registrar medicamentos, sinais vitais e rotinas de cuidados diários com segurança e criptografia ativa.">
+  
+  <!-- Fontes Premium -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --color-primary: #0f766e;
+      --color-primary-dark: #115e59;
+      --color-primary-light: #ccfbf1;
+      --color-accent: #0d9488;
+      --color-bg-gradient: linear-gradient(135deg, #f0fdfa 0%, #e0f2fe 100%);
+      --color-text-main: #0f172a;
+      --color-text-muted: #475569;
+      --font-title: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--color-text-main);
+      background: var(--color-bg-gradient);
+      min-height: 100vh;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Header e Navegação */
+    header {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      font-family: var(--font-title);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--color-primary);
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--color-text-muted);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--color-primary);
+    }
+
+    /* Hero Section */
+    .hero {
+      max-width: 1200px;
+      margin: 40px auto 80px auto;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .hero-content {
+      flex: 1;
+      animation: fadeInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: var(--color-primary-light);
+      color: var(--color-primary-dark);
+      padding: 6px 16px;
+      border-radius: 99px;
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      letter-spacing: 0.5px;
+    }
+
+    h1 {
+      font-family: var(--font-title);
+      font-size: 56px;
+      line-height: 1.15;
+      font-weight: 900;
+      color: var(--color-primary-dark);
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .hero-desc {
+      font-size: 18px;
+      color: var(--color-text-muted);
+      margin-bottom: 36px;
+      max-width: 540px;
+    }
+
+    /* Botões de Download */
+    .download-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background-color: #0f172a;
+      color: white;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 14px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.15);
+    }
+
+    .btn-download:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(15, 23, 42, 0.25);
+      background-color: var(--color-primary-dark);
+    }
+
+    .btn-download svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+
+    .btn-download .btn-text {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .btn-download .btn-text span:first-child {
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+
+    .btn-download .btn-text span:last-child {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .hero-image-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      animation: fadeInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Mockup do App */
+    .app-mockup {
+      width: 320px;
+      height: 640px;
+      background-color: #1e293b;
+      border-radius: 40px;
+      border: 12px solid #0f172a;
+      box-shadow: 0 30px 60px rgba(15, 23, 42, 0.25);
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mockup-screen {
+      background-color: white;
+      flex: 1;
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .mockup-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .mockup-logo {
+      width: 32px;
+      height: 32px;
+    }
+
+    .mockup-title {
+      font-family: var(--font-title);
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--color-primary);
+    }
+
+    .mockup-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .mockup-card-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .mockup-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+    }
+
+    .mockup-check {
+      width: 14px;
+      height: 14px;
+      border-radius: 4px;
+      border: 1px solid var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      background-color: var(--color-primary);
+      font-size: 8px;
+    }
+
+    .mockup-check.empty {
+      background-color: transparent;
+    }
+
+    .mockup-vitals {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    .mockup-vital-badge {
+      background: var(--color-primary-light);
+      color: var(--color-primary-dark);
+      padding: 8px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    /* Seção de Funcionalidades */
+    .features {
+      background-color: white;
+      padding: 100px 24px;
+    }
+
+    .section-header {
+      max-width: 800px;
+      margin: 0 auto 60px auto;
+      text-align: center;
+    }
+
+    .section-header h2 {
+      font-family: var(--font-title);
+      font-size: 40px;
+      font-weight: 800;
+      color: var(--color-primary-dark);
+      margin-bottom: 16px;
+    }
+
+    .grid-features {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+    }
+
+    .feature-card {
+      padding: 32px;
+      border-radius: 20px;
+      border: 1px solid #f1f5f9;
+      background-color: #f8fafc;
+      transition: all 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.05);
+      border-color: var(--color-primary-light);
+    }
+
+    .feature-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background-color: var(--color-primary-light);
+      color: var(--color-primary-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+
+    .feature-card h3 {
+      font-family: var(--font-title);
+      font-size: 20px;
+      color: var(--color-primary-dark);
+      margin-bottom: 12px;
+    }
+
+    .feature-card p {
+      color: var(--color-text-muted);
+      font-size: 15px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0f172a;
+      color: #94a3b8;
+      padding: 60px 24px;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .copyright {
+      font-size: 13px;
+      border-top: 1px solid #1e293b;
+      width: 100%;
+      padding-top: 24px;
+      margin-top: 24px;
+    }
+
+    /* Animações CSS */
+    @keyframes fadeInLeft {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    /* Responsividade */
+    @media (max-width: 968px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+      }
+      .hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .download-buttons {
+        justify-content: center;
+      }
+      h1 {
+        font-size: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menu Superior -->
+  <header>
+    <a href="#" class="brand">
+      <img src="favicon.png" alt="Logo +afeto" class="logo">
+      <span class="brand-name">+afeto</span>
+    </a>
+    <nav class="nav-links">
+      <a href="politica-de-privacidade.html">Política de Privacidade</a>
+    </nav>
+  </header>
+
+  <!-- Seção Principal -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="badge">Acompanhamento Diário de Idosos</span>
+      <h1>Cuide de quem você ama, com mais afeto.</h1>
+      <p class="hero-desc">
+        O +afeto conecta familiares e cuidadores em tempo real para um monitoramento seguro, prático e criptografado da rotina e saúde do idoso.
+      </p>
+      <div class="download-buttons">
+        <a href="#" class="btn-download">
+          <svg viewBox="0 0 24 24">
+            <path d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M17.5,12A1.5,1.5 0 0,0 16,10.5H14V13.5H16A1.5,1.5 0 0,0 17.5,12M16,7.5H13V9H16A1.5,1.5 0 0,0 17.5,7.5A1.5,1.5 0 0,0 16,6H13V7.5M14,15H13V18H14A1.5,1.5 0 0,0 15.5,16.5A1.5,1.5 0 0,0 14,15Z" />
+          </svg>
+          <div class="btn-text">
+            <span>Disponível no</span>
+            <span>Google Play</span>
+          </div>
+        </a>
+        <a href="#" class="btn-download">
+          <svg viewBox="0 0 24 24">
+            <path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.1,16.67C20.08,16.74 19.67,18.11 18.71,19.5M15.97,4.17C16.63,3.37 17.07,2.28 16.95,1C16,1.04 14.9,1.6 14.24,2.38C13.68,3.04 13.19,4.14 13.34,5.39C14.39,5.47 15.4,4.88 15.97,4.17Z" />
+          </svg>
+          <div class="btn-text">
+            <span>Baixar na</span>
+            <span>App Store</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <div class="hero-image-container">
+      <!-- Mockup do App Interativo -->
+      <div class="app-mockup">
+        <div class="mockup-screen">
+          <div class="mockup-header">
+            <img src="favicon.png" alt="" class="mockup-logo">
+            <span class="mockup-title">Acompanhamento</span>
+          </div>
+          
+          <div class="mockup-card">
+            <div class="mockup-card-title">
+              <span>Medicamentos</span>
+              <span style="color: #64748b; font-size: 10px;">Abaixo do Limite</span>
+            </div>
+            <div class="mockup-item">
+              <div class="mockup-check">✓</div>
+              <span>Paracetamol 500mg — 08:00</span>
+            </div>
+            <div class="mockup-item">
+              <div class="mockup-check empty"></div>
+              <span>Losartana 50mg — 20:00</span>
+            </div>
+          </div>
+          
+          <div class="mockup-card">
+            <div class="mockup-card-title">
+              <span>Sinais Vitais</span>
+            </div>
+            <div class="mockup-vitals">
+              <div class="mockup-vital-badge">PA: 12/8</div>
+              <div class="mockup-vital-badge">Glicemia: 98 mg/dL</div>
+              <div class="mockup-vital-badge">Saturação: 97%</div>
+              <div class="mockup-vital-badge">Temp: 36.4°C</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Recursos -->
+  <section class="features">
+    <div class="section-header">
+      <h2>Tudo o que você precisa em um só lugar</h2>
+      <p style="font-size: 18px; color: var(--color-text-muted);">
+        O +afeto foi desenhado por familiares para cuidadores, oferecendo usabilidade, clareza e segurança completa.
+      </p>
+    </div>
+    
+    <div class="grid-features">
+      <div class="feature-card">
+        <div class="feature-icon">💊</div>
+        <h3>Checklist de Remédios</h3>
+        <p>Acompanhe doses administradas, horários e limites de medicamentos temporários sem complicação.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>Sinais Vitais</h3>
+        <p>Registre Pressão Arterial, Glicemia, Respiração, Temperatura e Oxigenação de forma limpa e intuitiva.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>Criptografia Ativa</h3>
+        <p>Garantia de segurança máxima com chaves de criptografia geradas localmente no seu smartphone.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="footer-content">
+      <a href="#" class="brand">
+        <span class="brand-name" style="color: white;">+afeto</span>
+      </a>
+      <div class="footer-links">
+        <a href="politica-de-privacidade.html">Política de Privacidade</a>
+        <a href="mailto:contato@wingene.com.br">Suporte por E-mail</a>
+      </div>
+      <div class="copyright">
+        &copy; 2026 Wingene. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
