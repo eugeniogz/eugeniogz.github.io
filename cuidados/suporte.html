@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suporte e Ajuda - +afeto</title>
+  <meta name="description" content="Central de Suporte e Ajuda do aplicativo +afeto. Tire suas dúvidas nas perguntas frequentes ou entre em contato direto com o suporte.">
+  
+  <!-- Fontes Premium -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Variáveis do Sistema de Design */
+    :root {
+      --color-primary: #0d9488;
+      --color-primary-dark: #115e59;
+      --color-primary-light: #ccfbf1;
+      --color-bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #115e59 100%);
+      --color-text-main: #1e293b;
+      --color-text-muted: #64748b;
+      --color-card-bg: rgba(255, 255, 255, 0.95);
+      --font-title: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    /* Reset Geral */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--color-text-main);
+      background: var(--color-bg-gradient);
+      background-attachment: fixed;
+      min-height: 100vh;
+      line-height: 1.6;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Barra de Progresso de Leitura */
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background-color: var(--color-primary);
+      width: 0%;
+      z-index: 1000;
+      transition: width 0.1s ease-out;
+    }
+
+    /* Container Principal */
+    .container {
+      max-width: 800px;
+      width: 100%;
+      background: var(--color-card-bg);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      padding: 48px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Header Styling */
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      border-bottom: 2px solid var(--color-primary-light);
+      padding-bottom: 24px;
+    }
+
+    .logo-container {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-primary-light);
+      color: var(--color-primary-dark);
+      width: 64px;
+      height: 64px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      font-size: 32px;
+      box-shadow: 0 8px 16px rgba(13, 148, 136, 0.2);
+      animation: pulse 2s infinite;
+    }
+
+    h1 {
+      font-family: var(--font-title);
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--color-primary-dark);
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: var(--color-text-muted);
+      font-weight: 500;
+    }
+
+    /* Corpo do Texto */
+    .content-section {
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      font-family: var(--font-title);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 20px;
+      background-color: var(--color-primary);
+      border-radius: 3px;
+    }
+
+    /* FAQ Collapsible Elements */
+    details {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      padding: 16px;
+      transition: all 0.3s ease;
+    }
+
+    details[open] {
+      background: #fff;
+      border-color: var(--color-primary);
+      box-shadow: 0 4px 12px rgba(13, 148, 136, 0.05);
+    }
+
+    summary {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--color-primary-dark);
+      cursor: pointer;
+      outline: none;
+      user-select: none;
+    }
+
+    details p {
+      font-size: 14px;
+      color: #475569;
+      margin-top: 12px;
+      line-height: 1.6;
+    }
+
+    /* Formulário de Suporte */
+    .support-form {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-primary-dark);
+      margin-bottom: 6px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      font-family: var(--font-body);
+      font-size: 14px;
+      padding: 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      outline: none;
+      background: white;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background-color: var(--color-primary);
+      color: white;
+      border: none;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px;
+      border-radius: 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
+    }
+
+    .btn-submit:hover {
+      background-color: var(--color-primary-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(13, 148, 136, 0.3);
+    }
+
+    /* Rodapé do Cartão */
+    footer.card-footer {
+      margin-top: 48px;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 24px;
+      text-align: center;
+    }
+
+    .btn-contact {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: transparent;
+      color: var(--color-primary);
+      border: 1px solid var(--color-primary);
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 14px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-contact:hover {
+      background-color: var(--color-primary-light);
+      transform: translateY(-2px);
+    }
+
+    /* Botão Voltar ao Topo */
+    #back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--color-primary);
+      color: white;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 999;
+      font-weight: bold;
+    }
+
+    #back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #back-to-top:hover {
+      background-color: var(--color-primary-dark);
+      transform: scale(1.1);
+    }
+
+    /* Animações */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.4);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(13, 148, 136, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(13, 148, 136, 0);
+      }
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      body {
+        padding: 20px 10px;
+      }
+      .container {
+        padding: 24px;
+        border-radius: 16px;
+      }
+      h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de Progresso -->
+  <div id="progress-bar"></div>
+
+  <!-- Container Principal -->
+  <main class="container" id="main-content">
+    
+    <header>
+      <div class="logo-container">➕</div>
+      <h1 id="support-title">Suporte e Ajuda</h1>
+      <div class="subtitle">Central de Atendimento +afeto</div>
+    </header>
+
+    <!-- Seção 1: FAQ -->
+    <section class="content-section">
+      <h2 id="sec-faq">Perguntas Frequentes</h2>
+      
+      <details>
+        <summary>Como ler um convite de idoso?</summary>
+        <p>
+          Abra o aplicativo, vá para a tela inicial de configuração (ou clique no botão superior de alternar idoso e selecione "Conectar a outro idoso"). Lá, você poderá digitar o código recebido ou usar a câmera do seu celular para escanear o QR Code de convite da família.
+        </p>
+      </details>
+
+      <details>
+        <summary>O que acontece se eu me vincular no perfil errado?</summary>
+        <p>
+          Se você escaneou por engano o convite no perfil errado, não se preocupe! Basta ir na tela de seleção de idosos (clicando no botão de alternar idoso), identificar o idoso inserido por engano e clicar no botão "Desvincular" (ícone de link quebrado em vermelho). Isso removerá o idoso da sua conta e liberará o código do convite para ser escaneado novamente na conta correta.
+        </p>
+      </details>
+
+      <details>
+        <summary>Posso ser cuidador de um idoso e familiar de outro?</summary>
+        <p>
+          Sim! O +afeto é totalmente flexível. Seus papéis (Cuidador ou Familiar) são específicos para cada idoso vinculado. Você pode ser cadastrado como Cuidador no perfil do Idoso A e Familiar no perfil do Idoso B, mudando de papel dinamicamente no painel ao alternar os perfis.
+        </p>
+      </details>
+
+      <details>
+        <summary>Como recuperar os dados do idoso se eu trocar de celular?</summary>
+        <p>
+          Os registros de diário e medicação são salvos de forma criptografada na nuvem. Ao acessar sua conta no novo celular, você precisará ter em mãos a <strong>frase secreta de segurança (senha criptográfica)</strong> do idoso correspondente para descriptografar os registros e carregar o histórico.
+        </p>
+      </details>
+    </section>
+
+    <!-- Seção 2: Form de Envio -->
+    <section class="content-section">
+      <h2>Relatar um Problema</h2>
+      <form class="support-form" id="contact-form">
+        <div class="form-group">
+          <label for="input-name">Seu Nome</label>
+          <input type="text" id="input-name" placeholder="Digite seu nome" required>
+        </div>
+
+        <div class="form-group">
+          <label for="input-email">Seu E-mail</label>
+          <input type="email" id="input-email" placeholder="Digite seu e-mail de cadastro" required>
+        </div>
+
+        <div class="form-group">
+          <label for="select-category">Categoria do Problema</label>
+          <select id="select-category" required>
+            <option value="Dificuldade com QR Code / Convite">Dificuldade com QR Code / Convite</option>
+            <option value="Problema de Conexão ou Login">Problema de Conexão ou Login</option>
+            <option value="Erro ao Cadastrar/Editar Medicamentos">Erro ao Cadastrar/Editar Medicamentos</option>
+            <option value="Erro no Chat ou Histórico">Erro no Chat ou Histórico</option>
+            <option value="Sugestão ou Outros">Sugestão ou Outros</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="text-description">Descrição detalhada do ocorrido</label>
+          <textarea id="text-description" rows="5" placeholder="Descreva o problema que você encontrou..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">
+          <span>📧</span> Enviar por E-mail
+        </button>
+      </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="card-footer">
+      <p style="font-size: 13px; color: var(--color-text-muted); margin-bottom: 16px;">
+        Caso prefira, você pode enviar um e-mail diretamente com anexos e capturas de tela.
+      </p>
+      <a href="mailto:suporte@wingene.com.br" class="btn-contact">
+        📧 suporte@wingene.com.br
+      </a>
+    </footer>
+
+  </main>
+
+  <!-- Botão voltar ao topo -->
+  <button id="back-to-top" title="Voltar ao topo" aria-label="Voltar ao topo">▲</button>
+
+  <!-- Script de Interatividade e Envio -->
+  <script>
+    // Barra de progresso ao rolar a página
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+
+      // Mostrar/Esconder botão de Voltar ao Topo
+      const backToTopBtn = document.getElementById('back-to-top');
+      if (winScroll > 300) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    });
+
+    // Ação do botão voltar ao topo
+    document.getElementById('back-to-top').addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Manipulador do Formulário
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const name = document.getElementById('input-name').value.trim();
+      const email = document.getElementById('input-email').value.trim();
+      const category = document.getElementById('select-category').value;
+      const description = document.getElementById('text-description').value.trim();
+
+      const subject = `[+afeto Suporte] ${category}`;
+      const body = `Nome: ${name}\nE-mail: ${email}\nCategoria: ${category}\n\nDescrição do Problema:\n${description}\n\n----------------------------------------\nEnviado através do site de suporte.\n`;
+
+      const mailtoUrl = `mailto:suporte@wingene.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      
+      window.location.href = mailtoUrl;
+    });
+  </script>
+</body>
+</html>
