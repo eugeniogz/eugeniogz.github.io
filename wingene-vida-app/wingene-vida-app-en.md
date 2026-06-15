@@ -68,7 +68,7 @@ The method structures your daily journaling into four essential pillars:
 ## 📞 Support and Contact
 
 If you have any questions, encounter any issues, or would like to suggest new features, feel free to reach out to us at:  
-✉️ **[eugenio@wingene.com.br](mailto:eugenio@wingene.com.br)**
+✉️ **[suporte@wingene.com.br](mailto:suporte@wingene.com.br)**
 
 ---
 

@@ -68,7 +68,7 @@ O método organiza a sua reflexão diária em quatro pilares fundamentais:
 ## 📞 Suporte e Contato
 
 Se tiver dúvidas, encontrar algum comportamento inesperado ou quiser sugerir melhorias para o aplicativo, entre em contato diretamente pelo e-mail:  
-✉️ **[eugenio@wingene.com.br](mailto:eugenio@wingene.com.br)**
+✉️ **[suporte@wingene.com.br](mailto:suporte@wingene.com.br)**
 
 ---
 

@@ -56,7 +56,7 @@ Luzes da aurora,
 
 manhã a brilhar.
 
-Vive o agora,
+Vivem o agora,
 
 artistas a dançar.
 
