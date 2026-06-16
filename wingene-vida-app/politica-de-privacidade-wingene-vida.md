@@ -82,4 +82,4 @@ Podemos atualizar nossa Política de Privacidade de tempos em tempos. Recomendam
 
 #### Contato
 
-Se você tiver alguma dúvida ou sugestão sobre a nossa Política de Privacidade ou o tratamento dos seus dados, entre em contato conosco através do e-mail: **[eugenio@wingene.com.br]**.
+Se você tiver alguma dúvida ou sugestão sobre a nossa Política de Privacidade ou o tratamento dos seus dados, entre em contato conosco através do e-mail: **[suporte@wingene.com.br]**.
