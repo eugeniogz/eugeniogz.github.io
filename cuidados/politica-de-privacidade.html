@@ -320,13 +320,15 @@
     <section class="content-section">
       <h2 id="sec-data">2. Informações que Coletamos</h2>
       <p>
-        Para prover as funcionalidades de monitoramento 24 horas, o +afeto coleta ou utiliza os seguintes tipos de dados e recursos:
+        Para prover as funcionalidades de monitoramento 24 horas e manter a viabilidade técnica do serviço, o +afeto coleta ou utiliza os seguintes tipos de dados e recursos:
       </p>
       <ul>
         <li><strong>Dados Cadastrais do Usuário:</strong> Nome completo, endereço de e-mail e função declarada (Familiar ou Cuidador).</li>
         <li><strong>Perfil do Idoso:</strong> Nome do idoso vinculado para fins exclusivos de relatórios e diário de atividades.</li>
         <li><strong>Registros Diários de Acompanhamento:</strong> Informações de rotina alimentar, idas ao banheiro, aferição de sinais vitais (pressão arterial, temperatura, frequência cardíaca), observações escritas e o checklist de medicamentos administrados.</li>
         <li><strong>Permissão de Câmera (Hardware):</strong> O aplicativo solicita acesso à câmera do dispositivo do cuidador unicamente para fins de leitura e escaneamento do QR Code de convite familiar. O processamento da imagem do QR Code ocorre inteiramente de forma local no seu aparelho. Nenhuma imagem, foto ou vídeo é coletado, transmitido para nossos servidores ou compartilhado com terceiros.</li>
+        <li><strong>Dados de Uso e Diagnóstico (Analytics e Crashlytics):</strong> Informações anônimas e pseudônimas sobre o desempenho do app, relatórios de falhas de sistema (crash logs), modelo do aparelho e versão do sistema operacional para nos ajudar a identificar erros e melhorar a estabilidade.</li>
+        <li><strong>Identificadores de Dispositivo e Publicidade (AdMob):</strong> O identificador de anúncios do sistema operacional (como ADID no Android ou IDFA no iOS) e dados sobre a interação com anúncios exibidos no aplicativo, usados unicamente para fins de publicidade integrada.</li>
       </ul>
     </section>
 
@@ -346,14 +348,25 @@
       </p>
     </section>
 
-    <!-- Seção 4: Compartilhamento de Dados -->
+    <!-- Seção 4: Compartilhamento de Dados e Serviços de Terceiros -->
     <section class="content-section">
-      <h2 id="sec-sharing">4. Compartilhamento de Informações</h2>
+      <h2 id="sec-sharing">4. Compartilhamento de Informações e Serviços de Terceiros</h2>
       <p>
-        <strong>Nós não vendemos nem compartilhamos seus dados com anunciantes ou terceiros.</strong>
+        <strong>Nós não vendemos nem compartilhamos suas informações pessoais de saúde ou registros diários com anunciantes ou terceiros.</strong>
       </p>
       <p>
-        O compartilhamento de registros e logs ocorre única e exclusivamente de forma interna no aplicativo, entre os usuários (familiares e cuidadores) que ativamente inserirem o <strong>Código de Convite do Idoso</strong> correspondente. Você tem total controle sobre quem possui acesso à visualização do painel do idoso através do gerenciamento deste código de convite.
+        O compartilhamento interno dos registros criptografados do idoso ocorre única e exclusivamente de forma interna no aplicativo, entre os usuários (familiares e cuidadores) que ativamente inserirem o <strong>Código de Convite do Idoso</strong> correspondente.
+      </p>
+      <p>
+        No entanto, para garantir o funcionamento técnico, análise de estabilidade e veiculação de anúncios que viabilizam o aplicativo de forma gratuita, integramos serviços confiáveis prestados pelo Google:
+      </p>
+      <ul>
+        <li><strong>Google Analytics para Firebase:</strong> Usado para coletar dados agregados de comportamento e uso das telas do aplicativo (como cliques e sessões ativas). Essas informações são tratadas de forma pseudônima e servem apenas para entender a usabilidade do app.</li>
+        <li><strong>Firebase Crashlytics:</strong> Coleta logs de diagnóstico e relatórios em caso de falhas ou travamentos (crash logs). Esses dados contêm apenas especificações técnicas do aparelho e do erro ocorrido, sem conter nenhuma informação pessoal dos cuidadores ou idosos.</li>
+        <li><strong>Google Mobile Ads (AdMob):</strong> Exibe publicidade nativa integrada de forma discreta na timeline e telas do app. O SDK do AdMob pode coletar identificadores de dispositivo (como IDFA no iOS e ADID no Android), dados de rede e interações básicas com os blocos de publicidade.</li>
+      </ul>
+      <p>
+        Você pode desativar o rastreamento ou a personalização de anúncios a qualquer momento acessando as configurações de privacidade do seu sistema operacional Android ou iOS.
       </p>
     </section>
 
