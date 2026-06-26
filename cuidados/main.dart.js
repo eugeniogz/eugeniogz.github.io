@@ -63324,7 +63324,7 @@ if(m)try{m=$.aC
 o=(m==null?$.aC=$.c4():m).bK("[DEFAULT]")
 A.bo(o,$.cb(),!0)
 m=A.ds(new A.bL(o))
-m.gh4().syk(m.gh4().gyk().aIr(52428800,null,!0,null,null,null,null,null))}catch(l){p=A.X(l)
+m.gh4().syk(m.gh4().gyk().aIr(52428800,null,!1,null,null,null,null,null))}catch(l){p=A.X(l)
 A.cO().$1("Erro ao configurar persist\xeancia do Firestore: "+A.k(p))}else q.a39()
 return A.v(null,r)}})
 return A.w($async$ec,r)},
