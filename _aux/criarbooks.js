@@ -55,6 +55,8 @@ function gerarLivroComDocumentos(nomePastaRaiz = 'Wingene') {
             }
         }
         
+        compilarMicroblog(pastaFinalizados, pastaCompilados);
+        
         Logger.log('Compilação de todos os livros concluída com sucesso.');
 
     } catch (e) { 
@@ -204,7 +206,7 @@ function gerarLivro(nomeLivroComSubtitulo, pastaDestino, listaDocs, tipo, tipoSa
         // 2. Inserir Capa Padrão
         corpoLivro.appendParagraph(titulos[0]).setHeading(DocumentApp.ParagraphHeading.TITLE).setAlignment(DocumentApp.HorizontalAlignment.CENTER);
         if (titulos.length>1) corpoLivro.appendParagraph(titulos[1]).setHeading(DocumentApp.ParagraphHeading.SUBTITLE).setAlignment(DocumentApp.HorizontalAlignment.CENTER);
-        corpoLivro.appendParagraph("© José Assis").setHeading(DocumentApp.ParagraphHeading.HEADING1).setAlignment(DocumentApp.HorizontalAlignment.CENTER);
+        corpoLivro.appendParagraph("© José Eugênio").setHeading(DocumentApp.ParagraphHeading.HEADING1).setAlignment(DocumentApp.HorizontalAlignment.CENTER);
         if (tipoSaidaLivro) corpoLivro.appendPageBreak();
 
         if (extraContent && extraContent.prefacio) {
@@ -668,4 +670,261 @@ function coletarConteudoDePasta(pasta, pastaPaiNomeAtual, isRootFolder, listaDoc
         tipoSaidaLivro=coletarConteudoDePasta(subpastaFilha, subpastaFilha.getName(), false, listaDocs, extraContent) && tipoSaidaLivro;
     }
     return tipoSaidaLivro;
+}
+
+/**
+ * Compila os posts do microblog (arquivos .md da pasta _posts) em um único livro formatado no Google Docs.
+ * @param {GoogleAppsScript.Drive.Folder} pastaFinalizados A pasta raiz do projeto.
+ * @param {GoogleAppsScript.Drive.Folder} pastaCompilados A pasta onde o livro compilado deve ser salvo.
+ */
+function compilarMicroblog(pastaFinalizados, pastaCompilados) {
+    const NOME_LIVRO_COMPLETO = 'Microblog: A Wingene na Prática';
+    const titulos = splitComentario(NOME_LIVRO_COMPLETO);
+    const nomeLivro = titulos[0];
+
+    Logger.log('--- Iniciando coleta e compilação para o microblog: ' + NOME_LIVRO_COMPLETO + ' ---');
+
+    // 1. Localizar a pasta _posts
+    const pastasPosts = pastaFinalizados.getFoldersByName('_posts');
+    if (!pastasPosts.hasNext()) {
+        Logger.log('Pasta "_posts" não encontrada. Pulando compilação do microblog.');
+        return;
+    }
+    const pastaPosts = pastasPosts.next();
+    Logger.log('Pasta "_posts" localizada com ID: ' + pastaPosts.getId());
+
+    // 2. Coletar arquivos .md da pasta _posts
+    const arquivos = pastaPosts.getFiles();
+    const listaPosts = [];
+    let totalArquivosNaPasta = 0;
+    
+    while (arquivos.hasNext()) {
+        totalArquivosNaPasta++;
+        const arquivo = arquivos.next();
+        const nomeArquivo = arquivo.getName();
+        Logger.log('Arquivo encontrado na pasta _posts: "' + nomeArquivo + '" (MimeType: ' + arquivo.getMimeType() + ')');
+        if (nomeArquivo.endsWith('.md')) {
+            listaPosts.push({
+                file: arquivo,
+                nomeArquivo: nomeArquivo,
+                timestamp: arquivo.getLastUpdated().getTime()
+            });
+        }
+    }
+
+    Logger.log('Total de arquivos na pasta _posts: ' + totalArquivosNaPasta);
+    Logger.log('Total de arquivos .md identificados: ' + listaPosts.length);
+
+    if (listaPosts.length === 0) {
+        Logger.log('Nenhum arquivo markdown (.md) encontrado na pasta "_posts".');
+        return;
+    }
+
+    // Ordenar os arquivos alfabeticamente pelo nome (que começa com YYYY-MM-DD)
+    listaPosts.sort((a, b) => a.nomeArquivo.localeCompare(b.nomeArquivo));
+    Logger.log('Arquivos ordenados para compilação: ' + listaPosts.map(p => p.nomeArquivo).join(', '));
+
+    // 3. Verificar necessidade de compilação
+    const arquivosExistentes = pastaCompilados.getFilesByName(nomeLivro);
+    let precisaCompilar = true;
+
+    if (arquivosExistentes.hasNext()) {
+        const arquivoLivro = arquivosExistentes.next();
+        const timestampLivro = arquivoLivro.getLastUpdated().getTime();
+        
+        precisaCompilar = false;
+        for (const post of listaPosts) {
+            if (post.timestamp > timestampLivro) {
+                Logger.log(`[${nomeLivro}] O post "${post.nomeArquivo}" é mais recente que o livro. Recompilando.`);
+                precisaCompilar = true;
+                break;
+            }
+        }
+    } else {
+        Logger.log(`[${nomeLivro}] Livro não existe. Compilando pela primeira vez.`);
+    }
+
+    if (!precisaCompilar) {
+        Logger.log(`[${nomeLivro}] Nenhuma alteração nos posts. Compilação não é necessária.`);
+        return;
+    }
+
+    // 4. Criar ou abrir o documento do livro
+    let livro = null;
+    let arquivoLivro = null;
+    const arquivosExistentes2 = pastaCompilados.getFilesByName(nomeLivro);
+    
+    if (arquivosExistentes2.hasNext()) {
+        arquivoLivro = arquivosExistentes2.next();
+        livro = DocumentApp.openById(arquivoLivro.getId());
+        Logger.log('Abrindo livro existente: ' + nomeLivro + ' (ID: ' + livro.getId() + ')');
+    } else {
+        livro = DocumentApp.create(nomeLivro);
+        arquivoLivro = DriveApp.getFileById(livro.getId());
+        DriveApp.getRootFolder().removeFile(arquivoLivro);
+        pastaCompilados.addFile(arquivoLivro);
+        Logger.log('Criando novo livro: ' + nomeLivro + ' (ID: ' + livro.getId() + ')');
+    }
+
+    let corpoLivro = livro.getBody();
+    corpoLivro.clear();
+    livro.saveAndClose();
+    
+    // Reabrir para obter o corpo atualizado e limpo
+    livro = DocumentApp.openById(arquivoLivro.getId());
+    corpoLivro = livro.getBody();
+
+    // 5. Inserir Capa Padrão
+    corpoLivro.appendParagraph(titulos[0])
+        .setHeading(DocumentApp.ParagraphHeading.TITLE)
+        .setAlignment(DocumentApp.HorizontalAlignment.CENTER);
+    if (titulos.length > 1) {
+        corpoLivro.appendParagraph(titulos[1])
+            .setHeading(DocumentApp.ParagraphHeading.SUBTITLE)
+            .setAlignment(DocumentApp.HorizontalAlignment.CENTER);
+    }
+    corpoLivro.appendParagraph("© José Eugênio")
+        .setHeading(DocumentApp.ParagraphHeading.HEADING1)
+        .setAlignment(DocumentApp.HorizontalAlignment.CENTER);
+    corpoLivro.appendPageBreak();
+
+    // 6. Inserir conteúdo de cada post
+    let isFirst = true;
+    listaPosts.forEach(postMeta => {
+        if (!isFirst) {
+            corpoLivro.appendPageBreak();
+        }
+        isFirst = false;
+
+        const content = postMeta.file.getBlob().getDataAsString('UTF-8');
+        const post = parseMarkdownPost(content, postMeta.nomeArquivo);
+        Logger.log('Processando post: "' + postMeta.nomeArquivo + '" -> Título: "' + post.title + '", Data: "' + post.dateStr + '", Pilar: "' + post.pillar + '", Tamanho do corpo: ' + post.body.length);
+
+        // Título do post como HEADING1
+        corpoLivro.appendParagraph(post.title)
+            .setHeading(DocumentApp.ParagraphHeading.HEADING1)
+            .setAlignment(DocumentApp.HorizontalAlignment.LEFT);
+
+        // Metadados do post (data e pilar)
+        let metaText = '';
+        if (post.dateStr) {
+            metaText += post.dateStr;
+        }
+        if (post.pillar) {
+            if (metaText) metaText += ' | ';
+            metaText += 'Pilar: ' + post.pillar;
+        }
+        if (metaText) {
+            const metaPara = corpoLivro.appendParagraph(metaText);
+            metaPara.setItalic(true);
+            try {
+                const textObj = metaPara.editAsText();
+                textObj.setFontSize(10);
+                textObj.setFontFamily('Arial');
+            } catch (e) {}
+        }
+
+        // Espaço após metadados
+        corpoLivro.appendParagraph('');
+
+        // Conteúdo do post (corpo)
+        const paragraphs = post.body.split(/\n\n+/);
+        paragraphs.forEach(pText => {
+            if (pText.trim()) {
+                const p = corpoLivro.appendParagraph(pText.trim());
+                processMarkdownLinksInText(p);
+            }
+        });
+    });
+
+    livro.saveAndClose();
+    Logger.log('Compilação para "' + NOME_LIVRO_COMPLETO + '" concluída com sucesso.');
+}
+
+/**
+ * Auxiliar para analisar a estrutura do arquivo Markdown (.md) com suporte a BOM.
+ */
+function parseMarkdownPost(content, fileName) {
+    // Remover BOM se presente
+    const cleanContent = content.replace(/^\uFEFF/, '').trim();
+    
+    // Expressão regular para isolar o bloco de Front Matter
+    const fmRegex = /^---\s*(?:\r?\n)([\s\S]*?)(?:\r?\n)---\s*(?:\r?\n)([\s\S]*)$/;
+    const match = cleanContent.match(fmRegex);
+    
+    let title = '';
+    let dateStr = '';
+    let pillar = '';
+    let body = '';
+    
+    if (match) {
+        const fmText = match[1];
+        body = match[2].trim();
+        
+        // Analisar linhas do Front Matter
+        const lines = fmText.split(/\r?\n/);
+        lines.forEach(line => {
+            const matchTitle = line.match(/^title:\s*["']?(.*?)["']?$/i);
+            const matchDate = line.match(/^date:\s*["']?([^"'\s]+)/i); // Extrai o YYYY-MM-DD diretamente
+            const matchPillar = line.match(/^pillar:\s*["']?(.*?)["']?$/i);
+            if (matchTitle) {
+                title = matchTitle[1].trim();
+            } else if (matchDate) {
+                dateStr = matchDate[1].trim();
+            } else if (matchPillar) {
+                pillar = matchPillar[1].trim();
+            }
+        });
+    } else {
+        body = cleanContent;
+    }
+    
+    if (!title) {
+        title = fileName.replace(/\.md$/, '').replace(/^\d{4}-\d{2}-\d{2}-/, '');
+    }
+    
+    return {
+        title: title,
+        dateStr: dateStr,
+        pillar: pillar,
+        body: body
+    };
+}
+
+/**
+ * Auxiliar para converter links Markdown [texto](url) em links formatados no Google Docs.
+ */
+function processMarkdownLinksInText(elementoParagrafo) {
+    const textoCompleto = elementoParagrafo.getText();
+    const regexLink = /\[([^\]]+)\]\(([^)]+)\)/g;
+    const matches = [];
+    let match;
+    while ((match = regexLink.exec(textoCompleto)) !== null) {
+        let url = match[2];
+        if (!url.startsWith('http')) {
+            url = 'https://blog.wingene.com.br' + url;
+        }
+        matches.push({
+            index: match.index,
+            fullMatch: match[0],
+            text: match[1],
+            url: url
+        });
+    }
+    
+    if (matches.length > 0) {
+        const textObj = elementoParagrafo.editAsText();
+        for (let i = matches.length - 1; i >= 0; i--) {
+            const m = matches[i];
+            const start = m.index;
+            const end = m.index + m.fullMatch.length - 1;
+            const textLen = m.text.length;
+            
+            try {
+                textObj.deleteText(start + 1 + textLen, end);
+                textObj.deleteText(start, start);
+                textObj.setLinkUrl(start, start + textLen - 1, m.url);
+            } catch (e) {}
+        }
+    }
 }
