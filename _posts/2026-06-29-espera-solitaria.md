@@ -7,4 +7,4 @@ pillar: "Decisões"
 
 Em um passeio, a mente bailava nas esferas superiores, sentindo o prazer de voar além dos pensamentos e dos sentidos — a serena euforia. O tempo passava suave e a alegria era intensa.
 
-Instantes depois, sozinho na longa fila. A esposa e a filha a ver outras lojas. Ali, a serena euforia, a alegria, ganh novo significado: ser útil e colaborar, sem deixar de curtir o momento da espera ativa.
+Instantes depois, sozinho na longa fila. A esposa e a filha a ver outras lojas. Ali, a serena euforia, a alegria, ganha novo significado: ser útil e colaborar, sem deixar de curtir a espera ativa.
