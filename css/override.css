@@ -723,3 +723,122 @@ table th {
     opacity: 0.1;
   }
 }
+
+/* ==========================================================================
+   MICROBLOG / COTIDIANO CONSCIENTE (OPÇÃO A)
+   ========================================================================== */
+
+/* Definição de cores de fundo leves para cada pilar (complemento) */
+:root {
+  --color-decisions-light: rgba(14, 125, 15, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-decisions-light: rgba(82, 199, 85, 0.12);
+  }
+}
+
+.microblog-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  margin: 2rem 0;
+}
+
+.microblog-card {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 16px !important;
+  padding: 1.8rem !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.microblog-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* Bordas coloridas associadas a cada Pilar do método VIDA */
+.microblog-card.atencao {
+  border-left: 5px solid var(--color-attention-primary) !important;
+}
+.microblog-card.decisoes {
+  border-left: 5px solid var(--color-decisions-primary) !important;
+}
+.microblog-card.valores {
+  border-left: 5px solid var(--color-values-primary) !important;
+}
+.microblog-card.imperfeicoes {
+  border-left: 5px solid var(--color-imperfections-primary) !important;
+}
+
+.microblog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+/* Badges estilizadas para cada Pilar */
+.microblog-badge {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.microblog-badge.atencao {
+  background: var(--color-attention-light);
+  color: var(--color-attention-primary);
+}
+
+.microblog-badge.decisoes {
+  background: var(--color-decisions-light);
+  color: var(--color-decisions-primary);
+}
+
+.microblog-badge.valores {
+  background: var(--color-values-light);
+  color: var(--color-values-primary);
+}
+
+.microblog-badge.imperfeicoes {
+  background: var(--color-imperfections-light);
+  color: var(--color-imperfections-primary);
+}
+
+.microblog-date {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.microblog-card h3 {
+  margin: 0.4rem 0 0.8rem 0 !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+  color: var(--text-main) !important;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+
+.microblog-body {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: var(--text-main);
+}
+
+.microblog-body p {
+  margin: 0 0 1rem 0;
+}
+
+.microblog-body p:last-child {
+  margin-bottom: 0;
+}

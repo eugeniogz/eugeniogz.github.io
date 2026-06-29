@@ -97,7 +97,40 @@ description: Wingene é um projeto filosófico sobre herança, consciência, cri
 </div>
 </div>
 
+<hr>
 
+<h2>Cotidiano Consciente — A Wingene na Prática</h2>
+<p style="font-style: italic; color: var(--text-muted); margin-top: -0.5rem; margin-bottom: 2rem;">
+  Pequenos registros de atenção plena, propriocepção e a aplicação do método VIDA no dia a dia.
+</p>
+
+<div class="microblog-feed">
+  {% for post in site.posts %}
+    {% assign pillar_class = "atencao" %}
+    {% if post.pillar == "Decisões" %}
+      {% assign pillar_class = "decisoes" %}
+    {% elsif post.pillar == "Valores" %}
+      {% assign pillar_class = "valores" %}
+    {% elsif post.pillar == "Imperfeições" %}
+      {% assign pillar_class = "imperfeicoes" %}
+    {% endif %}
+    
+    <div class="microblog-card {{ pillar_class }}">
+      <div class="microblog-header">
+        <span class="microblog-badge {{ pillar_class }}">
+          {% if post.pillar %}{{ post.pillar }}{% else %}Atenção{% endif %}
+        </span>
+        <span class="microblog-date">{{ post.date | date: "%d/%m/%Y" }}</span>
+      </div>
+      <h3>{{ post.title }}</h3>
+      <div class="microblog-body">
+        {{ post.content }}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<hr>
 
 <h2>Ensaios em destaque</h2>
 
@@ -129,9 +162,32 @@ José Eugênio é autor do projeto <strong>Wingene</strong>, ensaios filosófico
 
 <script>
   var quotes = [
-    {% for post in site.posts %}
-      {{ post.content | strip_html | strip_newlines | truncatewords: 30 | jsonify }},
-    {% endfor %}
+    "Viver: ausência presente",
+    "Distração: atenção ao vazio",
+    "Solitude: árvore que sente floresta",
+    "Esquecer tece lembranças",
+    "Tecer virtudes, semear atitudes",
+    "Vida breve, rotas eternas",
+    "Serena euforia: a mente transcende a mente",
+    "Exemplo: giz invisível",
+    "Dogma: cárcere da verdade",
+    "Eudaimonia: cadência do pulsar e pensar",
+    "Espírito: matéria que baila consciente",
+    "A matéria é instrumento; a sinapse é música",
+    "Recordar: seiva que adoça alegria",
+    "Informação exige validade, conhecimento clama liberdade",
+    "Serena euforia: horizonte que amplia",
+    "Pensamento: sentir que a razão refinou",
+    "Descobrir é inventar o raro",
+    "Brilham alegrias em infinitas cosmogonias",
+    "Amor: divino que habita o humano",
+    "Evolução: revolução constante, utopia distante",
+    "A ciência ilumina a metafísica com os dourados fios do conhecimento",
+    "Existir é perceber os detalhes que quebram a monotonia",
+    "Os pilares da felicidade: Criar, Amar, Recordar e Evoluir (CARE)",
+    "O natural rasga o frio asfalto",
+    "🖋️ Do que escrevo: rara a originalidade, seiva da liberdade",
+    "Viver tece tons indescritíveis"
   ];
 
   let index = 0;
