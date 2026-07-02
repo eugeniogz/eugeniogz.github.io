@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Política de Privacidade - +afeto</title>
   <meta name="description" content="Política de Privacidade do aplicativo +afeto. Saiba como protegemos seus dados e as informações de acompanhamento de idosos com criptografia ativa.">
+  
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8487113593719134"
+     crossorigin="anonymous"></script>
   <link rel="icon" type="image/png" href="favicon.png">
   
   <!-- Fontes Premium -->
@@ -287,6 +291,77 @@
         font-size: 26px;
       }
     }
+
+    /* Estilos Premium para Google AdSense */
+    .ad-container {
+      margin: 24px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+    }
+
+    .ad-label {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--color-text-muted);
+      font-weight: 600;
+      opacity: 0.7;
+    }
+
+    .ad-wrapper {
+      width: 100%;
+      min-height: 90px;
+      background: #f8fafc;
+      border: 1px dashed rgba(13, 148, 136, 0.25);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      transition: all 0.3s ease;
+      box-shadow: inset 0 2px 4px rgba(13, 148, 136, 0.02);
+    }
+
+    .ad-wrapper:hover {
+      border-color: var(--color-primary);
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(13, 148, 136, 0.05);
+    }
+
+    .ad-placeholder-text {
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: var(--color-primary-dark);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      opacity: 0.8;
+      position: absolute;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .ad-placeholder-text svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--color-primary);
+      animation: rotate 4s linear infinite;
+    }
+
+    /* Ocultar o placeholder quando o anúncio do AdSense for preenchido e exibido */
+    ins.adsbygoogle[data-ad-status="filled"] + .ad-placeholder-text {
+      display: none;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
   </style>
 </head>
 <body>
@@ -328,7 +403,7 @@
         <li><strong>Registros Diários de Acompanhamento:</strong> Informações de rotina alimentar, idas ao banheiro, aferição de sinais vitais (pressão arterial, temperatura, frequência cardíaca), observações escritas e o checklist de medicamentos administrados.</li>
         <li><strong>Permissão de Câmera (Hardware):</strong> O aplicativo solicita acesso à câmera do dispositivo do cuidador unicamente para fins de leitura e escaneamento do QR Code de convite familiar. O processamento da imagem do QR Code ocorre inteiramente de forma local no seu aparelho. Nenhuma imagem, foto ou vídeo é coletado, transmitido para nossos servidores ou compartilhado com terceiros.</li>
         <li><strong>Dados de Uso e Diagnóstico (Analytics e Crashlytics):</strong> Informações anônimas e pseudônimas sobre o desempenho do app, relatórios de falhas de sistema (crash logs), modelo do aparelho e versão do sistema operacional para nos ajudar a identificar erros e melhorar a estabilidade.</li>
-        <li><strong>Identificadores de Dispositivo e Publicidade (AdMob):</strong> O identificador de anúncios do sistema operacional (como ADID no Android ou IDFA no iOS) e dados sobre a interação com anúncios exibidos no aplicativo, usados unicamente para fins de publicidade integrada.</li>
+        <li><strong>Identificadores de Dispositivo e Publicidade (AdMob e AdSense):</strong> O identificador de anúncios do sistema operacional (como ADID no Android ou IDFA no iOS), dados sobre a rede, cookies de navegação e interações com anúncios exibidos no aplicativo ou em nossa plataforma web (AdSense), usados unicamente para fins de publicidade integrada e estatísticas de exibição.</li>
       </ul>
     </section>
 
@@ -364,9 +439,10 @@
         <li><strong>Google Analytics para Firebase:</strong> Usado para coletar dados agregados de comportamento e uso das telas do aplicativo (como cliques e sessões ativas). Essas informações são tratadas de forma pseudônima e servem apenas para entender a usabilidade do app.</li>
         <li><strong>Firebase Crashlytics:</strong> Coleta logs de diagnóstico e relatórios em caso de falhas ou travamentos (crash logs). Esses dados contêm apenas especificações técnicas do aparelho e do erro ocorrido, sem conter nenhuma informação pessoal dos cuidadores ou idosos.</li>
         <li><strong>Google Mobile Ads (AdMob):</strong> Exibe publicidade nativa integrada de forma discreta na timeline e telas do app. O SDK do AdMob pode coletar identificadores de dispositivo (como IDFA no iOS e ADID no Android), dados de rede e interações básicas com os blocos de publicidade.</li>
+        <li><strong>Google AdSense (Versão Web):</strong> Utilizado para veicular anúncios de publicidade contextual e personalizada no nosso portal de suporte e landing page web. O AdSense utiliza cookies de terceiros para exibir anúncios com base em visitas anteriores dos usuários a este ou a outros sites na internet. Você pode optar por desativar a publicidade personalizada acessando as configurações de anúncios do Google.</li>
       </ul>
       <p>
-        Você pode desativar o rastreamento ou a personalização de anúncios a qualquer momento acessando as configurações de privacidade do seu sistema operacional Android ou iOS.
+        Você pode desativar o rastreamento ou a personalização de anúncios a qualquer momento acessando as configurações de privacidade do seu dispositivo (Android ou iOS) ou as preferências de cookies e anúncios de seu navegador web.
       </p>
     </section>
 
@@ -392,6 +468,26 @@
         Poderemos atualizar esta Política de Privacidade periodicamente para refletir mudanças no aplicativo, melhorias de segurança ou novas exigências legais. Quando modificada, atualizaremos a data da "Última atualização" listada no topo deste documento.
       </p>
     </section>
+
+    <!-- Google AdSense - Banner da Política de Privacidade -->
+    <div class="ad-container">
+      <div class="ad-label">Publicidade</div>
+      <div class="ad-wrapper">
+        <ins class="adsbygoogle"
+             style="display:block; min-width: 250px; width: 100%; height: 90px;"
+             data-ad-client="ca-pub-8487113593719134"
+             data-ad-slot="2604818895"
+             data-ad-format="horizontal"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <div class="ad-placeholder-text">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+          Espaço reservado para anúncio
+        </div>
+      </div>
+    </div>
 
     <!-- Rodapé -->
     <footer class="card-footer">

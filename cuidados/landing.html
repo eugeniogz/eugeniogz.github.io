@@ -6,6 +6,10 @@
   <title>+afeto - Acompanhamento Diário de Idosos</title>
   <meta name="description" content="O aplicativo +afeto conecta familiares e cuidadores para registrar medicamentos, sinais vitais e rotinas de cuidados diários com segurança e criptografia ativa.">
   
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8487113593719134"
+     crossorigin="anonymous"></script>
+  
   <!-- Fontes Premium -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -429,6 +433,79 @@
       h1 {
         font-size: 40px;
       }
+    }
+
+    /* Estilos Premium para Google AdSense */
+    .ad-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .ad-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--color-text-muted);
+      font-weight: 600;
+      opacity: 0.7;
+    }
+
+    .ad-wrapper {
+      width: 100%;
+      min-height: 90px;
+      background: rgba(255, 255, 255, 0.4);
+      border: 1px dashed rgba(15, 118, 110, 0.25);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      transition: all 0.3s ease;
+      box-shadow: inset 0 2px 4px rgba(15, 118, 110, 0.02);
+      backdrop-filter: blur(8px);
+    }
+
+    .ad-wrapper:hover {
+      border-color: var(--color-primary);
+      background: rgba(255, 255, 255, 0.6);
+      box-shadow: 0 10px 20px rgba(15, 118, 110, 0.05);
+    }
+
+    .ad-placeholder-text {
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: var(--color-primary-dark);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      opacity: 0.8;
+      position: absolute;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .ad-placeholder-text svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--color-primary);
+      animation: rotate 4s linear infinite;
+    }
+
+    /* Ocultar o placeholder quando o anúncio do AdSense for preenchido e exibido */
+    ins.adsbygoogle[data-ad-status="filled"] + .ad-placeholder-text {
+      display: none;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
   </style>
 </head>
