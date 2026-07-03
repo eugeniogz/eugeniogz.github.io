@@ -34,6 +34,10 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: var(--font-body);
       color: var(--color-text-main);
@@ -681,6 +685,94 @@
       color: var(--color-primary-dark);
       box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
     }
+
+    /* Teaser Comparativo */
+    .comparison-teaser {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(255, 255, 255, 0.75);
+      border: 1px solid rgba(15, 118, 110, 0.18);
+      border-radius: 16px;
+      padding: 14px 20px;
+      margin-bottom: 28px;
+      max-width: 580px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(15, 118, 110, 0.04);
+      animation: fadeInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+    }
+
+    .teaser-icon {
+      font-size: 22px;
+      animation: pulse-icon 2s infinite ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .teaser-text {
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--color-text-muted);
+      text-align: left;
+    }
+
+    .teaser-text strong {
+      color: var(--color-primary-dark);
+    }
+
+    .teaser-text a {
+      color: var(--color-primary);
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-left: 2px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .teaser-text a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: var(--color-accent);
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+
+    .teaser-text a:hover {
+      color: var(--color-accent);
+    }
+
+    .teaser-text a:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    @keyframes pulse-icon {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+    }
+
+    @media (max-width: 968px) {
+      .comparison-teaser {
+        flex-direction: column;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 8px;
+        padding: 16px;
+      }
+      .teaser-text {
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -704,6 +796,13 @@
       <p class="hero-desc">
         O +afeto conecta familiares e cuidadores em tempo real para um monitoramento seguro, prático e criptografado da rotina e saúde do idoso.
       </p>
+      <div class="comparison-teaser">
+        <span class="teaser-icon">💡</span>
+        <div class="teaser-text">
+          Dúvida sobre qual versão usar? A versão <strong>Instalada (App)</strong> e a <strong>Web (PWA)</strong> têm diferenças importantes de segurança e offline.
+          <a href="#comparison">Compare as versões antes de escolher &rarr;</a>
+        </div>
+      </div>
       <div class="download-buttons">
         <a href="https://play.google.com/store/apps/details?id=br.com.wingene.afeto" class="btn-download">
           <svg viewBox="0 0 512 512">
@@ -803,7 +902,7 @@
   </section>
 
   <!-- Seção Comparativa: App vs PWA -->
-  <section class="comparison">
+  <section id="comparison" class="comparison">
     <div class="section-header">
       <h2>Escolha como prefere usar</h2>
       <p style="font-size: 18px; color: var(--color-text-muted);">
