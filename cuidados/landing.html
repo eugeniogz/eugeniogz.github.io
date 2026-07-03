@@ -507,6 +507,180 @@
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
+
+    /* Seção Comparativa */
+    .comparison {
+      padding: 100px 24px;
+      background: linear-gradient(180deg, #ffffff 0%, #f0fdfa 100%);
+    }
+
+    .grid-comparison {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    @media (min-width: 768px) {
+      .grid-comparison {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        align-items: stretch;
+      }
+    }
+
+    .comparison-card {
+      background: white;
+      border-radius: 24px;
+      padding: 40px 24px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+      border: 1px solid #f1f5f9;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (min-width: 480px) {
+      .comparison-card {
+        padding: 40px;
+      }
+    }
+
+    .comparison-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: transparent;
+      transition: background-color 0.3s;
+    }
+
+    .comparison-card.card-app::before {
+      background: var(--color-primary);
+    }
+
+    .comparison-card.card-web::before {
+      background: var(--color-accent);
+    }
+
+    .comparison-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+      border-color: var(--color-primary-light);
+    }
+
+    .comparison-card-header {
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    .comparison-card-header .card-icon {
+      font-size: 40px;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .comparison-card-header h3 {
+      font-family: var(--font-title);
+      font-size: 24px;
+      color: var(--color-primary-dark);
+      margin-bottom: 4px;
+    }
+
+    .comparison-card-header .subtitle {
+      font-size: 14px;
+      color: var(--color-text-muted);
+      font-weight: 500;
+    }
+
+    .comparison-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 40px;
+      flex-grow: 1;
+    }
+
+    .comparison-list li {
+      display: flex;
+      gap: 16px;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--color-text-main);
+    }
+
+    .comparison-list li strong {
+      display: block;
+      color: var(--color-primary-dark);
+      margin-bottom: 2px;
+    }
+
+    .list-icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    .list-icon.pro-icon {
+      background-color: #d1fae5;
+      color: #065f46;
+    }
+
+    .list-icon.con-icon {
+      background-color: #fee2e2;
+      color: #991b1b;
+      font-size: 10px;
+    }
+
+    .card-action {
+      text-align: center;
+    }
+
+    .btn-action {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      background-color: var(--color-primary);
+      color: white;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(15, 118, 110, 0.15);
+    }
+
+    .btn-action:hover {
+      background-color: var(--color-primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(15, 118, 110, 0.25);
+    }
+
+    .btn-action-secondary {
+      background-color: #f1f5f9;
+      color: var(--color-primary-dark);
+      box-shadow: none;
+    }
+
+    .btn-action-secondary:hover {
+      background-color: #e2e8f0;
+      color: var(--color-primary-dark);
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+    }
   </style>
 </head>
 <body>
@@ -523,7 +697,7 @@
   </header>
 
   <!-- Seção Principal -->
-  <section class="hero">
+  <section id="hero" class="hero">
     <div class="hero-content">
       <span class="badge">Acompanhamento Diário de Idosos</span>
       <h1>Cuide de quem você ama, com mais afeto.</h1>
@@ -624,6 +798,123 @@
         <div class="feature-icon">🔒</div>
         <h3>Criptografia Ativa</h3>
         <p>Garantia de segurança máxima com chaves de criptografia geradas localmente no seu smartphone.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Comparativa: App vs PWA -->
+  <section class="comparison">
+    <div class="section-header">
+      <h2>Escolha como prefere usar</h2>
+      <p style="font-size: 18px; color: var(--color-text-muted);">
+        O +afeto está disponível como aplicativo para celular (instalado) e também como versão Web (PWA), direto no navegador. Veja qual se adapta melhor ao seu dia a dia:
+      </p>
+    </div>
+    
+    <div class="grid-comparison">
+      <!-- Card App Nativo -->
+      <div class="comparison-card card-app">
+        <div class="comparison-card-header">
+          <span class="card-icon">📱</span>
+          <h3>Aplicativo Instalado</h3>
+          <p class="subtitle">Google Play ou App Store</p>
+        </div>
+        <ul class="comparison-list">
+          <li class="pro">
+            <span class="list-icon pro-icon">✓</span>
+            <div>
+              <strong>Segurança Máxima:</strong>
+              Chave de segurança salva no chaveiro integrado do sistema (Android Keystore / iOS Keychain) de forma inviolável.
+            </div>
+          </li>
+          <li class="pro">
+            <span class="list-icon pro-icon">✓</span>
+            <div>
+              <strong>Leitor de QR Code Fluido:</strong>
+              Integração nativa de alta performance com a câmera do aparelho para escanear códigos de convite.
+            </div>
+          </li>
+          <li class="pro">
+            <span class="list-icon pro-icon">✓</span>
+            <div>
+              <strong>Inicialização Rápida:</strong>
+              Navegação e transições de tela otimizadas pelo motor do sistema operacional do seu celular.
+            </div>
+          </li>
+          <li class="con">
+            <span class="list-icon con-icon">⚠</span>
+            <div>
+              <strong>Anúncios no Aplicativo:</strong>
+              Exibe anúncios discretos integrados para manter a distribuição do aplicativo gratuita.
+            </div>
+          </li>
+          <li class="con">
+            <span class="list-icon con-icon">⚠</span>
+            <div>
+              <strong>Espaço de Armazenamento:</strong>
+              Requer instalação prévia pelas lojas oficiais e ocupa cerca de 25MB de memória no aparelho.
+            </div>
+          </li>
+        </ul>
+        <div class="card-action">
+          <a href="#hero" class="btn-action">Baixar Aplicativo</a>
+        </div>
+      </div>
+
+      <!-- Card PWA / Web App -->
+      <div class="comparison-card card-web">
+        <div class="comparison-card-header">
+          <span class="card-icon">💻</span>
+          <h3>Versão Web (PWA)</h3>
+          <p class="subtitle">Sem baixar nada, direto no navegador</p>
+        </div>
+        <ul class="comparison-list">
+          <li class="pro">
+            <span class="list-icon pro-icon">✓</span>
+            <div>
+              <strong>Sem Instalação:</strong>
+              Acesse instantaneamente sem gastar espaço na memória interna do seu smartphone.
+            </div>
+          </li>
+          <li class="pro">
+            <span class="list-icon pro-icon">✓</span>
+            <div>
+              <strong>Acesso Universal:</strong>
+              Funciona de forma idêntica em computadores, tablets ou celulares sem precisar instalar arquivos.
+            </div>
+          </li>
+          <li class="pro">
+            <span class="list-icon pro-icon">✓</span>
+            <div>
+              <strong>Atualização Instantânea:</strong>
+              Novos recursos e correções ficam disponíveis imediatamente a cada carregamento da página.
+            </div>
+          </li>
+          <li class="con">
+            <span class="list-icon con-icon">⚠</span>
+            <div>
+              <strong>Segurança do Navegador:</strong>
+              Chave de segurança salva no Local Storage do navegador, exigindo cautela extra em aparelhos compartilhados.
+            </div>
+          </li>
+          <li class="con">
+            <span class="list-icon con-icon">⚠</span>
+            <div>
+              <strong>Permissão de Câmera:</strong>
+              A leitura do QR Code de convite necessita de permissão do navegador, o que pode variar conforme o dispositivo.
+            </div>
+          </li>
+          <li class="con">
+            <span class="list-icon con-icon">⚠</span>
+            <div>
+              <strong>Anúncios AdSense:</strong>
+              Exibe anúncios automáticos gerenciados pelo Google AdSense diretamente nas telas do navegador.
+            </div>
+          </li>
+        </ul>
+        <div class="card-action">
+          <a href="index.html" class="btn-action btn-action-secondary">Acessar no Navegador</a>
+        </div>
       </div>
     </div>
   </section>
