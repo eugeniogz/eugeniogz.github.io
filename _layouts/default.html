@@ -33,9 +33,12 @@
             <h2 style="margin: 0; line-height: 1.2;">{{ site.description | default: site.github.project_tagline }}</h2>
           </div>
         </div>
-        {% unless page.url == "/" or page.url == "/index.html" %}
-        <a href="{{ '/Search.html' | relative_url }}" class="search-link-header">🔍 Pesquisar</a>
-        {% endunless %}
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <a href="https://wingene.com.br" class="search-link-header" style="background: rgba(255, 255, 255, 0.15); font-weight: bold;">← wingene.com.br</a>
+          {% unless page.url == "/" or page.url == "/index.html" %}
+          <a href="{{ '/Search.html' | relative_url }}" class="search-link-header">🔍 Pesquisar</a>
+          {% endunless %}
+        </div>
       </div>
     </header>
 
