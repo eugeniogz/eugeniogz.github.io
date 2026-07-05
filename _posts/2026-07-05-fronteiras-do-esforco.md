@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fronteiras do esforço"
-date: 2026-07-05 20:20:00
+date: 2026-07-05 12:20:00
 pillar: "Valores"
 ---
 
