@@ -842,3 +842,15 @@ table th {
 .microblog-body p:last-child {
   margin-bottom: 0;
 }
+
+/* Remove prefixos de barras (/ // ///) dos cabeçalhos do tema Architect */
+#main-content h1:before,
+#main-content h2:before,
+#main-content h3:before,
+h4:before,
+h5:before,
+h6:before {
+  content: none !important;
+  margin-left: 0 !important;
+  padding-right: 0 !important;
+}
