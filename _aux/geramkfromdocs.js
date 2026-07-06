@@ -104,7 +104,7 @@ Seu Script de Sincronização.
 }
 
 /**
- * FUNÇÃO DE MANUTENÇÃO: Limpa todos os arquivos 'index.md' e 'index-upper.md'
+ * FUNÇÃO DE MANUTENÇÃO: Limpa todos os arquivos 'index.md'
  * da pasta de destino. Útil para forçar a regeneração completa de todos os
  * índices e remover dados de versões antigas do script.
  * Pode ser executada manualmente pelo editor do Apps Script.
@@ -126,14 +126,6 @@ function limparTodosOsIndices() {
       indices.next().setTrashed(true);
       totalDeletado++;
       Logger.log(`Índice "index.md" em "${pasta.getName()}" movido para a lixeira.`);
-    }
-
-    // Apaga index-upper.md
-    const indicesUpper = pasta.getFilesByName("index-upper.md");
-    while (indicesUpper.hasNext()) {
-      indicesUpper.next().setTrashed(true);
-      totalDeletado++;
-      Logger.log(`Índice "index-upper.md" em "${pasta.getName()}" movido para a lixeira.`);
     }
 
     // Chama para subpastas
@@ -290,9 +282,6 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
     // Lista para armazenar metadados e conteúdo de TODOS os arquivos na pasta.
     const arquivosParaProcessar = []; 
     const arquivosIndexados = []; 
-    // Listas para a versão UPPERCASE (Caixa Alta)
-    const arquivosUpperParaProcessar = [];
-    const arquivosUpperIndexados = [];
 
     let nomePastaFonte = pastaFonte.getName();
     if (nomePastaFonte !== '_posts') {
@@ -449,64 +438,6 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
                 semanticOrder: semanticOrderScore
             });
         }
-
-        // --- LÓGICA ESPECÍFICA: VERSÃO CAIXA ALTA (UPPER) ---
-        // Apenas para a pasta solicitada
-        if (pastaDestino.getName() === 'o-cascudo-e-outras-historias') {
-            const nomeSlugUpper = nomeSlug + '-upper';
-            const nomeMarkdownUpper = nomeSlugUpper + '.md';
-            
-            // Verifica se o arquivo Upper já existe
-            let arquivoMdDestinoUpper = null;
-            const iterUpper = pastaDestino.getFilesByName(nomeMarkdownUpper);
-            if (iterUpper.hasNext()) arquivoMdDestinoUpper = iterUpper.next();
-
-            let deveConverterUpper = converterTodos;
-            if (arquivoMdDestinoUpper) {
-                if (arquivoMdDestinoUpper.getLastUpdated().getTime() < arquivoDoc.getLastUpdated().getTime()) {
-                    deveConverterUpper = true;
-                }
-            } else {
-                deveConverterUpper = true;
-            }
-
-            let contentUpper = null;
-            if (deveConverterUpper) {
-                // Se já convertemos o normal, reaproveitamos o conteúdo trocando apenas o layout
-                if (markdownContent) {
-                    contentUpper = markdownContent.replace(/^layout: .*$/m, 'layout: uppercase');
-                    contentUpper = contentUpper.replace(`### [${comentarioPasta[0]}](./)`, `### [${comentarioPasta[0]}](index-upper.html)`);
-                } else {
-                    // Se não convertemos o normal (estava atualizado), precisamos converter agora para o Upper
-                    const resUpper = getMarkdownAndScoreFromDoc(arquivoDoc, nomeDocOriginal, nomeSlugUpper, pastaDestino, comentarioPasta[0], 'uppercase');
-                    contentUpper = resUpper.markdownContent;
-                }
-            }
-
-            arquivosUpperParaProcessar.push({
-                original: nomeDocOriginal,
-                slug: nomeSlugUpper,
-                markdownName: nomeMarkdownUpper,
-                content: contentUpper,
-                semanticOrder: semanticOrderScore,
-                time: tempoLeitura,
-                deveConverter: deveConverterUpper,
-                arquivoMdDestino: arquivoMdDestinoUpper,
-                nomeSemData: nomeSemData, // Mantém o nome visual normal, o layout fará o uppercase visual
-                noIndex: noIndex,
-                hasNavigationFooter: hasNavigationFooter
-            });
-
-            if (!noIndex && hasNavigationFooter) {
-                arquivosUpperIndexados.push({
-                    original: nomeDocOriginal,
-                    slug: nomeSlugUpper,
-                    link: `./${nomeSlugUpper}.html`,
-                    time: tempoLeitura,
-                    semanticOrder: semanticOrderScore
-                });
-            }
-        }
     }
 
     // 1.5. SINCRONIZAR ASSETS (Imagens e Vídeos)
@@ -516,8 +447,6 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
     // Ordena listas com a função sortDocs harmonizada
     arquivosParaProcessar.sort(sortDocs);
     arquivosIndexados.sort(sortDocs);
-    arquivosUpperParaProcessar.sort(sortDocs);
-    arquivosUpperIndexados.sort(sortDocs);
     
     // 3. SEGUNDA PASSAGEM (Inicial): SALVA E ADICIONA LINKS DE NAVEGAÇÃO
     function executarPassagemDeConversao(force = false) {
@@ -548,25 +477,6 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
     filesConverted += executarPassagemDeConversao(false);
     // 5. CRIA/ATUALIZA O INDEX.MD
     const comentarioPastaTexto = comentarioPasta.length > 1 ? comentarioPasta[1] : "";
-
-
-    // 3.1. PASSAGEM DE CONVERSÃO PARA ARQUIVOS UPPER (Se houver)
-    if (arquivosUpperParaProcessar.length > 0) {
-        for (let i = 0; i < arquivosUpperParaProcessar.length; i++) {
-            const docInfo = arquivosUpperParaProcessar[i];
-            if (docInfo.deveConverter) {
-                const anterior = (i > 0) ? arquivosUpperParaProcessar[i - 1] : null;
-                const proximo = (i < arquivosUpperParaProcessar.length - 1) ? arquivosUpperParaProcessar[i + 1] : null;
-                
-                const wasChanged = salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDestino);
-                if (wasChanged) filesConverted++;
-            }
-        }
-        // Gera o index-upper.md
-        const tituloIndexUpper = comentarioPasta[0] + " (CAIXA ALTA)";
-        criarIndexMarkdown(pastaDestino, tituloIndexUpper, arquivosUpperIndexados, [], comentarioPastaTexto, "index-upper.md");
-    }
-
 
     // 4. PROCESSA SUBPASTAS RECURSIVAMENTE E COLETA METADADOS
     const subpastasIndexadas = [];
@@ -1236,9 +1146,6 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
 
         if (fileSlug !== 'index') {
             let linkIndex = "./";
-            if (customLayout === 'uppercase') {
-                linkIndex = "index-upper.html";
-            }
             if (!isPost && !isPostsFolder && pastaDestino.getId() !== ROOT_DESTINATION_FOLDER_ID) markdown += `\n\n### [${tituloPasta}](${linkIndex})\n\n`;
             if (!isPostsFolder) markdown += `## ${nomeSemData}\n\n`;
         }
@@ -1555,10 +1462,6 @@ function limparArquivosExcluidos(pastaDestino, pastaFonte) {
                  slug = `${dateStr}-${slug}`;
              }
         }
-        // Proteção para os arquivos UpperCase na pasta específica
-        if (pastaDestino.getName() === 'o-cascudo-e-outras-historias') {
-            slugsFonteValidos.add(slug + "-upper.md");
-        }
         slugsFonteValidos.add(slug + ".md");
     }
 
@@ -1588,7 +1491,7 @@ function limparArquivosExcluidos(pastaDestino, pastaFonte) {
         const arquivoMd = arquivosDestino.next();
         const nomeArquivoMd = arquivoMd.getName();
 
-        if (nomeArquivoMd.toLowerCase().endsWith('.md') && nomeArquivoMd !== NOME_INDEX && nomeArquivoMd !== 'index-upper.md') {    
+        if (nomeArquivoMd.toLowerCase().endsWith('.md') && nomeArquivoMd !== NOME_INDEX) {    
             if (!slugsFonteValidos.has(nomeArquivoMd)) {
                 Logger.log(`[LIMPEZA] Arquivo .md "${nomeArquivoMd}" (em ${pastaDestino.getName()}) movido para lixeira.`);
                 arquivoMd.setTrashed(true);

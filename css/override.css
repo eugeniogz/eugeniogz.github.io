@@ -854,3 +854,119 @@ h6:before {
   margin-left: 0 !important;
   padding-right: 0 !important;
 }
+
+/* ==========================================================================
+   MENU DE TÓPICOS NA SIDEBAR
+   ========================================================================== */
+
+.sidebar-topics-menu {
+  margin-bottom: 1.8rem;
+}
+
+.sidebar-topics-menu h4 {
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+}
+
+.sidebar-topics-list {
+  list-style-type: none !important;
+  padding-left: 0 !important;
+  margin: 0 !important;
+}
+
+.sidebar-topics-item {
+  margin-bottom: 1.2rem;
+}
+
+.sidebar-topics-category {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-values-primary);
+  display: block;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 0.2rem;
+}
+
+.sidebar-topics-sublist {
+  list-style-type: none !important;
+  padding-left: 0.5rem !important;
+  margin: 0 !important;
+}
+
+.sidebar-topics-subitem {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.sidebar-topics-subitem a {
+  font-weight: 500 !important;
+  color: var(--text-main) !important;
+  transition: color 0.2s ease;
+  border-bottom: 1px dashed transparent !important;
+}
+
+.sidebar-topics-subitem a:hover {
+  color: var(--color-attention-primary) !important;
+  border-bottom-color: var(--color-attention-primary) !important;
+  text-decoration: none !important;
+}
+
+/* ==========================================================================
+   CAIXA ALTA DINÂMICA (LETRA MAIÚSCULA PARA CONTOS)
+   ========================================================================== */
+
+.text-uppercase-active {
+  text-transform: uppercase !important;
+}
+
+.text-uppercase-active a,
+.text-uppercase-active p,
+.text-uppercase-active h1,
+.text-uppercase-active h2,
+.text-uppercase-active h3,
+.text-uppercase-active h4,
+.text-uppercase-active h5,
+.text-uppercase-active h6,
+.text-uppercase-active li {
+  text-transform: uppercase !important;
+}
+
+.text-uppercase-active code,
+.text-uppercase-active pre,
+.text-uppercase-active .post-meta,
+.text-uppercase-active .case-toggle-btn {
+  text-transform: none !important;
+}
+
+.case-toggle-btn {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-light) !important;
+  color: var(--text-main) !important;
+  padding: 6px 14px !important;
+  border-radius: 8px !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 0.85rem !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+}
+
+.case-toggle-btn:hover {
+  border-color: var(--color-attention-primary) !important;
+  color: var(--color-attention-primary) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(18, 62, 156, 0.1) !important;
+}
+
+.case-toggle-btn:active {
+  transform: translateY(0) !important;
+}

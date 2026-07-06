@@ -45,10 +45,49 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
+          {% if page.url contains '/o-cascudo-e-outras-historias/' and page.url != '/o-cascudo-e-outras-historias/' and page.url != '/o-cascudo-e-outras-historias/index.html' %}
+            <div style="display: flex; justify-content: flex-end; margin-bottom: 1.5rem;">
+              <button id="toggle-case-btn" class="case-toggle-btn" onclick="toggleTextCase()" style="outline: none;">
+                <span>🔠</span> <span id="toggle-case-text">Ler em CAIXA ALTA</span>
+              </button>
+            </div>
+          {% endif %}
           {{ content }}
         </section>
 
         <aside id="sidebar">
+          <div class="sidebar-topics-menu">
+            <h4>Tópicos do Site</h4>
+            <ul class="sidebar-topics-list">
+              <li class="sidebar-topics-item">
+                <span class="sidebar-topics-category">📜 Ensaios Filosóficos</span>
+                <ul class="sidebar-topics-sublist">
+                  <li class="sidebar-topics-subitem"><a href="{{ '/manifesto-wingene.html' | relative_url }}">Manifesto Wingene</a></li>
+                  <li class="sidebar-topics-subitem"><a href="{{ '/wingene/wingene-felicidade-agora-futuro-ancestral.html' | relative_url }}">Felicidade agora, futuro ancestral</a></li>
+                  <li class="sidebar-topics-subitem"><a href="{{ '/wingene/o-metodo-vida-a-wingene-em-pratica.html' | relative_url }}">O Método VIDA na prática</a></li>
+                  <li class="sidebar-topics-subitem"><a href="{{ '/geometria/geometria-e-o-metodo-vida.html' | relative_url }}">Geometria e o método VIDA</a></li>
+                </ul>
+              </li>
+              <li class="sidebar-topics-item">
+                <span class="sidebar-topics-category">✍️ Literatura & Reflexões</span>
+                <ul class="sidebar-topics-sublist">
+                  <li class="sidebar-topics-subitem"><a href="{{ '/ipes-e-tijolos/' | relative_url }}">Ipês e Tijolos</a></li>
+                  <li class="sidebar-topics-subitem"><a href="{{ '/cronicas/' | relative_url }}">Crônicas Diárias</a></li>
+                  <li class="sidebar-topics-subitem"><a href="{{ '/poesias-e-aforismos/' | relative_url }}">Poesias e Aforismos</a></li>
+                </ul>
+              </li>
+              <li class="sidebar-topics-item">
+                <span class="sidebar-topics-category">🎨 Arte & Aplicações</span>
+                <ul class="sidebar-topics-sublist">
+                  <li class="sidebar-topics-subitem"><a href="{{ '/o-cascudo-e-outras-historias/' | relative_url }}">O Cascudo e outras histórias</a></li>
+                  <li class="sidebar-topics-subitem"><a href="{{ '/musicas/' | relative_url }}">Produção Musical</a></li>
+                  <li class="sidebar-topics-subitem"><a href="{{ '/wingene-vida-app/' | relative_url }}">Aplicativos Wingene</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <hr>
+
           {% include tags.html %}
           {% if site.show_downloads %}
             <a href="{{ site.github.zip_url }}" class="button">
@@ -69,5 +108,47 @@
       </div>
     </div>
 
+    <script>
+      function applyTextCase(isUpper) {
+        const mainContent = document.getElementById('main-content');
+        const toggleText = document.getElementById('toggle-case-text');
+        if (!mainContent) return;
+        
+        // Verifica se a página atual pertence à pasta das histórias do Cascudo
+        const isCorrectFolder = window.location.pathname.includes('/o-cascudo-e-outras-historias/');
+        
+        if (isUpper && isCorrectFolder) {
+          mainContent.classList.add('text-uppercase-active');
+          if (toggleText) toggleText.innerText = 'Ler em Letra Normal';
+          localStorage.setItem('text-case-preference', 'uppercase');
+        } else {
+          mainContent.classList.remove('text-uppercase-active');
+          if (toggleText) toggleText.innerText = 'Ler em CAIXA ALTA';
+          // Só limpa a preferência se estivermos na pasta correta (significa que o clique partiu da página de contos)
+          if (isCorrectFolder) {
+            localStorage.setItem('text-case-preference', 'normal');
+          }
+        }
+      }
+
+      function toggleTextCase() {
+        const mainContent = document.getElementById('main-content');
+        if (!mainContent) return;
+        const isCurrentlyUpper = mainContent.classList.contains('text-uppercase-active');
+        applyTextCase(!isCurrentlyUpper);
+      }
+
+      // Inicialização na carga da página
+      document.addEventListener('DOMContentLoaded', function() {
+        const isCorrectFolder = window.location.pathname.includes('/o-cascudo-e-outras-historias/');
+        const savedPreference = localStorage.getItem('text-case-preference');
+        
+        if (isCorrectFolder && savedPreference === 'uppercase') {
+          applyTextCase(true);
+        } else {
+          applyTextCase(false);
+        }
+      });
+    </script>
   </body>
 </html>
