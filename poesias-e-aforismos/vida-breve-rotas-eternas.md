@@ -34,6 +34,6 @@ Mapas eternos do porvir navegar.
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./aquarela-de-uma-valsa.html">&lt;&lt; Aquarela de uma valsa</a>
+  <a href="./aforismos.html">&lt;&lt; Aforismos</a>
   <a href="./a-cor-que-povoa-o-mundo.html">A cor que povoa o mundo &gt;&gt;</a>
 </div>

@@ -48,5 +48,5 @@ herança da viçosa flor.
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./musica-soberana.html">&lt;&lt; Música soberana</a>
-  <a href="./divina-consciencia.html">Divina consciência &gt;&gt;</a>
+  <a href="./aquarela-de-uma-valsa.html">Aquarela de uma valsa &gt;&gt;</a>
 </div>

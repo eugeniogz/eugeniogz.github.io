@@ -2,8 +2,7 @@
 layout: default
 title: "Aquarela de uma valsa"
 reading_time: 1
-semantic_order: 0
-no_index: true
+semantic_order: 42
 --- 
 
 
@@ -72,6 +71,6 @@ vive e baila o mar.
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./aforismos.html">&lt;&lt; Aforismos</a>
-  <a href="./vida-breve-rotas-eternas.html">Vida breve, rotas eternas &gt;&gt;</a>
+  <a href="./cafe-em-flor.html">&lt;&lt; Café em flor</a>
+  <a href="./divina-consciencia.html">Divina consciência &gt;&gt;</a>
 </div>

@@ -85,5 +85,5 @@ Viver: ausência presente <!--07/02/26-->
 
 <div style="display: flex; justify-content: space-between;">
   <span></span>
-  <a href="./aquarela-de-uma-valsa.html">Aquarela de uma valsa &gt;&gt;</a>
+  <a href="./vida-breve-rotas-eternas.html">Vida breve, rotas eternas &gt;&gt;</a>
 </div>
