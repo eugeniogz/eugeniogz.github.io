@@ -21,9 +21,6 @@ description: Wingene é um projeto filosófico sobre herança, consciência, cri
     </form>
   </div>
 
-  <div class="quote-rotator">
-    <span id="quoteBox"></span>
-  </div>
 </div>
 
 <h2>Cotidiano Consciente — A Wingene na Prática</h2>
@@ -86,49 +83,3 @@ José Eugênio é autor do projeto <strong>Wingene</strong>, ensaios filosófico
 </blockquote>
 
 <hr>
-
-<script>
-  var quotes = [
-    "Viver: ausência presente",
-    "Distração: atenção ao vazio",
-    "Solitude: árvore que sente floresta",
-    "Esquecer tece lembranças",
-    "Tecer virtudes, semear atitudes",
-    "Vida breve, rotas eternas",
-    "Serena euforia: a mente transcende a mente",
-    "Exemplo: giz invisível",
-    "Dogma: cárcere da verdade",
-    "Eudaimonia: cadência do pulsar e pensar",
-    "Espírito: matéria que baila consciente",
-    "A matéria é instrumento; a sinapse é música",
-    "Recordar: seiva que adoça alegria",
-    "Informação exige validade, conhecimento clama liberdade",
-    "Serena euforia: horizonte que amplia",
-    "Pensamento: sentir que a razão refinou",
-    "Descobrir é inventar o raro",
-    "Brilham alegrias em infinitas cosmogonias",
-    "Amor: divino que habita o humano",
-    "Evolução: revolução constante, utopia distante",
-    "A ciência ilumina a metafísica com os dourados fios do conhecimento",
-    "Existir é perceber os detalhes que quebram a monotonia",
-    "Os pilares da felicidade: Criar, Amar, Recordar e Evoluir (CARE)",
-    "O natural rasga o frio asfalto",
-    "🖋️ Do que escrevo: rara a originalidade, seiva da liberdade",
-    "Viver tece tons indescritíveis"
-  ];
-
-  let index = 0;
-  const box = document.getElementById("quoteBox");
-
-  function rotateQuote() {
-    box.style.opacity = 0;
-    setTimeout(() => {
-      box.innerText = "“" + quotes[index] + "”";
-      box.style.opacity = 1;
-      index = (index + 1) % quotes.length;
-    }, 450);
-  }
-
-  rotateQuote();
-  setInterval(rotateQuote, 4200);
-</script>
