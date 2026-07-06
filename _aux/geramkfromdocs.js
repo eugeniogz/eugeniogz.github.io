@@ -227,6 +227,7 @@ function getMetadataFromMd(arquivoMdDestino) {
     let semanticOrderScore = 0.0;
     let noIndex = false;
     let hasNavigationFooter = true;
+    let title = null;
     
     try {
         const content = arquivoMdDestino.getBlob().getDataAsString();
@@ -256,12 +257,18 @@ function getMetadataFromMd(arquivoMdDestino) {
             if (/navigation_footer:\s*false/i.test(yamlBlock)) {
                 hasNavigationFooter = false;
             }
+            
+            // Regex para extrair title (com ou sem aspas)
+            const titleMatch = yamlBlock.match(/title:\s*"(.*?)"/i) || yamlBlock.match(/title:\s*(.*?)\n/i);
+            if (titleMatch) {
+                title = titleMatch[1].trim();
+            }
         }
     } catch (e) {
         Logger.log(`[ERRO METADATA MD] Falha ao ler metadados do MD ${arquivoMdDestino.getName()}: ${e.toString()}`);
     }
 
-    return { semanticOrderScore: semanticOrderScore, tempoLeitura: tempoLeitura, noIndex: noIndex, hasNavigationFooter: hasNavigationFooter };
+    return { semanticOrderScore: semanticOrderScore, tempoLeitura: tempoLeitura, noIndex: noIndex, hasNavigationFooter: hasNavigationFooter, title: title };
 }
 
 /**
@@ -388,16 +395,21 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
             // OTIMIZAÇÃO: Extrai Metadados do MD existente, evitando abrir o Google Doc
             if (arquivoMdDestino) {
                 // LÊ DO ARQUIVO MD existente
+                let customTitleFromMd = null;
                  ({
                     semanticOrderScore,
                     tempoLeitura,
                     noIndex,
-                    hasNavigationFooter
+                    hasNavigationFooter,
+                    title: customTitleFromMd
                 } = getMetadataFromMd(arquivoMdDestino)); 
                 
-                // Extração leve do Doc apenas para nome (pode ser necessário para a navegação)
-                const regex = /^\d{4}-\d{2}-\d{2}-/;
-                nomeSemData = nomeDocOriginal.replace(regex, '');
+                if (customTitleFromMd) {
+                    nomeSemData = customTitleFromMd;
+                } else {
+                    const regex = /^\d{4}-\d{2}-\d{2}-/;
+                    nomeSemData = nomeDocOriginal.replace(regex, '');
+                }
 
             } else {
                  // Fallback: lê metadados do Doc se o MD não for encontrado
@@ -459,9 +471,25 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
           // Se 'deveConverter' é true (novo/atualizado) OU se o rodapé está sendo forçado a ser reescrito
           if (docInfo.deveConverter || force) {
               
-              // Determina Anterior e Próximo com a lista JÁ ORDENADA
-              const anterior = (!isPostsFolder && i > 0) ? arquivosParaProcessar[i - 1] : null;
-              const proximo = (!isPostsFolder && i < arquivosParaProcessar.length - 1) ? arquivosParaProcessar[i + 1] : null;
+              // Determina Anterior e Próximo com a lista JÁ ORDENADA, ignorando páginas sem rodapé de navegação
+              let anterior = null;
+              if (!isPostsFolder) {
+                  for (let j = i - 1; j >= 0; j--) {
+                      if (arquivosParaProcessar[j].hasNavigationFooter !== false) {
+                          anterior = arquivosParaProcessar[j];
+                          break;
+                      }
+                  }
+              }
+              let proximo = null;
+              if (!isPostsFolder) {
+                  for (let j = i + 1; j < arquivosParaProcessar.length; j++) {
+                      if (arquivosParaProcessar[j].hasNavigationFooter !== false) {
+                          proximo = arquivosParaProcessar[j];
+                          break;
+                      }
+                  }
+              }
 
               // **OTIMIZAÇÃO 3:** Só reescreve se o conteúdo (corpo OU navegação) for diferente
               const wasChanged = salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDestino);
@@ -877,9 +905,14 @@ function getMetadataFromDocLite(docFile, originalFileName) {
             noIndex = false;
         }
 
-        // 3. REMOÇÃO DA DATA DO NOME
-        const regex = /^\d{4}-\d{2}-\d{2}-/;
-        nomeSemData = originalFileName.replace(regex, '');
+        // 3. EXTRAÇÃO DE TÍTULO CUSTOMIZADO OU REMOÇÃO DA DATA DO NOME
+        const titleMatch = fullBodyText.match(/^\s*(?:T[ií]tulo|Title):\s*(.+)$/im);
+        if (titleMatch) {
+            nomeSemData = titleMatch[1].trim();
+        } else {
+            const regex = /^\d{4}-\d{2}-\d{2}-/;
+            nomeSemData = originalFileName.replace(regex, '');
+        }
 
         return {
             semanticOrderScore: semanticOrderScore,
@@ -1063,6 +1096,8 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         let contentElementsInReverse = [];
         let tagsFound = false;
         let scoreFound = false;
+        let customTitle = null;
+        let titleFound = false;
         
         // --- 1. EXTRAÇÃO DE METADADOS (SCORE e TAGS) em passagem reversa ---
         for (let i = body.getNumChildren() - 1; i >= 0; i--) {
@@ -1098,6 +1133,13 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                     isMetadata = true;
                 }
                 
+                const titleMatch = text.match(/^\s*(?:T[ií]tulo|Title):\s*(.+)$/i);
+                if (titleMatch && !titleFound) {
+                    customTitle = titleMatch[1].trim();
+                    titleFound = true;
+                    isMetadata = true;
+                }
+                
                 // Pula o parágrafo atual se ele continha alguma propriedade de metadados
                 if (isMetadata) {
                     continue;
@@ -1107,10 +1149,15 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
             contentElementsInReverse.push(element);
         }
 
-        // Remove a data do nome para o título (ex: "2023-10-27-Titulo" vira "Titulo")
-        const regex = /^\d{4}-\d{2}-\d{2}-/;
-        nomeSemData = originalFileName.replace(regex, '');
-        let isPost = nomeSemData !== originalFileName;
+        // Se encontramos um título customizado no rodapé do documento, usamos ele.
+        // Caso contrário, removemos a data do nome do arquivo para usar como título.
+        if (customTitle) {
+            nomeSemData = customTitle;
+        } else {
+            const regex = /^\d{4}-\d{2}-\d{2}-/;
+            nomeSemData = originalFileName.replace(regex, '');
+        }
+        let isPost = /^\d{4}-\d{2}-\d{2}-/.test(originalFileName);
         
         // --- 2. MONTAGEM DO YAML FRONT MATTER ---
         markdown += `---\n`;

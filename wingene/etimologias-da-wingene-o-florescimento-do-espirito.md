@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Etimologias da Wingene: o florescimento do Espírito"
+title: "Etimologia e a Wingene"
 reading_time: 3
 semantic_order: 50
 --- 
@@ -9,7 +9,7 @@ semantic_order: 50
 
 ### [Wingene](./)
 
-## Etimologias da Wingene: o florescimento do Espírito
+## Etimologia e a Wingene
 
 As palavras não são meros arranjos de letras; elas guardam a memória da experiência humana ao longo dos milênios. Quando mergulhamos na arqueologia linguística para compreender o neologismo **Wingene**, descobrimos que ele não é apenas uma palavra inventada, mas um manifesto filosófico que une a ciência da vida à poesia do esforço humano.
 
@@ -39,9 +39,9 @@ Quando fundimos essas duas linhagens linguísticas, o conceito de Wingene emerge
 
 Wingene é a união da semente (*gene*) com o esforço amoroso (*win*). Filosoficamente, o termo estabelece que:
 
-1. **A vitória nasce de dentro:** O verdadeiro sucesso não é um acidente externo ou um golpe de sorte; ele é gerado na nossa própria gênese, a partir dos nossos valores mais profundos.
+1. **A vitória nasce de dentro:** o verdadeiro sucesso não é um acidente externo ou um golpe de sorte; ele é gerado na nossa própria gênese, a partir dos nossos valores mais profundos.
 
-1. **O esforço gera alegria:** Unindo *winnan* e *génos*, compreendemos que o desenvolvimento pessoal é o trabalho constante de dar à luz a nossa melhor versão, transformando a nossa herança potencial em harmonia real.
+1. **O esforço gera alegria:** unindo *winnan* e *génos*, compreendemos que o desenvolvimento pessoal é o trabalho constante de dar à luz a nossa melhor versão, transformando a nossa herança potencial em harmonia real.
 
 1. **O código da evolução consciente:** Assim como os genes biológicos determinam nossas características físicas, a Wingene atua como o "código genético" da nossa evolução consciente — a unidade fundamental que nos impulsiona a focar nossa atenção, tomar decisões intencionais e construir uma jornada rumo ao aperfeiçoamento.
 

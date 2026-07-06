@@ -128,6 +128,6 @@ A *Wingene* se realiza em múltiplas camadas: no esforço evolutivo individual, 
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./the-vida-method.html">&lt;&lt; The VIDA method</a>
-  <a href="./etimologias-da-wingene-o-florescimento-do-espirito.html">Etimologias da Wingene &gt;&gt;</a>
+  <span></span>
+  <a href="./etimologias-da-wingene-o-florescimento-do-espirito.html">Etimologia e a Wingene &gt;&gt;</a>
 </div>
