@@ -1049,21 +1049,5 @@
       </div>
     </div>
   </footer>
-  <!-- Script para compatibilidade local e navegação -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        if (window.location.protocol === 'file:' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-            const links = document.querySelectorAll('a');
-            links.forEach(link => {
-                let href = link.getAttribute('href');
-                if (href) {
-                    if (href === 'https://wingene.com.br') {
-                        link.setAttribute('href', '../../wingene.com.br/docs/index.html');
-                    }
-                }
-            });
-        }
-    });
-  </script>
 </body>
 </html>
