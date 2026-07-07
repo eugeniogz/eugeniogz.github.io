@@ -12,6 +12,7 @@
 
   /* Versões Refinadas para Máxima Acessibilidade e Contraste (Tema Claro) */
   --color-values-primary: #940f0f;       /* Vermelho Carmesim (Valores / Herança) */
+  --text-values-primary: var(--color-values-primary);
   --color-values-dark: #3f0505;          /* Vinho Profundo (Fundo do Header) */
   --color-values-light: #fdf2f2;         /* Rosa muito sutil */
   
@@ -40,6 +41,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-values-primary: #ff6b6b;     /* Vermelho mais claro para contraste no escuro */
+    --text-values-primary: #ffffff;      /* Branco para legibilidade no escuro */
     --color-values-dark: #250303;        /* Vinho profundo escuro */
     --color-values-light: #351616;
     
@@ -149,7 +151,7 @@ header h2 {
 #main-content:not(.custom-headings) h3, 
 #main-content:not(.custom-headings) h4 {
   font-family: 'Outfit', sans-serif !important;
-  color: var(--color-values-primary) !important;
+  color: var(--text-values-primary) !important;
   font-weight: 700;
   letter-spacing: -0.01em;
   margin-top: 1.8em;
@@ -219,7 +221,7 @@ hr {
   font-family: 'Lora', serif;
   font-size: 1.15rem;
   line-height: 1.7;
-  color: var(--color-values-primary);
+  color: var(--text-values-primary);
   background: var(--bg-card);
   border: 1px solid var(--border-light);
   border-left: 4px solid var(--color-attention-primary);
@@ -275,7 +277,7 @@ hr {
 
 .card h3 {
   font-family: 'Outfit', sans-serif !important;
-  color: var(--color-values-primary) !important;
+  color: var(--text-values-primary) !important;
   font-size: 1.25rem !important;
   margin-top: 0 !important;
   margin-bottom: 0.8rem !important;
@@ -375,7 +377,7 @@ a.button:hover {
 
 #sidebar h4 {
   font-family: 'Outfit', sans-serif !important;
-  color: var(--color-values-primary) !important;
+  color: var(--text-values-primary) !important;
   font-weight: 700 !important;
   border-bottom: 2px solid var(--color-imperfections-primary) !important;
   padding-bottom: 0.5rem !important;
@@ -469,7 +471,7 @@ table td, table th {
 table th {
   font-family: 'Outfit', sans-serif !important;
   background-color: var(--color-values-light) !important;
-  color: var(--color-values-primary) !important;
+  color: var(--text-values-primary) !important;
   font-weight: 600;
 }
 
@@ -524,7 +526,7 @@ table th {
 .music-header h3 {
   margin: 0 !important;
   font-family: 'Outfit', sans-serif !important;
-  color: var(--color-values-primary) !important;
+  color: var(--text-values-primary) !important;
   font-size: 1.4rem !important;
   font-weight: 700 !important;
 }
@@ -682,7 +684,7 @@ table th {
 .recent-post-item .post-date {
   font-family: 'Outfit', sans-serif;
   font-size: 0.85rem;
-  color: var(--color-values-primary);
+  color: var(--text-values-primary);
   font-weight: 600;
   display: block;
   margin-bottom: 0.3rem;
@@ -723,7 +725,7 @@ table th {
   left: 15px;
   font-family: 'Lora', serif;
   font-size: 6rem;
-  color: var(--color-values-primary);
+  color: var(--text-values-primary);
   opacity: 0.06;
   line-height: 1;
   pointer-events: none;
@@ -815,7 +817,7 @@ table th {
 
 .microblog-badge.valores {
   background: var(--color-values-light);
-  color: var(--color-values-primary);
+  color: var(--text-values-primary);
 }
 
 .microblog-badge.imperfeicoes {
@@ -893,7 +895,7 @@ h6:before {
   font-family: 'Outfit', sans-serif !important;
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--color-values-primary);
+  color: var(--text-values-primary);
   display: block;
   margin-bottom: 0.4rem;
   text-transform: uppercase;
