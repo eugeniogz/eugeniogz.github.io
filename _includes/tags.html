@@ -100,7 +100,7 @@
     {% endif %}
 
     <a href="javascript:void(0);" 
-       onclick="showTagList('{{ tag_name | slugify }}');" 
+       onclick="showTagList('{{ tag_name | slugify }}', this);" 
        style="font-size: {{ font_size }}em; padding: 0.2em 0.4em; cursor: pointer;">
       {{ tag_name }}
     </a>
@@ -131,13 +131,30 @@
 
 <script>
   // Função para mostrar a lista de tags clicada e ocultar todas as outras
-  function showTagList(tagSlug) {
+  function showTagList(tagSlug, element) {
     const containers = document.querySelectorAll('.tag-list-container');
     // 1. Encontra o container do conteúdo principal
     const mainContent = document.getElementById('main-content');
     
     // 2. Encontra o container oculto com a lista de posts da tag selecionada
     const selectedContainer = document.getElementById(tagSlug + '-container');
+
+    // Remove a classe active de todas as tags da nuvem
+    const tags = document.querySelectorAll('.tag-cloud a');
+    tags.forEach(t => t.classList.remove('active'));
+
+    // Adiciona a classe active no elemento clicado ou correspondente
+    if (element) {
+      element.classList.add('active');
+    } else {
+      const matchingTag = Array.from(tags).find(t => {
+        const onclickStr = t.getAttribute('onclick') || '';
+        return onclickStr.includes("'" + tagSlug + "'") || onclickStr.includes('"' + tagSlug + '"');
+      });
+      if (matchingTag) {
+        matchingTag.classList.add('active');
+      }
+    }
 
     // 1. Oculta todos os containers
     //containers.forEach(container => {

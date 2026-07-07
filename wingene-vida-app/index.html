@@ -292,6 +292,13 @@ hide_header_logo: true
 </style>
 
 <!-- CABEÇALHO -->
+<div class="breadcrumb">
+  <a href="https://wingene.com.br">Portal Wingene</a>
+  <span>/</span>
+  <a href="https://blog.wingene.com.br">Blog</a>
+  <span>/</span>
+  <span>Wingene VIDA</span>
+</div>
 
 <main class="page-wrap">
 
@@ -454,9 +461,30 @@ hide_header_logo: true
 </main>
 
 <footer class="site-footer">
+  <a href="https://wingene.com.br">wingene.com.br</a>
+  &nbsp;·&nbsp;
   <a href="https://blog.wingene.com.br">blog.wingene.com.br</a>
   &nbsp;·&nbsp;
   <a href="https://blog.wingene.com.br/wingene-vida-app/politica-de-privacidade-wingene-vida.html" target="_blank">Política de Privacidade</a>
   &nbsp;·&nbsp;
   <a href="mailto:suporte@wingene.com.br">suporte@wingene.com.br</a>
 </footer>
+
+<!-- Script para compatibilidade local e navegação -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+      if (window.location.protocol === 'file:' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+          const links = document.querySelectorAll('a');
+          links.forEach(link => {
+              let href = link.getAttribute('href');
+              if (href) {
+                  if (href === 'https://wingene.com.br') {
+                      link.setAttribute('href', '../../wingene.com.br/docs/index.html');
+                  } else if (href === 'https://blog.wingene.com.br') {
+                      link.setAttribute('href', '../index.html');
+                  }
+              }
+          });
+      }
+  });
+</script>

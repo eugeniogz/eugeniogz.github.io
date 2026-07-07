@@ -77,6 +77,12 @@
       color: var(--color-primary);
     }
 
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
     .nav-links a {
       text-decoration: none;
       color: var(--color-text-muted);
@@ -784,6 +790,7 @@
       <span class="brand-name">+afeto</span>
     </a>
     <nav class="nav-links">
+      <a href="https://wingene.com.br">Portal Wingene</a>
       <a href="politica-de-privacidade.html">Política de Privacidade</a>
     </nav>
   </header>
@@ -1033,6 +1040,7 @@
         <span class="brand-name" style="color: white;">+afeto</span>
       </a>
       <div class="footer-links">
+        <a href="https://wingene.com.br">Portal Wingene</a>
         <a href="politica-de-privacidade.html">Política de Privacidade</a>
         <a href="mailto:contato@wingene.com.br">Suporte por E-mail</a>
       </div>
@@ -1041,6 +1049,21 @@
       </div>
     </div>
   </footer>
-
+  <!-- Script para compatibilidade local e navegação -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        if (window.location.protocol === 'file:' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+            const links = document.querySelectorAll('a');
+            links.forEach(link => {
+                let href = link.getAttribute('href');
+                if (href) {
+                    if (href === 'https://wingene.com.br') {
+                        link.setAttribute('href', '../../wingene.com.br/docs/index.html');
+                    }
+                }
+            });
+        }
+    });
+  </script>
 </body>
 </html>
