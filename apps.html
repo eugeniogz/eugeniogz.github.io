@@ -162,6 +162,18 @@
             color: var(--color-atencao);
         }
 
+        /* Estilo para Notas Criptografadas */
+        .app-decisoes {
+            border-top: 4px solid var(--color-decisoes);
+        }
+        .app-decisoes .app-badge-pillar {
+            background-color: var(--color-decisoes-glow);
+            color: var(--color-decisoes);
+        }
+        .app-decisoes .app-features li::before {
+            color: var(--color-decisoes);
+        }
+
         .back-home {
             margin-top: 20px;
             text-align: center;
@@ -229,6 +241,42 @@
                 </div>
                 <div class="app-actions">
                     <a href="/cuidados/landing.html" class="btn btn-primary" style="width: 100%; text-align: center; display: block;" id="btn-cuidados-app">Conhecer o App</a>
+                </div>
+            </div>
+
+            <!-- Card 3: PWA Financeiro -->
+            <div class="card glassmorphism app-card app-vida">
+                <div>
+                    <span class="app-badge-pillar">Finanças Pessoais</span>
+                    <h2 class="app-name">PWA Financeiro</h2>
+                    <p class="app-desc">Gerenciador financeiro pessoal offline-first com armazenamento local e foco em privacidade e rapidez.</p>
+                    <ul class="app-features">
+                        <li>Lançamentos rápidos e offline</li>
+                        <li>Armazenamento de dados local</li>
+                        <li>Privacidade total sem rastreadores</li>
+                        <li>Instalável como Progressive Web App</li>
+                    </ul>
+                </div>
+                <div class="app-actions">
+                    <a href="https://ws1.assis.bhz.br/pwa.financeiro/" class="btn btn-primary" style="width: 100%; text-align: center; display: block;" id="btn-financeiro-app" target="_blank">Acessar o App ↗</a>
+                </div>
+            </div>
+
+            <!-- Card 4: Notas Criptografadas -->
+            <div class="card glassmorphism app-card app-decisoes">
+                <div>
+                    <span class="app-badge-pillar">Segurança & Notas</span>
+                    <h2 class="app-name">Notas Criptografadas</h2>
+                    <p class="app-desc">Utilitário offline-first baseado em criptografia robusta local (Stanford JavaScript Crypto Library) para salvaguardar anotações sensíveis.</p>
+                    <ul class="app-features">
+                        <li>Criptografia no lado do cliente</li>
+                        <li>Senhas salvas localmente na memória</li>
+                        <li>Código fonte transparente e seguro</li>
+                        <li>Instalável como Progressive Web App</li>
+                    </ul>
+                </div>
+                <div class="app-actions">
+                    <a href="https://ws1.assis.bhz.br/pwa.sjcl/" class="btn btn-primary" style="width: 100%; text-align: center; display: block;" id="btn-sjcl-app" target="_blank">Acessar o App ↗</a>
                 </div>
             </div>
         </div>
@@ -311,6 +359,12 @@
 
                 const btnCuidados = document.getElementById('btn-cuidados-app');
                 if (btnCuidados) btnCuidados.setAttribute('href', './cuidados/landing.html');
+
+                const btnFinanceiro = document.getElementById('btn-financeiro-app');
+                if (btnFinanceiro) btnFinanceiro.setAttribute('href', '../ws1.assis.bhz.br/assis/docs/pwa.financeiro/index.html');
+
+                const btnSjcl = document.getElementById('btn-sjcl-app');
+                if (btnSjcl) btnSjcl.setAttribute('href', '../ws1.assis.bhz.br/assis/docs/pwa.sjcl/index.html');
             }
         });
     </script>
