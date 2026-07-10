@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>+afeto - Acompanhamento Diário de Idosos</title>
+  <title>+afeto - Acompanhamento Diário da saúde e rotina de pessoas queridas</title>
   <meta name="description" content="O aplicativo +afeto conecta familiares e cuidadores para registrar medicamentos, sinais vitais e rotinas de cuidados diários com segurança e criptografia ativa.">
   
   <!-- Google AdSense -->
@@ -798,10 +798,10 @@
   <!-- Seção Principal -->
   <section id="hero" class="hero">
     <div class="hero-content">
-      <span class="badge">Acompanhamento Diário de Idosos</span>
+      <span class="badge">Acompanhamento Diário da rotina de pessoas queridas</span>
       <h1>Cuide de quem você ama, com mais afeto.</h1>
       <p class="hero-desc">
-        O +afeto conecta familiares e cuidadores em tempo real para um monitoramento seguro, prático e criptografado da rotina e saúde do idoso.
+        O +afeto conecta familiares e cuidadores em tempo real para um monitoramento seguro, prático e criptografado da rotina e saúde de pessoas queridas.
       </p>
       <div class="comparison-teaser">
         <span class="teaser-icon">💡</span>
@@ -1049,5 +1049,21 @@
       </div>
     </div>
   </footer>
+  <!-- Script para compatibilidade local e navegação -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        if (window.location.protocol === 'file:' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+            const links = document.querySelectorAll('a');
+            links.forEach(link => {
+                let href = link.getAttribute('href');
+                if (href) {
+                    if (href === 'https://wingene.com.br') {
+                        link.setAttribute('href', '../../wingene.com.br/docs/index.html');
+                    }
+                }
+            });
+        }
+    });
+  </script>
 </body>
 </html>
