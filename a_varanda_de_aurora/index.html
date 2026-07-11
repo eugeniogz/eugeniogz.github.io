@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A VARANDA DE AURORA</title>
+    <meta name="description" content="A Varanda de Aurora — história infantil de José Eugênio sobre descoberta, silêncio e o poder de sonhar.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --color-bg: #f0ebe3;
+            --color-card: #fffdf8;
+            --color-text: #3d3530;
+            --color-text-muted: #7a6f66;
+            --color-accent: #c07a3a;
+            --color-accent-hover: #a5652b;
+            --color-accent-light: #f5e6d3;
+            --color-border: #e8ddd4;
+            --color-disabled: #c4b9b0;
+            --radius-card: 1.25rem;
+            --radius-btn: 0.625rem;
+            --shadow-card: 0 8px 32px -4px rgba(80,50,20,0.13), 0 2px 8px -2px rgba(80,50,20,0.07);
+            --shadow-btn: 0 2px 8px rgba(192,122,58,0.25);
+            --transition-page: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-body: 'Inter', sans-serif;
+            --font-story: 'Lora', serif;
+            --fs-sm: clamp(0.875rem, 1.5vw, 1rem);
+            --fs-base: clamp(1rem, 2vw, 1.125rem);
+            --fs-lg: clamp(1.125rem, 2.5vw, 1.375rem);
+            --fs-xl: clamp(1.375rem, 3.5vw, 1.75rem);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: var(--fs-base);
+            background-color: var(--color-bg);
+            background-image: radial-gradient(ellipse at top left, #f9e8cd40 0%, transparent 60%),
+                              radial-gradient(ellipse at bottom right, #e8d5c040 0%, transparent 60%);
+            color: var(--color-text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: clamp(0.75rem, 3vw, 1.5rem);
+        }
+
+        /* ── Card principal ── */
+        .main-container {
+            background-color: var(--color-card);
+            border-radius: var(--radius-card);
+            box-shadow: var(--shadow-card);
+            width: 100%;
+            max-width: 72rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            overflow: hidden;
+        }
+
+        /* ── Cabeçalho ── */
+        .book-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: clamp(0.75rem, 2.5vw, 1.25rem) clamp(1rem, 3vw, 2rem);
+            border-bottom: 1px solid var(--color-border);
+            background: linear-gradient(135deg, var(--color-accent-light) 0%, var(--color-card) 100%);
+        }
+
+        .book-title {
+            font-family: var(--font-story);
+            font-size: var(--fs-lg);
+            font-weight: 600;
+            color: var(--color-accent);
+            letter-spacing: 0.02em;
+            line-height: 1.2;
+        }
+
+        .book-author {
+            font-size: var(--fs-sm);
+            color: var(--color-text-muted);
+            font-style: italic;
+        }
+
+        .nav-back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-btn);
+            background-color: var(--color-accent-light);
+            color: var(--color-accent);
+            text-decoration: none;
+            font-size: var(--fs-sm);
+            font-weight: 600;
+            border: 1px solid var(--color-border);
+            transition: all 0.2s ease;
+        }
+        .nav-back-button:hover {
+            background-color: var(--color-accent);
+            color: var(--color-card);
+            border-color: var(--color-accent);
+        }
+
+        /* ── Indicador de progresso ── */
+        .progress-bar-wrap {
+            height: 4px;
+            background: var(--color-border);
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--color-accent) 0%, #e8a050 100%);
+            transition: width var(--transition-page);
+        }
+
+        /* ── Área de conteúdo ── */
+        #page-container {
+            flex: 1;
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* ── Página (imagem + texto) ── */
+        .page {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            min-height: 0;
+            animation-name: fadeInUp;
+            animation-duration: 0.35s;
+            animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            animation-fill-mode: both;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(8px); }
+            to   { opacity: 1; transform: translateY(0);   }
+        }
+
+        .image-box {
+            width: 100%;
+            flex-shrink: 0;
+            overflow: hidden;
+            background: #f5ede3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            aspect-ratio: 4/3;
+        }
+
+        .text-box {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: clamp(1.25rem, 4vw, 2.5rem);
+            gap: 1rem;
+            box-sizing: border-box;
+        }
+
+        .page-number-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .page-number-badge::before {
+            content: '';
+            display: block;
+            width: 1.5rem;
+            height: 2px;
+            background: var(--color-accent);
+            border-radius: 1px;
+        }
+
+        .story-text {
+            font-family: var(--font-story);
+            font-size: var(--fs-lg);
+            color: var(--color-text);
+            line-height: 1.75;
+        }
+
+        .story-title {
+            font-family: var(--font-story);
+            font-size: var(--fs-xl);
+            font-weight: 600;
+            color: var(--color-accent);
+            line-height: 1.3;
+            margin-bottom: 0.25rem;
+        }
+
+        .story-author {
+            font-family: var(--font-story);
+            font-style: italic;
+            font-size: var(--fs-base);
+            color: var(--color-text-muted);
+        }
+
+        /* ── Rodapé de navegação ── */
+        .nav-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: clamp(0.75rem, 2.5vw, 1.25rem) clamp(1rem, 3vw, 2rem);
+            border-top: 1px solid var(--color-border);
+            gap: 1rem;
+            position: relative;
+            z-index: 10;
+            background-color: var(--color-card);
+        }
+
+        .nav-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--color-accent);
+            color: #fff;
+            font-family: var(--font-body);
+            font-size: var(--fs-sm);
+            font-weight: 700;
+            padding: 0.625rem 1.25rem;
+            min-height: 2.75rem;
+            border-radius: var(--radius-btn);
+            box-shadow: var(--shadow-btn);
+            transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+            border: none;
+            letter-spacing: 0.02em;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+
+        .nav-button:hover:not(:disabled) {
+            background-color: var(--color-accent-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px rgba(192,122,58,0.35);
+        }
+
+        .nav-button:active:not(:disabled) {
+            transform: translateY(0);
+        }
+
+        .nav-button:disabled {
+            background-color: var(--color-disabled);
+            box-shadow: none;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        .page-counter {
+            font-size: var(--fs-sm);
+            color: var(--color-text-muted);
+            font-weight: 500;
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        /* ── Swipe hint (mobile) ── */
+        .swipe-hint {
+            display: none;
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--color-text-muted);
+            padding: 0.5rem;
+            border-top: 1px solid var(--color-border);
+        }
+
+        /* ── LOADING ── */
+        .loading-state {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 280px;
+            gap: 0.5rem;
+            color: var(--color-text-muted);
+            font-style: italic;
+        }
+
+        .spinner {
+            width: 1.25rem;
+            height: 1.25rem;
+            border: 2px solid var(--color-border);
+            border-top-color: var(--color-accent);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* ── Mobile: todas as páginas em coluna ── */
+        @media (max-width: 767px) {
+            body {
+                padding: 0.5rem;
+            }
+
+            .main-container {
+                border-radius: 0.75rem;
+                box-shadow: none;
+                background-color: transparent;
+            }
+
+            .page {
+                background-color: var(--color-card);
+                border-radius: var(--radius-card);
+                box-shadow: var(--shadow-card);
+                margin-bottom: 1.5rem;
+                overflow: hidden;
+            }
+
+            .page + .page {
+                border-top: none;
+            }
+
+            .image-box {
+                width: 100%;
+                background: transparent;
+                padding: 0;
+            }
+
+            .page-image {
+                aspect-ratio: auto;
+                object-fit: cover;
+                width: 100%;
+                height: auto;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            .text-box {
+                padding: 1.5rem;
+                max-width: 32rem;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: left;
+            }
+
+            .page-number-badge {
+                display: none !important;
+            }
+
+            .swipe-hint {
+                display: none !important;
+            }
+
+            #page-container.mobile-all .page {
+                animation-name: none;
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* ── Desktop: imagem e texto lado a lado ── */
+        @media (min-width: 768px) {
+            body {
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                padding: 1.5rem;
+            }
+
+            .main-container {
+                height: 85vh;
+                max-height: 48rem;
+                min-height: 32rem;
+            }
+
+            .page {
+                flex-direction: row;
+                height: 100%;
+            }
+
+            .image-box {
+                width: 50%;
+                height: 100%;
+                padding: 1.5rem;
+                box-sizing: border-box;
+            }
+
+            .page-image {
+                max-width: 100%;
+                max-height: 100%;
+                width: auto;
+                height: auto;
+                aspect-ratio: auto;
+                object-fit: contain;
+                box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+                border-radius: 0.5rem;
+            }
+
+            .text-box {
+                width: 50%;
+                height: 100%;
+                overflow-y: auto;
+                padding: 3rem;
+                scrollbar-width: thin;
+                scrollbar-color: var(--color-border) transparent;
+            }
+
+            .text-box::-webkit-scrollbar { width: 6px; }
+            .text-box::-webkit-scrollbar-track { background: transparent; }
+            .text-box::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+        }
+
+        @media (min-width: 1024px) {
+            .image-box { width: 50%; }
+            .text-box { width: 50%; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .page { animation: none; opacity: 1; transform: none; }
+            .nav-button { transition: none; }
+            .progress-bar-fill { transition: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container" id="main-container">
+
+        <!-- Cabeçalho -->
+        <header class="book-header">
+            <div>
+                <div class="book-title">A Varanda de Aurora</div>
+                <div class="book-author">José Eugênio</div>
+            </div>
+            <div>
+                <a href="/" class="nav-back-button" id="nav-back-button">
+                    <span>← Voltar ao Blog</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Barra de progresso -->
+        <div class="progress-bar-wrap" id="progress-wrap" aria-hidden="true">
+            <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
+        </div>
+
+        <!-- Conteúdo gerado dinamicamente -->
+        <div id="page-container" role="main" aria-live="polite"></div>
+
+        <!-- Dica de swipe (mobile) -->
+        <p class="swipe-hint" id="swipe-hint">← deslize para navegar →</p>
+
+        <!-- Botões de navegação -->
+        <nav class="nav-footer" id="nav-footer" aria-label="Navegação de páginas">
+            <button id="prev-btn" class="nav-button" aria-label="Página anterior">
+                ← Anterior
+            </button>
+            <span class="page-counter" id="page-counter" aria-live="polite"></span>
+            <button id="next-btn" class="nav-button" aria-label="Próxima página">
+                Próximo →
+            </button>
+        </nav>
+
+    </div>
+
+    <script>
+        // Gera dinamicamente o array de imagens
+        const imagens = ["capa.png"];
+        const numeroDePaginas = 10;
+        for (let i = 1; i <= numeroDePaginas; i++) {
+            imagens.push(`pg${i}.png`);
+        }
+
+        const storyText = `A VARANDA DE AURORA --- José Eugênio
+AURORA ADORAVA A VARANDA DO DÉCIMO PRIMEIRO ANDAR. ERA SEU LUGAR SECRETO PARA PENSAR E SENTIR.
+O SOL MORNO FAZIA CÓCEGAS EM SEU ROSTO, E O VENTO SUAVE BAGUNÇAVA SEUS CABELOS.
+DE REPENTE, UM CORAL DE PÁSSAROS COMEÇAVA A CANTAR. ELA RECONHECIA CADA NOTA, CADA MELODIA.
+LÁ EMBAIXO, OS RUÍDOS DA CIDADE PARECIAM UMA CANÇÃO DISTANTE. BUZINAS, RISADAS, O MOVIMENTO DOS CARROS. TUDO FAZIA PARTE DA MÚSICA.
+ELA VIA OS PRÉDIOS ALTOS E AS ÁRVORES VERDES QUE BROTAVAM DO CHÃO, COMO GIGANTES AMIGÁVEIS.
+AS NUVENS NO CÉU AZUL MUDAVAM DE FORMA, PARECENDO ANIMAIS OU CASTELOS FLUTUANTES.
+CADA PESSOA QUE OLHAVA PARA O MESMO CÉU VIA ALGO DIFERENTE. ERA COMO SE CADA OLHAR PINTASSE UMA IMAGEM ÚNICA.
+CADA RESPIRAÇÃO DE AURORA ERA UMA PEQUENA HISTÓRIA. UMA HISTÓRIA SÓ DELA, CHEIA DE SENTIMENTOS E DESCOBERTAS.
+ELA APRENDEU QUE NÃO PRECISAVA TER PRESSA. O MELHOR ERA PARAR, SENTIR E DEIXAR A MENTE VOAR.
+POIS É NO SOSSEGO QUE NOSSO ESPÍRITO ENCONTRA FORÇA PARA SONHAR E CRIAR. E AURORA SABIA QUE SUA VARANDA ERA SEU LUGAR ESPECIAL PARA ISSO.`;
+
+        const processedStoryText = storyText.replace(' --- ', '<br><br>');
+        const texto = processedStoryText.split('\n');
+
+        const pageContainer = document.getElementById('page-container');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const navFooter = document.getElementById('nav-footer');
+        const swipeHint = document.getElementById('swipe-hint');
+        const pageCounter = document.getElementById('page-counter');
+        const progressFill = document.getElementById('progress-fill');
+        let currentPageIndex = 0;
+        let isLargeScreen = window.innerWidth >= 768;
+
+        function createPageHTML(imgSrc, pageText, index) {
+            const isFirst = index === 0;
+            const badgeLabel = isFirst ? 'Capa' : `Página ${index}`;
+            const textContent = isFirst
+                ? `<div class="story-title">${pageText.replace('<br><br>', '</div><div class="story-author">')}</div>`
+                : `<p class="story-text">${pageText}</p>`;
+
+            return `
+                <div class="page" role="article" aria-label="${badgeLabel}">
+                    <div class="image-box">
+                        <img src="${imgSrc}" alt="${badgeLabel}" class="page-image" loading="${index === 0 ? 'eager' : 'lazy'}">
+                    </div>
+                    <div class="text-box">
+                        <span class="page-number-badge">${badgeLabel}</span>
+                        ${textContent}
+                    </div>
+                </div>
+            `;
+        }
+
+        function updateProgress(index) {
+            const pct = imagens.length > 1 ? (index / (imagens.length - 1)) * 100 : 100;
+            progressFill.style.width = pct + '%';
+            pageCounter.textContent = `${index + 1} / ${imagens.length}`;
+        }
+
+        function updateButtons() {
+            prevBtn.disabled = currentPageIndex === 0;
+            nextBtn.disabled = currentPageIndex === imagens.length - 1;
+            updateProgress(currentPageIndex);
+        }
+
+        function loadAndShowPage(index) {
+            pageContainer.innerHTML = `
+                <div class="loading-state">
+                    <div class="spinner"></div>
+                    <span>Carregando…</span>
+                </div>`;
+            prevBtn.disabled = true;
+            nextBtn.disabled = true;
+
+            const img = new Image();
+            img.src = imagens[index];
+            img.onload = () => {
+                pageContainer.innerHTML = createPageHTML(imagens[index], texto[index], index);
+                currentPageIndex = index;
+                updateButtons();
+            };
+            img.onerror = () => {
+                pageContainer.innerHTML = `<div class="loading-state">Erro ao carregar a página. Tente novamente.</div>`;
+                updateButtons();
+            };
+        }
+
+        function loadAllPages() {
+            pageContainer.innerHTML = `
+                <div class="loading-state">
+                    <div class="spinner"></div>
+                    <span>Carregando história…</span>
+                </div>`;
+
+            const promises = imagens.map(src => new Promise((resolve, reject) => {
+                const img = new Image();
+                img.src = src;
+                img.onload = () => resolve();
+                img.onerror = () => reject(src);
+            }));
+
+            Promise.all(promises)
+                .then(() => {
+                    pageContainer.innerHTML = '';
+                    for (let i = 0; i < imagens.length; i++) {
+                        pageContainer.innerHTML += createPageHTML(imagens[i], texto[i], i);
+                    }
+                    progressFill.style.width = '100%';
+                })
+                .catch(failed => {
+                    pageContainer.innerHTML = `<div class="loading-state">Erro ao carregar: ${failed}. Recarregue a página.</div>`;
+                });
+        }
+
+        function renderPages() {
+            isLargeScreen = window.innerWidth >= 768;
+            if (isLargeScreen) {
+                navFooter.style.display = 'flex';
+                swipeHint.style.display = 'none';
+                pageContainer.classList.remove('mobile-all');
+                loadAndShowPage(currentPageIndex);
+            } else {
+                navFooter.style.display = 'none';
+                swipeHint.style.display = 'block';
+                pageContainer.classList.add('mobile-all');
+                loadAllPages();
+            }
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (currentPageIndex < imagens.length - 1) {
+                currentPageIndex++;
+                renderPages();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentPageIndex > 0) {
+                currentPageIndex--;
+                renderPages();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+
+        // Navegação por teclado
+        document.addEventListener('keydown', (e) => {
+            if (!isLargeScreen) return;
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') nextBtn.click();
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') prevBtn.click();
+        });
+
+        // Swipe em telas grandes
+        let touchStartX = 0;
+        pageContainer.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+        pageContainer.addEventListener('touchend', (e) => {
+            if (!isLargeScreen) return;
+            const dx = e.changedTouches[0].clientX - touchStartX;
+            if (Math.abs(dx) > 50) {
+                if (dx < 0) nextBtn.click();
+                else prevBtn.click();
+            }
+        }, { passive: true });
+
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(renderPages, 200);
+        });
+
+        // Ajustar link de retorno caso esteja rodando localmente (protocolo file: ou localhost)
+        if (window.location.protocol === 'file:' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+            const backBtn = document.getElementById('nav-back-button');
+            if (backBtn) {
+                backBtn.setAttribute('href', '../index.html');
+            }
+        }
+
+        // Script está no final do <body> — o DOM já está pronto, chamar diretamente.
+        renderPages();
+    </script>
+</body>
+</html>
