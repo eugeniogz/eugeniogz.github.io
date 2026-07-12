@@ -52,7 +52,6 @@ Na simplificação, o amarelo foi substituído por uma estrela branca com uma pe
 Este é o ícone, onde é possível ver o halo amarelo subliminar, use o controle deslizante para alterar o tamanho:
 
 <div class="zoom-container">
-
 <div class="image-wrapper">
 
 <img id="zoom-image" src="./wingene-simplified.png" alt="Logotipo simplificado da Wingene" style="width: 45px; height: 45px;">
