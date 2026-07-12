@@ -49,135 +49,135 @@ Para um ícone em tamanho reduzido, esse logotipo não é adequado. Então, foi 
 
 Na simplificação, o amarelo foi substituído por uma estrela branca com uma pequena opacidade. Apesar disso, a visualização à distância ou em tamanhos pequenos traz a ilusão subliminar do amarelo entre o verde e o vermelho. Um alerta para a dificuldade pessoal em reconhecer as imperfeições. Muitas vezes, tão nítidas para quem observa de fora.
 
-Este é o ícone reduzido, onde é possível ver o halo amarelo subliminar, use o controle deslizante para alterar o tamanho:
+Este é o ícone, onde é possível ver o halo amarelo subliminar, use o controle deslizante para alterar o tamanho:
 
-### <div class="zoom-container">
+<div class="zoom-container">
 
-### <div class="image-wrapper">
+<div class="image-wrapper">
 
-### <img id="zoom-image" src="./wingene-simplified.png" alt="Logotipo simplificado da Wingene" style="width: 45px; height: 45px;">
+<img id="zoom-image" src="./wingene-simplified.png" alt="Logotipo simplificado da Wingene" style="width: 45px; height: 45px;">
 
-### </div>
+</div>
 
-### <div class="slider-controls">
+<div class="slider-controls">
 
-### <span class="zoom-icon">➖</span>
+<span class="zoom-icon">➖</span>
 
-### <input type="range" id="zoom-slider" min="45" max="300" value="45" step="1">
+<input type="range" id="zoom-slider" min="45" max="300" value="45" step="1">
 
-### <span class="zoom-icon">➕</span>
+<span class="zoom-icon">➕</span>
 
-### </div>
+</div>
 
-### </div>
+</div>
 
-### <style>
+<style>
 
-### /* Container principal */
+/* Container principal */
 
-### .zoom-container {
+.zoom-container {
 
-### display: flex;
+display: flex;
 
-### flex-direction: column;
+flex-direction: column;
 
-### align-items: center;
+align-items: center;
 
-### justify-content: center;
+justify-content: center;
 
-### gap: 15px;
+gap: 15px;
 
-### width: 100%;
+width: 100%;
 
-### max-width: 350px; /* Ajuste conforme seu layout */
+max-width: 350px; /* Ajuste conforme seu layout */
 
-### margin: 0 auto;
+margin: 0 auto;
 
-### }
+}
 
-### /* Área reservada para a imagem (evita que o resto da página se mova) */
+/* Área reservada para a imagem (evita que o resto da página se mova) */
 
-### .image-wrapper {
+.image-wrapper {
 
-### display: flex;
+display: flex;
 
-### align-items: center;
+align-items: center;
 
-### justify-content: center;
+justify-content: center;
 
-### width: 300px;  /* Largura máxima que a imagem pode atingir */
+width: 300px;  /* Largura máxima que a imagem pode atingir */
 
-### height: 300px; /* Altura máxima que a imagem pode atingir */
+height: 300px; /* Altura máxima que a imagem pode atingir */
 
-### overflow: hidden;
+overflow: hidden;
 
-### }
+}
 
-### /* Estilização da imagem com transição suave (hardware accelerated para evitar flicker) */
+/* Estilização da imagem com transição suave (hardware accelerated para evitar flicker) */
 
-### #zoom-image {
+#zoom-image {
 
-### object-fit: contain;
+object-fit: contain;
 
-### will-change: width, height;
+will-change: width, height;
 
-### transition: width 0.05s linear, height 0.05s linear;
+transition: width 0.05s linear, height 0.05s linear;
 
-### }
+}
 
-### /* Container do Slider */
+/* Container do Slider */
 
-### .slider-controls {
+.slider-controls {
 
-### display: flex;
+display: flex;
 
-### align-items: center;
+align-items: center;
 
-### gap: 10px;
+gap: 10px;
 
-### width: 100%;
+width: 100%;
 
-### }
+}
 
-### /* Estilo básico do controle */
+/* Estilo básico do controle */
 
-### #zoom-slider {
+#zoom-slider {
 
-### flex-grow: 1;
+flex-grow: 1;
 
-### cursor: pointer;
+cursor: pointer;
 
-### }
+}
 
-### .zoom-icon {
+.zoom-icon {
 
-### font-size: 14px;
+font-size: 14px;
 
-### user-select: none;
+user-select: none;
 
-### }
+}
 
-### </style>
+</style>
 
-### <script>
+<script>
 
-### const slider = document.getElementById('zoom-slider');
+const slider = document.getElementById('zoom-slider');
 
-### const image = document.getElementById('zoom-image');
+const image = document.getElementById('zoom-image');
 
-### // Atualiza o tamanho da imagem em tempo real ao mover o slider
+// Atualiza o tamanho da imagem em tempo real ao mover o slider
 
-### slider.addEventListener('input', (e) => {
+slider.addEventListener('input', (e) => {
 
-### const size = e.target.value + 'px';
+const size = e.target.value + 'px';
 
-### image.style.width = size;
+image.style.width = size;
 
-### image.style.height = size;
+image.style.height = size;
 
-### });
+});
 
-### </script>
+</script>
 
 ### A harmonia matemática
 
