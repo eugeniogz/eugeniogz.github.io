@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Geometria e o método VIDA"
-reading_time: 3
+reading_time: 4
 semantic_order: 1
 tags:
   - Wingene
@@ -49,9 +49,135 @@ Para um ícone em tamanho reduzido, esse logotipo não é adequado. Então, foi 
 
 Na simplificação, o amarelo foi substituído por uma estrela branca com uma pequena opacidade. Apesar disso, a visualização à distância ou em tamanhos pequenos traz a ilusão subliminar do amarelo entre o verde e o vermelho. Um alerta para a dificuldade pessoal em reconhecer as imperfeições. Muitas vezes, tão nítidas para quem observa de fora.
 
-Este é o ícone reduzido, onde é possível ver o halo amarelo subliminar, clique para ver a imagem maior:
+Este é o ícone reduzido, onde é possível ver o halo amarelo subliminar, use o controle deslizante para alterar o tamanho:
 
-<img src="./wingene-simplified.png" alt="Logotipo simplificado da Wingene" width="45" height="45" style="cursor: zoom-in; transition: width 0.2s ease, height 0.2s ease; vertical-align: middle;" onclick="this.style.width = this.style.width === '250px' ? '45px' : '250px'; this.style.height = this.style.height === '250px' ? '45px' : '250px'; this.style.cursor = this.style.width === '250px' ? 'zoom-out' : 'zoom-in';">
+### <div class="zoom-container">
+
+### <div class="image-wrapper">
+
+### <img id="zoom-image" src="./wingene-simplified.png" alt="Logotipo simplificado da Wingene" style="width: 45px; height: 45px;">
+
+### </div>
+
+### <div class="slider-controls">
+
+### <span class="zoom-icon">➖</span>
+
+### <input type="range" id="zoom-slider" min="45" max="300" value="45" step="1">
+
+### <span class="zoom-icon">➕</span>
+
+### </div>
+
+### </div>
+
+### <style>
+
+### /* Container principal */
+
+### .zoom-container {
+
+### display: flex;
+
+### flex-direction: column;
+
+### align-items: center;
+
+### justify-content: center;
+
+### gap: 15px;
+
+### width: 100%;
+
+### max-width: 350px; /* Ajuste conforme seu layout */
+
+### margin: 0 auto;
+
+### }
+
+### /* Área reservada para a imagem (evita que o resto da página se mova) */
+
+### .image-wrapper {
+
+### display: flex;
+
+### align-items: center;
+
+### justify-content: center;
+
+### width: 300px;  /* Largura máxima que a imagem pode atingir */
+
+### height: 300px; /* Altura máxima que a imagem pode atingir */
+
+### overflow: hidden;
+
+### }
+
+### /* Estilização da imagem com transição suave (hardware accelerated para evitar flicker) */
+
+### #zoom-image {
+
+### object-fit: contain;
+
+### will-change: width, height;
+
+### transition: width 0.05s linear, height 0.05s linear;
+
+### }
+
+### /* Container do Slider */
+
+### .slider-controls {
+
+### display: flex;
+
+### align-items: center;
+
+### gap: 10px;
+
+### width: 100%;
+
+### }
+
+### /* Estilo básico do controle */
+
+### #zoom-slider {
+
+### flex-grow: 1;
+
+### cursor: pointer;
+
+### }
+
+### .zoom-icon {
+
+### font-size: 14px;
+
+### user-select: none;
+
+### }
+
+### </style>
+
+### <script>
+
+### const slider = document.getElementById('zoom-slider');
+
+### const image = document.getElementById('zoom-image');
+
+### // Atualiza o tamanho da imagem em tempo real ao mover o slider
+
+### slider.addEventListener('input', (e) => {
+
+### const size = e.target.value + 'px';
+
+### image.style.width = size;
+
+### image.style.height = size;
+
+### });
+
+### </script>
 
 ### A harmonia matemática
 
