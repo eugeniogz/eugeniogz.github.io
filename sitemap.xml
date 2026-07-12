@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.wingene.com.br/apps.html</loc>
-    <lastmod>2026-07-10</lastmod>
+    <loc>https://blog.wingene.com.br/</loc>
+    <lastmod>2026-07-11</lastmod>
   </url>
   <url>
-    <loc>https://blog.wingene.com.br/</loc>
-    <lastmod>2026-07-06</lastmod>
+    <loc>https://blog.wingene.com.br/apps.html</loc>
+    <lastmod>2026-07-10</lastmod>
   </url>
   <url>
     <loc>https://blog.wingene.com.br/Search.html</loc>
@@ -23,6 +23,14 @@
   <url>
     <loc>https://blog.wingene.com.br/manifesto-wingene.html</loc>
     <lastmod>2026-01-31</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.wingene.com.br/a_varanda_de_aurora/</loc>
+    <lastmod>2026-07-10</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.wingene.com.br/odisseiaInterior/</loc>
+    <lastmod>2026-07-10</lastmod>
   </url>
   <url>
     <loc>https://blog.wingene.com.br/cuidados/suporte.html</loc>
@@ -349,6 +357,14 @@
     <lastmod>2026-02-20</lastmod>
   </url>
   <url>
+    <loc>https://blog.wingene.com.br/2026/04/17/pausas-e-orbitas.html</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.wingene.com.br/2026/07/11/incoerencia-verbal.html</loc>
+    <lastmod>2026-07-12</lastmod>
+  </url>
+  <url>
     <loc>https://blog.wingene.com.br/2026/03/06/luar-matinal.html</loc>
     <lastmod>2026-07-10</lastmod>
   </url>
@@ -374,10 +390,6 @@
   </url>
   <url>
     <loc>https://blog.wingene.com.br/2026/05/09/a-triplice-gratificacao.html</loc>
-    <lastmod>2026-06-29</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.wingene.com.br/2026/04/17/pausas-e-orbitas.html</loc>
     <lastmod>2026-06-29</lastmod>
   </url>
   <url>
