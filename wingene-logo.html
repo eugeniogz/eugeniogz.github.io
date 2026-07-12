@@ -288,11 +288,43 @@ title: "Wingene: os logotipos"
         }
     </script>
     <style>
-        .control-panel { display: flex; flex-direction: column; gap: 15px; margin: 20px 0; }
+        .control-panel { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 15px; 
+            margin: 20px 0; 
+            background-color: var(--bg-card, #f0f0f0); 
+            padding: 20px; 
+            border-radius: 8px;
+            border: 1px solid var(--border-light, #ccc);
+        }
         .control-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
-        input[type="button"] { padding: 10px 20px; background-color: #f0f0f0; border: 1px solid #ccc; border-radius: 5px; cursor: pointer; font-size: 14px; transition: background-color 0.3s; }
-        input[type="button"]:hover { background-color: #e0e0e0; }
-        input[type="text"] { padding: 8px; border: 1px solid #ccc; border-radius: 5px; }
+        .control-row p, .control-row label {
+            color: var(--text-main, #333);
+            margin: 0;
+        }
+        input[type="button"] { 
+            padding: 10px 20px; 
+            background-color: var(--bg-primary, #ffffff); 
+            color: var(--text-main, #333); 
+            border: 1px solid var(--border-light, #ccc); 
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-size: 14px; 
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s; 
+        }
+        input[type="button"]:hover { 
+            background-color: var(--color-attention-light, #e0e0e0); 
+            color: var(--color-attention-primary, #123e9c);
+            border-color: var(--color-attention-primary, #999);
+        }
+        input[type="text"] { 
+            padding: 8px; 
+            background-color: var(--bg-primary, #ffffff); 
+            color: var(--text-main, #333); 
+            border: 1px solid var(--border-light, #ccc); 
+            border-radius: 5px; 
+        }
     </style>
 </head>
 

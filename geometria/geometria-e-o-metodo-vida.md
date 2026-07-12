@@ -51,7 +51,7 @@ Na simplificação, o amarelo foi substituído por uma estrela branca com uma pe
 
 Este é o ícone reduzido, onde é possível ver o halo amarelo subliminar, clique para ver a imagem maior:
 
-<a href="./wingene-simplified.png" target="_blank"><img src="./wingene-simplified.png" alt="Logotipo simplificado da Wingene" width="45" height="45"></a>
+<img src="./wingene-simplified.png" alt="Logotipo simplificado da Wingene" width="45" height="45" style="cursor: zoom-in; transition: width 0.2s ease, height 0.2s ease; vertical-align: middle;" onclick="this.style.width = this.style.width === '250px' ? '45px' : '250px'; this.style.height = this.style.height === '250px' ? '45px' : '250px'; this.style.cursor = this.style.width === '250px' ? 'zoom-out' : 'zoom-in';">
 
 ### A harmonia matemática
 
