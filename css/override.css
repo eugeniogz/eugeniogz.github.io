@@ -113,25 +113,57 @@ header h2 {
   letter-spacing: 0.05em !important;
 }
 
-.search-link-header {
-  font-family: 'Outfit', sans-serif !important;
-  color: rgba(255, 255, 255, 0.9) !important;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 6px 16px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.2s ease;
-  font-size: 15px !important;
+.header-nav-container {
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 4px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.search-link-header {
+  font-family: 'Outfit', sans-serif !important;
+  font-weight: 500 !important;
+  color: rgba(255, 255, 255, 0.88) !important;
+  background: transparent;
+  padding: 7px 15px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 14px !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none !important;
+  line-height: 1;
+}
+
+.search-link-header svg {
+  flex-shrink: 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0.85;
 }
 
 .search-link-header:hover {
-  background: rgba(255, 255, 255, 0.2) !important;
-  color: #fff !important;
+  background: rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.25);
   transform: translateY(-1px);
-  text-decoration: none !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.search-link-header:hover svg {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.search-link-header:active {
+  transform: translateY(0);
 }
 
 .mobile-sidebar-shortcut {
@@ -139,10 +171,9 @@ header h2 {
 }
 
 @media only screen and (max-width: 767px) {
-  .mobile-sidebar-shortcut {
-    background: rgba(255, 255, 255, 0.22) !important;
-    border-color: rgba(255, 255, 255, 0.4) !important;
-    font-weight: 700 !important;
+  .header-nav-container {
+    margin-top: 8px;
+    width: auto;
   }
 }
 

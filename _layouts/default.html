@@ -27,17 +27,22 @@
             <img src="{{ '/wingene-animated.gif' | relative_url }}" alt="Wingene Logo, polígono regular de 12 vértices (12/5- vermelho (a herança ancestral)) e estrelas geradas com (12/4 - verde,12/3- amarelo e 12/2- azul (o espírito material), 4 cores, 4 pilares do método VIDA)" style="height: 7.2rem; width: auto;"/>
           </a>
           <div style="display: flex; flex-direction: column; justify-content: center;">
-            <a href="{{ '/' | relative_url }}">
+            <a href="https://wingene.com.br" style="text-decoration: none;">
               <h1 style="margin: 0; line-height: 1.2;">{{ site.title | default: site.github.repository_name }}</h1>
             </a>
             <h2 style="margin: 0; line-height: 1.2;">{{ site.description | default: site.github.project_tagline }}</h2>
           </div>
         </div>
-        <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-          <a href="https://wingene.com.br" class="search-link-header" style="background: rgba(255, 255, 255, 0.15); font-weight: bold;">wingene.com.br</a>
-          <a href="{{ '/Search.html' | relative_url }}" class="search-link-header">🔍 Pesquisar</a>
-          <a href="#sidebar" class="search-link-header mobile-sidebar-shortcut">📋 Tópicos</a>
-        </div>
+        <nav class="header-nav-container" aria-label="Navegação secundária do cabeçalho">
+          <a href="{{ '/Search.html' | relative_url }}" class="search-link-header">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <span>Pesquisar</span>
+          </a>
+          <a href="#sidebar" class="search-link-header mobile-sidebar-shortcut">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+            <span>Tópicos</span>
+          </a>
+        </nav>
       </div>
     </header>
 
@@ -58,6 +63,15 @@
           <div class="sidebar-topics-menu">
             <h4>Tópicos do Site</h4>
             <ul class="sidebar-topics-list">
+              <li class="sidebar-topics-item">
+                <span class="sidebar-topics-category">⭐ Portal WinGene</span>
+                <ul class="sidebar-topics-sublist">
+                  <li class="sidebar-topics-subitem"><a href="https://wingene.com.br" target="_blank">Portal Principal ↗</a></li>
+                  <li class="sidebar-topics-subitem"><a href="https://wingene.com.br/#filosofia" target="_blank">A Origem e Filosofia ↗</a></li>
+                  <li class="sidebar-topics-subitem"><a href="https://wingene.com.br/#metodo-vida" target="_blank">O Método VIDA ↗</a></li>
+                  <li class="sidebar-topics-subitem"><a href="https://wingene.com.br/#citacoes" target="_blank">Citações & Aforismos ↗</a></li>
+                </ul>
+              </li>
               <li class="sidebar-topics-item">
                 <span class="sidebar-topics-category">📜 Ensaios Filosóficos</span>
                 <ul class="sidebar-topics-sublist">
@@ -80,12 +94,12 @@
                 </ul>
               </li>
               <li class="sidebar-topics-item">
-                <span class="sidebar-topics-category">👶 Educação & Herança</span>
+                <span class="sidebar-topics-category">🎨 Educação, Arte & Infância</span>
                 <ul class="sidebar-topics-sublist">
                   <li class="sidebar-topics-subitem"><a href="{{ '/o-cascudo-e-outras-historias/' | relative_url }}">O Cascudo e outras histórias</a></li>
                   <li class="sidebar-topics-subitem"><a href="https://wingene.com.br/Mapas/" target="_blank">Mapas Educativos ↗</a></li>
                   <li class="sidebar-topics-subitem"><a href="https://wingene.com.br/RabiscosETextos/" target="_blank">Rabiscos e Desenhos ↗</a></li>
-                  <li class="sidebar-topics-subitem"><a href="https://wingene.com.br/geometria3d/" target="_blank">Geometria Interativa ↗</a></li>
+                  <li class="sidebar-topics-subitem"><a href="https://wingene.com.br/geometria3d/" target="_blank">Geometria Interativa 3D ↗</a></li>
                 </ul>
               </li>
               <li class="sidebar-topics-item">
@@ -100,7 +114,6 @@
                 <span class="sidebar-topics-category">🎓 Ciência e Portfólio</span>
                 <ul class="sidebar-topics-sublist">
                   <li class="sidebar-topics-subitem"><a href="https://ws1.assis.bhz.br/index.html" target="_blank">Portfólio Acadêmico ↗</a></li>
-                  <li class="sidebar-topics-subitem"><a href="https://ws1.assis.bhz.br/graph.html" target="_blank">Grafo Científico ↗</a></li>
                 </ul>
               </li>
               <li class="sidebar-topics-item">
