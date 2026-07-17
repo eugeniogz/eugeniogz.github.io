@@ -33,11 +33,10 @@
             <h2 style="margin: 0; line-height: 1.2;">{{ site.description | default: site.github.project_tagline }}</h2>
           </div>
         </div>
-        <div style="display: flex; gap: 10px; align-items: center;">
-          <a href="https://wingene.com.br" class="search-link-header" style="background: rgba(255, 255, 255, 0.15); font-weight: bold;">← wingene.com.br</a>
-          {% unless page.url == "/" or page.url == "/index.html" %}
+        <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+          <a href="https://wingene.com.br" class="search-link-header" style="background: rgba(255, 255, 255, 0.15); font-weight: bold;">wingene.com.br</a>
           <a href="{{ '/Search.html' | relative_url }}" class="search-link-header">🔍 Pesquisar</a>
-          {% endunless %}
+          <a href="#sidebar" class="search-link-header mobile-sidebar-shortcut">📋 Tópicos</a>
         </div>
       </div>
     </header>
@@ -71,6 +70,7 @@
               <li class="sidebar-topics-item">
                 <span class="sidebar-topics-category">✍️ Literatura & Reflexões</span>
                 <ul class="sidebar-topics-sublist">
+                  <li class="sidebar-topics-subitem"><a href="{{ '/' | relative_url }}">Microblog</a></li>
                   <li class="sidebar-topics-subitem"><a href="{{ '/ipes-e-tijolos/' | relative_url }}">Ipês e Tijolos</a></li>
                   <li class="sidebar-topics-subitem"><a href="{{ '/cronicas/' | relative_url }}">Crônicas Diárias</a></li>
                   <li class="sidebar-topics-subitem"><a href="{{ '/poesias-e-aforismos/' | relative_url }}">Poesias e Aforismos</a></li>
@@ -101,6 +101,12 @@
                 <ul class="sidebar-topics-sublist">
                   <li class="sidebar-topics-subitem"><a href="https://ws1.assis.bhz.br/index.html" target="_blank">Portfólio Acadêmico ↗</a></li>
                   <li class="sidebar-topics-subitem"><a href="https://ws1.assis.bhz.br/graph.html" target="_blank">Grafo Científico ↗</a></li>
+                </ul>
+              </li>
+              <li class="sidebar-topics-item">
+                <span class="sidebar-topics-category">👤 Sobre o Autor</span>
+                <ul class="sidebar-topics-sublist">
+                  <li class="sidebar-topics-subitem"><a href="{{ '/sobre-o-autor.html' | relative_url }}">José Eugênio</a></li>
                 </ul>
               </li>
             </ul>

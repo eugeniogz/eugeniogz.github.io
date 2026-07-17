@@ -3,11 +3,20 @@ layout: default
 title: Pesquisa
 search: false
 ---
-<form onsubmit="return false;">
-  <label for="search-input">Pesquisa:</label>
-  <input type="text" id="search-input" placeholder="Digite os termos..." />
-</form>
-<ul id="results-container"></ul>
+<div class="search-page-wrapper">
+  <form onsubmit="return false;" class="search-form-group">
+    <label for="search-input" class="search-label">Pesquisar no site</label>
+    <div class="search-input-wrapper">
+      <span class="search-input-icon">🔍</span>
+      <input type="text" id="search-input" placeholder="Digite os termos para pesquisar..." autocomplete="off" />
+    </div>
+  </form>
+
+  <ul id="results-container"></ul>
+
+  <a href="{{ '/' | relative_url }}" class="search-back-btn">← Voltar para o início</a>
+</div>
+
 <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
 <script>
   fetch('{{ "/search.json" | relative_url }}')
@@ -20,12 +29,12 @@ search: false
         searchInput: searchInput,
         resultsContainer: document.getElementById('results-container'),
         json: filteredJson,
-        searchResultTemplate: '<li><a href="{url}">{title} ({reading_time} min)</a></li>', // O template para cada resultado
-        noResultsText: '<li>Nenhum resultado encontrado</li>', // Mensagem para quando não há resultados
-        minimumLength: 2, // Permitir buscas com 2 ou mais caracteres
-        stopWords: '', // Desabilitar a lista de palavras a serem ignoradas
+        searchResultTemplate: '<li><a href="{url}"><span>{title}</span> <span class="search-reading-time">{reading_time} min de leitura</span></a></li>',
+        noResultsText: '<li class="no-results">Nenhum resultado encontrado</li>',
+        minimumLength: 2,
+        stopWords: '',
         limit: 100,
-        searchFields: ['title', 'content'], // Define os campos a serem pesquisados
+        searchFields: ['title', 'content'],
       });
 
       // Checa se há parâmetros de busca na URL (ex: ?q=minha_busca)
@@ -40,4 +49,3 @@ search: false
       }
     });
 </script>
-<a href="./">Voltar</a>

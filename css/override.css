@@ -68,6 +68,10 @@
    ESTILOS GERAIS & CABEÇALHO (SOBREPOSIÇÃO DO TEMA ARCHITECT)
    ========================================================================== */
 
+html {
+  scroll-behavior: smooth;
+}
+
 html, body, footer {
   background-color: var(--bg-primary) !important;
   color: var(--text-main) !important;
@@ -118,6 +122,9 @@ header h2 {
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.2s ease;
   font-size: 15px !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .search-link-header:hover {
@@ -125,6 +132,18 @@ header h2 {
   color: #fff !important;
   transform: translateY(-1px);
   text-decoration: none !important;
+}
+
+.mobile-sidebar-shortcut {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) {
+  .mobile-sidebar-shortcut {
+    background: rgba(255, 255, 255, 0.22) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    font-weight: 700 !important;
+  }
 }
 
 /* ==========================================================================
@@ -641,6 +660,181 @@ table th {
   background: var(--color-attention-primary) !important;
   color: #ffffff !important;
   border-color: var(--color-attention-primary) !important;
+}
+
+/* ==========================================================================
+   PÁGINA DE PESQUISA & INPUTS GERAIS
+   ========================================================================== */
+
+/* Regras gerais para elementos de formulário */
+form {
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+input[type="text"],
+input[type="search"],
+input[type="email"],
+textarea,
+select {
+  background-color: var(--bg-card) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="search"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--color-attention-primary) !important;
+  outline: none;
+  box-shadow: 0 0 0 3px var(--border-focus) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted) !important;
+  opacity: 0.7;
+}
+
+.search-page-wrapper {
+  margin: 1rem 0 2.5rem 0;
+}
+
+.search-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+.search-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main) !important;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input-wrapper input {
+  width: 100%;
+  padding: 12px 18px 12px 46px !important;
+  font-size: 1.05rem !important;
+  border-radius: 30px !important;
+}
+
+.search-input-icon {
+  position: absolute;
+  left: 16px;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+#results-container {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 1.5rem 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+#results-container li {
+  margin: 0 !important;
+}
+
+#results-container li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  padding: 1.1rem 1.4rem;
+  color: var(--color-attention-primary) !important;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+#results-container li a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--border-focus);
+  border-color: var(--color-attention-primary);
+  color: var(--color-attention-hover) !important;
+}
+
+#results-container li a .search-reading-time {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: rgba(0, 0, 0, 0.05);
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  #results-container li a .search-reading-time {
+    background: rgba(255, 255, 255, 0.08);
+  }
+}
+
+#results-container li.no-results {
+  background: var(--bg-card);
+  border: 1px dashed var(--border-light);
+  border-radius: 14px;
+  padding: 1.4rem;
+  color: var(--text-muted);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.search-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 1.5rem;
+  padding: 8px 18px;
+  background: var(--color-attention-light) !important;
+  color: var(--color-attention-primary) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 20px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  transition: all 0.2s ease;
+}
+
+.search-back-btn:hover {
+  background: var(--color-attention-primary) !important;
+  color: #ffffff !important;
+  border-color: var(--color-attention-primary) !important;
+  transform: translateY(-1px);
 }
 
 /* 2. Cores das Bordas dos Cartões baseadas no Método VIDA */
