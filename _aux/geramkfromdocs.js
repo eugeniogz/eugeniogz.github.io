@@ -1104,6 +1104,8 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         let scoreFound = false;
         let customTitle = null;
         let titleFound = false;
+        let pillar = null;
+        let customDateStr = null;
         
         // --- 1. EXTRAÇÃO DE METADADOS (SCORE e TAGS) em passagem reversa ---
         for (let i = body.getNumChildren() - 1; i >= 0; i--) {
@@ -1145,6 +1147,18 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                     titleFound = true;
                     isMetadata = true;
                 }
+
+                const pillarMatch = text.match(/^\s*(?:Pilar|pillar):\s*["']?(.*?)["']?\s*$/i);
+                if (pillarMatch && !pillar) {
+                    pillar = pillarMatch[1].trim().replace(/^["']+|["']+$/g, '').trim();
+                    isMetadata = true;
+                }
+
+                const dateMatch = text.match(/^\s*date:\s*["']?(.*?)["']?\s*$/i);
+                if (dateMatch && !customDateStr) {
+                    customDateStr = dateMatch[1].trim();
+                    isMetadata = true;
+                }
                 
                 // Pula o parágrafo atual se ele continha alguma propriedade de metadados
                 if (isMetadata) {
@@ -1174,6 +1188,10 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         markdown += `reading_time: ${tempoLeitura}\n`;
         markdown += `semantic_order: ${semanticOrderScore}\n`;
 
+        if (pillar) {
+            markdown += `pillar: "${pillar}"\n`;
+        }
+
         if (noIndex) {
             markdown += `no_index: true\n`;
         }
@@ -1191,7 +1209,7 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
 
         if (isPostsFolder) {
              const dateObj = docFile.getLastUpdated();
-             const dateTimeStr = Utilities.formatDate(dateObj, Session.getScriptTimeZone(), "yyyy-MM-dd HH:mm:ss");
+             const dateTimeStr = customDateStr ? customDateStr : Utilities.formatDate(dateObj, Session.getScriptTimeZone(), "yyyy-MM-dd HH:mm:ss");
              markdown += `date: ${dateTimeStr}\n`;
         }
         markdown += `--- \n\n`;
@@ -1223,7 +1241,7 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                     firstNonMetaIndex = i + 1;
                     continue;
                 }
-                if (inFrontMatterBlock || txt.match(/^(layout|title|date|pillar|reading_time|semantic_order|tags|no_index|navigation_footer):\s*/i)) {
+                if (inFrontMatterBlock || txt.match(/^(layout|title|date|pillar|pilar|reading_time|semantic_order|tags|no_index|navigation_footer):\s*/i)) {
                     firstNonMetaIndex = i + 1;
                     continue;
                 }
