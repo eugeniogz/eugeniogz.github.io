@@ -1154,7 +1154,7 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                     isMetadata = true;
                 }
 
-                const dateMatch = text.match(/^\s*date:\s*["']?(.*?)["']?\s*$/i);
+                const dateMatch = text.match(/^\s*(?:date|data):\s*["']?(.*?)["']?\s*$/i);
                 if (dateMatch && !customDateStr) {
                     customDateStr = dateMatch[1].trim();
                     isMetadata = true;
