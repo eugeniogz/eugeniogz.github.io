@@ -413,13 +413,13 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
 
             } else {
                  // Fallback: lê metadados do Doc se o MD não for encontrado
-                ({
+                 ({
                     semanticOrderScore,
                     tempoLeitura,
                     nomeSemData,
                     noIndex,
                     hasNavigationFooter
-                } = getMetadataFromDocLite(arquivoDoc, nomeDocOriginal));
+                } = getMetadataFromDocLite(arquivoDoc, nomeDocOriginal, pastaDestino));
             }
         }
 
@@ -857,11 +857,12 @@ function gerarNavegacaoRodape(anterior, proximo) {
  * Extrai APENAS os metadados (score, tempo leitura, nome sem data) de um Google Doc.
  * Evita a conversão completa para Markdown para economizar tempo.
  */
-function getMetadataFromDocLite(docFile, originalFileName) {
+function getMetadataFromDocLite(docFile, originalFileName, pastaDestino = null) {
     let semanticOrderScore = 0.0;
     let tempoLeitura = 1;
     let nomeSemData = originalFileName; 
-    let noIndex = true;
+    const isPostsFolder = pastaDestino && pastaDestino.getName() === '_posts';
+    let noIndex = !isPostsFolder;
     let hasNavigationFooter = true;
     
     try {
@@ -1052,7 +1053,7 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
     let tempoLeitura = 1;
     let nomeSemData = originalFileName; // Inicializa com o nome original
     const isPostsFolder = pastaDestino.getName() === '_posts';
-    let noIndex = true;
+    let noIndex = !isPostsFolder;
     let hasNavigationFooter = true;
 
     try {
