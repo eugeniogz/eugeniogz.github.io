@@ -20,17 +20,17 @@ tags:
 
 "A consciência dança suavemente acima do pensar e do sentir, num baile harmônico..."
 
-## **O Limiar Meta Consciente**
+## **O Limiar Metaconsciente**
 
-O limiar meta consciente ocorre quando o fluxo automático da vida se transmuta em espetáculo para a consciência.
+O limiar metaconsciente ocorre quando o fluxo automático da vida se transmuta em espetáculo para a consciência.
 
-A diferença entre estar imerso na tempestade de estímulos e tornar-se o espectador a observar suas próprias engrenagens em movimento. O estado meta consciente não é metafísico. Ele se revela na própria consciência, que passa a enxergar a cognição como um sentido. O sentido superior de um ser que não apenas é senciente, nem mesmo somente consciente e sim capaz de abarcar seus sentimentos e pensamentos como um todo.
+A diferença entre estar imerso na tempestade de estímulos e tornar-se o espectador a observar suas próprias engrenagens em movimento. O estado metaconsciente não é metafísico. Ele se revela na própria consciência, que passa a enxergar a cognição como um sentido. O sentido superior de um ser que não apenas é senciente, nem mesmo somente consciente, e sim capaz de abarcar seus sentimentos e pensamentos plenamente.
 
 ## **Pensar o Sentir**
 
-O Afeto ganha novas cores quando se apresenta à consciência. A mente não apenas saboreia o sentir, como também o transforma em nutriente. Ao pensar o sentir, o ser humano pode superar as dores, filtrar ruídos e captar os estímulos que realmente interessam. Com isso, ele pode retirar de cada experiência os motivos que colorem a vida. Esse é o primeiro passo para o estado meta consciente. Deve-se ter em conta, no entanto, que existem obstáculos para chegar ao mesmo. Sentimentos que castigam os sentidos, por exemplo, podem dificultar que a razão se estabeleça, pois o esforço biológico em lidar com os mesmos prejudica a serenidade mental.
+O afeto ganha novas cores quando se apresenta à consciência. A mente não apenas saboreia o sentir, como também o transforma em nutriente. Ao pensar o sentir, o ser humano pode superar as dores, filtrar ruídos e captar os estímulos que realmente interessam. Com isso, ele pode retirar de cada experiência os motivos que colorem a vida. Esse é o primeiro passo para o estado metaconsciente. Deve-se ter em conta, no entanto, que existem obstáculos para chegar ao mesmo. Sentimentos que castigam os sentidos, por exemplo, podem dificultar que a razão se estabeleça, pois o esforço biológico em lidar com os mesmos prejudica a serenidade mental.
 
-A razão, ao compreender os sentidos, deve fazê-lo de forma calorosa. Os sentidos não devem perder sua textura e leveza. Para isso é preciso se alegrar com eles. É importante reconhecer a beleza de cada estímulo que chega até a mente, evitando julgamentos racionais sem a participação da felicidade da presença. Assim, por exemplo, uma paisagem admirada pelo olhar ganha mais significado quando, além de ser contemplada, funde-se com a consciência.
+A razão, ao compreender os sentidos, deve fazê-lo de forma calorosa. Os sentidos não devem perder sua textura e leveza. Para isso, é preciso se alegrar com eles. É importante reconhecer a beleza de cada estímulo que chega até a mente, evitando julgamentos racionais sem a participação da felicidade da presença. Assim, por exemplo, uma paisagem admirada pelo olhar ganha mais significado quando, além de ser contemplada, funde-se com a consciência.
 
 ## **Sentir o Pensar**
 
@@ -46,7 +46,7 @@ Nesse sentido**,** o quiasmo "pensar o sentir, sentir o pensar" não é apenas u
 
 Com a metaconsciência a mente transcende a mente sem abandonar o solo, mantendo os pés na realidade enquanto a consciência flutua acima dos ruídos e do automatismo urbano. A partir deste momento, a mente experimenta a felicidade pura — uma serena euforia que independe das ruínas e ruídos externos, bastando-se na própria presença.
 
-## A Dança no Palco da Existência
+## **A Dança no Palco da Existência**
 
 Para que o conceito não se perca nas nuvens da abstração, a metaconsciência precisa retornar ao solo. Ela não é um refúgio estático longe do mundo, nem uma fuga intelectual dos barulhos da cidade, dos prazos ou das dores. É, antes, o modo como habitamos esse palco.
 

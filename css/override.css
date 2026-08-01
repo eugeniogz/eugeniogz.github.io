@@ -254,7 +254,7 @@ hr {
    ========================================================================== */
 
 .hero {
-  margin: 3.5rem auto 2.5rem auto;
+  margin: 1.2rem auto 2rem auto;
   text-align: center;
 }
 
@@ -263,6 +263,8 @@ hr {
   font-size: 1.3rem !important;
   font-style: italic;
   max-width: 800px;
+  margin-top: 0;
+  margin-bottom: 0;
   line-height: 1.6;
   color: var(--text-main) !important;
 }
