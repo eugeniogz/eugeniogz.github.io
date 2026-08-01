@@ -338,13 +338,14 @@ function gerarLivro(nomeLivroComSubtitulo, pastaDestino, listaDocs, tipo, tipoSa
 /**
  * @param {string} docId ID do documento a ser copiado.
  * @param {GoogleAppsScript.Document.Body} corpoDestino O corpo do documento do livro.
+ * @param {number} [startChildIndex=0] Índice do primeiro elemento filho a copiar.
  */
-function processarDocumentoFormatado(docId, corpoDestino) {
+function processarDocumentoFormatado(docId, corpoDestino, startChildIndex = 0) {
     const docOrigem = DocumentApp.openById(docId);
     const bodyOrigem = docOrigem.getBody();
     const elementos = bodyOrigem.getNumChildren();
 
-    for (let i = 0; i < elementos; i++) {
+    for (let i = startChildIndex; i < elementos; i++) {
         const elementoOrigem = bodyOrigem.getChild(i);
         const tipo = elementoOrigem.getType();
 
@@ -357,7 +358,13 @@ function processarDocumentoFormatado(docId, corpoDestino) {
 
             // 1. Remoção de Metadados (Condicional)
             if (heading === DocumentApp.ParagraphHeading.NORMAL || heading === DocumentApp.ParagraphHeading.UNSUPPORTED) {
-                if (textoCompleto.trim().match(/^Ordenação:\s*(\d+)/i) || textoCompleto.trim().match(/^Tags:/i)) {
+                if (textoCompleto.trim().match(/^Ordenação:\s*(\d+)/i) || 
+                    textoCompleto.trim().match(/^Tags:/i) ||
+                    textoCompleto.trim().match(/^title:\s*/i) ||
+                    textoCompleto.trim().match(/^date:\s*/i) ||
+                    textoCompleto.trim().match(/^pillar:\s*/i) ||
+                    textoCompleto.trim().match(/^layout:\s*/i) ||
+                    textoCompleto.trim() === '---') {
                     continue; 
                 }
             }
@@ -693,7 +700,7 @@ function compilarMicroblog(pastaFinalizados, pastaCompilados) {
     const pastaPosts = pastasPosts.next();
     Logger.log('Pasta "_posts" localizada com ID: ' + pastaPosts.getId());
 
-    // 2. Coletar arquivos .md da pasta _posts
+    // 2. Coletar arquivos (.md e Google Docs) da pasta _posts
     const arquivos = pastaPosts.getFiles();
     const listaPosts = [];
     let totalArquivosNaPasta = 0;
@@ -702,10 +709,21 @@ function compilarMicroblog(pastaFinalizados, pastaCompilados) {
         totalArquivosNaPasta++;
         const arquivo = arquivos.next();
         const nomeArquivo = arquivo.getName();
-        Logger.log('Arquivo encontrado na pasta _posts: "' + nomeArquivo + '" (MimeType: ' + arquivo.getMimeType() + ')');
-        if (nomeArquivo.endsWith('.md')) {
+        const tipoMime = arquivo.getMimeType();
+        Logger.log('Arquivo encontrado na pasta _posts: "' + nomeArquivo + '" (MimeType: ' + tipoMime + ')');
+        if (tipoMime === MimeType.GOOGLE_DOCS) {
             listaPosts.push({
+                tipo: 'gdoc',
                 file: arquivo,
+                id: arquivo.getId(),
+                nomeArquivo: nomeArquivo,
+                timestamp: arquivo.getLastUpdated().getTime()
+            });
+        } else if (nomeArquivo.endsWith('.md')) {
+            listaPosts.push({
+                tipo: 'md',
+                file: arquivo,
+                id: arquivo.getId(),
                 nomeArquivo: nomeArquivo,
                 timestamp: arquivo.getLastUpdated().getTime()
             });
@@ -713,10 +731,10 @@ function compilarMicroblog(pastaFinalizados, pastaCompilados) {
     }
 
     Logger.log('Total de arquivos na pasta _posts: ' + totalArquivosNaPasta);
-    Logger.log('Total de arquivos .md identificados: ' + listaPosts.length);
+    Logger.log('Total de posts identificados (.md e Google Docs): ' + listaPosts.length);
 
     if (listaPosts.length === 0) {
-        Logger.log('Nenhum arquivo markdown (.md) encontrado na pasta "_posts".');
+        Logger.log('Nenhum post (.md ou Google Docs) encontrado na pasta "_posts".');
         return;
     }
 
@@ -796,9 +814,15 @@ function compilarMicroblog(pastaFinalizados, pastaCompilados) {
         }
         isFirst = false;
 
-        const content = postMeta.file.getBlob().getDataAsString('UTF-8');
-        const post = parseMarkdownPost(content, postMeta.nomeArquivo);
-        Logger.log('Processando post: "' + postMeta.nomeArquivo + '" -> Título: "' + post.title + '", Data: "' + post.dateStr + '", Pilar: "' + post.pillar + '", Tamanho do corpo: ' + post.body.length);
+        let post;
+        if (postMeta.tipo === 'gdoc') {
+            post = parseGDocPostMetadata(postMeta.id, postMeta.nomeArquivo);
+            Logger.log('Processando post Google Doc: "' + postMeta.nomeArquivo + '" -> Título: "' + post.title + '", Data: "' + post.dateStr + '", Pilar: "' + post.pillar + '", Skip elements: ' + post.skipElementCount);
+        } else {
+            const content = postMeta.file.getBlob().getDataAsString('UTF-8');
+            post = parseMarkdownPost(content, postMeta.nomeArquivo);
+            Logger.log('Processando post Markdown: "' + postMeta.nomeArquivo + '" -> Título: "' + post.title + '", Data: "' + post.dateStr + '", Pilar: "' + post.pillar + '", Tamanho do corpo: ' + post.body.length);
+        }
 
         // Título do post como HEADING1
         corpoLivro.appendParagraph(post.title)
@@ -828,13 +852,21 @@ function compilarMicroblog(pastaFinalizados, pastaCompilados) {
         corpoLivro.appendParagraph('');
 
         // Conteúdo do post (corpo)
-        const paragraphs = post.body.split(/\n\n+/);
-        paragraphs.forEach(pText => {
-            if (pText.trim()) {
-                const p = corpoLivro.appendParagraph(pText.trim());
-                processMarkdownLinksInText(p);
+        if (postMeta.tipo === 'gdoc') {
+            try {
+                processarDocumentoFormatado(postMeta.id, corpoLivro, post.skipElementCount);
+            } catch (e) {
+                Logger.log('ERRO: Falha na cópia do Google Doc "' + postMeta.nomeArquivo + '": ' + e.toString());
             }
-        });
+        } else {
+            const paragraphs = post.body.split(/\n\n+/);
+            paragraphs.forEach(pText => {
+                if (pText.trim()) {
+                    const p = corpoLivro.appendParagraph(pText.trim());
+                    processMarkdownLinksInText(p);
+                }
+            });
+        }
     });
 
     livro.saveAndClose();
@@ -845,49 +877,145 @@ function compilarMicroblog(pastaFinalizados, pastaCompilados) {
  * Auxiliar para analisar a estrutura do arquivo Markdown (.md) com suporte a BOM.
  */
 function parseMarkdownPost(content, fileName) {
-    // Remover BOM se presente
     const cleanContent = content.replace(/^\uFEFF/, '').trim();
-    
-    // Expressão regular para isolar o bloco de Front Matter
-    const fmRegex = /^---\s*(?:\r?\n)([\s\S]*?)(?:\r?\n)---\s*(?:\r?\n)([\s\S]*)$/;
-    const match = cleanContent.match(fmRegex);
     
     let title = '';
     let dateStr = '';
     let pillar = '';
-    let body = '';
     
-    if (match) {
-        const fmText = match[1];
-        body = match[2].trim();
+    // Extrai todas as variáveis de metadados antes de limpar o corpo
+    const lines = cleanContent.split(/\r?\n/);
+    lines.forEach(line => {
+        const matchTitle = line.match(/^title:\s*(.*)$/i);
+        const matchDate = line.match(/^date:\s*["']?([^"'\s]+)/i);
+        const matchPillar = line.match(/^pillar:\s*(.*)$/i);
         
-        // Analisar linhas do Front Matter
-        const lines = fmText.split(/\r?\n/);
-        lines.forEach(line => {
-            const matchTitle = line.match(/^title:\s*["']?(.*?)["']?$/i);
-            const matchDate = line.match(/^date:\s*["']?([^"'\s]+)/i); // Extrai o YYYY-MM-DD diretamente
-            const matchPillar = line.match(/^pillar:\s*["']?(.*?)["']?$/i);
-            if (matchTitle) {
-                title = matchTitle[1].trim();
-            } else if (matchDate) {
-                dateStr = matchDate[1].trim();
-            } else if (matchPillar) {
-                pillar = matchPillar[1].trim();
-            }
-        });
-    } else {
-        body = cleanContent;
+        if (matchTitle && !title) {
+            title = matchTitle[1].trim().replace(/^["']+|["']+$/g, '').trim();
+        }
+        if (matchDate && !dateStr) {
+            dateStr = matchDate[1].trim();
+        }
+        if (matchPillar && !pillar) {
+            pillar = matchPillar[1].trim().replace(/^["']+|["']+$/g, '').trim();
+        }
+    });
+
+    // Limpa o corpo removendo TODOS os blocos --- ... --- do início
+    let body = cleanContent;
+    while (body.match(/^---\s*(?:\r?\n)([\s\S]*?)(?:\r?\n)---\s*(?:\r?\n)?/)) {
+        body = body.replace(/^---\s*(?:\r?\n)([\s\S]*?)(?:\r?\n)---\s*(?:\r?\n)?/, '').trim();
     }
     
+    // Remove quaisquer linhas soltas de metadados ou --- no início do corpo
+    const bodyLines = body.split(/\r?\n/);
+    let skipCount = 0;
+    for (let i = 0; i < bodyLines.length; i++) {
+        const line = bodyLines[i].trim();
+        if (!line || line === '---' || line.match(/^(layout|title|date|pillar|reading_time|semantic_order|tags|no_index|navigation_footer):\s*/i)) {
+            skipCount = i + 1;
+        } else {
+            break;
+        }
+    }
+    if (skipCount > 0) {
+        body = bodyLines.slice(skipCount).join('\n').trim();
+    }
+
     if (!title) {
         title = fileName.replace(/\.md$/, '').replace(/^\d{4}-\d{2}-\d{2}-/, '');
     }
-    
+    title = title.replace(/^["']+|["']+$/g, '').trim();
+
+    if (!dateStr) {
+        const matchDateFn = fileName.match(/^(\d{4}-\d{2}-\d{2})/);
+        if (matchDateFn) {
+            dateStr = matchDateFn[1];
+        }
+    }
+
     return {
         title: title,
         dateStr: dateStr,
         pillar: pillar,
         body: body
+    };
+}
+
+/**
+ * Auxiliar para analisar os metadados (Front Matter ou linhas iniciais) em um Google Doc.
+ * @param {string} docId ID do documento no Google Docs.
+ * @param {string} fileName Nome do arquivo no Google Drive.
+ * @returns {object} { title, dateStr, pillar, skipElementCount }
+ */
+function parseGDocPostMetadata(docId, fileName) {
+    let title = '';
+    let dateStr = '';
+    let pillar = '';
+    let skipElementCount = 0;
+
+    try {
+        const docOrigem = DocumentApp.openById(docId);
+        const bodyOrigem = docOrigem.getBody();
+        const numChildren = bodyOrigem.getNumChildren();
+
+        for (let i = 0; i < numChildren; i++) {
+            const elem = bodyOrigem.getChild(i);
+            const text = elem.getText().trim();
+
+            if (!text) {
+                if (i === skipElementCount) {
+                    skipElementCount = i + 1;
+                }
+                continue;
+            }
+
+            if (text === '---') {
+                skipElementCount = i + 1;
+                continue;
+            }
+
+            const matchTitle = text.match(/^title:\s*(.*)$/i);
+            const matchDate = text.match(/^date:\s*["']?([^"'\s]+)/i);
+            const matchPillar = text.match(/^pillar:\s*(.*)$/i);
+            const matchOtherMeta = text.match(/^(layout|reading_time|semantic_order|tags|no_index|navigation_footer):\s*/i);
+
+            if (matchTitle) {
+                if (!title) title = matchTitle[1].trim().replace(/^["']+|["']+$/g, '').trim();
+                skipElementCount = i + 1;
+            } else if (matchDate) {
+                if (!dateStr) dateStr = matchDate[1].trim();
+                skipElementCount = i + 1;
+            } else if (matchPillar) {
+                if (!pillar) pillar = matchPillar[1].trim().replace(/^["']+|["']+$/g, '').trim();
+                skipElementCount = i + 1;
+            } else if (matchOtherMeta) {
+                skipElementCount = i + 1;
+            } else {
+                break;
+            }
+        }
+    } catch (e) {
+        Logger.log('AVISO: Falha ao ler metadados do Google Doc "' + fileName + '": ' + e.toString());
+    }
+
+    if (!title) {
+        title = fileName.replace(/\.gdoc$/i, '').replace(/^\d{4}-\d{2}-\d{2}-/, '');
+    }
+    title = title.replace(/^["']+|["']+$/g, '').trim();
+
+    if (!dateStr) {
+        const matchDateFn = fileName.match(/^(\d{4}-\d{2}-\d{2})/);
+        if (matchDateFn) {
+            dateStr = matchDateFn[1];
+        }
+    }
+
+    return {
+        title: title,
+        dateStr: dateStr,
+        pillar: pillar,
+        skipElementCount: skipElementCount
     };
 }
 

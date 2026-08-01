@@ -302,10 +302,10 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
 
         const nomeDocOriginal = arquivoDoc.getName();
         if (nomeDocOriginal === 'Config' || nomeDocOriginal === 'index') continue;
-        if (nomeDocOriginal.toLowerCase().endsWith('.tex') || nomeDocOriginal.toLowerCase().endsWith('.md')
-        || nomeDocOriginal.toLowerCase().endsWith('.html')) continue;
 
-        const nomeSlug = slugifyFileName(nomeDocOriginal);
+        // Se o nome do Google Doc tiver extensão no nome (ex: .md, .html, .tex), limpa para gerar o slug correto
+        const nomeDocLimpo = nomeDocOriginal.replace(/\.(md|html|tex)$/i, '');
+        const nomeSlug = slugifyFileName(nomeDocLimpo);
         let nomeMarkdown = `${nomeSlug}.md`;
 
         if (nomeDocOriginal === 'Aforismos') {
@@ -621,6 +621,11 @@ function sincronizarAssets(pastaFonte, pastaDestino) {
         const mime = arquivo.getMimeType();
         const nomeArquivo = arquivo.getName();
         
+        // Google Docs são convertidos e gerenciados separadamente, NUNCA copiados como assets
+        if (mime === MimeType.GOOGLE_DOCS) {
+            continue;
+        }
+
         // Verifica se é para copiar diretamente
         if (mime === MimeType.JAVASCRIPT || mime === MimeType.HTML || mime === MimeType.JPEG || mime === MimeType.PNG || mime === MimeType.PDF || mime.startsWith('video/') || mime === MimeType.GIF || mime === MimeType.SVG || mime === 'application/x-tex' || nomeArquivo.toLowerCase().endsWith('.tex')  || nomeArquivo.toLowerCase().endsWith('.md')) {
             const arquivosDestino = pastaDestino.getFilesByName(nomeArquivo);
@@ -1161,9 +1166,10 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         let isPost = /^\d{4}-\d{2}-\d{2}-/.test(originalFileName);
         
         // --- 2. MONTAGEM DO YAML FRONT MATTER ---
+        const cleanTitle = nomeSemData.replace(/^["']+|["']+$/g, '').trim();
         markdown += `---\n`;
         markdown += `layout: ${customLayout ? customLayout : (isPostsFolder ? 'post' : 'default')}\n`;
-        markdown += `title: "${nomeSemData}"\n`;
+        markdown += `title: "${cleanTitle}"\n`;
         // ADIÇÃO DOS METADADOS PARA OTIMIZAÇÃO FUTURA
         markdown += `reading_time: ${tempoLeitura}\n`;
         markdown += `semantic_order: ${semanticOrderScore}\n`;
@@ -1195,14 +1201,41 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         if (fileSlug !== 'index') {
             let linkIndex = "./";
             if (!isPost && !isPostsFolder && pastaDestino.getId() !== ROOT_DESTINATION_FOLDER_ID) markdown += `\n\n### [${tituloPasta}](${linkIndex})\n\n`;
-            if (!isPostsFolder) markdown += `## ${nomeSemData}\n\n`;
+            if (!isPostsFolder) markdown += `## ${cleanTitle}\n\n`;
         }
 
         const contentElements = contentElementsInReverse.reverse();
 
-        // [Lógica de conversão de corpo para Markdown...]
+        // Filtrar elementos de Front Matter no início do documento para não repetir no corpo
+        let firstNonMetaIndex = 0;
+        let inFrontMatterBlock = false;
+
         for (let i = 0; i < contentElements.length; i++) {
-            const element = contentElements[i];
+            const elem = contentElements[i];
+            if (elem.getType() === DocumentApp.ElementType.PARAGRAPH) {
+                const txt = elem.asParagraph().getText().trim();
+                if (!txt) {
+                    if (i === firstNonMetaIndex) firstNonMetaIndex = i + 1;
+                    continue;
+                }
+                if (txt === '---') {
+                    inFrontMatterBlock = !inFrontMatterBlock;
+                    firstNonMetaIndex = i + 1;
+                    continue;
+                }
+                if (inFrontMatterBlock || txt.match(/^(layout|title|date|pillar|reading_time|semantic_order|tags|no_index|navigation_footer):\s*/i)) {
+                    firstNonMetaIndex = i + 1;
+                    continue;
+                }
+            }
+            break;
+        }
+
+        const bodyElements = contentElements.slice(firstNonMetaIndex);
+
+        // [Lógica de conversão de corpo para Markdown...]
+        for (let i = 0; i < bodyElements.length; i++) {
+            const element = bodyElements[i];
             const elementType = element.getType();
 
             if (elementType === DocumentApp.ElementType.PARAGRAPH) {
