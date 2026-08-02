@@ -186,6 +186,17 @@ function slugifyFileName(fileName) {
 }
 
 /**
+ * Converte aspas estilizadas (smart/curly quotes) para aspas normais (retas).
+ */
+function normalizarAspas(str) {
+  if (!str) return str;
+  return str
+    .replace(/[“”„«»]/g, '"')
+    .replace(/[‘’‚]/g, "'");
+}
+
+
+/**
  * Procura um arquivo .md pelo nome em toda a hierarquia de destino.
  * (Função não usada no fluxo principal, mas mantida por ser útil)
  */
@@ -259,9 +270,9 @@ function getMetadataFromMd(arquivoMdDestino) {
             }
             
             // Regex para extrair title (com ou sem aspas)
-            const titleMatch = yamlBlock.match(/title:\s*"(.*?)"/i) || yamlBlock.match(/title:\s*(.*?)\n/i);
+            const titleMatch = yamlBlock.match(/title:\s*["'“`”‘'«»]?(.*?)["'“`”‘'«»]?\s*$/im) || yamlBlock.match(/title:\s*(.*?)\n/i);
             if (titleMatch) {
-                title = titleMatch[1].trim();
+                title = normalizarAspas(titleMatch[1]).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
             }
         }
     } catch (e) {
@@ -914,10 +925,10 @@ function getMetadataFromDocLite(docFile, originalFileName, pastaDestino = null) 
         // 3. EXTRAÇÃO DE TÍTULO CUSTOMIZADO OU REMOÇÃO DA DATA DO NOME
         const titleMatch = fullBodyText.match(/^\s*(?:T[ií]tulo|Title):\s*(.+)$/im);
         if (titleMatch) {
-            nomeSemData = titleMatch[1].trim();
+            nomeSemData = normalizarAspas(titleMatch[1]).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
         } else {
             const regex = /^\d{4}-\d{2}-\d{2}-/;
-            nomeSemData = originalFileName.replace(regex, '');
+            nomeSemData = normalizarAspas(originalFileName.replace(regex, ''));
         }
 
         return {
@@ -986,9 +997,11 @@ function gerarPostsAforismos(docFile) {
         if (slug.length > 50) slug = slug.substring(0, 50).replace(/-$/, '');
         
         const fileName = `${dateStr}-${slug}.md`;
-        const title = text.length > 30 ? text.substring(0, 30) + "..." : text;
+        const rawTitle = text.length > 30 ? text.substring(0, 30) + "..." : text;
+        const cleanTitle = normalizarAspas(rawTitle).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
+        const normText = normalizarAspas(text);
         
-        const content = `---\nlayout: post\ntitle: "${title}"\ndate: ${dateTimeStr}\n---\n\n${text}`;
+        const content = `---\nlayout: post\ntitle: "${cleanTitle}"\ndate: ${dateTimeStr}\n---\n\n${normText}`;
         
         // VERIFICAÇÃO DE EXISTÊNCIA PARA EVITAR DUPLICATAS
         const existingFiles = postsFolder.getFilesByName(fileName);
@@ -1143,20 +1156,20 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                 
                 const titleMatch = text.match(/^\s*(?:T[ií]tulo|Title):\s*(.+)$/i);
                 if (titleMatch && !titleFound) {
-                    customTitle = titleMatch[1].trim();
+                    customTitle = normalizarAspas(titleMatch[1]).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
                     titleFound = true;
                     isMetadata = true;
                 }
 
-                const pillarMatch = text.match(/^\s*(?:Pilar|pillar):\s*["']?(.*?)["']?\s*$/i);
+                const pillarMatch = text.match(/^\s*(?:Pilar|pillar):\s*["'“`”‘'«»]?(.*?)["'“`”‘'«»]?\s*$/i);
                 if (pillarMatch && !pillar) {
-                    pillar = pillarMatch[1].trim().replace(/^["']+|["']+$/g, '').trim();
+                    pillar = normalizarAspas(pillarMatch[1]).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
                     isMetadata = true;
                 }
 
-                const dateMatch = text.match(/^\s*(?:date|data):\s*["']?(.*?)["']?\s*$/i);
+                const dateMatch = text.match(/^\s*(?:date|data):\s*["'“`”‘'«»]?(.*?)["'“`”‘'«»]?\s*$/i);
                 if (dateMatch && !customDateStr) {
-                    customDateStr = dateMatch[1].trim();
+                    customDateStr = normalizarAspas(dateMatch[1]).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
                     isMetadata = true;
                 }
                 
@@ -1175,12 +1188,12 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
             nomeSemData = customTitle;
         } else {
             const regex = /^\d{4}-\d{2}-\d{2}-/;
-            nomeSemData = originalFileName.replace(regex, '');
+            nomeSemData = normalizarAspas(originalFileName.replace(regex, ''));
         }
         let isPost = /^\d{4}-\d{2}-\d{2}-/.test(originalFileName);
         
         // --- 2. MONTAGEM DO YAML FRONT MATTER ---
-        const cleanTitle = nomeSemData.replace(/^["']+|["']+$/g, '').trim();
+        const cleanTitle = normalizarAspas(nomeSemData).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
         markdown += `---\n`;
         markdown += `layout: ${customLayout ? customLayout : (isPostsFolder ? 'post' : 'default')}\n`;
         markdown += `title: "${cleanTitle}"\n`;
@@ -1189,7 +1202,8 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         markdown += `semantic_order: ${semanticOrderScore}\n`;
 
         if (pillar) {
-            markdown += `pillar: "${pillar}"\n`;
+            const cleanPillar = normalizarAspas(pillar).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
+            markdown += `pillar: "${cleanPillar}"\n`;
         }
 
         if (noIndex) {
@@ -1268,7 +1282,7 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                     const child = paragraph.getChild(j);
                     if (child.getType() === DocumentApp.ElementType.TEXT) {
                         const textElement = child.asText();
-                        const textContent = textElement.getText();
+                        const textContent = normalizarAspas(textElement.getText());
                         for (let k = 0; k < textContent.length; k++) {
                             const char = textContent[k];
                             const isBold = textElement.isBold(k);
@@ -1355,7 +1369,7 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                     const child = listItem.getChild(j);
                     if (child.getType() === DocumentApp.ElementType.TEXT) {
                         const textElement = child.asText();
-                        const textContent = textElement.getText();
+                        const textContent = normalizarAspas(textElement.getText());
                         for (let k = 0; k < textContent.length; k++) {
                             const char = textContent[k];
                             const isBold = textElement.isBold(k);
