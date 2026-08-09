@@ -13,7 +13,7 @@ tags:
 
 ## Atenção ao ser
 
-Não importa que os sentidos e a mente vibrem com inúmeros estímulos e pensamentos. A consciência pode flutuar na serena euforia. -- 02/08/2026
+Não importa que os sentidos e a mente vibrem com inúmeros estímulos e pensamentos. A consciência pode flutuar em serena euforia. -- 02/08/2026
 <div style="clear: both;"></div>
 
 ---

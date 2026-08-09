@@ -15,11 +15,11 @@ tags:
 
 ## O Cascudo
 
-<img src="./figuras/o-cascudo/lago-no-rio.png" alt="Fabiana e Rafaela construindo um laguinho no rio acompanhadas do vovô José" style="float: left; width: 40%; margin-right: 10px; margin-bottom: 10px; border-radius: 15px;">  As irmãs Fabiana e Rafaela adoram passar férias na fazenda do vovô José. Lá  vivem muitos animais: cavalos, bois, galinhas, gatos, cachorros, porcos, passarinhos… Mas o que elas mais gostam é do rio.
+<img src="./figuras/o-cascudo/lago-no-rio.png" alt="Fabiana e Rafaela construindo um laguinho no rio acompanhadas do vovô José" style="float: left; width: 40%; margin-right: 10px; margin-bottom: 10px; border-radius: 15px;">  Fabiana e Rafaela adoram passar férias na fazenda do vovô José. Lá  vivem muitos animais: cavalos, bois, galinhas, gatos, cachorros, porcos, passarinhos… Mas o que elas mais gostam é do rio.
 
-As duas irmãs aprenderam com o avô a pescar os peixinhos do rio com uma peneira. Sempre, após algumas tentativas com a peneira, elas pegavam muitos peixes, que davam vida a um laguinho feito na areia. Mas não podiam deixar os peixes no laguinho e, antes de ir para a fazenda, sempre tinham que soltá-los.
+As duas aprenderam com o avô a pescar os peixinhos do rio com uma peneira. Pegavam diversos peixes, que davam vida a um laguinho que faziam na areia. Porém, sempre tinham que soltá-los antes de ir para a fazenda.
 
-<img src="./figuras/o-cascudo/decorando-o-aquario.png" alt="Fabiana e Rafaela decorando o aquário com a avó observando" style="float: right; width: 40%; margin-left: 10px; margin-bottom: 10px; border-radius: 15px;"> Certa vez, Rafaela disse: — Vamos fazer um aquário? Fabiana achou uma boa ideia, então foram pedir para a avó um vidro. Tinha um vidro, mas com um resto de biscoitos. Na hora do lanche, elas comeram os biscoitos. Depois, limparam o vidro e encheram com água. No dia seguinte, foram bem cedo para o rio pescar os peixes: lambaris, barrigudinhos e marias-moles. Elas enfeitaram o aquário com plantas, pedrinhas e areia e colocaram os peixinhos.
+<img src="./figuras/o-cascudo/decorando-o-aquario.png" alt="Fabiana e Rafaela decorando o aquário com a avó observando" style="float: right; width: 40%; margin-left: 10px; margin-bottom: 10px; border-radius: 15px;"> Certa vez, Rafaela disse: — Vamos fazer um aquário? Fabiana achou uma boa ideia, então foram pedir para a avó um vidro. Conseguiram um com um resto de biscoitos. Na hora do lanche, elas comeram os biscoitos, limparam o vidro e encheram com água. No dia seguinte, foram bem cedo para o rio pescar os peixes: lambaris, barrigudinhos, marias-mole… Enfeitaram o aquário com plantas, pedrinhas e areia e colocaram os peixinhos.
 
 As marias-mole nadavam no fundo, às vezes, se enterravam na areia se escondendo. Os barrigudinhos nadavam de um lado para o outro e os lambaris exibiam seu corpo reluzente.
 
