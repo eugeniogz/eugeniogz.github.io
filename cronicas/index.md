@@ -17,7 +17,6 @@ description: Narrativas sobre vida cotidiana, percepção, memória e sensibilid
 <a href="/cronicas/breves-cronicas">Ler Breves Crônicas →</a>
 </div>
 <div class="card">
-<h3>📜 Crônicas 2</h3>
 <h3>📜 Crônicas 1</h3>
 <p>A arte da atenção plena nos pequenos instantes.</p>
 <a href="/cronicas/cronicas-1">Ler Crônicas 1 →</a>
