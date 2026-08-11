@@ -12,11 +12,6 @@ description: Narrativas sobre vida cotidiana, percepção, memória e sensibilid
 
 <div class="cards">
 <div class="card">
-<h3>📜 Breves Crônicas</h3>
-<p>Da atenção à serena euforia.</p>
-<a href="/cronicas/breves-cronicas">Ler Breves Crônicas →</a>
-</div>
-<div class="card">
 <h3>📜 Crônicas 1</h3>
 <p>A arte da atenção plena nos pequenos instantes.</p>
 <a href="/cronicas/cronicas-1">Ler Crônicas 1 →</a>

@@ -1,0 +1,28 @@
+---
+layout: default
+title: "Atenção"
+reading_time: 1
+semantic_order: 40
+tags:
+  - Atenção plena
+--- 
+
+
+
+### [Frases](./)
+
+## Atenção
+
+### Ao ser
+
+Não importa que os sentidos e a mente vibrem com inúmeros estímulos e pensamentos. A consciência pode flutuar em serena euforia. -- 02/08/2026
+
+### Ao mundo
+
+O horizonte, o céu e a floresta. A palafita rosa. De ponta a cabeça. Fincados em si mesmos. Acima, o real, a lagoa, o espelho. Súbito, o boto. -- Amazônia, 01/08/2026
+
+O líquido aquece as mãos, evaporando o aroma do café; goles discretos envolvem o paladar. Luz e som emolduram o momento. -- 02/08/2026
+
+### Aos outros
+
+A crítica torna-se generosa na discrição da conversa pessoal, onde o respeito à opinião alheia fornece a oportunidade para o crescimento mútuo. -- 10/08/2026
