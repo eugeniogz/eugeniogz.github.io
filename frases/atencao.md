@@ -26,3 +26,11 @@ O líquido aquece as mãos, evaporando o aroma do café; goles discretos envolve
 ### Aos outros
 
 A crítica torna-se generosa na discrição da conversa pessoal, onde o respeito à opinião alheia fornece a oportunidade para o crescimento mútuo. -- 10/08/2026
+<div style="clear: both;"></div>
+
+---
+
+<div style="display: flex; justify-content: space-between;">
+  <a href="./imperfeicoes.html">&lt;&lt; Imperfeições</a>
+  <span></span>
+</div>
