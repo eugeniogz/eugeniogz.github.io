@@ -9,7 +9,7 @@ tags:
 
 
 
-### [Frases](./)
+### [Reflexões](./)
 
 ## Imperfeições
 
