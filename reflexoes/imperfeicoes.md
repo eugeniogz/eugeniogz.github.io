@@ -21,6 +21,6 @@ A defesa da opinião, quando precedida pela pausa consciente, não somente permi
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./atencao-ao-ser.html">&lt;&lt; Atenção ao ser</a>
+  <a href="./valores.html">&lt;&lt; Valores</a>
   <a href="./atencao.html">Atenção &gt;&gt;</a>
 </div>
