@@ -12,6 +12,10 @@ tags:
 ### [Reflexões](./)
 
 ## Valores
+
+### Revisão contínua
+
+Nossa bússola moral não aponta para um norte determinado, ela se ajusta com o conhecimento e a observação pessoal. -- 15/08/2026
 <div style="clear: both;"></div>
 
 ---

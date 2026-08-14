@@ -13,6 +13,10 @@ tags:
 
 ## Imperfeições
 
+### Atencionais
+
+O tropeço do piloto automático não é motivo de culpa, mas um sinal para aprimorar a presença. Não é possível manter a atenção a todo tempo, reconhecer uma distração, no entanto, é o que permite a capacitação rumo ao ótimo possível.
+
 ### Emocionais
 
 A defesa da opinião, quando precedida pela pausa consciente, não somente permite ao interlocutor expressar sua posição, como também fornece meios para um julgamento assertivo. -- 11/08/26
@@ -22,5 +26,5 @@ A defesa da opinião, quando precedida pela pausa consciente, não somente permi
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./valores.html">&lt;&lt; Valores</a>
-  <a href="./atencao.html">Atenção &gt;&gt;</a>
+  <a href="./decisoes.html">Decisões &gt;&gt;</a>
 </div>
