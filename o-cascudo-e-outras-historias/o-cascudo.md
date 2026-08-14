@@ -15,7 +15,7 @@ tags:
 
 ## O Cascudo
 
-<img src="./figuras/o-cascudo/lago-no-rio.png" alt="Fabiana e Rafaela construindo um laguinho no rio acompanhadas do vovô José" style="float: left; width: 40%; margin-right: 10px; margin-bottom: 10px; border-radius: 15px;">  Fabiana e Rafaela adoram passar férias na fazenda do vovô José. Lá  vivem muitos animais: cavalos, bois, galinhas, gatos, cachorros, porcos, passarinhos… Mas o que elas mais gostam é do rio.
+<img src="./figuras/o-cascudo/lago-no-rio.png" alt="Fabiana e Rafaela construindo um laguinho no rio acompanhadas do vovô José" style="float: left; width: 40%; margin-right: 10px; margin-bottom: 10px; border-radius: 15px;">Fabiana e Rafaela adoram passar férias na fazenda do vovô José. Lá vivem muitas aventuras, no curral, no pomar, na oficina, mas as melhores acontecem no rio que corta a fazenda.
 
 As duas aprenderam com o avô a pescar os peixinhos do rio com uma peneira. Pegavam diversos peixes, que davam vida a um laguinho que faziam na areia. Porém, sempre tinham que soltá-los antes de ir para a fazenda.
 
@@ -27,9 +27,9 @@ Tratavam dos peixes todo dia. Porém, com o tempo, o vidro dos peixes começou a
 
 <img src="./figuras/o-cascudo/cascudo-na-peneira.png" alt="Fabiana e Rafaela pescando o cascudo com a peneira" style="float: left; width: 40%; margin-right: 10px; margin-bottom: 10px; border-radius: 15px;"> No dia seguinte, Fabiana e Rafaela levantaram bem cedo para tentar capturar o cascudo. Pegaram a peneira e foram para o rio. Chegando lá, fizeram como o avô explicou. Na terceira tentativa, apareceu um peixe diferente na peneira. Ele era redondo e tinha um rabo comprido e o corpo duro. Será o cascudo? Pensaram. E levaram o peixe para a casa da fazenda.
 
-<img src="./figuras/o-cascudo/cascudo-no-aquario.png" alt="Fabiana, Rafaela e vovó José observando o cascudo no aquário" style="float: right; width: 40%; margin-left: 10px; margin-bottom: 10px; border-radius: 15px;"> Quando colocaram o peixe no aquário, ele grudou a boca nas paredes do vidro e começou a comer o lodo. Assim, as irmãs concluíram haver pescado um cascudo. Mostraram para o avô, que disse: — muito bem, vocês conseguiram pescar o cascudo. Aproveitem o aquário, mas antes de voltar, na segunda-feira, devolvam os peixinhos ao rio. Rafaela reclamou — poxa deu um trabalhão montar o aquário. — É mesmo. Concordou, Fabiana. — Mas, o vovô tem razão.
+<img src="./figuras/o-cascudo/cascudo-no-aquario.png" alt="Fabiana, Rafaela e vovô José observando o cascudo no aquário" style="float: right; width: 40%; margin-left: 10px; margin-bottom: 10px; border-radius: 15px;"> Quando colocaram o peixe no aquário, ele grudou a boca nas paredes do vidro e começou a comer o lodo. Assim, as irmãs concluíram haver pescado um cascudo. Mostraram para o avô, que disse: — Muito bem, vocês conseguiram pescar o cascudo. Aproveitem o aquário, mas antes de voltarem para casa, devolvam os peixinhos ao rio. Rafaela reclamou: — Poxa deu um trabalhão montar o aquário. — É mesmo — concordou Fabiana. — Mas, o vovô tem razão.
 
-No sábado, as irmãs levaram os peixinhos de volta ao rio e soltaram com cuidado, observando cada mergulho na água cristalina.
+Assim, um dia antes da viagem de volta, as irmãs levaram os peixinhos para o rio e soltaram com cuidado, observando cada mergulho na água cristalina.
 <div style="clear: both;"></div>
 
 ---
