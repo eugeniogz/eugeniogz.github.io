@@ -27,7 +27,7 @@ A defesa da opinião, quando precedida pela pausa consciente, não somente permi
 
 ### Morais
 
-O instante do erro verbal se transforma em lição quando convoca a atenção necessária para resgatar a coerência com os valores. -- 11/07/27
+O instante do erro verbal transforma-se em lição quando convoca a atenção necessária para resgatar a coerência com os valores. -- 11/07/26
 <div style="clear: both;"></div>
 
 ---

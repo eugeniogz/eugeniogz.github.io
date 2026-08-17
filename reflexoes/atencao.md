@@ -13,19 +13,19 @@ tags:
 
 ## Atenção
 
-Na atenção ao ser, a felicidade da propriocepção. Com a atenção aos outros, a alegria de ser útil. Pela atenção ao mundo, a beleza de existir. -- 09/05/2026
+Na atenção ao ser, a felicidade da propriocepção. Com a atenção aos outros, a alegria de ser útil. Pela atenção ao mundo, a beleza de existir. -- 09/05/26
 
 ### Ao ser
 
-Não importa que os sentidos e a mente vibrem com inúmeros estímulos e pensamentos. A consciência pode flutuar em serena euforia. -- 02/08/2026
+Não importa que os sentidos e a mente vibrem com inúmeros estímulos e pensamentos. A consciência pode flutuar em serena euforia. -- 02/08/26
 
 ### Ao mundo
 
-Os sentidos podem experimentar a beleza sem se incomodar com as perturbações que os castigam. -- 14/08/2026
+Os sentidos podem experimentar a beleza sem se incomodar com as perturbações que os castigam. -- 14/08/26
 
 ### Aos outros
 
-A crítica torna-se generosa na discrição da conversa pessoal, onde o respeito à opinião alheia fornece a oportunidade para o crescimento mútuo. -- 10/08/2026
+A crítica torna-se generosa na discrição da conversa pessoal, onde o respeito à opinião alheia fornece a oportunidade para o crescimento mútuo. -- 10/08/26
 <div style="clear: both;"></div>
 
 ---

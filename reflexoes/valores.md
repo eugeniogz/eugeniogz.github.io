@@ -17,7 +17,7 @@ tags:
 
 O sentimento de nacionalidade é inerente à geografia. Ele é saudável, mas não deve se exceder ao pertencimento à humanidade, que ultrapassa fronteiras e traz empatia a qualquer ser humano. -- 18/07/26
 
-Nossa bússola moral não aponta para um norte determinado, ela se ajusta com o conhecimento e a observação pessoal. -- 15/08/2026
+Nossa bússola moral não aponta para um norte determinado, ela se ajusta com o conhecimento e a observação pessoal. -- 15/08/26
 
 ### Convivência
 
