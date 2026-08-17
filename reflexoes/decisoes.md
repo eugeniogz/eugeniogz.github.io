@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: reflections
 title: "Decisões"
 reading_time: 1
 semantic_order: 30

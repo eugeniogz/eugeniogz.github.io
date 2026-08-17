@@ -42,10 +42,9 @@ email: "eugenio@wingene.com.br"
 #youtube_username: username
 #googleplus_username: +username
 
-# defaults:
-#   - scope:
-#       path: ""
-#       type: posts
-#     values:
-#       tags: 
-#        - other
+defaults:
+  - scope:
+      path: "reflexoes"
+    values:
+      layout: "reflections"
+

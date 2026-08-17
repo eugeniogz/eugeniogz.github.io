@@ -1,0 +1,268 @@
+---
+layout: default
+---
+
+<div id="reflexoes-container">
+  {{ content }}
+</div>
+
+<script>
+(function() {
+  const container = document.getElementById('reflexoes-container');
+  if (!container) return;
+  const path = window.location.pathname;
+
+  const isIndex = path.endsWith('/reflexoes/') || path.endsWith('/reflexoes/index.html') || path.endsWith('/reflexoes');
+  const isValores = path.includes('valores');
+  const isImperfeicoes = path.includes('imperfeicoes');
+  const isDecisoes = path.includes('decisoes');
+  const isAtencao = path.includes('atencao');
+
+  const baseUrl = '{{ "/reflexoes/" | relative_url }}'.replace(/\/index\.html$/, '/');
+
+  const pillars = {
+    valores: {
+      id: 'valores',
+      name: 'Valores',
+      icon: '🟥',
+      badge: '🟥 Pilar 1 · Método VIDA',
+      desc: 'A bússola moral em constante revisão.',
+      quote: 'Nossa bússola moral não aponta para um norte determinado, ela se ajusta com o conhecimento e a observação...',
+      url: baseUrl + 'valores.html',
+      meta: '1 min'
+    },
+    imperfeicoes: {
+      id: 'imperfeicoes',
+      name: 'Imperfeições',
+      icon: '🟨',
+      badge: '🟨 Pilar 2 · Método VIDA',
+      desc: 'O reconhecimento sem culpa dos desvios.',
+      quote: 'O tropeço do piloto automático não é motivo de culpa, mas um sinal para aprimorar a presença...',
+      url: baseUrl + 'imperfeicoes.html',
+      meta: '1 min'
+    },
+    decisoes: {
+      id: 'decisoes',
+      name: 'Decisões',
+      icon: '🟩',
+      badge: '🟩 Pilar 3 · Método VIDA',
+      desc: 'A escolha consciente de atitudes.',
+      quote: 'A eudaimonia surge de pequenas escolhas que semeiam as condições para esse sentimento nas futuras gerações...',
+      url: baseUrl + 'decisoes.html',
+      meta: '1 min'
+    },
+    atencao: {
+      id: 'atencao',
+      name: 'Atenção',
+      icon: '🟦',
+      badge: '🟦 Pilar 4 · Método VIDA',
+      desc: 'A presença que permite validar as atitudes e atingir a eudaimonia.',
+      quote: 'Na atenção ao ser, a felicidade da propriocepção. Com a atenção aos outros, a alegria de ser útil...',
+      url: baseUrl + 'atencao.html',
+      meta: '1 min'
+    }
+  };
+
+  // Barra de navegação dos 4 pilares
+  const navHtml = `
+    <div class="pillar-nav">
+      <a href="${baseUrl}" class="pillar-nav-item hub ${isIndex ? 'active' : ''}">Visão Geral</a>
+      <a href="${pillars.valores.url}" class="pillar-nav-item valores ${isValores ? 'active' : ''}">🟥 Valores</a>
+      <a href="${pillars.imperfeicoes.url}" class="pillar-nav-item imperfeicoes ${isImperfeicoes ? 'active' : ''}">🟨 Imperfeições</a>
+      <a href="${pillars.decisoes.url}" class="pillar-nav-item decisoes ${isDecisoes ? 'active' : ''}">🟩 Decisões</a>
+      <a href="${pillars.atencao.url}" class="pillar-nav-item atencao ${isAtencao ? 'active' : ''}">🟦 Atenção</a>
+    </div>
+  `;
+
+  if (isIndex) {
+    // Extrai dinamicamente o título, subtítulo e tempos de leitura do HTML gerado pelo Markdown
+    const h2El = container.querySelector('h2');
+    const h4El = container.querySelector('h4');
+    const pageTitle = h2El ? h2El.innerText.trim() : 'Reflexões';
+    const pageSubtitle = h4El ? h4El.innerText.trim() : 'sentir e pensar';
+
+    // Extrai o tempo de leitura real de cada pilar da lista original gerada pelo script
+    const links = container.querySelectorAll('a[href]');
+    links.forEach(a => {
+      const href = a.getAttribute('href') || '';
+      let pillarKey = null;
+      if (href.includes('valores')) pillarKey = 'valores';
+      else if (href.includes('imperfeicoes')) pillarKey = 'imperfeicoes';
+      else if (href.includes('decisoes')) pillarKey = 'decisoes';
+      else if (href.includes('atencao')) pillarKey = 'atencao';
+
+      if (pillarKey && pillars[pillarKey]) {
+        const parentText = a.parentElement ? a.parentElement.innerText : '';
+        const timeMatch = parentText.match(/\[(\d+\s*min)\]/i);
+        if (timeMatch) {
+          pillars[pillarKey].meta = timeMatch[1];
+        }
+      }
+    });
+
+    container.innerHTML = `
+      ${navHtml}
+      <div class="reflexao-hero">
+        <h2>${pageTitle}: ${pageSubtitle}</h2>
+        <p>Reflexões sobre os quatro pilares do <a href="/wingene/o-metodo-vida-a-wingene-em-pratica.html">Método VIDA</a>.</p>
+      </div>
+      <div class="reflexoes-hub-grid">
+        ${Object.values(pillars).map(p => `
+          <a href="${p.url}" class="reflexoes-hub-card ${p.id}">
+            <div>
+              <div class="reflexoes-hub-header">
+                <h3 class="reflexoes-hub-title">${p.icon} ${p.name}</h3>
+                <span class="reflexoes-hub-meta">${p.meta}</span>
+              </div>
+              <p class="reflexoes-hub-desc">${p.desc}</p>
+              <div class="reflexoes-hub-quote">"${p.quote}"</div>
+            </div>
+            <div class="reflexoes-hub-footer">
+              <span>Explorar reflexões</span>
+              <span>→</span>
+            </div>
+          </a>
+        `).join('')}
+      </div>
+    `;
+    return;
+  }
+
+  // Para páginas individuais
+  let currentPillarKey = isValores ? 'valores' : isImperfeicoes ? 'imperfeicoes' : isDecisoes ? 'decisoes' : isAtencao ? 'atencao' : '';
+  if (!currentPillarKey) return;
+  const currentPillar = pillars[currentPillarKey];
+
+  const nodes = Array.from(container.childNodes);
+  let currentSectionTitle = currentPillar.name;
+  const newElements = [];
+
+  // Header do Pilar
+  const headerContainer = document.createElement('div');
+  headerContainer.innerHTML = `
+    ${navHtml}
+    <div class="reflexao-hero ${currentPillar.id}">
+      <div class="reflexao-hero-badge">${currentPillar.badge}</div>
+      <h2>${currentPillar.name}</h2>
+      <p>${currentPillar.desc}</p>
+    </div>
+  `;
+  newElements.push(headerContainer);
+
+  nodes.forEach(node => {
+    if (node.nodeType !== Node.ELEMENT_NODE) return;
+    const tagName = node.tagName.toLowerCase();
+
+    // Ignora links de retorno redundantes e título duplicado do markdown original
+    if ((tagName === 'h3' && node.querySelector('a[href*="./"]')) || (tagName === 'h2' && node.innerText.trim() === currentPillar.name)) {
+      return;
+    }
+
+    // Seção temática (ex: "Ao ser", "Revisão contínua", etc.)
+    if (tagName === 'h3') {
+      currentSectionTitle = node.innerText.trim();
+      const sectionDiv = document.createElement('div');
+      sectionDiv.className = 'reflexao-section-title';
+      sectionDiv.innerHTML = `<span>✧</span> ${currentSectionTitle}`;
+      newElements.push(sectionDiv);
+      return;
+    }
+
+    // Parágrafo com reflexão e data (-- DD/MM/AA)
+    if (tagName === 'p') {
+      const rawText = node.innerText.trim();
+      const dateMatch = rawText.match(/--\s*(\d{1,2}\/\d{1,2}\/\d{2,4})/);
+      if (dateMatch) {
+        const fullDateStr = dateMatch[1];
+        const parts = fullDateStr.split('/');
+        const year = parts[2].length === 2 ? '20' + parts[2] : parts[2];
+        const formattedDate = `${parts[0].padStart(2, '0')}/${parts[1].padStart(2, '0')}/${year}`;
+        const textContent = rawText.replace(/--\s*\d{1,2}\/\d{1,2}\/\d{2,4}/, '').trim();
+
+        const card = document.createElement('div');
+        card.className = `reflexao-card ${currentPillar.id}`;
+        card.innerHTML = `
+          <div class="reflexao-card-header">
+            <span class="reflexao-card-tag">${currentSectionTitle}</span>
+            <span class="reflexao-card-date">🗓️ ${formattedDate}</span>
+          </div>
+          <div class="reflexao-card-body">${textContent}</div>
+          <div class="reflexao-card-footer">
+            <button class="btn-copy-reflexao" onclick="window.copyReflexaoCard(this)" title="Copiar reflexão">
+              <span>📋</span> <span>Copiar</span>
+            </button>
+          </div>
+        `;
+        newElements.push(card);
+        return;
+      }
+    }
+
+    // Rodapé de navegação entre pilares
+    if (tagName === 'div' && (node.innerText.includes('<<') || node.innerText.includes('>>') || (node.style && node.style.display === 'flex'))) {
+      const pillarKeys = ['valores', 'imperfeicoes', 'decisoes', 'atencao'];
+      const currentIndex = pillarKeys.indexOf(currentPillarKey);
+      const prevPillar = currentIndex > 0 ? pillars[pillarKeys[currentIndex - 1]] : null;
+      const nextPillar = currentIndex < pillarKeys.length - 1 ? pillars[pillarKeys[currentIndex + 1]] : null;
+
+      const footerNav = document.createElement('div');
+      footerNav.className = 'reflexao-nav-footer';
+      footerNav.innerHTML = `
+        ${prevPillar ? `
+          <a href="${prevPillar.url}" class="reflexao-nav-btn prev">
+            <span class="reflexao-nav-label">← Pilar Anterior</span>
+            <span class="reflexao-nav-title">${prevPillar.icon} ${prevPillar.name}</span>
+          </a>
+        ` : `
+          <a href="${baseUrl}" class="reflexao-nav-btn prev">
+            <span class="reflexao-nav-label">← Voltar</span>
+            <span class="reflexao-nav-title">Visão Geral</span>
+          </a>
+        `}
+        ${nextPillar ? `
+          <a href="${nextPillar.url}" class="reflexao-nav-btn next">
+            <span class="reflexao-nav-label">Próximo Pilar →</span>
+            <span class="reflexao-nav-title">${nextPillar.icon} ${nextPillar.name}</span>
+          </a>
+        ` : `
+          <a href="${baseUrl}" class="reflexao-nav-btn next">
+            <span class="reflexao-nav-label">Voltar ao Início →</span>
+            <span class="reflexao-nav-title">Visão Geral</span>
+          </a>
+        `}
+      `;
+      newElements.push(footerNav);
+      return;
+    }
+
+    // Descarta divisores brutos
+    if (tagName === 'hr' || (tagName === 'div' && node.style.clear === 'both')) {
+      return;
+    }
+
+    newElements.push(node.cloneNode(true));
+  });
+
+  container.innerHTML = '';
+  newElements.forEach(el => container.appendChild(el));
+})();
+
+window.copyReflexaoCard = function(btn) {
+  const card = btn.closest('.reflexao-card');
+  if (!card) return;
+  const body = card.querySelector('.reflexao-card-body');
+  if (!body) return;
+  const text = body.innerText.trim();
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(() => {
+      const originalHTML = btn.innerHTML;
+      btn.innerHTML = '<span>✓</span> <span>Copiado!</span>';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.innerHTML = originalHTML;
+        btn.classList.remove('copied');
+      }, 2000);
+    }).catch(() => {});
+  }
+};
+</script>

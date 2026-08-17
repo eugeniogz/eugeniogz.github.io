@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: reflections
 title: "Atenção"
 reading_time: 1
 semantic_order: 40

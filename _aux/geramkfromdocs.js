@@ -1119,6 +1119,7 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         let titleFound = false;
         let pillar = null;
         let customDateStr = null;
+        let customDocLayout = null;
         
         // --- 1. EXTRAÇÃO DE METADADOS (SCORE e TAGS) em passagem reversa ---
         for (let i = body.getNumChildren() - 1; i >= 0; i--) {
@@ -1172,6 +1173,12 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                     customDateStr = normalizarAspas(dateMatch[1]).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
                     isMetadata = true;
                 }
+
+                const layoutMatch = text.match(/^\s*(?:layout|Layout):\s*["'“`”‘'«»]?(.*?)["'“`”‘'«»]?\s*$/i);
+                if (layoutMatch && !customDocLayout) {
+                    customDocLayout = normalizarAspas(layoutMatch[1]).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
+                    isMetadata = true;
+                }
                 
                 // Pula o parágrafo atual se ele continha alguma propriedade de metadados
                 if (isMetadata) {
@@ -1194,8 +1201,9 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         
         // --- 2. MONTAGEM DO YAML FRONT MATTER ---
         const cleanTitle = normalizarAspas(nomeSemData).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
+        const chosenLayout = customDocLayout ? customDocLayout : (customLayout ? customLayout : (isPostsFolder ? 'post' : 'default'));
         markdown += `---\n`;
-        markdown += `layout: ${customLayout ? customLayout : (isPostsFolder ? 'post' : 'default')}\n`;
+        markdown += `layout: ${chosenLayout}\n`;
         markdown += `title: "${cleanTitle}"\n`;
         // ADIÇÃO DOS METADADOS PARA OTIMIZAÇÃO FUTURA
         markdown += `reading_time: ${tempoLeitura}\n`;
