@@ -15,7 +15,9 @@ tags:
 
 ### Construtivas
 
-A eudaimonia surge de pequenas escolhas que semeiam as condições para esse sentimento nas futuras gerações.
+A eudaimonia surge de pequenas escolhas que semeiam as condições para esse sentimento nas futuras gerações. -- 15/08/2026
+
+Observar as falhas alheias incita comentários críticos; a decisão de substituí-los pelo reconhecimento empático das próprias favorece o aperfeiçoamento. -- 16/08/2026
 <div style="clear: both;"></div>
 
 ---

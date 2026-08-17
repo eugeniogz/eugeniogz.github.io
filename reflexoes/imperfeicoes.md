@@ -15,11 +15,19 @@ tags:
 
 ### Atencionais
 
-O tropeço do piloto automático não é motivo de culpa, mas um sinal para aprimorar a presença. Não é possível manter a atenção a todo tempo, reconhecer uma distração, no entanto, é o que permite a capacitação rumo ao ótimo possível.
+Nos momentos de piloto automático, as atitudes podem desviar dos valores pessoais; todavia, basta um único instante de atenção para a oportuna correção da rota. -- 16/07/26
+
+O tropeço do piloto automático não é motivo de culpa, mas um sinal para aprimorar a presença. Não é possível manter a atenção a todo tempo, reconhecer uma distração, no entanto, é o que permite a capacitação contínua. -- 10/08/26
 
 ### Emocionais
 
+A pressa em responder pode ofuscar a escuta. A pausa consciente deve preceder as intervenções, dando espaço ao interlocutor e acalmando o ambiente. -- 01/08/26
+
 A defesa da opinião, quando precedida pela pausa consciente, não somente permite ao interlocutor expressar sua posição, como também fornece meios para um julgamento assertivo. -- 11/08/26
+
+### Morais
+
+O instante do erro verbal se transforma em lição quando convoca a atenção necessária para resgatar a coerência com os valores. -- 11/07/27
 <div style="clear: both;"></div>
 
 ---
