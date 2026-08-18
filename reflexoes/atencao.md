@@ -19,6 +19,12 @@ Na atenção ao ser, a felicidade da propriocepção. Com a atenção aos outros
 
 Não importa que os sentidos e a mente vibrem com inúmeros estímulos e pensamentos. A consciência pode flutuar em serena euforia. -- 02/08/26
 
+A atenção consciente é limitada, o foco exige inibir o pensar e o sentir concorrentes. -- 17/08/26
+
+A atenção alimenta as ideias enquanto esquece lembranças. -- 17/08/26
+
+A serena euforia surge da concentração máxima que silencia os ruídos do sentir e do pensar. -- 17/08/26
+
 ### Ao mundo
 
 Os sentidos podem experimentar a beleza sem se incomodar com as perturbações que os castigam. -- 14/08/26
