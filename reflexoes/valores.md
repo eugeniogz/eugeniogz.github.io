@@ -13,15 +13,21 @@ tags:
 
 ## Valores
 
+### Limites pessoais
+
+A mente e o corpo estão em mútua gratidão quando se cuida da forma física sem exceder os limites biológicos. -- 18/08/26
+
+### Convivência
+
+Palavras sintetizam o pensar: a doçura que elas carregam é o que sela o calor e a harmonia. -- 16/07/26
+
+Na convivência, a felicidade do outro valoriza atitudes pessoais. -- 19/08/26
+
 ### Revisão contínua
 
 O sentimento de nacionalidade é inerente à geografia. Ele é saudável, mas não deve se exceder ao pertencimento à humanidade, que ultrapassa fronteiras e traz empatia a qualquer ser humano. -- 18/07/26
 
 Nossa bússola moral não aponta para um norte determinado, ela se ajusta com o conhecimento e a observação pessoal. -- 15/08/26
-
-### Convivência
-
-Palavras sintetizam o pensar: a doçura que elas carregam é o que sela o calor e a harmonia. -- 16/07/26
 <div style="clear: both;"></div>
 
 ---
