@@ -1626,3 +1626,798 @@ h6:before {
   font-weight: 700;
   color: var(--text-main);
 }
+
+/* ==========================================================================
+   O CASCUDO E OUTRAS HISTÓRIAS (CONTOS INFANTIS) - DESIGN SYSTEM
+   ========================================================================== */
+
+.cascudo-container {
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: var(--text-main);
+}
+
+/* --- HERO BANNER (HUB DE HISTÓRIAS) --- */
+.cascudo-hero {
+  background: linear-gradient(135deg, rgba(16, 64, 176, 0.08) 0%, rgba(14, 125, 15, 0.08) 50%, rgba(168, 148, 8, 0.08) 100%);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 2.2rem 1.8rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+  .cascudo-hero {
+    background: linear-gradient(135deg, rgba(106, 183, 255, 0.1) 0%, rgba(82, 199, 85, 0.1) 50%, rgba(230, 203, 34, 0.1) 100%);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.cascudo-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  color: var(--color-decisions-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.cascudo-hero-title {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text-main);
+  margin: 0 0 0.8rem 0;
+  border: none;
+  padding: 0;
+}
+
+.cascudo-hero-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 720px;
+  margin: 0 0 1.5rem 0;
+}
+
+.cascudo-stats-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cascudo-stat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.cascudo-stat-pill strong {
+  color: var(--text-main);
+}
+
+/* --- FILTROS DE CATEGORIA --- */
+.cascudo-filters-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 1.8rem;
+  padding-bottom: 0.5rem;
+}
+
+.cascudo-filter-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 7px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.cascudo-filter-btn:hover {
+  background: var(--color-attention-light);
+  color: var(--color-attention-primary);
+  border-color: var(--border-focus);
+}
+
+.cascudo-filter-btn.active {
+  background: var(--color-attention-primary);
+  color: #ffffff !important;
+  border-color: var(--color-attention-primary);
+  box-shadow: 0 3px 10px rgba(18, 62, 156, 0.25);
+}
+
+/* --- GRID DE HISTÓRIAS --- */
+.cascudo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.cascudo-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.cascudo-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-focus);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.cascudo-card-media {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  background: #000;
+  text-decoration: none !important;
+}
+
+.cascudo-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.cascudo-card:hover .cascudo-card-media img {
+  transform: scale(1.05);
+}
+
+.cascudo-card-num {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.cascudo-card-time {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.cascudo-card-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cascudo-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 0.6rem;
+}
+
+.cascudo-tag {
+  display: inline-block;
+  background: rgba(18, 62, 156, 0.08);
+  color: var(--color-attention-primary);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .cascudo-tag {
+    background: rgba(106, 183, 255, 0.15);
+    color: var(--color-attention-primary);
+  }
+}
+
+.cascudo-card-title {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 0.5rem 0;
+  border: none;
+  padding: 0;
+}
+
+.cascudo-card-title a {
+  color: var(--text-main);
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+
+.cascudo-card-title a:hover {
+  color: var(--color-attention-primary);
+}
+
+.cascudo-card-desc {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin: 0 0 1.2rem 0;
+  flex-grow: 1;
+}
+
+.cascudo-card-footer {
+  margin-top: auto;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.cascudo-read-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 14px;
+  background: var(--color-attention-light);
+  border: 1px solid var(--border-focus);
+  color: var(--color-attention-primary) !important;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+
+.cascudo-read-btn:hover {
+  background: var(--color-attention-primary);
+  color: #ffffff !important;
+}
+
+.cascudo-read-arrow {
+  transition: transform 0.2s ease;
+}
+
+.cascudo-read-btn:hover .cascudo-read-arrow {
+  transform: translateX(4px);
+}
+
+/* --- CAIXA DE DICAS EM FAMÍLIA --- */
+.cascudo-family-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--color-decisions-primary);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  margin-top: 2rem;
+}
+
+.cascudo-family-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.cascudo-family-content h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.4rem 0;
+  color: var(--text-main);
+  border: none;
+  padding: 0;
+}
+
+.cascudo-family-content p {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ==========================================================================
+   LEITOR DE CONTOS (STORY READER PAGE)
+   ========================================================================== */
+
+/* --- BARRA DE LEITURA FIXA --- */
+.cascudo-reading-bar {
+  position: sticky;
+  top: 10px;
+  z-index: 90;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 8px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.cascudo-progress-track {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: transparent;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  overflow: hidden;
+}
+
+.cascudo-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #1040b0, #0e7d0f, #a89408, #940f0f);
+  transition: width 0.1s ease;
+}
+
+.cascudo-nav-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted) !important;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.cascudo-nav-back-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-main) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .cascudo-nav-back-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+}
+
+.cascudo-reading-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cascudo-control-btn {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  color: var(--text-main);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.cascudo-control-btn:hover {
+  border-color: var(--color-attention-primary);
+  color: var(--color-attention-primary);
+  transform: translateY(-1px);
+}
+
+.cascudo-control-btn.active {
+  background: var(--color-attention-primary);
+  color: #ffffff;
+  border-color: var(--color-attention-primary);
+}
+
+.cascudo-control-btn.speaking {
+  background: var(--color-decisions-primary);
+  color: #ffffff;
+  border-color: var(--color-decisions-primary);
+  animation: pulse-audio 1.5s infinite;
+}
+
+@keyframes pulse-audio {
+  0% { box-shadow: 0 0 0 0 rgba(14, 125, 15, 0.5); }
+  70% { box-shadow: 0 0 0 8px rgba(14, 125, 15, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(14, 125, 15, 0); }
+}
+
+.cascudo-font-resizer {
+  display: inline-flex;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cascudo-font-btn {
+  background: transparent;
+  border: none;
+  border-right: 1px solid var(--border-light);
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 6px 9px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cascudo-font-btn:last-child {
+  border-right: none;
+}
+
+.cascudo-font-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-main);
+}
+
+@media (prefers-color-scheme: dark) {
+  .cascudo-font-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* --- ARTIGO E TIPOGRAFIA DO CONTO --- */
+.cascudo-story-article {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.cascudo-story-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.cascudo-story-meta-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.8rem;
+}
+
+.cascudo-story-num-badge {
+  background: var(--color-values-light);
+  color: var(--color-values-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 15, 15, 0.15);
+}
+
+.cascudo-story-time-badge {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.cascudo-story-title {
+  font-family: 'Outfit', Georgia, -apple-system, sans-serif;
+  font-size: 2.3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--text-main);
+  margin: 0 0 0.8rem 0;
+  border: none;
+  padding: 0;
+}
+
+.cascudo-story-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* --- CORPO DO TEXTO (TAMANHOS DE FONTE ESCALÁVEIS) --- */
+.cascudo-story-body {
+  line-height: 1.85;
+  color: var(--text-main);
+  transition: font-size 0.2s ease, line-height 0.2s ease;
+}
+
+.cascudo-story-body.font-size-sm {
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.cascudo-story-body.font-size-md {
+  font-size: 1.2rem;
+  line-height: 1.85;
+}
+
+.cascudo-story-body.font-size-lg {
+  font-size: 1.35rem;
+  line-height: 1.95;
+}
+
+.cascudo-story-body.font-size-xl {
+  font-size: 1.55rem;
+  line-height: 2.05;
+}
+
+.cascudo-story-body p {
+  margin-bottom: 1.5rem;
+}
+
+/* --- IMAGENS ILUSTRADAS NO CONTO --- */
+.cascudo-story-img {
+  cursor: zoom-in;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.cascudo-story-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 650px) {
+  .cascudo-story-body img {
+    float: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 1.2rem 0 !important;
+    display: block !important;
+  }
+}
+
+/* --- CAIXA DE REFLEXÃO FINAL --- */
+.cascudo-story-reflection-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--color-decisions-primary);
+  border-radius: 16px;
+  padding: 1.5rem 1.8rem;
+  margin: 2.5rem 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.cascudo-reflection-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.cascudo-reflection-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.cascudo-reflection-header h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-main);
+  border: none;
+  padding: 0;
+}
+
+.cascudo-reflection-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.cascudo-reflection-list li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+}
+
+.cascudo-reflection-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* --- NAVEGAÇÃO ENTRE CONTOS --- */
+.cascudo-story-nav-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.cascudo-story-nav-card {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  min-width: 150px;
+}
+
+.cascudo-story-nav-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-focus);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.cascudo-story-nav-card.prev {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.cascudo-story-nav-card.next {
+  align-items: flex-end;
+  text-align: right;
+  margin-left: auto;
+}
+
+.cascudo-nav-direction {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.cascudo-nav-card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.cascudo-center-hub-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  color: var(--text-muted) !important;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+
+.cascudo-center-hub-link:hover {
+  color: var(--text-main) !important;
+  border-color: var(--border-focus);
+}
+
+/* --- LIGHTBOX MODAL --- */
+.cascudo-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.cascudo-lightbox.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cascudo-lightbox img {
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  animation: zoom-lightbox 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes zoom-lightbox {
+  from { transform: scale(0.92); }
+  to { transform: scale(1); }
+}
+
+.cascudo-lightbox-caption {
+  color: #f3f4f6;
+  font-size: 0.95rem;
+  margin-top: 14px;
+  text-align: center;
+  max-width: 600px;
+}
+
+.cascudo-lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #ffffff;
+  font-size: 1.4rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.cascudo-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* --- SUPORTE COMPLETO AO MODO CAIXA ALTA EM CASCUDO --- */
+.text-uppercase-active .cascudo-story-body p,
+.text-uppercase-active .cascudo-story-title,
+.text-uppercase-active .cascudo-hero-title,
+.text-uppercase-active .cascudo-hero-subtitle,
+.text-uppercase-active .cascudo-card-title,
+.text-uppercase-active .cascudo-card-desc,
+.text-uppercase-active .cascudo-reflection-list li {
+  text-transform: uppercase !important;
+}
+
+.text-uppercase-active .cascudo-control-btn,
+.text-uppercase-active .cascudo-font-btn,
+.text-uppercase-active .cascudo-filter-btn,
+.text-uppercase-active .cascudo-tag,
+.text-uppercase-active .cascudo-story-num-badge,
+.text-uppercase-active .cascudo-card-num,
+.text-uppercase-active .cascudo-card-time,
+.text-uppercase-active .cascudo-nav-direction {
+  text-transform: none !important;
+}

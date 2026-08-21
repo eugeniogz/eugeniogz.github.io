@@ -1,0 +1,610 @@
+<script>
+(function() {
+  // Evita inicialização dupla se já renderizado
+  if (window.__cascudoInitialized) return;
+
+  const container = document.getElementById('cascudo-app');
+  if (!container) return;
+
+  window.__cascudoInitialized = true;
+
+  const pathname = window.location.pathname;
+  const isIndex = pathname.endsWith('/o-cascudo-e-outras-historias/') || 
+                  pathname.endsWith('/o-cascudo-e-outras-historias/index.html') || 
+                  pathname.endsWith('/o-cascudo-e-outras-historias');
+
+  const baseUrl = '{{ "/o-cascudo-e-outras-historias/" | relative_url }}'.replace(/\/index\.html$/, '/');
+
+  // Metadados completos dos 7 contos da coleção
+  const stories = [
+    {
+      id: 'rio-japao',
+      number: 1,
+      title: 'Rio Japão',
+      time: '2 min',
+      tags: ['Natureza', 'Família', 'método VIDA'],
+      category: 'natureza',
+      cover: baseUrl + 'figuras/rio-japao/vovo-e-os-meninos.png',
+      url: baseUrl + 'rio-japao.html',
+      desc: 'Marcos e seus irmãos viajam para a fazenda dos avós, constroem represas de pedrinhas no rio de águas cristalinas e aprendem sobre a preservação da natureza.',
+      reflection: {
+        title: 'Para Conversar em Família',
+        questions: [
+          'O que você mais gosta de fazer quando está em contato com a natureza ou com seus avós?',
+          'Por que a resposta do Marquinhos sobre o petróleo no rio foi tão importante para o vovô?'
+        ]
+      }
+    },
+    {
+      id: 'o-cascudo',
+      number: 2,
+      title: 'O Cascudo',
+      time: '2 min',
+      tags: ['Natureza', 'Família', 'método VIDA'],
+      category: 'natureza',
+      cover: baseUrl + 'figuras/o-cascudo/lago-no-rio.png',
+      url: baseUrl + 'o-cascudo.html',
+      desc: 'Fabiana e Rafaela constroem um lindo aquário de vidro na fazenda e descobrem o papel surpreendente e essencial do cascudo na limpeza do ecossistema.',
+      reflection: {
+        title: 'Para Conversar em Família',
+        questions: [
+          'Por que cada animalzinho, até o que limpa o lodo, tem uma função importante na natureza?',
+          'O que você achou da decisão das irmãs de devolver os peixinhos ao rio antes de ir embora?'
+        ]
+      }
+    },
+    {
+      id: 'o-relogio-de-bolso',
+      number: 3,
+      title: 'O Relógio de Bolso',
+      time: '1 min',
+      tags: ['Tempo', 'Vida', 'Herança', 'Wingene', 'método VIDA'],
+      category: 'valores',
+      cover: baseUrl + 'figuras/marcando-o-proprio-tempo/mostrando-na-caixa.png',
+      url: baseUrl + 'o-relogio-de-bolso.html',
+      desc: 'Vovô Aurélio mostra a Marcos um precioso relógio de família e revela que o que realmente dá corda e faz a vida funcionar é a nossa atenção.',
+      reflection: {
+        title: 'Para Conversar em Família',
+        questions: [
+          'O que significa "dar atenção" para as pessoas que a gente ama e para as coisas que fazemos?',
+          'Qual é a herança mais importante?',
+          'Qual é a lembrança de família ou história que você mais guarda no coração?'
+        ]
+      }
+    },
+    {
+      id: 'o-barquinho-amarelo',
+      number: 4,
+      title: 'O Barquinho Amarelo',
+      time: '2 min',
+      tags: ['Aprender', 'Ensinar', 'método VIDA'],
+      category: 'aprendizados',
+      cover: baseUrl + 'figuras/o-barquinho-amarelo/iniciando-dobradura.png',
+      url: baseUrl + 'o-barquinho-amarelo.html',
+      desc: 'Marquinhos tenta dobrar um barquinho de papel sozinho, lida com a frustração e descobre a alegria e a paciência de aprender com a mãe.',
+      reflection: {
+        title: 'Para Conversar em Família',
+        questions: [
+          'Você já tentou fazer algo que parecia difícil e deu vontade de desistir? O que aconteceu?',
+          'Como pedir ajuda com calma pode transformar um momento difícil em uma gostosa brincadeira?'
+        ]
+      }
+    },
+    {
+      id: 'um-sanduiche-especial',
+      number: 5,
+      title: 'Um Sanduíche Especial',
+      time: '2 min',
+      tags: ['Família', 'Colaboração', 'método VIDA'],
+      category: 'familia',
+      cover: baseUrl + 'figuras/um-sanduiche-especial/preparo-do-sanduiche.png',
+      url: baseUrl + 'um-sanduiche-especial.html',
+      desc: 'Nas férias na praia com a madrinha e o primo, Marquinhos prepara seu próprio lanche e compreende o esforço compartilhado que faz os dias serem especiais.',
+      reflection: {
+        title: 'Para Conversar em Família',
+        questions: [
+          'Qual tarefa da casa ou do lanche você já consegue fazer ou gostaria de aprender a fazer sozinho(a)?',
+          'Por que ajudar nas tarefas do dia a dia deixa tudo mais leve e divertido para todo mundo?'
+        ]
+      }
+    },
+    {
+      id: 'aventura-de-bicicleta',
+      number: 6,
+      title: 'Aventura de Bicicleta',
+      time: '3 min',
+      tags: ['Família', 'Aprender', 'Ensinar', 'Escutar', 'método VIDA'],
+      category: 'familia',
+      cover: baseUrl + 'figuras/as-bicicletas-no-parque/inicio-da-aventura.png',
+      url: baseUrl + 'aventura-de-bicicleta.html',
+      desc: 'As irmãs Clara e Alice encaram uma grande trilha de bicicleta pelo parque, aprendendo a dosar o ritmo, respeitar seus limites e apoiar uma à outra.',
+      reflection: {
+        title: 'Para Conversar em Família',
+        questions: [
+          'Por que é importante dosar as nossas energias e não correr demais no início de um desafio?',
+          'Como a Clara e a Alice se ajudaram durante o passeio de bicicleta?'
+        ]
+      }
+    },
+    {
+      id: 'o-clube-dos-pinguins',
+      number: 7,
+      title: 'O Clube dos Pinguins',
+      time: '2 min',
+      tags: ['Escravidão Digital', 'Amor', 'método VIDA', 'Tempo'],
+      category: 'tecnologia',
+      cover: baseUrl + 'figuras/o-clube-dos-pinguins/jogando-xadrez.png',
+      url: baseUrl + 'o-clube-dos-pinguins.html',
+      desc: 'Após um imprevisto com um jogo no celular, Marquinhos e seus pais redescobrem a alegria insubstituível do xadrez, dos jogos de tabuleiro e do tempo compartilhado.',
+      reflection: {
+        title: 'Para Conversar em Família',
+        questions: [
+          'Quais são as brincadeiras fora das telas que você mais gosta de fazer com amigos ou com a família?',
+          'Como podemos equilibrar o tempo no celular com outras atividades divertidas?'
+        ]
+      }
+    }
+  ];
+
+  // =========================================================================
+  // RENDERIZAÇÃO DA PÁGINA ÍNDICE / HUB
+  // =========================================================================
+  if (isIndex) {
+    renderIndexHub();
+    return;
+  }
+
+  // =========================================================================
+  // RENDERIZAÇÃO DA PÁGINA INDIVIDUAL DO CONTO
+  // =========================================================================
+  renderStoryReader();
+
+  function renderIndexHub() {
+    container.innerHTML = `
+      <div class="cascudo-hero">
+        <div class="cascudo-hero-badge">
+          <span>🌿</span> Contos Infantis & Infantojuvenis · Método VIDA
+        </div>
+        <h1 class="cascudo-hero-title">O Cascudo e Outras Histórias</h1>
+        <p class="cascudo-hero-subtitle">
+          Contos para pequenos aventureiros: experiências na fazenda, na praia e na cidade.
+          Histórias ilustradas que despertam a imaginação, o afeto e a reflexão em família.
+        </p>
+
+        <div class="cascudo-stats-pills">
+          <div class="cascudo-stat-pill">
+            <span class="cascudo-stat-icon">📚</span>
+            <span><strong>7</strong> Histórias Ilustradas</span>
+          </div>
+          <div class="cascudo-stat-pill">
+            <span class="cascudo-stat-icon">⏱️</span>
+            <span><strong>13 min</strong> Leitura Total</span>
+          </div>
+          <div class="cascudo-stat-pill">
+            <span class="cascudo-stat-icon">🔠</span>
+            <span>Modo Caixa Alta</span>
+          </div>
+          <div class="cascudo-stat-pill">
+            <span class="cascudo-stat-icon">🔊</span>
+            <span>Áudio Narração</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filtros de Categoria -->
+      <div class="cascudo-filters-bar" role="tablist" aria-label="Filtrar histórias por tema">
+        <button class="cascudo-filter-btn active" data-filter="all" role="tab" aria-selected="true">
+          ✨ Todas as Histórias (${stories.length})
+        </button>
+        <button class="cascudo-filter-btn" data-filter="natureza" role="tab" aria-selected="false">
+          🌱 Natureza & Rio
+        </button>
+        <button class="cascudo-filter-btn" data-filter="familia" role="tab" aria-selected="false">
+          👨‍👩‍👧‍👦 Família & Aventura
+        </button>
+        <button class="cascudo-filter-btn" data-filter="aprendizados" role="tab" aria-selected="false">
+          🎨 Aprendizados & Paciência
+        </button>
+        <button class="cascudo-filter-btn" data-filter="tecnologia" role="tab" aria-selected="false">
+          ⏳ Tempo & Telas
+        </button>
+      </div>
+
+      <!-- Grid de Cartões de Histórias -->
+      <div class="cascudo-grid" id="cascudo-stories-grid">
+        ${stories.map(story => `
+          <article class="cascudo-card" data-category="${story.category}">
+            <a href="${story.url}" class="cascudo-card-media" aria-label="Ler ${story.title}">
+              <img src="${story.cover}" alt="Ilustração do conto ${story.title}" loading="lazy" />
+              <span class="cascudo-card-num">Conto ${story.number}</span>
+              <span class="cascudo-card-time">⏱️ ${story.time}</span>
+            </a>
+            <div class="cascudo-card-content">
+              <div class="cascudo-card-tags">
+                ${story.tags.map(t => `<span class="cascudo-tag">${t}</span>`).join('')}
+              </div>
+              <h2 class="cascudo-card-title">
+                <a href="${story.url}">${story.title}</a>
+              </h2>
+              <p class="cascudo-card-desc">${story.desc}</p>
+              <div class="cascudo-card-footer">
+                <a href="${story.url}" class="cascudo-read-btn">
+                  <span>Ler História</span>
+                  <span class="cascudo-read-arrow">→</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        `).join('')}
+      </div>
+
+      <!-- Caixa de Dicas para Leitura em Família -->
+      <div class="cascudo-family-box">
+        <div class="cascudo-family-icon">💡</div>
+        <div class="cascudo-family-content">
+          <h3>Dica para Pais, Avós e Educadores</h3>
+          <p>
+            Ao ler cada história com as crianças, utilize o recurso de <strong>Caixa Alta</strong> para incentivar os primeiros passos da alfabetização e explore as <strong>perguntas reflexivas</strong> ao final de cada conto para fortalecer o diálogo sobre respeito à natureza, empatia e hábitos conscientes.
+          </p>
+        </div>
+      </div>
+    `;
+
+    // Interatividade dos filtros
+    const filterButtons = container.querySelectorAll('.cascudo-filter-btn');
+    const cards = container.querySelectorAll('.cascudo-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+
+        const filter = btn.getAttribute('data-filter');
+        cards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  function renderStoryReader() {
+    // Identifica qual conto é o atual
+    let currentStory = null;
+    let currentIndex = -1;
+
+    // Extrai o nome do arquivo da página atual (ex: "o-relogio-de-bolso")
+    const pageFilename = pathname.split('/').pop().replace(/\.html$/, '');
+
+    for (let i = 0; i < stories.length; i++) {
+      const storyFilename = stories[i].url.split('/').pop().replace(/\.html$/, '');
+      if (pageFilename === storyFilename || pageFilename === stories[i].id) {
+        currentStory = stories[i];
+        currentIndex = i;
+        break;
+      }
+    }
+
+    if (!currentStory) {
+      // Fallback: busca pelo título original do h2 presente no container
+      const originalH2 = container.querySelector('h2');
+      const headingText = originalH2 ? originalH2.innerText.trim().toLowerCase() : '';
+      if (headingText) {
+        for (let i = 0; i < stories.length; i++) {
+          if (headingText === stories[i].title.toLowerCase()) {
+            currentStory = stories[i];
+            currentIndex = i;
+            break;
+          }
+        }
+      }
+    }
+
+    if (!currentStory) {
+      currentStory = stories[0];
+      currentIndex = 0;
+    }
+
+    const prevStory = currentIndex > 0 ? stories[currentIndex - 1] : null;
+    const nextStory = currentIndex < stories.length - 1 ? stories[currentIndex + 1] : null;
+
+    // Coleta o conteúdo HTML original (parágrafos e imagens)
+    const rawNodes = Array.from(container.childNodes);
+    const storyElements = [];
+
+    rawNodes.forEach(node => {
+      if (node.nodeType !== Node.ELEMENT_NODE) return;
+      const tagName = node.tagName.toLowerCase();
+
+      // Ignora headers redundantes, links do markdown original ou divs de navegação legadas
+      if (tagName === 'h3' && (node.querySelector('a[href*="./"]') || node.innerText.toLowerCase().includes('o cascudo e outras histórias'))) return;
+      if (tagName === 'h2' && node.innerText.trim().toLowerCase() === currentStory.title.toLowerCase()) return;
+      if (tagName === 'hr') return;
+      if (tagName === 'div' && (node.innerText.includes('<<') || node.innerText.includes('>>') || node.style.clear === 'both')) return;
+
+      storyElements.push(node.cloneNode(true));
+    });
+
+    // Monta a estrutura da página de leitura
+    container.innerHTML = `
+      <!-- Barra de Leitura Superior Fixa/Acessível -->
+      <div class="cascudo-reading-bar" id="cascudo-reading-bar">
+        <div class="cascudo-reading-bar-left">
+          <a href="${baseUrl}" class="cascudo-nav-back-btn" title="Voltar ao Índice de Contos">
+            <span>←</span> <span class="cascudo-nav-back-text">Todas as Histórias</span>
+          </a>
+        </div>
+
+        <div class="cascudo-reading-controls">
+          <!-- Botão Caixa Alta -->
+          <button id="cascudo-case-btn" class="cascudo-control-btn" title="Alternar entre Letra Normal e CAIXA ALTA" aria-label="Alternar Caixa Alta">
+            <span>🔠</span> <span id="cascudo-case-label">CAIXA ALTA</span>
+          </button>
+
+          <!-- Ajuste de Tamanho de Fonte -->
+          <div class="cascudo-font-resizer" role="group" aria-label="Tamanho da Letra">
+            <button id="font-dec-btn" class="cascudo-font-btn" title="Diminuir tamanho da letra">A-</button>
+            <button id="font-reset-btn" class="cascudo-font-btn" title="Tamanho padrão">A</button>
+            <button id="font-inc-btn" class="cascudo-font-btn" title="Aumentar tamanho da letra">A+</button>
+          </div>
+
+          <!-- Áudio Narração -->
+          <button id="cascudo-audio-btn" class="cascudo-control-btn audio-btn" title="Ouvir a história narrada" aria-label="Ouvir História">
+            <span id="audio-icon">🔊</span> <span id="audio-label">Ouvir</span>
+          </button>
+        </div>
+
+        <!-- Barra de Progresso de Leitura -->
+        <div class="cascudo-progress-track">
+          <div class="cascudo-progress-bar" id="cascudo-progress-bar"></div>
+        </div>
+      </div>
+
+      <!-- Artigo Principal da História -->
+      <article class="cascudo-story-article" id="cascudo-story-article">
+        <!-- Cabeçalho do Conto -->
+        <header class="cascudo-story-header">
+          <div class="cascudo-story-meta-top">
+            <span class="cascudo-story-num-badge">Conto ${currentStory.number} de ${stories.length}</span>
+            <span class="cascudo-story-time-badge">⏱️ ${currentStory.time} de leitura</span>
+          </div>
+
+          <h1 class="cascudo-story-title">${currentStory.title}</h1>
+
+          <div class="cascudo-story-tags">
+            ${currentStory.tags.map(t => `<span class="cascudo-tag">${t}</span>`).join('')}
+          </div>
+        </header>
+
+        <!-- Corpo do Conto com Texto e Imagens -->
+        <div class="cascudo-story-body" id="cascudo-story-body">
+        </div>
+
+        <!-- Caixa de Reflexão em Família -->
+        <div class="cascudo-story-reflection-card">
+          <div class="cascudo-reflection-header">
+            <span class="cascudo-reflection-icon">💡</span>
+            <h3>${currentStory.reflection.title}</h3>
+          </div>
+          <ul class="cascudo-reflection-list">
+            ${currentStory.reflection.questions.map(q => `<li>${q}</li>`).join('')}
+          </ul>
+        </div>
+
+        <!-- Rodapé de Navegação Entre Contos -->
+        <nav class="cascudo-story-nav-footer" aria-label="Navegação entre histórias">
+          ${prevStory ? `
+            <a href="${prevStory.url}" class="cascudo-story-nav-card prev">
+              <span class="cascudo-nav-direction">← Conto Anterior</span>
+              <span class="cascudo-nav-card-title">${prevStory.number}. ${prevStory.title}</span>
+            </a>
+          ` : `
+            <a href="${baseUrl}" class="cascudo-story-nav-card prev">
+              <span class="cascudo-nav-direction">← Coleção</span>
+              <span class="cascudo-nav-card-title">Índice de Histórias</span>
+            </a>
+          `}
+
+          <a href="${baseUrl}" class="cascudo-center-hub-link" title="Voltar ao início da coleção">
+            <span>📖</span> <span>Todas as Histórias</span>
+          </a>
+
+          ${nextStory ? `
+            <a href="${nextStory.url}" class="cascudo-story-nav-card next">
+              <span class="cascudo-nav-direction">Próximo Conto →</span>
+              <span class="cascudo-nav-card-title">${nextStory.number}. ${nextStory.title}</span>
+            </a>
+          ` : `
+            <a href="${baseUrl}" class="cascudo-story-nav-card next">
+              <span class="cascudo-nav-direction">Fim da Coleção →</span>
+              <span class="cascudo-nav-card-title">Voltar ao Início</span>
+            </a>
+          `}
+        </nav>
+      </article>
+
+      <!-- Lightbox Modal para Imagens -->
+      <div id="cascudo-lightbox" class="cascudo-lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+        <button class="cascudo-lightbox-close" id="lightbox-close-btn" aria-label="Fechar visualização da imagem">✕</button>
+        <img id="cascudo-lightbox-img" src="" alt="Visualização ampliada da ilustração" />
+        <p id="cascudo-lightbox-caption" class="cascudo-lightbox-caption"></p>
+      </div>
+    `;
+
+    // Insere o conteúdo original tratado no corpo
+    const storyBody = document.getElementById('cascudo-story-body');
+    storyElements.forEach(el => {
+      // Melhora as imagens para torná-las clicáveis no Lightbox
+      const imgs = el.querySelectorAll('img');
+      imgs.forEach(img => {
+        img.classList.add('cascudo-story-img');
+        img.setAttribute('title', 'Clique para ampliar a ilustração');
+        img.addEventListener('click', () => openLightbox(img.src, img.alt));
+      });
+      storyBody.appendChild(el);
+    });
+
+    // -----------------------------------------------------------------------
+    // CONTROLE DE CAIXA ALTA (Persistente via LocalStorage)
+    // -----------------------------------------------------------------------
+    const caseBtn = document.getElementById('cascudo-case-btn');
+    const caseLabel = document.getElementById('cascudo-case-label');
+    const mainContent = document.getElementById('main-content') || document.body;
+
+    function applyCasePreference(isUpper) {
+      if (isUpper) {
+        mainContent.classList.add('text-uppercase-active');
+        if (caseLabel) caseLabel.innerText = 'Letra Normal';
+        if (caseBtn) caseBtn.classList.add('active');
+        localStorage.setItem('text-case-preference', 'uppercase');
+      } else {
+        mainContent.classList.remove('text-uppercase-active');
+        if (caseLabel) caseLabel.innerText = 'CAIXA ALTA';
+        if (caseBtn) caseBtn.classList.remove('active');
+        localStorage.setItem('text-case-preference', 'normal');
+      }
+    }
+
+    if (caseBtn) {
+      caseBtn.addEventListener('click', () => {
+        const isCurrentlyUpper = mainContent.classList.contains('text-uppercase-active');
+        applyCasePreference(!isCurrentlyUpper);
+      });
+    }
+
+    const savedCase = localStorage.getItem('text-case-preference');
+    applyCasePreference(savedCase === 'uppercase');
+
+    // -----------------------------------------------------------------------
+    // CONTROLE DE TAMANHO DE FONTE (A- / A / A+)
+    // -----------------------------------------------------------------------
+    const fontDecBtn = document.getElementById('font-dec-btn');
+    const fontResetBtn = document.getElementById('font-reset-btn');
+    const fontIncBtn = document.getElementById('font-inc-btn');
+
+    const fontSizes = ['font-size-sm', 'font-size-md', 'font-size-lg', 'font-size-xl'];
+    let currentFontIndex = 1; // default 'font-size-md'
+
+    function setFontSize(index) {
+      fontSizes.forEach(cls => storyBody.classList.remove(cls));
+      currentFontIndex = Math.max(0, Math.min(fontSizes.length - 1, index));
+      storyBody.classList.add(fontSizes[currentFontIndex]);
+      localStorage.setItem('cascudo-font-size-idx', currentFontIndex);
+    }
+
+    if (fontDecBtn) fontDecBtn.addEventListener('click', () => setFontSize(currentFontIndex - 1));
+    if (fontResetBtn) fontResetBtn.addEventListener('click', () => setFontSize(1));
+    if (fontIncBtn) fontIncBtn.addEventListener('click', () => setFontSize(currentFontIndex + 1));
+
+    const savedFontIdx = localStorage.getItem('cascudo-font-size-idx');
+    if (savedFontIdx !== null) {
+      setFontSize(parseInt(savedFontIdx, 10));
+    }
+
+    // -----------------------------------------------------------------------
+    // BARRA DE PROGRESSO DE LEITURA
+    // -----------------------------------------------------------------------
+    const progressBar = document.getElementById('cascudo-progress-bar');
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight > 0 && progressBar) {
+        const scrolled = (window.scrollY / docHeight) * 100;
+        progressBar.style.width = Math.min(100, Math.max(0, scrolled)) + '%';
+      }
+    }, { passive: true });
+
+    // -----------------------------------------------------------------------
+    // ÁUDIO NARRAÇÃO (Web Speech Synthesis API pt-BR)
+    // -----------------------------------------------------------------------
+    const audioBtn = document.getElementById('cascudo-audio-btn');
+    const audioIcon = document.getElementById('audio-icon');
+    const audioLabel = document.getElementById('audio-label');
+    let isSpeaking = false;
+
+    if ('speechSynthesis' in window && audioBtn) {
+      audioBtn.addEventListener('click', () => {
+        if (isSpeaking) {
+          window.speechSynthesis.cancel();
+          isSpeaking = false;
+          audioIcon.innerText = '🔊';
+          audioLabel.innerText = 'Ouvir';
+          audioBtn.classList.remove('speaking');
+          return;
+        }
+
+        const textToRead = currentStory.title + '. ' + storyBody.innerText;
+        const utterance = new SpeechSynthesisUtterance(textToRead);
+        utterance.lang = 'pt-BR';
+        utterance.rate = 0.95; // ritmo calmo para leitura infantil
+
+        const voices = window.speechSynthesis.getVoices();
+        const ptVoice = voices.find(v => v.lang.startsWith('pt'));
+        if (ptVoice) utterance.voice = ptVoice;
+
+        utterance.onstart = () => {
+          isSpeaking = true;
+          audioIcon.innerText = '⏹️';
+          audioLabel.innerText = 'Pausar';
+          audioBtn.classList.add('speaking');
+        };
+
+        utterance.onend = utterance.onerror = () => {
+          isSpeaking = false;
+          audioIcon.innerText = '🔊';
+          audioLabel.innerText = 'Ouvir';
+          audioBtn.classList.remove('speaking');
+        };
+
+        window.speechSynthesis.speak(utterance);
+      });
+
+      window.addEventListener('beforeunload', () => {
+        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+      });
+    } else if (audioBtn) {
+      audioBtn.style.display = 'none';
+    }
+
+    // -----------------------------------------------------------------------
+    // LIGHTBOX DE IMAGENS
+    // -----------------------------------------------------------------------
+    const lightbox = document.getElementById('cascudo-lightbox');
+    const lightboxImg = document.getElementById('cascudo-lightbox-img');
+    const lightboxCaption = document.getElementById('cascudo-lightbox-caption');
+    const lightboxClose = document.getElementById('lightbox-close-btn');
+
+    function openLightbox(src, caption) {
+      if (!lightbox || !lightboxImg) return;
+      lightboxImg.src = src;
+      if (lightboxCaption) lightboxCaption.innerText = caption || '';
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeLightbox() {
+      if (!lightbox) return;
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+    }
+
+    if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+    if (lightbox) {
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox || e.target === lightboxClose) closeLightbox();
+      });
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox && lightbox.classList.contains('open')) {
+        closeLightbox();
+      }
+    });
+  }
+})();
+</script>

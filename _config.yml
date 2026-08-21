@@ -47,4 +47,9 @@ defaults:
       path: "reflexoes"
     values:
       layout: "reflections"
+  - scope:
+      path: "o-cascudo-e-outras-historias"
+    values:
+      layout: "cascudo"
+
 
