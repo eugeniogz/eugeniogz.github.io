@@ -327,11 +327,6 @@
           </a>
         </div>
         <div class="poetry-reading-controls">
-          <div class="poetry-font-resizer" role="group" aria-label="Tamanho da Fonte">
-            <button id="font-dec-btn" class="poetry-font-btn" title="Diminuir fonte">A-</button>
-            <button id="font-reset-btn" class="poetry-font-btn" title="Fonte padrão">A</button>
-            <button id="font-inc-btn" class="poetry-font-btn" title="Aumentar fonte">A+</button>
-          </div>
           <button id="poetry-audio-btn" class="poetry-control-btn audio-btn" title="Ouvir aforismos" aria-label="Ouvir Aforismos">
             <span id="audio-icon">🔊</span> <span id="audio-label">Ouvir</span>
           </button>
@@ -434,14 +429,9 @@
           </a>
         </div>
         <div class="poetry-reading-controls">
-          <button id="poetry-case-btn" class="poetry-control-btn" title="Alternar Caixa Alta">
-            <span>🔠</span> <span id="poetry-case-label">Caixa Alta</span>
+          <button id="poetry-copy-top-btn" class="poetry-control-btn" title="Copiar poema completo" aria-label="Copiar Poema">
+            <span>📋</span> <span id="poetry-copy-label">Copiar</span>
           </button>
-          <div class="poetry-font-resizer" role="group" aria-label="Tamanho da Fonte">
-            <button id="font-dec-btn" class="poetry-font-btn" title="Diminuir fonte">A-</button>
-            <button id="font-reset-btn" class="poetry-font-btn" title="Fonte padrão">A</button>
-            <button id="font-inc-btn" class="poetry-font-btn" title="Aumentar fonte">A+</button>
-          </div>
           <button id="poetry-audio-btn" class="poetry-control-btn audio-btn" title="Ouvir poema" aria-label="Ouvir Poema">
             <span id="audio-icon">🔊</span> <span id="audio-label">Ouvir</span>
           </button>
@@ -509,67 +499,36 @@
       bodyEl.appendChild(el);
     });
 
+    function handlePoemCopy(btn) {
+      const text = `${currentPoem.title}\n\n` + bodyEl.innerText.trim();
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          const originalHTML = btn.innerHTML;
+          btn.innerHTML = '<span>✓</span> <span>Copiado!</span>';
+          btn.classList.add('copied');
+          setTimeout(() => {
+            btn.innerHTML = originalHTML;
+            btn.classList.remove('copied');
+          }, 2000);
+        });
+      }
+    }
+
     const copyFullBtn = document.getElementById('btn-copy-full-poem');
     if (copyFullBtn) {
-      copyFullBtn.addEventListener('click', () => {
-        const text = `${currentPoem.title}\n\n` + bodyEl.innerText.trim();
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(text).then(() => {
-            const originalHTML = copyFullBtn.innerHTML;
-            copyFullBtn.innerHTML = '<span>✓</span> <span>Poema Copiado!</span>';
-            copyFullBtn.classList.add('copied');
-            setTimeout(() => {
-              copyFullBtn.innerHTML = originalHTML;
-              copyFullBtn.classList.remove('copied');
-            }, 2000);
-          });
-        }
-      });
+      copyFullBtn.addEventListener('click', () => handlePoemCopy(copyFullBtn));
+    }
+
+    const copyTopBtn = document.getElementById('poetry-copy-top-btn');
+    if (copyTopBtn) {
+      copyTopBtn.addEventListener('click', () => handlePoemCopy(copyTopBtn));
     }
 
     setupCommonPoetryInteractions();
   }
 
   function setupCommonPoetryInteractions() {
-    const caseBtn = document.getElementById('poetry-case-btn');
-    const article = document.getElementById('poetry-article');
     const progressBar = document.getElementById('poetry-progress-bar');
-    let isUppercase = false;
-
-    if (caseBtn && article) {
-      caseBtn.addEventListener('click', () => {
-        isUppercase = !isUppercase;
-        article.classList.toggle('uppercase-mode', isUppercase);
-        caseBtn.classList.toggle('active', isUppercase);
-        const label = document.getElementById('poetry-case-label');
-        if (label) label.textContent = isUppercase ? 'Minúscula' : 'Caixa Alta';
-      });
-    }
-
-    const fontDec = document.getElementById('font-dec-btn');
-    const fontReset = document.getElementById('font-reset-btn');
-    const fontInc = document.getElementById('font-inc-btn');
-    let currentFontSize = 19;
-
-    if (fontDec && fontReset && fontInc && article) {
-      fontDec.addEventListener('click', () => {
-        if (currentFontSize > 15) {
-          currentFontSize -= 2;
-          article.style.setProperty('--reading-font-size', currentFontSize + 'px');
-        }
-      });
-      fontReset.addEventListener('click', () => {
-        currentFontSize = 19;
-        article.style.removeProperty('--reading-font-size');
-      });
-      fontInc.addEventListener('click', () => {
-        if (currentFontSize < 28) {
-          currentFontSize += 2;
-          article.style.setProperty('--reading-font-size', currentFontSize + 'px');
-        }
-      });
-    }
-
     if (progressBar) {
       window.addEventListener('scroll', () => {
         const docEl = document.documentElement;

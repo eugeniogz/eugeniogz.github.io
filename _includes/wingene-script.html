@@ -260,15 +260,9 @@
         </div>
 
         <div class="wingene-reading-controls">
-          <button id="wingene-case-btn" class="wingene-control-btn" title="Alternar Caixa Alta" aria-label="Alternar Caixa Alta">
-            <span>🔠</span> <span id="wingene-case-label">Caixa Alta</span>
+          <button id="wingene-copy-btn" class="wingene-control-btn" title="Copiar texto do ensaio" aria-label="Copiar Ensaio">
+            <span>📋</span> <span id="wingene-copy-label">Copiar</span>
           </button>
-
-          <div class="wingene-font-resizer" role="group" aria-label="Tamanho da Fonte">
-            <button id="font-dec-btn" class="wingene-font-btn" title="Diminuir fonte">A-</button>
-            <button id="font-reset-btn" class="wingene-font-btn" title="Fonte padrão">A</button>
-            <button id="font-inc-btn" class="wingene-font-btn" title="Aumentar fonte">A+</button>
-          </div>
 
           <button id="wingene-audio-btn" class="wingene-control-btn audio-btn" title="Ouvir ensaio" aria-label="Ouvir Ensaio">
             <span id="audio-icon">🔊</span> <span id="audio-label">Ouvir</span>
@@ -331,51 +325,32 @@
     const articleBody = document.getElementById('wingene-article-body');
     bodyElements.forEach(el => articleBody.appendChild(el));
 
-    setupReadingInteractions(currentEssay.id === 'the-vida-method' ? 'en-US' : 'pt-BR');
+    setupReadingInteractions(currentEssay, currentEssay.id === 'the-vida-method' ? 'en-US' : 'pt-BR');
   }
 
-  function setupReadingInteractions(langCode) {
-    const caseBtn = document.getElementById('wingene-case-btn');
-    const article = document.getElementById('wingene-article');
-    const progressBar = document.getElementById('wingene-progress-bar');
-    let isUppercase = false;
+  function setupReadingInteractions(currentEssay, langCode) {
+    const copyBtn = document.getElementById('wingene-copy-btn');
+    const bodyEl = document.getElementById('wingene-article-body');
 
-    if (caseBtn && article) {
-      caseBtn.addEventListener('click', () => {
-        isUppercase = !isUppercase;
-        article.classList.toggle('uppercase-mode', isUppercase);
-        caseBtn.classList.toggle('active', isUppercase);
-        const label = document.getElementById('wingene-case-label');
-        if (label) label.textContent = isUppercase ? 'Minúscula' : 'Caixa Alta';
-      });
-    }
-
-    // Font Resizing
-    const fontDec = document.getElementById('font-dec-btn');
-    const fontReset = document.getElementById('font-reset-btn');
-    const fontInc = document.getElementById('font-inc-btn');
-    let currentFontSize = 18;
-
-    if (fontDec && fontReset && fontInc && article) {
-      fontDec.addEventListener('click', () => {
-        if (currentFontSize > 14) {
-          currentFontSize -= 2;
-          article.style.setProperty('--reading-font-size', currentFontSize + 'px');
-        }
-      });
-      fontReset.addEventListener('click', () => {
-        currentFontSize = 18;
-        article.style.removeProperty('--reading-font-size');
-      });
-      fontInc.addEventListener('click', () => {
-        if (currentFontSize < 28) {
-          currentFontSize += 2;
-          article.style.setProperty('--reading-font-size', currentFontSize + 'px');
+    if (copyBtn && bodyEl) {
+      copyBtn.addEventListener('click', () => {
+        const textToCopy = `${currentEssay.title}\n\n` + bodyEl.innerText.trim();
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(textToCopy).then(() => {
+            const originalHTML = copyBtn.innerHTML;
+            copyBtn.innerHTML = '<span>✓</span> <span>Copiado!</span>';
+            copyBtn.classList.add('copied');
+            setTimeout(() => {
+              copyBtn.innerHTML = originalHTML;
+              copyBtn.classList.remove('copied');
+            }, 2000);
+          });
         }
       });
     }
 
     // Progress Bar
+    const progressBar = document.getElementById('wingene-progress-bar');
     if (progressBar) {
       window.addEventListener('scroll', () => {
         const docEl = document.documentElement;

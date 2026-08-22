@@ -286,14 +286,9 @@
           </a>
         </div>
         <div class="ipes-reading-controls">
-          <button id="ipes-case-btn" class="ipes-control-btn" title="Alternar Caixa Alta">
-            <span>🔠</span> <span id="ipes-case-label">Caixa Alta</span>
+          <button id="ipes-copy-btn" class="ipes-control-btn" title="Copiar ensaio completo" aria-label="Copiar Ensaio">
+            <span>📋</span> <span id="ipes-copy-label">Copiar</span>
           </button>
-          <div class="ipes-font-resizer" role="group" aria-label="Tamanho da Fonte">
-            <button id="font-dec-btn" class="ipes-font-btn" title="Diminuir fonte">A-</button>
-            <button id="font-reset-btn" class="ipes-font-btn" title="Fonte padrão">A</button>
-            <button id="font-inc-btn" class="ipes-font-btn" title="Aumentar fonte">A+</button>
-          </div>
           <button id="ipes-audio-btn" class="ipes-control-btn audio-btn" title="Ouvir ensaio" aria-label="Ouvir Ensaio">
             <span id="audio-icon">🔊</span> <span id="audio-label">Ouvir</span>
           </button>
@@ -352,50 +347,31 @@
     const bodyEl = document.getElementById('ipes-body');
     bodyElements.forEach(el => bodyEl.appendChild(el));
 
-    setupIpesInteractions();
+    setupIpesInteractions(currentEssay);
   }
 
-  function setupIpesInteractions() {
-    const caseBtn = document.getElementById('ipes-case-btn');
-    const article = document.getElementById('ipes-article');
+  function setupIpesInteractions(currentEssay) {
+    const copyBtn = document.getElementById('ipes-copy-btn');
+    const bodyEl = document.getElementById('ipes-body');
+
+    if (copyBtn && bodyEl) {
+      copyBtn.addEventListener('click', () => {
+        const textToCopy = `${currentEssay.title}\n\n` + bodyEl.innerText.trim();
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(textToCopy).then(() => {
+            const originalHTML = copyBtn.innerHTML;
+            copyBtn.innerHTML = '<span>✓</span> <span>Copiado!</span>';
+            copyBtn.classList.add('copied');
+            setTimeout(() => {
+              copyBtn.innerHTML = originalHTML;
+              copyBtn.classList.remove('copied');
+            }, 2000);
+          });
+        }
+      });
+    }
+
     const progressBar = document.getElementById('ipes-progress-bar');
-    let isUppercase = false;
-
-    if (caseBtn && article) {
-      caseBtn.addEventListener('click', () => {
-        isUppercase = !isUppercase;
-        article.classList.toggle('uppercase-mode', isUppercase);
-        caseBtn.classList.toggle('active', isUppercase);
-        const label = document.getElementById('ipes-case-label');
-        if (label) label.textContent = isUppercase ? 'Minúscula' : 'Caixa Alta';
-      });
-    }
-
-    const fontDec = document.getElementById('font-dec-btn');
-    const fontReset = document.getElementById('font-reset-btn');
-    const fontInc = document.getElementById('font-inc-btn');
-    let currentFontSize = 18;
-
-    if (fontDec && fontReset && fontInc && article) {
-      fontDec.addEventListener('click', () => {
-        if (currentFontSize > 14) {
-          currentFontSize -= 2;
-          article.style.setProperty('--reading-font-size', currentFontSize + 'px');
-        }
-      });
-      fontReset.addEventListener('click', () => {
-        currentFontSize = 18;
-        article.style.removeProperty('--reading-font-size');
-      });
-      fontInc.addEventListener('click', () => {
-        if (currentFontSize < 28) {
-          currentFontSize += 2;
-          article.style.setProperty('--reading-font-size', currentFontSize + 'px');
-        }
-      });
-    }
-
-    if (progressBar) {
       window.addEventListener('scroll', () => {
         const docEl = document.documentElement;
         const scrollTop = docEl.scrollTop || document.body.scrollTop;

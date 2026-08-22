@@ -308,14 +308,9 @@
           </a>
         </div>
         <div class="cronicas-reading-controls">
-          <button id="cronicas-case-btn" class="cronicas-control-btn" title="Alternar Caixa Alta">
-            <span>🔠</span> <span id="cronicas-case-label">Caixa Alta</span>
+          <button id="cronicas-copy-btn" class="cronicas-control-btn" title="Copiar crônica completa" aria-label="Copiar Crônica">
+            <span>📋</span> <span id="cronicas-copy-label">Copiar</span>
           </button>
-          <div class="cronicas-font-resizer" role="group" aria-label="Tamanho da Fonte">
-            <button id="font-dec-btn" class="cronicas-font-btn" title="Diminuir fonte">A-</button>
-            <button id="font-reset-btn" class="cronicas-font-btn" title="Fonte padrão">A</button>
-            <button id="font-inc-btn" class="cronicas-font-btn" title="Aumentar fonte">A+</button>
-          </div>
           <button id="cronicas-audio-btn" class="cronicas-control-btn audio-btn" title="Ouvir crônica" aria-label="Ouvir Crônica">
             <span id="audio-icon">🔊</span> <span id="audio-label">Ouvir</span>
           </button>
@@ -371,50 +366,31 @@
     const bodyEl = document.getElementById('cronicas-body');
     bodyElements.forEach(el => bodyEl.appendChild(el));
 
-    setupCronicasInteractions();
+    setupCronicasInteractions(currentStory);
   }
 
-  function setupCronicasInteractions() {
-    const caseBtn = document.getElementById('cronicas-case-btn');
-    const article = document.getElementById('cronicas-article');
+  function setupCronicasInteractions(currentStory) {
+    const copyBtn = document.getElementById('cronicas-copy-btn');
+    const bodyEl = document.getElementById('cronicas-body');
+
+    if (copyBtn && bodyEl) {
+      copyBtn.addEventListener('click', () => {
+        const textToCopy = `${currentStory.title}\n\n` + bodyEl.innerText.trim();
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(textToCopy).then(() => {
+            const originalHTML = copyBtn.innerHTML;
+            copyBtn.innerHTML = '<span>✓</span> <span>Copiado!</span>';
+            copyBtn.classList.add('copied');
+            setTimeout(() => {
+              copyBtn.innerHTML = originalHTML;
+              copyBtn.classList.remove('copied');
+            }, 2000);
+          });
+        }
+      });
+    }
+
     const progressBar = document.getElementById('cronicas-progress-bar');
-    let isUppercase = false;
-
-    if (caseBtn && article) {
-      caseBtn.addEventListener('click', () => {
-        isUppercase = !isUppercase;
-        article.classList.toggle('uppercase-mode', isUppercase);
-        caseBtn.classList.toggle('active', isUppercase);
-        const label = document.getElementById('cronicas-case-label');
-        if (label) label.textContent = isUppercase ? 'Minúscula' : 'Caixa Alta';
-      });
-    }
-
-    const fontDec = document.getElementById('font-dec-btn');
-    const fontReset = document.getElementById('font-reset-btn');
-    const fontInc = document.getElementById('font-inc-btn');
-    let currentFontSize = 18;
-
-    if (fontDec && fontReset && fontInc && article) {
-      fontDec.addEventListener('click', () => {
-        if (currentFontSize > 14) {
-          currentFontSize -= 2;
-          article.style.setProperty('--reading-font-size', currentFontSize + 'px');
-        }
-      });
-      fontReset.addEventListener('click', () => {
-        currentFontSize = 18;
-        article.style.removeProperty('--reading-font-size');
-      });
-      fontInc.addEventListener('click', () => {
-        if (currentFontSize < 28) {
-          currentFontSize += 2;
-          article.style.setProperty('--reading-font-size', currentFontSize + 'px');
-        }
-      });
-    }
-
-    if (progressBar) {
       window.addEventListener('scroll', () => {
         const docEl = document.documentElement;
         const scrollTop = docEl.scrollTop || document.body.scrollTop;
