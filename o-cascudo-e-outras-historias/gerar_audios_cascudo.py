@@ -10,6 +10,7 @@ import sys
 import re
 import json
 import asyncio
+import subprocess
 
 # Impede a criação de pastas __pycache__ e arquivos .pyc
 sys.dont_write_bytecode = True
@@ -71,6 +72,21 @@ def format_speech_text(text: str) -> str:
     t += '\n\n...'
     
     return t
+
+def has_uncommitted_git_changes(file_path: str) -> bool:
+    """Verifica se o arquivo possui alterações não commitadas no repositório git."""
+    if not os.path.exists(file_path):
+        return True
+    try:
+        res = subprocess.run(
+            ["git", "status", "--porcelain", file_path],
+            capture_output=True,
+            text=True,
+            cwd=SITE_ROOT
+        )
+        return bool(res.stdout.strip())
+    except Exception:
+        return False
 
 def parse_story_scenes(file_path: str, story_info: dict):
     """
@@ -157,24 +173,44 @@ async def generate_scene_audio(text: str, output_mp3: str, voice: str = VOICE, r
     await communicate.save(output_mp3)
 
 async def process_all_stories():
-    """Processa todas as histórias, gera MP3s cena a cena e salva metadados de cenas."""
+    """
+    Processa todas as histórias:
+    - Carrega de cenas.json se existir (respeitando customizações manuais) ou gera a partir do markdown.
+    - Só gera áudio MP3 se o arquivo não existir / estiver vazio OU se cenas.json tiver alterações não commitadas.
+    - Atualiza os arquivos cenas.json locais e o consolidado em _data/cascudo_cenas.json.
+    """
     os.makedirs(AUDIO_BASE_DIR, exist_ok=True)
     all_stories_scenes = {}
+    total_generated = 0
+    total_skipped = 0
 
     for story_info in STORY_FILES:
         story_id = story_info["id"]
         file_path = os.path.join(STORIES_DIR, story_info["file"])
-        
-        if not os.path.exists(file_path):
+        story_audio_dir = os.path.join(AUDIO_BASE_DIR, story_id)
+        os.makedirs(story_audio_dir, exist_ok=True)
+        story_scenes_file = os.path.join(story_audio_dir, "cenas.json")
+
+        # 1. Carrega cenas existentes ou analisa markdown
+        if os.path.exists(story_scenes_file):
+            try:
+                with open(story_scenes_file, 'r', encoding='utf-8') as sf:
+                    scenes = json.load(sf)
+            except Exception:
+                scenes = []
+            if not scenes and os.path.exists(file_path):
+                scenes = parse_story_scenes(file_path, story_info)
+        elif os.path.exists(file_path):
+            scenes = parse_story_scenes(file_path, story_info)
+        else:
             print(f"⚠️ Arquivo não encontrado: {file_path}")
             continue
 
-        print(f"\n📖 Processando conto: {story_info['title']} ({story_id})")
-        scenes = parse_story_scenes(file_path, story_info)
-        print(f"   Encontradas {len(scenes)} cenas/ilustrações.")
-
-        story_audio_dir = os.path.join(AUDIO_BASE_DIR, story_id)
-        os.makedirs(story_audio_dir, exist_ok=True)
+        # 2. Verifica se cenas.json possui alterações não commitadas no git
+        is_scenes_uncommitted = has_uncommitted_git_changes(story_scenes_file)
+        
+        status_tag = " [Alterações não commitadas em cenas.json]" if is_scenes_uncommitted else ""
+        print(f"\n📖 Conto: {story_info['title']} ({story_id}) - {len(scenes)} cenas{status_tag}")
 
         for scene in scenes:
             scene_num = scene["scene_number"]
@@ -182,11 +218,20 @@ async def process_all_stories():
             mp3_path = os.path.join(story_audio_dir, mp3_filename)
             scene["audio"] = f"audio/{story_id}/{mp3_filename}"
 
-            print(f"   🔊 Gerando áudio limpo para Cena {scene_num}/{len(scenes)}...")
-            print(f"      Texto: \"{scene['text'][:70]}...\"")
-            await generate_scene_audio(scene["text"], mp3_path)
+            mp3_exists = os.path.exists(mp3_path) and os.path.getsize(mp3_path) > 0
 
-        story_scenes_file = os.path.join(story_audio_dir, "cenas.json")
+            # Gera áudio se o arquivo MP3 não existir/estiver vazio OU se cenas.json foi alterado
+            if not mp3_exists or is_scenes_uncommitted:
+                reason = "novo/ausente" if not mp3_exists else "cenas.json modificado"
+                print(f"   🔊 Gerando áudio ({reason}) para Cena {scene_num}/{len(scenes)}...")
+                print(f"      Texto: \"{scene['text'][:70]}...\"")
+                await generate_scene_audio(scene["text"], mp3_path)
+                total_generated += 1
+            else:
+                print(f"   ⚡ Cena {scene_num}/{len(scenes)}: Áudio já existe (pulado).")
+                total_skipped += 1
+
+        # Salva o arquivo de cenas local atualizado
         with open(story_scenes_file, 'w', encoding='utf-8') as sf:
             json.dump(scenes, sf, ensure_ascii=False, indent=2)
 
@@ -196,7 +241,10 @@ async def process_all_stories():
     with open(consolidated_path, 'w', encoding='utf-8') as f:
         json.dump(all_stories_scenes, f, ensure_ascii=False, indent=2)
 
-    print(f"\n✨ Áudios limpos e pausados gerados com sucesso!\n   - {AUDIO_BASE_DIR}\n   - {consolidated_path}")
+    print(f"\n✨ Processamento concluído!")
+    print(f"   - Áudios gerados/atualizados: {total_generated}")
+    print(f"   - Áudios mantidos (reaproveitados): {total_skipped}")
+    print(f"   - Metadados consolidados salvos em: {consolidated_path}")
 
 if __name__ == "__main__":
     asyncio.run(process_all_stories())

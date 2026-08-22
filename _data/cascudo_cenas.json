@@ -108,8 +108,15 @@
       "scene_number": 3,
       "image": "figuras/o-barquinho-amarelo/mae-ensina-dobrar.png",
       "alt": "A mãe ensina a dobrar o chapéu em barco.",
-      "text": "Após o almoço, Marquinhos pegou o chapéu de papel jogado no canto da sala. A mãe mostrava como fazer as três etapas que faltavam, enquanto ele dobrava com atenção. — Agora eu sei fazer, não vou mais esquecer. À tardinha, seu pai convidou Marquinhos para lhe ensinar a nadar e desceram para a piscina do prédio. O menino levou sua recente criação de papel. Enquanto brincava com o pai na água refrescante, a folha amarela flutuava ao lado na piscina azul.",
+      "text": "Após o almoço, Marquinhos pegou o chapéu de papel jogado no canto da sala. A mãe mostrava como fazer as três etapas que faltavam, enquanto ele dobrava com atenção. — Agora eu sei fazer, não vou mais esquecer.",
       "audio": "audio/o-barquinho-amarelo/cena-3.mp3"
+    },
+    {
+      "scene_number": 4,
+      "image": "figuras/o-barquinho-amarelo/piscina-com-pai.png",
+      "alt": "A mãe ensina a dobrar o chapéu em barco.",
+      "text": "À tardinha, seu pai convidou Marquinhos para lhe ensinar a nadar e desceram para a piscina do prédio. O menino levou sua recente criação de papel. Enquanto brincava com o pai na água refrescante, a folha amarela flutuava ao lado na piscina azul.",
+      "audio": "audio/o-barquinho-amarelo/cena-4.mp3"
     }
   ],
   "um-sanduiche-especial": [
