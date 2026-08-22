@@ -1,3 +1,6 @@
+<script id="ipes-data" type="application/json">
+{{ site.data.ipes | jsonify }}
+</script>
 <script>
 (function() {
   if (window.__ipesInitialized) return;
@@ -10,120 +13,22 @@
                   pathname.endsWith('/ipes-e-tijolos/index.html') || 
                   pathname.endsWith('/ipes-e-tijolos');
 
-  const baseUrl = '{{ "/ipes-e-tijolos/" | relative_url }}'.replace(/\/index\.html$/, '/');
+  const baseUrl = pathname.includes('/ipes-e-tijolos/')
+    ? pathname.substring(0, pathname.indexOf('/ipes-e-tijolos/') + '/ipes-e-tijolos/'.length)
+    : '/ipes-e-tijolos/';
 
-  const essays = [
-    {
-      id: 'espirito-material',
-      number: 1,
-      title: 'Espírito material',
-      time: '2 min',
-      category: 'mente',
-      tags: ['Espírito', 'Mente', 'Biologia'],
-      url: baseUrl + 'espirito-material.html',
-      desc: 'O espírito não metafísico: a fauna consciente que habita o ecossistema mental e ampara os momentos difíceis.'
-    },
-    {
-      id: 'panteao-mental',
-      number: 2,
-      title: 'Panteão mental',
-      time: '1 min',
-      category: 'mente',
-      tags: ['Mente', 'Pensamento', 'Criação'],
-      url: baseUrl + 'panteao-mental.html',
-      desc: 'O templo íntimo onde ideias, referências e mestres imaginários dialogam e refinam o caráter.'
-    },
-    {
-      id: 'extrapolar-o-virtual',
-      number: 3,
-      title: 'Extrapolar o virtual',
-      time: '1 min',
-      category: 'sociedade',
-      tags: ['Tecnologia', 'Presença', 'Realidade'],
-      url: baseUrl + 'extrapolar-o-virtual.html',
-      desc: 'Superar a ilusão das telas e do imediatismo virtual para vivenciar o concreto da existência.'
-    },
-    {
-      id: 'ipes-e-tijolos',
-      number: 4,
-      title: 'Ipês e tijolos',
-      time: '1 min',
-      category: 'sociedade',
-      tags: ['Cidade', 'Natureza', 'Equilíbrio'],
-      url: baseUrl + 'ipes-e-tijolos.html',
-      desc: 'A coexistência poética entre os muros rígidos do concreto urbano e a delicada explosão dos ipês floridos.'
-    },
-    {
-      id: 'odisseia-interior',
-      number: 5,
-      title: 'Odisseia interior',
-      time: '1 min',
-      category: 'mente',
-      tags: ['Autoconhecimento', 'Jornada', 'Consciência'],
-      url: baseUrl + 'odisseia-interior.html',
-      desc: 'A viagem mais profunda que o ser humano pode empreender: o desbravamento dos mares de si mesmo.'
-    },
-    {
-      id: 'servidao-e-liberdade',
-      number: 6,
-      title: 'Servidão e liberdade',
-      time: '1 min',
-      category: 'liberdade',
-      tags: ['Liberdade', 'Vontade', 'Autonomia'],
-      url: baseUrl + 'servidao-e-liberdade.html',
-      desc: 'A linha tênue entre as amarras do automatismo inconsciente e a conquista ativa da verdadeira liberdade.'
-    },
-    {
-      id: 'baleias-e-marujos',
-      number: 7,
-      title: 'Baleias e marujos',
-      time: '1 min',
-      category: 'sociedade',
-      tags: ['Existência', 'Coletivo', 'Mundo'],
-      url: baseUrl + 'baleias-e-marujos.html',
-      desc: 'Reflexão sobre os gigantes misteriosos da existência e o papel solidário de cada marujo no mesmo barco.'
-    },
-    {
-      id: 'o-fogo-de-prometeu',
-      number: 8,
-      title: 'O fogo de Prometeu',
-      time: '2 min',
-      category: 'liberdade',
-      tags: ['Conhecimento', 'Herança', 'Civilização'],
-      url: baseUrl + 'o-fogo-de-prometeu.html',
-      desc: 'A chama da inteligência e da técnica como herança milenar e dever de responsabilidade ética.'
-    },
-    {
-      id: 'pavimentando-o-futuro',
-      number: 9,
-      title: 'Pavimentando o futuro',
-      time: '1 min',
-      category: 'futuro',
-      tags: ['Futuro Ancestral', 'Ação', 'Legado'],
-      url: baseUrl + 'pavimentando-o-futuro.html',
-      desc: 'O assentamento paciente de cada tijolo moral que pavimentará o caminho para as próximas gerações.'
-    },
-    {
-      id: 'eudaimonia-social',
-      number: 10,
-      title: 'Eudaimonia Social',
-      time: '2 min',
-      category: 'sociedade',
-      tags: ['Eudaimonia', 'Sociedade', 'Coexistência'],
-      url: baseUrl + 'eudaimonia-social.html',
-      desc: 'O florescimento humano que se expande além do indivíduo, alcançando a harmonia da comunidade.'
-    },
-    {
-      id: 'honrando-a-heranca-ancestral',
-      number: 11,
-      title: 'Honrando a herança ancestral',
-      time: '1 min',
-      category: 'futuro',
-      tags: ['Herança', 'Ancestralidade', 'Gratidão'],
-      url: baseUrl + 'honrando-a-heranca-ancestral.html',
-      desc: 'O reconhecimento lúcido do esforço dos antepassados como solo fértil para as nossas próprias escolhas.'
-    }
-  ];
+  const dataEl = document.getElementById('ipes-data');
+  let rawEssays = [];
+  try {
+    rawEssays = dataEl ? JSON.parse(dataEl.textContent || '[]') : [];
+  } catch (e) {
+    rawEssays = [];
+  }
+
+  const essays = (rawEssays || []).map(e => ({
+    ...e,
+    url: baseUrl + (e.filename || (e.id + '.html'))
+  }));
 
   if (isIndex) {
     renderIndexHub();
@@ -258,25 +163,34 @@
     }
 
     if (!currentEssay) {
-      currentEssay = essays[0];
+      currentEssay = essays[0] || {
+        id: 'ensaio',
+        number: 1,
+        title: (container.querySelector('h1, h2') || {}).innerText || 'Ipês e Tijolos',
+        time: '2 min',
+        tags: ['Reflexões'],
+        url: baseUrl
+      };
       currentIndex = 0;
     }
 
     const prevEssay = currentIndex > 0 ? essays[currentIndex - 1] : null;
-    const nextEssay = currentIndex < essays.length - 1 ? essays[currentIndex + 1] : null;
+    const nextEssay = (currentIndex >= 0 && currentIndex < essays.length - 1) ? essays[currentIndex + 1] : null;
 
     const rawNodes = Array.from(container.childNodes);
     const bodyElements = [];
 
     rawNodes.forEach(node => {
-      if (node.nodeType !== Node.ELEMENT_NODE) return;
+      if (node.nodeType !== 1) return;
       const tagName = node.tagName.toLowerCase();
       if (tagName === 'h3' && (node.querySelector('a[href*="./"]') || node.innerText.toLowerCase().includes('ipês e tijolos'))) return;
-      if (tagName === 'h2' && node.innerText.trim().toLowerCase() === currentEssay.title.toLowerCase()) return;
+      if (tagName === 'h2' && node.innerText.trim().toLowerCase() === (currentEssay.title || '').toLowerCase()) return;
       if (tagName === 'hr') return;
       if (tagName === 'div' && (node.innerText.includes('<<') || node.innerText.includes('>>') || node.style.clear === 'both')) return;
       bodyElements.push(node.cloneNode(true));
     });
+
+    const ipesTags = currentEssay.tags || [];
 
     container.innerHTML = `
       <div class="ipes-reading-bar" id="ipes-reading-bar">
@@ -301,12 +215,12 @@
       <article class="ipes-article" id="ipes-article">
         <header class="ipes-article-header">
           <div class="ipes-meta-top">
-            <span class="ipes-badge-pill">#${currentEssay.number} de ${essays.length}</span>
-            <span class="ipes-time-pill">⏱️ ${currentEssay.time} de leitura</span>
+            <span class="ipes-badge-pill">#${currentEssay.number || 1} de ${essays.length}</span>
+            <span class="ipes-time-pill">⏱️ ${currentEssay.time || '2 min'} de leitura</span>
           </div>
-          <h1 class="ipes-article-title">${currentEssay.title}</h1>
+          <h1 class="ipes-article-title">${currentEssay.title || 'Ensaio'}</h1>
           <div class="ipes-article-tags">
-            ${currentEssay.tags.map(t => `<span class="ipes-tag">${t}</span>`).join('')}
+            ${ipesTags.map(t => `<span class="ipes-tag">${t}</span>`).join('')}
           </div>
         </header>
 

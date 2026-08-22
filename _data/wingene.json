@@ -1,0 +1,68 @@
+[
+  {
+    "id": "wingene-felicidade-agora-futuro-ancestral",
+    "number": 1,
+    "title": "Wingene: Felicidade agora, futuro ancestral",
+    "subtitle": "Felicidade agora, futuro ancestral",
+    "time": "12 min",
+    "category": "fundamentos",
+    "tags": ["Felicidade", "Eudaimonia", "Evolução", "Herança", "método VIDA"],
+    "filename": "wingene-felicidade-agora-futuro-ancestral.html",
+    "desc": "Apresenta a visão de mundo da Wingene — fusão entre vitória (win) e herança (gene) — unindo bases naturalistas, eudaimonia aristotélica e aperfeiçoamento moral contínuo."
+  },
+  {
+    "id": "etimologias-da-wingene-o-florescimento-do-espirito",
+    "number": 2,
+    "title": "Etimologias da Wingene: o florescimento do Espírito",
+    "subtitle": "o florescimento do Espírito",
+    "time": "3 min",
+    "category": "etimologia",
+    "tags": ["Etimologia", "Espírito", "Conhecimento", "Linguagem"],
+    "filename": "etimologias-da-wingene-o-florescimento-do-espirito.html",
+    "desc": "Investigação profunda das raízes históricas das palavras vitória, esforço (winnan), alegria (wunjo) e herança, revelando o sentido vivo da filosofia Wingene."
+  },
+  {
+    "id": "o-metodo-vida-a-wingene-em-pratica",
+    "number": 3,
+    "title": "O método VIDA: a Wingene em prática",
+    "subtitle": "a Wingene em prática",
+    "time": "14 min",
+    "category": "metodo-vida",
+    "tags": ["Valores", "Imperfeições", "Decisões", "Atenção", "método VIDA"],
+    "filename": "o-metodo-vida-a-wingene-em-pratica.html",
+    "desc": "O guia completo do Método VIDA: quatro pilares práticos (Valores, Imperfeições, Decisões, Atenção) para calibrar a bússola ética e construir a eudaimonia diária."
+  },
+  {
+    "id": "metaconsciencia-pensar-o-sentir-sentir-o-pensar",
+    "number": 4,
+    "title": "Metaconsciência: pensar o sentir, sentir o pensar",
+    "subtitle": "pensar o sentir, sentir o pensar",
+    "time": "4 min",
+    "category": "consciencia",
+    "tags": ["Mente", "Metaconsciência", "Sentir", "Pensar", "Atenção"],
+    "filename": "metaconsciencia-pensar-o-sentir-sentir-o-pensar.html",
+    "desc": "Reflexão sobre a capacidade humana de observar seus próprios pensamentos e sentimentos, refinando a percepção da mente e a lucidez existencial."
+  },
+  {
+    "id": "tecendo-a-vida-criando-no-intimo-uma-obra-pessoal",
+    "number": 5,
+    "title": "Tecendo a vida: criando no íntimo uma obra pessoal",
+    "subtitle": "criando no íntimo uma obra pessoal",
+    "time": "7 min",
+    "category": "aprimoramento",
+    "tags": ["Evolução", "Obra Pessoal", "Criação", "Virtudes"],
+    "filename": "tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html",
+    "desc": "Como transformar cada vivência cotidiana em fio para a tecelagem do próprio ser, construindo internamente uma obra de valor ético e afetivo."
+  },
+  {
+    "id": "the-vida-method",
+    "number": 6,
+    "title": "The VIDA method (English Edition)",
+    "subtitle": "Values, Imperfections, Decisions, and Attention",
+    "time": "14 min",
+    "category": "metodo-vida",
+    "tags": ["VIDA Method", "Values", "Ethics", "Eudaimonia", "Philosophy"],
+    "filename": "the-vida-method.html",
+    "desc": "English essay detailing the four interdependent pillars of the VIDA method for ethical refinement, conscious action, and sustainable eudaimonia."
+  }
+]

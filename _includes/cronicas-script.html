@@ -1,3 +1,6 @@
+<script id="cronicas-data" type="application/json">
+{{ site.data.cronicas | jsonify }}
+</script>
 <script>
 (function() {
   if (window.__cronicasInitialized) return;
@@ -7,83 +10,30 @@
 
   const pathname = window.location.pathname;
 
-  const baseUrl = '{{ "/cronicas/" | relative_url }}'.replace(/\/index\.html$/, '/');
+  const baseUrl = pathname.includes('/cronicas/')
+    ? pathname.substring(0, pathname.indexOf('/cronicas/') + '/cronicas/'.length)
+    : (pathname.includes('/cronicas-1/') ? pathname.substring(0, pathname.indexOf('/cronicas-1/')) + '/'
+    : (pathname.includes('/cronicas-2/') ? pathname.substring(0, pathname.indexOf('/cronicas-2/')) + '/'
+    : (pathname.includes('/cronicas-3/') ? pathname.substring(0, pathname.indexOf('/cronicas-3/')) + '/'
+    : (pathname.includes('/breves-cronicas/') ? pathname.substring(0, pathname.indexOf('/breves-cronicas/')) + '/'
+    : '/cronicas/'))));
 
-  const volumes = [
-    {
-      id: 'cronicas-1',
-      title: 'Crônicas 1',
-      subtitle: 'A arte da atenção plena nos pequenos instantes',
-      badge: '📜 Volume 1',
-      url: baseUrl + 'cronicas-1/',
-      desc: '11 crônicas sobre desacelerar, saborear o café da manhã, organizar as gavetas mentais e encontrar a serena euforia no cotidiano.',
-      count: 11,
-      timeTotal: '20 min',
-      stories: [
-        { id: 'serena-euforia', title: 'Serena euforia', time: '1 min', url: baseUrl + 'cronicas-1/serena-euforia.html', desc: 'O estado de plenitude silenciosa que floresce na mente desperta.' },
-        { id: 'alvorecer', title: 'Alvorecer', time: '3 min', url: baseUrl + 'cronicas-1/alvorecer.html', desc: 'O despertar das primeiras luzes e a renovação diária dos pensamentos.' },
-        { id: 'mente-presente', title: 'Mente presente', time: '1 min', url: baseUrl + 'cronicas-1/mente-presente.html', desc: 'A ancoragem no momento presente como refúgio e clareza.' },
-        { id: 'manha-de-domingo', title: 'Manhã de domingo', time: '2 min', url: baseUrl + 'cronicas-1/manha-de-domingo.html', desc: 'A serenidade dos domingos e o ritmo manso das horas.' },
-        { id: 'relogios-e-cafes', title: 'Relógios e cafés', time: '3 min', url: baseUrl + 'cronicas-1/relogios-e-cafes.html', desc: 'O diálogo entre o ritmo dos ponteiros e o aroma do café fresquinho.' },
-        { id: 'as-gavetas-mentais', title: 'As gavetas mentais', time: '2 min', url: baseUrl + 'cronicas-1/as-gavetas-mentais.html', desc: 'Arrumando os compartimentos íntimos da memória e dos sentimentos.' },
-        { id: 'cinza-vazio', title: 'Cinza vazio', time: '1 min', url: baseUrl + 'cronicas-1/cinza-vazio.html', desc: 'A superação dos dias nublados e a redescoberta da luz interior.' },
-        { id: 'aconchego-sereno', title: 'Aconchego sereno', time: '2 min', url: baseUrl + 'cronicas-1/aconchego-sereno.html', desc: 'O calor reconfortante do lar e o valor das coisas simples.' },
-        { id: 'quebrando-a-monotonia', title: 'Quebrando a monotonia', time: '2 min', url: baseUrl + 'cronicas-1/quebrando-a-monotonia.html', desc: 'Aprender a enxergar novidade onde o hábito só via rotina.' },
-        { id: 'pintura-modesta', title: 'Pintura modesta', time: '1 min', url: baseUrl + 'cronicas-1/pintura-modesta.html', desc: 'A contemplação das pinceladas despretensiosas da vida real.' },
-        { id: 'atento-descanso', title: 'Atento descanso', time: '1 min', url: baseUrl + 'cronicas-1/atento-descanso.html', desc: 'O repouso consciente como fonte essencial de renovação do espírito.' }
-      ]
-    },
-    {
-      id: 'cronicas-2',
-      title: 'Crônicas 2',
-      subtitle: 'A poesia do cotidiano e os laços que nos unem',
-      badge: '📜 Volume 2',
-      url: baseUrl + 'cronicas-2/',
-      desc: '8 crônicas sobre partilha, amor maduro, acolhimento das imprecisões humanas e atenção aos desvios do piloto automático.',
-      count: 8,
-      timeTotal: '15 min',
-      stories: [
-        { id: 'alegria-em-graos-selecionados', title: 'Alegria em grãos selecionados', time: '2 min', url: baseUrl + 'cronicas-2/alegria-em-graos-selecionados.html', desc: 'A escolha atenta das vivências que nutrem a alma.' },
-        { id: 'singelas-letras-da-imprecisao', title: 'Singelas letras da imprecisão', time: '1 min', url: baseUrl + 'cronicas-2/singelas-letras-da-imprecisao.html', desc: 'A beleza imperfeita e sincera dos primeiros rascunhos da vida.' },
-        { id: 'do-barulho-ao-canto', title: 'Do barulho ao canto', time: '2 min', url: baseUrl + 'cronicas-2/do-barulho-ao-canto.html', desc: 'Transformando o barulho das pressões em música harmoniosa.' },
-        { id: 'realidade-na-mesa-de-todos', title: 'Realidade na mesa de todos', time: '3 min', url: baseUrl + 'cronicas-2/realidade-na-mesa-de-todos.html', desc: 'A riqueza da conversa franca e da partilha ao redor da mesa.' },
-        { id: 'fe-e-atencao', title: 'Fé e atenção', time: '2 min', url: baseUrl + 'cronicas-2/fe-e-atencao.html', desc: 'A confiança lúcida no futuro aliada ao cuidado vigilante no presente.' },
-        { id: 'amor-consciente', title: 'Amor consciente', time: '2 min', url: baseUrl + 'cronicas-2/amor-consciente.html', desc: 'O afeto que liberta, apoia o florescimento e constrói laços sólidos.' },
-        { id: 'tapete-de-algodao', title: 'Tapete de algodão', time: '1 min', url: baseUrl + 'cronicas-2/tapete-de-algodao.html', desc: 'A suavidade das nuvens e a calma de pisar suavemente no mundo.' },
-        { id: 'atencao-aos-desvios', title: 'Atenção aos desvios', time: '1 min', url: baseUrl + 'cronicas-2/atencao-aos-desvios.html', desc: 'Reconhecer as distrações sem aflição para reajustar o curso.' }
-      ]
-    },
-    {
-      id: 'cronicas-3',
-      title: 'Crônicas 3',
-      subtitle: 'Florescimento do espírito',
-      badge: '📜 Volume 3',
-      url: baseUrl + 'cronicas-3/',
-      desc: '5 crônicas sobre a herança moral, o bioma mental, a memória afetiva e a tessitura de momentos que dão sentido à existência.',
-      count: 5,
-      timeTotal: '6 min',
-      stories: [
-        { id: 'felicidade-singelo-trinado', title: 'Felicidade — singelo trinado', time: '1 min', url: baseUrl + 'cronicas-3/felicidade-singelo-trinado.html', desc: 'A alegria pura despertada pelo canto livre de um pássaro.' },
-        { id: 'bioma-mental', title: 'Bioma mental', time: '1 min', url: baseUrl + 'cronicas-3/bioma-mental.html', desc: 'A rica ecologia de ideias e sentimentos que habitam nossa mente.' },
-        { id: 'vestido-azul', title: 'Vestido azul', time: '1 min', url: baseUrl + 'cronicas-3/vestido-azul.html', desc: 'A força das lembranças que atravessam gerações com ternura.' },
-        { id: 'a-heranca-real', title: 'A herança real', time: '2 min', url: baseUrl + 'cronicas-3/a-heranca-real.html', desc: 'O verdadeiro patrimônio: os valores e o exemplo transmitidos.' },
-        { id: 'momentos-que-tecem-a-vida', title: 'Momentos que tecem a vida', time: '1 min', url: baseUrl + 'cronicas-3/momentos-que-tecem-a-vida.html', desc: 'A trama sutil dos pequenos instantes que formam a nossa história.' }
-      ]
-    },
-    {
-      id: 'breves-cronicas',
-      title: 'Breves Crônicas',
-      subtitle: 'Instantâneos e registros velozes',
-      badge: '🌿 Extra',
-      url: baseUrl + 'breves-cronicas/',
-      desc: 'Instantâneos líricos e observações breves da natureza urbana.',
-      count: 1,
-      timeTotal: '1 min',
-      stories: [
-        { id: 'o-cortejo-do-sabia', title: 'O cortejo do sabiá', time: '1 min', url: baseUrl + 'breves-cronicas/o-cortejo-do-sabia.html', desc: 'O canto de cortejo matinal do sabiá que celebra a vida.' }
-      ]
-    }
-  ];
+  const dataEl = document.getElementById('cronicas-data');
+  let rawVolumes = [];
+  try {
+    rawVolumes = dataEl ? JSON.parse(dataEl.textContent || '[]') : [];
+  } catch (e) {
+    rawVolumes = [];
+  }
+
+  const volumes = (rawVolumes || []).map(v => ({
+    ...v,
+    url: baseUrl + (v.folder || (v.id + '/')),
+    stories: (v.stories || []).map(s => ({
+      ...s,
+      url: baseUrl + (s.filename || (s.id + '.html'))
+    }))
+  }));
 
   // Identificação da rota
   const isMasterIndex = pathname.endsWith('/cronicas/') || pathname.endsWith('/cronicas/index.html') || pathname.endsWith('/cronicas');
@@ -279,22 +229,28 @@
     }
 
     if (!currentStory) {
-      currentVol = volumes[0];
-      currentStory = currentVol.stories[0];
+      currentVol = volumes[0] || { id: 'cronicas-1', title: 'Crônicas', url: baseUrl, stories: [] };
+      currentStory = (currentVol.stories && currentVol.stories[0]) || {
+        id: 'cronica',
+        title: (container.querySelector('h1, h2') || {}).innerText || 'Crônica',
+        time: '1 min',
+        url: baseUrl
+      };
       currentStoryIndex = 0;
     }
 
-    const prevStory = currentStoryIndex > 0 ? currentVol.stories[currentStoryIndex - 1] : null;
-    const nextStory = currentStoryIndex < currentVol.stories.length - 1 ? currentVol.stories[currentStoryIndex + 1] : null;
+    const currentStories = (currentVol && currentVol.stories) || [];
+    const prevStory = currentStoryIndex > 0 ? currentStories[currentStoryIndex - 1] : null;
+    const nextStory = (currentStoryIndex >= 0 && currentStoryIndex < currentStories.length - 1) ? currentStories[currentStoryIndex + 1] : null;
 
     const rawNodes = Array.from(container.childNodes);
     const bodyElements = [];
 
     rawNodes.forEach(node => {
-      if (node.nodeType !== Node.ELEMENT_NODE) return;
+      if (node.nodeType !== 1) return;
       const tagName = node.tagName.toLowerCase();
       if (tagName === 'h3' && (node.querySelector('a[href*="./"]') || node.innerText.toLowerCase().includes('crônicas'))) return;
-      if (tagName === 'h2' && node.innerText.trim().toLowerCase() === currentStory.title.toLowerCase()) return;
+      if (tagName === 'h2' && node.innerText.trim().toLowerCase() === (currentStory.title || '').toLowerCase()) return;
       if (tagName === 'hr') return;
       if (tagName === 'div' && (node.innerText.includes('<<') || node.innerText.includes('>>') || node.style.clear === 'both')) return;
       bodyElements.push(node.cloneNode(true));
@@ -303,8 +259,8 @@
     container.innerHTML = `
       <div class="cronicas-reading-bar" id="cronicas-reading-bar">
         <div class="cronicas-reading-bar-left">
-          <a href="${currentVol.url}" class="cronicas-nav-back-btn" title="Voltar ao Volume">
-            <span>←</span> <span class="cronicas-nav-back-text">${currentVol.title}</span>
+          <a href="${currentVol.url || baseUrl}" class="cronicas-nav-back-btn" title="Voltar ao Volume">
+            <span>←</span> <span class="cronicas-nav-back-text">${currentVol.title || 'Volume'}</span>
           </a>
         </div>
         <div class="cronicas-reading-controls">
@@ -323,10 +279,10 @@
       <article class="cronicas-article" id="cronicas-article">
         <header class="cronicas-article-header">
           <div class="cronicas-meta-top">
-            <span class="cronicas-badge-pill">${currentVol.title}</span>
-            <span class="cronicas-time-pill">⏱️ ${currentStory.time} de leitura</span>
+            <span class="cronicas-badge-pill">${currentVol.title || 'Crônicas'}</span>
+            <span class="cronicas-time-pill">⏱️ ${currentStory.time || '1 min'} de leitura</span>
           </div>
-          <h1 class="cronicas-article-title">${currentStory.title}</h1>
+          <h1 class="cronicas-article-title">${currentStory.title || 'Crônica'}</h1>
         </header>
 
         <div class="cronicas-article-body" id="cronicas-body"></div>

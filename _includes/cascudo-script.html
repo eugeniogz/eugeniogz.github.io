@@ -1,3 +1,6 @@
+<script id="cascudo-data" type="application/json">
+{{ site.data.cascudo | jsonify }}
+</script>
 <script>
 (function() {
   // Evita inicialização dupla se já renderizado
@@ -13,138 +16,24 @@
                   pathname.endsWith('/o-cascudo-e-outras-historias/index.html') || 
                   pathname.endsWith('/o-cascudo-e-outras-historias');
 
-  const baseUrl = '{{ "/o-cascudo-e-outras-historias/" | relative_url }}'.replace(/\/index\.html$/, '/');
+  const baseUrl = pathname.includes('/o-cascudo-e-outras-historias/') 
+    ? pathname.substring(0, pathname.indexOf('/o-cascudo-e-outras-historias/') + '/o-cascudo-e-outras-historias/'.length)
+    : '/o-cascudo-e-outras-historias/';
 
   // Metadados completos dos 7 contos da coleção
-  const stories = [
-    {
-      id: 'rio-japao',
-      number: 1,
-      title: 'Rio Japão',
-      time: '2 min',
-      tags: ['Natureza', 'Família', 'método VIDA'],
-      category: 'natureza',
-      cover: baseUrl + 'figuras/rio-japao/vovo-e-os-meninos.png',
-      url: baseUrl + 'rio-japao.html',
-      desc: 'Marcos e seus irmãos viajam para a fazenda dos avós, constroem represas de pedrinhas no rio de águas cristalinas e aprendem sobre a preservação da natureza.',
-      reflection: {
-        title: 'Para Conversar em Família',
-        questions: [
-          'O que você mais gosta de fazer quando está em contato com a natureza ou com seus avós?',
-          'Por que a resposta do Marquinhos sobre o petróleo no rio foi tão importante para o vovô?'
-        ]
-      }
-    },
-    {
-      id: 'o-cascudo',
-      number: 2,
-      title: 'O Cascudo',
-      time: '2 min',
-      tags: ['Natureza', 'Família', 'método VIDA'],
-      category: 'natureza',
-      cover: baseUrl + 'figuras/o-cascudo/lago-no-rio.png',
-      url: baseUrl + 'o-cascudo.html',
-      desc: 'Fabiana e Rafaela constroem um lindo aquário de vidro na fazenda e descobrem o papel surpreendente e essencial do cascudo na limpeza do ecossistema.',
-      reflection: {
-        title: 'Para Conversar em Família',
-        questions: [
-          'Por que cada animalzinho, até o que limpa o lodo, tem uma função importante na natureza?',
-          'O que você achou da decisão das irmãs de devolver os peixinhos ao rio antes de ir embora?'
-        ]
-      }
-    },
-    {
-      id: 'o-relogio-de-bolso',
-      number: 3,
-      title: 'O Relógio de Bolso',
-      time: '1 min',
-      tags: ['Tempo', 'Vida', 'Herança', 'Wingene', 'método VIDA'],
-      category: 'valores',
-      cover: baseUrl + 'figuras/marcando-o-proprio-tempo/mostrando-na-caixa.png',
-      url: baseUrl + 'o-relogio-de-bolso.html',
-      desc: 'Vovô Aurélio mostra a Marcos um precioso relógio de família e revela que o que realmente dá corda e faz a vida funcionar é a nossa atenção.',
-      reflection: {
-        title: 'Para Conversar em Família',
-        questions: [
-          'O que significa "dar atenção" para as pessoas que a gente ama e para as coisas que fazemos?',
-          'Qual é a herança mais importante?',
-          'Qual é a lembrança de família ou história que você mais guarda no coração?'
-        ]
-      }
-    },
-    {
-      id: 'o-barquinho-amarelo',
-      number: 4,
-      title: 'O Barquinho Amarelo',
-      time: '2 min',
-      tags: ['Aprender', 'Ensinar', 'método VIDA'],
-      category: 'aprendizados',
-      cover: baseUrl + 'figuras/o-barquinho-amarelo/iniciando-dobradura.png',
-      url: baseUrl + 'o-barquinho-amarelo.html',
-      desc: 'Marquinhos tenta dobrar um barquinho de papel sozinho, lida com a frustração e descobre a alegria e a paciência de aprender com a mãe.',
-      reflection: {
-        title: 'Para Conversar em Família',
-        questions: [
-          'Você já tentou fazer algo que parecia difícil e deu vontade de desistir? O que aconteceu?',
-          'Como pedir ajuda com calma pode transformar um momento difícil em uma gostosa brincadeira?'
-        ]
-      }
-    },
-    {
-      id: 'um-sanduiche-especial',
-      number: 5,
-      title: 'Um Sanduíche Especial',
-      time: '2 min',
-      tags: ['Família', 'Colaboração', 'método VIDA'],
-      category: 'familia',
-      cover: baseUrl + 'figuras/um-sanduiche-especial/preparo-do-sanduiche.png',
-      url: baseUrl + 'um-sanduiche-especial.html',
-      desc: 'Nas férias na praia com a madrinha e o primo, Marquinhos prepara seu próprio lanche e compreende o esforço compartilhado que faz os dias serem especiais.',
-      reflection: {
-        title: 'Para Conversar em Família',
-        questions: [
-          'Qual tarefa da casa ou do lanche você já consegue fazer ou gostaria de aprender a fazer sozinho(a)?',
-          'Por que ajudar nas tarefas do dia a dia deixa tudo mais leve e divertido para todo mundo?'
-        ]
-      }
-    },
-    {
-      id: 'aventura-de-bicicleta',
-      number: 6,
-      title: 'Aventura de Bicicleta',
-      time: '3 min',
-      tags: ['Família', 'Aprender', 'Ensinar', 'Escutar', 'método VIDA'],
-      category: 'familia',
-      cover: baseUrl + 'figuras/as-bicicletas-no-parque/inicio-da-aventura.png',
-      url: baseUrl + 'aventura-de-bicicleta.html',
-      desc: 'As irmãs Clara e Alice encaram uma grande trilha de bicicleta pelo parque, aprendendo a dosar o ritmo, respeitar seus limites e apoiar uma à outra.',
-      reflection: {
-        title: 'Para Conversar em Família',
-        questions: [
-          'Por que é importante dosar as nossas energias e não correr demais no início de um desafio?',
-          'Como a Clara e a Alice se ajudaram durante o passeio de bicicleta?'
-        ]
-      }
-    },
-    {
-      id: 'o-clube-dos-pinguins',
-      number: 7,
-      title: 'O Clube dos Pinguins',
-      time: '2 min',
-      tags: ['Escravidão Digital', 'Amor', 'método VIDA', 'Tempo'],
-      category: 'tecnologia',
-      cover: baseUrl + 'figuras/o-clube-dos-pinguins/jogando-xadrez.png',
-      url: baseUrl + 'o-clube-dos-pinguins.html',
-      desc: 'Após um imprevisto com um jogo no celular, Marquinhos e seus pais redescobrem a alegria insubstituível do xadrez, dos jogos de tabuleiro e do tempo compartilhado.',
-      reflection: {
-        title: 'Para Conversar em Família',
-        questions: [
-          'Quais são as brincadeiras fora das telas que você mais gosta de fazer com amigos ou com a família?',
-          'Como podemos equilibrar o tempo no celular com outras atividades divertidas?'
-        ]
-      }
-    }
-  ];
+  const dataEl = document.getElementById('cascudo-data');
+  let rawStories = [];
+  try {
+    rawStories = dataEl ? JSON.parse(dataEl.textContent || '[]') : [];
+  } catch (e) {
+    rawStories = [];
+  }
+
+  const stories = (rawStories || []).map(s => ({
+    ...s,
+    cover: s.cover ? (s.cover.startsWith('http') ? s.cover : baseUrl + s.cover) : '',
+    url: baseUrl + (s.filename || (s.id + '.html'))
+  }));
 
   // =========================================================================
   // RENDERIZAÇÃO DA PÁGINA ÍNDICE / HUB
@@ -320,7 +209,7 @@
     const storyElements = [];
 
     rawNodes.forEach(node => {
-      if (node.nodeType !== Node.ELEMENT_NODE) return;
+      if (node.nodeType !== 1) return;
       const tagName = node.tagName.toLowerCase();
 
       // Ignora headers redundantes, links do markdown original ou divs de navegação legadas
@@ -458,17 +347,24 @@
     const caseLabel = document.getElementById('cascudo-case-label');
     const mainContent = document.getElementById('main-content') || document.body;
 
+    function getStorage(key) {
+      try { return window.localStorage ? window.localStorage.getItem(key) : null; } catch(e) { return null; }
+    }
+    function setStorage(key, val) {
+      try { if (window.localStorage) window.localStorage.setItem(key, val); } catch(e) {}
+    }
+
     function applyCasePreference(isUpper) {
       if (isUpper) {
         mainContent.classList.add('text-uppercase-active');
         if (caseLabel) caseLabel.innerText = 'Letra Normal';
         if (caseBtn) caseBtn.classList.add('active');
-        localStorage.setItem('text-case-preference', 'uppercase');
+        setStorage('text-case-preference', 'uppercase');
       } else {
         mainContent.classList.remove('text-uppercase-active');
         if (caseLabel) caseLabel.innerText = 'CAIXA ALTA';
         if (caseBtn) caseBtn.classList.remove('active');
-        localStorage.setItem('text-case-preference', 'normal');
+        setStorage('text-case-preference', 'normal');
       }
     }
 
@@ -479,7 +375,7 @@
       });
     }
 
-    const savedCase = localStorage.getItem('text-case-preference');
+    const savedCase = getStorage('text-case-preference');
     applyCasePreference(savedCase === 'uppercase');
 
     // -----------------------------------------------------------------------
@@ -496,14 +392,14 @@
       fontSizes.forEach(cls => storyBody.classList.remove(cls));
       currentFontIndex = Math.max(0, Math.min(fontSizes.length - 1, index));
       storyBody.classList.add(fontSizes[currentFontIndex]);
-      localStorage.setItem('cascudo-font-size-idx', currentFontIndex);
+      setStorage('cascudo-font-size-idx', currentFontIndex);
     }
 
     if (fontDecBtn) fontDecBtn.addEventListener('click', () => setFontSize(currentFontIndex - 1));
     if (fontResetBtn) fontResetBtn.addEventListener('click', () => setFontSize(1));
     if (fontIncBtn) fontIncBtn.addEventListener('click', () => setFontSize(currentFontIndex + 1));
 
-    const savedFontIdx = localStorage.getItem('cascudo-font-size-idx');
+    const savedFontIdx = getStorage('cascudo-font-size-idx');
     if (savedFontIdx !== null) {
       setFontSize(parseInt(savedFontIdx, 10));
     }

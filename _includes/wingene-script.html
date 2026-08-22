@@ -1,3 +1,6 @@
+<script id="wingene-data" type="application/json">
+{{ site.data.wingene | jsonify }}
+</script>
 <script>
 (function() {
   if (window.__wingeneInitialized) return;
@@ -10,76 +13,22 @@
                   pathname.endsWith('/wingene/index.html') || 
                   pathname.endsWith('/wingene');
 
-  const baseUrl = '{{ "/wingene/" | relative_url }}'.replace(/\/index\.html$/, '/');
+  const baseUrl = pathname.includes('/wingene/')
+    ? pathname.substring(0, pathname.indexOf('/wingene/') + '/wingene/'.length)
+    : '/wingene/';
 
-  const essays = [
-    {
-      id: 'wingene-felicidade-agora-futuro-ancestral',
-      number: 1,
-      title: 'Wingene: Felicidade agora, futuro ancestral',
-      subtitle: 'Felicidade agora, futuro ancestral',
-      time: '12 min',
-      category: 'fundamentos',
-      tags: ['Felicidade', 'Eudaimonia', 'Evolução', 'Herança', 'método VIDA'],
-      url: baseUrl + 'wingene-felicidade-agora-futuro-ancestral.html',
-      desc: 'Apresenta a visão de mundo da Wingene — fusão entre vitória (win) e herança (gene) — unindo bases naturalistas, eudaimonia aristotélica e aperfeiçoamento moral contínuo.'
-    },
-    {
-      id: 'etimologias-da-wingene-o-florescimento-do-espirito',
-      number: 2,
-      title: 'Etimologias da Wingene: o florescimento do Espírito',
-      subtitle: 'o florescimento do Espírito',
-      time: '3 min',
-      category: 'etimologia',
-      tags: ['Etimologia', 'Espírito', 'Conhecimento', 'Linguagem'],
-      url: baseUrl + 'etimologias-da-wingene-o-florescimento-do-espirito.html',
-      desc: 'Investigação profunda das raízes históricas das palavras vitória, esforço (winnan), alegria (wunjo) e herança, revelando o sentido vivo da filosofia Wingene.'
-    },
-    {
-      id: 'o-metodo-vida-a-wingene-em-pratica',
-      number: 3,
-      title: 'O método VIDA: a Wingene em prática',
-      subtitle: 'a Wingene em prática',
-      time: '14 min',
-      category: 'metodo-vida',
-      tags: ['Valores', 'Imperfeições', 'Decisões', 'Atenção', 'método VIDA'],
-      url: baseUrl + 'o-metodo-vida-a-wingene-em-pratica.html',
-      desc: 'O guia completo do Método VIDA: quatro pilares práticos (Valores, Imperfeições, Decisões, Atenção) para calibrar a bússola ética e construir a eudaimonia diária.'
-    },
-    {
-      id: 'metaconsciencia-pensar-o-sentir-sentir-o-pensar',
-      number: 4,
-      title: 'Metaconsciência: pensar o sentir, sentir o pensar',
-      subtitle: 'pensar o sentir, sentir o pensar',
-      time: '4 min',
-      category: 'consciencia',
-      tags: ['Mente', 'Metaconsciência', 'Sentir', 'Pensar', 'Atenção'],
-      url: baseUrl + 'metaconsciencia-pensar-o-sentir-sentir-o-pensar.html',
-      desc: 'Reflexão sobre a capacidade humana de observar seus próprios pensamentos e sentimentos, refinando a percepção da mente e a lucidez existencial.'
-    },
-    {
-      id: 'tecendo-a-vida-criando-no-intimo-uma-obra-pessoal',
-      number: 5,
-      title: 'Tecendo a vida: criando no íntimo uma obra pessoal',
-      subtitle: 'criando no íntimo uma obra pessoal',
-      time: '7 min',
-      category: 'aprimoramento',
-      tags: ['Evolução', 'Obra Pessoal', 'Criação', 'Virtudes'],
-      url: baseUrl + 'tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html',
-      desc: 'Como transformar cada vivência cotidiana em fio para a tecelagem do próprio ser, construindo internamente uma obra de valor ético e afetivo.'
-    },
-    {
-      id: 'the-vida-method',
-      number: 6,
-      title: 'The VIDA method (English Edition)',
-      subtitle: 'Values, Imperfections, Decisions, and Attention',
-      time: '14 min',
-      category: 'metodo-vida',
-      tags: ['VIDA Method', 'Values', 'Ethics', 'Eudaimonia', 'Philosophy'],
-      url: baseUrl + 'the-vida-method.html',
-      desc: 'English essay detailing the four interdependent pillars of the VIDA method for ethical refinement, conscious action, and sustainable eudaimonia.'
-    }
-  ];
+  const dataEl = document.getElementById('wingene-data');
+  let rawEssays = [];
+  try {
+    rawEssays = dataEl ? JSON.parse(dataEl.textContent || '[]') : [];
+  } catch (e) {
+    rawEssays = [];
+  }
+
+  const essays = (rawEssays || []).map(e => ({
+    ...e,
+    url: baseUrl + (e.filename || (e.id + '.html'))
+  }));
 
   if (isIndex) {
     renderIndexHub();
@@ -229,26 +178,35 @@
     }
 
     if (!currentEssay) {
-      currentEssay = essays[0];
+      currentEssay = essays[0] || {
+        id: 'ensaio',
+        number: 1,
+        title: (container.querySelector('h1, h2') || {}).innerText || 'Ensaio Wingene',
+        time: '3 min',
+        tags: ['Wingene'],
+        url: baseUrl
+      };
       currentIndex = 0;
     }
 
     const prevEssay = currentIndex > 0 ? essays[currentIndex - 1] : null;
-    const nextEssay = currentIndex < essays.length - 1 ? essays[currentIndex + 1] : null;
+    const nextEssay = (currentIndex >= 0 && currentIndex < essays.length - 1) ? essays[currentIndex + 1] : null;
 
     // Coleta nós do conteúdo
     const rawNodes = Array.from(container.childNodes);
     const bodyElements = [];
 
     rawNodes.forEach(node => {
-      if (node.nodeType !== Node.ELEMENT_NODE) return;
+      if (node.nodeType !== 1) return;
       const tagName = node.tagName.toLowerCase();
       if (tagName === 'h3' && (node.querySelector('a[href*="./"]') || node.innerText.toLowerCase().includes('wingene'))) return;
-      if (tagName === 'h2' && node.innerText.trim().toLowerCase().includes(currentEssay.title.split(':')[0].trim().toLowerCase())) return;
+      if (tagName === 'h2' && node.innerText.trim().toLowerCase().includes((currentEssay.title || '').split(':')[0].trim().toLowerCase())) return;
       if (tagName === 'hr') return;
       if (tagName === 'div' && (node.innerText.includes('<<') || node.innerText.includes('>>') || node.style.clear === 'both')) return;
       bodyElements.push(node.cloneNode(true));
     });
+
+    const tagsList = currentEssay.tags || [];
 
     container.innerHTML = `
       <!-- Barra de Leitura Superior -->
@@ -278,12 +236,12 @@
       <article class="wingene-article" id="wingene-article">
         <header class="wingene-article-header">
           <div class="wingene-meta-top">
-            <span class="wingene-num-badge">Ensaio #${currentEssay.number}</span>
-            <span class="wingene-time-badge">⏱️ ${currentEssay.time} de leitura</span>
+            <span class="wingene-num-badge">Ensaio #${currentEssay.number || 1}</span>
+            <span class="wingene-time-badge">⏱️ ${currentEssay.time || '3 min'} de leitura</span>
           </div>
-          <h1 class="wingene-article-title">${currentEssay.title}</h1>
+          <h1 class="wingene-article-title">${currentEssay.title || 'Ensaio'}</h1>
           <div class="wingene-article-tags">
-            ${currentEssay.tags.map(t => `<span class="wingene-tag">${t}</span>`).join('')}
+            ${tagsList.map(t => `<span class="wingene-tag">${t}</span>`).join('')}
           </div>
         </header>
 

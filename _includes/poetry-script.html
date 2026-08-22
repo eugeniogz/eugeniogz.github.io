@@ -1,3 +1,6 @@
+<script id="poetry-data" type="application/json">
+{{ site.data.poesias | jsonify }}
+</script>
 <script>
 (function() {
   if (window.__poetryInitialized) return;
@@ -14,153 +17,22 @@
 
   const isAforismos = pageFilename === 'aforismos';
 
-  const baseUrl = '{{ "/poesias-e-aforismos/" | relative_url }}'.replace(/\/index\.html$/, '/');
+  const baseUrl = pathname.includes('/poesias-e-aforismos/')
+    ? pathname.substring(0, pathname.indexOf('/poesias-e-aforismos/') + '/poesias-e-aforismos/'.length)
+    : '/poesias-e-aforismos/';
 
-  const poems = [
-    {
-      id: 'aforismos',
-      title: 'Aforismos',
-      type: 'aforismo',
-      time: '1 min',
-      tags: ['Ciência', 'Consciência', 'Felicidade', 'Natureza'],
-      category: 'aforismos',
-      url: baseUrl + 'aforismos.html',
-      preview: 'A ciência ilumina a metafísica com os dourados fios do conhecimento. Pensamento: sentir que a razão refinou...',
-      desc: 'Sentenças breves e lapidadas sobre ciência, consciência, amor, virtudes, eudaimonia e existência.'
-    },
-    {
-      id: 'vida-breve-rotas-eternas',
-      title: 'Vida breve, rotas eternas',
-      type: 'poema',
-      time: '1 min',
-      tags: ['Felicidade', 'Eudaimonia', 'Vida'],
-      category: 'eudaimonia',
-      url: baseUrl + 'vida-breve-rotas-eternas.html',
-      preview: 'Pegadas leves no tempo humano / tempo pequeno no verso oceano / universo efêmero na negra entropia...',
-      desc: 'Poema sobre a brevidade da travessia humana e as rotas diárias que tecem a alegria e o futuro ancestral.'
-    },
-    {
-      id: 'a-cor-que-povoa-o-mundo',
-      title: 'A cor que povoa o mundo',
-      type: 'poema',
-      time: '1 min',
-      tags: ['Arte', 'Sentir', 'Natureza'],
-      category: 'natureza',
-      url: baseUrl + 'a-cor-que-povoa-o-mundo.html',
-      preview: 'A luz que dança no olhar do pintor / tons de verde, céu e flor...',
-      desc: 'Versos sobre a percepção estética, a sinestesia das cores e a beleza que vibra na natureza.'
-    },
-    {
-      id: 'eudaimonia-a-se-destilar',
-      title: 'Eudaimonia a se destilar',
-      type: 'poema',
-      time: '1 min',
-      tags: ['Eudaimonia', 'Virtudes', 'Alegria'],
-      category: 'eudaimonia',
-      url: baseUrl + 'eudaimonia-a-se-destilar.html',
-      preview: 'No alambique das ações cotidianas / a essência serena que nunca se apaga...',
-      desc: 'A alquimia do viver consciente: cultivar a alegria serena através de pequenas atitudes diárias.'
-    },
-    {
-      id: 'tecer-alegria',
-      title: 'Tecer alegria',
-      type: 'poema',
-      time: '1 min',
-      tags: ['Alegria', 'Vida', 'Ação'],
-      category: 'amor',
-      url: baseUrl + 'tecer-alegria.html',
-      preview: 'Fio por fio, gesto a gesto / no tear do tempo manifesto...',
-      desc: 'A construção artesanal da felicidade através da presença, do afeto e do cuidado mútuo.'
-    },
-    {
-      id: 'vida-consciente',
-      title: 'Vida consciente',
-      type: 'poema',
-      time: '1 min',
-      tags: ['Consciência', 'Presença', 'Mente'],
-      category: 'consciencia',
-      url: baseUrl + 'vida-consciente.html',
-      preview: 'Despertar a cada fôlego e passo / quebrar o automatismo do cansaço...',
-      desc: 'Um chamado poético para habitar o presente com lucidez, intenção e propriocepção.'
-    },
-    {
-      id: 'essencia-oculta',
-      title: 'Essência oculta',
-      type: 'poema',
-      time: '1 min',
-      tags: ['Essência', 'Espírito', 'Mundo'],
-      category: 'consciencia',
-      url: baseUrl + 'essencia-oculta.html',
-      preview: 'Por trás do visível véu da matéria / baila a seiva da floresta sincera...',
-      desc: 'O mistério sutil que habita a matéria consciente e anima a existência.'
-    },
-    {
-      id: 'quadro-azul',
-      title: 'Quadro azul',
-      type: 'poema',
-      time: '1 min',
-      tags: ['Música', 'Cor', 'Sentimento'],
-      category: 'musica',
-      url: baseUrl + 'quadro-azul.html',
-      preview: 'Na tela azul do infinito firmamento / notas suaves viajam no vento...',
-      desc: 'Harmonia lírica entre a imensidão azul do cosmos e as ressonâncias da alma.'
-    },
-    {
-      id: 'vidas-infinitas',
-      title: 'Vidas infinitas',
-      type: 'poema',
-      time: '1 min',
-      tags: ['Infinito', 'Tempo', 'Existência'],
-      category: 'eudaimonia',
-      url: baseUrl + 'vidas-infinitas.html',
-      preview: 'Quantas vidas cabem num instante / quando a mente se faz vigilante?...',
-      desc: 'A dilatação do tempo pela intensidade da presença e do sentimento consciente.'
-    },
-    {
-      id: 'musica-soberana',
-      title: 'Música soberana',
-      type: 'poema',
-      time: '1 min',
-      tags: ['Música', 'Harmonia', 'Espírito'],
-      category: 'musica',
-      url: baseUrl + 'musica-soberana.html',
-      preview: 'A sinfonia que rege o pensamento / ritmo sagrado de todo momento...',
-      desc: 'O poder transcendental da melodia como espelho das sinapses e da harmonia interior.'
-    },
-    {
-      id: 'cafe-em-flor',
-      title: 'Café em flor',
-      type: 'poema',
-      time: '1 min',
-      tags: ['Natureza', 'Origem', 'Memória'],
-      category: 'natureza',
-      url: baseUrl + 'cafe-em-flor.html',
-      preview: 'Brancura pura na serra aromática / lembrança viva da terra simpática...',
-      desc: 'Memórias afetivas da terra natal, perfume das floradas e raízes ancestrais.'
-    },
-    {
-      id: 'aquarela-de-uma-valsa',
-      title: 'Aquarela de uma valsa',
-      type: 'poema',
-      time: '1 min',
-      tags: ['Dança', 'Ritmo', 'Afeto'],
-      category: 'musica',
-      url: baseUrl + 'aquarela-de-uma-valsa.html',
-      preview: 'Em giros ternos e passos marcados / traços de afeto no tempo pintados...',
-      desc: 'A dança da vida em compasso ternário, onde o amor se expressa em movimento suave.'
-    },
-    {
-      id: 'divina-consciencia',
-      title: 'Divina consciência',
-      type: 'poema',
-      time: '1 min',
-      tags: ['Consciência', 'Cosmo', 'Vida'],
-      category: 'consciencia',
-      url: baseUrl + 'divina-consciencia.html',
-      preview: 'O universo acordando em cada olhar / a matéria aprendendo a se amar...',
-      desc: 'O ser humano como espelho pelo qual o próprio universo se contempla e sente.'
-    }
-  ];
+  const dataEl = document.getElementById('poetry-data');
+  let rawPoems = [];
+  try {
+    rawPoems = dataEl ? JSON.parse(dataEl.textContent || '[]') : [];
+  } catch (e) {
+    rawPoems = [];
+  }
+
+  const poems = (rawPoems || []).map(p => ({
+    ...p,
+    url: baseUrl + (p.filename || (p.id + '.html'))
+  }));
 
   if (isIndex) {
     renderIndexHub();
@@ -292,7 +164,7 @@
     let currentItems = [];
 
     rawNodes.forEach(node => {
-      if (node.nodeType !== Node.ELEMENT_NODE) return;
+      if (node.nodeType !== 1) return;
       const tagName = node.tagName.toLowerCase();
       if (tagName === 'h3' && (node.querySelector('a[href*="./"]') || node.innerText.toLowerCase().includes('poesias e aforismos'))) return;
       if (tagName === 'h2' && node.innerText.trim().toLowerCase() === 'aforismos') return;
@@ -401,25 +273,33 @@
     }
 
     if (!currentPoem) {
-      currentPoem = poems[1]; // default first poem
-      currentIndex = 1;
+      currentPoem = poems[0] || {
+        id: 'poema',
+        title: (container.querySelector('h1, h2') || {}).innerText || 'Poesia',
+        time: '1 min',
+        tags: ['Poesia'],
+        url: baseUrl
+      };
+      currentIndex = 0;
     }
 
     const prevPoem = currentIndex > 0 ? poems[currentIndex - 1] : null;
-    const nextPoem = currentIndex < poems.length - 1 ? poems[currentIndex + 1] : null;
+    const nextPoem = (currentIndex >= 0 && currentIndex < poems.length - 1) ? poems[currentIndex + 1] : null;
 
     const rawNodes = Array.from(container.childNodes);
     const poemStanzas = [];
 
     rawNodes.forEach(node => {
-      if (node.nodeType !== Node.ELEMENT_NODE) return;
+      if (node.nodeType !== 1) return;
       const tagName = node.tagName.toLowerCase();
       if (tagName === 'h3' && (node.querySelector('a[href*="./"]') || node.innerText.toLowerCase().includes('poesias e aforismos'))) return;
-      if (tagName === 'h2' && node.innerText.trim().toLowerCase().includes(currentPoem.title.toLowerCase())) return;
+      if (tagName === 'h2' && node.innerText.trim().toLowerCase().includes((currentPoem.title || '').toLowerCase())) return;
       if (tagName === 'hr') return;
       if (tagName === 'div' && (node.innerText.includes('<<') || node.innerText.includes('>>') || node.style.clear === 'both')) return;
       poemStanzas.push(node.cloneNode(true));
     });
+
+    const poemTags = currentPoem.tags || [];
 
     container.innerHTML = `
       <div class="poetry-reading-bar" id="poetry-reading-bar">
@@ -445,11 +325,11 @@
         <header class="poetry-article-header">
           <div class="poetry-meta-top">
             <span class="poetry-badge-pill">✒️ Poesia</span>
-            <span class="poetry-time-pill">⏱️ ${currentPoem.time} de leitura</span>
+            <span class="poetry-time-pill">⏱️ ${currentPoem.time || '1 min'} de leitura</span>
           </div>
-          <h1 class="poetry-article-title">${currentPoem.title}</h1>
+          <h1 class="poetry-article-title">${currentPoem.title || 'Poesia'}</h1>
           <div class="poetry-article-tags">
-            ${currentPoem.tags.map(t => `<span class="poetry-tag">${t}</span>`).join('')}
+            ${poemTags.map(t => `<span class="poetry-tag">${t}</span>`).join('')}
           </div>
         </header>
 

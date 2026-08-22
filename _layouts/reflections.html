@@ -6,6 +6,9 @@ layout: default
   {{ content }}
 </div>
 
+<script id="reflexoes-data" type="application/json">
+{{ site.data.reflexoes | jsonify }}
+</script>
 <script>
 (function() {
   const container = document.getElementById('reflexoes-container');
@@ -18,50 +21,25 @@ layout: default
   const isDecisoes = path.includes('decisoes');
   const isAtencao = path.includes('atencao');
 
-  const baseUrl = '{{ "/reflexoes/" | relative_url }}'.replace(/\/index\.html$/, '/');
+  const baseUrl = path.includes('/reflexoes/')
+    ? path.substring(0, path.indexOf('/reflexoes/') + '/reflexoes/'.length)
+    : '/reflexoes/';
 
-  const pillars = {
-    valores: {
-      id: 'valores',
-      name: 'Valores',
-      icon: '🟥',
-      badge: '🟥 Pilar 1 · Método VIDA',
-      desc: 'A bússola moral em constante revisão.',
-      quote: 'Nossa bússola moral não aponta para um norte determinado, ela se ajusta com o conhecimento e a observação...',
-      url: baseUrl + 'valores.html',
-      meta: '1 min'
-    },
-    imperfeicoes: {
-      id: 'imperfeicoes',
-      name: 'Imperfeições',
-      icon: '🟨',
-      badge: '🟨 Pilar 2 · Método VIDA',
-      desc: 'O reconhecimento sem culpa dos desvios.',
-      quote: 'O tropeço do piloto automático não é motivo de culpa, mas um sinal para aprimorar a presença...',
-      url: baseUrl + 'imperfeicoes.html',
-      meta: '1 min'
-    },
-    decisoes: {
-      id: 'decisoes',
-      name: 'Decisões',
-      icon: '🟩',
-      badge: '🟩 Pilar 3 · Método VIDA',
-      desc: 'A escolha consciente de atitudes.',
-      quote: 'A eudaimonia surge de pequenas escolhas que semeiam as condições para esse sentimento nas futuras gerações...',
-      url: baseUrl + 'decisoes.html',
-      meta: '1 min'
-    },
-    atencao: {
-      id: 'atencao',
-      name: 'Atenção',
-      icon: '🟦',
-      badge: '🟦 Pilar 4 · Método VIDA',
-      desc: 'A presença que guia ações conscientes e sustenta a eudaimonia',
-      quote: 'A felicidade da propriocepção. A alegria de ser útil. A beleza de existir...',
-      url: baseUrl + 'atencao.html',
-      meta: '1 min'
-    }
-  };
+  const dataEl = document.getElementById('reflexoes-data');
+  let rawPillars = {};
+  try {
+    rawPillars = dataEl ? JSON.parse(dataEl.textContent || '{}') : {};
+  } catch (e) {
+    rawPillars = {};
+  }
+
+  const pillars = {};
+  for (const k in (rawPillars || {})) {
+    pillars[k] = {
+      ...rawPillars[k],
+      url: baseUrl + (rawPillars[k].filename || (k + '.html'))
+    };
+  }
 
   // Barra de navegação dos 4 pilares
   const navHtml = `
