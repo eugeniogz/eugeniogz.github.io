@@ -391,6 +391,7 @@
     }
 
     const progressBar = document.getElementById('cronicas-progress-bar');
+    if (progressBar) {
       window.addEventListener('scroll', () => {
         const docEl = document.documentElement;
         const scrollTop = docEl.scrollTop || document.body.scrollTop;
