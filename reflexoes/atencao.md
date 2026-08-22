@@ -19,6 +19,8 @@ Na atenção ao ser, a felicidade da propriocepção. Com a atenção aos outros
 
 Não importa que os sentidos e a mente vibrem com inúmeros estímulos e pensamentos. A consciência pode flutuar em serena euforia. -- 02/08/26
 
+Em certos momentos, remover um estímulo liberta a serena euforia. -- 21/08/26
+
 A atenção consciente é limitada, o foco exige inibir o pensar e o sentir concorrentes. -- 17/08/26
 
 A atenção alimenta as ideias enquanto esquece lembranças. -- 17/08/26
