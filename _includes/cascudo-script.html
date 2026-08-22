@@ -529,6 +529,41 @@
     let theaterSpeechUtterance = null;
     let theaterAdvanceTimeout = null;
 
+    // -----------------------------------------------------------------------
+    // SCREEN WAKE LOCK API (Evita que a tela escureça/bloqueie durante a narração)
+    // -----------------------------------------------------------------------
+    let wakeLock = null;
+
+    async function requestWakeLock() {
+      if ('wakeLock' in navigator) {
+        try {
+          if (!wakeLock) {
+            wakeLock = await navigator.wakeLock.request('screen');
+            wakeLock.addEventListener('release', () => {
+              wakeLock = null;
+            });
+          }
+        } catch (err) {
+          wakeLock = null;
+        }
+      }
+    }
+
+    function releaseWakeLock() {
+      if (wakeLock !== null) {
+        wakeLock.release().catch(() => {});
+        wakeLock = null;
+      }
+    }
+
+    document.addEventListener('visibilitychange', async () => {
+      if (document.visibilityState === 'visible') {
+        if (isTheaterPlaying || isSpeaking) {
+          await requestWakeLock();
+        }
+      }
+    });
+
     function updateVolumeUI(vol) {
       if (theaterVolumeSlider) theaterVolumeSlider.value = vol;
       if (!theaterVolumeBtn) return;
@@ -637,6 +672,7 @@
     function playCurrentScene() {
       stopAllAudio();
       isTheaterPlaying = true;
+      requestWakeLock();
       theaterModal.classList.add('playing');
       theaterPlayBtn.innerText = '⏸️';
       theaterPlayBtn.setAttribute('title', 'Pausar');
@@ -700,6 +736,7 @@
       } else {
         // Fim da história
         isTheaterPlaying = false;
+        releaseWakeLock();
         theaterModal.classList.remove('playing');
         theaterPlayBtn.innerText = '▶️';
         theaterPlayBtn.setAttribute('title', 'Reproduzir');
@@ -709,6 +746,7 @@
 
     function pauseTheater() {
       isTheaterPlaying = false;
+      releaseWakeLock();
       theaterModal.classList.remove('playing');
       theaterPlayBtn.innerText = '▶️';
       theaterPlayBtn.setAttribute('title', 'Reproduzir');
@@ -732,6 +770,7 @@
 
     function closeTheater() {
       pauseTheater();
+      releaseWakeLock();
       theaterModal.classList.remove('open');
       theaterModal.setAttribute('aria-hidden', 'true');
     }
@@ -876,6 +915,7 @@
         if (isSpeaking) {
           window.speechSynthesis.cancel();
           isSpeaking = false;
+          releaseWakeLock();
           audioIcon.innerText = '🔊';
           audioLabel.innerText = 'Ouvir';
           audioBtn.classList.remove('speaking');
@@ -893,6 +933,7 @@
 
         utterance.onstart = () => {
           isSpeaking = true;
+          requestWakeLock();
           audioIcon.innerText = '⏹️';
           audioLabel.innerText = 'Pausar';
           audioBtn.classList.add('speaking');
@@ -900,6 +941,7 @@
 
         utterance.onend = utterance.onerror = () => {
           isSpeaking = false;
+          releaseWakeLock();
           audioIcon.innerText = '🔊';
           audioLabel.innerText = 'Ouvir';
           audioBtn.classList.remove('speaking');
@@ -910,6 +952,7 @@
 
       window.addEventListener('beforeunload', () => {
         if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+        releaseWakeLock();
         stopAllAudio();
       });
     } else if (audioBtn) {
