@@ -1,0 +1,30 @@
+[
+  {
+    "scene_number": 1,
+    "image": "figuras/o-cascudo/lago-no-rio.png",
+    "alt": "Fabiana e Rafaela construindo um laguinho no rio acompanhadas do vovô José",
+    "text": "Fabiana e Rafaela adoram passar férias na fazenda do vovô José. Lá vivem muitas aventuras, no curral, no pomar, na oficina, mas as melhores acontecem no rio que corta a fazenda. As duas aprenderam com o avô a pescar os peixinhos do rio com uma peneira. Pegavam diversos peixes, que davam vida a um laguinho que faziam na areia. Porém, sempre tinham que soltá-los antes de ir para a fazenda.",
+    "audio": "audio/o-cascudo/cena-1.mp3"
+  },
+  {
+    "scene_number": 2,
+    "image": "figuras/o-cascudo/decorando-o-aquario.png",
+    "alt": "Fabiana e Rafaela decorando o aquário com a avó observando",
+    "text": "Certa vez, Rafaela disse: — Vamos fazer um aquário? Fabiana achou uma boa ideia, então foram pedir para a avó um vidro. Conseguiram um com um resto de biscoitos. Na hora do lanche, elas comeram os biscoitos, limparam o vidro e encheram com água. No dia seguinte, foram bem cedo para o rio pescar os peixes: lambaris, barrigudinhos, marias-mole… Enfeitaram o aquário com plantas, pedrinhas e areia e colocaram os peixinhos. As marias-mole nadavam no fundo, às vezes, se enterravam na areia se escondendo. Os barrigudinhos nadavam de um lado para o outro e os lambaris exibiam seu corpo reluzente. Tratavam dos peixes todo dia. Porém, com o tempo, o vidro dos peixes começou a ficar com uma camada verde. Elas mostraram ao vovô que disse: — Vocês precisam pescar um cascudo, o aquário está cheio de lodo. — Cascudo? Que peixe é esse? Perguntaram. — É um peixe que come lodo. — E como fazemos para pegá-lo? — Vocês têm que enfiar a peneira bem na beira do rio e puxar com força. Disse o avô.",
+    "audio": "audio/o-cascudo/cena-2.mp3"
+  },
+  {
+    "scene_number": 3,
+    "image": "figuras/o-cascudo/cascudo-na-peneira.png",
+    "alt": "Fabiana e Rafaela pescando o cascudo com a peneira",
+    "text": "No dia seguinte, Fabiana e Rafaela levantaram bem cedo para tentar capturar o cascudo. Pegaram a peneira e foram para o rio. Chegando lá, fizeram como o avô explicou. Na terceira tentativa, apareceu um peixe diferente na peneira. Ele era redondo e tinha um rabo comprido e o corpo duro. Será o cascudo? Pensaram. E levaram o peixe para a casa da fazenda.",
+    "audio": "audio/o-cascudo/cena-3.mp3"
+  },
+  {
+    "scene_number": 4,
+    "image": "figuras/o-cascudo/cascudo-no-aquario.png",
+    "alt": "Fabiana, Rafaela e vovô José observando o cascudo no aquário",
+    "text": "Quando colocaram o peixe no aquário, ele grudou a boca nas paredes do vidro e começou a comer o lodo. Assim, as irmãs concluíram haver pescado um cascudo. Mostraram para o avô, que disse: — Muito bem, vocês conseguiram pescar o cascudo. Aproveitem o aquário, mas antes de voltarem para casa, devolvam os peixinhos ao rio. Rafaela reclamou: — Poxa, deu um trabalhão montar o aquário. — É mesmo — concordou Fabiana. — Mas o vovô tem razão. Assim, um dia antes da viagem de volta, as irmãs levaram os peixinhos para o rio e soltaram com cuidado, observando cada mergulho na água cristalina.",
+    "audio": "audio/o-cascudo/cena-4.mp3"
+  }
+]

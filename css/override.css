@@ -2452,6 +2452,430 @@ h6:before {
 }
 
 /* ==========================================================================
+   MODO ANIMAÇÃO / TEATRO ILUSTRADO (O CASCUDO E OUTRAS HISTÓRIAS)
+   ========================================================================== */
+.cascudo-theater-btn-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+  color: #ffffff !important;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(22, 101, 52, 0.35);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 1rem;
+}
+
+.cascudo-theater-btn-hero:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(22, 101, 52, 0.45);
+}
+
+.cascudo-control-btn.theater-btn {
+  background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+  color: #ffffff !important;
+  border-color: #15803d;
+  font-weight: 700;
+}
+
+.cascudo-control-btn.theater-btn:hover {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+}
+
+/* Overlay em Tela Cheia do Teatro */
+.cascudo-theater-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 15, 29, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 100000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  color: #f8fafc;
+  user-select: none;
+}
+
+.cascudo-theater-modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Barra Superior do Teatro */
+.cascudo-theater-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, transparent 100%);
+  z-index: 10;
+}
+
+.cascudo-theater-title-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cascudo-theater-story-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.cascudo-theater-scene-badge {
+  background: rgba(22, 163, 74, 0.3);
+  color: #86efac;
+  border: 1px solid rgba(22, 163, 74, 0.5);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.cascudo-theater-top-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cascudo-theater-action-btn {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cascudo-theater-action-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+.cascudo-theater-close-btn {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.cascudo-theater-close-btn:hover {
+  background: rgba(239, 68, 68, 0.8);
+  color: #ffffff;
+}
+
+/* Palco Central */
+.cascudo-theater-stage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  max-width: 1050px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.cascudo-theater-visual-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 780px;
+  max-height: 54vh;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  background: #020617;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 1;
+}
+
+.cascudo-theater-img {
+  width: 100%;
+  height: auto;
+  max-height: 54vh;
+  object-fit: contain;
+  border-radius: 18px;
+  transition: opacity 0.4s ease;
+}
+
+/* Animação suave Ken Burns quando em reprodução */
+.cascudo-theater-modal.playing .cascudo-theater-img {
+  animation: cascudoKenBurns 18s ease-in-out infinite alternate;
+}
+
+@keyframes cascudoKenBurns {
+  0% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.05) translate(-1%, -1%); }
+  100% { transform: scale(1.03) translate(1%, 0.5%); }
+}
+
+/* Caixa de Legenda / Texto do Trecho com scroll para não cortar as ilustrações */
+.cascudo-theater-caption {
+  width: 100%;
+  max-width: 780px;
+  margin-top: 10px;
+  max-height: 105px;
+  overflow-y: auto;
+  background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  padding: 10px 18px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.cascudo-theater-caption::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cascudo-theater-caption::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.cascudo-theater-caption::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.28);
+  border-radius: 10px;
+}
+
+.cascudo-theater-caption::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.cascudo-theater-text {
+  font-size: 1.12rem;
+  line-height: 1.6;
+  color: #f8fafc;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: all 0.3s ease;
+}
+
+.text-uppercase-active .cascudo-theater-text {
+  text-transform: uppercase !important;
+}
+
+/* Barra Inferior de Controles */
+.cascudo-theater-footer {
+  padding: 12px 24px 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-width: 850px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Indicadores de Cenas / Timeline */
+.cascudo-theater-timeline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 500px;
+  justify-content: center;
+}
+
+.cascudo-scene-pill {
+  flex: 1;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.cascudo-scene-pill:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.cascudo-scene-pill.active {
+  background: #22c55e;
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
+  height: 8px;
+}
+
+.cascudo-scene-pill.completed {
+  background: #15803d;
+}
+
+/* Botões Principais de Controle */
+.cascudo-theater-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cascudo-theater-ctrl-btn {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cascudo-theater-ctrl-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.08);
+}
+
+.cascudo-theater-ctrl-btn.play-btn {
+  width: 54px;
+  height: 54px;
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  border: none;
+  font-size: 1.35rem;
+  box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+}
+
+.cascudo-theater-ctrl-btn.play-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px rgba(34, 197, 94, 0.6);
+}
+
+/* Controle de Volume da Narração */
+.cascudo-theater-volume-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 4px 10px 4px 6px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.2s ease;
+}
+
+.cascudo-theater-volume-wrap:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.cascudo-volume-slider {
+  width: 75px;
+  height: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.28);
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.cascudo-volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #22c55e;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.8);
+  transition: transform 0.15s ease;
+}
+
+.cascudo-volume-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.cascudo-volume-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border: none;
+  border-radius: 50%;
+  background: #22c55e;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.8);
+}
+
+.cascudo-theater-shortcuts-hint {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+/* Responsividade do Modo Teatro */
+@media (max-width: 768px) {
+  .cascudo-theater-header {
+    padding: 10px 14px;
+  }
+  .cascudo-theater-story-title {
+    font-size: 0.95rem;
+  }
+  .cascudo-theater-visual-wrap {
+    max-height: 40vh;
+  }
+  .cascudo-theater-img {
+    max-height: 40vh;
+  }
+  .cascudo-theater-caption {
+    max-height: 80px;
+    padding: 8px 12px;
+    margin-top: 6px;
+  }
+  .cascudo-theater-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .cascudo-volume-slider {
+    width: 55px;
+  }
+  .cascudo-theater-shortcuts-hint {
+    display: none;
+  }
+}
+
+/* ==========================================================================
    ESTILOS COMPARTILHADOS: BARRAS DE LEITURA & CONTROLES DE ACESSIBILIDADE
    ========================================================================== */
 .wingene-reading-bar,

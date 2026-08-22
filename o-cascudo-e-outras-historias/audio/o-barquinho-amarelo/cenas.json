@@ -1,0 +1,23 @@
+[
+  {
+    "scene_number": 1,
+    "image": "figuras/o-barquinho-amarelo/iniciando-dobradura.png",
+    "alt": "Marcos inicia a dobradura do barquinho com um papel amarelo.",
+    "text": "Marcos estava sentado na sala há algum tempo, dobrando e desdobrando uma folha de papel amarela. Clara, sua mãe, observava com atenção. — O que está fazendo, Marquinhos? — Um barquinho. — Que legal! Precisa de ajuda? — Não, mamãe, eu já sei fazer, vovó Dirce me ensinou. A mãe foi para a cozinha preparar o almoço, deixando o filho cada vez mais nervoso com a folha. Marquinhos permaneceu se esforçando, sentado no chão com seu pedaço de papel. Dobrou de um jeito, virou a folha, olhou. “Começa com um chapéu” — pensou. Foi tentando, até que conseguiu dobrar a folha em um chapéu. “E agora, como isso vai virar um barco?”. Tentou dobrar os lados, mas não funcionou. “Eu sei fazer”, “Eu sei”, repetia em sua cabecinha.",
+    "audio": "audio/o-barquinho-amarelo/cena-1.mp3"
+  },
+  {
+    "scene_number": 2,
+    "image": "figuras/o-barquinho-amarelo/como-esse-chapeu-vira-barco.png",
+    "alt": "Como esse chapéu pode virar um barco.",
+    "text": "O cheiro dos bifes já anunciava o almoço, quando a mãe chamou. — Espera aí, estou acabando. Lutou por mais um tempo, até que, irritado, jogou o papel longe. Seu pai chamou: — Marquinhos, o almoço está na mesa. Emburrado, Marquinhos foi para a sala de jantar. — Pedro, o Marquinhos já sabe fazer barcos de papel. — Verdade, filho, me mostra depois. Marquinhos falou envergonhado — Eu não consegui, fiz só um chapéu. A mãe comentou: — Já é um começo, depois do almoço eu mostro como terminar. — Eu pensei que sabia…",
+    "audio": "audio/o-barquinho-amarelo/cena-2.mp3"
+  },
+  {
+    "scene_number": 3,
+    "image": "figuras/o-barquinho-amarelo/mae-ensina-dobrar.png",
+    "alt": "A mãe ensina a dobrar o chapéu em barco.",
+    "text": "Após o almoço, Marquinhos pegou o chapéu de papel jogado no canto da sala. A mãe mostrava como fazer as três etapas que faltavam, enquanto ele dobrava com atenção. — Agora eu sei fazer, não vou mais esquecer. À tardinha, seu pai convidou Marquinhos para lhe ensinar a nadar e desceram para a piscina do prédio. O menino levou sua recente criação de papel. Enquanto brincava com o pai na água refrescante, a folha amarela flutuava ao lado na piscina azul.",
+    "audio": "audio/o-barquinho-amarelo/cena-3.mp3"
+  }
+]

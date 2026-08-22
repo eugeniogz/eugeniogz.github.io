@@ -62,8 +62,8 @@
             <span><strong>4</strong> Pilares (VIDA)</span>
           </div>
           <div class="wingene-stat-pill">
-            <span class="wingene-stat-icon">🔊</span>
-            <span>Áudio & Leitura Guiada</span>
+            <span class="wingene-stat-icon">🌱</span>
+            <span>Futuro Ancestral</span>
           </div>
         </div>
       </div>
@@ -221,10 +221,6 @@
           <button id="wingene-copy-btn" class="wingene-control-btn" title="Copiar texto do ensaio" aria-label="Copiar Ensaio">
             <span>📋</span> <span id="wingene-copy-label">Copiar</span>
           </button>
-
-          <button id="wingene-audio-btn" class="wingene-control-btn audio-btn" title="Ouvir ensaio" aria-label="Ouvir Ensaio">
-            <span id="audio-icon">🔊</span> <span id="audio-label">Ouvir</span>
-          </button>
         </div>
 
         <div class="wingene-progress-track">
@@ -283,10 +279,10 @@
     const articleBody = document.getElementById('wingene-article-body');
     bodyElements.forEach(el => articleBody.appendChild(el));
 
-    setupReadingInteractions(currentEssay, currentEssay.id === 'the-vida-method' ? 'en-US' : 'pt-BR');
+    setupReadingInteractions(currentEssay);
   }
 
-  function setupReadingInteractions(currentEssay, langCode) {
+  function setupReadingInteractions(currentEssay) {
     const copyBtn = document.getElementById('wingene-copy-btn');
     const bodyEl = document.getElementById('wingene-article-body');
 
@@ -317,59 +313,6 @@
         const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
         progressBar.style.width = Math.min(100, Math.max(0, progress)) + '%';
       }, { passive: true });
-    }
-
-    // Audio Narration
-    const audioBtn = document.getElementById('wingene-audio-btn');
-    const audioIcon = document.getElementById('audio-icon');
-    const audioLabel = document.getElementById('audio-label');
-    let isPlaying = false;
-    let synth = window.speechSynthesis;
-    let utterance = null;
-
-    if (audioBtn && synth) {
-      audioBtn.addEventListener('click', () => {
-        if (isPlaying) {
-          synth.cancel();
-          isPlaying = false;
-          audioBtn.classList.remove('speaking');
-          if (audioIcon) audioIcon.textContent = '🔊';
-          if (audioLabel) audioLabel.textContent = 'Ouvir';
-          return;
-        }
-
-        const bodyEl = document.getElementById('wingene-article-body');
-        const textToRead = bodyEl ? bodyEl.innerText : '';
-        if (!textToRead) return;
-
-        synth.cancel();
-        utterance = new SpeechSynthesisUtterance(textToRead);
-        utterance.lang = langCode || 'pt-BR';
-        utterance.rate = 1.0;
-
-        utterance.onstart = () => {
-          isPlaying = true;
-          audioBtn.classList.add('speaking');
-          if (audioIcon) audioIcon.textContent = '⏹️';
-          if (audioLabel) audioLabel.textContent = 'Parar';
-        };
-
-        utterance.onend = () => {
-          isPlaying = false;
-          audioBtn.classList.remove('speaking');
-          if (audioIcon) audioIcon.textContent = '🔊';
-          if (audioLabel) audioLabel.textContent = 'Ouvir';
-        };
-
-        utterance.onerror = () => {
-          isPlaying = false;
-          audioBtn.classList.remove('speaking');
-          if (audioIcon) audioIcon.textContent = '🔊';
-          if (audioLabel) audioLabel.textContent = 'Ouvir';
-        };
-
-        synth.speak(utterance);
-      });
     }
   }
 })();
