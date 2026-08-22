@@ -6,9 +6,14 @@ Com cadência mais lenta e pausas naturais em cada pontuação.
 """
 
 import os
+import sys
 import re
 import json
 import asyncio
+
+# Impede a criação de pastas __pycache__ e arquivos .pyc
+sys.dont_write_bytecode = True
+
 import edge_tts
 
 STORIES_DIR = os.path.dirname(os.path.abspath(__file__))
