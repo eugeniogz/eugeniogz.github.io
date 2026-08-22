@@ -2450,3 +2450,882 @@ h6:before {
 .text-uppercase-active .cascudo-nav-direction {
   text-transform: none !important;
 }
+
+/* ==========================================================================
+   ESTILOS COMPARTILHADOS: BARRAS DE LEITURA & CONTROLES DE ACESSIBILIDADE
+   ========================================================================== */
+.wingene-reading-bar,
+.poetry-reading-bar,
+.ipes-reading-bar,
+.cronicas-reading-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 10px 18px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.wingene-progress-track,
+.poetry-progress-track,
+.ipes-progress-track,
+.cronicas-progress-track {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(0, 0, 0, 0.06);
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  overflow: hidden;
+}
+
+.wingene-progress-bar,
+.poetry-progress-bar,
+.ipes-progress-bar,
+.cronicas-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--color-values-primary), var(--color-attention-primary));
+  transition: width 0.1s ease-out;
+}
+
+.wingene-nav-back-btn,
+.poetry-nav-back-btn,
+.ipes-nav-back-btn,
+.cronicas-nav-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-main) !important;
+  text-decoration: none !important;
+  padding: 6px 12px;
+  border-radius: 10px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  transition: all 0.2s ease;
+}
+
+.wingene-nav-back-btn:hover,
+.poetry-nav-back-btn:hover,
+.ipes-nav-back-btn:hover,
+.cronicas-nav-back-btn:hover {
+  border-color: var(--border-focus);
+  transform: translateX(-2px);
+  color: var(--color-attention-primary) !important;
+}
+
+.wingene-reading-controls,
+.poetry-reading-controls,
+.ipes-reading-controls,
+.cronicas-reading-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.wingene-control-btn,
+.poetry-control-btn,
+.ipes-control-btn,
+.cronicas-control-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 1px solid var(--border-light);
+  background: var(--bg-primary);
+  color: var(--text-main);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wingene-control-btn:hover,
+.poetry-control-btn:hover,
+.ipes-control-btn:hover,
+.cronicas-control-btn:hover {
+  border-color: var(--border-focus);
+  background: var(--bg-card);
+}
+
+.wingene-control-btn.active,
+.poetry-control-btn.active,
+.ipes-control-btn.active,
+.cronicas-control-btn.active {
+  background: var(--color-attention-light);
+  border-color: var(--color-attention-primary);
+  color: var(--color-attention-primary);
+}
+
+.wingene-control-btn.speaking,
+.poetry-control-btn.speaking,
+.ipes-control-btn.speaking,
+.cronicas-control-btn.speaking {
+  background: #fef2f2;
+  border-color: #ef4444;
+  color: #dc2626;
+  animation: pulse-audio 1.5s infinite;
+}
+
+@keyframes pulse-audio {
+  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+  70% { box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+.wingene-font-resizer,
+.poetry-font-resizer,
+.ipes-font-resizer,
+.cronicas-font-resizer {
+  display: inline-flex;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.wingene-font-btn,
+.poetry-font-btn,
+.ipes-font-btn,
+.cronicas-font-btn {
+  border: none;
+  background: transparent;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-main);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.wingene-font-btn:hover,
+.poetry-font-btn:hover,
+.ipes-font-btn:hover,
+.cronicas-font-btn:hover {
+  background: var(--bg-card);
+}
+
+/* ==========================================================================
+   HERO HEADERS, PILLS & FILTERS (WINGENE, POESIAS, IPÊS, CRÔNICAS)
+   ========================================================================== */
+.wingene-hero,
+.poetry-hero,
+.ipes-hero,
+.cronicas-hero {
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-primary) 100%);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 36px 30px;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+}
+
+.wingene-hero-badge,
+.poetry-hero-badge,
+.ipes-hero-badge,
+.cronicas-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: var(--color-attention-light);
+  color: var(--color-attention-primary);
+  border: 1px solid rgba(18, 62, 156, 0.15);
+  margin-bottom: 12px;
+}
+
+.wingene-hero-title,
+.poetry-hero-title,
+.ipes-hero-title,
+.cronicas-hero-title {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 2.1rem !important;
+  font-weight: 800 !important;
+  color: var(--text-main) !important;
+  margin: 0 0 10px 0 !important;
+  line-height: 1.25 !important;
+}
+
+.wingene-hero-subtitle,
+.poetry-hero-subtitle,
+.ipes-hero-subtitle,
+.cronicas-hero-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  max-width: 760px;
+  margin: 0 0 20px 0;
+}
+
+.wingene-stats-pills,
+.poetry-stats-pills,
+.ipes-stats-pills,
+.cronicas-stats-pills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.wingene-stat-pill,
+.poetry-stat-pill,
+.ipes-stat-pill,
+.cronicas-stat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  font-size: 0.85rem;
+  color: var(--text-main);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.wingene-filters-bar,
+.poetry-filters-bar,
+.ipes-filters-bar,
+.cronicas-vol-nav {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.wingene-filter-btn,
+.poetry-filter-btn,
+.ipes-filter-btn,
+.cronicas-vol-nav-item {
+  padding: 8px 16px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  background: var(--bg-primary);
+  color: var(--text-muted);
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+
+.wingene-filter-btn:hover,
+.poetry-filter-btn:hover,
+.ipes-filter-btn:hover,
+.cronicas-vol-nav-item:hover {
+  background: var(--bg-card);
+  color: var(--text-main);
+  border-color: var(--border-focus);
+}
+
+.wingene-filter-btn.active,
+.poetry-filter-btn.active,
+.ipes-filter-btn.active,
+.cronicas-vol-nav-item.active {
+  background: var(--color-attention-primary) !important;
+  color: #ffffff !important;
+  border-color: var(--color-attention-primary) !important;
+  box-shadow: 0 4px 12px rgba(18, 62, 156, 0.25);
+}
+
+/* ==========================================================================
+   GRIDS & CARTÕES MODERNOS (WINGENE, POESIAS, IPÊS, CRÔNICAS)
+   ========================================================================== */
+.wingene-grid,
+.poetry-grid,
+.ipes-grid,
+.cronicas-grid,
+.cronicas-volumes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+.wingene-card,
+.poetry-card,
+.ipes-card,
+.cronicas-card,
+.cronicas-volume-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: 18px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.wingene-card:hover,
+.poetry-card:hover,
+.ipes-card:hover,
+.cronicas-card:hover,
+.cronicas-volume-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-color: var(--border-focus);
+}
+
+.poetry-card.highlight-card {
+  border-left: 4px solid var(--color-imperfections-primary);
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--color-imperfections-light) 100%);
+}
+
+.wingene-card-header-meta,
+.poetry-card-top,
+.ipes-card-top,
+.cronicas-card-top,
+.cronicas-volume-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.wingene-card-num,
+.poetry-card-badge,
+.ipes-card-num,
+.cronicas-card-num,
+.cronicas-volume-badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 8px;
+  background: var(--bg-card);
+  color: var(--color-attention-primary);
+  border: 1px solid var(--border-light);
+}
+
+.wingene-card-time,
+.poetry-card-time,
+.ipes-card-time,
+.cronicas-card-time,
+.cronicas-volume-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.wingene-card-title,
+.poetry-card-title,
+.ipes-card-title,
+.cronicas-card-title,
+.cronicas-volume-title {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  margin: 0 0 10px 0 !important;
+}
+
+.wingene-card-title a,
+.poetry-card-title a,
+.ipes-card-title a,
+.cronicas-card-title a,
+.cronicas-volume-title a {
+  color: var(--text-main) !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+
+.wingene-card-title a:hover,
+.poetry-card-title a:hover,
+.ipes-card-title a:hover,
+.cronicas-card-title a:hover,
+.cronicas-volume-title a:hover {
+  color: var(--color-attention-primary) !important;
+}
+
+.wingene-card-tags,
+.poetry-card-tags,
+.ipes-card-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.wingene-tag,
+.poetry-tag,
+.ipes-tag {
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  border: 1px solid var(--border-light);
+}
+
+.wingene-card-desc,
+.ipes-card-desc,
+.cronicas-card-desc,
+.cronicas-volume-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.poetry-card-preview {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.wingene-card-footer,
+.poetry-card-footer,
+.ipes-card-footer,
+.cronicas-card-footer,
+.cronicas-volume-footer {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid var(--border-light);
+  padding-top: 14px;
+}
+
+.wingene-read-btn,
+.poetry-read-btn,
+.ipes-read-btn,
+.cronicas-read-btn,
+.cronicas-read-vol-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-attention-primary) !important;
+  text-decoration: none !important;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.wingene-read-btn:hover,
+.poetry-read-btn:hover,
+.ipes-read-btn:hover,
+.cronicas-read-btn:hover,
+.cronicas-read-vol-btn:hover {
+  transform: translateX(3px);
+  color: var(--color-attention-hover) !important;
+}
+
+/* --- Caixas de Síntese e Citação --- */
+.wingene-synthesis-box,
+.poetry-quote-box,
+.ipes-reflection-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--color-attention-primary);
+  border-radius: 16px;
+  padding: 22px 26px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.wingene-synthesis-icon,
+.ipes-reflection-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.wingene-synthesis-content h3,
+.ipes-reflection-content h3 {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  margin: 0 0 6px 0 !important;
+  color: var(--text-main) !important;
+}
+
+.wingene-synthesis-content p,
+.ipes-reflection-content p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.poetry-quote-box blockquote {
+  border: none !important;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--text-main);
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   AFORISMOS: GRID E CARTÕES COM BOTÃO COPIAR
+   ========================================================================== */
+.aforismo-section {
+  margin-bottom: 36px;
+}
+
+.aforismo-section-heading {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 1.3rem !important;
+  font-weight: 700 !important;
+  color: var(--text-main) !important;
+  margin: 0 0 16px 0 !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.aforismos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.aforismo-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.aforismo-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  border-color: var(--border-focus);
+}
+
+.aforismo-card-text {
+  font-size: 0.96rem;
+  color: var(--text-main);
+  line-height: 1.5;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.aforismo-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-light);
+  padding-top: 8px;
+}
+
+.aforismo-tag-small {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.btn-copy-aforismo,
+.btn-copy-full-poem {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-copy-aforismo:hover,
+.btn-copy-full-poem:hover {
+  border-color: var(--color-attention-primary);
+  color: var(--color-attention-primary);
+}
+
+.btn-copy-aforismo.copied,
+.btn-copy-full-poem.copied {
+  background: #ecfdf5;
+  border-color: #10b981;
+  color: #059669;
+}
+
+/* ==========================================================================
+   LEITOR DE ARTIGOS & POEMAS
+   ========================================================================== */
+.wingene-article,
+.poetry-article,
+.ipes-article,
+.cronicas-article {
+  --reading-font-size: 18px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 36px 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  margin-bottom: 30px;
+}
+
+.wingene-article-header,
+.poetry-article-header,
+.ipes-article-header,
+.cronicas-article-header {
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 20px;
+  margin-bottom: 28px;
+}
+
+.wingene-meta-top,
+.poetry-meta-top,
+.ipes-meta-top,
+.cronicas-meta-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.wingene-num-badge,
+.poetry-badge-pill,
+.ipes-badge-pill,
+.cronicas-badge-pill {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 8px;
+  background: var(--color-attention-light);
+  color: var(--color-attention-primary);
+  border: 1px solid rgba(18, 62, 156, 0.15);
+}
+
+.wingene-time-badge,
+.poetry-time-pill,
+.ipes-time-pill,
+.cronicas-time-pill {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.wingene-article-title,
+.poetry-article-title,
+.ipes-article-title,
+.cronicas-article-title {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 2rem !important;
+  font-weight: 800 !important;
+  color: var(--text-main) !important;
+  line-height: 1.25 !important;
+  margin: 0 0 12px 0 !important;
+}
+
+.wingene-article-body,
+.poetry-poem-body,
+.ipes-article-body,
+.cronicas-article-body {
+  font-size: var(--reading-font-size);
+  line-height: 1.8;
+  color: var(--text-main);
+}
+
+.wingene-article-body p,
+.ipes-article-body p,
+.cronicas-article-body p {
+  margin-bottom: 1.4em;
+}
+
+.poetry-poem-body {
+  padding: 10px 0;
+}
+
+.poetry-stanza p {
+  margin-bottom: 1.2em;
+  font-size: var(--reading-font-size);
+  line-height: 1.8;
+}
+
+.poetry-copy-action-row {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0 32px 0;
+}
+
+.btn-copy-full-poem {
+  padding: 8px 18px;
+  font-size: 0.9rem;
+  border-radius: 12px;
+}
+
+/* --- Rodapés de Navegação Sequencial --- */
+.wingene-nav-footer,
+.poetry-nav-footer,
+.ipes-nav-footer,
+.cronicas-nav-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-light);
+  padding-top: 24px;
+  margin-top: 36px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.wingene-nav-card,
+.poetry-nav-card,
+.ipes-nav-card,
+.cronicas-nav-card {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  text-decoration: none !important;
+  max-width: 45%;
+  transition: all 0.2s ease;
+}
+
+.wingene-nav-card:hover,
+.poetry-nav-card:hover,
+.ipes-nav-card:hover,
+.cronicas-nav-card:hover {
+  border-color: var(--border-focus);
+  transform: translateY(-2px);
+}
+
+.wingene-nav-dir,
+.poetry-nav-dir,
+.ipes-nav-dir,
+.cronicas-nav-dir {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.wingene-nav-title,
+.poetry-nav-title,
+.ipes-nav-title,
+.cronicas-nav-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wingene-center-link,
+.poetry-center-link,
+.ipes-center-link,
+.cronicas-center-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  color: var(--text-muted) !important;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+
+.wingene-center-link:hover,
+.poetry-center-link:hover,
+.ipes-center-link:hover,
+.cronicas-center-link:hover {
+  color: var(--text-main) !important;
+  border-color: var(--border-focus);
+}
+
+/* ==========================================================================
+   SUPORTE AO MODO CAIXA ALTA
+   ========================================================================== */
+.wingene-article.uppercase-mode .wingene-article-body,
+.wingene-article.uppercase-mode .wingene-article-title,
+.poetry-article.uppercase-mode .poetry-poem-body,
+.poetry-article.uppercase-mode .poetry-article-title,
+.ipes-article.uppercase-mode .ipes-article-body,
+.ipes-article.uppercase-mode .ipes-article-title,
+.cronicas-article.uppercase-mode .cronicas-article-body,
+.cronicas-article.uppercase-mode .cronicas-article-title {
+  text-transform: uppercase !important;
+}
+
+.wingene-article.uppercase-mode .wingene-reading-bar,
+.wingene-article.uppercase-mode .wingene-nav-footer,
+.poetry-article.uppercase-mode .poetry-reading-bar,
+.poetry-article.uppercase-mode .poetry-nav-footer,
+.ipes-article.uppercase-mode .ipes-reading-bar,
+.ipes-article.uppercase-mode .ipes-nav-footer,
+.cronicas-article.uppercase-mode .cronicas-reading-bar,
+.cronicas-article.uppercase-mode .cronicas-nav-footer {
+  text-transform: none !important;
+}
+
+/* Volume links mini-list */
+.cronicas-volume-story-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+  background: var(--bg-card);
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+}
+
+.cronicas-mini-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--text-main) !important;
+  text-decoration: none !important;
+  padding: 3px 0;
+  transition: color 0.15s ease;
+}
+
+.cronicas-mini-link:hover {
+  color: var(--color-attention-primary) !important;
+}
+
+.cronicas-mini-time {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.cronicas-see-more-link {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-attention-primary) !important;
+  text-decoration: none !important;
+  margin-top: 4px;
+}

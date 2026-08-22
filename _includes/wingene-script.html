@@ -1,0 +1,443 @@
+<script>
+(function() {
+  if (window.__wingeneInitialized) return;
+  const container = document.getElementById('wingene-app');
+  if (!container) return;
+  window.__wingeneInitialized = true;
+
+  const pathname = window.location.pathname;
+  const isIndex = pathname.endsWith('/wingene/') || 
+                  pathname.endsWith('/wingene/index.html') || 
+                  pathname.endsWith('/wingene');
+
+  const baseUrl = '{{ "/wingene/" | relative_url }}'.replace(/\/index\.html$/, '/');
+
+  const essays = [
+    {
+      id: 'wingene-felicidade-agora-futuro-ancestral',
+      number: 1,
+      title: 'Wingene: Felicidade agora, futuro ancestral',
+      subtitle: 'Felicidade agora, futuro ancestral',
+      time: '12 min',
+      category: 'fundamentos',
+      tags: ['Felicidade', 'Eudaimonia', 'Evolução', 'Herança', 'método VIDA'],
+      url: baseUrl + 'wingene-felicidade-agora-futuro-ancestral.html',
+      desc: 'Apresenta a visão de mundo da Wingene — fusão entre vitória (win) e herança (gene) — unindo bases naturalistas, eudaimonia aristotélica e aperfeiçoamento moral contínuo.'
+    },
+    {
+      id: 'etimologias-da-wingene-o-florescimento-do-espirito',
+      number: 2,
+      title: 'Etimologias da Wingene: o florescimento do Espírito',
+      subtitle: 'o florescimento do Espírito',
+      time: '3 min',
+      category: 'etimologia',
+      tags: ['Etimologia', 'Espírito', 'Conhecimento', 'Linguagem'],
+      url: baseUrl + 'etimologias-da-wingene-o-florescimento-do-espirito.html',
+      desc: 'Investigação profunda das raízes históricas das palavras vitória, esforço (winnan), alegria (wunjo) e herança, revelando o sentido vivo da filosofia Wingene.'
+    },
+    {
+      id: 'o-metodo-vida-a-wingene-em-pratica',
+      number: 3,
+      title: 'O método VIDA: a Wingene em prática',
+      subtitle: 'a Wingene em prática',
+      time: '14 min',
+      category: 'metodo-vida',
+      tags: ['Valores', 'Imperfeições', 'Decisões', 'Atenção', 'método VIDA'],
+      url: baseUrl + 'o-metodo-vida-a-wingene-em-pratica.html',
+      desc: 'O guia completo do Método VIDA: quatro pilares práticos (Valores, Imperfeições, Decisões, Atenção) para calibrar a bússola ética e construir a eudaimonia diária.'
+    },
+    {
+      id: 'metaconsciencia-pensar-o-sentir-sentir-o-pensar',
+      number: 4,
+      title: 'Metaconsciência: pensar o sentir, sentir o pensar',
+      subtitle: 'pensar o sentir, sentir o pensar',
+      time: '4 min',
+      category: 'consciencia',
+      tags: ['Mente', 'Metaconsciência', 'Sentir', 'Pensar', 'Atenção'],
+      url: baseUrl + 'metaconsciencia-pensar-o-sentir-sentir-o-pensar.html',
+      desc: 'Reflexão sobre a capacidade humana de observar seus próprios pensamentos e sentimentos, refinando a percepção da mente e a lucidez existencial.'
+    },
+    {
+      id: 'tecendo-a-vida-criando-no-intimo-uma-obra-pessoal',
+      number: 5,
+      title: 'Tecendo a vida: criando no íntimo uma obra pessoal',
+      subtitle: 'criando no íntimo uma obra pessoal',
+      time: '7 min',
+      category: 'aprimoramento',
+      tags: ['Evolução', 'Obra Pessoal', 'Criação', 'Virtudes'],
+      url: baseUrl + 'tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html',
+      desc: 'Como transformar cada vivência cotidiana em fio para a tecelagem do próprio ser, construindo internamente uma obra de valor ético e afetivo.'
+    },
+    {
+      id: 'the-vida-method',
+      number: 6,
+      title: 'The VIDA method (English Edition)',
+      subtitle: 'Values, Imperfections, Decisions, and Attention',
+      time: '14 min',
+      category: 'metodo-vida',
+      tags: ['VIDA Method', 'Values', 'Ethics', 'Eudaimonia', 'Philosophy'],
+      url: baseUrl + 'the-vida-method.html',
+      desc: 'English essay detailing the four interdependent pillars of the VIDA method for ethical refinement, conscious action, and sustainable eudaimonia.'
+    }
+  ];
+
+  if (isIndex) {
+    renderIndexHub();
+    return;
+  }
+
+  renderEssayReader();
+
+  function renderIndexHub() {
+    container.innerHTML = `
+      <div class="wingene-hero">
+        <div class="wingene-hero-badge">
+          <span>🌿</span> Filosofia & Prática da Herança Consciente
+        </div>
+        <h1 class="wingene-hero-title">Ensaios Filosóficos Wingene</h1>
+        <p class="wingene-hero-subtitle">
+          A fusão entre vitória e herança (win + gene). Ensaios sobre a evolução moral, o florescimento do espírito, a metaconsciência e o Método VIDA na prática.
+        </p>
+
+        <div class="wingene-stats-pills">
+          <div class="wingene-stat-pill">
+            <span class="wingene-stat-icon">📜</span>
+            <span><strong>${essays.length}</strong> Ensaios Fundamentais</span>
+          </div>
+          <div class="wingene-stat-pill">
+            <span class="wingene-stat-icon">⏱️</span>
+            <span><strong>54 min</strong> Leitura Completa</span>
+          </div>
+          <div class="wingene-stat-pill">
+            <span class="wingene-stat-icon">🧭</span>
+            <span><strong>4</strong> Pilares (VIDA)</span>
+          </div>
+          <div class="wingene-stat-pill">
+            <span class="wingene-stat-icon">🔊</span>
+            <span>Áudio & Leitura Guiada</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filtros de Categoria -->
+      <div class="wingene-filters-bar" role="tablist" aria-label="Filtrar ensaios por tema">
+        <button class="wingene-filter-btn active" data-filter="all" role="tab" aria-selected="true">
+          ✨ Todos os Ensaios (${essays.length})
+        </button>
+        <button class="wingene-filter-btn" data-filter="fundamentos" role="tab" aria-selected="false">
+          🌱 Fundamentos Wingene
+        </button>
+        <button class="wingene-filter-btn" data-filter="metodo-vida" role="tab" aria-selected="false">
+          🧭 Método VIDA
+        </button>
+        <button class="wingene-filter-btn" data-filter="consciencia" role="tab" aria-selected="false">
+          🧠 Mente & Metaconsciência
+        </button>
+        <button class="wingene-filter-btn" data-filter="aprimoramento" role="tab" aria-selected="false">
+          🎨 Obra Pessoal
+        </button>
+      </div>
+
+      <!-- Grid de Cartões -->
+      <div class="wingene-grid" id="wingene-essays-grid">
+        ${essays.map(essay => `
+          <article class="wingene-card" data-category="${essay.category}">
+            <div class="wingene-card-content">
+              <div class="wingene-card-header-meta">
+                <span class="wingene-card-num">Ensaio #${essay.number}</span>
+                <span class="wingene-card-time">⏱️ ${essay.time}</span>
+              </div>
+              <h2 class="wingene-card-title">
+                <a href="${essay.url}">${essay.title}</a>
+              </h2>
+              <div class="wingene-card-tags">
+                ${essay.tags.map(t => `<span class="wingene-tag">${t}</span>`).join('')}
+              </div>
+              <p class="wingene-card-desc">${essay.desc}</p>
+              <div class="wingene-card-footer">
+                <a href="${essay.url}" class="wingene-read-btn">
+                  <span>Ler Ensaio</span>
+                  <span class="wingene-read-arrow">→</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        `).join('')}
+      </div>
+
+      <div class="wingene-synthesis-box">
+        <div class="wingene-synthesis-icon">✨</div>
+        <div class="wingene-synthesis-content">
+          <h3>O Ideal de Eudaimonia e Futuro Ancestral</h3>
+          <p>
+            A Wingene propõe que o maior legado humano não são os bens acumulados, mas a qualidade da consciência e dos valores que cultivamos. Cada reflexão aqui contida é um convite para desacelerar o piloto automático e tecer a própria vida com presença e lucidez.
+          </p>
+        </div>
+      </div>
+    `;
+
+    // Filtros
+    const filterBtns = container.querySelectorAll('.wingene-filter-btn');
+    const cards = container.querySelectorAll('.wingene-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        const filter = btn.getAttribute('data-filter');
+        cards.forEach(c => {
+          if (filter === 'all' || c.getAttribute('data-category') === filter) {
+            c.style.display = 'flex';
+          } else {
+            c.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  function renderEssayReader() {
+    let currentEssay = null;
+    let currentIndex = -1;
+    const pageFilename = pathname.split('/').pop().replace(/\.html$/, '');
+
+    for (let i = 0; i < essays.length; i++) {
+      const essayFilename = essays[i].url.split('/').pop().replace(/\.html$/, '');
+      if (pageFilename === essayFilename || pageFilename === essays[i].id) {
+        currentEssay = essays[i];
+        currentIndex = i;
+        break;
+      }
+    }
+
+    if (!currentEssay) {
+      const originalH2 = container.querySelector('h2');
+      const headingText = originalH2 ? originalH2.innerText.trim().toLowerCase() : '';
+      if (headingText) {
+        for (let i = 0; i < essays.length; i++) {
+          if (headingText.includes(essays[i].title.toLowerCase()) || essays[i].title.toLowerCase().includes(headingText)) {
+            currentEssay = essays[i];
+            currentIndex = i;
+            break;
+          }
+        }
+      }
+    }
+
+    if (!currentEssay) {
+      currentEssay = essays[0];
+      currentIndex = 0;
+    }
+
+    const prevEssay = currentIndex > 0 ? essays[currentIndex - 1] : null;
+    const nextEssay = currentIndex < essays.length - 1 ? essays[currentIndex + 1] : null;
+
+    // Coleta nós do conteúdo
+    const rawNodes = Array.from(container.childNodes);
+    const bodyElements = [];
+
+    rawNodes.forEach(node => {
+      if (node.nodeType !== Node.ELEMENT_NODE) return;
+      const tagName = node.tagName.toLowerCase();
+      if (tagName === 'h3' && (node.querySelector('a[href*="./"]') || node.innerText.toLowerCase().includes('wingene'))) return;
+      if (tagName === 'h2' && node.innerText.trim().toLowerCase().includes(currentEssay.title.split(':')[0].trim().toLowerCase())) return;
+      if (tagName === 'hr') return;
+      if (tagName === 'div' && (node.innerText.includes('<<') || node.innerText.includes('>>') || node.style.clear === 'both')) return;
+      bodyElements.push(node.cloneNode(true));
+    });
+
+    container.innerHTML = `
+      <!-- Barra de Leitura Superior -->
+      <div class="wingene-reading-bar" id="wingene-reading-bar">
+        <div class="wingene-reading-bar-left">
+          <a href="${baseUrl}" class="wingene-nav-back-btn" title="Voltar ao Índice de Ensaios">
+            <span>←</span> <span class="wingene-nav-back-text">Índice Wingene</span>
+          </a>
+        </div>
+
+        <div class="wingene-reading-controls">
+          <button id="wingene-case-btn" class="wingene-control-btn" title="Alternar Caixa Alta" aria-label="Alternar Caixa Alta">
+            <span>🔠</span> <span id="wingene-case-label">Caixa Alta</span>
+          </button>
+
+          <div class="wingene-font-resizer" role="group" aria-label="Tamanho da Fonte">
+            <button id="font-dec-btn" class="wingene-font-btn" title="Diminuir fonte">A-</button>
+            <button id="font-reset-btn" class="wingene-font-btn" title="Fonte padrão">A</button>
+            <button id="font-inc-btn" class="wingene-font-btn" title="Aumentar fonte">A+</button>
+          </div>
+
+          <button id="wingene-audio-btn" class="wingene-control-btn audio-btn" title="Ouvir ensaio" aria-label="Ouvir Ensaio">
+            <span id="audio-icon">🔊</span> <span id="audio-label">Ouvir</span>
+          </button>
+        </div>
+
+        <div class="wingene-progress-track">
+          <div class="wingene-progress-bar" id="wingene-progress-bar"></div>
+        </div>
+      </div>
+
+      <!-- Artigo Principal -->
+      <article class="wingene-article" id="wingene-article">
+        <header class="wingene-article-header">
+          <div class="wingene-meta-top">
+            <span class="wingene-num-badge">Ensaio #${currentEssay.number}</span>
+            <span class="wingene-time-badge">⏱️ ${currentEssay.time} de leitura</span>
+          </div>
+          <h1 class="wingene-article-title">${currentEssay.title}</h1>
+          <div class="wingene-article-tags">
+            ${currentEssay.tags.map(t => `<span class="wingene-tag">${t}</span>`).join('')}
+          </div>
+        </header>
+
+        <div class="wingene-article-body" id="wingene-article-body"></div>
+
+        <!-- Rodapé de Navegação -->
+        <nav class="wingene-nav-footer" aria-label="Navegação entre ensaios">
+          ${prevEssay ? `
+            <a href="${prevEssay.url}" class="wingene-nav-card prev">
+              <span class="wingene-nav-dir">← Ensaio Anterior</span>
+              <span class="wingene-nav-title">${prevEssay.number}. ${prevEssay.title}</span>
+            </a>
+          ` : `
+            <a href="${baseUrl}" class="wingene-nav-card prev">
+              <span class="wingene-nav-dir">← Coleção</span>
+              <span class="wingene-nav-title">Índice Geral</span>
+            </a>
+          `}
+
+          <a href="${baseUrl}" class="wingene-center-link" title="Voltar ao Índice">
+            <span>🌿</span> <span>Todos os Ensaios</span>
+          </a>
+
+          ${nextEssay ? `
+            <a href="${nextEssay.url}" class="wingene-nav-card next">
+              <span class="wingene-nav-dir">Próximo Ensaio →</span>
+              <span class="wingene-nav-title">${nextEssay.number}. ${nextEssay.title}</span>
+            </a>
+          ` : `
+            <a href="${baseUrl}" class="wingene-nav-card next">
+              <span class="wingene-nav-dir">Fim dos Ensaios →</span>
+              <span class="wingene-nav-title">Voltar ao Início</span>
+            </a>
+          `}
+        </nav>
+      </article>
+    `;
+
+    const articleBody = document.getElementById('wingene-article-body');
+    bodyElements.forEach(el => articleBody.appendChild(el));
+
+    setupReadingInteractions(currentEssay.id === 'the-vida-method' ? 'en-US' : 'pt-BR');
+  }
+
+  function setupReadingInteractions(langCode) {
+    const caseBtn = document.getElementById('wingene-case-btn');
+    const article = document.getElementById('wingene-article');
+    const progressBar = document.getElementById('wingene-progress-bar');
+    let isUppercase = false;
+
+    if (caseBtn && article) {
+      caseBtn.addEventListener('click', () => {
+        isUppercase = !isUppercase;
+        article.classList.toggle('uppercase-mode', isUppercase);
+        caseBtn.classList.toggle('active', isUppercase);
+        const label = document.getElementById('wingene-case-label');
+        if (label) label.textContent = isUppercase ? 'Minúscula' : 'Caixa Alta';
+      });
+    }
+
+    // Font Resizing
+    const fontDec = document.getElementById('font-dec-btn');
+    const fontReset = document.getElementById('font-reset-btn');
+    const fontInc = document.getElementById('font-inc-btn');
+    let currentFontSize = 18;
+
+    if (fontDec && fontReset && fontInc && article) {
+      fontDec.addEventListener('click', () => {
+        if (currentFontSize > 14) {
+          currentFontSize -= 2;
+          article.style.setProperty('--reading-font-size', currentFontSize + 'px');
+        }
+      });
+      fontReset.addEventListener('click', () => {
+        currentFontSize = 18;
+        article.style.removeProperty('--reading-font-size');
+      });
+      fontInc.addEventListener('click', () => {
+        if (currentFontSize < 28) {
+          currentFontSize += 2;
+          article.style.setProperty('--reading-font-size', currentFontSize + 'px');
+        }
+      });
+    }
+
+    // Progress Bar
+    if (progressBar) {
+      window.addEventListener('scroll', () => {
+        const docEl = document.documentElement;
+        const scrollTop = docEl.scrollTop || document.body.scrollTop;
+        const scrollHeight = docEl.scrollHeight - docEl.clientHeight;
+        const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+        progressBar.style.width = Math.min(100, Math.max(0, progress)) + '%';
+      }, { passive: true });
+    }
+
+    // Audio Narration
+    const audioBtn = document.getElementById('wingene-audio-btn');
+    const audioIcon = document.getElementById('audio-icon');
+    const audioLabel = document.getElementById('audio-label');
+    let isPlaying = false;
+    let synth = window.speechSynthesis;
+    let utterance = null;
+
+    if (audioBtn && synth) {
+      audioBtn.addEventListener('click', () => {
+        if (isPlaying) {
+          synth.cancel();
+          isPlaying = false;
+          audioBtn.classList.remove('speaking');
+          if (audioIcon) audioIcon.textContent = '🔊';
+          if (audioLabel) audioLabel.textContent = 'Ouvir';
+          return;
+        }
+
+        const bodyEl = document.getElementById('wingene-article-body');
+        const textToRead = bodyEl ? bodyEl.innerText : '';
+        if (!textToRead) return;
+
+        synth.cancel();
+        utterance = new SpeechSynthesisUtterance(textToRead);
+        utterance.lang = langCode || 'pt-BR';
+        utterance.rate = 1.0;
+
+        utterance.onstart = () => {
+          isPlaying = true;
+          audioBtn.classList.add('speaking');
+          if (audioIcon) audioIcon.textContent = '⏹️';
+          if (audioLabel) audioLabel.textContent = 'Parar';
+        };
+
+        utterance.onend = () => {
+          isPlaying = false;
+          audioBtn.classList.remove('speaking');
+          if (audioIcon) audioIcon.textContent = '🔊';
+          if (audioLabel) audioLabel.textContent = 'Ouvir';
+        };
+
+        utterance.onerror = () => {
+          isPlaying = false;
+          audioBtn.classList.remove('speaking');
+          if (audioIcon) audioIcon.textContent = '🔊';
+          if (audioLabel) audioLabel.textContent = 'Ouvir';
+        };
+
+        synth.speak(utterance);
+      });
+    }
+  }
+})();
+</script>

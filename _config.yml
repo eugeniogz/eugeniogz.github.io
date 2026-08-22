@@ -51,5 +51,22 @@ defaults:
       path: "o-cascudo-e-outras-historias"
     values:
       layout: "cascudo"
+  - scope:
+      path: "wingene"
+    values:
+      layout: "wingene"
+  - scope:
+      path: "poesias-e-aforismos"
+    values:
+      layout: "poetry"
+  - scope:
+      path: "ipes-e-tijolos"
+    values:
+      layout: "ipes"
+  - scope:
+      path: "cronicas"
+    values:
+      layout: "cronicas"
+
 
 

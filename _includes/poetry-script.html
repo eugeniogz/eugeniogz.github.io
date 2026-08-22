@@ -1,0 +1,655 @@
+<script>
+(function() {
+  if (window.__poetryInitialized) return;
+  const container = document.getElementById('poetry-app');
+  if (!container) return;
+  window.__poetryInitialized = true;
+
+  const pathname = window.location.pathname;
+  const pageFilename = pathname.split('/').pop().replace(/\.html$/, '');
+  const isIndex = pathname.endsWith('/poesias-e-aforismos/') || 
+                  pathname.endsWith('/poesias-e-aforismos/index.html') || 
+                  pathname.endsWith('/poesias-e-aforismos') ||
+                  pageFilename === '' || pageFilename === 'index';
+
+  const isAforismos = pageFilename === 'aforismos';
+
+  const baseUrl = '{{ "/poesias-e-aforismos/" | relative_url }}'.replace(/\/index\.html$/, '/');
+
+  const poems = [
+    {
+      id: 'aforismos',
+      title: 'Aforismos',
+      type: 'aforismo',
+      time: '1 min',
+      tags: ['Ciência', 'Consciência', 'Felicidade', 'Natureza'],
+      category: 'aforismos',
+      url: baseUrl + 'aforismos.html',
+      preview: 'A ciência ilumina a metafísica com os dourados fios do conhecimento. Pensamento: sentir que a razão refinou...',
+      desc: 'Sentenças breves e lapidadas sobre ciência, consciência, amor, virtudes, eudaimonia e existência.'
+    },
+    {
+      id: 'vida-breve-rotas-eternas',
+      title: 'Vida breve, rotas eternas',
+      type: 'poema',
+      time: '1 min',
+      tags: ['Felicidade', 'Eudaimonia', 'Vida'],
+      category: 'eudaimonia',
+      url: baseUrl + 'vida-breve-rotas-eternas.html',
+      preview: 'Pegadas leves no tempo humano / tempo pequeno no verso oceano / universo efêmero na negra entropia...',
+      desc: 'Poema sobre a brevidade da travessia humana e as rotas diárias que tecem a alegria e o futuro ancestral.'
+    },
+    {
+      id: 'a-cor-que-povoa-o-mundo',
+      title: 'A cor que povoa o mundo',
+      type: 'poema',
+      time: '1 min',
+      tags: ['Arte', 'Sentir', 'Natureza'],
+      category: 'natureza',
+      url: baseUrl + 'a-cor-que-povoa-o-mundo.html',
+      preview: 'A luz que dança no olhar do pintor / tons de verde, céu e flor...',
+      desc: 'Versos sobre a percepção estética, a sinestesia das cores e a beleza que vibra na natureza.'
+    },
+    {
+      id: 'eudaimonia-a-se-destilar',
+      title: 'Eudaimonia a se destilar',
+      type: 'poema',
+      time: '1 min',
+      tags: ['Eudaimonia', 'Virtudes', 'Alegria'],
+      category: 'eudaimonia',
+      url: baseUrl + 'eudaimonia-a-se-destilar.html',
+      preview: 'No alambique das ações cotidianas / a essência serena que nunca se apaga...',
+      desc: 'A alquimia do viver consciente: cultivar a alegria serena através de pequenas atitudes diárias.'
+    },
+    {
+      id: 'tecer-alegria',
+      title: 'Tecer alegria',
+      type: 'poema',
+      time: '1 min',
+      tags: ['Alegria', 'Vida', 'Ação'],
+      category: 'amor',
+      url: baseUrl + 'tecer-alegria.html',
+      preview: 'Fio por fio, gesto a gesto / no tear do tempo manifesto...',
+      desc: 'A construção artesanal da felicidade através da presença, do afeto e do cuidado mútuo.'
+    },
+    {
+      id: 'vida-consciente',
+      title: 'Vida consciente',
+      type: 'poema',
+      time: '1 min',
+      tags: ['Consciência', 'Presença', 'Mente'],
+      category: 'consciencia',
+      url: baseUrl + 'vida-consciente.html',
+      preview: 'Despertar a cada fôlego e passo / quebrar o automatismo do cansaço...',
+      desc: 'Um chamado poético para habitar o presente com lucidez, intenção e propriocepção.'
+    },
+    {
+      id: 'essencia-oculta',
+      title: 'Essência oculta',
+      type: 'poema',
+      time: '1 min',
+      tags: ['Essência', 'Espírito', 'Mundo'],
+      category: 'consciencia',
+      url: baseUrl + 'essencia-oculta.html',
+      preview: 'Por trás do visível véu da matéria / baila a seiva da floresta sincera...',
+      desc: 'O mistério sutil que habita a matéria consciente e anima a existência.'
+    },
+    {
+      id: 'quadro-azul',
+      title: 'Quadro azul',
+      type: 'poema',
+      time: '1 min',
+      tags: ['Música', 'Cor', 'Sentimento'],
+      category: 'musica',
+      url: baseUrl + 'quadro-azul.html',
+      preview: 'Na tela azul do infinito firmamento / notas suaves viajam no vento...',
+      desc: 'Harmonia lírica entre a imensidão azul do cosmos e as ressonâncias da alma.'
+    },
+    {
+      id: 'vidas-infinitas',
+      title: 'Vidas infinitas',
+      type: 'poema',
+      time: '1 min',
+      tags: ['Infinito', 'Tempo', 'Existência'],
+      category: 'eudaimonia',
+      url: baseUrl + 'vidas-infinitas.html',
+      preview: 'Quantas vidas cabem num instante / quando a mente se faz vigilante?...',
+      desc: 'A dilatação do tempo pela intensidade da presença e do sentimento consciente.'
+    },
+    {
+      id: 'musica-soberana',
+      title: 'Música soberana',
+      type: 'poema',
+      time: '1 min',
+      tags: ['Música', 'Harmonia', 'Espírito'],
+      category: 'musica',
+      url: baseUrl + 'musica-soberana.html',
+      preview: 'A sinfonia que rege o pensamento / ritmo sagrado de todo momento...',
+      desc: 'O poder transcendental da melodia como espelho das sinapses e da harmonia interior.'
+    },
+    {
+      id: 'cafe-em-flor',
+      title: 'Café em flor',
+      type: 'poema',
+      time: '1 min',
+      tags: ['Natureza', 'Origem', 'Memória'],
+      category: 'natureza',
+      url: baseUrl + 'cafe-em-flor.html',
+      preview: 'Brancura pura na serra aromática / lembrança viva da terra simpática...',
+      desc: 'Memórias afetivas da terra natal, perfume das floradas e raízes ancestrais.'
+    },
+    {
+      id: 'aquarela-de-uma-valsa',
+      title: 'Aquarela de uma valsa',
+      type: 'poema',
+      time: '1 min',
+      tags: ['Dança', 'Ritmo', 'Afeto'],
+      category: 'musica',
+      url: baseUrl + 'aquarela-de-uma-valsa.html',
+      preview: 'Em giros ternos e passos marcados / traços de afeto no tempo pintados...',
+      desc: 'A dança da vida em compasso ternário, onde o amor se expressa em movimento suave.'
+    },
+    {
+      id: 'divina-consciencia',
+      title: 'Divina consciência',
+      type: 'poema',
+      time: '1 min',
+      tags: ['Consciência', 'Cosmo', 'Vida'],
+      category: 'consciencia',
+      url: baseUrl + 'divina-consciencia.html',
+      preview: 'O universo acordando em cada olhar / a matéria aprendendo a se amar...',
+      desc: 'O ser humano como espelho pelo qual o próprio universo se contempla e sente.'
+    }
+  ];
+
+  if (isIndex) {
+    renderIndexHub();
+    return;
+  }
+
+  if (isAforismos) {
+    renderAforismosReader();
+    return;
+  }
+
+  renderPoemReader();
+
+  function renderIndexHub() {
+    container.innerHTML = `
+      <div class="poetry-hero">
+        <div class="poetry-hero-badge">
+          <span>✨</span> Poesias & Aforismos
+        </div>
+        <h1 class="poetry-hero-title">Poesias e Aforismos</h1>
+        <p class="poetry-hero-subtitle">
+          Vida consciente, amor e esperança. Versos, pensamentos e cadências que celebram a beleza de existir, a eudaimonia e a música universal.
+        </p>
+
+        <div class="poetry-stats-pills">
+          <div class="poetry-stat-pill">
+            <span class="poetry-stat-icon">✒️</span>
+            <span><strong>${poems.length}</strong> Obras Poéticas</span>
+          </div>
+          <div class="poetry-stat-pill">
+            <span class="poetry-stat-icon">💎</span>
+            <span>Coletânea de Aforismos</span>
+          </div>
+          <div class="poetry-stat-pill">
+            <span class="poetry-stat-icon">📋</span>
+            <span>Cópia Rápida de Versos</span>
+          </div>
+          <div class="poetry-stat-pill">
+            <span class="poetry-stat-icon">🔊</span>
+            <span>Áudio Narração</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filtros de Categoria -->
+      <div class="poetry-filters-bar" role="tablist" aria-label="Filtrar poesias por tema">
+        <button class="poetry-filter-btn active" data-filter="all" role="tab" aria-selected="true">
+          ✨ Todas (${poems.length})
+        </button>
+        <button class="poetry-filter-btn" data-filter="aforismos" role="tab" aria-selected="false">
+          💎 Aforismos
+        </button>
+        <button class="poetry-filter-btn" data-filter="eudaimonia" role="tab" aria-selected="false">
+          🌿 Eudaimonia & Vida
+        </button>
+        <button class="poetry-filter-btn" data-filter="consciencia" role="tab" aria-selected="false">
+          🧠 Consciência & Mente
+        </button>
+        <button class="poetry-filter-btn" data-filter="musica" role="tab" aria-selected="false">
+          🎵 Música & Dança
+        </button>
+        <button class="poetry-filter-btn" data-filter="natureza" role="tab" aria-selected="false">
+          🌸 Natureza
+        </button>
+      </div>
+
+      <!-- Grid de Poesias -->
+      <div class="poetry-grid" id="poetry-grid">
+        ${poems.map(poem => `
+          <article class="poetry-card ${poem.category === 'aforismos' ? 'highlight-card' : ''}" data-category="${poem.category}">
+            <div class="poetry-card-content">
+              <div class="poetry-card-top">
+                <span class="poetry-card-badge">${poem.type === 'aforismo' ? '💎 Aforismos' : '✒️ Poema'}</span>
+                <span class="poetry-card-time">⏱️ ${poem.time}</span>
+              </div>
+              <h2 class="poetry-card-title">
+                <a href="${poem.url}">${poem.title}</a>
+              </h2>
+              <div class="poetry-card-tags">
+                ${poem.tags.map(t => `<span class="poetry-tag">${t}</span>`).join('')}
+              </div>
+              <p class="poetry-card-preview">"${poem.preview}"</p>
+              <div class="poetry-card-footer">
+                <a href="${poem.url}" class="poetry-read-btn">
+                  <span>${poem.type === 'aforismo' ? 'Explorar Aforismos' : 'Ler Poema'}</span>
+                  <span class="poetry-read-arrow">→</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        `).join('')}
+      </div>
+
+      <div class="poetry-quote-box">
+        <blockquote>
+          "Que nossa breve passagem seja mais que travessia — compassos que ecoem na música universal."
+        </blockquote>
+      </div>
+    `;
+
+    // Filtros interativos
+    const filterBtns = container.querySelectorAll('.poetry-filter-btn');
+    const cards = container.querySelectorAll('.poetry-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        const filter = btn.getAttribute('data-filter');
+        cards.forEach(c => {
+          if (filter === 'all' || c.getAttribute('data-category') === filter) {
+            c.style.display = 'flex';
+          } else {
+            c.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  function renderAforismosReader() {
+    const rawNodes = Array.from(container.childNodes);
+    let currentCategory = 'Geral';
+    const sections = [];
+    let currentItems = [];
+
+    rawNodes.forEach(node => {
+      if (node.nodeType !== Node.ELEMENT_NODE) return;
+      const tagName = node.tagName.toLowerCase();
+      if (tagName === 'h3' && (node.querySelector('a[href*="./"]') || node.innerText.toLowerCase().includes('poesias e aforismos'))) return;
+      if (tagName === 'h2' && node.innerText.trim().toLowerCase() === 'aforismos') return;
+      if (tagName === 'hr' || (tagName === 'div' && (node.innerText.includes('<<') || node.innerText.includes('>>')))) return;
+
+      if (tagName === 'h3') {
+        if (currentItems.length > 0) {
+          sections.push({ title: currentCategory, items: currentItems });
+          currentItems = [];
+        }
+        currentCategory = node.innerText.trim();
+        return;
+      }
+
+      if (tagName === 'p') {
+        const text = node.innerText.trim();
+        if (text) {
+          currentItems.push(text);
+        }
+      }
+    });
+
+    if (currentItems.length > 0) {
+      sections.push({ title: currentCategory, items: currentItems });
+    }
+
+    container.innerHTML = `
+      <div class="poetry-reading-bar" id="poetry-reading-bar">
+        <div class="poetry-reading-bar-left">
+          <a href="${baseUrl}" class="poetry-nav-back-btn" title="Voltar ao Índice">
+            <span>←</span> <span class="poetry-nav-back-text">Todas as Poesias</span>
+          </a>
+        </div>
+        <div class="poetry-reading-controls">
+          <div class="poetry-font-resizer" role="group" aria-label="Tamanho da Fonte">
+            <button id="font-dec-btn" class="poetry-font-btn" title="Diminuir fonte">A-</button>
+            <button id="font-reset-btn" class="poetry-font-btn" title="Fonte padrão">A</button>
+            <button id="font-inc-btn" class="poetry-font-btn" title="Aumentar fonte">A+</button>
+          </div>
+          <button id="poetry-audio-btn" class="poetry-control-btn audio-btn" title="Ouvir aforismos" aria-label="Ouvir Aforismos">
+            <span id="audio-icon">🔊</span> <span id="audio-label">Ouvir</span>
+          </button>
+        </div>
+        <div class="poetry-progress-track">
+          <div class="poetry-progress-bar" id="poetry-progress-bar"></div>
+        </div>
+      </div>
+
+      <article class="poetry-article aforismos-view" id="poetry-article">
+        <header class="poetry-article-header">
+          <div class="poetry-meta-top">
+            <span class="poetry-badge-pill">💎 Coletânea de Aforismos</span>
+            <span class="poetry-time-pill">⏱️ 1 min de leitura</span>
+          </div>
+          <h1 class="poetry-article-title">Aforismos</h1>
+          <p class="poetry-aforismos-intro">Pensamentos lapidados sobre o conhecimento, a mente, as virtudes e a natureza.</p>
+        </header>
+
+        <div class="aforismos-container" id="aforismos-content">
+          ${sections.map(sec => `
+            <div class="aforismo-section">
+              <h2 class="aforismo-section-heading"><span>✧</span> ${sec.title}</h2>
+              <div class="aforismos-grid">
+                ${sec.items.map(item => `
+                  <div class="aforismo-card">
+                    <div class="aforismo-card-text">${item}</div>
+                    <div class="aforismo-card-footer">
+                      <span class="aforismo-tag-small">${sec.title.split(' ')[1] || 'Pensamento'}</span>
+                      <button class="btn-copy-aforismo" onclick="window.copyAforismo(this)" title="Copiar aforismo">
+                        <span>📋</span> <span>Copiar</span>
+                      </button>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+
+        <nav class="poetry-nav-footer" aria-label="Navegação">
+          <a href="${baseUrl}" class="poetry-nav-card prev">
+            <span class="poetry-nav-dir">← Coleção</span>
+            <span class="poetry-nav-title">Índice Poético</span>
+          </a>
+          <a href="${baseUrl}" class="poetry-center-link">
+            <span>✨</span> <span>Todas as Poesias</span>
+          </a>
+          <a href="${baseUrl}vida-breve-rotas-eternas.html" class="poetry-nav-card next">
+            <span class="poetry-nav-dir">Próximo Poema →</span>
+            <span class="poetry-nav-title">Vida breve, rotas eternas</span>
+          </a>
+        </nav>
+      </article>
+    `;
+
+    setupCommonPoetryInteractions();
+  }
+
+  function renderPoemReader() {
+    let currentPoem = null;
+    let currentIndex = -1;
+    const pageFilename = pathname.split('/').pop().replace(/\.html$/, '');
+
+    for (let i = 0; i < poems.length; i++) {
+      const pFilename = poems[i].url.split('/').pop().replace(/\.html$/, '');
+      if (pageFilename === pFilename || pageFilename === poems[i].id) {
+        currentPoem = poems[i];
+        currentIndex = i;
+        break;
+      }
+    }
+
+    if (!currentPoem) {
+      currentPoem = poems[1]; // default first poem
+      currentIndex = 1;
+    }
+
+    const prevPoem = currentIndex > 0 ? poems[currentIndex - 1] : null;
+    const nextPoem = currentIndex < poems.length - 1 ? poems[currentIndex + 1] : null;
+
+    const rawNodes = Array.from(container.childNodes);
+    const poemStanzas = [];
+
+    rawNodes.forEach(node => {
+      if (node.nodeType !== Node.ELEMENT_NODE) return;
+      const tagName = node.tagName.toLowerCase();
+      if (tagName === 'h3' && (node.querySelector('a[href*="./"]') || node.innerText.toLowerCase().includes('poesias e aforismos'))) return;
+      if (tagName === 'h2' && node.innerText.trim().toLowerCase().includes(currentPoem.title.toLowerCase())) return;
+      if (tagName === 'hr') return;
+      if (tagName === 'div' && (node.innerText.includes('<<') || node.innerText.includes('>>') || node.style.clear === 'both')) return;
+      poemStanzas.push(node.cloneNode(true));
+    });
+
+    container.innerHTML = `
+      <div class="poetry-reading-bar" id="poetry-reading-bar">
+        <div class="poetry-reading-bar-left">
+          <a href="${baseUrl}" class="poetry-nav-back-btn" title="Voltar ao Índice">
+            <span>←</span> <span class="poetry-nav-back-text">Todas as Poesias</span>
+          </a>
+        </div>
+        <div class="poetry-reading-controls">
+          <button id="poetry-case-btn" class="poetry-control-btn" title="Alternar Caixa Alta">
+            <span>🔠</span> <span id="poetry-case-label">Caixa Alta</span>
+          </button>
+          <div class="poetry-font-resizer" role="group" aria-label="Tamanho da Fonte">
+            <button id="font-dec-btn" class="poetry-font-btn" title="Diminuir fonte">A-</button>
+            <button id="font-reset-btn" class="poetry-font-btn" title="Fonte padrão">A</button>
+            <button id="font-inc-btn" class="poetry-font-btn" title="Aumentar fonte">A+</button>
+          </div>
+          <button id="poetry-audio-btn" class="poetry-control-btn audio-btn" title="Ouvir poema" aria-label="Ouvir Poema">
+            <span id="audio-icon">🔊</span> <span id="audio-label">Ouvir</span>
+          </button>
+        </div>
+        <div class="poetry-progress-track">
+          <div class="poetry-progress-bar" id="poetry-progress-bar"></div>
+        </div>
+      </div>
+
+      <article class="poetry-article poem-view" id="poetry-article">
+        <header class="poetry-article-header">
+          <div class="poetry-meta-top">
+            <span class="poetry-badge-pill">✒️ Poesia</span>
+            <span class="poetry-time-pill">⏱️ ${currentPoem.time} de leitura</span>
+          </div>
+          <h1 class="poetry-article-title">${currentPoem.title}</h1>
+          <div class="poetry-article-tags">
+            ${currentPoem.tags.map(t => `<span class="poetry-tag">${t}</span>`).join('')}
+          </div>
+        </header>
+
+        <div class="poetry-poem-body" id="poetry-body"></div>
+
+        <div class="poetry-copy-action-row">
+          <button class="btn-copy-full-poem" id="btn-copy-full-poem" title="Copiar poema completo">
+            <span>📋</span> <span>Copiar Poema Completo</span>
+          </button>
+        </div>
+
+        <nav class="poetry-nav-footer" aria-label="Navegação entre poemas">
+          ${prevPoem ? `
+            <a href="${prevPoem.url}" class="poetry-nav-card prev">
+              <span class="poetry-nav-dir">← Poema Anterior</span>
+              <span class="poetry-nav-title">${prevPoem.title}</span>
+            </a>
+          ` : `
+            <a href="${baseUrl}" class="poetry-nav-card prev">
+              <span class="poetry-nav-dir">← Coleção</span>
+              <span class="poetry-nav-title">Índice Poético</span>
+            </a>
+          `}
+
+          <a href="${baseUrl}" class="poetry-center-link" title="Voltar ao Índice">
+            <span>✨</span> <span>Todas as Poesias</span>
+          </a>
+
+          ${nextPoem ? `
+            <a href="${nextPoem.url}" class="poetry-nav-card next">
+              <span class="poetry-nav-dir">Próximo Poema →</span>
+              <span class="poetry-nav-title">${nextPoem.title}</span>
+            </a>
+          ` : `
+            <a href="${baseUrl}" class="poetry-nav-card next">
+              <span class="poetry-nav-dir">Fim da Coletânea →</span>
+              <span class="poetry-nav-title">Voltar ao Início</span>
+            </a>
+          `}
+        </nav>
+      </article>
+    `;
+
+    const bodyEl = document.getElementById('poetry-body');
+    poemStanzas.forEach(el => {
+      el.classList.add('poetry-stanza');
+      bodyEl.appendChild(el);
+    });
+
+    const copyFullBtn = document.getElementById('btn-copy-full-poem');
+    if (copyFullBtn) {
+      copyFullBtn.addEventListener('click', () => {
+        const text = `${currentPoem.title}\n\n` + bodyEl.innerText.trim();
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(() => {
+            const originalHTML = copyFullBtn.innerHTML;
+            copyFullBtn.innerHTML = '<span>✓</span> <span>Poema Copiado!</span>';
+            copyFullBtn.classList.add('copied');
+            setTimeout(() => {
+              copyFullBtn.innerHTML = originalHTML;
+              copyFullBtn.classList.remove('copied');
+            }, 2000);
+          });
+        }
+      });
+    }
+
+    setupCommonPoetryInteractions();
+  }
+
+  function setupCommonPoetryInteractions() {
+    const caseBtn = document.getElementById('poetry-case-btn');
+    const article = document.getElementById('poetry-article');
+    const progressBar = document.getElementById('poetry-progress-bar');
+    let isUppercase = false;
+
+    if (caseBtn && article) {
+      caseBtn.addEventListener('click', () => {
+        isUppercase = !isUppercase;
+        article.classList.toggle('uppercase-mode', isUppercase);
+        caseBtn.classList.toggle('active', isUppercase);
+        const label = document.getElementById('poetry-case-label');
+        if (label) label.textContent = isUppercase ? 'Minúscula' : 'Caixa Alta';
+      });
+    }
+
+    const fontDec = document.getElementById('font-dec-btn');
+    const fontReset = document.getElementById('font-reset-btn');
+    const fontInc = document.getElementById('font-inc-btn');
+    let currentFontSize = 19;
+
+    if (fontDec && fontReset && fontInc && article) {
+      fontDec.addEventListener('click', () => {
+        if (currentFontSize > 15) {
+          currentFontSize -= 2;
+          article.style.setProperty('--reading-font-size', currentFontSize + 'px');
+        }
+      });
+      fontReset.addEventListener('click', () => {
+        currentFontSize = 19;
+        article.style.removeProperty('--reading-font-size');
+      });
+      fontInc.addEventListener('click', () => {
+        if (currentFontSize < 28) {
+          currentFontSize += 2;
+          article.style.setProperty('--reading-font-size', currentFontSize + 'px');
+        }
+      });
+    }
+
+    if (progressBar) {
+      window.addEventListener('scroll', () => {
+        const docEl = document.documentElement;
+        const scrollTop = docEl.scrollTop || document.body.scrollTop;
+        const scrollHeight = docEl.scrollHeight - docEl.clientHeight;
+        const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+        progressBar.style.width = Math.min(100, Math.max(0, progress)) + '%';
+      }, { passive: true });
+    }
+
+    const audioBtn = document.getElementById('poetry-audio-btn');
+    const audioIcon = document.getElementById('audio-icon');
+    const audioLabel = document.getElementById('audio-label');
+    let isPlaying = false;
+    let synth = window.speechSynthesis;
+    let utterance = null;
+
+    if (audioBtn && synth) {
+      audioBtn.addEventListener('click', () => {
+        if (isPlaying) {
+          synth.cancel();
+          isPlaying = false;
+          audioBtn.classList.remove('speaking');
+          if (audioIcon) audioIcon.textContent = '🔊';
+          if (audioLabel) audioLabel.textContent = 'Ouvir';
+          return;
+        }
+
+        const bodyEl = document.getElementById('poetry-body') || document.getElementById('aforismos-content');
+        const textToRead = bodyEl ? bodyEl.innerText : '';
+        if (!textToRead) return;
+
+        synth.cancel();
+        utterance = new SpeechSynthesisUtterance(textToRead);
+        utterance.lang = 'pt-BR';
+        utterance.rate = 0.95;
+
+        utterance.onstart = () => {
+          isPlaying = true;
+          audioBtn.classList.add('speaking');
+          if (audioIcon) audioIcon.textContent = '⏹️';
+          if (audioLabel) audioLabel.textContent = 'Parar';
+        };
+
+        utterance.onend = () => {
+          isPlaying = false;
+          audioBtn.classList.remove('speaking');
+          if (audioIcon) audioIcon.textContent = '🔊';
+          if (audioLabel) audioLabel.textContent = 'Ouvir';
+        };
+
+        utterance.onerror = () => {
+          isPlaying = false;
+          audioBtn.classList.remove('speaking');
+          if (audioIcon) audioIcon.textContent = '🔊';
+          if (audioLabel) audioLabel.textContent = 'Ouvir';
+        };
+
+        synth.speak(utterance);
+      });
+    }
+  }
+
+  window.copyAforismo = function(btn) {
+    const card = btn.closest('.aforismo-card');
+    if (!card) return;
+    const textEl = card.querySelector('.aforismo-card-text');
+    if (!textEl) return;
+    const text = textEl.innerText.trim();
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => {
+        const origHTML = btn.innerHTML;
+        btn.innerHTML = '<span>✓</span> <span>Copiado!</span>';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.innerHTML = origHTML;
+          btn.classList.remove('copied');
+        }, 2000);
+      });
+    }
+  };
+})();
+</script>

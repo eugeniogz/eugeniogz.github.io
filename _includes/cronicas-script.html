@@ -1,0 +1,480 @@
+<script>
+(function() {
+  if (window.__cronicasInitialized) return;
+  const container = document.getElementById('cronicas-app');
+  if (!container) return;
+  window.__cronicasInitialized = true;
+
+  const pathname = window.location.pathname;
+
+  const baseUrl = '{{ "/cronicas/" | relative_url }}'.replace(/\/index\.html$/, '/');
+
+  const volumes = [
+    {
+      id: 'cronicas-1',
+      title: 'Crônicas 1',
+      subtitle: 'A arte da atenção plena nos pequenos instantes',
+      badge: '📜 Volume 1',
+      url: baseUrl + 'cronicas-1/',
+      desc: '11 crônicas sobre desacelerar, saborear o café da manhã, organizar as gavetas mentais e encontrar a serena euforia no cotidiano.',
+      count: 11,
+      timeTotal: '20 min',
+      stories: [
+        { id: 'serena-euforia', title: 'Serena euforia', time: '1 min', url: baseUrl + 'cronicas-1/serena-euforia.html', desc: 'O estado de plenitude silenciosa que floresce na mente desperta.' },
+        { id: 'alvorecer', title: 'Alvorecer', time: '3 min', url: baseUrl + 'cronicas-1/alvorecer.html', desc: 'O despertar das primeiras luzes e a renovação diária dos pensamentos.' },
+        { id: 'mente-presente', title: 'Mente presente', time: '1 min', url: baseUrl + 'cronicas-1/mente-presente.html', desc: 'A ancoragem no momento presente como refúgio e clareza.' },
+        { id: 'manha-de-domingo', title: 'Manhã de domingo', time: '2 min', url: baseUrl + 'cronicas-1/manha-de-domingo.html', desc: 'A serenidade dos domingos e o ritmo manso das horas.' },
+        { id: 'relogios-e-cafes', title: 'Relógios e cafés', time: '3 min', url: baseUrl + 'cronicas-1/relogios-e-cafes.html', desc: 'O diálogo entre o ritmo dos ponteiros e o aroma do café fresquinho.' },
+        { id: 'as-gavetas-mentais', title: 'As gavetas mentais', time: '2 min', url: baseUrl + 'cronicas-1/as-gavetas-mentais.html', desc: 'Arrumando os compartimentos íntimos da memória e dos sentimentos.' },
+        { id: 'cinza-vazio', title: 'Cinza vazio', time: '1 min', url: baseUrl + 'cronicas-1/cinza-vazio.html', desc: 'A superação dos dias nublados e a redescoberta da luz interior.' },
+        { id: 'aconchego-sereno', title: 'Aconchego sereno', time: '2 min', url: baseUrl + 'cronicas-1/aconchego-sereno.html', desc: 'O calor reconfortante do lar e o valor das coisas simples.' },
+        { id: 'quebrando-a-monotonia', title: 'Quebrando a monotonia', time: '2 min', url: baseUrl + 'cronicas-1/quebrando-a-monotonia.html', desc: 'Aprender a enxergar novidade onde o hábito só via rotina.' },
+        { id: 'pintura-modesta', title: 'Pintura modesta', time: '1 min', url: baseUrl + 'cronicas-1/pintura-modesta.html', desc: 'A contemplação das pinceladas despretensiosas da vida real.' },
+        { id: 'atento-descanso', title: 'Atento descanso', time: '1 min', url: baseUrl + 'cronicas-1/atento-descanso.html', desc: 'O repouso consciente como fonte essencial de renovação do espírito.' }
+      ]
+    },
+    {
+      id: 'cronicas-2',
+      title: 'Crônicas 2',
+      subtitle: 'A poesia do cotidiano e os laços que nos unem',
+      badge: '📜 Volume 2',
+      url: baseUrl + 'cronicas-2/',
+      desc: '8 crônicas sobre partilha, amor maduro, acolhimento das imprecisões humanas e atenção aos desvios do piloto automático.',
+      count: 8,
+      timeTotal: '15 min',
+      stories: [
+        { id: 'alegria-em-graos-selecionados', title: 'Alegria em grãos selecionados', time: '2 min', url: baseUrl + 'cronicas-2/alegria-em-graos-selecionados.html', desc: 'A escolha atenta das vivências que nutrem a alma.' },
+        { id: 'singelas-letras-da-imprecisao', title: 'Singelas letras da imprecisão', time: '1 min', url: baseUrl + 'cronicas-2/singelas-letras-da-imprecisao.html', desc: 'A beleza imperfeita e sincera dos primeiros rascunhos da vida.' },
+        { id: 'do-barulho-ao-canto', title: 'Do barulho ao canto', time: '2 min', url: baseUrl + 'cronicas-2/do-barulho-ao-canto.html', desc: 'Transformando o barulho das pressões em música harmoniosa.' },
+        { id: 'realidade-na-mesa-de-todos', title: 'Realidade na mesa de todos', time: '3 min', url: baseUrl + 'cronicas-2/realidade-na-mesa-de-todos.html', desc: 'A riqueza da conversa franca e da partilha ao redor da mesa.' },
+        { id: 'fe-e-atencao', title: 'Fé e atenção', time: '2 min', url: baseUrl + 'cronicas-2/fe-e-atencao.html', desc: 'A confiança lúcida no futuro aliada ao cuidado vigilante no presente.' },
+        { id: 'amor-consciente', title: 'Amor consciente', time: '2 min', url: baseUrl + 'cronicas-2/amor-consciente.html', desc: 'O afeto que liberta, apoia o florescimento e constrói laços sólidos.' },
+        { id: 'tapete-de-algodao', title: 'Tapete de algodão', time: '1 min', url: baseUrl + 'cronicas-2/tapete-de-algodao.html', desc: 'A suavidade das nuvens e a calma de pisar suavemente no mundo.' },
+        { id: 'atencao-aos-desvios', title: 'Atenção aos desvios', time: '1 min', url: baseUrl + 'cronicas-2/atencao-aos-desvios.html', desc: 'Reconhecer as distrações sem aflição para reajustar o curso.' }
+      ]
+    },
+    {
+      id: 'cronicas-3',
+      title: 'Crônicas 3',
+      subtitle: 'Florescimento do espírito',
+      badge: '📜 Volume 3',
+      url: baseUrl + 'cronicas-3/',
+      desc: '5 crônicas sobre a herança moral, o bioma mental, a memória afetiva e a tessitura de momentos que dão sentido à existência.',
+      count: 5,
+      timeTotal: '6 min',
+      stories: [
+        { id: 'felicidade-singelo-trinado', title: 'Felicidade — singelo trinado', time: '1 min', url: baseUrl + 'cronicas-3/felicidade-singelo-trinado.html', desc: 'A alegria pura despertada pelo canto livre de um pássaro.' },
+        { id: 'bioma-mental', title: 'Bioma mental', time: '1 min', url: baseUrl + 'cronicas-3/bioma-mental.html', desc: 'A rica ecologia de ideias e sentimentos que habitam nossa mente.' },
+        { id: 'vestido-azul', title: 'Vestido azul', time: '1 min', url: baseUrl + 'cronicas-3/vestido-azul.html', desc: 'A força das lembranças que atravessam gerações com ternura.' },
+        { id: 'a-heranca-real', title: 'A herança real', time: '2 min', url: baseUrl + 'cronicas-3/a-heranca-real.html', desc: 'O verdadeiro patrimônio: os valores e o exemplo transmitidos.' },
+        { id: 'momentos-que-tecem-a-vida', title: 'Momentos que tecem a vida', time: '1 min', url: baseUrl + 'cronicas-3/momentos-que-tecem-a-vida.html', desc: 'A trama sutil dos pequenos instantes que formam a nossa história.' }
+      ]
+    },
+    {
+      id: 'breves-cronicas',
+      title: 'Breves Crônicas',
+      subtitle: 'Instantâneos e registros velozes',
+      badge: '🌿 Extra',
+      url: baseUrl + 'breves-cronicas/',
+      desc: 'Instantâneos líricos e observações breves da natureza urbana.',
+      count: 1,
+      timeTotal: '1 min',
+      stories: [
+        { id: 'o-cortejo-do-sabia', title: 'O cortejo do sabiá', time: '1 min', url: baseUrl + 'breves-cronicas/o-cortejo-do-sabia.html', desc: 'O canto de cortejo matinal do sabiá que celebra a vida.' }
+      ]
+    }
+  ];
+
+  // Identificação da rota
+  const isMasterIndex = pathname.endsWith('/cronicas/') || pathname.endsWith('/cronicas/index.html') || pathname.endsWith('/cronicas');
+  const isVol1Index = pathname.endsWith('/cronicas-1/') || pathname.endsWith('/cronicas-1/index.html') || pathname.endsWith('/cronicas-1');
+  const isVol2Index = pathname.endsWith('/cronicas-2/') || pathname.endsWith('/cronicas-2/index.html') || pathname.endsWith('/cronicas-2');
+  const isVol3Index = pathname.endsWith('/cronicas-3/') || pathname.endsWith('/cronicas-3/index.html') || pathname.endsWith('/cronicas-3');
+  const isBrevesIndex = pathname.endsWith('/breves-cronicas/') || pathname.endsWith('/breves-cronicas/index.html') || pathname.endsWith('/breves-cronicas');
+
+  if (isMasterIndex) {
+    renderMasterHub();
+    return;
+  }
+
+  if (isVol1Index) {
+    renderVolumeHub(volumes[0]);
+    return;
+  }
+  if (isVol2Index) {
+    renderVolumeHub(volumes[1]);
+    return;
+  }
+  if (isVol3Index) {
+    renderVolumeHub(volumes[2]);
+    return;
+  }
+  if (isBrevesIndex) {
+    renderVolumeHub(volumes[3]);
+    return;
+  }
+
+  // Página individual de crônica
+  renderChronicleReader();
+
+  function renderMasterHub() {
+    const totalStories = volumes.reduce((acc, v) => acc + v.count, 0);
+
+    container.innerHTML = `
+      <div class="cronicas-hero">
+        <div class="cronicas-hero-badge">
+          <span>☕</span> Cotidiano & Filosofia
+        </div>
+        <h1 class="cronicas-hero-title">Crônicas Diárias</h1>
+        <p class="cronicas-hero-subtitle">
+          Sentimentos, percepções e filosofia no cotidiano. Crônicas que revelam a arte da atenção plena, os laços humanos e o florescimento do espírito.
+        </p>
+
+        <div class="cronicas-stats-pills">
+          <div class="cronicas-stat-pill">
+            <span class="cronicas-stat-icon">📚</span>
+            <span><strong>${totalStories}</strong> Crônicas no Total</span>
+          </div>
+          <div class="cronicas-stat-pill">
+            <span class="cronicas-stat-icon">📖</span>
+            <span><strong>4</strong> Volumes Temáticos</span>
+          </div>
+          <div class="cronicas-stat-pill">
+            <span class="cronicas-stat-icon">⏱️</span>
+            <span>Leituras de 1 a 3 min</span>
+          </div>
+          <div class="cronicas-stat-pill">
+            <span class="cronicas-stat-icon">🔊</span>
+            <span>Áudio Narração</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra de Navegação de Volumes -->
+      <div class="cronicas-vol-nav">
+        <a href="${baseUrl}" class="cronicas-vol-nav-item active">Visão Geral dos Volumes</a>
+        <a href="${volumes[0].url}" class="cronicas-vol-nav-item">Volume 1 (11)</a>
+        <a href="${volumes[1].url}" class="cronicas-vol-nav-item">Volume 2 (8)</a>
+        <a href="${volumes[2].url}" class="cronicas-vol-nav-item">Volume 3 (5)</a>
+        <a href="${volumes[3].url}" class="cronicas-vol-nav-item">Breves (1)</a>
+      </div>
+
+      <!-- Grid de Volumes -->
+      <div class="cronicas-volumes-grid">
+        ${volumes.map(vol => `
+          <div class="cronicas-volume-card">
+            <div class="cronicas-volume-card-header">
+              <span class="cronicas-volume-badge">${vol.badge}</span>
+              <span class="cronicas-volume-meta">⏱️ ${vol.timeTotal} · ${vol.count} crônicas</span>
+            </div>
+            <h2 class="cronicas-volume-title">
+              <a href="${vol.url}">${vol.title}: ${vol.subtitle}</a>
+            </h2>
+            <p class="cronicas-volume-desc">${vol.desc}</p>
+            
+            <div class="cronicas-volume-story-list">
+              ${vol.stories.slice(0, 4).map(st => `
+                <a href="${st.url}" class="cronicas-mini-link">
+                  <span>📄 ${st.title}</span>
+                  <span class="cronicas-mini-time">${st.time}</span>
+                </a>
+              `).join('')}
+              ${vol.stories.length > 4 ? `
+                <a href="${vol.url}" class="cronicas-see-more-link">
+                  + ver todas as ${vol.stories.length} crônicas do ${vol.title} →
+                </a>
+              ` : ''}
+            </div>
+
+            <div class="cronicas-volume-footer">
+              <a href="${vol.url}" class="cronicas-read-vol-btn">
+                <span>Abrir ${vol.title}</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  }
+
+  function renderVolumeHub(vol) {
+    container.innerHTML = `
+      <div class="cronicas-hero">
+        <div class="cronicas-hero-badge">
+          <span>${vol.badge}</span>
+        </div>
+        <h1 class="cronicas-hero-title">${vol.title}: ${vol.subtitle}</h1>
+        <p class="cronicas-hero-subtitle">${vol.desc}</p>
+
+        <div class="cronicas-stats-pills">
+          <div class="cronicas-stat-pill">
+            <span class="cronicas-stat-icon">📄</span>
+            <span><strong>${vol.count}</strong> Crônicas</span>
+          </div>
+          <div class="cronicas-stat-pill">
+            <span class="cronicas-stat-icon">⏱️</span>
+            <span><strong>${vol.timeTotal}</strong> Leitura do Volume</span>
+          </div>
+          <div class="cronicas-stat-pill">
+            <span class="cronicas-stat-icon">☕</span>
+            <span>Atenção e Cotidiano</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra de Navegação de Volumes -->
+      <div class="cronicas-vol-nav">
+        <a href="${baseUrl}" class="cronicas-vol-nav-item">← Todos os Volumes</a>
+        <a href="${volumes[0].url}" class="cronicas-vol-nav-item ${vol.id === 'cronicas-1' ? 'active' : ''}">Volume 1</a>
+        <a href="${volumes[1].url}" class="cronicas-vol-nav-item ${vol.id === 'cronicas-2' ? 'active' : ''}">Volume 2</a>
+        <a href="${volumes[2].url}" class="cronicas-vol-nav-item ${vol.id === 'cronicas-3' ? 'active' : ''}">Volume 3</a>
+        <a href="${volumes[3].url}" class="cronicas-vol-nav-item ${vol.id === 'breves-cronicas' ? 'active' : ''}">Breves</a>
+      </div>
+
+      <!-- Grid de Crônicas do Volume -->
+      <div class="cronicas-grid">
+        ${vol.stories.map((st, idx) => `
+          <article class="cronicas-card">
+            <div class="cronicas-card-top">
+              <span class="cronicas-card-num">#${idx + 1}</span>
+              <span class="cronicas-card-time">⏱️ ${st.time}</span>
+            </div>
+            <h2 class="cronicas-card-title">
+              <a href="${st.url}">${st.title}</a>
+            </h2>
+            <p class="cronicas-card-desc">${st.desc}</p>
+            <div class="cronicas-card-footer">
+              <a href="${st.url}" class="cronicas-read-btn">
+                <span>Ler Crônica</span>
+                <span>→</span>
+              </a>
+            </div>
+          </article>
+        `).join('')}
+      </div>
+    `;
+  }
+
+  function renderChronicleReader() {
+    let currentVol = null;
+    let currentStory = null;
+    let currentStoryIndex = -1;
+
+    const pageFilename = pathname.split('/').pop().replace(/\.html$/, '');
+
+    // Localiza a crônica atual
+    for (let v of volumes) {
+      for (let i = 0; i < v.stories.length; i++) {
+        const s = v.stories[i];
+        const sFilename = s.url.split('/').pop().replace(/\.html$/, '');
+        if (pageFilename === sFilename || pageFilename === s.id) {
+          currentVol = v;
+          currentStory = s;
+          currentStoryIndex = i;
+          break;
+        }
+      }
+      if (currentStory) break;
+    }
+
+    if (!currentStory) {
+      currentVol = volumes[0];
+      currentStory = currentVol.stories[0];
+      currentStoryIndex = 0;
+    }
+
+    const prevStory = currentStoryIndex > 0 ? currentVol.stories[currentStoryIndex - 1] : null;
+    const nextStory = currentStoryIndex < currentVol.stories.length - 1 ? currentVol.stories[currentStoryIndex + 1] : null;
+
+    const rawNodes = Array.from(container.childNodes);
+    const bodyElements = [];
+
+    rawNodes.forEach(node => {
+      if (node.nodeType !== Node.ELEMENT_NODE) return;
+      const tagName = node.tagName.toLowerCase();
+      if (tagName === 'h3' && (node.querySelector('a[href*="./"]') || node.innerText.toLowerCase().includes('crônicas'))) return;
+      if (tagName === 'h2' && node.innerText.trim().toLowerCase() === currentStory.title.toLowerCase()) return;
+      if (tagName === 'hr') return;
+      if (tagName === 'div' && (node.innerText.includes('<<') || node.innerText.includes('>>') || node.style.clear === 'both')) return;
+      bodyElements.push(node.cloneNode(true));
+    });
+
+    container.innerHTML = `
+      <div class="cronicas-reading-bar" id="cronicas-reading-bar">
+        <div class="cronicas-reading-bar-left">
+          <a href="${currentVol.url}" class="cronicas-nav-back-btn" title="Voltar ao Volume">
+            <span>←</span> <span class="cronicas-nav-back-text">${currentVol.title}</span>
+          </a>
+        </div>
+        <div class="cronicas-reading-controls">
+          <button id="cronicas-case-btn" class="cronicas-control-btn" title="Alternar Caixa Alta">
+            <span>🔠</span> <span id="cronicas-case-label">Caixa Alta</span>
+          </button>
+          <div class="cronicas-font-resizer" role="group" aria-label="Tamanho da Fonte">
+            <button id="font-dec-btn" class="cronicas-font-btn" title="Diminuir fonte">A-</button>
+            <button id="font-reset-btn" class="cronicas-font-btn" title="Fonte padrão">A</button>
+            <button id="font-inc-btn" class="cronicas-font-btn" title="Aumentar fonte">A+</button>
+          </div>
+          <button id="cronicas-audio-btn" class="cronicas-control-btn audio-btn" title="Ouvir crônica" aria-label="Ouvir Crônica">
+            <span id="audio-icon">🔊</span> <span id="audio-label">Ouvir</span>
+          </button>
+        </div>
+        <div class="cronicas-progress-track">
+          <div class="cronicas-progress-bar" id="cronicas-progress-bar"></div>
+        </div>
+      </div>
+
+      <article class="cronicas-article" id="cronicas-article">
+        <header class="cronicas-article-header">
+          <div class="cronicas-meta-top">
+            <span class="cronicas-badge-pill">${currentVol.title}</span>
+            <span class="cronicas-time-pill">⏱️ ${currentStory.time} de leitura</span>
+          </div>
+          <h1 class="cronicas-article-title">${currentStory.title}</h1>
+        </header>
+
+        <div class="cronicas-article-body" id="cronicas-body"></div>
+
+        <nav class="cronicas-nav-footer" aria-label="Navegação entre crônicas">
+          ${prevStory ? `
+            <a href="${prevStory.url}" class="cronicas-nav-card prev">
+              <span class="cronicas-nav-dir">← Crônica Anterior</span>
+              <span class="cronicas-nav-title">${prevStory.title}</span>
+            </a>
+          ` : `
+            <a href="${currentVol.url}" class="cronicas-nav-card prev">
+              <span class="cronicas-nav-dir">← Volume</span>
+              <span class="cronicas-nav-title">${currentVol.title}</span>
+            </a>
+          `}
+
+          <a href="${currentVol.url}" class="cronicas-center-link" title="Voltar ao Volume">
+            <span>☕</span> <span>${currentVol.title}</span>
+          </a>
+
+          ${nextStory ? `
+            <a href="${nextStory.url}" class="cronicas-nav-card next">
+              <span class="cronicas-nav-dir">Próxima Crônica →</span>
+              <span class="cronicas-nav-title">${nextStory.title}</span>
+            </a>
+          ` : `
+            <a href="${baseUrl}" class="cronicas-nav-card next">
+              <span class="cronicas-nav-dir">Todos os Volumes →</span>
+              <span class="cronicas-nav-title">Índice Geral</span>
+            </a>
+          `}
+        </nav>
+      </article>
+    `;
+
+    const bodyEl = document.getElementById('cronicas-body');
+    bodyElements.forEach(el => bodyEl.appendChild(el));
+
+    setupCronicasInteractions();
+  }
+
+  function setupCronicasInteractions() {
+    const caseBtn = document.getElementById('cronicas-case-btn');
+    const article = document.getElementById('cronicas-article');
+    const progressBar = document.getElementById('cronicas-progress-bar');
+    let isUppercase = false;
+
+    if (caseBtn && article) {
+      caseBtn.addEventListener('click', () => {
+        isUppercase = !isUppercase;
+        article.classList.toggle('uppercase-mode', isUppercase);
+        caseBtn.classList.toggle('active', isUppercase);
+        const label = document.getElementById('cronicas-case-label');
+        if (label) label.textContent = isUppercase ? 'Minúscula' : 'Caixa Alta';
+      });
+    }
+
+    const fontDec = document.getElementById('font-dec-btn');
+    const fontReset = document.getElementById('font-reset-btn');
+    const fontInc = document.getElementById('font-inc-btn');
+    let currentFontSize = 18;
+
+    if (fontDec && fontReset && fontInc && article) {
+      fontDec.addEventListener('click', () => {
+        if (currentFontSize > 14) {
+          currentFontSize -= 2;
+          article.style.setProperty('--reading-font-size', currentFontSize + 'px');
+        }
+      });
+      fontReset.addEventListener('click', () => {
+        currentFontSize = 18;
+        article.style.removeProperty('--reading-font-size');
+      });
+      fontInc.addEventListener('click', () => {
+        if (currentFontSize < 28) {
+          currentFontSize += 2;
+          article.style.setProperty('--reading-font-size', currentFontSize + 'px');
+        }
+      });
+    }
+
+    if (progressBar) {
+      window.addEventListener('scroll', () => {
+        const docEl = document.documentElement;
+        const scrollTop = docEl.scrollTop || document.body.scrollTop;
+        const scrollHeight = docEl.scrollHeight - docEl.clientHeight;
+        const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+        progressBar.style.width = Math.min(100, Math.max(0, progress)) + '%';
+      }, { passive: true });
+    }
+
+    const audioBtn = document.getElementById('cronicas-audio-btn');
+    const audioIcon = document.getElementById('audio-icon');
+    const audioLabel = document.getElementById('audio-label');
+    let isPlaying = false;
+    let synth = window.speechSynthesis;
+    let utterance = null;
+
+    if (audioBtn && synth) {
+      audioBtn.addEventListener('click', () => {
+        if (isPlaying) {
+          synth.cancel();
+          isPlaying = false;
+          audioBtn.classList.remove('speaking');
+          if (audioIcon) audioIcon.textContent = '🔊';
+          if (audioLabel) audioLabel.textContent = 'Ouvir';
+          return;
+        }
+
+        const bodyEl = document.getElementById('cronicas-body');
+        const textToRead = bodyEl ? bodyEl.innerText : '';
+        if (!textToRead) return;
+
+        synth.cancel();
+        utterance = new SpeechSynthesisUtterance(textToRead);
+        utterance.lang = 'pt-BR';
+        utterance.rate = 1.0;
+
+        utterance.onstart = () => {
+          isPlaying = true;
+          audioBtn.classList.add('speaking');
+          if (audioIcon) audioIcon.textContent = '⏹️';
+          if (audioLabel) audioLabel.textContent = 'Parar';
+        };
+
+        utterance.onend = () => {
+          isPlaying = false;
+          audioBtn.classList.remove('speaking');
+          if (audioIcon) audioIcon.textContent = '🔊';
+          if (audioLabel) audioLabel.textContent = 'Ouvir';
+        };
+
+        utterance.onerror = () => {
+          isPlaying = false;
+          audioBtn.classList.remove('speaking');
+          if (audioIcon) audioIcon.textContent = '🔊';
+          if (audioLabel) audioLabel.textContent = 'Ouvir';
+        };
+
+        synth.speak(utterance);
+      });
+    }
+  }
+})();
+</script>

@@ -1,0 +1,461 @@
+<script>
+(function() {
+  if (window.__ipesInitialized) return;
+  const container = document.getElementById('ipes-app');
+  if (!container) return;
+  window.__ipesInitialized = true;
+
+  const pathname = window.location.pathname;
+  const isIndex = pathname.endsWith('/ipes-e-tijolos/') || 
+                  pathname.endsWith('/ipes-e-tijolos/index.html') || 
+                  pathname.endsWith('/ipes-e-tijolos');
+
+  const baseUrl = '{{ "/ipes-e-tijolos/" | relative_url }}'.replace(/\/index\.html$/, '/');
+
+  const essays = [
+    {
+      id: 'espirito-material',
+      number: 1,
+      title: 'Espírito material',
+      time: '2 min',
+      category: 'mente',
+      tags: ['Espírito', 'Mente', 'Biologia'],
+      url: baseUrl + 'espirito-material.html',
+      desc: 'O espírito não metafísico: a fauna consciente que habita o ecossistema mental e ampara os momentos difíceis.'
+    },
+    {
+      id: 'panteao-mental',
+      number: 2,
+      title: 'Panteão mental',
+      time: '1 min',
+      category: 'mente',
+      tags: ['Mente', 'Pensamento', 'Criação'],
+      url: baseUrl + 'panteao-mental.html',
+      desc: 'O templo íntimo onde ideias, referências e mestres imaginários dialogam e refinam o caráter.'
+    },
+    {
+      id: 'extrapolar-o-virtual',
+      number: 3,
+      title: 'Extrapolar o virtual',
+      time: '1 min',
+      category: 'sociedade',
+      tags: ['Tecnologia', 'Presença', 'Realidade'],
+      url: baseUrl + 'extrapolar-o-virtual.html',
+      desc: 'Superar a ilusão das telas e do imediatismo virtual para vivenciar o concreto da existência.'
+    },
+    {
+      id: 'ipes-e-tijolos',
+      number: 4,
+      title: 'Ipês e tijolos',
+      time: '1 min',
+      category: 'sociedade',
+      tags: ['Cidade', 'Natureza', 'Equilíbrio'],
+      url: baseUrl + 'ipes-e-tijolos.html',
+      desc: 'A coexistência poética entre os muros rígidos do concreto urbano e a delicada explosão dos ipês floridos.'
+    },
+    {
+      id: 'odisseia-interior',
+      number: 5,
+      title: 'Odisseia interior',
+      time: '1 min',
+      category: 'mente',
+      tags: ['Autoconhecimento', 'Jornada', 'Consciência'],
+      url: baseUrl + 'odisseia-interior.html',
+      desc: 'A viagem mais profunda que o ser humano pode empreender: o desbravamento dos mares de si mesmo.'
+    },
+    {
+      id: 'servidao-e-liberdade',
+      number: 6,
+      title: 'Servidão e liberdade',
+      time: '1 min',
+      category: 'liberdade',
+      tags: ['Liberdade', 'Vontade', 'Autonomia'],
+      url: baseUrl + 'servidao-e-liberdade.html',
+      desc: 'A linha tênue entre as amarras do automatismo inconsciente e a conquista ativa da verdadeira liberdade.'
+    },
+    {
+      id: 'baleias-e-marujos',
+      number: 7,
+      title: 'Baleias e marujos',
+      time: '1 min',
+      category: 'sociedade',
+      tags: ['Existência', 'Coletivo', 'Mundo'],
+      url: baseUrl + 'baleias-e-marujos.html',
+      desc: 'Reflexão sobre os gigantes misteriosos da existência e o papel solidário de cada marujo no mesmo barco.'
+    },
+    {
+      id: 'o-fogo-de-prometeu',
+      number: 8,
+      title: 'O fogo de Prometeu',
+      time: '2 min',
+      category: 'liberdade',
+      tags: ['Conhecimento', 'Herança', 'Civilização'],
+      url: baseUrl + 'o-fogo-de-prometeu.html',
+      desc: 'A chama da inteligência e da técnica como herança milenar e dever de responsabilidade ética.'
+    },
+    {
+      id: 'pavimentando-o-futuro',
+      number: 9,
+      title: 'Pavimentando o futuro',
+      time: '1 min',
+      category: 'futuro',
+      tags: ['Futuro Ancestral', 'Ação', 'Legado'],
+      url: baseUrl + 'pavimentando-o-futuro.html',
+      desc: 'O assentamento paciente de cada tijolo moral que pavimentará o caminho para as próximas gerações.'
+    },
+    {
+      id: 'eudaimonia-social',
+      number: 10,
+      title: 'Eudaimonia Social',
+      time: '2 min',
+      category: 'sociedade',
+      tags: ['Eudaimonia', 'Sociedade', 'Coexistência'],
+      url: baseUrl + 'eudaimonia-social.html',
+      desc: 'O florescimento humano que se expande além do indivíduo, alcançando a harmonia da comunidade.'
+    },
+    {
+      id: 'honrando-a-heranca-ancestral',
+      number: 11,
+      title: 'Honrando a herança ancestral',
+      time: '1 min',
+      category: 'futuro',
+      tags: ['Herança', 'Ancestralidade', 'Gratidão'],
+      url: baseUrl + 'honrando-a-heranca-ancestral.html',
+      desc: 'O reconhecimento lúcido do esforço dos antepassados como solo fértil para as nossas próprias escolhas.'
+    }
+  ];
+
+  if (isIndex) {
+    renderIndexHub();
+    return;
+  }
+
+  renderEssayReader();
+
+  function renderIndexHub() {
+    container.innerHTML = `
+      <div class="ipes-hero">
+        <div class="ipes-hero-badge">
+          <span>🧱</span> Reflexões & Ensaios
+        </div>
+        <h1 class="ipes-hero-title">Ipês e Tijolos</h1>
+        <p class="ipes-hero-subtitle">
+          Reflexões sobre o humano entre o concreto e o ideal. Ensaios que investigam o espírito material, a mente, a sociedade e a construção do futuro ancestral.
+        </p>
+
+        <div class="ipes-stats-pills">
+          <div class="ipes-stat-pill">
+            <span class="ipes-stat-icon">📚</span>
+            <span><strong>${essays.length}</strong> Ensaios Filosóficos</span>
+          </div>
+          <div class="ipes-stat-pill">
+            <span class="ipes-stat-icon">⏱️</span>
+            <span><strong>14 min</strong> Leitura Total</span>
+          </div>
+          <div class="ipes-stat-pill">
+            <span class="ipes-stat-icon">🌸</span>
+            <span>Natureza & Cidade</span>
+          </div>
+          <div class="ipes-stat-pill">
+            <span class="ipes-stat-icon">🔊</span>
+            <span>Áudio Narração</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filtros de Categoria -->
+      <div class="ipes-filters-bar" role="tablist" aria-label="Filtrar ensaios por tema">
+        <button class="ipes-filter-btn active" data-filter="all" role="tab" aria-selected="true">
+          ✨ Todos (${essays.length})
+        </button>
+        <button class="ipes-filter-btn" data-filter="mente" role="tab" aria-selected="false">
+          🧠 Mente & Espírito
+        </button>
+        <button class="ipes-filter-btn" data-filter="sociedade" role="tab" aria-selected="false">
+          🏙️ Sociedade & Concreto
+        </button>
+        <button class="ipes-filter-btn" data-filter="liberdade" role="tab" aria-selected="false">
+          🔥 Liberdade & Razão
+        </button>
+        <button class="ipes-filter-btn" data-filter="futuro" role="tab" aria-selected="false">
+          🌱 Futuro Ancestral
+        </button>
+      </div>
+
+      <!-- Grid de Cartões -->
+      <div class="ipes-grid" id="ipes-grid">
+        ${essays.map(essay => `
+          <article class="ipes-card" data-category="${essay.category}">
+            <div class="ipes-card-content">
+              <div class="ipes-card-top">
+                <span class="ipes-card-num">#${essay.number}</span>
+                <span class="ipes-card-time">⏱️ ${essay.time}</span>
+              </div>
+              <h2 class="ipes-card-title">
+                <a href="${essay.url}">${essay.title}</a>
+              </h2>
+              <div class="ipes-card-tags">
+                ${essay.tags.map(t => `<span class="ipes-tag">${t}</span>`).join('')}
+              </div>
+              <p class="ipes-card-desc">${essay.desc}</p>
+              <div class="ipes-card-footer">
+                <a href="${essay.url}" class="ipes-read-btn">
+                  <span>Ler Ensaio</span>
+                  <span class="ipes-read-arrow">→</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        `).join('')}
+      </div>
+
+      <div class="ipes-reflection-box">
+        <div class="ipes-reflection-icon">🌸</div>
+        <div class="ipes-reflection-content">
+          <h3>Entre a Resistência do Tijolo e a Flor do Ipê</h3>
+          <p>
+            Construir o futuro exige solidez moral (os tijolos) e sensibilidade estética (os ipês). Viver em plenitude é não abrir mão da firmeza ética nem da delicadeza com que acolhemos a existência.
+          </p>
+        </div>
+      </div>
+    `;
+
+    const filterBtns = container.querySelectorAll('.ipes-filter-btn');
+    const cards = container.querySelectorAll('.ipes-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        const filter = btn.getAttribute('data-filter');
+        cards.forEach(c => {
+          if (filter === 'all' || c.getAttribute('data-category') === filter) {
+            c.style.display = 'flex';
+          } else {
+            c.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  function renderEssayReader() {
+    let currentEssay = null;
+    let currentIndex = -1;
+    const pageFilename = pathname.split('/').pop().replace(/\.html$/, '');
+
+    for (let i = 0; i < essays.length; i++) {
+      const eFilename = essays[i].url.split('/').pop().replace(/\.html$/, '');
+      if (pageFilename === eFilename || pageFilename === essays[i].id) {
+        currentEssay = essays[i];
+        currentIndex = i;
+        break;
+      }
+    }
+
+    if (!currentEssay) {
+      currentEssay = essays[0];
+      currentIndex = 0;
+    }
+
+    const prevEssay = currentIndex > 0 ? essays[currentIndex - 1] : null;
+    const nextEssay = currentIndex < essays.length - 1 ? essays[currentIndex + 1] : null;
+
+    const rawNodes = Array.from(container.childNodes);
+    const bodyElements = [];
+
+    rawNodes.forEach(node => {
+      if (node.nodeType !== Node.ELEMENT_NODE) return;
+      const tagName = node.tagName.toLowerCase();
+      if (tagName === 'h3' && (node.querySelector('a[href*="./"]') || node.innerText.toLowerCase().includes('ipês e tijolos'))) return;
+      if (tagName === 'h2' && node.innerText.trim().toLowerCase() === currentEssay.title.toLowerCase()) return;
+      if (tagName === 'hr') return;
+      if (tagName === 'div' && (node.innerText.includes('<<') || node.innerText.includes('>>') || node.style.clear === 'both')) return;
+      bodyElements.push(node.cloneNode(true));
+    });
+
+    container.innerHTML = `
+      <div class="ipes-reading-bar" id="ipes-reading-bar">
+        <div class="ipes-reading-bar-left">
+          <a href="${baseUrl}" class="ipes-nav-back-btn" title="Voltar ao Índice">
+            <span>←</span> <span class="ipes-nav-back-text">Ipês e Tijolos</span>
+          </a>
+        </div>
+        <div class="ipes-reading-controls">
+          <button id="ipes-case-btn" class="ipes-control-btn" title="Alternar Caixa Alta">
+            <span>🔠</span> <span id="ipes-case-label">Caixa Alta</span>
+          </button>
+          <div class="ipes-font-resizer" role="group" aria-label="Tamanho da Fonte">
+            <button id="font-dec-btn" class="ipes-font-btn" title="Diminuir fonte">A-</button>
+            <button id="font-reset-btn" class="ipes-font-btn" title="Fonte padrão">A</button>
+            <button id="font-inc-btn" class="ipes-font-btn" title="Aumentar fonte">A+</button>
+          </div>
+          <button id="ipes-audio-btn" class="ipes-control-btn audio-btn" title="Ouvir ensaio" aria-label="Ouvir Ensaio">
+            <span id="audio-icon">🔊</span> <span id="audio-label">Ouvir</span>
+          </button>
+        </div>
+        <div class="ipes-progress-track">
+          <div class="ipes-progress-bar" id="ipes-progress-bar"></div>
+        </div>
+      </div>
+
+      <article class="ipes-article" id="ipes-article">
+        <header class="ipes-article-header">
+          <div class="ipes-meta-top">
+            <span class="ipes-badge-pill">#${currentEssay.number} de ${essays.length}</span>
+            <span class="ipes-time-pill">⏱️ ${currentEssay.time} de leitura</span>
+          </div>
+          <h1 class="ipes-article-title">${currentEssay.title}</h1>
+          <div class="ipes-article-tags">
+            ${currentEssay.tags.map(t => `<span class="ipes-tag">${t}</span>`).join('')}
+          </div>
+        </header>
+
+        <div class="ipes-article-body" id="ipes-body"></div>
+
+        <nav class="ipes-nav-footer" aria-label="Navegação entre ensaios">
+          ${prevEssay ? `
+            <a href="${prevEssay.url}" class="ipes-nav-card prev">
+              <span class="ipes-nav-dir">← Ensaio Anterior</span>
+              <span class="ipes-nav-title">${prevEssay.number}. ${prevEssay.title}</span>
+            </a>
+          ` : `
+            <a href="${baseUrl}" class="ipes-nav-card prev">
+              <span class="ipes-nav-dir">← Coleção</span>
+              <span class="ipes-nav-title">Índice Geral</span>
+            </a>
+          `}
+
+          <a href="${baseUrl}" class="ipes-center-link" title="Voltar ao Índice">
+            <span>🌸</span> <span>Ipês e Tijolos</span>
+          </a>
+
+          ${nextEssay ? `
+            <a href="${nextEssay.url}" class="ipes-nav-card next">
+              <span class="ipes-nav-dir">Próximo Ensaio →</span>
+              <span class="ipes-nav-title">${nextEssay.number}. ${nextEssay.title}</span>
+            </a>
+          ` : `
+            <a href="${baseUrl}" class="ipes-nav-card next">
+              <span class="ipes-nav-dir">Fim da Coletânea →</span>
+              <span class="ipes-nav-title">Voltar ao Início</span>
+            </a>
+          `}
+        </nav>
+      </article>
+    `;
+
+    const bodyEl = document.getElementById('ipes-body');
+    bodyElements.forEach(el => bodyEl.appendChild(el));
+
+    setupIpesInteractions();
+  }
+
+  function setupIpesInteractions() {
+    const caseBtn = document.getElementById('ipes-case-btn');
+    const article = document.getElementById('ipes-article');
+    const progressBar = document.getElementById('ipes-progress-bar');
+    let isUppercase = false;
+
+    if (caseBtn && article) {
+      caseBtn.addEventListener('click', () => {
+        isUppercase = !isUppercase;
+        article.classList.toggle('uppercase-mode', isUppercase);
+        caseBtn.classList.toggle('active', isUppercase);
+        const label = document.getElementById('ipes-case-label');
+        if (label) label.textContent = isUppercase ? 'Minúscula' : 'Caixa Alta';
+      });
+    }
+
+    const fontDec = document.getElementById('font-dec-btn');
+    const fontReset = document.getElementById('font-reset-btn');
+    const fontInc = document.getElementById('font-inc-btn');
+    let currentFontSize = 18;
+
+    if (fontDec && fontReset && fontInc && article) {
+      fontDec.addEventListener('click', () => {
+        if (currentFontSize > 14) {
+          currentFontSize -= 2;
+          article.style.setProperty('--reading-font-size', currentFontSize + 'px');
+        }
+      });
+      fontReset.addEventListener('click', () => {
+        currentFontSize = 18;
+        article.style.removeProperty('--reading-font-size');
+      });
+      fontInc.addEventListener('click', () => {
+        if (currentFontSize < 28) {
+          currentFontSize += 2;
+          article.style.setProperty('--reading-font-size', currentFontSize + 'px');
+        }
+      });
+    }
+
+    if (progressBar) {
+      window.addEventListener('scroll', () => {
+        const docEl = document.documentElement;
+        const scrollTop = docEl.scrollTop || document.body.scrollTop;
+        const scrollHeight = docEl.scrollHeight - docEl.clientHeight;
+        const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+        progressBar.style.width = Math.min(100, Math.max(0, progress)) + '%';
+      }, { passive: true });
+    }
+
+    const audioBtn = document.getElementById('ipes-audio-btn');
+    const audioIcon = document.getElementById('audio-icon');
+    const audioLabel = document.getElementById('audio-label');
+    let isPlaying = false;
+    let synth = window.speechSynthesis;
+    let utterance = null;
+
+    if (audioBtn && synth) {
+      audioBtn.addEventListener('click', () => {
+        if (isPlaying) {
+          synth.cancel();
+          isPlaying = false;
+          audioBtn.classList.remove('speaking');
+          if (audioIcon) audioIcon.textContent = '🔊';
+          if (audioLabel) audioLabel.textContent = 'Ouvir';
+          return;
+        }
+
+        const bodyEl = document.getElementById('ipes-body');
+        const textToRead = bodyEl ? bodyEl.innerText : '';
+        if (!textToRead) return;
+
+        synth.cancel();
+        utterance = new SpeechSynthesisUtterance(textToRead);
+        utterance.lang = 'pt-BR';
+        utterance.rate = 1.0;
+
+        utterance.onstart = () => {
+          isPlaying = true;
+          audioBtn.classList.add('speaking');
+          if (audioIcon) audioIcon.textContent = '⏹️';
+          if (audioLabel) audioLabel.textContent = 'Parar';
+        };
+
+        utterance.onend = () => {
+          isPlaying = false;
+          audioBtn.classList.remove('speaking');
+          if (audioIcon) audioIcon.textContent = '🔊';
+          if (audioLabel) audioLabel.textContent = 'Ouvir';
+        };
+
+        utterance.onerror = () => {
+          isPlaying = false;
+          audioBtn.classList.remove('speaking');
+          if (audioIcon) audioIcon.textContent = '🔊';
+          if (audioLabel) audioLabel.textContent = 'Ouvir';
+        };
+
+        synth.speak(utterance);
+      });
+    }
+  }
+})();
+</script>

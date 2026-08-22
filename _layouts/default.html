@@ -54,6 +54,26 @@
               {{ content }}
             </div>
             {% include cascudo-script.html %}
+          {% elsif page.url contains '/wingene/' and page.layout != 'wingene' %}
+            <div id="wingene-app" class="wingene-container">
+              {{ content }}
+            </div>
+            {% include wingene-script.html %}
+          {% elsif page.url contains '/poesias-e-aforismos/' and page.layout != 'poetry' %}
+            <div id="poetry-app" class="poetry-container">
+              {{ content }}
+            </div>
+            {% include poetry-script.html %}
+          {% elsif page.url contains '/ipes-e-tijolos/' and page.layout != 'ipes' %}
+            <div id="ipes-app" class="ipes-container">
+              {{ content }}
+            </div>
+            {% include ipes-script.html %}
+          {% elsif page.url contains '/cronicas/' and page.layout != 'cronicas' %}
+            <div id="cronicas-app" class="cronicas-container">
+              {{ content }}
+            </div>
+            {% include cronicas-script.html %}
           {% else %}
             {{ content }}
           {% endif %}
@@ -75,6 +95,7 @@
               <li class="sidebar-topics-item">
                 <span class="sidebar-topics-category">📜 Ensaios Filosóficos</span>
                 <ul class="sidebar-topics-sublist">
+                  <li class="sidebar-topics-subitem"><a href="{{ '/wingene/' | relative_url }}">Wingene</a></li>
                   <li class="sidebar-topics-subitem"><a href="{{ '/manifesto-wingene.html' | relative_url }}">Manifesto Wingene</a></li>
                   <li class="sidebar-topics-subitem"><a href="{{ '/wingene/wingene-felicidade-agora-futuro-ancestral.html' | relative_url }}">Felicidade agora, futuro ancestral</a></li>
                   <li class="sidebar-topics-subitem"><a href="{{ '/wingene/o-metodo-vida-a-wingene-em-pratica.html' | relative_url }}">O Método VIDA na prática</a></li>
@@ -88,7 +109,7 @@
                   <li class="sidebar-topics-subitem"><a href="{{ '/ipes-e-tijolos/' | relative_url }}">Ipês e Tijolos</a></li>
                   <li class="sidebar-topics-subitem"><a href="{{ '/cronicas/' | relative_url }}">Crônicas Diárias</a></li>
                   <li class="sidebar-topics-subitem"><a href="{{ '/poesias-e-aforismos/' | relative_url }}">Poesias e Aforismos</a></li>
-                  <li class="sidebar-topics-subitem"><a href="{{ '/reflexoes/' | relative_url }}">Reflexoes: sentir e pensar</a></li>
+                  <li class="sidebar-topics-subitem"><a href="{{ '/reflexoes/' | relative_url }}">Reflexões: sentir e pensar</a></li>
                   <li class="sidebar-topics-subitem"><a href="{{ '/odisseiaInterior/' | relative_url }}">Odisseia Interior (Conto Ilustrado)</a></li>
                   <li class="sidebar-topics-subitem"><a href="{{ '/a_varanda_de_aurora/' | relative_url }}">A Varanda de Aurora (Conto Ilustrado)</a></li>
                   <li class="sidebar-topics-subitem"><a href="{{ '/musicas/' | relative_url }}">Experimentos Musicais</a></li>
