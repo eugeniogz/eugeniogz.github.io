@@ -284,5 +284,5 @@ O logotipo da Wingene foi desenhado para representar os quatro eixos do método.
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./etimologias-da-wingene-o-florescimento-do-espirito.html">&lt;&lt; Etimologia e a Wingene</a>
-  <a href="./metaconsciencia-pensar-o-sentir-sentir-o-pensar.html">Metaconsciência &gt;&gt;</a>
+  <a href="./o-sistema-gene-e-a-wingene-coletiva-a-arquitetura-da-eudaimonia-social.html">O Sistema GENE e a Wingene Coletiva &gt;&gt;</a>
 </div>

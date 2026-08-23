@@ -1421,6 +1421,126 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                 }
                 let text = rawText.replace(/(\r\n|\r|\n)/g, '  \n').trim();
                 if (text) markdown += `${prefix}${text}\n\n`;
+            } else if (elementType === DocumentApp.ElementType.TABLE) {
+                const table = element.asTable();
+                const numRows = table.getNumRows();
+
+                if (numRows > 0) {
+                    let tableMarkdown = '';
+                    let maxCols = 0;
+
+                    // Determina a quantidade máxima de colunas na tabela
+                    for (let r = 0; r < numRows; r++) {
+                        maxCols = Math.max(maxCols, table.getRow(r).getNumCells());
+                    }
+
+                    if (maxCols > 0) {
+                        for (let r = 0; r < numRows; r++) {
+                            const row = table.getRow(r);
+                            const numCells = row.getNumCells();
+                            const cellTexts = [];
+
+                            for (let c = 0; c < maxCols; c++) {
+                                if (c < numCells) {
+                                    const cell = row.getCell(c);
+                                    let cellFormattedText = '';
+
+                                    // Processa elementos internos da célula para manter negrito e itálico
+                                    for (let j = 0; j < cell.getNumChildren(); j++) {
+                                        const child = cell.getChild(j);
+                                        if (child.getType() === DocumentApp.ElementType.PARAGRAPH) {
+                                            const p = child.asParagraph();
+                                            let pText = '';
+                                            let inBoldRun = false;
+                                            let inItalicRun = false;
+                                            let inBoldItalicRun = false;
+
+                                            for (let k = 0; k < p.getNumChildren(); k++) {
+                                                const textChild = p.getChild(k);
+                                                if (textChild.getType() === DocumentApp.ElementType.TEXT) {
+                                                    const textElement = textChild.asText();
+                                                    const textContent = normalizarAspas(textElement.getText());
+                                                    for (let chIdx = 0; chIdx < textContent.length; chIdx++) {
+                                                        const char = textContent[chIdx];
+                                                        const isBold = textElement.isBold(chIdx);
+                                                        const isItalic = textElement.isItalic(chIdx);
+
+                                                        if (char === '\r' || char === '\n') {
+                                                            if (inBoldItalicRun) {
+                                                                pText += "***";
+                                                                inBoldItalicRun = false; inBoldRun = false; inItalicRun = false;
+                                                            } else {
+                                                                if (inBoldRun) { pText += '**'; inBoldRun = false; }
+                                                                if (inItalicRun) { pText += '*'; inItalicRun = false; }
+                                                            }
+                                                            pText += ' ';
+                                                            continue;
+                                                        }
+
+                                                        if (char === ' ' && inBoldItalicRun) {
+                                                            pText += "*** ";
+                                                            inBoldItalicRun = false; inBoldRun = false; inItalicRun = false;
+                                                            continue;
+                                                        }
+
+                                                        if (isBold && !inBoldRun && char !== ' ') { pText += '**'; inBoldRun = true; }
+                                                        else if (!isBold && inBoldRun) { pText += '**'; inBoldRun = false; }
+
+                                                        if (isItalic && !inItalicRun && char !== ' ') { pText += '*'; inItalicRun = true; }
+                                                        else if (!isItalic && inItalicRun) { pText += '*'; inItalicRun = false; }
+
+                                                        inBoldItalicRun = inItalicRun && inBoldRun;
+                                                        pText += char;
+                                                    }
+                                                    if (inBoldRun) { pText += '**'; inBoldRun = false; }
+                                                    if (inItalicRun) { pText += '*'; inItalicRun = false; }
+                                                } else {
+                                                    pText += textChild.getText ? textChild.getText() : '';
+                                                }
+                                            }
+                                            if (pText.trim()) {
+                                                if (cellFormattedText.length > 0) cellFormattedText += '<br>';
+                                                cellFormattedText += pText.trim();
+                                            }
+                                        } else {
+                                            const childText = child.getText ? child.getText().trim() : '';
+                                            if (childText) {
+                                                if (cellFormattedText.length > 0) cellFormattedText += '<br>';
+                                                cellFormattedText += childText;
+                                            }
+                                        }
+                                    }
+
+                                    // Fallback caso não tenha obtido texto via filhos
+                                    if (!cellFormattedText) {
+                                        cellFormattedText = cell.getText() ? cell.getText().trim() : '';
+                                    }
+
+                                    // Escapa pipes e converte eventuais quebras restantes para <br>
+                                    let cleanCell = cellFormattedText
+                                        .replace(/\|/g, '\\|')
+                                        .replace(/(\r\n|\r|\n)/g, '<br>')
+                                        .trim();
+
+                                    cellTexts.push(cleanCell);
+                                } else {
+                                    cellTexts.push('');
+                                }
+                            }
+
+                            // Linha de dados da tabela
+                            tableMarkdown += `| ${cellTexts.join(' | ')} |\n`;
+
+                            // Insere o divisor de cabeçalho padrão logo após a primeira linha (Row 0)
+                            if (r === 0) {
+                                const headerDivider = Array(maxCols).fill('---').join(' | ');
+                                tableMarkdown += `| ${headerDivider} |\n`;
+                            }
+                        }
+
+                        markdown += tableMarkdown + '\n';
+                    }
+                }
             }
         }
         // O link de retorno ao index da pasta será adicionado na função que gera o rodapé.

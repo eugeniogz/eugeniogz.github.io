@@ -33,8 +33,19 @@
     "desc": "O guia completo do Método VIDA: quatro pilares práticos (Valores, Imperfeições, Decisões, Atenção) para calibrar a bússola ética e construir a eudaimonia diária."
   },
   {
-    "id": "metaconsciencia-pensar-o-sentir-sentir-o-pensar",
+    "id": "o-sistema-gene-e-a-wingene-coletiva-a-arquitetura-da-eudaimonia-social",
     "number": 4,
+    "title": "O Sistema GENE e a Wingene Coletiva: A Arquitetura da Eudaimonia Social",
+    "subtitle": "A Arquitetura da Eudaimonia Social",
+    "time": "9 min",
+    "category": "metodo-vida",
+    "tags": ["Governos", "Empresas", "Normas", "Educação", "Sistema GENE", "Eudaimonia"],
+    "filename": "o-sistema-gene-e-a-wingene-coletiva-a-arquitetura-da-eudaimonia-social.html",
+    "desc": "Conecta o método individual VIDA à estrutura coletiva por meio do Sistema GENE (Governos, Empresas, Normas e Educação), estabelecendo as bases para o florescimento e a eudaimonia social."
+  },
+  {
+    "id": "metaconsciencia-pensar-o-sentir-sentir-o-pensar",
+    "number": 5,
     "title": "Metaconsciência: pensar o sentir, sentir o pensar",
     "subtitle": "pensar o sentir, sentir o pensar",
     "time": "4 min",
@@ -45,7 +56,7 @@
   },
   {
     "id": "tecendo-a-vida-criando-no-intimo-uma-obra-pessoal",
-    "number": 5,
+    "number": 6,
     "title": "Tecendo a vida: criando no íntimo uma obra pessoal",
     "subtitle": "criando no íntimo uma obra pessoal",
     "time": "7 min",
@@ -56,7 +67,7 @@
   },
   {
     "id": "the-vida-method",
-    "number": 6,
+    "number": 7,
     "title": "The VIDA method (English Edition)",
     "subtitle": "Values, Imperfections, Decisions, and Attention",
     "time": "14 min",
