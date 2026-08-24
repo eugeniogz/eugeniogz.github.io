@@ -93,7 +93,7 @@ Relacionam-se à gestão dos afetos: impulsividade, reatividade, medo excessivo,
 Manifestam-se na incoerência entre valores e ações: promessas não cumpridas, omissões por conveniência, comportamentos inadequados.
 
 1. **Atencionais**  
-Decorrem da dispersão da mente: automatismos, distração crônica, vida no “piloto automático”.
+Decorrem da dispersão da mente: automatismos, distração crônica, vida no "piloto automático".
 
 ### **Aceitação sem resignação**
 
@@ -178,7 +178,7 @@ Na perspectiva da Wingene, a atenção é o gesto mais simples e mais radical. N
 O método se valida na prática por meio de perguntas essenciais:
 
 **V — Valores**  
-**- Limites pessoais**: *Essas atitudes estão de acordo com minha saúde e bem-estar?*  
+- **Limites pessoais**: *Essas atitudes estão de acordo com minha saúde e bem-estar?*  
 - **Convivência**: *Esse valor permite uma melhor convivência com os demais?*  
 - **Revisão contínua**: *Tenho revisado meus valores de acordo com as evidências e a ciência?*
 

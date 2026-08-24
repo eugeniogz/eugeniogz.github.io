@@ -19,8 +19,6 @@ tags:
 
 ## O Sistema GENE e a Wingene Coletiva: A Arquitetura da Eudaimonia Social
 
-# **O Sistema GENE e a Wingene Coletiva: A Arquitetura da Eudaimonia Social**
-
 *Tecer virtudes, semear atitudes.*
 
 ## O ponto de partida: a eudaimonia social
@@ -128,9 +126,9 @@ A imunidade desses corpos cívicos não depende de um poder centralizado, mas de
 
 * **Federação Descentralizada e Sem Cúpula Única:** nenhum conselho ou observatório possui o monopólio da verdade; as auditorias funcionam em rede aberta e distribuída, em que múltiplos núcleos independentes contestam, verificam e validam os dados uns dos outros.
 
-* **Rotatividade obrigatória de assentos: **mandatos curtos e alternância frequente de lideranças, impedindo que dirigentes criem raízes burocráticas, feudos de poder ou laços de dependência com as elites vigiadas.
+* **Rotatividade obrigatória de assentos:** mandatos curtos e alternância frequente de lideranças, impedindo que dirigentes criem raízes burocráticas, feudos de poder ou laços de dependência com as elites vigiadas.
 
-* **Financiamento pulverizado e autônomo: **sustentação financeira vinda de microcontribuições diretas da comunidade e voluntariado cívico, blindando os sentinelas contra o corte de verbas estatais ou o patrocínio corporativo interesseiro.
+* **Financiamento pulverizado e autônomo:** sustentação financeira vinda de microcontribuições diretas da comunidade e voluntariado cívico, blindando os sentinelas contra o corte de verbas estatais ou o patrocínio corporativo interesseiro.
 
 ### A gênese na educação
 

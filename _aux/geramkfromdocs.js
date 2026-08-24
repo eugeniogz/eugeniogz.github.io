@@ -243,6 +243,7 @@ function getMetadataFromMd(arquivoMdDestino) {
     let hasNavigationFooter = true;
     let title = null;
     let tags = [];
+    let desc = null;
     
     try {
         const content = arquivoMdDestino.getBlob().getDataAsString();
@@ -278,6 +279,12 @@ function getMetadataFromMd(arquivoMdDestino) {
                 title = normalizarAspas(titleMatch[1]).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
             }
 
+            // Regex para extrair desc
+            const descMatch = yamlBlock.match(/^(?:desc|description|descrição|descricao):\s*["'“`”‘'«»]?(.*?)["'“`”‘'«»]?\s*$/im);
+            if (descMatch) {
+                desc = normalizarAspas(descMatch[1]).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
+            }
+
             // Regex para extrair tags
             const tagsBlockMatch = yamlBlock.match(/^tags:\s*\n((?:\s*-\s*.*(?:\n|$))+)/im);
             if (tagsBlockMatch) {
@@ -298,7 +305,7 @@ function getMetadataFromMd(arquivoMdDestino) {
         Logger.log(`[ERRO METADATA MD] Falha ao ler metadados do MD ${arquivoMdDestino.getName()}: ${e.toString()}`);
     }
 
-    return { semanticOrderScore: semanticOrderScore, tempoLeitura: tempoLeitura, noIndex: noIndex, hasNavigationFooter: hasNavigationFooter, title: title, tags: tags || [] };
+    return { semanticOrderScore: semanticOrderScore, tempoLeitura: tempoLeitura, noIndex: noIndex, hasNavigationFooter: hasNavigationFooter, title: title, tags: tags || [], desc: desc };
 }
 
 /**
@@ -407,6 +414,7 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
         let noIndex = false;
         let hasNavigationFooter = true;
         let tags = [];
+        let desc = null;
 
         if (deveConverter) {
             // Conversão pesada (Corpo e Metadados)
@@ -417,7 +425,8 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
                 nomeSemData,
                 noIndex,
                 hasNavigationFooter,
-                tags
+                tags,
+                desc
             } = getMarkdownAndScoreFromDoc(arquivoDoc, nomeDocOriginal, nomeSlug, pastaDestino, comentarioPasta[0]));
 
             if (nomeDocOriginal === 'Aforismos') {
@@ -434,7 +443,8 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
                     noIndex,
                     hasNavigationFooter,
                     title: customTitleFromMd,
-                    tags
+                    tags,
+                    desc
                 } = getMetadataFromMd(arquivoMdDestino)); 
                 
                 if (customTitleFromMd) {
@@ -452,7 +462,8 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
                     nomeSemData,
                     noIndex,
                     hasNavigationFooter,
-                    tags
+                    tags,
+                    desc
                 } = getMetadataFromDocLite(arquivoDoc, nomeDocOriginal, pastaDestino));
             }
         }
@@ -467,6 +478,7 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
             semanticOrder: semanticOrderScore, // CHAVE UNIFICADA PARA ORDENAÇÃO
             time: tempoLeitura,
             tags: tags || [],
+            desc: desc,
             deveConverter: deveConverter,
             arquivoMdDestino: arquivoMdDestino,
             nomeSemData: nomeSemData,
@@ -906,6 +918,7 @@ function getMetadataFromDocLite(docFile, originalFileName, pastaDestino = null) 
     let tempoLeitura = 1;
     let nomeSemData = originalFileName; 
     let tags = [];
+    let desc = null;
     const isPostsFolder = pastaDestino && pastaDestino.getName() === '_posts';
     let noIndex = !isPostsFolder;
     let hasNavigationFooter = true;
@@ -924,7 +937,8 @@ function getMetadataFromDocLite(docFile, originalFileName, pastaDestino = null) 
                 nomeSemData: originalFileName,
                 noIndex: true,
                 hasNavigationFooter: false,
-                tags: []
+                tags: [],
+                desc: null
             };
         }
         
@@ -953,6 +967,11 @@ function getMetadataFromDocLite(docFile, originalFileName, pastaDestino = null) 
                 .map(tag => normalizarAspas(tag).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim())
                 .filter(tag => tag.length > 0);
         }
+
+        const descMatch = fullBodyText.match(/^\s*(?:desc|Desc|descrição|Descrição|description|Description):\s*(.+)$/im);
+        if (descMatch) {
+            desc = normalizarAspas(descMatch[1]).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
+        }
         
         const footerMatch = fullBodyText.match(/^\s*(?:Footer|Fotter):\s*(n[ãa]o|no)/im);
         if (footerMatch) {
@@ -975,7 +994,8 @@ function getMetadataFromDocLite(docFile, originalFileName, pastaDestino = null) 
             nomeSemData: nomeSemData,
             noIndex: noIndex,
             hasNavigationFooter: hasNavigationFooter,
-            tags: tags
+            tags: tags,
+            desc: desc
         };
 
     } catch (e) {
@@ -986,7 +1006,8 @@ function getMetadataFromDocLite(docFile, originalFileName, pastaDestino = null) 
             nomeSemData: originalFileName,
             noIndex: false,
             hasNavigationFooter: true,
-            tags: []
+            tags: [],
+            desc: null
         };
     }
 }
@@ -1139,7 +1160,8 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                 nomeSemData: originalFileName,
                 noIndex: true,
                 hasNavigationFooter: false,
-                tags: []
+                tags: [],
+                desc: null
             };
         }
         
@@ -1161,6 +1183,7 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         let pillar = null;
         let customDateStr = null;
         let customDocLayout = null;
+        let customDesc = null;
         
         // --- 1. EXTRAÇÃO DE METADADOS (SCORE e TAGS) em passagem reversa ---
         for (let i = body.getNumChildren() - 1; i >= 0; i--) {
@@ -1202,6 +1225,12 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                 if (titleMatch && !titleFound) {
                     customTitle = normalizarAspas(titleMatch[1]).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
                     titleFound = true;
+                    isMetadata = true;
+                }
+
+                const descMatch = text.match(/^\s*(?:desc|Desc|descrição|Descrição|description|Description):\s*(.+)$/i);
+                if (descMatch && !customDesc) {
+                    customDesc = normalizarAspas(descMatch[1]).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
                     isMetadata = true;
                 }
 
@@ -1251,6 +1280,10 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         // ADIÇÃO DOS METADADOS PARA OTIMIZAÇÃO FUTURA
         markdown += `reading_time: ${tempoLeitura}\n`;
         markdown += `semantic_order: ${semanticOrderScore}\n`;
+
+        if (customDesc) {
+            markdown += `desc: "${customDesc}"\n`;
+        }
 
         if (pillar) {
             const cleanPillar = normalizarAspas(pillar).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
@@ -1306,7 +1339,7 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                     firstNonMetaIndex = i + 1;
                     continue;
                 }
-                if (inFrontMatterBlock || txt.match(/^(layout|title|date|pillar|pilar|reading_time|semantic_order|tags|no_index|navigation_footer):\s*/i)) {
+                if (inFrontMatterBlock || txt.match(/^(layout|title|date|pillar|pilar|reading_time|semantic_order|tags|no_index|navigation_footer|desc|description):\s*/i)) {
                     firstNonMetaIndex = i + 1;
                     continue;
                 }
@@ -1595,7 +1628,8 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
             nomeSemData: nomeSemData, // Retorna o nome sem data para uso na navegação
             noIndex: noIndex,
             hasNavigationFooter: hasNavigationFooter,
-            tags: tags
+            tags: tags,
+            desc: customDesc
         };
 
     } catch (e) {
@@ -1607,7 +1641,8 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
             nomeSemData: originalFileName, // Retorna o nome original em caso de erro
             noIndex: false,
             hasNavigationFooter: true,
-            tags: []
+            tags: [],
+            desc: null
         };
     }
 }
@@ -1843,8 +1878,9 @@ function obterPastaData() {
 }
 
 /**
- * Atualiza o tempo de leitura e tags em arquivos .json na pasta _data,
+ * Atualiza o tempo de leitura, tags e desc em arquivos .json na pasta _data,
  * se o nome do json estiver contido no nome da pasta de destino e houver item com o filename correspondente.
+ * Se o item não existir no JSON, insere-o automaticamente.
  */
 function atualizarDataJsonSeNecessario(docInfo, pastaDestino) {
     try {
@@ -1878,20 +1914,31 @@ function atualizarDataJsonSeNecessario(docInfo, pastaDestino) {
             }
 
             const formattedTime = `${docInfo.time} min`;
-            const wasUpdated = atualizarItemNoObjeto(
+            let wasUpdated = atualizarItemNoObjeto(
                 dataObj,
                 docInfo.slug,
                 docInfo.markdownName,
                 pastaDestino.getName(),
                 formattedTime,
-                docInfo.tags
+                docInfo.tags,
+                docInfo.desc
             );
+
+            // Se o item não foi encontrado no JSON para atualizar, insere como novo item
+            if (!wasUpdated) {
+                wasUpdated = inserirItemNoObjetoSeNaoExistir(
+                    dataObj,
+                    docInfo,
+                    pastaDestino.getName(),
+                    formattedTime
+                );
+            }
 
             if (wasUpdated) {
                 const newContent = JSON.stringify(dataObj, null, 2) + '\n';
                 if (contentStr.trim() !== newContent.trim()) {
                     file.setContent(newContent);
-                    Logger.log(`[_DATA] Atualizado "${fileName}" para "${docInfo.slug}" (tempo: ${formattedTime}, tags: ${JSON.stringify(docInfo.tags || [])}).`);
+                    Logger.log(`[_DATA] Atualizado/Inserido em "${fileName}" para "${docInfo.slug}" (tempo: ${formattedTime}, tags: ${JSON.stringify(docInfo.tags || [])}, desc: ${docInfo.desc ? `"${docInfo.desc}"` : 'não alterado'}).`);
                 }
             }
         }
@@ -1901,15 +1948,15 @@ function atualizarDataJsonSeNecessario(docInfo, pastaDestino) {
 }
 
 /**
- * Percorre recursivamente o objeto/array JSON e atualiza tempo e tags do item com filename correspondente.
+ * Percorre recursivamente o objeto/array JSON e atualiza tempo, tags e desc do item com filename correspondente.
  */
-function atualizarItemNoObjeto(obj, slug, markdownName, folderName, formattedTime, tags) {
+function atualizarItemNoObjeto(obj, slug, markdownName, folderName, formattedTime, tags, desc) {
     if (!obj || typeof obj !== 'object') return false;
     let anyUpdated = false;
 
     if (Array.isArray(obj)) {
         for (let i = 0; i < obj.length; i++) {
-            if (atualizarItemNoObjeto(obj[i], slug, markdownName, folderName, formattedTime, tags)) {
+            if (atualizarItemNoObjeto(obj[i], slug, markdownName, folderName, formattedTime, tags, desc)) {
                 anyUpdated = true;
             }
         }
@@ -1957,33 +2004,154 @@ function atualizarItemNoObjeto(obj, slug, markdownName, folderName, formattedTim
                 anyUpdated = true;
             }
         }
-    }
 
-    // Percorre propriedades filhas (ex: stories em cronicas.json ou chaves em reflexoes.json)
-    for (const key of Object.keys(obj)) {
-        if (typeof obj[key] === 'object' && obj[key] !== null) {
-            if (atualizarItemNoObjeto(obj[key], slug, markdownName, folderName, formattedTime, tags)) {
+        // Atualiza desc se fornecido
+        if (desc && typeof desc === 'string' && desc.trim().length > 0) {
+            const cleanDesc = desc.trim();
+            if (obj.desc !== cleanDesc) {
+                obj.desc = cleanDesc;
                 anyUpdated = true;
             }
         }
     }
 
-    // Recalcula timeTotal se houver lista de stories
-    if (obj.stories && Array.isArray(obj.stories) && obj.timeTotal !== undefined) {
-        let totalMin = 0;
-        for (let s = 0; s < obj.stories.length; s++) {
-            const story = obj.stories[s];
-            if (story.time) {
-                const m = parseInt(story.time, 10);
-                if (!isNaN(m)) totalMin += m;
+    // Percorre propriedades filhas (ex: stories em cronicas.json ou chaves em reflexoes.json)
+    for (const key of Object.keys(obj)) {
+        if (typeof obj[key] === 'object' && obj[key] !== null) {
+            if (atualizarItemNoObjeto(obj[key], slug, markdownName, folderName, formattedTime, tags, desc)) {
+                anyUpdated = true;
             }
         }
-        const newTotalStr = `${totalMin} min`;
-        if (obj.timeTotal !== newTotalStr) {
-            obj.timeTotal = newTotalStr;
+    }
+
+    // Recalcula timeTotal e count se houver lista de stories
+    if (obj.stories && Array.isArray(obj.stories)) {
+        if (obj.count !== undefined && obj.count !== obj.stories.length) {
+            obj.count = obj.stories.length;
             anyUpdated = true;
+        }
+        if (obj.timeTotal !== undefined) {
+            let totalMin = 0;
+            for (let s = 0; s < obj.stories.length; s++) {
+                const story = obj.stories[s];
+                if (story.time) {
+                    const m = parseInt(story.time, 10);
+                    if (!isNaN(m)) totalMin += m;
+                }
+            }
+            const newTotalStr = `${totalMin} min`;
+            if (obj.timeTotal !== newTotalStr) {
+                obj.timeTotal = newTotalStr;
+                anyUpdated = true;
+            }
         }
     }
 
     return anyUpdated;
+}
+
+/**
+ * Insere um novo item no objeto/array JSON caso ele não exista.
+ */
+function inserirItemNoObjetoSeNaoExistir(dataObj, docInfo, folderName, formattedTime) {
+    if (!dataObj || typeof dataObj !== 'object') return false;
+
+    if (Array.isArray(dataObj)) {
+        // Verifica se é uma lista de volumes com stories (ex: cronicas.json)
+        const isVolumeList = dataObj.some(item => item && Array.isArray(item.stories));
+
+        if (isVolumeList) {
+            const normFolderName = folderName.toLowerCase().replace(/[-_]/g, '');
+            let targetVolume = null;
+
+            for (let i = 0; i < dataObj.length; i++) {
+                const vol = dataObj[i];
+                if (!vol) continue;
+                const volFolder = (vol.folder || '').toLowerCase().replace(/[-_/\\]/g, '');
+                const volId = (vol.id || '').toLowerCase().replace(/[-_]/g, '');
+
+                if (volFolder === normFolderName || volId === normFolderName || normFolderName.includes(volId) || volId.includes(normFolderName)) {
+                    targetVolume = vol;
+                    break;
+                }
+            }
+
+            const newStory = {
+                id: docInfo.slug,
+                title: docInfo.nomeSemData || docInfo.original,
+                time: formattedTime,
+                filename: `${folderName}/${docInfo.slug}.html`,
+                desc: docInfo.desc || ""
+            };
+            if (docInfo.tags && docInfo.tags.length > 0) {
+                newStory.tags = docInfo.tags;
+            }
+
+            if (targetVolume) {
+                if (!Array.isArray(targetVolume.stories)) {
+                    targetVolume.stories = [];
+                }
+                targetVolume.stories.push(newStory);
+                targetVolume.count = targetVolume.stories.length;
+
+                let totalMin = 0;
+                for (let s = 0; s < targetVolume.stories.length; s++) {
+                    const st = targetVolume.stories[s];
+                    if (st.time) {
+                        const m = parseInt(st.time, 10);
+                        if (!isNaN(m)) totalMin += m;
+                    }
+                }
+                targetVolume.timeTotal = `${totalMin} min`;
+                return true;
+            } else {
+                const newVol = {
+                    id: folderName,
+                    title: docInfo.nomeSemData || folderName,
+                    folder: `${folderName}/`,
+                    desc: "",
+                    count: 1,
+                    timeTotal: formattedTime,
+                    stories: [newStory]
+                };
+                dataObj.push(newVol);
+                return true;
+            }
+        } else {
+            // Lista plana de itens (ex: poesias.json, ipes.json, cascudo.json, wingene.json)
+            const newItem = {
+                id: docInfo.slug,
+                title: docInfo.nomeSemData || docInfo.original,
+                time: formattedTime,
+                filename: `${docInfo.slug}.html`,
+                desc: docInfo.desc || ""
+            };
+            if (docInfo.tags && docInfo.tags.length > 0) {
+                newItem.tags = docInfo.tags;
+            }
+            if (dataObj.length > 0 && typeof dataObj[0].number === 'number') {
+                newItem.number = dataObj.length + 1;
+            }
+            dataObj.push(newItem);
+            return true;
+        }
+    } else {
+        // Objeto chave-valor (ex: reflexoes.json)
+        if (!dataObj[docInfo.slug]) {
+            const newObj = {
+                id: docInfo.slug,
+                name: docInfo.nomeSemData || docInfo.original,
+                filename: `${docInfo.slug}.html`,
+                meta: formattedTime,
+                desc: docInfo.desc || ""
+            };
+            if (docInfo.tags && docInfo.tags.length > 0) {
+                newObj.tags = docInfo.tags;
+            }
+            dataObj[docInfo.slug] = newObj;
+            return true;
+        }
+    }
+
+    return false;
 }
