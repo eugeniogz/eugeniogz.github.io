@@ -15,12 +15,15 @@ const REGEX_ORDENACAO = /Ordenação:\s*(\d+([.,]\d+)?)/i;
 // VARIÁVEL GLOBAL PARA RASTREAR A PASTA RAIZ DE DESTINO
 let ROOT_DESTINATION_FOLDER_ID = null;
 let ROOT_DESTINATION_FOLDER = null;
+let DATA_FOLDER = null;
 let AFORISMOS_DOC_ID = null;
 let totalFiles = 0;
 
 // --- FUNÇÕES PRINCIPAIS E DE GESTÃO DE PASTAS ---
 
 function principal(nomePastaRaiz = "Wingene") {
+  DATA_FOLDER = null;
+  totalFiles = 0;
 
   const caminhoPastaFonte = "Pessoal/Meus.Textos/" + nomePastaRaiz;
   const pastaFonte = encontrarCriarPastaPorCaminho(caminhoPastaFonte, false);
@@ -239,6 +242,7 @@ function getMetadataFromMd(arquivoMdDestino) {
     let noIndex = false;
     let hasNavigationFooter = true;
     let title = null;
+    let tags = [];
     
     try {
         const content = arquivoMdDestino.getBlob().getDataAsString();
@@ -268,18 +272,33 @@ function getMetadataFromMd(arquivoMdDestino) {
             if (/navigation_footer:\s*false/i.test(yamlBlock)) {
                 hasNavigationFooter = false;
             }
-            
             // Regex para extrair title (com ou sem aspas)
             const titleMatch = yamlBlock.match(/title:\s*["'“`”‘'«»]?(.*?)["'“`”‘'«»]?\s*$/im) || yamlBlock.match(/title:\s*(.*?)\n/i);
             if (titleMatch) {
                 title = normalizarAspas(titleMatch[1]).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
+            }
+
+            // Regex para extrair tags
+            const tagsBlockMatch = yamlBlock.match(/^tags:\s*\n((?:\s*-\s*.*(?:\n|$))+)/im);
+            if (tagsBlockMatch) {
+                tags = tagsBlockMatch[1].split('\n')
+                    .map(line => line.replace(/^\s*-\s*/, '').trim())
+                    .map(tag => normalizarAspas(tag).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim())
+                    .filter(t => t.length > 0);
+            } else {
+                const tagsInlineMatch = yamlBlock.match(/^tags:\s*\[(.*?)\]/im) || yamlBlock.match(/^tags:\s*(.+)$/im);
+                if (tagsInlineMatch) {
+                    tags = tagsInlineMatch[1].split(',')
+                        .map(tag => normalizarAspas(tag).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim())
+                        .filter(t => t.length > 0);
+                }
             }
         }
     } catch (e) {
         Logger.log(`[ERRO METADATA MD] Falha ao ler metadados do MD ${arquivoMdDestino.getName()}: ${e.toString()}`);
     }
 
-    return { semanticOrderScore: semanticOrderScore, tempoLeitura: tempoLeitura, noIndex: noIndex, hasNavigationFooter: hasNavigationFooter, title: title };
+    return { semanticOrderScore: semanticOrderScore, tempoLeitura: tempoLeitura, noIndex: noIndex, hasNavigationFooter: hasNavigationFooter, title: title, tags: tags || [] };
 }
 
 /**
@@ -387,6 +406,7 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
         let nomeSemData = nomeDocOriginal;
         let noIndex = false;
         let hasNavigationFooter = true;
+        let tags = [];
 
         if (deveConverter) {
             // Conversão pesada (Corpo e Metadados)
@@ -396,7 +416,8 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
                 tempoLeitura,
                 nomeSemData,
                 noIndex,
-                hasNavigationFooter
+                hasNavigationFooter,
+                tags
             } = getMarkdownAndScoreFromDoc(arquivoDoc, nomeDocOriginal, nomeSlug, pastaDestino, comentarioPasta[0]));
 
             if (nomeDocOriginal === 'Aforismos') {
@@ -412,7 +433,8 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
                     tempoLeitura,
                     noIndex,
                     hasNavigationFooter,
-                    title: customTitleFromMd
+                    title: customTitleFromMd,
+                    tags
                 } = getMetadataFromMd(arquivoMdDestino)); 
                 
                 if (customTitleFromMd) {
@@ -429,7 +451,8 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
                     tempoLeitura,
                     nomeSemData,
                     noIndex,
-                    hasNavigationFooter
+                    hasNavigationFooter,
+                    tags
                 } = getMetadataFromDocLite(arquivoDoc, nomeDocOriginal, pastaDestino));
             }
         }
@@ -443,6 +466,7 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
             content: markdownContent,
             semanticOrder: semanticOrderScore, // CHAVE UNIFICADA PARA ORDENAÇÃO
             time: tempoLeitura,
+            tags: tags || [],
             deveConverter: deveConverter,
             arquivoMdDestino: arquivoMdDestino,
             nomeSemData: nomeSemData,
@@ -831,6 +855,10 @@ function salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDest
         fileChanged = true;
     }
 
+    if (fileChanged || docInfo.deveConverter) {
+        atualizarDataJsonSeNecessario(docInfo, pastaDestino);
+    }
+
     return fileChanged;
 }
 
@@ -870,13 +898,14 @@ function gerarNavegacaoRodape(anterior, proximo) {
 }
 
 /**
- * Extrai APENAS os metadados (score, tempo leitura, nome sem data) de um Google Doc.
+ * Extrai APENAS os metadados (score, tempo leitura, nome sem data, tags) de um Google Doc.
  * Evita a conversão completa para Markdown para economizar tempo.
  */
 function getMetadataFromDocLite(docFile, originalFileName, pastaDestino = null) {
     let semanticOrderScore = 0.0;
     let tempoLeitura = 1;
     let nomeSemData = originalFileName; 
+    let tags = [];
     const isPostsFolder = pastaDestino && pastaDestino.getName() === '_posts';
     let noIndex = !isPostsFolder;
     let hasNavigationFooter = true;
@@ -894,7 +923,8 @@ function getMetadataFromDocLite(docFile, originalFileName, pastaDestino = null) 
                 tempoLeitura: 0,
                 nomeSemData: originalFileName,
                 noIndex: true,
-                hasNavigationFooter: false
+                hasNavigationFooter: false,
+                tags: []
             };
         }
         
@@ -907,13 +937,21 @@ function getMetadataFromDocLite(docFile, originalFileName, pastaDestino = null) 
         const roundedTime = Math.max(1, Math.round(rawTime));
         tempoLeitura = roundedTime;
 
-        // 2. EXTRAÇÃO DE SCORE
+        // 2. EXTRAÇÃO DE SCORE E TAGS
         const fullBodyText = body.getText();
         const scoreMatch = fullBodyText.match(REGEX_ORDENACAO);
         if (scoreMatch) {
             const scoreStr = scoreMatch[1].replace(',', '.');
             semanticOrderScore = parseFloat(scoreStr) || semanticOrderScore;
             noIndex = false;
+        }
+
+        const tagMatch = fullBodyText.match(/^\s*tags:\s*(.*)/im);
+        if (tagMatch) {
+            const tagsString = tagMatch[1].replace(/\.\s*$/, "");
+            tags = tagsString.split(',')
+                .map(tag => normalizarAspas(tag).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim())
+                .filter(tag => tag.length > 0);
         }
         
         const footerMatch = fullBodyText.match(/^\s*(?:Footer|Fotter):\s*(n[ãa]o|no)/im);
@@ -936,7 +974,8 @@ function getMetadataFromDocLite(docFile, originalFileName, pastaDestino = null) 
             tempoLeitura: tempoLeitura,
             nomeSemData: nomeSemData,
             noIndex: noIndex,
-            hasNavigationFooter: hasNavigationFooter
+            hasNavigationFooter: hasNavigationFooter,
+            tags: tags
         };
 
     } catch (e) {
@@ -946,7 +985,8 @@ function getMetadataFromDocLite(docFile, originalFileName, pastaDestino = null) 
             tempoLeitura: tempoLeitura,
             nomeSemData: originalFileName,
             noIndex: false,
-            hasNavigationFooter: true
+            hasNavigationFooter: true,
+            tags: []
         };
     }
 }
@@ -1098,7 +1138,8 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                 tempoLeitura: 0,
                 nomeSemData: originalFileName,
                 noIndex: true,
-                hasNavigationFooter: false
+                hasNavigationFooter: false,
+                tags: []
             };
         }
         
@@ -1134,7 +1175,9 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                 const tagMatch = text.match(/^\s*tags:\s*(.*)/im);
                 if (tagMatch && !tagsFound) {
                     const tagsString = tagMatch[1].replace(/\.\s*$/, "");
-                    tags = tagsString.split(',').map(tag => tag.trim()).filter(tag => tag.length > 0);
+                    tags = tagsString.split(',')
+                        .map(tag => normalizarAspas(tag).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim())
+                        .filter(tag => tag.length > 0);
                     tagsFound = true;
                     isMetadata = true;
                 }
@@ -1551,7 +1594,8 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
             tempoLeitura: tempoLeitura,
             nomeSemData: nomeSemData, // Retorna o nome sem data para uso na navegação
             noIndex: noIndex,
-            hasNavigationFooter: hasNavigationFooter
+            hasNavigationFooter: hasNavigationFooter,
+            tags: tags
         };
 
     } catch (e) {
@@ -1562,7 +1606,8 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
             tempoLeitura: tempoLeitura,
             nomeSemData: originalFileName, // Retorna o nome original em caso de erro
             noIndex: false,
-            hasNavigationFooter: true
+            hasNavigationFooter: true,
+            tags: []
         };
     }
 }
@@ -1770,4 +1815,175 @@ function limparArquivosExcluidos(pastaDestino, pastaFonte) {
             limparArquivosExcluidos(subpastasDestinoIterator.next(), subpastaFonte);
         }
     }
+}
+
+// --- SINCRONIZAÇÃO DE METADADOS COM A PASTA _DATA ---
+
+/**
+ * Obtém a pasta _data da raiz do site.
+ */
+function obterPastaData() {
+    if (DATA_FOLDER) return DATA_FOLDER;
+    let root = null;
+    if (ROOT_DESTINATION_FOLDER_ID) {
+        try {
+            root = DriveApp.getFolderById(ROOT_DESTINATION_FOLDER_ID);
+        } catch (e) {}
+    }
+    if (!root) {
+        root = encontrarCriarPastaPorCaminho(CAMINHO_PASTA_DESTINO, false);
+    }
+    if (!root) return null;
+    const dataIter = root.getFoldersByName("_data");
+    if (dataIter.hasNext()) {
+        DATA_FOLDER = dataIter.next();
+        return DATA_FOLDER;
+    }
+    return null;
+}
+
+/**
+ * Atualiza o tempo de leitura e tags em arquivos .json na pasta _data,
+ * se o nome do json estiver contido no nome da pasta de destino e houver item com o filename correspondente.
+ */
+function atualizarDataJsonSeNecessario(docInfo, pastaDestino) {
+    try {
+        const pastaData = obterPastaData();
+        if (!pastaData) return;
+
+        const folderName = pastaDestino.getName().toLowerCase();
+        const normFolderName = folderName.replace(/[-_]/g, '');
+        const filesIter = pastaData.getFiles();
+
+        while (filesIter.hasNext()) {
+            const file = filesIter.next();
+            const fileName = file.getName();
+            if (!fileName.toLowerCase().endsWith('.json')) continue;
+
+            const jsonBaseName = fileName.replace(/\.json$/i, '').toLowerCase();
+            const normJsonName = jsonBaseName.replace(/[-_]/g, '');
+
+            // Verifica se o nome do json está contido no nome da pasta ou vice-versa
+            if (!normFolderName.includes(normJsonName) && !normJsonName.includes(normFolderName)) {
+                continue;
+            }
+
+            let contentStr = file.getBlob().getDataAsString();
+            let dataObj;
+            try {
+                dataObj = JSON.parse(contentStr);
+            } catch (e) {
+                Logger.log(`[AVISO _DATA] JSON inválido em "${fileName}": ${e.toString()}`);
+                continue;
+            }
+
+            const formattedTime = `${docInfo.time} min`;
+            const wasUpdated = atualizarItemNoObjeto(
+                dataObj,
+                docInfo.slug,
+                docInfo.markdownName,
+                pastaDestino.getName(),
+                formattedTime,
+                docInfo.tags
+            );
+
+            if (wasUpdated) {
+                const newContent = JSON.stringify(dataObj, null, 2) + '\n';
+                if (contentStr.trim() !== newContent.trim()) {
+                    file.setContent(newContent);
+                    Logger.log(`[_DATA] Atualizado "${fileName}" para "${docInfo.slug}" (tempo: ${formattedTime}, tags: ${JSON.stringify(docInfo.tags || [])}).`);
+                }
+            }
+        }
+    } catch (e) {
+        Logger.log(`[ERRO _DATA] Falha ao atualizar dados em _data para "${docInfo.slug}": ${e.toString()}`);
+    }
+}
+
+/**
+ * Percorre recursivamente o objeto/array JSON e atualiza tempo e tags do item com filename correspondente.
+ */
+function atualizarItemNoObjeto(obj, slug, markdownName, folderName, formattedTime, tags) {
+    if (!obj || typeof obj !== 'object') return false;
+    let anyUpdated = false;
+
+    if (Array.isArray(obj)) {
+        for (let i = 0; i < obj.length; i++) {
+            if (atualizarItemNoObjeto(obj[i], slug, markdownName, folderName, formattedTime, tags)) {
+                anyUpdated = true;
+            }
+        }
+        return anyUpdated;
+    }
+
+    // Verifica se este objeto é o item procurado
+    const htmlName = `${slug}.html`;
+    const relativeHtml = `${folderName}/${htmlName}`;
+    let isMatch = false;
+
+    if (obj.filename && typeof obj.filename === 'string') {
+        const fn = obj.filename.trim();
+        if (fn === htmlName || fn === relativeHtml || fn === markdownName || fn.endsWith('/' + htmlName)) {
+            isMatch = true;
+        } else if (fn.replace(/\.(html|md)$/i, '') === slug || fn.replace(/\.(html|md)$/i, '').endsWith('/' + slug)) {
+            isMatch = true;
+        }
+    } else if (obj.id && typeof obj.id === 'string' && obj.id.trim() === slug) {
+        if (!obj.stories && !obj.items && !obj.children) {
+            isMatch = true;
+        }
+    }
+
+    if (isMatch) {
+        // Atualiza tempo de leitura
+        if (obj.meta !== undefined) {
+            if (obj.meta !== formattedTime) {
+                obj.meta = formattedTime;
+                anyUpdated = true;
+            }
+        } else {
+            if (obj.time !== formattedTime) {
+                obj.time = formattedTime;
+                anyUpdated = true;
+            }
+        }
+
+        // Atualiza tags se fornecidas
+        if (tags && Array.isArray(tags) && tags.length > 0) {
+            const currentTagsStr = JSON.stringify(obj.tags || []);
+            const newTagsStr = JSON.stringify(tags);
+            if (currentTagsStr !== newTagsStr) {
+                obj.tags = tags;
+                anyUpdated = true;
+            }
+        }
+    }
+
+    // Percorre propriedades filhas (ex: stories em cronicas.json ou chaves em reflexoes.json)
+    for (const key of Object.keys(obj)) {
+        if (typeof obj[key] === 'object' && obj[key] !== null) {
+            if (atualizarItemNoObjeto(obj[key], slug, markdownName, folderName, formattedTime, tags)) {
+                anyUpdated = true;
+            }
+        }
+    }
+
+    // Recalcula timeTotal se houver lista de stories
+    if (obj.stories && Array.isArray(obj.stories) && obj.timeTotal !== undefined) {
+        let totalMin = 0;
+        for (let s = 0; s < obj.stories.length; s++) {
+            const story = obj.stories[s];
+            if (story.time) {
+                const m = parseInt(story.time, 10);
+                if (!isNaN(m)) totalMin += m;
+            }
+        }
+        const newTotalStr = `${totalMin} min`;
+        if (obj.timeTotal !== newTotalStr) {
+            obj.timeTotal = newTotalStr;
+            anyUpdated = true;
+        }
+    }
+
+    return anyUpdated;
 }
