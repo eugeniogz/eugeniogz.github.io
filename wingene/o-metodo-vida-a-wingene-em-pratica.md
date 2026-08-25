@@ -5,16 +5,11 @@ reading_time: 14
 semantic_order: 200
 tags:
   - Wingene
-  - Vida
-  - Atenção plena
-  - Caminho
-  - Conhecimento
   - Evolução
-  - Felicidade
-  - Eudaimonia
-  - Futuro
-  - Herança
-  - Mente
+  - Valores
+  - Atenção plena
+  - Decisões
+  - Imperfeições
   - método VIDA
 --- 
 
