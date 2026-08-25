@@ -1089,6 +1089,27 @@ textarea::placeholder {
   color: var(--color-imperfections-primary);
 }
 
+.microblog-badge.recordando-badge {
+  background: var(--color-values-light);
+  color: var(--color-values-primary);
+  border: 1px solid rgba(148, 15, 15, 0.25);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .microblog-badge.recordando-badge {
+    background: rgba(255, 107, 107, 0.15);
+    color: #ff8585;
+    border-color: rgba(255, 107, 107, 0.35);
+  }
+}
+
+.microblog-card.recordando-card {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
 .microblog-date {
   font-family: 'Inter', sans-serif;
   font-size: 0.85rem;

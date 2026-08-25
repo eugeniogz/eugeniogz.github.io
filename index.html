@@ -34,6 +34,59 @@ description: Wingene é um projeto filosófico sobre herança, consciência, cri
   {% endfor %}
 </div>
 
+<script>
+  (function() {
+    function initRecordando() {
+      var feed = document.querySelector('.microblog-feed');
+      if (!feed) return;
+
+      var cards = feed.querySelectorAll('.microblog-card');
+      // Seleciona aleatoriamente um post diferente dos 4 mais recentes (índice 4 em diante)
+      var candidates = Array.prototype.slice.call(cards, 4);
+      if (candidates.length === 0) {
+        if (cards.length > 1) {
+          candidates = Array.prototype.slice.call(cards, 1);
+        } else {
+          return;
+        }
+      }
+
+      var chosenCard = candidates[Math.floor(Math.random() * candidates.length)];
+      var clone = chosenCard.cloneNode(true);
+      clone.classList.add('recordando-card');
+
+      var header = clone.querySelector('.microblog-header');
+      if (header) {
+        var recordandoBadge = document.createElement('span');
+        recordandoBadge.className = 'microblog-badge recordando-badge';
+        recordandoBadge.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align: -1px; margin-right: 3px;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>Recordando';
+
+        var firstBadge = header.querySelector('.microblog-badge');
+        if (firstBadge) {
+          var badgeWrapper = document.createElement('div');
+          badgeWrapper.style.display = 'inline-flex';
+          badgeWrapper.style.alignItems = 'center';
+          badgeWrapper.style.gap = '6px';
+          badgeWrapper.style.flexWrap = 'wrap';
+          firstBadge.parentNode.insertBefore(badgeWrapper, firstBadge);
+          badgeWrapper.appendChild(recordandoBadge);
+          badgeWrapper.appendChild(firstBadge);
+        } else {
+          header.insertBefore(recordandoBadge, header.firstChild);
+        }
+      }
+
+      feed.insertBefore(clone, feed.firstChild);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initRecordando);
+    } else {
+      initRecordando();
+    }
+  })();
+</script>
+
 <hr>
 
 <blockquote>
