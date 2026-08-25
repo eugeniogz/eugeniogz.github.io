@@ -1914,18 +1914,26 @@ function atualizarDataJsonSeNecessario(docInfo, pastaDestino) {
             }
 
             const formattedTime = `${docInfo.time} min`;
-            let wasUpdated = atualizarItemNoObjeto(
+            const itemJaExiste = itemExisteNoObjeto(
                 dataObj,
                 docInfo.slug,
                 docInfo.markdownName,
-                pastaDestino.getName(),
-                formattedTime,
-                docInfo.tags,
-                docInfo.desc
+                pastaDestino.getName()
             );
 
-            // Se o item não foi encontrado no JSON para atualizar, insere como novo item
-            if (!wasUpdated) {
+            let wasUpdated = false;
+
+            if (itemJaExiste) {
+                wasUpdated = atualizarItemNoObjeto(
+                    dataObj,
+                    docInfo.slug,
+                    docInfo.markdownName,
+                    pastaDestino.getName(),
+                    formattedTime,
+                    docInfo.tags,
+                    docInfo.desc
+                );
+            } else {
                 wasUpdated = inserirItemNoObjetoSeNaoExistir(
                     dataObj,
                     docInfo,
@@ -1945,6 +1953,48 @@ function atualizarDataJsonSeNecessario(docInfo, pastaDestino) {
     } catch (e) {
         Logger.log(`[ERRO _DATA] Falha ao atualizar dados em _data para "${docInfo.slug}": ${e.toString()}`);
     }
+}
+
+/**
+ * Verifica se um item já existe no objeto/array JSON pelo slug ou filename.
+ */
+function itemExisteNoObjeto(obj, slug, markdownName, folderName) {
+    if (!obj || typeof obj !== 'object') return false;
+
+    if (Array.isArray(obj)) {
+        for (let i = 0; i < obj.length; i++) {
+            if (itemExisteNoObjeto(obj[i], slug, markdownName, folderName)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    const htmlName = `${slug}.html`;
+    const relativeHtml = `${folderName}/${htmlName}`;
+
+    if (obj.filename && typeof obj.filename === 'string') {
+        const fn = obj.filename.trim();
+        if (fn === htmlName || fn === relativeHtml || fn === markdownName || fn.endsWith('/' + htmlName)) {
+            return true;
+        } else if (fn.replace(/\.(html|md)$/i, '') === slug || fn.replace(/\.(html|md)$/i, '').endsWith('/' + slug)) {
+            return true;
+        }
+    } else if (obj.id && typeof obj.id === 'string' && obj.id.trim() === slug) {
+        if (!obj.stories && !obj.items && !obj.children) {
+            return true;
+        }
+    }
+
+    for (const key of Object.keys(obj)) {
+        if (typeof obj[key] === 'object' && obj[key] !== null) {
+            if (itemExisteNoObjeto(obj[key], slug, markdownName, folderName)) {
+                return true;
+            }
+        }
+    }
+
+    return false;
 }
 
 /**
@@ -2091,6 +2141,13 @@ function inserirItemNoObjetoSeNaoExistir(dataObj, docInfo, folderName, formatted
                 if (!Array.isArray(targetVolume.stories)) {
                     targetVolume.stories = [];
                 }
+                const alreadyExists = targetVolume.stories.some(st =>
+                    (st.id && st.id === docInfo.slug) ||
+                    (st.filename && (st.filename === `${folderName}/${docInfo.slug}.html` || st.filename === `${docInfo.slug}.html` || st.filename.endsWith('/' + docInfo.slug + '.html')))
+                );
+                if (alreadyExists) {
+                    return false;
+                }
                 targetVolume.stories.push(newStory);
                 targetVolume.count = targetVolume.stories.length;
 
@@ -2119,6 +2176,14 @@ function inserirItemNoObjetoSeNaoExistir(dataObj, docInfo, folderName, formatted
             }
         } else {
             // Lista plana de itens (ex: poesias.json, ipes.json, cascudo.json, wingene.json)
+            const alreadyExists = dataObj.some(item =>
+                (item.id && item.id === docInfo.slug) ||
+                (item.filename && (item.filename === `${docInfo.slug}.html` || item.filename === `${folderName}/${docInfo.slug}.html` || item.filename.endsWith('/' + docInfo.slug + '.html')))
+            );
+            if (alreadyExists) {
+                return false;
+            }
+
             const newItem = {
                 id: docInfo.slug,
                 title: docInfo.nomeSemData || docInfo.original,

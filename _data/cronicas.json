@@ -152,7 +152,12 @@
         "title": "Atenção aos desvios",
         "time": "1 min",
         "filename": "cronicas-2/atencao-aos-desvios.html",
-        "desc": "Reconhecer as distrações sem aflição para reajustar o curso."
+        "desc": "Reconhecer as distrações sem aflição para reajustar o curso.",
+        "tags": [
+          "Atenção plena",
+          "Decisões",
+          "Vida"
+        ]
       }
     ]
   },
@@ -210,8 +215,8 @@
     "badge": "🌿 Extra",
     "folder": "breves-cronicas/",
     "desc": "Pequenos relatos sobre a vida.",
-    "count": 2,
-    "timeTotal": "2 min",
+    "count": 3,
+    "timeTotal": "3 min",
     "stories": [
       {
         "id": "o-cortejo-do-sabia",
@@ -236,6 +241,17 @@
           "Atenção plena",
           "Eudaimonia",
           "Felicidade"
+        ]
+      },
+      {
+        "id": "bergamota",
+        "title": "Bergamota",
+        "time": "1 min",
+        "filename": "breves-cronicas/bergamota.html",
+        "desc": "Na noite de uma metrópole, a bergamota e o futebol.",
+        "tags": [
+          "Atenção plena",
+          "Sociedade"
         ]
       }
     ]

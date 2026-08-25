@@ -24,5 +24,5 @@ A asa-branca entoa seu canto triste; o barulho dos automóveis o abafa por insta
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./o-cortejo-do-sabia.html">&lt;&lt; O cortejo do sabiá</a>
-  <span></span>
+  <a href="./bergamota.html">Bergamota &gt;&gt;</a>
 </div>
