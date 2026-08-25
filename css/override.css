@@ -3443,17 +3443,29 @@ h6:before {
 }
 
 .wingene-card-tags,
+.wingene-article-tags,
 .poetry-card-tags,
-.ipes-card-tags {
+.poetry-article-tags,
+.ipes-card-tags,
+.ipes-article-tags {
   display: flex;
   gap: 6px;
   flex-wrap: wrap;
   margin-bottom: 12px;
 }
 
+.wingene-article-tags,
+.poetry-article-tags,
+.ipes-article-tags {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
 .wingene-tag,
 .poetry-tag,
 .ipes-tag {
+  display: inline-flex;
+  align-items: center;
   font-size: 0.74rem;
   font-weight: 600;
   padding: 2px 8px;
@@ -3461,6 +3473,8 @@ h6:before {
   background: var(--bg-card);
   color: var(--text-muted);
   border: 1px solid var(--border-light);
+  white-space: nowrap;
+  box-sizing: border-box;
 }
 
 .wingene-card-desc,
@@ -3914,4 +3928,44 @@ h6:before {
   color: var(--color-attention-primary) !important;
   text-decoration: none !important;
   margin-top: 4px;
+}
+
+@media only screen and (max-width: 767px) {
+  .wingene-article,
+  .poetry-article,
+  .ipes-article,
+  .cronicas-article {
+    padding: 24px 16px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+  }
+
+  .wingene-article-title,
+  .poetry-article-title,
+  .ipes-article-title,
+  .cronicas-article-title {
+    font-size: 1.5rem !important;
+  }
+
+  .wingene-nav-footer,
+  .poetry-nav-footer,
+  .ipes-nav-footer,
+  .cronicas-nav-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .wingene-nav-card,
+  .poetry-nav-card,
+  .ipes-nav-card,
+  .cronicas-nav-card {
+    max-width: 100%;
+  }
+
+  .wingene-center-link,
+  .poetry-center-link,
+  .ipes-center-link,
+  .cronicas-center-link {
+    justify-content: center;
+  }
 }
