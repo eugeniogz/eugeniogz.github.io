@@ -52,6 +52,6 @@ Ao acender a chama da atenção no cotidiano, descobrimos que não precisamos es
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./o-sistema-gene-e-a-wingene-coletiva-a-arquitetura-da-eudaimonia-social.html">&lt;&lt; O Sistema GENE e a Wingene Coletiva</a>
+  <a href="./o-sistema-gene-e-a-wingene-coletiva-a-arquitetura-da-eudaimonia-social.html">&lt;&lt; O Sistema GENE</a>
   <a href="./tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html">Tecendo a vida &gt;&gt;</a>
 </div>

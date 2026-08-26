@@ -274,7 +274,7 @@ function getMetadataFromMd(arquivoMdDestino) {
                 hasNavigationFooter = false;
             }
             // Regex para extrair title (com ou sem aspas)
-            const titleMatch = yamlBlock.match(/title:\s*["'“`”‘'«»]?(.*?)["'“`”‘'«»]?\s*$/im) || yamlBlock.match(/title:\s*(.*?)\n/i);
+            const titleMatch = yamlBlock.match(/^(?:title|t[ií]tulo):\s*["'“`”‘'«»]?(.*?)["'“`”‘'«»]?\s*$/im) || yamlBlock.match(/^(?:title|t[ií]tulo):\s*(.*?)\n/im);
             if (titleMatch) {
                 title = normalizarAspas(titleMatch[1]).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
             }
@@ -491,10 +491,13 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
         if (!noIndex && hasNavigationFooter) {
             arquivosIndexados.push({
                 original: nomeDocOriginal,
+                title: nomeSemData || nomeDocOriginal,
+                nomeSemData: nomeSemData || nomeDocOriginal,
                 slug: nomeSlug,
                 link: `./${nomeSlug}.html`,
                 time: tempoLeitura,
-                semanticOrder: semanticOrderScore
+                semanticOrder: semanticOrderScore,
+                desc: desc
             });
         }
     }
@@ -884,15 +887,15 @@ function gerarNavegacaoRodape(anterior, proximo) {
     let navLinksHtml = [];
 
     if (anterior) {
-        // Usa o nome sem data/formatação do index
-        const nomeAnterior = anterior.nomeSemData.split(':')[0].trim();
+        // Usa o título do documento (definido no front-matter / rodapé)
+        const nomeAnterior = anterior.nomeSemData || anterior.original;
         navLinksHtml.push(`<a href="./${anterior.slug}.html">&lt;&lt; ${nomeAnterior}</a>`);
     } else {
         navLinksHtml.push('<span></span>'); // Placeholder para manter o espaçamento
     }
 
     if (proximo) {
-        const nomeProximo = proximo.nomeSemData.split(':')[0].trim();
+        const nomeProximo = proximo.nomeSemData || proximo.original;
         navLinksHtml.push(`<a href="./${proximo.slug}.html">${nomeProximo} &gt;&gt;</a>`);
     } else {
         navLinksHtml.push('<span></span>'); // Placeholder para manter o espaçamento
@@ -1317,7 +1320,6 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         if (fileSlug !== 'index') {
             let linkIndex = "./";
             if (!isPost && !isPostsFolder && pastaDestino.getId() !== ROOT_DESTINATION_FOLDER_ID) markdown += `\n\n### [${tituloPasta}](${linkIndex})\n\n`;
-            if (!isPostsFolder) markdown += `## ${cleanTitle}\n\n`;
         }
 
         const contentElements = contentElementsInReverse.reverse();
@@ -1339,7 +1341,7 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                     firstNonMetaIndex = i + 1;
                     continue;
                 }
-                if (inFrontMatterBlock || txt.match(/^(layout|title|date|pillar|pilar|reading_time|semantic_order|tags|no_index|navigation_footer|desc|description):\s*/i)) {
+                if (inFrontMatterBlock || txt.match(/^(layout|title|t[ií]tulo|date|data|pillar|pilar|reading_time|semantic_order|tags|no_index|navigation_footer|desc|descri[cç][aã]o|description):\s*/i)) {
                     firstNonMetaIndex = i + 1;
                     continue;
                 }
@@ -1712,9 +1714,14 @@ function criarIndexMarkdown(pastaDestino, titulo, arquivos, subpastas, comentari
         
         arquivos.forEach(doc => {
             const timeFormat = `<span class="word-count">[${doc.time} min]</span>`;
-            let nome_descr = splitComentario(doc.original);
-            indexContent += `### 📄 [${nome_descr[0]}](${doc.link}) ${timeFormat}\n`;
-            if (nome_descr.length>1) indexContent += `${nome_descr[1]}\n`;
+            const docTitle = doc.title || doc.nomeSemData || splitComentario(doc.original)[0];
+            const nome_descr = splitComentario(doc.original);
+            indexContent += `### 📄 [${docTitle}](${doc.link}) ${timeFormat}\n`;
+            if (doc.desc) {
+                indexContent += `${doc.desc}\n`;
+            } else if (nome_descr.length > 1) {
+                indexContent += `${nome_descr[1]}\n`;
+            }
         });
         indexContent += `\n`;
     }
@@ -1931,7 +1938,8 @@ function atualizarDataJsonSeNecessario(docInfo, pastaDestino) {
                     pastaDestino.getName(),
                     formattedTime,
                     docInfo.tags,
-                    docInfo.desc
+                    docInfo.desc,
+                    docInfo.nomeSemData
                 );
             } else {
                 wasUpdated = inserirItemNoObjetoSeNaoExistir(
@@ -2000,13 +2008,13 @@ function itemExisteNoObjeto(obj, slug, markdownName, folderName) {
 /**
  * Percorre recursivamente o objeto/array JSON e atualiza tempo, tags e desc do item com filename correspondente.
  */
-function atualizarItemNoObjeto(obj, slug, markdownName, folderName, formattedTime, tags, desc) {
+function atualizarItemNoObjeto(obj, slug, markdownName, folderName, formattedTime, tags, desc, title) {
     if (!obj || typeof obj !== 'object') return false;
     let anyUpdated = false;
 
     if (Array.isArray(obj)) {
         for (let i = 0; i < obj.length; i++) {
-            if (atualizarItemNoObjeto(obj[i], slug, markdownName, folderName, formattedTime, tags, desc)) {
+            if (atualizarItemNoObjeto(obj[i], slug, markdownName, folderName, formattedTime, tags, desc, title)) {
                 anyUpdated = true;
             }
         }
@@ -2032,6 +2040,19 @@ function atualizarItemNoObjeto(obj, slug, markdownName, folderName, formattedTim
     }
 
     if (isMatch) {
+        // Atualiza título se fornecido
+        if (title && typeof title === 'string' && title.trim().length > 0) {
+            const cleanTitle = title.trim();
+            if (obj.title !== undefined && obj.title !== cleanTitle) {
+                obj.title = cleanTitle;
+                anyUpdated = true;
+            }
+            if (obj.name !== undefined && obj.name !== cleanTitle) {
+                obj.name = cleanTitle;
+                anyUpdated = true;
+            }
+        }
+
         // Atualiza tempo de leitura
         if (obj.meta !== undefined) {
             if (obj.meta !== formattedTime) {
@@ -2068,7 +2089,7 @@ function atualizarItemNoObjeto(obj, slug, markdownName, folderName, formattedTim
     // Percorre propriedades filhas (ex: stories em cronicas.json ou chaves em reflexoes.json)
     for (const key of Object.keys(obj)) {
         if (typeof obj[key] === 'object' && obj[key] !== null) {
-            if (atualizarItemNoObjeto(obj[key], slug, markdownName, folderName, formattedTime, tags, desc)) {
+            if (atualizarItemNoObjeto(obj[key], slug, markdownName, folderName, formattedTime, tags, desc, title)) {
                 anyUpdated = true;
             }
         }

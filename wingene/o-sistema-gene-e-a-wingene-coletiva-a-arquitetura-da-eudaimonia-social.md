@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "O Sistema GENE e a Wingene Coletiva: A Arquitetura da Eudaimonia Social"
+title: "O Sistema GENE: A Arquitetura da Eudaimonia Social"
 reading_time: 10
 semantic_order: 220
 tags:
@@ -17,13 +17,11 @@ tags:
 
 ### [Wingene](./)
 
-## O Sistema GENE e a Wingene Coletiva: A Arquitetura da Eudaimonia Social
-
 *Tecer virtudes, semear atitudes.*
 
 ## O ponto de partida: a eudaimonia social
 
-Ninguém nasce no vazio. Cada um de nós chega ao mundo caminhando sobre uma estrada aberta pelos passos, erros e acertos dos nossos ancestrais. Essa herança que corre no sangue e na memória — o nosso *gene* — é a matéria-prima da vida. Mas o ponto de partida não é o destino final.
+Ninguém nasce no vazio. Cada um de nós chega ao mundo caminhando sobre uma estrada aberta pelos passos, erros e acertos dos ancestrais. Essa herança que corre no sangue e na memória — o nosso *gene* — é a matéria-prima da vida. Mas o ponto de partida não é o destino final.
 
 Na filosofia de Aristóteles, o sentido de vivermos juntos em comunidade nunca foi apenas sobreviver ou nos defender uns dos outros. O verdadeiro propósito da convivência humana é o **viver bem**: o cultivo das virtudes, a busca pela serenidade e o alcance da *eudaimonia* — a felicidade autêntica e duradoura. Esse conceito deve aceitar a coexistência de diferentes concepções de felicidade, desde que respeitem a liberdade e a dignidade dos demais. Além disso, essas concepções podem ser revistas com o tempo, o progresso e o ambiente.
 

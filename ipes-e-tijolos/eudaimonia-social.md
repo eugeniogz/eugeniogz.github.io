@@ -30,7 +30,7 @@ Ao Estado, cabe a tarefa de facilitar esse processo, ciente da importância do f
 
 Em última análise, a eudaimonia social revela-se menos como uma utopia e mais como um compromisso contínuo. Ao entrelaçar a elevação da consciência individual com a responsabilidade coletiva, o florescimento humano consolida-se como alicerce de uma cultura mais plena. É na união entre virtude e estrutura que residirá a verdadeira prosperidade, transformando a busca pela felicidade em um patrimônio compartilhado.
 
-Veja também: [O sistema GENE e a Wingene coletiva: a arquitetura da eudaimonia social](/wingene/o-sistema-gene-e-a-wingene-coletiva-a-arquitetura-da-eudaimonia-social.html).
+Veja também: [O sistema GENE: a arquitetura da eudaimonia social](/wingene/o-sistema-gene-e-a-wingene-coletiva-a-arquitetura-da-eudaimonia-social.html).
 <div style="clear: both;"></div>
 
 ---
