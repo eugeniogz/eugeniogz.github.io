@@ -5,14 +5,12 @@ reading_time: 7
 semantic_order: 300
 tags:
   - Vida
-  - Caminho
+  - Wingene
 --- 
 
 
 
 ### [Wingene](./)
-
-## Tecendo a vida: criando no íntimo uma obra pessoal
 
 A arte de viver requer aprendizado constante. Cada pessoa constrói sua vida como obra única, tecida com as experiências e solidificada com o conhecimento, o tempo e o futuro. A felicidade surge ao descortinar o véu da ignorância ante a beleza do trabalho que se tece. Cabe ao artífice da vida aprimorar a sua capacidade na criação do valioso tecido — que se gesta nas vitórias e fracassos, amores e desavenças.
 

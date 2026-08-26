@@ -5,15 +5,13 @@ reading_time: 4
 semantic_order: 1
 tags:
   - Wingene
-  - método VIDA
-  - Matemática
+  - Método VIDA
+  - Ciência
 --- 
 
 
 
 ### [Geometria](./)
-
-## Geometria e o método VIDA
 
 ### O logotipo padrão
 
@@ -52,6 +50,7 @@ Na simplificação, o amarelo foi substituído por uma estrela branca com uma pe
 Este é o ícone, onde é possível ver o halo amarelo subliminar, use o controle deslizante para alterar o tamanho:
 
 <div class="zoom-container">
+
 <div class="image-wrapper">
 
 <img id="zoom-image" src="./wingene-simplified.png" alt="Logotipo simplificado da Wingene" style="width: 45px; height: 45px;">
@@ -184,6 +183,6 @@ As figuras que compõem as estrelas internas, triângulos, quadrados e hexágono
 
 Triângulos e quadrados são os blocos de construção da realidade em qualquer dimensão — faces das famílias universais de politopos que "dão volume" à existência, do plano abstrato ao concreto. Os hexágonos azuis têm natureza diferente: não constroem volume, situam o espírito no plano material — a atenção que vive a experiência do real.
 
-O dodecagrama {12/5} é o “[limite harmônico](./the-dodecagram-poligonal-theorem.html)”: o polígono estrelado regular com maior número de vértices capaz de gerar, em seus anéis internos, apenas polígonos regulares — os mesmos triângulos, quadrados e hexágonos que formam o logotipo. Além dele, a ordem interna se desfaz. Para a Wingene, isso significa que a herança ancestral é a estrutura mais complexa possível que ainda sustenta harmonia. O caos não começa do nada — começa exatamente onde o {12/5} termina.
+O dodecagrama {12/5} é o "[limite harmônico](./the-dodecagram-poligonal-theorem.html)": o polígono estrelado regular com maior número de vértices capaz de gerar, em seus anéis internos, apenas polígonos regulares — os mesmos triângulos, quadrados e hexágonos que formam o logotipo. Além dele, a ordem interna se desfaz. Para a Wingene, isso significa que a herança ancestral é a estrutura mais complexa possível que ainda sustenta harmonia. O caos não começa do nada — começa exatamente onde o {12/5} termina.
 
 Detalhes técnicos da geração das imagens podem ser vistos na página que contém o código: [Wingene: os logotipos](/wingene-logo.html).
