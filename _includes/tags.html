@@ -5,45 +5,66 @@
     Caminho: Força a iteração em duas etapas para garantir que cada tag seja uma string.
 {% endcomment %}
 
-{% comment %} PASSO 1: Coletar TODAS as tags de TODOS os itens em uma lista bruta {% endcomment %}
+{% comment %} PASSO 1: Coletar TODAS as tags de TODOS os itens em uma lista bruta e normalizada (Primeira letra Maiúscula, demais minúsculas) {% endcomment %}
 {% assign raw_tags_list = "" %}
 {% assign all_content = site.posts | concat: site.pages %}
 {% assign total_items = all_content | where_exp: "item", "item.layout != 'uppercase'" %}
 
 {% for item in total_items %}
   {% if item.tags %}
-    {% comment %} Itera sobre a lista de tags de CADA ITEM. Se for um array aninhado, 
-                 esta iteração pega o array inteiro como "tag". {% endcomment %}
     {% for tag_item in item.tags %}
-      {% comment %} 
-        Agora, transformamos o que pode ser um array (como ["Eternidade", ...])
-        em uma string única separada por um caractere que usaremos para quebrar.
-      {% endcomment %}
       {% assign tag_string = tag_item | join: "||" %}
-      
-      {% comment %} Adiciona à nossa lista bruta, separando por um delimitador forte (||) {% endcomment %}
-      {% assign raw_tags_list = raw_tags_list | append: tag_string | append: "||" %}
+      {% assign tag_parts = tag_string | split: "||" %}
+      {% for single_tag in tag_parts %}
+        {% assign trimmed_tag = single_tag | strip %}
+        {% if trimmed_tag != "" %}
+          {% assign norm_tag = trimmed_tag | downcase | capitalize %}
+          {% if trimmed_tag contains "VIDA" %}
+            {% assign norm_tag = norm_tag | replace: "Vida", "VIDA" | replace: "vida", "VIDA" %}
+          {% endif %}
+          {% if trimmed_tag contains "GENE" %}
+            {% if trimmed_tag != "Wingene" and trimmed_tag != "wingene" and trimmed_tag != "WINGENE" %}
+              {% assign norm_tag = norm_tag | replace: "Gene", "GENE" | replace: "gene", "GENE" %}
+            {% endif %}
+          {% endif %}
+          {% assign raw_tags_list = raw_tags_list | append: norm_tag | append: "||" %}
+        {% endif %}
+      {% endfor %}
     {% endfor %}
   {% endif %}
 {% endfor %}
 
 {% comment %} 
-    PASSO 2: Quebrar a lista bruta em tags individuais e limpar.
-    O split transforma "Eternidade||Cosmogonia||..." em ["Eternidade", "Cosmogonia", ...]
+    PASSO 2: Quebrar a lista bruta em tags individuais, remover duplicatas e ordenar.
 {% endcomment %}
 {% assign all_tags = raw_tags_list | split: "||" | uniq | sort %}
 {% assign all_tags_cleaned = all_tags | where_exp: "item", "item != ''" %}
 
 
-{% comment %} PASSO 3: Encontrar o tamanho MÁXIMO e MÍNIMO para o cálculo da nuvem {% endcomment %}
+{% comment %} PASSO 3: Encontrar o tamanho MÁXIMO e MÍNIMO para o cálculo da nuvem (busca insensível a maiúsculas/minúsculas) {% endcomment %}
 {% assign min_size = 10000000 %}
 {% assign max_size = 0 %}
 
 {% for tag_name in all_tags_cleaned %}
+  {% assign target_tag_search = tag_name | downcase | prepend: "||" | append: "||" %}
   {% assign count = 0 %}
   {% for item in total_items %}
-    {% if item.tags contains tag_name %}
-      {% assign count = count | plus: 1 %}
+    {% if item.tags %}
+      {% assign item_tags_str = "" %}
+      {% for tag_item in item.tags %}
+        {% assign tag_str = tag_item | join: "||" %}
+        {% assign tag_parts = tag_str | split: "||" %}
+        {% for single_tag in tag_parts %}
+          {% assign trimmed_tag = single_tag | strip | downcase %}
+          {% if trimmed_tag != "" %}
+            {% assign item_tags_str = item_tags_str | append: "||" | append: trimmed_tag %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+      {% assign item_tags_str = item_tags_str | append: "||" %}
+      {% if item_tags_str contains target_tag_search %}
+        {% assign count = count | plus: 1 %}
+      {% endif %}
     {% endif %}
   {% endfor %}
   
@@ -72,31 +93,41 @@
 
 <div class="tag-cloud" id="tag-cloud-top">
   {% for tag_name in all_tags_cleaned %}
+    {% assign target_tag_search = tag_name | downcase | prepend: "||" | append: "||" %}
     
-    {% comment %} 1. Recalcula a contagem (Garantindo o Escopo) {% endcomment %}
+    {% comment %} 1. Recalcula a contagem de forma insensível à capitalização {% endcomment %}
     {% assign current_count = 0 %} 
     {% for item in total_items %}
-      {% if item.tags contains tag_name %}
-        {% assign current_count = current_count | plus: 1 %}
+      {% if item.tags %}
+        {% assign item_tags_str = "" %}
+        {% for tag_item in item.tags %}
+          {% assign tag_str = tag_item | join: "||" %}
+          {% assign tag_parts = tag_str | split: "||" %}
+          {% for single_tag in tag_parts %}
+            {% assign trimmed_tag = single_tag | strip | downcase %}
+            {% if trimmed_tag != "" %}
+              {% assign item_tags_str = item_tags_str | append: "||" | append: trimmed_tag %}
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+        {% assign item_tags_str = item_tags_str | append: "||" %}
+        {% if item_tags_str contains target_tag_search %}
+          {% assign current_count = current_count | plus: 1 %}
+        {% endif %}
       {% endif %}
     {% endfor %}
     
     {% assign tag_size_num = current_count | plus: 0 %} 
     
-    {% comment %} 2. Cálculo da Fonte (Agora com valores numéricos confiáveis) {% endcomment %}
+    {% comment %} 2. Cálculo da Fonte {% endcomment %}
     {% if size_range_f == 0.0 %}
         {% assign font_size = font_size_min_f %}
     {% else %}
         {% assign size_diff = tag_size_num | minus: min_count %}
         {% assign size_diff_f = size_diff | times: 1.0 %}
-
-        {% comment %} Calcula a posição relativa na escala (0 a 1) {% endcomment %}
         {% assign relative_size = size_diff_f | divided_by: size_range_f %}
-        
-        {% comment %} Escala o tamanho e soma ao mínimo {% endcomment %}
         {% assign font_size_increment = relative_size | times: font_range_f %}
         {% assign font_size = font_size_min_f | plus: font_size_increment %}
-        
     {% endif %}
 
     <a href="javascript:void(0);" 
@@ -109,11 +140,12 @@
 <hr>
 
 {% comment %} 
-  Esta seção inclui a lista oculta.
+  Esta seção inclui a lista oculta (cada lista reúne todos os posts correspondentes independente de capitalização).
 {% endcomment %}
 
 {% for tag_name in all_tags_cleaned %}
   {% assign tag_id = tag_name | slugify %}
+  {% assign target_tag_search = tag_name | downcase | prepend: "||" | append: "||" %}
   
   <div class="tag-list-container" id="{{ tag_id }}-container" style="display: none;">
     
@@ -121,8 +153,22 @@
 
     <ul>
       {% for item in total_items %}
-        {% if item.tags contains tag_name %}
-          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {% if item.tags %}
+          {% assign item_tags_str = "" %}
+          {% for tag_item in item.tags %}
+            {% assign tag_str = tag_item | join: "||" %}
+            {% assign tag_parts = tag_str | split: "||" %}
+            {% for single_tag in tag_parts %}
+              {% assign trimmed_tag = single_tag | strip | downcase %}
+              {% if trimmed_tag != "" %}
+                {% assign item_tags_str = item_tags_str | append: "||" | append: trimmed_tag %}
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+          {% assign item_tags_str = item_tags_str | append: "||" %}
+          {% if item_tags_str contains target_tag_search %}
+            <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+          {% endif %}
         {% endif %}
       {% endfor %}
     </ul>

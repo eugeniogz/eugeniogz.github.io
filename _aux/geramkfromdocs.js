@@ -198,6 +198,31 @@ function normalizarAspas(str) {
     .replace(/[‘’‚]/g, "'");
 }
 
+/**
+ * Normaliza uma tag: remove aspas, primeira letra maiúscula e demais minúsculas,
+ * preservando palavras como VIDA e GENE em maiúsculas se estiverem em maiúsculas na origem.
+ */
+function normalizarTag(tag) {
+  if (!tag || typeof tag !== 'string') return '';
+  const clean = normalizarAspas(tag).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
+  if (!clean) return '';
+
+  const hasUpperVida = /\bVIDA\b/.test(clean);
+  const hasUpperGene = /\bGENE\b/.test(clean);
+
+  const lower = clean.toLowerCase();
+  let result = lower.charAt(0).toUpperCase() + lower.slice(1);
+
+  if (hasUpperVida) {
+    result = result.replace(/\bvida\b/gi, 'VIDA');
+  }
+  if (hasUpperGene) {
+    result = result.replace(/\bgene\b/gi, 'GENE');
+  }
+
+  return result;
+}
+
 
 /**
  * Procura um arquivo .md pelo nome em toda a hierarquia de destino.
@@ -290,13 +315,13 @@ function getMetadataFromMd(arquivoMdDestino) {
             if (tagsBlockMatch) {
                 tags = tagsBlockMatch[1].split('\n')
                     .map(line => line.replace(/^\s*-\s*/, '').trim())
-                    .map(tag => normalizarAspas(tag).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim())
+                    .map(tag => normalizarTag(tag))
                     .filter(t => t.length > 0);
             } else {
                 const tagsInlineMatch = yamlBlock.match(/^tags:\s*\[(.*?)\]/im) || yamlBlock.match(/^tags:\s*(.+)$/im);
                 if (tagsInlineMatch) {
                     tags = tagsInlineMatch[1].split(',')
-                        .map(tag => normalizarAspas(tag).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim())
+                        .map(tag => normalizarTag(tag))
                         .filter(t => t.length > 0);
                 }
             }
@@ -967,7 +992,7 @@ function getMetadataFromDocLite(docFile, originalFileName, pastaDestino = null) 
         if (tagMatch) {
             const tagsString = tagMatch[1].replace(/\.\s*$/, "");
             tags = tagsString.split(',')
-                .map(tag => normalizarAspas(tag).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim())
+                .map(tag => normalizarTag(tag))
                 .filter(tag => tag.length > 0);
         }
 
@@ -1202,7 +1227,7 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                 if (tagMatch && !tagsFound) {
                     const tagsString = tagMatch[1].replace(/\.\s*$/, "");
                     tags = tagsString.split(',')
-                        .map(tag => normalizarAspas(tag).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim())
+                        .map(tag => normalizarTag(tag))
                         .filter(tag => tag.length > 0);
                     tagsFound = true;
                     isMetadata = true;
