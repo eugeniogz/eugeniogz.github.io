@@ -150,6 +150,6 @@ A verdadeira vitória do ser humano é saber que cada virtude tecida no silênci
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./o-metodo-vida-a-wingene-em-pratica.html">&lt;&lt; O método VIDA</a>
-  <a href="./metaconsciencia-pensar-o-sentir-sentir-o-pensar.html">Metaconsciência &gt;&gt;</a>
+  <a href="./o-metodo-vida-a-wingene-em-pratica.html">&lt;&lt; O método VIDA: a Wingene em prática</a>
+  <a href="./metaconsciencia-pensar-o-sentir-sentir-o-pensar.html">Metaconsciência: pensar o sentir, sentir o pensar &gt;&gt;</a>
 </div>

@@ -72,6 +72,6 @@ Essa dança tem um nome: [*Wingene*](/wingene/wingene-felicidade-agora-futuro-an
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./metaconsciencia-pensar-o-sentir-sentir-o-pensar.html">&lt;&lt; Metaconsciência</a>
+  <a href="./metaconsciencia-pensar-o-sentir-sentir-o-pensar.html">&lt;&lt; Metaconsciência: pensar o sentir, sentir o pensar</a>
   <span></span>
 </div>

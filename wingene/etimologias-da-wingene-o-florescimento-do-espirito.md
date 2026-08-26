@@ -51,6 +51,6 @@ Wingene, portanto, é o encontro da nossa origem com o nosso destino. É o ato d
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./wingene-felicidade-agora-futuro-ancestral.html">&lt;&lt; Wingene</a>
-  <a href="./o-metodo-vida-a-wingene-em-pratica.html">O método VIDA &gt;&gt;</a>
+  <a href="./wingene-felicidade-agora-futuro-ancestral.html">&lt;&lt; Wingene: Felicidade agora, futuro ancestral</a>
+  <a href="./o-metodo-vida-a-wingene-em-pratica.html">O método VIDA: a Wingene em prática &gt;&gt;</a>
 </div>
