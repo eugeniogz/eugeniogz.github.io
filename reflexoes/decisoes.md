@@ -27,7 +27,7 @@ A vaidade impede o aprimoramento, paralisando a evolução. -- 26/08/26
 
 Quem se julga incapaz de dar um passo jamais deixará o ponto de partida. -- 26/08/26
 
-Uma ligeira mudança de direção pode traçar um destino melhor. -- 26/08/26
+Uma ligeira mudança de direção pode alçar a um destino melhor. -- 26/08/26
 <div style="clear: both;"></div>
 
 ---
