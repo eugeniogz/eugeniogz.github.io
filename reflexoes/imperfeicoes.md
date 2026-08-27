@@ -11,7 +11,7 @@ tags:
 
 ### [Reflexões](./)
 
-## Imperfeições
+Para vencer uma imperfeição é preciso reconhecer, ter vontade e se esforçar reiteradamente em combatê-la. -- 26/08/26
 
 ### Atencionais
 

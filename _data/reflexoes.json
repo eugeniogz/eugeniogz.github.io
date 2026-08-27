@@ -17,7 +17,10 @@
     "desc": "O reconhecimento sem culpa dos desvios.",
     "quote": "O tropeço do piloto automático não é motivo de culpa, mas um sinal para aprimorar a presença...",
     "filename": "imperfeicoes.html",
-    "meta": "1 min"
+    "meta": "1 min",
+    "tags": [
+      "Imperfeições"
+    ]
   },
   "decisoes": {
     "id": "decisoes",
@@ -27,7 +30,10 @@
     "desc": "A escolha consciente de atitudes.",
     "quote": "A eudaimonia surge de pequenas escolhas que semeiam as condições para esse sentimento nas futuras gerações...",
     "filename": "decisoes.html",
-    "meta": "1 min"
+    "meta": "1 min",
+    "tags": [
+      "Decisões"
+    ]
   },
   "atencao": {
     "id": "atencao",

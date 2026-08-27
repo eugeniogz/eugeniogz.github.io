@@ -130,8 +130,9 @@
         {% assign font_size = font_size_min_f | plus: font_size_increment %}
     {% endif %}
 
-    <a href="javascript:void(0);" 
-       onclick="showTagList('{{ tag_name | slugify }}', this);" 
+    <a href="#{{ tag_name | slugify }}" 
+       class="tag-cloud-link"
+       data-tag="{{ tag_name | slugify }}" 
        style="font-size: {{ font_size }}em; padding: 0.2em 0.4em; cursor: pointer;">
       {{ tag_name }}
     </a>
@@ -176,13 +177,9 @@
 {% endfor %}
 
 <script>
-  // Função para mostrar a lista de tags clicada e ocultar todas as outras
+  // Função para mostrar a lista de tags clicada e atualizar o conteúdo principal
   function showTagList(tagSlug, element) {
-    const containers = document.querySelectorAll('.tag-list-container');
-    // 1. Encontra o container do conteúdo principal
     const mainContent = document.getElementById('main-content');
-    
-    // 2. Encontra o container oculto com a lista de posts da tag selecionada
     const selectedContainer = document.getElementById(tagSlug + '-container');
 
     // Remove a classe active de todas as tags da nuvem
@@ -193,38 +190,17 @@
     if (element) {
       element.classList.add('active');
     } else {
-      const matchingTag = Array.from(tags).find(t => {
-        const onclickStr = t.getAttribute('onclick') || '';
-        return onclickStr.includes("'" + tagSlug + "'") || onclickStr.includes('"' + tagSlug + '"');
-      });
+      const matchingTag = document.querySelector(`.tag-cloud a[data-tag="${tagSlug}"]`);
       if (matchingTag) {
         matchingTag.classList.add('active');
       }
     }
 
-    // 1. Oculta todos os containers
-    //containers.forEach(container => {
-    //  container.style.display = 'none';
-    //});
-
-    // 2. Exibe o container da tag clicada
-    //if (selectedContainer) {
-    //  selectedContainer.style.display = 'block';
-    // 3. Se ambos os elementos existirem, substitui o conteúdo principal
     if (mainContent && selectedContainer) {
       // Copia o HTML da lista de posts para o conteúdo principal
       mainContent.innerHTML = selectedContainer.innerHTML;
-       
-      // 3. Rola a página para o título da lista (para melhor UX)
-      // Usamos setTimeout para garantir que a rolagem ocorra após a exibição
-      // setTimeout(() => {
-      //   const targetElement = document.getElementById(tagSlug);
-      //   if (targetElement) {
-      //     targetElement.scrollIntoView({ behavior: 'smooth' });
-      //   }
-      // }, 0);
-      // 4. Rola a página para o topo do conteúdo principal para uma melhor UX
-      // Usamos setTimeout para garantir que a rolagem ocorra após a atualização do DOM
+      
+      // Rola a página suavemente para o topo do conteúdo principal
       setTimeout(() => {
         if (mainContent) {
           mainContent.scrollIntoView({ behavior: 'smooth' });
@@ -232,4 +208,19 @@
       }, 0);
     }
   }
+
+  // Delegação de evento para os cliques na nuvem de tags
+  document.addEventListener('DOMContentLoaded', function () {
+    const tagCloud = document.getElementById('tag-cloud-top');
+    if (tagCloud) {
+      tagCloud.addEventListener('click', function (event) {
+        const link = event.target.closest('.tag-cloud-link');
+        if (link) {
+          event.preventDefault();
+          const tagSlug = link.getAttribute('data-tag');
+          showTagList(tagSlug, link);
+        }
+      });
+    }
+  });
 </script>
