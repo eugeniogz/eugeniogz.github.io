@@ -14,6 +14,15 @@ plugins:
 paginate: 5
 paginate_path: '/page:num/' # Define a estrutura da URL
 markdown: kramdown
+
+exclude:
+  - .venv
+  - .git
+  - .vscode
+  - _aux
+  - Gemfile
+  - Gemfile.lock
+  - vendor
 #########################################################################################
 ######### Nothing below needs to be changed (unless you know what you're doing) #########
 #########################################################################################
