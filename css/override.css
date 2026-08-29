@@ -108,6 +108,19 @@ body {
   font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
 }
 
+/* Container responsivo e centralizado */
+.inner {
+  position: relative;
+  width: 92% !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+}
+
+header h1, header h2 {
+  width: auto !important;
+  max-width: 100% !important;
+}
+
 /* Força o contêiner do Architect a assumir o fundo dinâmico e correto */
 #content-wrapper {
   background: var(--bg-primary) !important;
@@ -217,11 +230,14 @@ header h2 {
   color: var(--text-main) !important;
   background: transparent !important; /* Remove qualquer fundo branco fixo do tema */
   box-sizing: border-box !important;
+  width: 100% !important;
 }
 
 @media screen and (min-width: 768px) {
   #main-content {
-    padding-right: 40px !important; /* Margem interna para afastar do sidebar no desktop */
+    float: left !important;
+    width: calc(100% - 330px) !important;
+    padding-right: 35px !important; /* Margem interna para afastar do sidebar no desktop */
   }
 }
 
@@ -442,11 +458,14 @@ a.button:hover {
   padding: 1.5rem !important;
   color: var(--text-main) !important;
   box-sizing: border-box !important;
+  width: 100% !important;
   margin-top: 30px !important; /* Separação no mobile quando empilhado */
 }
 
 @media screen and (min-width: 768px) {
   #sidebar {
+    float: right !important;
+    width: 300px !important;
     margin-top: 0 !important;
   }
 }
@@ -485,8 +504,8 @@ a.button:hover {
 .tag-cloud {
   display: flex !important;
   flex-wrap: wrap !important;
-  gap: 8px 10px !important; /* Cria um espaçamento consistente vertical/horizontal */
-  justify-content: center !important;
+  gap: 6px 8px !important; /* Cria um espaçamento consistente vertical/horizontal */
+  justify-content: flex-start !important;
   margin-top: 1.2rem !important;
   margin-bottom: 1.5rem !important;
 }
@@ -504,7 +523,7 @@ a.button:hover {
   transition: all 0.2s ease !important;
   text-decoration: none !important;
   line-height: 1.2 !important;
-  margin: 2px !important; /* Espaçamento de segurança extra */
+  margin: 0 !important;
 }
 
 #sidebar .tag-cloud a:hover {
