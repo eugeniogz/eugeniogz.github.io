@@ -1306,6 +1306,11 @@ h6:before {
    ========================================================================== */
 
 /* Barra de Navegação Rápida entre os 4 Pilares */
+#reflexoes-container {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 .pillar-nav {
   display: flex;
   flex-wrap: wrap;
@@ -1316,6 +1321,25 @@ h6:before {
   border: 1px solid var(--border-light);
   border-radius: 30px;
   align-items: center;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 767px) {
+  .pillar-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    gap: 6px;
+    padding: 6px 8px;
+    border-radius: 16px;
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  .pillar-nav::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
 }
 
 .pillar-nav-item {
@@ -1674,6 +1698,15 @@ h6:before {
   margin-top: 2.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--border-light);
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 767px) {
+  .reflexao-nav-footer {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
 }
 
 .reflexao-nav-btn {
