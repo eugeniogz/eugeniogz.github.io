@@ -3,3 +3,4 @@ _site
 .venv
 __pycache__/
 *.pyc
+.jekyll-metadata
