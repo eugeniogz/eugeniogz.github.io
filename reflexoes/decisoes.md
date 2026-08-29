@@ -21,6 +21,8 @@ A eudaimonia surge de pequenas escolhas que semeiam as condições para esse sen
 
 Observar as falhas alheias incita comentários críticos; a decisão de substituí-los pelo reconhecimento empático das próprias favorece o aperfeiçoamento. -- 16/08/26
 
+As decisões somente se tornam hábito com a repetição consciente. -- 29/08/26
+
 ### Adaptativas
 
 A vaidade impede o aprimoramento, paralisando a evolução. -- 26/08/26
