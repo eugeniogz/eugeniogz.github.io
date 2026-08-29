@@ -46,7 +46,7 @@ Surgem os primeiros relacionamentos, frutos da busca por um par que ressoe com a
 
 A vida ganha outro sentido quando duas cordas especiais entrelaçam-se na bela tapeçaria de amor conjugal. Forma-se um casal que sustentará sua força na ação do verbo amar, que, sedimentado no individual, tece padrões comuns. Os laços da união tornam-se adições harmônicas à trama pessoal original.
 
-Desentendimentos entre o casal — um esquecimento ou uma palavra amarga — laços quebrados interrompendo a obra conjunta, precisam ser reparados com delicadeza. A nova obra, repleta de elementos de dois artistas, deve manter seu conteúdo inviolável — a intimidade do casal deve ser preservada da inveja e maldade alheia. Uma tarefa difícil diante do apelo da vida digital, cercada de algoritmos ávidos de exposição.
+Desentendimentos entre o casal — um esquecimento ou uma palavra amarga — laços quebrados interrompendo a obra conjunta, precisam ser reparados com delicadeza. A nova obra individual, repleta de elementos de dois artistas, deve manter seu conteúdo inviolável — a intimidade do casal deve ser preservada da inveja e maldade alheia. Uma tarefa difícil diante do apelo da vida digital, cercada de algoritmos ávidos de exposição.
 
 Guiando uma família, o artista precisa equilibrar diversas responsabilidades. O tecido mental, agora mais completo, precisa ser cultivado com sabedoria para que as experiências, sejam elas alegrias ou tristezas, contribuam para o crescimento e a formação de um caráter resiliente. As escolhas se tornam mais definitivas, e o artífice percebe que cada fio entrelaçado de sua existência é parte de uma obra que impacta não somente a si, mas também o mundo ao seu redor.
 
@@ -60,7 +60,7 @@ Integrar a dor, tecer com ela, transformá-la em sabedoria: este é o desafio. O
 
 ### A dança eterna
 
-Cada dia é uma nova oportunidade de entrelaçar fios, de burilar a obra-prima da própria existência. A mente permanece em constante transformação, abrigando novas compreensões e novas cores. O artista, ciente de sua infindável tarefa, abraça os desafios e as alegrias. Celebrando cada momento, a tapeçaria flutua com a leveza de uma dança que se aprimora a cada respiração. Nesse estado de atenção consciente, a cada movimento a obra se ilumina. E assim, no estado de plena felicidade, percebe que a obra, mesmo inacabada, sobreviverá ao seu criador.
+Cada dia é uma nova oportunidade de entrelaçar fios, de burilar a obra-prima da própria existência. A mente permanece em constante transformação, abrigando novas compreensões e novas cores. O artista, ciente de sua infindável tarefa, abraça os desafios e as alegrias. Celebrando cada momento, a tapeçaria flutua com a leveza de uma dança que se aprimora a cada respiração. Nesse estado de atenção consciente, a cada movimento a obra se ilumina.
 
 O artista da vida não tece sozinho. Seus fios entrelaçam-se com os de outros — pais, filhos, amigos, mestres. A obra individual ressoa com obras alheias, criando uma tapeçaria coletiva que atravessa gerações. Cada gesto consciente enriquece não apenas a própria vida, mas a herança transmitida às próximas gerações. E assim, mesmo inacabada, a obra sobrevive ao seu criador: vibrando em harmonia no compasso da humanidade.
 

@@ -7,7 +7,10 @@
     "desc": "A bússola moral em constante revisão.",
     "quote": "Nossa bússola moral não aponta para um norte determinado, ela se ajusta com o conhecimento e a observação...",
     "filename": "valores.html",
-    "meta": "1 min"
+    "meta": "1 min",
+    "tags": [
+      "Valores"
+    ]
   },
   "imperfeicoes": {
     "id": "imperfeicoes",

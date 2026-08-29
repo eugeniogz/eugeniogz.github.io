@@ -15,8 +15,6 @@ tags:
 
 ### [Breves crônicas](./)
 
-## Asa-branca
-
 A asa-branca entoa seu canto triste; o barulho dos automóveis o abafa por instantes, mas ela volta a clamar na manhã nublada. O frio matinal esfria os pés descalços. Um cachorro, preso à sua coleira, late indignado. Um vento gelado sopra pela janela. Ela chega. Conversa animada, enquanto os pés vestem algodão. O cachorro cala, os automóveis silenciam. O sol aparece, aquecendo os corações que se abraçam. A textura macia das palavras, o doce do olhar — o mútuo afeto que os une. Lá fora, a asa-branca arrulha seu amor.
 <div style="clear: both;"></div>
 

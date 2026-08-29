@@ -11,8 +11,6 @@ tags:
 
 ### [Reflexões](./)
 
-## Atenção
-
 Na atenção ao ser, a felicidade da propriocepção. Com a atenção aos outros, a alegria de ser útil. Pela atenção ao mundo, a beleza de existir. -- 09/05/26
 
 ### Ao ser
