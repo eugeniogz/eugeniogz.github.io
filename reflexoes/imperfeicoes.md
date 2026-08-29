@@ -13,11 +13,9 @@ tags:
 
 Para vencer uma imperfeição é preciso reconhecer, ter vontade e se esforçar reiteradamente em combatê-la. -- 26/08/26
 
-### Atencionais
+### Pessoais
 
-Nos momentos de piloto automático, as atitudes podem desviar dos valores pessoais; todavia, basta um único instante de atenção para a oportuna correção da rota. -- 16/07/26
-
-O tropeço do piloto automático não é motivo de culpa, mas um sinal para aprimorar a presença. Não é possível manter a atenção a todo tempo, reconhecer uma distração, no entanto, é o que permite a capacitação contínua. -- 10/08/26
+Atitudes que afetam a saúde: o amor-próprio se dissolvendo em gotas.  -- 29/08/26
 
 ### Emocionais
 
@@ -28,6 +26,12 @@ A defesa da opinião, quando precedida pela pausa consciente, não somente permi
 ### Morais
 
 O instante do erro verbal transforma-se em lição quando convoca a atenção necessária para resgatar a coerência com os valores. -- 11/07/26
+
+### Atencionais
+
+Nos momentos de piloto automático, as atitudes podem desviar dos valores pessoais; todavia, basta um único instante de atenção para a oportuna correção da rota. -- 16/07/26
+
+O tropeço do piloto automático não é motivo de culpa, mas um sinal para aprimorar a presença. Não é possível manter a atenção a todo tempo; reconhecer uma distração, no entanto, é o que permite a capacitação contínua. -- 10/08/26
 <div style="clear: both;"></div>
 
 ---

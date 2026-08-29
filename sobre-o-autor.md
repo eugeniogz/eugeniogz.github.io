@@ -93,7 +93,28 @@ no_index: true
     font-size: 1.1rem;
     line-height: 1.8;
     color: var(--text-main);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+  .author-quote {
+    font-family: 'Lora', Georgia, serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    border-left: 3px solid var(--color-attention-primary);
+    padding: 0.6rem 0 0.6rem 1.2rem;
+    margin: 0 0 1.5rem 0;
+    background: var(--color-attention-light);
+    border-radius: 0 12px 12px 0;
+  }
+  .author-quote cite {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-style: normal;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-attention-primary);
+    margin-top: 0.4rem;
   }
   .author-contact-area {
     display: flex;
@@ -125,6 +146,11 @@ no_index: true
     <div class="author-bio">
       José Eugênio é engenheiro eletricista, mestre em Ciência da Computação e doutor em Gestão e Organização do Conhecimento. Analista de sistemas desde 1990, leciona computação e robótica básica em uma escola infantil. No tempo livre, além de curtir momentos com a família e amigos, estuda e escreve. Mantém esse site desde 2025 com foco na <a href="/manifesto-wingene.html">Wingene</a>, uma filosofia naturalista que descreve o caminho para a eudaimonia — que não deve ser somente pessoal, mas <a href="/ipes-e-tijolos/eudaimonia-social.html">social</a>.
     </div>
+
+    <blockquote class="author-quote">
+      “Que outros se vangloriem das páginas que escreveram; eu me orgulho das que li.”
+      <cite>— Jorge Luís Borges</cite>
+    </blockquote>
     
     <div class="author-contact-area">
       <a href="mailto:eugenio@wingene.com.br" class="cta-button" style="text-decoration: none;">
