@@ -1189,6 +1189,19 @@ h6:before {
   padding-bottom: 0.2rem;
 }
 
+.sidebar-topics-category a {
+  color: inherit !important;
+  text-decoration: none !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.sidebar-topics-category a:hover {
+  color: var(--color-attention-primary) !important;
+}
+
 .sidebar-topics-sublist {
   list-style-type: none !important;
   padding-left: 0.5rem !important;
