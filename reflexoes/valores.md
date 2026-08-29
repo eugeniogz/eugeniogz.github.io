@@ -25,7 +25,7 @@ Na convivência, a felicidade do outro valoriza atitudes pessoais. -- 19/08/26
 
 ### Revisão contínua
 
-O sentimento de nacionalidade é inerente à geografia. Ele é saudável, mas não deve se exceder ao pertencimento à humanidade, que ultrapassa fronteiras e traz empatia a qualquer ser humano. -- 18/07/26
+O sentimento de nacionalidade é inerente à geografia. Ele é saudável, mas não deve se sobrepor ao pertencimento à humanidade, que ultrapassa fronteiras e traz empatia a qualquer ser humano. -- 18/07/26
 
 Nossa bússola moral não aponta para um norte determinado, ela se ajusta com o conhecimento e a observação pessoal. -- 15/08/26
 <div style="clear: both;"></div>

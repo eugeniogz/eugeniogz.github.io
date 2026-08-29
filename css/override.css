@@ -1366,6 +1366,16 @@ h6:before {
   color: var(--bg-primary) !important;
 }
 
+@media (prefers-color-scheme: dark) {
+  .pillar-nav-item.decisoes.active,
+  .pillar-nav-item.atencao.active,
+  .pillar-nav-item.valores.active,
+  .pillar-nav-item.imperfeicoes.active {
+    color: #111113 !important;
+    font-weight: 700 !important;
+  }
+}
+
 /* Hero das Páginas de Reflexão */
 .reflexao-hero {
   padding: 1.5rem;
@@ -3385,6 +3395,16 @@ h6:before {
   box-shadow: 0 4px 12px rgba(18, 62, 156, 0.25);
 }
 
+@media (prefers-color-scheme: dark) {
+  .wingene-filter-btn.active,
+  .poetry-filter-btn.active,
+  .ipes-filter-btn.active,
+  .cronicas-vol-nav-item.active {
+    color: #111113 !important;
+    font-weight: 700 !important;
+  }
+}
+
 /* ==========================================================================
    GRIDS & CARTÕES MODERNOS (WINGENE, POESIAS, IPÊS, CRÔNICAS)
    ========================================================================== */
@@ -4020,5 +4040,58 @@ h6:before {
   .ipes-center-link,
   .cronicas-center-link {
     justify-content: center;
+  }
+}
+
+/* ==========================================================================
+   DARK MODE - ALTO CONTRASTE EM BOTÕES, ABAS E PILARES
+   ========================================================================== */
+@media (prefers-color-scheme: dark) {
+  /* Botões e Pills com fundo Verde Claro (--color-decisions-primary) */
+  .cta-button,
+  .cta-button:hover,
+  .pillar-nav-item.decisoes.active,
+  .cascudo-control-btn.speaking,
+  .btn-copy-reflexao.copied,
+  .copy-btn.copied {
+    color: #111113 !important;
+    font-weight: 700 !important;
+  }
+
+  /* Botões e Filtros com fundo Azul Claro (--color-attention-primary) */
+  a.button,
+  a.button:hover,
+  aside a.button,
+  aside a.button:hover,
+  .pillar-nav-item.atencao.active,
+  .wingene-filter-btn.active,
+  .poetry-filter-btn.active,
+  .ipes-filter-btn.active,
+  .cronicas-vol-nav-item.active,
+  .cascudo-filter-btn.active,
+  .cascudo-control-btn.active,
+  .cascudo-read-btn:hover,
+  .hero-search-btn:hover,
+  .search-back-btn:hover,
+  .music-download-btn:hover,
+  .cascudo-theater-btn-hero:hover,
+  .cascudo-theater-action-btn:hover {
+    color: #111113 !important;
+    font-weight: 700 !important;
+  }
+
+  .cascudo-read-btn:hover .cascudo-read-arrow,
+  .ipes-read-btn:hover .ipes-read-arrow,
+  .wingene-read-btn:hover .wingene-read-arrow {
+    color: #111113 !important;
+  }
+
+  .cta-button svg,
+  .hero-search-btn:hover svg,
+  .search-back-btn:hover svg,
+  .cascudo-control-btn.active svg,
+  .cascudo-control-btn.speaking svg,
+  .btn-copy-reflexao.copied svg {
+    stroke: #111113 !important;
   }
 }
