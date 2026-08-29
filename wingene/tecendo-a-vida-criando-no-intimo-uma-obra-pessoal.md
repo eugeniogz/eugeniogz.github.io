@@ -20,7 +20,7 @@ Começando a aprender desde os primeiros anos de vida, o ser humano, mesmo sem s
 
 Primeiro com os pais e amiguinhos, posteriormente com professores e colegas de escola, as brincadeiras que lhes são apresentadas acompanham o seu crescimento. Cabe aos mais velhos a responsabilidade de cuidar para que essas sejam instrutivas e colaborem para o desenvolvimento da criança, pois os primeiros anos serão fundamentais.
 
-Com lápis coloridos e brincadeiras — surge um mundo de fantasia. Um mundo de leões com corpo de serpente e hipopótamos alados, que deve ser respeitado pelos adultos. No entanto, eles podem, em sensíveis observações, ser um farol de sensatez, guiando a curiosidade infantil com reais e lúdicas explicações. Assim, o desenho dos seres imaginários servirá a outro propósito — o aprendizado de adultos e crianças, unindo a tinta colorida aos fios luminosos da razão.
+Com lápis coloridos e brincadeiras, surge um mundo de fantasia. Um mundo de leões com corpo de serpente e hipopótamos alados, que deve ser respeitado pelos adultos. No entanto, eles podem, em sensíveis observações, ser um farol de sensatez, guiando a curiosidade infantil com reais e lúdicas explicações. Assim, o desenho dos seres imaginários servirá a outro propósito — o aprendizado de adultos e crianças, unindo a tinta colorida aos fios luminosos da razão.
 
 Atualmente, os desafios para os pais e educadores são crescentes. Crianças nascidas no mundo digital estão cercadas por telas eletrônicas. O estímulo brilhante e realista dessas telas cativa a mente. Além disso, para muitos, é mais fácil deixar os pequenos jogando ou vendo um desenho do que brincar com eles ou ensinar brincadeiras clássicas.
 
@@ -28,11 +28,11 @@ A libertação da influência digital mostrará aos pequenos o verdadeiro mundo,
 
 ### **Incertezas da adolescência**
 
-Mas o tear da vida não para, um artista em amadurecimento continua seu trabalho com os novelos da vida. Nessa fase, as dúvidas tornam as escolhas mais difíceis. Críticas de colegas e amigos aumentam ainda mais a insegurança. Inevitáveis comparações se apresentam no convívio pessoal. Como saber se o colorido da infância moldou um valoroso caráter?
+Mas o tear da vida não para; um artista em amadurecimento continua seu trabalho com os novelos da vida. Nessa fase, as dúvidas tornam as escolhas mais difíceis. Críticas de colegas e amigos aumentam ainda mais a insegurança. Inevitáveis comparações se apresentam no convívio pessoal. Como saber se o colorido da infância moldou um valoroso caráter?
 
 Novamente, a tecnologia e as redes sociais estarão presentes. Deixando, na maioria das vezes, de estimular pontos importantes, para estimular postagens narcisistas em detrimento de conteúdos filosóficos. As belas teias coloridas da infância dão lugar aos frágeis fios da incerteza. As cordas do mundo digital amarram o jovem aprendiz, e as poéticas páginas literárias tornam-se escassas.
 
-Na tentativa de se engajar com a maioria, o jovem perde o fio da meada, se enrola no novelo das críticas. Perdendo seu tempo, esquece-se da obra de sua vida. Porém, a base construída desde a infância consegue indicar o caminho, permitindo seguir em frente. Nesse instante, o exemplo de pais, mestres e amigos será uma poderosa força.
+Na tentativa de se engajar com a maioria, o jovem perde o fio da meada, e se enrola no novelo das críticas. Perdendo seu tempo, esquece-se da obra de sua vida. Porém, a base construída desde a infância consegue indicar o caminho, permitindo seguir em frente. Nesse instante, o exemplo de pais, mestres e amigos será uma poderosa força.
 
 ### **Desafios da vida adulta**
 
@@ -64,7 +64,7 @@ Cada dia é uma nova oportunidade de entrelaçar fios, de burilar a obra-prima d
 
 O artista da vida não tece sozinho. Seus fios entrelaçam-se com os de outros — pais, filhos, amigos, mestres. A obra individual ressoa com obras alheias, criando uma tapeçaria coletiva que atravessa gerações. Cada gesto consciente enriquece não apenas a própria vida, mas a herança transmitida às próximas gerações. E assim, mesmo inacabada, a obra sobrevive ao seu criador: vibrando em harmonia no compasso da humanidade.
 
-Essa dança tem um nome: [*Wingene*](/wingene/wingene-felicidade-agora-futuro-ancestral) — fruto das virtudes que cada geração tece e transmite. Mais que conceito, *Wingene* é uma visão de mundo, um caminho prático para a felicidade pelo aperfeiçoamento do tecido pessoal e coletivo.
+Esse compasso, essa dança, tem um nome: [*Wingene*](/wingene/wingene-felicidade-agora-futuro-ancestral) — fruto das virtudes que cada geração tece e transmite. Mais que conceito, *Wingene* é uma visão de mundo, um caminho prático para a felicidade pelo aperfeiçoamento do tecido pessoal e coletivo.
 <div style="clear: both;"></div>
 
 ---
