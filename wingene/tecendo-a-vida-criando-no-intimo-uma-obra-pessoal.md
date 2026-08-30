@@ -2,7 +2,7 @@
 layout: default
 title: "Tecendo a vida: criando no íntimo uma obra pessoal"
 reading_time: 7
-semantic_order: 300
+semantic_order: 100
 tags:
   - Vida
   - Wingene
@@ -71,5 +71,5 @@ Esse compasso, essa dança, tem um nome: [*Wingene*](/wingene/wingene-felicidade
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./metaconsciencia-pensar-o-sentir-sentir-o-pensar.html">&lt;&lt; Metaconsciência: pensar o sentir, sentir o pensar</a>
-  <span></span>
+  <a href="./o-sistema-gene-e-a-wingene-coletiva-a-arquitetura-da-eudaimonia-social.html">O Sistema GENE: A Arquitetura da Eudaimonia Social &gt;&gt;</a>
 </div>

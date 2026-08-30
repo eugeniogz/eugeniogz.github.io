@@ -2,7 +2,7 @@
 layout: default
 title: "O Sistema GENE: A Arquitetura da Eudaimonia Social"
 reading_time: 10
-semantic_order: 220
+semantic_order: 500
 tags:
   - Governos
   - Empresas
@@ -40,7 +40,7 @@ O sistema GENE propõe que, para uma eudaimonia social, quatro pilares devem fun
 | **G — Governos** | O Jardineiro do Terreno | Garantia da qualidade de vida e promoção contínua do bem-estar. |
 | **E — Empresas** | O Pomar Compartilhado | Trabalho com alma, saúde mental e prosperidade distribuída. |
 | **N — Normas** | A Sabedoria dos Trilhos | Direito vivo que se autoavalia e prioriza a reconciliação. |
-| **E — Educação** | O Cuidado com a Semente | Tecer virtudes nas cinco dimensões do saber, ser, sentir, conviver e transcender. |
+| **E — Educação** | O Cuidado com a Semente | Tecer virtudes nas dimensões: saber, ser, sentir, conviver e transcender. |
 
 ### Governos como jardineiros da floresta mental
 
@@ -150,6 +150,6 @@ A verdadeira vitória do ser humano é saber que cada virtude tecida no silênci
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./o-metodo-vida-a-wingene-em-pratica.html">&lt;&lt; O método VIDA: a Wingene em prática</a>
-  <a href="./metaconsciencia-pensar-o-sentir-sentir-o-pensar.html">Metaconsciência: pensar o sentir, sentir o pensar &gt;&gt;</a>
+  <a href="./tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html">&lt;&lt; Tecendo a vida: criando no íntimo uma obra pessoal</a>
+  <span></span>
 </div>

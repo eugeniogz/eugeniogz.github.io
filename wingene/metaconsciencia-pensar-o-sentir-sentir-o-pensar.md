@@ -2,10 +2,10 @@
 layout: default
 title: "Metaconsciência: pensar o sentir, sentir o pensar"
 reading_time: 4
-semantic_order: 250
+semantic_order: 90
 tags:
   - Serena euforia
-  - metaconsciência
+  - Metaconsciência
   - Eudaimonia
   - Atenção plena
 --- 
@@ -13,8 +13,6 @@ tags:
 
 
 ### [Wingene](./)
-
-## Metaconsciência: pensar o sentir, sentir o pensar
 
 ### Metaconsciência
 
@@ -52,6 +50,6 @@ Ao acender a chama da atenção no cotidiano, descobrimos que não precisamos es
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./o-sistema-gene-e-a-wingene-coletiva-a-arquitetura-da-eudaimonia-social.html">&lt;&lt; O Sistema GENE: A Arquitetura da Eudaimonia Social</a>
+  <a href="./o-metodo-vida-a-wingene-em-pratica.html">&lt;&lt; O método VIDA: a Wingene em prática</a>
   <a href="./tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html">Tecendo a vida: criando no íntimo uma obra pessoal &gt;&gt;</a>
 </div>

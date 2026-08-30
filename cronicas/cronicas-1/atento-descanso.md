@@ -12,7 +12,7 @@ tags:
 
 ### [Crônicas 1](./)
 
-Na tela, insistente, o aviso do descanso, indicador verdejante. Partindo de 10 minutos, regredindo, esvanece. Uma necessária pausa clama. As cores no grande retângulo tingem a retina. Vou até a copa, sorvendo o líquido gelado sem sabor, refresco da alma. A mente presente observa. Mantendo o êxtase dos miolos que vibram os sentidos.
+Na tela, insistente, o verde aviso do descanso. Partindo de 10 minutos, regredindo, esvanece. Uma necessária pausa clama. As cores no grande retângulo tingem a retina. Vou até a copa, sorvendo o líquido gelado sem sabor, refresco da alma. A mente presente observa. Mantendo o êxtase dos miolos que vibram os sentidos.
 
 Na janela, o olhar se perde na imensidão celeste. Cinzas nuvens cobrem o firmamento, mas uma nesga permite o azul. Uma maritaca voa, gritando. No pátio do colégio, a algazarra dos meninos, bolas quicando. Sons que não distraem, somente compõem a música que ouço. Uma criança gargalha contente. Uma alegria infantil ecoa no tímpano. Um pássaro pequeno corta o horizonte nublado.
 

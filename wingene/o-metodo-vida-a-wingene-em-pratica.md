@@ -2,7 +2,7 @@
 layout: default
 title: "O método VIDA: a Wingene em prática"
 reading_time: 14
-semantic_order: 200
+semantic_order: 60
 tags:
   - Wingene
   - Evolução
@@ -10,14 +10,12 @@ tags:
   - Atenção plena
   - Decisões
   - Imperfeições
-  - método VIDA
+  - Método VIDA
 --- 
 
 
 
 ### [Wingene](./)
-
-## O método VIDA: a Wingene em prática
 
 Herdamos um corpo, uma mente e uma cultura — mas não herdamos todos os critérios para viver bem. Esses precisam ser construídos. Esse é o objetivo da Wingene: o aperfeiçoamento da herança ancestral. A herança biológica fornece as primeiras luzes da mente; o aprendizado amplia o horizonte, iluminando o entendimento com infinitas cores. Ainda assim, muitos atravessam a existência em modo automático, reagindo mais do que escolhendo, repetindo hábitos sem interrogar seus fundamentos.
 
@@ -279,5 +277,5 @@ O logotipo da Wingene foi desenhado para representar os quatro eixos do método.
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./etimologias-da-wingene-o-florescimento-do-espirito.html">&lt;&lt; Etimologia e a Wingene</a>
-  <a href="./o-sistema-gene-e-a-wingene-coletiva-a-arquitetura-da-eudaimonia-social.html">O Sistema GENE: A Arquitetura da Eudaimonia Social &gt;&gt;</a>
+  <a href="./metaconsciencia-pensar-o-sentir-sentir-o-pensar.html">Metaconsciência: pensar o sentir, sentir o pensar &gt;&gt;</a>
 </div>
