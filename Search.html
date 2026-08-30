@@ -22,7 +22,7 @@ search: false
   fetch('{{ "/search.json" | relative_url }}')
     .then(response => response.json())
     .then(json => {
-      const filteredJson = json.filter(item => !item.url.endsWith('/'));
+      const filteredJson = json.filter(item => item.url !== '/' && item.url !== '');
       const searchInput = document.getElementById('search-input');
       
       window.simpleJekyllSearch = new SimpleJekyllSearch({
@@ -34,7 +34,47 @@ search: false
         minimumLength: 2,
         stopWords: '',
         limit: 100,
-        searchFields: ['title', 'content'],
+        searchFields: ['title', 'content']
+      });
+
+      const resultsContainer = document.getElementById('results-container');
+
+      function attachHighlightToLinks() {
+        const query = searchInput.value.trim();
+        if (!query) return;
+        const firstTerm = query.split(/\s+/).filter(w => w.length >= 2)[0] || query;
+        const links = resultsContainer.querySelectorAll('a');
+        links.forEach(a => {
+          try {
+            const url = new URL(a.getAttribute('href'), window.location.origin);
+            if (!url.searchParams.has('highlight')) {
+              url.searchParams.set('highlight', query);
+              url.hash = `:~:text=${encodeURIComponent(firstTerm)}`;
+              a.setAttribute('href', url.pathname + url.search + url.hash);
+            }
+          } catch(e) {}
+        });
+      }
+
+      // Observa novos resultados gerados dinamicamente na lista
+      const observer = new MutationObserver(() => {
+        attachHighlightToLinks();
+      });
+      observer.observe(resultsContainer, { childList: true, subtree: true });
+
+      // Atualiza também no clique como garantia
+      resultsContainer.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (!link) return;
+        const query = searchInput.value.trim();
+        if (!query) return;
+        const firstTerm = query.split(/\s+/).filter(w => w.length >= 2)[0] || query;
+        try {
+          const url = new URL(link.getAttribute('href'), window.location.origin);
+          url.searchParams.set('highlight', query);
+          url.hash = `:~:text=${encodeURIComponent(firstTerm)}`;
+          link.setAttribute('href', url.pathname + url.search + url.hash);
+        } catch(e) {}
       });
 
       // Checa se há parâmetros de busca na URL (ex: ?q=minha_busca)
@@ -42,7 +82,6 @@ search: false
       const query = urlParams.get('q');
       if (query && searchInput) {
         searchInput.value = query;
-        // Dispara o evento 'input' para rodar a pesquisa imediatamente após carregar
         setTimeout(() => {
           searchInput.dispatchEvent(new Event('input', { bubbles: true }));
         }, 100);

@@ -2,25 +2,27 @@
 layout: null
 permalink: /search.json
 ---
-{%- assign all_content = site.pages | concat: site.posts -%}
-{%- assign items_with_layout = all_content | where: "layout", "default" -%}
-{%- assign searchable_items = items_with_layout | where_exp: "item", "item.search != false" -%}
-{%- assign no_index = searchable_items | where_exp: "item", "item.name != 'index.md'" -%}
-{%- assign no_index_upper  = no_index | where_exp: "item", "item.name != 'index-upper.md'" -%}
-{%- assign filtered_items = no_index_upper | where_exp: "item", "item.name != '404.html'" -%}
+{%- assign p1 = site.pages | where_exp: "item", "item.title != nil" -%}
+{%- assign p2 = p1 | where_exp: "item", "item.search != false" -%}
+{%- assign p3 = p2 | where_exp: "item", "item.name != '404.html'" -%}
+{%- assign p4 = p3 | where_exp: "item", "item.name != 'Search.html'" -%}
+{%- assign p5 = p4 | where_exp: "item", "item.name != 'search.json'" -%}
+{%- assign searchable_pages = p5 | where_exp: "item", "item.name != 'sitemap.xml'" -%}
+{%- assign posts_with_title = site.posts | where_exp: "item", "item.title != nil" -%}
+{%- assign searchable_posts = posts_with_title | where_exp: "item", "item.search != false" -%}
+{%- assign filtered_items = searchable_pages | concat: searchable_posts -%}
 [
   {%- for item in filtered_items -%}
     {
-      "title"    : {{ item.title | jsonify }},
-      "url"      : {{ item.url | relative_url | jsonify }},
-      "content"  : {{ item.content | strip_html | strip_newlines | jsonify }},
-      "reading_time"  : "{{ item.reading_time | default: 0 }}",
+      "title"        : {{ item.title | jsonify }},
+      "url"          : {{ item.url | relative_url | jsonify }},
+      "content"      : {{ item.content | strip_html | strip_newlines | jsonify }},
+      "reading_time" : "{{ item.reading_time | default: 1 }}",
       {% if item.date %}
-      "type"     : "post"
+      "type"         : "post"
       {% else %}
-      "type"     : "page"
+      "type"         : "page"
       {% endif %}
-    }
-    {%- unless forloop.last -%},{%- endunless -%}
+    }{%- unless forloop.last -%},{%- endunless -%}
   {%- endfor -%}
 ]

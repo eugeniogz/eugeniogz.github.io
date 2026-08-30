@@ -4,10 +4,8 @@ description: "Tecendo o futuro ancestral."
 show_downloads: false
 google_analytics: G-VV8V7GTRPD
 url: "https://blog.wingene.com.br"
-#remote_theme: pages-themes/modernist@v0.2.0
-remote_theme: pages-themes/architect@v0.2.0
+theme: jekyll-theme-architect
 plugins:
-  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-paginate
 #- jekyll-sitemap
