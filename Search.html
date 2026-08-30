@@ -42,15 +42,13 @@ search: false
       function attachHighlightToLinks() {
         const query = searchInput.value.trim();
         if (!query) return;
-        const firstTerm = query.split(/\s+/).filter(w => w.length >= 2)[0] || query;
         const links = resultsContainer.querySelectorAll('a');
         links.forEach(a => {
           try {
             const url = new URL(a.getAttribute('href'), window.location.origin);
             if (!url.searchParams.has('highlight')) {
               url.searchParams.set('highlight', query);
-              url.hash = `:~:text=${encodeURIComponent(firstTerm)}`;
-              a.setAttribute('href', url.pathname + url.search + url.hash);
+              a.setAttribute('href', url.pathname + url.search);
             }
           } catch(e) {}
         });
@@ -64,17 +62,17 @@ search: false
 
       // Atualiza também no clique como garantia
       resultsContainer.addEventListener('click', (e) => {
-        const link = e.target.closest('a');
-        if (!link) return;
-        const query = searchInput.value.trim();
-        if (!query) return;
-        const firstTerm = query.split(/\s+/).filter(w => w.length >= 2)[0] || query;
-        try {
-          const url = new URL(link.getAttribute('href'), window.location.origin);
-          url.searchParams.set('highlight', query);
-          url.hash = `:~:text=${encodeURIComponent(firstTerm)}`;
-          link.setAttribute('href', url.pathname + url.search + url.hash);
-        } catch(e) {}
+        const a = e.target.closest('a');
+        if (a) {
+          const query = searchInput.value.trim();
+          if (query) {
+            try {
+              const url = new URL(a.getAttribute('href'), window.location.origin);
+              url.searchParams.set('highlight', query);
+              a.setAttribute('href', url.pathname + url.search);
+            } catch(err) {}
+          }
+        }
       });
 
       // Checa se há parâmetros de busca na URL (ex: ?q=minha_busca)

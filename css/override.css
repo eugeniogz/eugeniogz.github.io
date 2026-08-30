@@ -4142,8 +4142,17 @@ h6:before {
 /* ==========================================================================
    DESTAQUE DINÂMICO E ROLAGEM NA PESQUISA
    ========================================================================== */
+mark.search-highlight-term {
+  background: rgba(240, 208, 36, 0.35) !important;
+  color: inherit !important;
+  font-weight: 600;
+  padding: 1px 4px;
+  border-radius: 4px;
+  display: inline;
+}
+
 mark.search-highlight-pulse {
-  background: var(--color-imperfections-primary) !important;
+  background: var(--color-imperfections-primary, #e6cb22) !important;
   color: #111113 !important;
   font-weight: 700;
   padding: 2px 6px;
@@ -4162,5 +4171,176 @@ mark.search-highlight-pulse {
   }
   100% {
     box-shadow: 0 0 0 0 rgba(230, 203, 34, 0);
+  }
+}
+
+/* ==========================================================================
+   BARRA FLUTUANTE DE NAVEGAÇÃO DA BUSCA (SEARCH NAVIGATOR WIDGET)
+   ========================================================================== */
+.search-nav-widget {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 99999;
+  background: rgba(26, 29, 36, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: #f1f3f7;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 6px 14px;
+  font-family: inherit;
+  font-size: 13px;
+  animation: searchNavFadeIn 0.35s ease-out;
+  user-select: none;
+  max-width: calc(100vw - 32px);
+  box-sizing: border-box;
+}
+
+@keyframes searchNavFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.search-nav-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.search-nav-query-group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #fcd34d;
+  font-weight: 600;
+}
+
+.search-nav-query-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search-nav-divider {
+  width: 1px;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.18);
+  flex-shrink: 0;
+}
+
+.search-nav-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.search-nav-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+.search-nav-counter {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: #ffffff;
+  min-width: 26px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.search-nav-btn-group {
+  display: inline-flex;
+  gap: 3px;
+}
+
+.search-nav-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f3f4f6;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 11px;
+  padding: 0;
+  transition: all 0.15s ease;
+  line-height: 1;
+}
+
+.search-nav-btn:hover:not(:disabled) {
+  background: rgba(230, 203, 34, 0.9);
+  color: #111113;
+  border-color: transparent;
+  transform: translateY(-1px);
+}
+
+.search-nav-btn:active:not(:disabled) {
+  transform: translateY(0) scale(0.94);
+}
+
+.search-nav-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.search-nav-btn-link {
+  text-decoration: none !important;
+  font-size: 13px;
+}
+
+.search-nav-close-btn:hover {
+  background: rgba(239, 68, 68, 0.85) !important;
+  color: #ffffff !important;
+}
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+  .search-nav-widget {
+    bottom: 12px;
+    left: 8px;
+    right: 8px;
+    border-radius: 16px;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  .search-nav-content {
+    justify-content: space-between;
+    gap: 6px;
+  }
+  .search-nav-query-group {
+    max-width: 85px;
+    font-size: 11px;
+  }
+  .search-nav-label {
+    display: none; /* Economiza espaço precioso no mobile */
+  }
+  .search-nav-btn {
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
+  }
+  .search-nav-counter {
+    font-size: 11px;
+    min-width: 22px;
   }
 }

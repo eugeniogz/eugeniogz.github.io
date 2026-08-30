@@ -13,10 +13,15 @@ permalink: /search.json
 {%- assign filtered_items = searchable_pages | concat: searchable_posts -%}
 [
   {%- for item in filtered_items -%}
+    {%- assign raw_body = item.content | split: '<div style="display: flex; justify-content: space-between;' | first -%}
+    {%- assign raw_body = raw_body | split: '<div style="display:flex; justify-content:space-between;' | first -%}
+    {%- assign raw_body = raw_body | split: '<div style="display:flex;justify-content:space-between;' | first -%}
+    {%- assign raw_body = raw_body | split: '<div class="reflexao-nav-footer' | first -%}
+    {%- assign raw_body = raw_body | split: '<div class="article-nav' | first -%}
     {
       "title"        : {{ item.title | jsonify }},
       "url"          : {{ item.url | relative_url | jsonify }},
-      "content"      : {{ item.content | strip_html | strip_newlines | jsonify }},
+      "content"      : {{ raw_body | strip_html | strip_newlines | jsonify }},
       "reading_time" : "{{ item.reading_time | default: 1 }}",
       {% if item.date %}
       "type"         : "post"
