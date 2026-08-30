@@ -150,6 +150,6 @@ A verdadeira vitória do ser humano é saber que cada virtude tecida no silênci
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html">&lt;&lt; Tecendo a vida: criando no íntimo uma obra pessoal</a>
+  <a href="./a-wingene-na-familia-o-giz-invisivel-do-exemplo.html">&lt;&lt; A Wingene na Familia: O Giz Invisivel do Exemplo</a>
   <span></span>
 </div>

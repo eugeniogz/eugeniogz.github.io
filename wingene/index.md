@@ -12,5 +12,7 @@ a Wingene em prática
 pensar o sentir, sentir o pensar
 ### 📄 [Tecendo a vida: criando no íntimo uma obra pessoal](./tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html) <span class="word-count">[7 min]</span>
 criando no íntimo uma obra pessoal
+### 📄 [A Wingene na Familia: O Giz Invisivel do Exemplo](./a-wingene-na-familia-o-giz-invisivel-do-exemplo.html) <span class="word-count">[3 min]</span>
+O Giz Invisivel do Exemplo
 ### 📄 [O Sistema GENE: A Arquitetura da Eudaimonia Social](./o-sistema-gene-e-a-wingene-coletiva-a-arquitetura-da-eudaimonia-social.html) <span class="word-count">[10 min]</span>
 A Arquitetura da Eudaimonia Social

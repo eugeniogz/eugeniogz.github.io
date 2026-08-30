@@ -5,6 +5,10 @@ reading_time: 3
 semantic_order: 120
 --- 
 
+
+
+### [Wingene](./)
+
 # A Wingene na Família: O Giz Invisível do Exemplo
 
 Antes de qualquer praça, escola ou lei, existe a mesa de casa. Ali, a virtude é traçada — quase sempre sem percebermos o traço do exemplo.
@@ -37,6 +41,6 @@ Isso é a eternidade acessível ao homem comum. Não precisamos de monumentos. B
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./manifesto-wingene.html">&lt;&lt; Manifesto Wingene</a>
-  <span></span>
+  <a href="./tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html">&lt;&lt; Tecendo a vida: criando no íntimo uma obra pessoal</a>
+  <a href="./o-sistema-gene-e-a-wingene-coletiva-a-arquitetura-da-eudaimonia-social.html">O Sistema GENE: A Arquitetura da Eudaimonia Social &gt;&gt;</a>
 </div>

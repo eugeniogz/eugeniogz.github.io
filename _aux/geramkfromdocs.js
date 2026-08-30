@@ -676,6 +676,13 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
         Logger.log(`[AVISO] Falha temporária ao verificar/criar o índice da pasta "${pastaDestino.getName()}": ${e.toString()}`);
     }
     
+    // 5.1. REORDENA O ARQUIVO JSON EM _DATA DE ACORDO COM A ORDEM DO INDEX.MD
+    try {
+        reordenarDataJsonDaPasta(pastaDestino, arquivosIndexados);
+    } catch (e) {
+        Logger.log(`[AVISO] Falha ao reordenar JSON da pasta "${pastaDestino.getName()}": ${e.toString()}`);
+    }
+
     // 6. VERIFICA O REQUISITO DE RECONVERSÃO
     if (indexAlterado && arquivosParaProcessar.length > 0) {
         Logger.log(`[FORÇANDO RECONVERSÃO] Index.md em ${pastaDestino.getName()} foi alterado. Reconvertendo arquivos desta pasta para atualizar a navegação.`);
@@ -1975,16 +1982,182 @@ function atualizarDataJsonSeNecessario(docInfo, pastaDestino) {
                 );
             }
 
-            if (wasUpdated) {
+            // Sempre reordena o JSON de acordo com a ordem do index.md
+            const ordemSlugsIndex = extrairOrdemDoIndexMd(pastaDestino);
+            const foiReordenado = reordenarObjetoJson(dataObj, ordemSlugsIndex, pastaDestino.getName());
+
+            if (wasUpdated || foiReordenado) {
                 const newContent = JSON.stringify(dataObj, null, 2) + '\n';
                 if (contentStr.trim() !== newContent.trim()) {
                     file.setContent(newContent);
-                    Logger.log(`[_DATA] Atualizado/Inserido em "${fileName}" para "${docInfo.slug}" (tempo: ${formattedTime}, tags: ${JSON.stringify(docInfo.tags || [])}, desc: ${docInfo.desc ? `"${docInfo.desc}"` : 'não alterado'}).`);
+                    Logger.log(`[_DATA] Atualizado/Reordenado em "${fileName}" para "${docInfo.slug}" (tempo: ${formattedTime}, tags: ${JSON.stringify(docInfo.tags || [])}, desc: ${docInfo.desc ? `"${docInfo.desc}"` : 'não alterado'}).`);
                 }
             }
         }
     } catch (e) {
         Logger.log(`[ERRO _DATA] Falha ao atualizar dados em _data para "${docInfo.slug}": ${e.toString()}`);
+    }
+}
+
+/**
+ * Extrai a ordem dos slugs dos arquivos listados em index.md da pasta destino.
+ */
+function extrairOrdemDoIndexMd(pastaDestino) {
+    const arquivosIndex = pastaDestino.getFilesByName(NOME_INDEX);
+    if (!arquivosIndex.hasNext()) return [];
+
+    try {
+        const indexFile = arquivosIndex.next();
+        const content = indexFile.getBlob().getDataAsString();
+
+        // Regex para capturar links em Markdown ex: [Título](./filename.html) ou [Título](filename.html)
+        const regexLink = /\]\(\s*(?:\.\/)?([^)\s]+)\s*\)/g;
+        const slugs = [];
+        let match;
+
+        while ((match = regexLink.exec(content)) !== null) {
+            const rawPath = match[1];
+            if (!rawPath) continue;
+            const filename = rawPath.split('/').pop().trim();
+            if (filename && filename !== 'index.html' && filename !== 'index.md' && !filename.endsWith('/') && !filename.startsWith('http') && !filename.startsWith('#')) {
+                const slug = filename.replace(/\.(html|md)$/i, '');
+                if (!slugs.includes(slug)) {
+                    slugs.push(slug);
+                }
+            }
+        }
+        return slugs;
+    } catch (e) {
+        Logger.log(`[AVISO] Falha ao extrair ordem do index.md em "${pastaDestino.getName()}": ${e.toString()}`);
+        return [];
+    }
+}
+
+/**
+ * Reordena os itens no array JSON (ou lista de stories) com base na ordem dos slugs.
+ * Atualiza a propriedade 'number' (1, 2, 3...) se ela existir nos itens do array.
+ * Retorna true se a ordem ou as propriedades 'number' foram alteradas.
+ */
+function reordenarObjetoJson(dataObj, ordemSlugs, folderName) {
+    if (!dataObj || typeof dataObj !== 'object' || !ordemSlugs || ordemSlugs.length === 0) return false;
+    let foiAlterado = false;
+
+    function getSlugDoItem(item) {
+        if (!item || typeof item !== 'object') return '';
+        if (item.id && typeof item.id === 'string') return item.id.trim();
+        if (item.filename && typeof item.filename === 'string') {
+            return item.filename.split('/').pop().replace(/\.(html|md)$/i, '').trim();
+        }
+        return '';
+    }
+
+    function getRankDoItem(item) {
+        const slug = getSlugDoItem(item);
+        if (!slug) return 9999;
+        const idx = ordemSlugs.indexOf(slug);
+        return idx !== -1 ? idx : 9999;
+    }
+
+    if (Array.isArray(dataObj)) {
+        const isVolumeList = dataObj.some(item => item && Array.isArray(item.stories));
+
+        if (isVolumeList) {
+            const normFolderName = folderName.toLowerCase().replace(/[-_]/g, '');
+            for (let i = 0; i < dataObj.length; i++) {
+                const vol = dataObj[i];
+                if (!vol || !Array.isArray(vol.stories)) continue;
+                const volFolder = (vol.folder || '').toLowerCase().replace(/[-_/\\]/g, '');
+                const volId = (vol.id || '').toLowerCase().replace(/[-_]/g, '');
+
+                if (volFolder === normFolderName || volId === normFolderName || normFolderName.includes(volId) || volId.includes(normFolderName)) {
+                    const originalStr = JSON.stringify(vol.stories.map(getSlugDoItem));
+                    vol.stories.sort((a, b) => getRankDoItem(a) - getRankDoItem(b));
+                    const newStr = JSON.stringify(vol.stories.map(getSlugDoItem));
+                    if (originalStr !== newStr) {
+                        foiAlterado = true;
+                    }
+                }
+            }
+        } else {
+            const temPropriedadeNumber = dataObj.some(item => item && typeof item.number === 'number');
+            const originalStr = JSON.stringify(dataObj.map(getSlugDoItem));
+
+            dataObj.sort((a, b) => getRankDoItem(a) - getRankDoItem(b));
+
+            const newStr = JSON.stringify(dataObj.map(getSlugDoItem));
+            if (originalStr !== newStr) {
+                foiAlterado = true;
+            }
+
+            if (temPropriedadeNumber) {
+                for (let i = 0; i < dataObj.length; i++) {
+                    if (dataObj[i] && typeof dataObj[i] === 'object') {
+                        if (dataObj[i].number !== i + 1) {
+                            dataObj[i].number = i + 1;
+                            foiAlterado = true;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    return foiAlterado;
+}
+
+/**
+ * Reordena todos os arquivos .json em _data correspondentes à pastaDestino
+ * com base na ordem dos arquivos no index.md (ou em arquivosIndexados).
+ */
+function reordenarDataJsonDaPasta(pastaDestino, arquivosIndexados = []) {
+    try {
+        const pastaData = obterPastaData();
+        if (!pastaData) return;
+
+        let ordemSlugs = extrairOrdemDoIndexMd(pastaDestino);
+
+        if (ordemSlugs.length === 0 && arquivosIndexados && arquivosIndexados.length > 0) {
+            ordemSlugs = arquivosIndexados.map(doc => doc.slug);
+        }
+
+        if (ordemSlugs.length === 0) return;
+
+        const folderName = pastaDestino.getName().toLowerCase();
+        const normFolderName = folderName.replace(/[-_]/g, '');
+        const filesIter = pastaData.getFiles();
+
+        while (filesIter.hasNext()) {
+            const file = filesIter.next();
+            const fileName = file.getName();
+            if (!fileName.toLowerCase().endsWith('.json')) continue;
+
+            const jsonBaseName = fileName.replace(/\.json$/i, '').toLowerCase();
+            const normJsonName = jsonBaseName.replace(/[-_]/g, '');
+
+            if (!normFolderName.includes(normJsonName) && !normJsonName.includes(normFolderName)) {
+                continue;
+            }
+
+            let contentStr = file.getBlob().getDataAsString();
+            let dataObj;
+            try {
+                dataObj = JSON.parse(contentStr);
+            } catch (e) {
+                continue;
+            }
+
+            const foiReordenado = reordenarObjetoJson(dataObj, ordemSlugs, pastaDestino.getName());
+
+            if (foiReordenado) {
+                const newContent = JSON.stringify(dataObj, null, 2) + '\n';
+                if (contentStr.trim() !== newContent.trim()) {
+                    file.setContent(newContent);
+                    Logger.log(`[_DATA REORDENADO] Reordenado "${fileName}" de acordo com a ordem do index.md.`);
+                }
+            }
+        }
+    } catch (e) {
+        Logger.log(`[ERRO REORDENAR _DATA] Falha ao reordenar JSON para pasta "${pastaDestino.getName()}": ${e.toString()}`);
     }
 }
 

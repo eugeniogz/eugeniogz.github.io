@@ -52,8 +52,46 @@
     "desc": "O guia completo do Método VIDA: quatro pilares práticos (Valores, Imperfeições, Decisões, Atenção) para calibrar a bússola ética e construir a eudaimonia diária."
   },
   {
-    "id": "o-sistema-gene-e-a-wingene-coletiva-a-arquitetura-da-eudaimonia-social",
+    "id": "metaconsciencia-pensar-o-sentir-sentir-o-pensar",
     "number": 4,
+    "title": "Metaconsciência: pensar o sentir, sentir o pensar",
+    "subtitle": "pensar o sentir, sentir o pensar",
+    "time": "4 min",
+    "category": "consciencia",
+    "tags": [
+      "Serena euforia",
+      "Metaconsciência",
+      "Eudaimonia",
+      "Atenção plena"
+    ],
+    "filename": "metaconsciencia-pensar-o-sentir-sentir-o-pensar.html",
+    "desc": "Reflexão sobre a capacidade humana de observar seus próprios pensamentos e sentimentos, refinando a percepção da mente e a lucidez existencial."
+  },
+  {
+    "id": "tecendo-a-vida-criando-no-intimo-uma-obra-pessoal",
+    "number": 5,
+    "title": "Tecendo a vida: criando no íntimo uma obra pessoal",
+    "subtitle": "criando no íntimo uma obra pessoal",
+    "time": "7 min",
+    "category": "aprimoramento",
+    "tags": [
+      "Vida",
+      "Wingene"
+    ],
+    "filename": "tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html",
+    "desc": "Como transformar cada vivência cotidiana em fio para a tecelagem do próprio ser, construindo internamente uma obra de valor ético e afetivo."
+  },
+  {
+    "id": "a-wingene-na-familia-o-giz-invisivel-do-exemplo",
+    "number": 6,
+    "title": "A Wingene na Familia: O Giz Invisivel do Exemplo",
+    "time": "3 min",
+    "filename": "a-wingene-na-familia-o-giz-invisivel-do-exemplo.html",
+    "desc": "Reflexão sobre a transmissão da virtude no ambiente familiar através do exemplo."
+  },
+  {
+    "id": "o-sistema-gene-e-a-wingene-coletiva-a-arquitetura-da-eudaimonia-social",
+    "number": 7,
     "title": "O Sistema GENE: A Arquitetura da Eudaimonia Social",
     "subtitle": "A Arquitetura da Eudaimonia Social",
     "time": "10 min",
@@ -71,38 +109,8 @@
     "desc": "Conecta o método individual VIDA à estrutura coletiva por meio do Sistema GENE (Governos, Empresas, Normas e Educação), estabelecendo as bases para o florescimento e a eudaimonia social."
   },
   {
-    "id": "metaconsciencia-pensar-o-sentir-sentir-o-pensar",
-    "number": 5,
-    "title": "Metaconsciência: pensar o sentir, sentir o pensar",
-    "subtitle": "pensar o sentir, sentir o pensar",
-    "time": "4 min",
-    "category": "consciencia",
-    "tags": [
-      "Serena euforia",
-      "Metaconsciência",
-      "Eudaimonia",
-      "Atenção plena"
-    ],
-    "filename": "metaconsciencia-pensar-o-sentir-sentir-o-pensar.html",
-    "desc": "Reflexão sobre a capacidade humana de observar seus próprios pensamentos e sentimentos, refinando a percepção da mente e a lucidez existencial."
-  },
-  {
-    "id": "tecendo-a-vida-criando-no-intimo-uma-obra-pessoal",
-    "number": 6,
-    "title": "Tecendo a vida: criando no íntimo uma obra pessoal",
-    "subtitle": "criando no íntimo uma obra pessoal",
-    "time": "7 min",
-    "category": "aprimoramento",
-    "tags": [
-      "Vida",
-      "Wingene"
-    ],
-    "filename": "tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html",
-    "desc": "Como transformar cada vivência cotidiana em fio para a tecelagem do próprio ser, construindo internamente uma obra de valor ético e afetivo."
-  },
-  {
     "id": "the-vida-method",
-    "number": 7,
+    "number": 8,
     "title": "The VIDA method (English Edition)",
     "subtitle": "Values, Imperfections, Decisions, and Attention",
     "time": "14 min",
