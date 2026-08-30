@@ -7,7 +7,9 @@ permalink: /search.json
 {%- assign p3 = p2 | where_exp: "item", "item.name != '404.html'" -%}
 {%- assign p4 = p3 | where_exp: "item", "item.name != 'Search.html'" -%}
 {%- assign p5 = p4 | where_exp: "item", "item.name != 'search.json'" -%}
-{%- assign searchable_pages = p5 | where_exp: "item", "item.name != 'sitemap.xml'" -%}
+{%- assign p6 = p5 | where_exp: "item", "item.name != 'sitemap.xml'" -%}
+{%- assign p7 = p6 | where_exp: "item", "item.name != 'index.html'" -%}
+{%- assign searchable_pages = p7 | where_exp: "item", "item.name != 'index.md'" -%}
 {%- assign posts_with_title = site.posts | where_exp: "item", "item.title != nil" -%}
 {%- assign searchable_posts = posts_with_title | where_exp: "item", "item.search != false" -%}
 {%- assign filtered_items = searchable_pages | concat: searchable_posts -%}
