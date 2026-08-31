@@ -5,10 +5,12 @@ reading_time: 1
 semantic_order: 0
 tags:
   - Ciência
-  - Atenção
+  - Conhecimento
+  - Consciência
+  - Amor
   - Eudaimonia
   - Natureza
-  - Aforismos
+  - Existência
 description: "Sentenças breves e lapidadas sobre ciência, consciência, amor, virtudes, eudaimonia e existência."
 --- 
 
