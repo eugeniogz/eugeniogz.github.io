@@ -19,9 +19,6 @@
         {% assign trimmed_tag = single_tag | strip %}
         {% if trimmed_tag != "" %}
           {% assign norm_tag = trimmed_tag | downcase | capitalize %}
-          {% if trimmed_tag contains "VIDA" %}
-            {% assign norm_tag = norm_tag | replace: "Vida", "VIDA" | replace: "vida", "VIDA" %}
-          {% endif %}
           {% if trimmed_tag contains "GENE" %}
             {% if trimmed_tag != "Wingene" and trimmed_tag != "wingene" and trimmed_tag != "WINGENE" %}
               {% assign norm_tag = norm_tag | replace: "Gene", "GENE" | replace: "gene", "GENE" %}

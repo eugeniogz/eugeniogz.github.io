@@ -6,7 +6,7 @@ pillar: "Atenção"
 tags:
   - Atenção
   - Felicidade
-  - VIDA
+  - Vida
   - Propriocepção
 ---
 
