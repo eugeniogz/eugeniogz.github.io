@@ -86,6 +86,13 @@
     "number": 6,
     "title": "A Wingene na Familia: O Giz Invisivel do Exemplo",
     "time": "3 min",
+    "category": "aprimoramento",
+    "tags": [
+      "Família",
+      "Exemplo",
+      "Virtude",
+      "Wingene"
+    ],
     "filename": "a-wingene-na-familia-o-giz-invisivel-do-exemplo.html",
     "desc": "Reflexão sobre a transmissão da virtude no ambiente familiar através do exemplo."
   },
@@ -107,22 +114,5 @@
     ],
     "filename": "o-sistema-gene-e-a-wingene-coletiva-a-arquitetura-da-eudaimonia-social.html",
     "desc": "Conecta o método individual VIDA à estrutura coletiva por meio do Sistema GENE (Governos, Empresas, Normas e Educação), estabelecendo as bases para o florescimento e a eudaimonia social."
-  },
-  {
-    "id": "the-vida-method",
-    "number": 8,
-    "title": "The VIDA method (English Edition)",
-    "subtitle": "Values, Imperfections, Decisions, and Attention",
-    "time": "14 min",
-    "category": "metodo-vida",
-    "tags": [
-      "VIDA Method",
-      "Values",
-      "Ethics",
-      "Eudaimonia",
-      "Philosophy"
-    ],
-    "filename": "the-vida-method.html",
-    "desc": "English essay detailing the four interdependent pillars of the VIDA method for ethical refinement, conscious action, and sustainable eudaimonia."
   }
 ]

@@ -4,10 +4,9 @@ title: "Panteão mental"
 reading_time: 1
 semantic_order: 30
 tags:
-  - Divino
   - Mente
-  - Sobrenatural
-  - Vida
+  - Pensamento
+  - Criação
 --- 
 
 

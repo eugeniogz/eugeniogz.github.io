@@ -4,7 +4,9 @@ title: "Honrando a herança ancestral"
 reading_time: 1
 semantic_order: 90
 tags:
-  - Wingene
+  - Herança
+  - Ancestralidade
+  - Gratidão
 --- 
 
 

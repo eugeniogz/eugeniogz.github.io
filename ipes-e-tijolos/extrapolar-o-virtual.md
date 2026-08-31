@@ -4,7 +4,9 @@ title: "Extrapolar o virtual"
 reading_time: 1
 semantic_order: 35
 tags:
-  - Escravidão digital
+  - Tecnologia
+  - Presença
+  - Realidade
 --- 
 
 

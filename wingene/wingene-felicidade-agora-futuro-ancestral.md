@@ -1,24 +1,14 @@
 ---
-layout: default
+layout: wingene
 title: "Wingene: Felicidade agora, futuro ancestral"
 reading_time: 12
 semantic_order: 17
 tags:
-  - Serena euforia
-  - Conhecimento
-  - Evolução
-  - Wingene
-  - Cosmogonia
-  - Eudaimonia
-  - Herança
-  - Vida
-  - Natureza
   - Felicidade
-  - Atenção plena
-  - Infinito
-  - Espírito
+  - Eudaimonia
+  - Evolução
+  - Herança
   - método VIDA
-  - Logosofia
 --- 
 
 

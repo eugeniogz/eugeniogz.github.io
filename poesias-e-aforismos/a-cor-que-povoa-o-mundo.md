@@ -4,8 +4,9 @@ title: "A cor que povoa o mundo"
 reading_time: 1
 semantic_order: 0.5
 tags:
-  - Atenção plena
-  - Serena euforia
+  - Arte
+  - Sentir
+  - Natureza
 --- 
 
 

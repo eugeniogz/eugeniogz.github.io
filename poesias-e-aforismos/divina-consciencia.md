@@ -4,9 +4,9 @@ title: "Divina consciência"
 reading_time: 1
 semantic_order: 999.99
 tags:
-  - Ciência
-  - Divino
-  - Sobrenatural
+  - Consciência
+  - Cosmo
+  - Vida
 --- 
 
 

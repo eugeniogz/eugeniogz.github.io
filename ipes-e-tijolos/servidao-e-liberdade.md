@@ -4,7 +4,9 @@ title: "Servidão e liberdade"
 reading_time: 1
 semantic_order: 39
 tags:
-  - Sociedade
+  - Liberdade
+  - Vontade
+  - Autonomia
 --- 
 
 

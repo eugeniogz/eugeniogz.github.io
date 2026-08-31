@@ -14,70 +14,104 @@
         "title": "Serena euforia",
         "time": "1 min",
         "filename": "cronicas-1/serena-euforia.html",
-        "desc": "O estado de plenitude silenciosa que floresce na mente desperta."
+        "desc": "O estado de plenitude silenciosa que floresce na mente desperta.",
+        "tags": [
+          "Serena euforia"
+        ]
       },
       {
         "id": "alvorecer",
         "title": "Alvorecer",
         "time": "3 min",
         "filename": "cronicas-1/alvorecer.html",
-        "desc": "O despertar das primeiras luzes e a renovação diária dos pensamentos."
+        "desc": "O despertar das primeiras luzes e a renovação diária dos pensamentos.",
+        "tags": [
+          "Atenção plena",
+          "Sociedade"
+        ]
       },
       {
         "id": "mente-presente",
         "title": "Mente presente",
         "time": "1 min",
         "filename": "cronicas-1/mente-presente.html",
-        "desc": "A ancoragem no momento presente como refúgio e clareza."
+        "desc": "A ancoragem no momento presente como refúgio e clareza.",
+        "tags": [
+          "Atenção plena",
+          "Serena euforia"
+        ]
       },
       {
         "id": "manha-de-domingo",
         "title": "Manhã de domingo",
         "time": "2 min",
         "filename": "cronicas-1/manha-de-domingo.html",
-        "desc": "A serenidade dos domingos e o ritmo manso das horas."
+        "desc": "A serenidade dos domingos e o ritmo manso das horas.",
+        "tags": [
+          "Atenção plena"
+        ]
       },
       {
         "id": "relogios-e-cafes",
         "title": "Relógios e cafés",
         "time": "3 min",
         "filename": "cronicas-1/relogios-e-cafes.html",
-        "desc": "O diálogo entre o ritmo dos ponteiros e o aroma do café fresquinho."
+        "desc": "O diálogo entre o ritmo dos ponteiros e o aroma do café fresquinho.",
+        "tags": [
+          "Atenção plena",
+          "Tempo"
+        ]
       },
       {
         "id": "as-gavetas-mentais",
         "title": "As gavetas mentais",
         "time": "2 min",
         "filename": "cronicas-1/as-gavetas-mentais.html",
-        "desc": "Arrumando os compartimentos íntimos da memória e dos sentimentos."
+        "desc": "Arrumando os compartimentos íntimos da memória e dos sentimentos.",
+        "tags": [
+          "Atenção plena"
+        ]
       },
       {
         "id": "cinza-vazio",
         "title": "Cinza vazio",
         "time": "1 min",
         "filename": "cronicas-1/cinza-vazio.html",
-        "desc": "A superação dos dias nublados e a redescoberta da luz interior."
+        "desc": "A superação dos dias nublados e a redescoberta da luz interior.",
+        "tags": [
+          "Atenção plena"
+        ]
       },
       {
         "id": "aconchego-sereno",
         "title": "Aconchego sereno",
         "time": "2 min",
         "filename": "cronicas-1/aconchego-sereno.html",
-        "desc": "O calor reconfortante do lar e o valor das coisas simples."
+        "desc": "O calor reconfortante do lar e o valor das coisas simples.",
+        "tags": [
+          "Serena euforia"
+        ]
       },
       {
         "id": "quebrando-a-monotonia",
         "title": "Quebrando a monotonia",
         "time": "2 min",
         "filename": "cronicas-1/quebrando-a-monotonia.html",
-        "desc": "Aprender a enxergar novidade onde o hábito só via rotina."
+        "desc": "Aprender a enxergar novidade onde o hábito só via rotina.",
+        "tags": [
+          "Atenção plena"
+        ]
       },
       {
         "id": "pintura-modesta",
         "title": "Pintura modesta",
         "time": "1 min",
         "filename": "cronicas-1/pintura-modesta.html",
-        "desc": "A contemplação das pinceladas despretensiosas da vida real."
+        "desc": "A contemplação das pinceladas despretensiosas da vida real.",
+        "tags": [
+          "Atenção plena",
+          "Serena euforia"
+        ]
       },
       {
         "id": "atento-descanso",
@@ -107,49 +141,78 @@
         "title": "Alegria em grãos selecionados",
         "time": "2 min",
         "filename": "cronicas-2/alegria-em-graos-selecionados.html",
-        "desc": "A escolha atenta das vivências que nutrem a alma."
+        "desc": "A escolha atenta das vivências que nutrem a alma.",
+        "tags": [
+          "Eudaimonia"
+        ]
       },
       {
         "id": "singelas-letras-da-imprecisao",
         "title": "Singelas letras da imprecisão",
         "time": "1 min",
         "filename": "cronicas-2/singelas-letras-da-imprecisao.html",
-        "desc": "A beleza imperfeita e sincera dos primeiros rascunhos da vida."
+        "desc": "A beleza imperfeita e sincera dos primeiros rascunhos da vida.",
+        "tags": [
+          "Trabalho"
+        ]
       },
       {
         "id": "do-barulho-ao-canto",
         "title": "Do barulho ao canto",
         "time": "2 min",
         "filename": "cronicas-2/do-barulho-ao-canto.html",
-        "desc": "Transformando o barulho das pressões em música harmoniosa."
+        "desc": "Transformando o barulho das pressões em música harmoniosa.",
+        "tags": [
+          "Atenção plena",
+          "Sociedade"
+        ]
       },
       {
         "id": "realidade-na-mesa-de-todos",
         "title": "Realidade na mesa de todos",
         "time": "3 min",
         "filename": "cronicas-2/realidade-na-mesa-de-todos.html",
-        "desc": "A riqueza da conversa franca e da partilha ao redor da mesa."
+        "desc": "A riqueza da conversa franca e da partilha ao redor da mesa.",
+        "tags": [
+          "Economia",
+          "Sociedade"
+        ]
       },
       {
         "id": "fe-e-atencao",
         "title": "Fé e atenção",
         "time": "2 min",
         "filename": "cronicas-2/fe-e-atencao.html",
-        "desc": "A confiança lúcida no futuro aliada ao cuidado vigilante no presente."
+        "desc": "A confiança lúcida no futuro aliada ao cuidado vigilante no presente.",
+        "tags": [
+          "Divino",
+          "Fé",
+          "Wingene",
+          "método VIDA"
+        ]
       },
       {
         "id": "amor-consciente",
         "title": "Amor consciente",
         "time": "2 min",
         "filename": "cronicas-2/amor-consciente.html",
-        "desc": "O afeto que liberta, apoia o florescimento e constrói laços sólidos."
+        "desc": "O afeto que liberta, apoia o florescimento e constrói laços sólidos.",
+        "tags": [
+          "Amor",
+          "Atenção plena",
+          "Felicidade"
+        ]
       },
       {
         "id": "tapete-de-algodao",
         "title": "Tapete de algodão",
         "time": "1 min",
         "filename": "cronicas-2/tapete-de-algodao.html",
-        "desc": "A suavidade das nuvens e a calma de pisar suavemente no mundo."
+        "desc": "A suavidade das nuvens e a calma de pisar suavemente no mundo.",
+        "tags": [
+          "Sociedade",
+          "Escravidão digital"
+        ]
       },
       {
         "id": "atencao-aos-desvios",
@@ -180,35 +243,54 @@
         "title": "Felicidade — singelo trinado",
         "time": "1 min",
         "filename": "cronicas-3/felicidade-singelo-trinado.html",
-        "desc": "A alegria pura despertada pelo canto livre de um pássaro."
+        "desc": "A alegria pura despertada pelo canto livre de um pássaro.",
+        "tags": [
+          "Felicidade"
+        ]
       },
       {
         "id": "bioma-mental",
         "title": "Bioma mental",
         "time": "1 min",
         "filename": "cronicas-3/bioma-mental.html",
-        "desc": "A rica ecologia de ideias e sentimentos que habitam nossa mente."
+        "desc": "A rica ecologia de ideias e sentimentos que habitam nossa mente.",
+        "tags": [
+          "Eudaimonia",
+          "Serena euforia"
+        ]
       },
       {
         "id": "vestido-azul",
         "title": "Vestido azul",
         "time": "1 min",
         "filename": "cronicas-3/vestido-azul.html",
-        "desc": "A força das lembranças que atravessam gerações com ternura."
+        "desc": "A força das lembranças que atravessam gerações com ternura.",
+        "tags": [
+          "Wingene"
+        ]
       },
       {
         "id": "a-heranca-real",
         "title": "A herança real",
         "time": "2 min",
         "filename": "cronicas-3/a-heranca-real.html",
-        "desc": "O verdadeiro patrimônio: os valores e o exemplo transmitidos."
+        "desc": "O verdadeiro patrimônio: os valores e o exemplo transmitidos.",
+        "tags": [
+          "Wingene",
+          "Logosofia"
+        ]
       },
       {
         "id": "momentos-que-tecem-a-vida",
         "title": "Momentos que tecem a vida",
         "time": "1 min",
         "filename": "cronicas-3/momentos-que-tecem-a-vida.html",
-        "desc": "A trama sutil dos pequenos instantes que formam a nossa história."
+        "desc": "A trama sutil dos pequenos instantes que formam a nossa história.",
+        "tags": [
+          "Wingene",
+          "Atenção plena",
+          "Vida"
+        ]
       }
     ]
   },

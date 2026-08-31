@@ -1,8 +1,13 @@
 ---
-layout: default
+layout: wingene
 title: "A Wingene na Familia: O Giz Invisivel do Exemplo"
 reading_time: 3
 semantic_order: 120
+tags:
+  - Família
+  - Exemplo
+  - Virtude
+  - Wingene
 --- 
 
 

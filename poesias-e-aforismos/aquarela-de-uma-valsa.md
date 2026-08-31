@@ -3,6 +3,10 @@ layout: default
 title: "Aquarela de uma valsa"
 reading_time: 1
 semantic_order: 42
+tags:
+  - Dança
+  - Ritmo
+  - Afeto
 --- 
 
 

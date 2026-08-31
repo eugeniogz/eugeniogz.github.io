@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: wingene
 title: "Tecendo a vida: criando no íntimo uma obra pessoal"
 reading_time: 7
 semantic_order: 100

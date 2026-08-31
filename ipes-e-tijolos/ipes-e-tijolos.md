@@ -4,7 +4,9 @@ title: "Ipês e tijolos"
 reading_time: 1
 semantic_order: 37
 tags:
-  - Sociedade
+  - Cidade
+  - Natureza
+  - Equilíbrio
 --- 
 
 

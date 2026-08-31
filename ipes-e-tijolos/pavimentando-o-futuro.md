@@ -4,9 +4,9 @@ title: "Pavimentando o futuro"
 reading_time: 1
 semantic_order: 70
 tags:
-  - Sociedade
-  - Evolução
-  - Futuro
+  - Futuro Ancestral
+  - Ação
+  - Legado
 --- 
 
 

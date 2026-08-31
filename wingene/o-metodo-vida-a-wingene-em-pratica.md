@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: wingene
 title: "O método VIDA: a Wingene em prática"
 reading_time: 14
 semantic_order: 60

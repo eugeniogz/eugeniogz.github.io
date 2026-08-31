@@ -5,7 +5,11 @@
     "title": "Espírito material",
     "time": "2 min",
     "category": "mente",
-    "tags": ["Espírito", "Mente", "Biologia"],
+    "tags": [
+      "Espírito",
+      "Mente",
+      "Biologia"
+    ],
     "filename": "espirito-material.html",
     "desc": "O espírito não metafísico: a fauna consciente que habita o ecossistema mental e ampara os momentos difíceis."
   },
@@ -15,7 +19,11 @@
     "title": "Panteão mental",
     "time": "1 min",
     "category": "mente",
-    "tags": ["Mente", "Pensamento", "Criação"],
+    "tags": [
+      "Mente",
+      "Pensamento",
+      "Criação"
+    ],
     "filename": "panteao-mental.html",
     "desc": "O templo íntimo onde ideias, referências e mestres imaginários dialogam e refinam o caráter."
   },
@@ -25,7 +33,11 @@
     "title": "Extrapolar o virtual",
     "time": "1 min",
     "category": "sociedade",
-    "tags": ["Tecnologia", "Presença", "Realidade"],
+    "tags": [
+      "Tecnologia",
+      "Presença",
+      "Realidade"
+    ],
     "filename": "extrapolar-o-virtual.html",
     "desc": "Superar a ilusão das telas e do imediatismo virtual para vivenciar o concreto da existência."
   },
@@ -35,7 +47,11 @@
     "title": "Ipês e tijolos",
     "time": "1 min",
     "category": "sociedade",
-    "tags": ["Cidade", "Natureza", "Equilíbrio"],
+    "tags": [
+      "Cidade",
+      "Natureza",
+      "Equilíbrio"
+    ],
     "filename": "ipes-e-tijolos.html",
     "desc": "A coexistência poética entre os muros rígidos do concreto urbano e a delicada explosão dos ipês floridos."
   },
@@ -45,7 +61,11 @@
     "title": "Odisseia interior",
     "time": "1 min",
     "category": "mente",
-    "tags": ["Autoconhecimento", "Jornada", "Consciência"],
+    "tags": [
+      "Autoconhecimento",
+      "Jornada",
+      "Consciência"
+    ],
     "filename": "odisseia-interior.html",
     "desc": "A viagem mais profunda que o ser humano pode empreender: o desbravamento dos mares de si mesmo."
   },
@@ -55,7 +75,11 @@
     "title": "Servidão e liberdade",
     "time": "1 min",
     "category": "liberdade",
-    "tags": ["Liberdade", "Vontade", "Autonomia"],
+    "tags": [
+      "Liberdade",
+      "Vontade",
+      "Autonomia"
+    ],
     "filename": "servidao-e-liberdade.html",
     "desc": "A linha tênue entre as amarras do automatismo inconsciente e a conquista ativa da verdadeira liberdade."
   },
@@ -65,7 +89,11 @@
     "title": "Baleias e marujos",
     "time": "1 min",
     "category": "sociedade",
-    "tags": ["Existência", "Coletivo", "Mundo"],
+    "tags": [
+      "Existência",
+      "Coletivo",
+      "Mundo"
+    ],
     "filename": "baleias-e-marujos.html",
     "desc": "Reflexão sobre os gigantes misteriosos da existência e o papel solidário de cada marujo no mesmo barco."
   },
@@ -75,7 +103,11 @@
     "title": "O fogo de Prometeu",
     "time": "2 min",
     "category": "liberdade",
-    "tags": ["Conhecimento", "Herança", "Civilização"],
+    "tags": [
+      "Conhecimento",
+      "Herança",
+      "Civilização"
+    ],
     "filename": "o-fogo-de-prometeu.html",
     "desc": "A chama da inteligência e da técnica como herança milenar e dever de responsabilidade ética."
   },
@@ -85,7 +117,11 @@
     "title": "Pavimentando o futuro",
     "time": "1 min",
     "category": "futuro",
-    "tags": ["Futuro Ancestral", "Ação", "Legado"],
+    "tags": [
+      "Futuro Ancestral",
+      "Ação",
+      "Legado"
+    ],
     "filename": "pavimentando-o-futuro.html",
     "desc": "O assentamento paciente de cada tijolo moral que pavimentará o caminho para as próximas gerações."
   },
@@ -95,7 +131,11 @@
     "title": "Eudaimonia Social",
     "time": "3 min",
     "category": "sociedade",
-    "tags": ["Eudaimonia", "Sociedade", "Coexistência"],
+    "tags": [
+      "Eudaimonia",
+      "Sociedade",
+      "Coexistência"
+    ],
     "filename": "eudaimonia-social.html",
     "desc": "O florescimento humano que se expande além do indivíduo, alcançando a harmonia da comunidade."
   },
@@ -105,7 +145,11 @@
     "title": "Honrando a herança ancestral",
     "time": "1 min",
     "category": "futuro",
-    "tags": ["Herança", "Ancestralidade", "Gratidão"],
+    "tags": [
+      "Herança",
+      "Ancestralidade",
+      "Gratidão"
+    ],
     "filename": "honrando-a-heranca-ancestral.html",
     "desc": "O reconhecimento lúcido do esforço dos antepassados como solo fértil para as nossas próprias escolhas."
   }

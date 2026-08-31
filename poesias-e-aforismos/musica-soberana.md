@@ -4,8 +4,9 @@ title: "Música soberana"
 reading_time: 1
 semantic_order: 7
 tags:
-  - Atenção plena
-  - Natureza
+  - Música
+  - Harmonia
+  - Espírito
 --- 
 
 

@@ -4,9 +4,9 @@ title: "Tecer alegria"
 reading_time: 1
 semantic_order: 1
 tags:
-  - Trabalho
-  - Felicidade
-  - Ensinar
+  - Alegria
+  - Vida
+  - Ação
 --- 
 
 

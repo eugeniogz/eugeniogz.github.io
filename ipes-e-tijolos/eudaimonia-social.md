@@ -4,8 +4,9 @@ title: "Eudaimonia Social"
 reading_time: 3
 semantic_order: 80
 tags:
+  - Eudaimonia
   - Sociedade
-  - Wingene
+  - Coexistência
 --- 
 
 

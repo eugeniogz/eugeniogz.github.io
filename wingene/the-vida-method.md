@@ -1,9 +1,15 @@
 ---
-layout: default
+layout: wingene
 title: "The VIDA method"
 reading_time: 14
 semantic_order: 0
 navigation_footer: false
+tags:
+  - VIDA Method
+  - Values
+  - Ethics
+  - Eudaimonia
+  - Philosophy
 --- 
 
 

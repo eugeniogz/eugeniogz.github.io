@@ -4,10 +4,9 @@ title: "Vidas infinitas"
 reading_time: 1
 semantic_order: 6
 tags:
-  - Tempo
-  - Vida
-  - Amor
   - Infinito
+  - Tempo
+  - Existência
 --- 
 
 

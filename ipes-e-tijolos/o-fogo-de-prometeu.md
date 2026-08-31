@@ -4,9 +4,9 @@ title: "O fogo de Prometeu"
 reading_time: 2
 semantic_order: 60
 tags:
-  - Sociedade
   - Conhecimento
-  - Eudaimonia
+  - Herança
+  - Civilização
 --- 
 
 

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: wingene
 title: "O Sistema GENE: A Arquitetura da Eudaimonia Social"
 reading_time: 10
 semantic_order: 500

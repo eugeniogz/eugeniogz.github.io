@@ -4,8 +4,9 @@ title: "Odisseia interior"
 reading_time: 1
 semantic_order: 38
 tags:
-  - Felicidade
-  - Mente
+  - Autoconhecimento
+  - Jornada
+  - Consciência
 --- 
 
 

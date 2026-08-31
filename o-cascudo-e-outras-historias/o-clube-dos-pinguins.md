@@ -4,7 +4,7 @@ title: "O clube dos pinguins"
 reading_time: 2
 semantic_order: 50
 tags:
-  - Escravidão digital
+  - Escravidão Digital
   - Amor
   - método VIDA
   - Tempo

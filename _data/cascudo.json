@@ -4,7 +4,11 @@
     "number": 1,
     "title": "Rio Japão",
     "time": "2 min",
-    "tags": ["Natureza", "Família", "método VIDA"],
+    "tags": [
+      "Natureza",
+      "Família",
+      "método VIDA"
+    ],
     "category": "natureza",
     "cover": "figuras/rio-japao/vovo-e-os-meninos.png",
     "filename": "rio-japao.html",
@@ -22,7 +26,11 @@
     "number": 2,
     "title": "O Cascudo",
     "time": "2 min",
-    "tags": ["Natureza", "Família", "método VIDA"],
+    "tags": [
+      "Natureza",
+      "Família",
+      "método VIDA"
+    ],
     "category": "natureza",
     "cover": "figuras/o-cascudo/lago-no-rio.png",
     "filename": "o-cascudo.html",
@@ -38,9 +46,15 @@
   {
     "id": "o-relogio-de-bolso",
     "number": 3,
-    "title": "O Relógio de Bolso",
+    "title": "O relógio de bolso",
     "time": "1 min",
-    "tags": ["Tempo", "Vida", "Herança", "Wingene", "método VIDA"],
+    "tags": [
+      "Tempo",
+      "Vida",
+      "Herança",
+      "Wingene",
+      "método VIDA"
+    ],
     "category": "valores",
     "cover": "figuras/marcando-o-proprio-tempo/mostrando-na-caixa.png",
     "filename": "o-relogio-de-bolso.html",
@@ -59,7 +73,11 @@
     "number": 4,
     "title": "O Barquinho Amarelo",
     "time": "2 min",
-    "tags": ["Aprender", "Ensinar", "método VIDA"],
+    "tags": [
+      "Aprender",
+      "Ensinar",
+      "método VIDA"
+    ],
     "category": "aprendizados",
     "cover": "figuras/o-barquinho-amarelo/iniciando-dobradura.png",
     "filename": "o-barquinho-amarelo.html",
@@ -75,9 +93,13 @@
   {
     "id": "um-sanduiche-especial",
     "number": 5,
-    "title": "Um Sanduíche Especial",
+    "title": "Um sanduíche especial",
     "time": "2 min",
-    "tags": ["Família", "Colaboração", "método VIDA"],
+    "tags": [
+      "Família",
+      "Colaboração",
+      "método VIDA"
+    ],
     "category": "familia",
     "cover": "figuras/um-sanduiche-especial/preparo-do-sanduiche.png",
     "filename": "um-sanduiche-especial.html",
@@ -93,9 +115,15 @@
   {
     "id": "aventura-de-bicicleta",
     "number": 6,
-    "title": "Aventura de Bicicleta",
+    "title": "Aventura de bicicleta",
     "time": "3 min",
-    "tags": ["Família", "Aprender", "Ensinar", "Escutar", "método VIDA"],
+    "tags": [
+      "Família",
+      "Aprender",
+      "Ensinar",
+      "Escutar",
+      "método VIDA"
+    ],
     "category": "familia",
     "cover": "figuras/as-bicicletas-no-parque/inicio-da-aventura.png",
     "filename": "aventura-de-bicicleta.html",
@@ -111,9 +139,14 @@
   {
     "id": "o-clube-dos-pinguins",
     "number": 7,
-    "title": "O Clube dos Pinguins",
+    "title": "O clube dos pinguins",
     "time": "2 min",
-    "tags": ["Escravidão Digital", "Amor", "método VIDA", "Tempo"],
+    "tags": [
+      "Escravidão Digital",
+      "Amor",
+      "método VIDA",
+      "Tempo"
+    ],
     "category": "tecnologia",
     "cover": "figuras/o-clube-dos-pinguins/jogando-xadrez.png",
     "filename": "o-clube-dos-pinguins.html",

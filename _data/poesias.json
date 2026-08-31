@@ -4,142 +4,208 @@
     "title": "Aforismos",
     "type": "aforismo",
     "time": "1 min",
-    "tags": ["Ciência", "Consciência", "Felicidade", "Natureza"],
+    "tags": [
+      "Ciência",
+      "Consciência",
+      "Felicidade",
+      "Natureza"
+    ],
     "category": "aforismos",
     "filename": "aforismos.html",
     "preview": "A ciência ilumina a metafísica com os dourados fios do conhecimento. Pensamento: sentir que a razão refinou...",
-    "desc": "Sentenças breves e lapidadas sobre ciência, consciência, amor, virtudes, eudaimonia e existência."
+    "desc": "Sentenças breves e lapidadas sobre ciência, consciência, amor, virtudes, eudaimonia e existência.",
+    "number": 1
   },
   {
     "id": "vida-breve-rotas-eternas",
     "title": "Vida breve, rotas eternas",
     "type": "poema",
     "time": "1 min",
-    "tags": ["Felicidade", "Eudaimonia", "Vida"],
+    "tags": [
+      "Felicidade",
+      "Eudaimonia",
+      "Vida"
+    ],
     "category": "eudaimonia",
     "filename": "vida-breve-rotas-eternas.html",
     "preview": "Pegadas leves no tempo humano / tempo pequeno no verso oceano / universo efêmero na negra entropia...",
-    "desc": "Poema sobre a brevidade da travessia humana e as rotas diárias que tecem a alegria e o futuro ancestral."
+    "desc": "Poema sobre a brevidade da travessia humana e as rotas diárias que tecem a alegria e o futuro ancestral.",
+    "number": 2
   },
   {
     "id": "a-cor-que-povoa-o-mundo",
     "title": "A cor que povoa o mundo",
     "type": "poema",
     "time": "1 min",
-    "tags": ["Arte", "Sentir", "Natureza"],
+    "tags": [
+      "Arte",
+      "Sentir",
+      "Natureza"
+    ],
     "category": "natureza",
     "filename": "a-cor-que-povoa-o-mundo.html",
     "preview": "A luz que dança no olhar do pintor / tons de verde, céu e flor...",
-    "desc": "Versos sobre a percepção estética, a sinestesia das cores e a beleza que vibra na natureza."
+    "desc": "Versos sobre a percepção estética, a sinestesia das cores e a beleza que vibra na natureza.",
+    "number": 3
   },
   {
     "id": "eudaimonia-a-se-destilar",
     "title": "Eudaimonia a se destilar",
     "type": "poema",
     "time": "1 min",
-    "tags": ["Eudaimonia", "Virtudes", "Alegria"],
+    "tags": [
+      "Eudaimonia",
+      "Virtudes",
+      "Alegria"
+    ],
     "category": "eudaimonia",
     "filename": "eudaimonia-a-se-destilar.html",
     "preview": "No alambique das ações cotidianas / a essência serena que nunca se apaga...",
-    "desc": "A alquimia do viver consciente: cultivar a alegria serena através de pequenas atitudes diárias."
+    "desc": "A alquimia do viver consciente: cultivar a alegria serena através de pequenas atitudes diárias.",
+    "number": 4
   },
   {
     "id": "tecer-alegria",
     "title": "Tecer alegria",
     "type": "poema",
     "time": "1 min",
-    "tags": ["Alegria", "Vida", "Ação"],
+    "tags": [
+      "Alegria",
+      "Vida",
+      "Ação"
+    ],
     "category": "amor",
     "filename": "tecer-alegria.html",
     "preview": "Fio por fio, gesto a gesto / no tear do tempo manifesto...",
-    "desc": "A construção artesanal da felicidade através da presença, do afeto e do cuidado mútuo."
+    "desc": "A construção artesanal da felicidade através da presença, do afeto e do cuidado mútuo.",
+    "number": 5
   },
   {
     "id": "vida-consciente",
     "title": "Vida consciente",
     "type": "poema",
     "time": "1 min",
-    "tags": ["Consciência", "Presença", "Mente"],
+    "tags": [
+      "Consciência",
+      "Presença",
+      "Mente"
+    ],
     "category": "consciencia",
     "filename": "vida-consciente.html",
     "preview": "Despertar a cada fôlego e passo / quebrar o automatismo do cansaço...",
-    "desc": "Um chamado poético para habitar o presente com lucidez, intenção e propriocepção."
+    "desc": "Um chamado poético para habitar o presente com lucidez, intenção e propriocepção.",
+    "number": 6
   },
   {
     "id": "essencia-oculta",
     "title": "Essência oculta",
     "type": "poema",
     "time": "1 min",
-    "tags": ["Essência", "Espírito", "Mundo"],
+    "tags": [
+      "Essência",
+      "Espírito",
+      "Mundo"
+    ],
     "category": "consciencia",
     "filename": "essencia-oculta.html",
     "preview": "Por trás do visível véu da matéria / baila a seiva da floresta sincera...",
-    "desc": "O mistério sutil que habita a matéria consciente e anima a existência."
+    "desc": "O mistério sutil que habita a matéria consciente e anima a existência.",
+    "number": 7
   },
   {
     "id": "quadro-azul",
     "title": "Quadro azul",
     "type": "poema",
     "time": "1 min",
-    "tags": ["Música", "Cor", "Sentimento"],
+    "tags": [
+      "Música",
+      "Cor",
+      "Sentimento"
+    ],
     "category": "musica",
     "filename": "quadro-azul.html",
     "preview": "Na tela azul do infinito firmamento / notas suaves viajam no vento...",
-    "desc": "Harmonia lírica entre a imensidão azul do cosmos e as ressonâncias da alma."
+    "desc": "Harmonia lírica entre a imensidão azul do cosmos e as ressonâncias da alma.",
+    "number": 8
   },
   {
     "id": "vidas-infinitas",
     "title": "Vidas infinitas",
     "type": "poema",
     "time": "1 min",
-    "tags": ["Infinito", "Tempo", "Existência"],
+    "tags": [
+      "Infinito",
+      "Tempo",
+      "Existência"
+    ],
     "category": "eudaimonia",
     "filename": "vidas-infinitas.html",
     "preview": "Quantas vidas cabem num instante / quando a mente se faz vigilante?...",
-    "desc": "A dilatação do tempo pela intensidade da presença e do sentimento consciente."
+    "desc": "A dilatação do tempo pela intensidade da presença e do sentimento consciente.",
+    "number": 9
   },
   {
     "id": "musica-soberana",
     "title": "Música soberana",
     "type": "poema",
     "time": "1 min",
-    "tags": ["Música", "Harmonia", "Espírito"],
+    "tags": [
+      "Música",
+      "Harmonia",
+      "Espírito"
+    ],
     "category": "musica",
     "filename": "musica-soberana.html",
     "preview": "A sinfonia que rege o pensamento / ritmo sagrado de todo momento...",
-    "desc": "O poder transcendental da melodia como espelho das sinapses e da harmonia interior."
+    "desc": "O poder transcendental da melodia como espelho das sinapses e da harmonia interior.",
+    "number": 10
   },
   {
     "id": "cafe-em-flor",
     "title": "Café em flor",
     "type": "poema",
     "time": "1 min",
-    "tags": ["Natureza", "Origem", "Memória"],
+    "tags": [
+      "Natureza",
+      "Origem",
+      "Memória"
+    ],
     "category": "natureza",
     "filename": "cafe-em-flor.html",
     "preview": "Brancura pura na serra aromática / lembrança viva da terra simpática...",
-    "desc": "Memórias afetivas da terra natal, perfume das floradas e raízes ancestrais."
+    "desc": "Memórias afetivas da terra natal, perfume das floradas e raízes ancestrais.",
+    "number": 11
   },
   {
     "id": "aquarela-de-uma-valsa",
     "title": "Aquarela de uma valsa",
     "type": "poema",
     "time": "1 min",
-    "tags": ["Dança", "Ritmo", "Afeto"],
+    "tags": [
+      "Dança",
+      "Ritmo",
+      "Afeto"
+    ],
     "category": "musica",
     "filename": "aquarela-de-uma-valsa.html",
     "preview": "Em giros ternos e passos marcados / traços de afeto no tempo pintados...",
-    "desc": "A dança da vida em compasso ternário, onde o amor se expressa em movimento suave."
+    "desc": "A dança da vida em compasso ternário, onde o amor se expressa em movimento suave.",
+    "number": 12
   },
   {
     "id": "divina-consciencia",
     "title": "Divina consciência",
     "type": "poema",
     "time": "1 min",
-    "tags": ["Consciência", "Cosmo", "Vida"],
+    "tags": [
+      "Consciência",
+      "Cosmo",
+      "Vida"
+    ],
     "category": "consciencia",
     "filename": "divina-consciencia.html",
     "preview": "O universo acordando em cada olhar / a matéria aprendendo a se amar...",
-    "desc": "O ser humano como espelho pelo qual o próprio universo se contempla e sente."
+    "desc": "O ser humano como espelho pelo qual o próprio universo se contempla e sente.",
+    "number": 13
   }
 ]
