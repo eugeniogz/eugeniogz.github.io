@@ -8,6 +8,7 @@ tags:
   - Euforia
   - Eudaimonia
   - Atenção
+  - Metaconsciência
 description: "A fusão entre o pensar e o sentir na conquista da metaconsciência, estado de pura presença onde floresce a serena euforia da eudaimonia."
 --- 
 
