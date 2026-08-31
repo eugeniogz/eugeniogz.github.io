@@ -11,6 +11,6 @@ search: false
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./armadilhas-da-internet.html">&lt;&lt; Armadilhas da internet</a>
+  <a href="./armadilhas-da-internet.html">&lt;&lt; Armadilhas da Internet</a>
   <a href="./marcando-o-proprio-tempo.html">Marcando o próprio tempo &gt;&gt;</a>
 </div>

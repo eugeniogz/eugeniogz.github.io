@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 ## figuras
 
 ### 📁 [O Clube dos Pinguins](./o-clube-dos-pinguins/)

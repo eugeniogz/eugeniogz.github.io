@@ -12,8 +12,6 @@ tags:
 
 ### [Wingene](./)
 
-## The VIDA method
-
 We inherit a body, a mind, and a culture—but we do not inherit all the criteria for living well. These must be built. This is the goal of Wingene: the refinement of ancestral heritage. Biological inheritance provides the first lights of the mind; learning expands the horizon, illuminating understanding with infinite colors. Even so, many traverse existence in automatic mode, reacting more than choosing, repeating habits without questioning their foundations.
 
 How do we ensure that cultural sap contributes to Wingene? The answer lies in an acronym: **V**alues, **I**mperfections, **D**ecisions, and Attention—VIDA (LIFE). Values provide direction; imperfections reveal the inconsistencies of the journey; decisions convert purpose into action; and attention allows one to perceive where to act and to confirm advances and failures. These axes operate in a continuous movement.
@@ -83,7 +81,7 @@ Related to the management of affects: impulsivity, reactivity, excessive fear, a
 Manifested in the inconsistency between values and actions: unkept promises, omissions for convenience, and inappropriate behavior.
 
 1. **Attentional**  
-Stemming from the mind's scattering: automatisms, chronic distraction, life on “autopilot.”
+Stemming from the mind's scattering: automatisms, chronic distraction, life on "autopilot."
 
 ### **Acceptance without resignation**
 

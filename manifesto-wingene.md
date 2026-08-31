@@ -14,11 +14,9 @@ tags:
   - Atenção
 --- 
 
-## Manifesto Wingene
+Criei a palavra *Wingene* da fusão entre *win* e *gene* — vitória e herança. Mas seu sentido ultrapassa o triunfo genético: expande-se na eterna busca pelo saber — nossa herança ancestral. O conhecimento se completa quando se torna prática, que leva ao aperfeiçoamento pessoal. Uma trilha que nunca termina: cada instante nos aproxima do utópico ideal, florescendo em plena eudaimonia — *eu* (bem) e *daimon* (espírito). Entendo "espírito" não como substância imaterial, mas como emergência de processos neurais. A experiência de transcendência brota da matéria viva. Nesse sentido, a eudaimonia é felicidade serena — um estado natural que nasce no recinto mental.
 
-Criei a palavra *Wingene* da fusão entre *win* e *gene* — vitória e herança. Mas seu sentido ultrapassa o triunfo genético: expande-se na eterna busca pelo saber — nossa herança ancestral. O conhecimento se completa quando se torna prática, que leva ao aperfeiçoamento pessoal. Uma trilha que nunca termina: cada instante nos aproxima do utópico ideal, florescendo em plena eudaimonia — *eu* (bem) e *daimon* (espírito). Entendo “espírito” não como substância imaterial, mas como emergência de processos neurais. A experiência de transcendência brota da matéria viva. Nesse sentido, a eudaimonia é felicidade serena — um estado natural que nasce no recinto mental.
-
-A herança genética cria as primeiras luzes da mente. Segundo António Damásio¹: “Os nossos cérebros e as nossas mentes não são *tabulae rasae* quando nascemos. Contudo, também não são, na sua totalidade, geneticamente determinados.” Esse legado biológico deve expandir-se gradualmente com o conhecimento — chave para o aperfeiçoamento moral.
+A herança genética cria as primeiras luzes da mente. Segundo António Damásio¹: "Os nossos cérebros e as nossas mentes não são *tabulae rasae* quando nascemos. Contudo, também não são, na sua totalidade, geneticamente determinados." Esse legado biológico deve expandir-se gradualmente com o conhecimento — chave para o aperfeiçoamento moral.
 
 Mas como, afinal, tecer essa Wingene no cotidiano? Como transformar herança genética e desejo de transcendência em passos concretos? A resposta está num acróstico que ilumina o caminho: **V**alores, **I**mperfeições, **D**ecisões e **A**tenção — [VIDA](/wingene/o-metodo-vida-a-wingene-em-pratica.html).
 
@@ -26,7 +24,7 @@ Mas como, afinal, tecer essa Wingene no cotidiano? Como transformar herança gen
 
 **Imperfeições** compõem a vida: a impaciência com quem amamos, o orgulho que impede um pedido de desculpas. Aceitá-las não significa resignação, mas direção para o aperfeiçoamento.
 
-**Decisões** nos dão o poder de agarrar as rédeas do próprio destino. O ato corajoso de escolher enfrentar as imperfeições buscando o aperfeiçoamento diário.
+**Decisões** nos conferem o poder de agarrar as rédeas do próprio destino. O ato corajoso de escolher enfrentar as imperfeições, buscando o aperfeiçoamento diário.
 
 **Atenção**, singular e única, acompanha todo o caminho. A arte de viver no agora, percebendo os detalhes, escutando verdadeiramente.
 
@@ -38,17 +36,10 @@ Artistas descortinam obras-primas, tecendo com fios do mundo físico aquilo que 
 
 A busca pela *eudaimonia* nos impele a realizar a *Wingene*; no entanto, esse objetivo se esvazia na brevidade da vida. No espaço curto da existência, a mente não é capaz de fazer muito. Girar a roda do acróstico VIDA pode guiar a evolução, mas será sempre um passo breve na escala do tempo.
 
-Por que lutar para o aprimoramento se não seremos nós a desfrutar do futuro? A resposta está no que teceram nossos ancestrais e na eudaimonia como experiência presente dessa luta. Nós devemos ser a base das novas gerações, garantindo o seu futuro. Assim, pode-se pensar em uma *Wingene* coletiva, onde cada geração prepara o terreno para o florescimento de uma sociedade cada vez mais evoluída.
+Por que lutar pelo aprimoramento se não seremos nós a desfrutar do futuro? A resposta está no que teceram nossos ancestrais e na eudaimonia como experiência presente dessa luta. Nós devemos ser a base das novas gerações, garantindo o seu futuro. Assim, pode-se pensar em uma *Wingene* coletiva, em que cada geração prepara o terreno para o florescimento de uma sociedade cada vez mais evoluída.
 
 [Wingene: filosofia e prática da herança consciente](/wingene)
 
 **Notas**
 
 ¹ DAMÁSIO, António. *O Erro de Descartes: emoção, razão e o cérebro humano*. São Paulo: Companhia das Letras, 2012.
-
----
-
-<div style="display: flex; justify-content: space-between;">
-  <a href="./sobre-o-autor.html">&lt;&lt; Sobre o autor</a>
-  <span></span>
-</div>

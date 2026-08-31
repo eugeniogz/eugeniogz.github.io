@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 ## Geometria
 
 #### filosofia e matemática
