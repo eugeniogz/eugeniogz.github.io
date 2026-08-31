@@ -1,3 +1,7 @@
+---
+layout: wingene
+---
+
 ## Wingene
 
 #### Filosofia e Prática da Herança Consciente

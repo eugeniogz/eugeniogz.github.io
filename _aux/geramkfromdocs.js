@@ -1308,7 +1308,8 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         
         // --- 2. MONTAGEM DO YAML FRONT MATTER ---
         const cleanTitle = normalizarAspas(nomeSemData).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
-        const chosenLayout = customDocLayout ? customDocLayout : (customLayout ? customLayout : (isPostsFolder ? 'post' : 'default'));
+        const defaultFolderLayout = obterLayoutDaPasta(pastaDestino);
+        const chosenLayout = customDocLayout ? customDocLayout : (customLayout ? customLayout : (isPostsFolder ? 'post' : defaultFolderLayout));
         markdown += `---\n`;
         markdown += `layout: ${chosenLayout}\n`;
         markdown += `title: "${cleanTitle}"\n`;
@@ -1737,9 +1738,8 @@ function criarIndexMarkdown(pastaDestino, titulo, arquivos, subpastas, comentari
     }
     const isRootFolder = pastaDestino.getId() === ROOT_DESTINATION_FOLDER_ID;
     if (isRootFolder) return false;
-    if (pastaDestino.getName() === '_posts') return false;
-
-    let indexContent = '## ' + titulo + '\n\n';
+    const folderLayout = obterLayoutDaPasta(pastaDestino);
+    let indexContent = `---\nlayout: ${folderLayout}\n---\n\n## ${titulo}\n\n`;
     if (comentario!=="") indexContent += "#### " + comentario + "\n\n";
     
     if (arquivos.length > 0) {
@@ -1997,6 +1997,21 @@ function atualizarDataJsonSeNecessario(docInfo, pastaDestino) {
     } catch (e) {
         Logger.log(`[ERRO _DATA] Falha ao atualizar dados em _data para "${docInfo.slug}": ${e.toString()}`);
     }
+}
+
+/**
+ * Retorna o layout customizado associado ao nome da pasta de destino.
+ */
+function obterLayoutDaPasta(pastaDestino) {
+    if (!pastaDestino) return 'default';
+    const name = pastaDestino.getName().toLowerCase();
+    if (name === 'wingene') return 'wingene';
+    if (name === 'reflexoes') return 'reflections';
+    if (name === 'o-cascudo-e-outras-historias') return 'cascudo';
+    if (name === 'poesias-e-aforismos') return 'poetry';
+    if (name === 'ipes-e-tijolos') return 'ipes';
+    if (name.includes('cronicas')) return 'cronicas';
+    return 'default';
 }
 
 /**
@@ -2264,15 +2279,7 @@ function atualizarItemNoObjeto(obj, slug, markdownName, folderName, formattedTim
             }
         }
 
-        // Atualiza tags se fornecidas
-        if (tags && Array.isArray(tags) && tags.length > 0) {
-            const currentTagsStr = JSON.stringify(obj.tags || []);
-            const newTagsStr = JSON.stringify(tags);
-            if (currentTagsStr !== newTagsStr) {
-                obj.tags = tags;
-                anyUpdated = true;
-            }
-        }
+        // Tags generation in JSON removed per user preference (managed by AI/pre-commit)
 
         // Atualiza desc se fornecido
         if (desc && typeof desc === 'string' && desc.trim().length > 0) {
@@ -2352,9 +2359,7 @@ function inserirItemNoObjetoSeNaoExistir(dataObj, docInfo, folderName, formatted
                 filename: `${folderName}/${docInfo.slug}.html`,
                 desc: docInfo.desc || ""
             };
-            if (docInfo.tags && docInfo.tags.length > 0) {
-                newStory.tags = docInfo.tags;
-            }
+
 
             if (targetVolume) {
                 if (!Array.isArray(targetVolume.stories)) {
@@ -2410,9 +2415,7 @@ function inserirItemNoObjetoSeNaoExistir(dataObj, docInfo, folderName, formatted
                 filename: `${docInfo.slug}.html`,
                 desc: docInfo.desc || ""
             };
-            if (docInfo.tags && docInfo.tags.length > 0) {
-                newItem.tags = docInfo.tags;
-            }
+
             if (dataObj.length > 0 && typeof dataObj[0].number === 'number') {
                 newItem.number = dataObj.length + 1;
             }
@@ -2429,9 +2432,7 @@ function inserirItemNoObjetoSeNaoExistir(dataObj, docInfo, folderName, formatted
                 meta: formattedTime,
                 desc: docInfo.desc || ""
             };
-            if (docInfo.tags && docInfo.tags.length > 0) {
-                newObj.tags = docInfo.tags;
-            }
+
             dataObj[docInfo.slug] = newObj;
             return true;
         }

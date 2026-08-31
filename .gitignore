@@ -4,3 +4,4 @@ _site
 __pycache__/
 *.pyc
 .jekyll-metadata
+.env
