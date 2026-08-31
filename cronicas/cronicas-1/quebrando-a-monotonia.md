@@ -4,7 +4,7 @@ title: "Quebrando a monotonia"
 reading_time: 2
 semantic_order: 750
 tags:
-  - Atenção Plena
+  - Atenção
 --- 
 
 

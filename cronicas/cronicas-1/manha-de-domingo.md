@@ -4,7 +4,7 @@ title: "Manhã de domingo"
 reading_time: 2
 semantic_order: 600
 tags:
-  - Atenção Plena
+  - Atenção
 --- 
 
 

@@ -7,9 +7,12 @@ tags:
   - Wingene
   - Evolução
   - Filosofia
-  - Atenção Plena
+  - Atenção
   - Conduta
   - Método VIDA
+  - Valores
+  - Imperfeições
+  - Decisões
 --- 
 
 

@@ -6,7 +6,7 @@ semantic_order: 38
 tags:
   - Autoconhecimento
   - Filosofia
-  - Atenção Plena
+  - Atenção
 --- 
 
 

@@ -5,7 +5,7 @@ reading_time: 1
 semantic_order: 0
 tags:
   - Ciência
-  - Atenção Plena
+  - Atenção
   - Eudaimonia
   - Natureza
 --- 

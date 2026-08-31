@@ -4,7 +4,7 @@ title: "Vida consciente"
 reading_time: 1
 semantic_order: 2
 tags:
-  - Atenção Plena
+  - Atenção
   - Filosofia
 --- 
 

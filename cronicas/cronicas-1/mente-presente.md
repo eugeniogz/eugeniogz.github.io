@@ -4,7 +4,7 @@ title: "Mente presente"
 reading_time: 1
 semantic_order: 170
 tags:
-  - Atenção Plena
+  - Atenção
   - Eudaimonia
 --- 
 

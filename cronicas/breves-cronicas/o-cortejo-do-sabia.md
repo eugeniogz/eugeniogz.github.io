@@ -5,7 +5,7 @@ reading_time: 1
 semantic_order: 10
 tags:
   - Eudaimonia
-  - Atenção Plena
+  - Atenção
 --- 
 
 

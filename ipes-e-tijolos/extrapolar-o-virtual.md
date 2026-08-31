@@ -5,7 +5,7 @@ reading_time: 1
 semantic_order: 35
 tags:
   - Ciência
-  - Atenção Plena
+  - Atenção
   - Natureza
 --- 
 

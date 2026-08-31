@@ -4,7 +4,7 @@ title: "Atenção aos desvios"
 reading_time: 1
 semantic_order: 70
 tags:
-  - Atenção Plena
+  - Atenção
   - Conduta
   - Vida
 --- 

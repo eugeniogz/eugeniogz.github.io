@@ -5,7 +5,7 @@ reading_time: 2
 semantic_order: 50
 tags:
   - Afeto
-  - Atenção Plena
+  - Atenção
   - Eudaimonia
 --- 
 
