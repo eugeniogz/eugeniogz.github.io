@@ -6,10 +6,8 @@ semantic_order: 120
 tags:
   - Wingene
   - Família
-  - Conduta
   - Valores
   - Afeto
-  - Imperfeições
 description: "Na geometria silenciosa do lar, o exemplo cotidiano atua como um giz invisível que desenha a bússola moral da família."
 --- 
 

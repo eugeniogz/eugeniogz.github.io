@@ -8,8 +8,6 @@ tags:
   - Valores
   - Autoconhecimento
   - Vida
-  - Evolução
-  - Infância
 description: "A sutil transição da infância passiva para a descoberta da autonomia e do valor do esforço compartilhado nos pequenos rituais do cotidiano."
 --- 
 

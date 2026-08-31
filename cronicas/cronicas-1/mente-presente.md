@@ -8,7 +8,6 @@ tags:
   - Tempo
   - Família
   - Natureza
-  - Vida
 description: "A ancoragem da alma no ritmo sereno do presente, tecendo instantes de paz contra a cacofonia dispersiva do cotidiano."
 --- 
 

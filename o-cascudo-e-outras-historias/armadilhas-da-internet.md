@@ -3,6 +3,10 @@ title: "Armadilhas da Internet"
 layout: null
 no_index: true
 search: false
+tags:
+  - Atenção
+  - Cotidiano
+  - Contemplação
 ---
 
 <script>window.location.href="./o-clube-dos-pinguins.html"</script>

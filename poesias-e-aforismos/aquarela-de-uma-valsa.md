@@ -8,7 +8,6 @@ tags:
   - Afeto
   - Vida
   - Tempo
-  - Eudaimonia
 description: "A dança da vida em compasso ternário, onde o amor se expressa em movimento suave."
 --- 
 

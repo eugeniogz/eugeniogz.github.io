@@ -8,7 +8,6 @@ tags:
   - Tempo
   - Família
   - Vida
-  - Valores
 description: "A delicada herança de um relógio de bolso revela que o tempo e a própria vida só despertam quando lhes dedicamos a nossa atenção."
 --- 
 

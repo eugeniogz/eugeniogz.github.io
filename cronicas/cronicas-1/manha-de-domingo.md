@@ -8,7 +8,6 @@ tags:
   - Atenção
   - Família
   - Tempo
-  - Vida
 description: "Entre o canto dos pássaros e os afetos de um domingo em família, a escrita consagra o refúgio poético da presença nos pequenos rituais do tempo."
 --- 
 

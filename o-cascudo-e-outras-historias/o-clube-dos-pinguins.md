@@ -7,10 +7,7 @@ tags:
   - Família
   - Atenção
   - Valores
-  - Conduta
   - Decisões
-  - Infância
-  - Tecnologia
 description: "O limite sutil entre a ilusão magnética das telas e o despertar da atenção para a vivência concreta e afetiva das relações familiares."
 --- 
 

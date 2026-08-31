@@ -5,12 +5,9 @@ reading_time: 14
 semantic_order: 60
 tags:
   - Método VIDA
-  - Serena euforia
+  - Euforia
   - Wingene
   - Valores
-  - Eudaimonia
-  - Filosofia
-  - Autoconhecimento
 description: "A aplicação prática da Wingene através do método VIDA: um itinerário ético de valores, imperfeições, decisões e atenção voltado ao florescimento humano."
 --- 
 

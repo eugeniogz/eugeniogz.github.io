@@ -5,11 +5,9 @@ reading_time: 1
 semantic_order: 60
 tags:
   - Sociedade
-  - Ciência
+  - Filosofia
   - Natureza
   - Tempo
-  - Família
-  - Atenção
 description: "A suavidade das nuvens e a calma de pisar suavemente no mundo."
 --- 
 

@@ -8,8 +8,6 @@ tags:
   - Eudaimonia
   - Sociedade
   - Wingene
-  - Filosofia
-  - Método VIDA
 description: "A arquitetura coletiva do Sistema GENE como solo fértil para que o florescimento humano e a harmonia social germinem em sua plenitude."
 --- 
 

@@ -8,7 +8,6 @@ tags:
   - Atenção
   - Vida
   - Afeto
-  - Filosofia
 description: "No compasso de um passeio despretensioso, a efemeridade do tempo medido dissolve-se na elasticidade da vida vivida com atenção e afeto."
 --- 
 

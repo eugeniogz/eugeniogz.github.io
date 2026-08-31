@@ -4,7 +4,7 @@ title: "Manifesto Wingene"
 reading_time: 3
 semantic_order: 1
 tags:
-  - Serena euforia
+  - Euforia
   - Conhecimento
   - Evolução
   - Wingene

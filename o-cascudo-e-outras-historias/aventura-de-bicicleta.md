@@ -8,8 +8,6 @@ tags:
   - Natureza
   - Tempo
   - Vida
-  - Conduta
-  - Infância
 description: "A jornada de duas irmãs sobre duas rodas revela a delicada sabedoria de dosar o próprio fôlego para contemplar os ritmos e segredos da natureza."
 --- 
 

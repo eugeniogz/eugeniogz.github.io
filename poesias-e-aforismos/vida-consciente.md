@@ -8,7 +8,6 @@ tags:
   - Filosofia
   - Autoconhecimento
   - Vida
-  - Eudaimonia
 description: "Um chamado poético para habitar o presente com lucidez, intenção e propriocepção."
 --- 
 

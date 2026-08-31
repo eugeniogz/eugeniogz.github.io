@@ -4,11 +4,10 @@ title: "Singelas letras da imprecisão"
 reading_time: 1
 semantic_order: 20
 tags:
-  - Conduta
+  - Valores
   - Arte
   - Autoconhecimento
   - Imperfeições
-  - Vida
 description: "A beleza imperfeita e sincera dos primeiros rascunhos da vida."
 --- 
 

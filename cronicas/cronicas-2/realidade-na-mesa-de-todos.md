@@ -8,7 +8,6 @@ tags:
   - Valores
   - Filosofia
   - Afeto
-  - Eudaimonia
 description: "A riqueza da conversa franca e da partilha ao redor da mesa."
 --- 
 

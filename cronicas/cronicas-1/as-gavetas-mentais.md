@@ -8,7 +8,6 @@ tags:
   - Autoconhecimento
   - Decisões
   - Vida
-  - Tempo
 description: "Organizar o entulho da mobília mental para abrir espaço aos pequenos rituais e à delicada poesia que floresce no silêncio do cotidiano."
 --- 
 

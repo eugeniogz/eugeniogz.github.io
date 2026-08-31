@@ -4,11 +4,10 @@ title: "O fogo de Prometeu"
 reading_time: 2
 semantic_order: 60
 tags:
-  - Conhecimento
+  - Autoconhecimento
   - Família
   - Sociedade
-  - Mitologia
-  - Ciência
+  - Filosofia
 description: "A chama da inteligência e da técnica como herança milenar e dever de responsabilidade ética."
 --- 
 

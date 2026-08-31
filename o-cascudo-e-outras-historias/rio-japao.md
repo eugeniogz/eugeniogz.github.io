@@ -8,8 +8,6 @@ tags:
   - Família
   - Natureza
   - Valores
-  - Vida
-  - Infância
 description: "O fluir das águas do rio Japão e a sabedoria simples da vida no campo revelam o valor incomensurável da natureza e o calor dos afetos familiares."
 --- 
 

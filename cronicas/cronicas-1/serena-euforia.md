@@ -4,12 +4,10 @@ title: "Serena euforia"
 reading_time: 1
 semantic_order: 10
 tags:
-  - Serena euforia
+  - Euforia
   - Atenção
   - Eudaimonia
   - Autoconhecimento
-  - Filosofia
-  - Vida
 description: "A dança harmônica da consciência atenta que transfigura o cotidiano de concreto na plenitude perene de uma serena euforia."
 --- 
 

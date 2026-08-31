@@ -6,6 +6,9 @@ semantic_order: 0
 navigation_footer: false
 tags:
   - Método VIDA
+  - Eudaimonia
+  - Tempo
+  - Futuro Ancestral
 --- 
 
 

@@ -7,8 +7,7 @@ tags:
   - Família
   - Afeto
   - Wingene
-  - Conhecimento
-  - Evolução
+  - Autoconhecimento
 description: "O reconhecimento lúcido do esforço dos antepassados como solo fértil para as nossas próprias escolhas."
 --- 
 

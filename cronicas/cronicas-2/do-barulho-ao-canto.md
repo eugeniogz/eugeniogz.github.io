@@ -7,8 +7,7 @@ tags:
   - Atenção
   - Sociedade
   - Natureza
-  - Evolução
-  - Decisões
+  - Autoconhecimento
 description: "Transformando o barulho das pressões em música harmoniosa."
 --- 
 

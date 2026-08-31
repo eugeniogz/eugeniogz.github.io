@@ -8,8 +8,6 @@ tags:
   - Autoconhecimento
   - Filosofia
   - Sociedade
-  - Valores
-  - Vida
 description: "Entre o frio das ruas e o calor do refúgio, a mente encontra na memória e na empatia o espaço sereno para meditar sobre a existência e a dor do outro."
 --- 
 

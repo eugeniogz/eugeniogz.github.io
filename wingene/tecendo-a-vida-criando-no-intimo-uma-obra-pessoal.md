@@ -8,8 +8,6 @@ tags:
   - Arte
   - Vida
   - Autoconhecimento
-  - Conhecimento
-  - Família
 description: "A arte de tecer a própria existência como uma obra única, moldada pelo tempo, pelo afeto e pelo amadurecimento da razão diante das ilusões do mundo."
 --- 
 

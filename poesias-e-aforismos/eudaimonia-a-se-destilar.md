@@ -4,12 +4,10 @@ title: "Eudaimonia a se destilar"
 reading_time: 1
 semantic_order: 0.8
 tags:
-  - Serena euforia
+  - Euforia
   - Eudaimonia
   - Filosofia
   - Autoconhecimento
-  - Vida
-  - Atenção
 description: "A alquimia do viver consciente: cultivar a alegria serena através de pequenas atitudes diárias."
 --- 
 

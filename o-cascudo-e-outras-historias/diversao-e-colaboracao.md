@@ -3,6 +3,10 @@ title: "Diversão e colaboração"
 layout: null
 no_index: true
 search: false
+tags:
+  - Tempo
+  - Atenção
+  - Cotidiano
 ---
 
 <script>window.location.href="./um-sanduiche-especial.html"</script>

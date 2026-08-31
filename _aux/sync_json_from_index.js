@@ -130,10 +130,11 @@ Exemplos de descrições reais já publicadas no site (use como referência de t
 • "Vovô Aurélio mostra a Marcos um precioso relógio de família e revela que o que realmente dá corda e faz a vida funcionar é a nossa atenção."
 
 Observações para as tags:
-- Devem ter entre 3 e 5 palavras-chave curtas, em português, sem numeração ou símbolos.
-- Dê PREFERÊNCIA para utilizar as tags já existentes no site (listadas abaixo) sempre que forem adequadas ao conteúdo do artigo.
-- Só crie uma tag nova se nenhuma das tags existentes for adequada para representar os temas centrais do texto.
-${existingTagsStr ? `\nLista de tags já existentes no site para preferência:\n${existingTagsStr}\n` : ''}
+- Devem ter entre 3 e 4 palavras-chave curtas, em português, sem numeração ou símbolos.
+- O catálogo de tags do site busca manter-se coeso e relevante, com um limite alvo de NO MÁXIMO 36 TAGS fundamentais no total.
+- Dê preferência para utilizar as tags já existentes no site (listadas abaixo) sempre que forem adequadas e precisas.
+- É PERMITIDO propor novas tags mais significativas, densas e representativas do tema caso expressem o conteúdo com maior relevância do que as tags genéricas existentes, permitindo a evolução e substituição progressiva por um acervo mais expressivo.
+${existingTagsStr ? `\nLista de tags existentes no site (máximo de 36 no catálogo global):\n${existingTagsStr}\n` : ''}
 
 Título: "${title}"
 Conteúdo do artigo:

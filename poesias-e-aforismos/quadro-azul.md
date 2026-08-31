@@ -8,7 +8,6 @@ tags:
   - Afeto
   - Natureza
   - Atenção
-  - Vida
 description: "Harmonia lírica entre a imensidão azul do cosmos e as ressonâncias da alma."
 --- 
 

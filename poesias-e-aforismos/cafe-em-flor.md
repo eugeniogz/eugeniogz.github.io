@@ -8,8 +8,6 @@ tags:
   - Filosofia
   - Afeto
   - Tempo
-  - Família
-  - Rituais
 description: "Memórias afetivas da terra natal, perfume das floradas e raízes ancestrais."
 --- 
 

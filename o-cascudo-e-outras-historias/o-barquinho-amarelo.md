@@ -8,9 +8,6 @@ tags:
   - Atenção
   - Família
   - Imperfeições
-  - Vida
-  - Infância
-  - Conduta
 description: "Na singela paciência do barquinho de papel, a infância descobre que o aprendizado e o afeto familiar transformam a frustração em travessia."
 --- 
 

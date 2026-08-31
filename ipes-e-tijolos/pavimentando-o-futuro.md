@@ -5,11 +5,9 @@ reading_time: 1
 semantic_order: 70
 tags:
   - Família
-  - Conduta
+  - Valores
   - Sociedade
-  - Evolução
-  - Ciência
-  - Cidadania
+  - Autoconhecimento
 description: "O assentamento paciente de cada tijolo moral que pavimentará o caminho para as próximas gerações."
 --- 
 

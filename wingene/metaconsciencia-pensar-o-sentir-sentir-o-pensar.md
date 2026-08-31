@@ -5,14 +5,9 @@ reading_time: 4
 semantic_order: 90
 tags:
   - Autoconhecimento
-  - Serena euforia
+  - Euforia
   - Eudaimonia
   - Atenção
-  - Filosofia
-  - Afeto
-  - Wingene
-  - Metaconsciência
-  - Propriocepção
 description: "A fusão entre o pensar e o sentir na conquista da metaconsciência, estado de pura presença onde floresce a serena euforia da eudaimonia."
 --- 
 

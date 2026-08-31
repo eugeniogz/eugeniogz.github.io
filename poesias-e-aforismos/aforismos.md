@@ -4,14 +4,10 @@ title: "Aforismos"
 reading_time: 1
 semantic_order: 0
 tags:
-  - Ciência
-  - Conhecimento
+  - Filosofia
+  - Autoconhecimento
   - Consciência
   - Amor
-  - Serena euforia
-  - Eudaimonia
-  - Natureza
-  - Existência
 description: "Sentenças breves e lapidadas sobre ciência, consciência, amor, virtudes, eudaimonia e existência."
 --- 
 
