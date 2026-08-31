@@ -5,7 +5,6 @@ date: 2026-05-09 12:00:00
 pillar: "Atenção"
 tags:
   - Atenção
-  - Felicidade
   - Vida
   - Propriocepção
 ---

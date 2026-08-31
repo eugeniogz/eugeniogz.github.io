@@ -6,7 +6,7 @@ semantic_order: 1
 tags:
   - Eudaimonia
   - Vida
-  - Conduta
+  - Valores
 description: "A construção artesanal da felicidade através da presença, do afeto e do cuidado mútuo."
 --- 
 

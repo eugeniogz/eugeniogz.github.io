@@ -8,9 +8,7 @@
       "Afeto",
       "Família",
       "Natureza",
-      "Valores",
-      "Vida",
-      "Infância"
+      "Valores"
     ],
     "category": "natureza",
     "cover": "figuras/rio-japao/vovo-e-os-meninos.png",
@@ -33,9 +31,7 @@
       "Família",
       "Natureza",
       "Valores",
-      "Afeto",
-      "Conduta",
-      "Infância"
+      "Afeto"
     ],
     "category": "natureza",
     "cover": "figuras/o-cascudo/lago-no-rio.png",
@@ -58,8 +54,7 @@
       "Atenção",
       "Tempo",
       "Família",
-      "Vida",
-      "Valores"
+      "Vida"
     ],
     "category": "valores",
     "cover": "figuras/marcando-o-proprio-tempo/mostrando-na-caixa.png",
@@ -83,10 +78,7 @@
       "Afeto",
       "Atenção",
       "Família",
-      "Imperfeições",
-      "Vida",
-      "Infância",
-      "Conduta"
+      "Imperfeições"
     ],
     "category": "aprendizados",
     "cover": "figuras/o-barquinho-amarelo/iniciando-dobradura.png",
@@ -109,9 +101,7 @@
       "Família",
       "Valores",
       "Autoconhecimento",
-      "Vida",
-      "Evolução",
-      "Infância"
+      "Vida"
     ],
     "category": "familia",
     "cover": "figuras/um-sanduiche-especial/preparo-do-sanduiche.png",
@@ -134,9 +124,7 @@
       "Família",
       "Natureza",
       "Tempo",
-      "Vida",
-      "Conduta",
-      "Infância"
+      "Vida"
     ],
     "category": "familia",
     "cover": "figuras/as-bicicletas-no-parque/inicio-da-aventura.png",
@@ -159,10 +147,7 @@
       "Família",
       "Atenção",
       "Valores",
-      "Conduta",
-      "Decisões",
-      "Infância",
-      "Tecnologia"
+      "Decisões"
     ],
     "category": "tecnologia",
     "cover": "figuras/o-clube-dos-pinguins/jogando-xadrez.png",

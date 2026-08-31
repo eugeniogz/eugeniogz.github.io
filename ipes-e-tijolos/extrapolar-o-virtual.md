@@ -4,10 +4,9 @@ title: "Extrapolar o virtual"
 reading_time: 1
 semantic_order: 35
 tags:
-  - Ciência
+  - Filosofia
   - Atenção
   - Natureza
-  - Tecnologia
 description: "Superar a ilusão das telas e do imediatismo virtual para vivenciar o concreto da existência."
 --- 
 

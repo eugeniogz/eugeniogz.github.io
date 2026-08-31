@@ -5,9 +5,7 @@ reading_time: 1
 semantic_order: 30
 tags:
   - Filosofia
-  - Conhecimento
-  - Evolução
-  - Mitologia
+  - Autoconhecimento
 description: "O templo íntimo onde ideias, referências e mestres imaginários dialogam e refinam o caráter."
 --- 
 

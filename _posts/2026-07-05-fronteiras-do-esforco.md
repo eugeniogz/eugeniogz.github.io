@@ -5,9 +5,8 @@ date: 2026-07-05 20:20:00
 pillar: "Valores"
 tags:
   - Valores
-  - Empatia
-  - Humanidade
-  - Reflexão
+  - Afeto
+  - Sociedade
 ---
 
 O sentimento de nacionalidade é inerente à geografia. Ele é saudável, mas não deve se sobrepor ao pertencimento à humanidade, que ultrapassa fronteiras e traz empatia a qualquer ser humano.

@@ -9,7 +9,6 @@
       "Filosofia",
       "Natureza",
       "Autoconhecimento",
-      "Ciência",
       "Vida"
     ],
     "filename": "espirito-material.html",
@@ -23,9 +22,7 @@
     "category": "mente",
     "tags": [
       "Filosofia",
-      "Conhecimento",
-      "Evolução",
-      "Mitologia"
+      "Autoconhecimento"
     ],
     "filename": "panteao-mental.html",
     "desc": "O templo íntimo onde ideias, referências e mestres imaginários dialogam e refinam o caráter."
@@ -37,10 +34,9 @@
     "time": "1 min",
     "category": "sociedade",
     "tags": [
-      "Ciência",
+      "Filosofia",
       "Atenção",
-      "Natureza",
-      "Tecnologia"
+      "Natureza"
     ],
     "filename": "extrapolar-o-virtual.html",
     "desc": "Superar a ilusão das telas e do imediatismo virtual para vivenciar o concreto da existência."
@@ -55,8 +51,7 @@
       "Natureza",
       "Filosofia",
       "Sociedade",
-      "Valores",
-      "Vida"
+      "Valores"
     ],
     "filename": "ipes-e-tijolos.html",
     "desc": "A coexistência poética entre os muros rígidos do concreto urbano e a delicada explosão dos ipês floridos."
@@ -70,8 +65,7 @@
     "tags": [
       "Autoconhecimento",
       "Filosofia",
-      "Atenção",
-      "Mitologia"
+      "Atenção"
     ],
     "filename": "odisseia-interior.html",
     "desc": "A viagem mais profunda que o ser humano pode empreender: o desbravamento dos mares de si mesmo."
@@ -86,8 +80,7 @@
       "Filosofia",
       "Autoconhecimento",
       "Sociedade",
-      "Conduta",
-      "Decisões"
+      "Valores"
     ],
     "filename": "servidao-e-liberdade.html",
     "desc": "A linha tênue entre as amarras do automatismo inconsciente e a conquista ativa da verdadeira liberdade."
@@ -101,9 +94,7 @@
     "tags": [
       "Filosofia",
       "Sociedade",
-      "Natureza",
-      "Justiça Social",
-      "Cidadania"
+      "Natureza"
     ],
     "filename": "baleias-e-marujos.html",
     "desc": "Reflexão sobre os gigantes misteriosos da existência e o papel solidário de cada marujo no mesmo barco."
@@ -115,11 +106,10 @@
     "time": "2 min",
     "category": "liberdade",
     "tags": [
-      "Conhecimento",
+      "Autoconhecimento",
       "Família",
       "Sociedade",
-      "Mitologia",
-      "Ciência"
+      "Filosofia"
     ],
     "filename": "o-fogo-de-prometeu.html",
     "desc": "A chama da inteligência e da técnica como herança milenar e dever de responsabilidade ética."
@@ -132,11 +122,9 @@
     "category": "futuro",
     "tags": [
       "Família",
-      "Conduta",
+      "Valores",
       "Sociedade",
-      "Evolução",
-      "Ciência",
-      "Cidadania"
+      "Autoconhecimento"
     ],
     "filename": "pavimentando-o-futuro.html",
     "desc": "O assentamento paciente de cada tijolo moral que pavimentará o caminho para as próximas gerações."
@@ -151,7 +139,6 @@
       "Eudaimonia",
       "Sociedade",
       "Filosofia",
-      "Empatia",
       "Afeto"
     ],
     "filename": "eudaimonia-social.html",
@@ -167,8 +154,7 @@
       "Família",
       "Afeto",
       "Wingene",
-      "Conhecimento",
-      "Evolução"
+      "Autoconhecimento"
     ],
     "filename": "honrando-a-heranca-ancestral.html",
     "desc": "O reconhecimento lúcido do esforço dos antepassados como solo fértil para as nossas próprias escolhas."

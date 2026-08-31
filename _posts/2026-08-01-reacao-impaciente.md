@@ -7,8 +7,8 @@ pillar: "Imperfeições"
 tags:
   - Imperfeições
   - Atenção
-  - Escuta
-  - Autocontrole
+  - Autoconhecimento
+  - Pausa
 date: 2026-08-01 12:00:00
 --- 
 

@@ -5,7 +5,7 @@ reading_time: 1
 semantic_order: 40
 tags:
   - Atenção
-  - Serena euforia
+  - Euforia
   - Eudaimonia
   - Método VIDA
 description: "A presença que guia ações conscientes e sustenta a eudaimonia"

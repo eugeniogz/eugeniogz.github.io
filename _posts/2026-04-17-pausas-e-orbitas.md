@@ -7,7 +7,7 @@ tags:
   - Atenção
   - Pausa
   - Natureza
-  - Trabalho
+  - Ação
 ---
 
 Nas pausas do trabalho, observar o ambiente, os círculos suaves dos pássaros distantes. Cada atenta observação renova a mente, que se alegra transcendendo seus sentidos.

@@ -7,8 +7,7 @@ pillar: "Atenção"
 tags:
   - Atenção
   - Presença
-  - Acolhimento
-  - Comunicação
+  - Afeto
 date: 2026-07-28 12:00:00
 --- 
 

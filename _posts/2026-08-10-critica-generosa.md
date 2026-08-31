@@ -6,9 +6,8 @@ semantic_order: 0
 pillar: "Valores"
 tags:
   - Valores
-  - Respeito
-  - Comunicação
-  - Crescimento
+  - Autoconhecimento
+  - Atenção
 date: 2026-08-10 12:00:00
 --- 
 

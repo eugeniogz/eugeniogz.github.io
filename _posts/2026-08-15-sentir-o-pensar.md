@@ -8,7 +8,7 @@ tags:
   - Atenção
   - Café
   - Metaconsciência
-  - Reflexão
+  - Natureza
 date: 2026-08-15 12:00:00
 --- 
 

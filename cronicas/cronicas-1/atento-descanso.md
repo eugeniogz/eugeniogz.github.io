@@ -5,7 +5,7 @@ reading_time: 1
 semantic_order: 900
 tags:
   - Atenção
-  - Conduta
+  - Valores
 description: "O repouso consciente como fonte essencial de renovação do espírito."
 --- 
 

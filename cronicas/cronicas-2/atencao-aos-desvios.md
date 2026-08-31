@@ -5,7 +5,7 @@ reading_time: 1
 semantic_order: 70
 tags:
   - Atenção
-  - Conduta
+  - Valores
   - Vida
 description: "Reconhecer as distrações sem aflição para reajustar o curso."
 --- 

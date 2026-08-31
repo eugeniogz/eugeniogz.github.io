@@ -7,7 +7,7 @@ pillar: Valores
 tags:
   - Valores
   - Wingene
-  - Cosmos
+  - Existência
   - Filosofia
 ---
 
