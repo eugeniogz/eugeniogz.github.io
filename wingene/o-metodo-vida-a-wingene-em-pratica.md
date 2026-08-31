@@ -8,6 +8,9 @@ tags:
   - Euforia
   - Wingene
   - Valores
+  - Decisões
+  - Atenção
+  - Imperfeições
 description: "A aplicação prática da Wingene através do método VIDA: um itinerário ético de valores, imperfeições, decisões e atenção voltado ao florescimento humano."
 --- 
 
