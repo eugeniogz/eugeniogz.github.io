@@ -9,6 +9,7 @@ tags:
   - Sociedade
   - Conduta
   - Decisões
+description: "A linha tênue entre as amarras do automatismo inconsciente e a conquista ativa da verdadeira liberdade."
 --- 
 
 

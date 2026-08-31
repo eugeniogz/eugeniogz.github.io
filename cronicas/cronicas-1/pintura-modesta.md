@@ -6,6 +6,7 @@ semantic_order: 800
 tags:
   - Atenção
   - Eudaimonia
+description: "A contemplação das pinceladas despretensiosas da vida real."
 --- 
 
 

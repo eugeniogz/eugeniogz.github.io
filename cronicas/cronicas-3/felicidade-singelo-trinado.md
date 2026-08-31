@@ -5,6 +5,7 @@ reading_time: 1
 semantic_order: 1
 tags:
   - Eudaimonia
+description: "A alegria pura despertada pelo canto livre de um pássaro."
 --- 
 
 

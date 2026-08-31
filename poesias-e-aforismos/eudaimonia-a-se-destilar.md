@@ -9,6 +9,7 @@ tags:
   - Autoconhecimento
   - Vida
   - Atenção
+description: "A alquimia do viver consciente: cultivar a alegria serena através de pequenas atitudes diárias."
 --- 
 
 

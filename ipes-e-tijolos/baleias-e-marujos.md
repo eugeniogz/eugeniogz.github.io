@@ -9,6 +9,7 @@ tags:
   - Natureza
   - Justiça Social
   - Cidadania
+description: "Reflexão sobre os gigantes misteriosos da existência e o papel solidário de cada marujo no mesmo barco."
 --- 
 
 

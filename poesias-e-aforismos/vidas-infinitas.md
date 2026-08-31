@@ -7,6 +7,7 @@ tags:
   - Natureza
   - Tempo
   - Filosofia
+description: "A dilatação do tempo pela intensidade da presença e do sentimento consciente."
 --- 
 
 

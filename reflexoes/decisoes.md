@@ -5,6 +5,7 @@ reading_time: 1
 semantic_order: 30
 tags:
   - Decisões
+description: "A escolha consciente de atitudes."
 --- 
 
 

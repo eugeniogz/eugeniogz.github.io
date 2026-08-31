@@ -3,7 +3,7 @@ layout: default
 title: "Bergamota"
 reading_time: 1
 semantic_order: 30
-desc: "Na noite de uma metrópole, a bergamota e o futebol."
+description: "Na noite de uma metrópole, a bergamota e o futebol."
 tags:
   - Atenção
   - Sociedade

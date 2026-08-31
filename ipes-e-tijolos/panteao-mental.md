@@ -8,6 +8,7 @@ tags:
   - Conhecimento
   - Evolução
   - Mitologia
+description: "O templo íntimo onde ideias, referências e mestres imaginários dialogam e refinam o caráter."
 --- 
 
 

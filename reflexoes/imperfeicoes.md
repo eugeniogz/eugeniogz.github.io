@@ -5,6 +5,7 @@ reading_time: 1
 semantic_order: 20
 tags:
   - Imperfeições
+description: "O reconhecimento sem culpa dos desvios."
 --- 
 
 

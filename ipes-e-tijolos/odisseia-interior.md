@@ -8,6 +8,7 @@ tags:
   - Filosofia
   - Atenção
   - Mitologia
+description: "A viagem mais profunda que o ser humano pode empreender: o desbravamento dos mares de si mesmo."
 --- 
 
 

@@ -7,6 +7,7 @@ tags:
   - Atenção
   - Conduta
   - Vida
+description: "Reconhecer as distrações sem aflição para reajustar o curso."
 --- 
 
 

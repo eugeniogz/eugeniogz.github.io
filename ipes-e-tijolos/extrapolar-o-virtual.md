@@ -8,6 +8,7 @@ tags:
   - Atenção
   - Natureza
   - Tecnologia
+description: "Superar a ilusão das telas e do imediatismo virtual para vivenciar o concreto da existência."
 --- 
 
 

@@ -5,6 +5,7 @@ reading_time: 1
 semantic_order: 5
 tags:
   - Wingene
+description: "A força das lembranças que atravessam gerações com ternura."
 --- 
 
 

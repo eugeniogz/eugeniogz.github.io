@@ -9,6 +9,7 @@ tags:
   - Wingene
   - Conhecimento
   - Evolução
+description: "O reconhecimento lúcido do esforço dos antepassados como solo fértil para as nossas próprias escolhas."
 --- 
 
 

@@ -7,6 +7,7 @@ tags:
   - Afeto
   - Atenção
   - Eudaimonia
+description: "O afeto que liberta, apoia o florescimento e constrói laços sólidos."
 --- 
 
 

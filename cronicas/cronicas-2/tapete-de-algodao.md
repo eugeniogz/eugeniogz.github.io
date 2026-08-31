@@ -10,6 +10,7 @@ tags:
   - Tempo
   - Família
   - Atenção
+description: "A suavidade das nuvens e a calma de pisar suavemente no mundo."
 --- 
 
 

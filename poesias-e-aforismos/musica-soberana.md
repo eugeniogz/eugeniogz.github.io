@@ -9,6 +9,7 @@ tags:
   - Natureza
   - Atenção
   - Autoconhecimento
+description: "O poder transcendental da melodia como espelho das sinapses e da harmonia interior."
 --- 
 
 

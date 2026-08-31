@@ -9,6 +9,7 @@ tags:
   - Filosofia
   - Empatia
   - Afeto
+description: "O florescimento humano que se expande além do indivíduo, alcançando a harmonia da comunidade."
 --- 
 
 

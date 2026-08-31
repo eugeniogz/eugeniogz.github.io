@@ -9,6 +9,7 @@ tags:
   - Autoconhecimento
   - Imperfeições
   - Vida
+description: "A beleza imperfeita e sincera dos primeiros rascunhos da vida."
 --- 
 
 

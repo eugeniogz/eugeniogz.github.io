@@ -7,6 +7,7 @@ tags:
   - Eudaimonia
   - Vida
   - Conduta
+description: "A construção artesanal da felicidade através da presença, do afeto e do cuidado mútuo."
 --- 
 
 

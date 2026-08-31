@@ -6,6 +6,7 @@ semantic_order: 10
 tags:
   - Wingene
   - Conhecimento
+description: "O verdadeiro patrimônio: os valores e o exemplo transmitidos."
 --- 
 
 

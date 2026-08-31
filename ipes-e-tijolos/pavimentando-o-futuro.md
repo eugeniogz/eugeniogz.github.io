@@ -10,6 +10,7 @@ tags:
   - Evolução
   - Ciência
   - Cidadania
+description: "O assentamento paciente de cada tijolo moral que pavimentará o caminho para as próximas gerações."
 --- 
 
 

@@ -7,6 +7,7 @@ tags:
   - Atenção
   - Natureza
   - Vida
+description: "O ser humano como espelho pelo qual o próprio universo se contempla e sente."
 --- 
 
 

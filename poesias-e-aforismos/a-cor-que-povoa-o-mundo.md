@@ -7,6 +7,7 @@ tags:
   - Arte
   - Afeto
   - Natureza
+description: "Versos sobre a percepção estética, a sinestesia das cores e a beleza que vibra na natureza."
 --- 
 
 

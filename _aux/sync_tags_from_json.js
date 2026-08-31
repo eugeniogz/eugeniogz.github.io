@@ -20,13 +20,24 @@ function normalizarTag(tag) {
     return tag.trim();
 }
 
-function updateTagsInFrontmatter(content, tags) {
+function updateTagsAndDescInFrontmatter(content, tags, desc) {
     const frontmatterMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
     if (!frontmatterMatch) return content;
 
     const originalFrontmatter = frontmatterMatch[0];
     let yamlLines = frontmatterMatch[1].split(/\r?\n/);
     
+    if (desc && typeof desc === 'string' && desc.trim()) {
+        const cleanDesc = desc.trim();
+        const descIdx = yamlLines.findIndex(l => /^desc(ription)?\s*:/i.test(l));
+        const formattedDesc = `description: "${cleanDesc.replace(/"/g, '\\"')}"`;
+        if (descIdx !== -1) {
+            yamlLines[descIdx] = formattedDesc;
+        } else {
+            yamlLines.push(formattedDesc);
+        }
+    }
+
     let tagsStartIdx = -1;
     let tagsEndIdx = -1;
 
@@ -181,7 +192,7 @@ function main() {
             }
 
             const content = fs.readFileSync(mdFile, 'utf8');
-            const newContent = updateTagsInFrontmatter(content, tags);
+            const newContent = updateTagsAndDescInFrontmatter(content, tags, item.desc);
 
             if (content !== newContent) {
                 fs.writeFileSync(mdFile, newContent, 'utf8');

@@ -8,6 +8,7 @@ tags:
   - Método VIDA
   - Autoconhecimento
   - Eudaimonia
+description: "A presença atenta que conecta o ser, o outro e o mundo em serena euforia."
 --- 
 
 

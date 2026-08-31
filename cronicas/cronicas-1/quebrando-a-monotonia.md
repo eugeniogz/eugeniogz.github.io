@@ -5,6 +5,7 @@ reading_time: 2
 semantic_order: 750
 tags:
   - Atenção
+description: "Aprender a enxergar novidade onde o hábito só via rotina."
 --- 
 
 

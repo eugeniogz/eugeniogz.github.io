@@ -6,6 +6,7 @@ semantic_order: 900
 tags:
   - Atenção
   - Conduta
+description: "O repouso consciente como fonte essencial de renovação do espírito."
 --- 
 
 

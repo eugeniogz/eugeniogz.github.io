@@ -9,6 +9,7 @@ tags:
   - Sociedade
   - Mitologia
   - Ciência
+description: "A chama da inteligência e da técnica como herança milenar e dever de responsabilidade ética."
 --- 
 
 

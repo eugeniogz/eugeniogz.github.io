@@ -5,6 +5,7 @@ reading_time: 1
 semantic_order: 3
 tags:
   - Eudaimonia
+description: "A rica ecologia de ideias e sentimentos que habitam nossa mente."
 --- 
 
 

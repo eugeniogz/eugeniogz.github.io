@@ -5,6 +5,7 @@ reading_time: 1
 semantic_order: 10
 tags:
   - Valores
+description: "A bússola moral em constante revisão."
 --- 
 
 

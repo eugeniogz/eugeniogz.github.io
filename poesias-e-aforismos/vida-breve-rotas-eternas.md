@@ -9,6 +9,7 @@ tags:
   - Tempo
   - Valores
   - Evolução
+description: "Poema sobre a brevidade da travessia humana e as rotas diárias que tecem a alegria e o futuro ancestral."
 --- 
 
 

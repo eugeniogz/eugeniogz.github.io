@@ -7,6 +7,7 @@ tags:
   - Filosofia
   - Wingene
   - Método VIDA
+description: "A confiança lúcida no futuro aliada ao cuidado vigilante no presente."
 --- 
 
 

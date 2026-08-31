@@ -9,6 +9,7 @@ tags:
   - Sociedade
   - Valores
   - Vida
+description: "A coexistência poética entre os muros rígidos do concreto urbano e a delicada explosão dos ipês floridos."
 --- 
 
 

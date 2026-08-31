@@ -9,6 +9,7 @@ tags:
   - Eudaimonia
   - Natureza
   - Aforismos
+description: "Sentenças breves e lapidadas sobre ciência, consciência, amor, virtudes, eudaimonia e existência."
 --- 
 
 

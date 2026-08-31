@@ -3,7 +3,7 @@ layout: default
 title: "Asa-branca"
 reading_time: 1
 semantic_order: 20
-desc: "No inverno, o lamento da asa-branca se transforma em canto."
+description: "No inverno, o lamento da asa-branca se transforma em canto."
 tags:
   - Afeto
   - Atenção

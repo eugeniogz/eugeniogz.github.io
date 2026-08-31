@@ -9,6 +9,7 @@ tags:
   - Autoconhecimento
   - Ciência
   - Vida
+description: "O espírito não metafísico: a fauna consciente que habita o ecossistema mental e ampara os momentos difíceis."
 --- 
 
 
