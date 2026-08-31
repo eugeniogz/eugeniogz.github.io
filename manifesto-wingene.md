@@ -8,15 +8,10 @@ tags:
   - Conhecimento
   - Evolução
   - Wingene
-  - Cosmogonia
   - Eudaimonia
   - Herança
   - Vida
-  - Natureza
-  - Felicidade
-  - Atenção plena
-  - Infinito
-  - Espírito
+  - Atenção
 --- 
 
 ## Manifesto Wingene
