@@ -8,6 +8,7 @@ tags:
   - Filosofia
   - Afeto
   - Tempo
+  - Café
 description: "Memórias afetivas da terra natal, perfume das floradas e raízes ancestrais."
 --- 
 
