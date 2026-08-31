@@ -4,6 +4,11 @@ title: "Crítica generosa"
 reading_time: 1
 semantic_order: 0
 pillar: "Valores"
+tags:
+  - Valores
+  - Respeito
+  - Comunicação
+  - Crescimento
 date: 2026-08-10 12:00:00
 --- 
 

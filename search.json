@@ -24,6 +24,7 @@ permalink: /search.json
       "title"        : {{ item.title | jsonify }},
       "url"          : {{ item.url | relative_url | jsonify }},
       "content"      : {{ raw_body | strip_html | strip_newlines | jsonify }},
+      "tags"         : {{ item.tags | join: ", " | jsonify }},
       "reading_time" : "{{ item.reading_time | default: 1 }}",
       {% if item.date %}
       "type"         : "post"

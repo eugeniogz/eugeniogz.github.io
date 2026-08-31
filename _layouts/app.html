@@ -4,7 +4,7 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" media="screen" type="text/css">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" media="screen" type="text/css">
     <link rel="stylesheet" href="{{ '/assets/css/print.css' | relative_url }}" media="print" type="text/css">
     <link rel="stylesheet" href="{{ '/css/override.css' | relative_url }}" media="screen" type="text/css">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
@@ -30,9 +30,9 @@
           {% endunless %}
           <div style="display: flex; flex-direction: column; justify-content: center;">
             <a href="{{ '/' | relative_url }}">
-              <h1 style="margin: 0; line-height: 1.2;">{{ site.title | default: site.github.repository_name }}</h1>
+              <h1 style="margin: 0; line-height: 1.2;">{{ site.title }}</h1>
             </a>
-            <h2 style="margin: 0; line-height: 1.2;">{{ site.description | default: site.github.project_tagline }}</h2>
+            <h2 style="margin: 0; line-height: 1.2;">{{ site.description }}</h2>
           </div>
         </div>
       </div>

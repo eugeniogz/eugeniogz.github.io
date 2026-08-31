@@ -4,6 +4,11 @@ title: "Reação impaciente"
 reading_time: 1
 semantic_order: 0
 pillar: "Imperfeições"
+tags:
+  - Imperfeições
+  - Atenção
+  - Escuta
+  - Autocontrole
 date: 2026-08-01 12:00:00
 --- 
 

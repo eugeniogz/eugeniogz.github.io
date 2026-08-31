@@ -3,6 +3,11 @@ layout: post
 title: "Espera solitária"
 date: 2026-06-29 12:00:00
 pillar: "Decisões"
+tags:
+  - Decisões
+  - Euforia
+  - Família
+  - Cotidiano
 ---
 
 Em um passeio, a mente bailava nas esferas superiores, sentindo o prazer de voar além dos pensamentos e dos sentidos — a [serena euforia](/cronicas/cronicas-1/serena-euforia.html). O tempo passava suave e a alegria era intensa.

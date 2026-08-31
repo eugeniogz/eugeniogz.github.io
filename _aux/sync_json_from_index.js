@@ -11,7 +11,8 @@ const FOLDER_MAP = {
     'cronicas': 'cronicas',
     'ipes': 'ipes-e-tijolos',
     'poesias': 'poesias-e-aforismos',
-    'reflexoes': 'reflexoes'
+    'reflexoes': 'reflexoes',
+    'posts': '_posts'
 };
 
 function loadEnv() {
@@ -641,8 +642,56 @@ async function processVolumeSection(jsonBaseName, folderName, existingTags = [])
     return false;
 }
 
+async function processPostsFolder(existingTags = [], force = false) {
+    const postsFolder = path.join(ROOT_DIR, '_posts');
+    if (!fs.existsSync(postsFolder)) return false;
+
+    const forceTags = force || process.argv.includes('--force') || process.argv.includes('--force-posts-tags');
+    let updatedTotal = 0;
+    const files = fs.readdirSync(postsFolder).sort();
+
+    for (const file of files) {
+        if (!file.endsWith('.md') || file === 'index.md') continue;
+
+        const mdPath = path.join(postsFolder, file);
+        const mdContent = fs.readFileSync(mdPath, 'utf8');
+        const { meta, body } = parseYamlFrontmatter(mdContent);
+
+        const title = meta.title || file.replace(/\.md$/, '').replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/-/g, ' ');
+        const needsDesc = !meta.description && !meta.desc;
+        const needsTags = forceTags || !meta.tags || !Array.isArray(meta.tags) || meta.tags.length === 0;
+
+        if ((needsDesc || needsTags) && body) {
+            if (process.env.GEMINI_API_KEY) {
+                console.log(`  🤖 [IA] Gerando metadados${forceTags ? ' (FORÇADO)' : ''} para post "_posts/${file}"...`);
+                const aiResult = await generateMetadataWithAI(title, body, existingTags);
+                if (aiResult) {
+                    let aiDesc = needsDesc ? aiResult.desc : null;
+                    let aiTags = needsTags ? aiResult.tags : null;
+
+                    if (aiTags && aiTags.length > 0) {
+                        for (const t of aiTags) {
+                            if (t && !existingTags.includes(t)) existingTags.push(t);
+                        }
+                    }
+
+                    if (aiDesc || (aiTags && aiTags.length > 0)) {
+                        updateMdFrontmatter(mdPath, aiDesc, aiTags);
+                        console.log(`     ✨ IA gerou para post: desc="${aiDesc || ''}", tags=[${(aiTags || []).join(', ')}]`);
+                        updatedTotal++;
+                    }
+                }
+            } else {
+                console.log(`  ⚠️ Metadados faltantes no post "_posts/${file}" (desc/tags), mas GEMINI_API_KEY não está configurada.`);
+            }
+        }
+    }
+
+    return updatedTotal > 0;
+}
+
 async function main() {
-    console.log('🔄 Atualizando arquivos _data/*.json a partir dos index.md e frontmatter .md...');
+    console.log('🔄 Atualizando arquivos _data/*.json e _posts/ a partir dos index.md e frontmatter .md...');
 
     const existingTags = getAllExistingTags();
     console.log(`📌 Encontradas ${existingTags.length} tag(s) existente(s) no site para referência.`);
@@ -650,7 +699,9 @@ async function main() {
     let updatedTotal = 0;
 
     for (const [jsonBase, folderName] of Object.entries(FOLDER_MAP)) {
-        if (jsonBase === 'cronicas') {
+        if (jsonBase === 'posts') {
+            if (await processPostsFolder(existingTags)) updatedTotal++;
+        } else if (jsonBase === 'cronicas') {
             if (await processVolumeSection(jsonBase, folderName, existingTags)) updatedTotal++;
         } else {
             if (await processFlatSection(jsonBase, folderName, existingTags)) updatedTotal++;

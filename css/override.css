@@ -1160,6 +1160,56 @@ textarea::placeholder {
   margin-bottom: 0;
 }
 
+.microblog-tags, .post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1.2rem;
+  align-items: center;
+}
+
+.post-tags-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-right: 0.2rem;
+}
+
+.microblog-tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-muted) !important;
+  background: var(--bg-hover, rgba(0, 0, 0, 0.04));
+  border: 1px solid var(--border-light, rgba(0, 0, 0, 0.08));
+  padding: 3px 9px;
+  border-radius: 12px;
+  text-decoration: none !important;
+  transition: all 0.18s ease;
+  display: inline-block;
+  line-height: 1.3;
+}
+
+.microblog-tag:hover {
+  color: var(--color-primary, #0e7d0f) !important;
+  background: var(--color-decisions-light, rgba(14, 125, 15, 0.1));
+  border-color: var(--color-primary, #0e7d0f);
+  transform: translateY(-1px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .microblog-tag {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+  .microblog-tag:hover {
+    color: #52c755 !important;
+    background: rgba(82, 199, 85, 0.15);
+    border-color: rgba(82, 199, 85, 0.4);
+  }
+}
+
 /* Remove prefixos de barras (/ // ///) dos cabeçalhos do tema Architect */
 #main-content h1:before,
 #main-content h2:before,

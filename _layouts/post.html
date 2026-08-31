@@ -12,4 +12,13 @@ layout: default
   <div class="post-content">
     {{ content }}
   </div>
+
+  {% if page.tags %}
+    <div class="post-tags">
+      <span class="post-tags-label">Tags:</span>
+      {% for tag in page.tags %}
+        <a href="{{ '/Search.html' | relative_url }}?q={{ tag | url_encode }}" class="microblog-tag">#{{ tag }}</a>
+      {% endfor %}
+    </div>
+  {% endif %}
 </article>

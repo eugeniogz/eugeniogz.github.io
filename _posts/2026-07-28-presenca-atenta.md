@@ -4,6 +4,11 @@ title: "Presença atenta"
 reading_time: 1
 semantic_order: 0
 pillar: "Atenção"
+tags:
+  - Atenção
+  - Presença
+  - Acolhimento
+  - Comunicação
 date: 2026-07-28 12:00:00
 --- 
 

@@ -4,6 +4,11 @@ title: "Maritacas"
 reading_time: 1
 semantic_order: 0
 pillar: "Atenção"
+tags:
+  - Atenção
+  - Natureza
+  - Euforia
+  - Cotidiano
 date: 2026-08-14 12:00:00
 --- 
 

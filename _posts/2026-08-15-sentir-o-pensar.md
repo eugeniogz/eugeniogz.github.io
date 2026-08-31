@@ -4,6 +4,11 @@ title: "Sentir o pensar"
 reading_time: 1
 semantic_order: 0
 pillar: "Atenção"
+tags:
+  - Atenção
+  - Café
+  - Metaconsciência
+  - Reflexão
 date: 2026-08-15 12:00:00
 --- 
 

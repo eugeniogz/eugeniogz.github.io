@@ -30,6 +30,13 @@ description: Wingene é um projeto filosófico sobre herança, consciência, cri
       <div class="microblog-body">
         {{ post.content }}
       </div>
+      {% if post.tags %}
+        <div class="microblog-tags">
+          {% for tag in post.tags %}
+            <a href="{{ '/Search.html' | relative_url }}?q={{ tag | url_encode }}" class="microblog-tag">#{{ tag }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
     </div>
   {% endfor %}
 </div>
