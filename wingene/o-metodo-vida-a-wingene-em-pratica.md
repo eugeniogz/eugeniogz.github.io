@@ -5,6 +5,7 @@ reading_time: 14
 semantic_order: 60
 tags:
   - Método VIDA
+  - Serena euforia
   - Wingene
   - Valores
   - Eudaimonia

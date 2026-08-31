@@ -1,5 +1,5 @@
 ---
-l yout: default
+layout: default
 title: "Aforismos"
 reading_time: 1
 semantic_order: 0
@@ -8,6 +8,7 @@ tags:
   - Conhecimento
   - Consciência
   - Amor
+  - Serena euforia
   - Eudaimonia
   - Natureza
   - Existência

@@ -5,10 +5,10 @@ reading_time: 1
 semantic_order: 40
 tags:
   - Atenção
-  - Método VIDA
-  - Autoconhecimento
+  - Serena euforia
   - Eudaimonia
-description: "A presença atenta que conecta o ser, o outro e o mundo em serena euforia."
+  - Método VIDA
+description: "A presença que guia ações conscientes e sustenta a eudaimonia"
 --- 
 
 

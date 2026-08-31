@@ -5,6 +5,7 @@ reading_time: 4
 semantic_order: 90
 tags:
   - Autoconhecimento
+  - Serena euforia
   - Eudaimonia
   - Atenção
   - Filosofia

@@ -4,6 +4,7 @@ title: "Serena euforia"
 reading_time: 1
 semantic_order: 10
 tags:
+  - Serena euforia
   - Atenção
   - Eudaimonia
   - Autoconhecimento

@@ -4,6 +4,7 @@ title: "Eudaimonia a se destilar"
 reading_time: 1
 semantic_order: 0.8
 tags:
+  - Serena euforia
   - Eudaimonia
   - Filosofia
   - Autoconhecimento

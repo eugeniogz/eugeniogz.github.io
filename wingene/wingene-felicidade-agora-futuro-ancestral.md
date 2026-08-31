@@ -5,6 +5,7 @@ reading_time: 12
 semantic_order: 17
 tags:
   - Wingene
+  - Serena euforia
   - Eudaimonia
   - Evolução
   - Filosofia
