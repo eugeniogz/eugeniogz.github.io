@@ -6,7 +6,7 @@ semantic_order: 1
 tags:
   - Wingene
   - Método VIDA
-  - Ciência
+  - Filosofia
 --- 
 
 

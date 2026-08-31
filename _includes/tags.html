@@ -18,10 +18,19 @@
       {% for single_tag in tag_parts %}
         {% assign trimmed_tag = single_tag | strip %}
         {% if trimmed_tag != "" %}
-          {% assign norm_tag = trimmed_tag | downcase | capitalize %}
-          {% if trimmed_tag contains "GENE" %}
-            {% if trimmed_tag != "Wingene" and trimmed_tag != "wingene" and trimmed_tag != "WINGENE" %}
-              {% assign norm_tag = norm_tag | replace: "Gene", "GENE" | replace: "gene", "GENE" %}
+          {% assign tag_check = trimmed_tag | downcase %}
+          {% if tag_check == "futuro ancestral" %}
+            {% assign norm_tag = "Futuro Ancestral" %}
+          {% elsif tag_check == "método vida" or tag_check == "metodo vida" %}
+            {% assign norm_tag = "Método VIDA" %}
+          {% elsif tag_check == "sistema gene" %}
+            {% assign norm_tag = "Sistema GENE" %}
+          {% else %}
+            {% assign norm_tag = trimmed_tag | downcase | capitalize %}
+            {% if trimmed_tag contains "GENE" %}
+              {% if trimmed_tag != "Wingene" and trimmed_tag != "wingene" and trimmed_tag != "WINGENE" %}
+                {% assign norm_tag = norm_tag | replace: "Gene", "GENE" | replace: "gene", "GENE" %}
+              {% endif %}
             {% endif %}
           {% endif %}
           {% assign raw_tags_list = raw_tags_list | append: norm_tag | append: "||" %}

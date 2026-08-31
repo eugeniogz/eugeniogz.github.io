@@ -5,11 +5,10 @@ reading_time: 3
 semantic_order: 1
 tags:
   - Euforia
-  - Conhecimento
-  - Evolução
+  - Autoconhecimento
   - Wingene
   - Eudaimonia
-  - Herança
+  - Futuro Ancestral
   - Vida
   - Atenção
 --- 
