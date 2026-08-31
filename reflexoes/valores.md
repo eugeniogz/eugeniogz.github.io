@@ -22,6 +22,8 @@ Palavras sintetizam o pensar: a doçura que elas carregam é o que sela o calor 
 
 Na convivência, a felicidade do outro valoriza atitudes pessoais. -- 19/08/26
 
+A divergência de ideias alimenta o debate; o respeito e a serenidade iluminam o exemplo. -- 31/08/26
+
 ### Revisão contínua
 
 O sentimento de nacionalidade é inerente à geografia. Ele é saudável, mas não deve se sobrepor ao pertencimento à humanidade, que ultrapassa fronteiras e traz empatia a qualquer ser humano. -- 18/07/26

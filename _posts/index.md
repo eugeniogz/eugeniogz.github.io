@@ -13,3 +13,4 @@ layout: default
 ### 📄 [Sentir o pensar](./2026-08-15-sentir-o-pensar.html) <span class="word-count">[1 min]</span>
 ### 📄 [Ruído](./2026-08-21-ruido.html) <span class="word-count">[1 min]</span>
 ### 📄 [Repetição consciente](./2026-08-29-repeticao-consciente.html) <span class="word-count">[1 min]</span>
+### 📄 [Exemplo como escolha](./2026-08-31-exemplo-como-escolha.html) <span class="word-count">[1 min]</span>
