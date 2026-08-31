@@ -53,8 +53,8 @@ function principal(nomePastaRaiz = "Wingene") {
   // Chamada única para a função de limpeza recursiva
   limparArquivosExcluidos(pastaDestinoRaiz, pastaFonte);
 
-  // GERA SITEMAP
-  gerarSitemap(pastaDestinoRaiz);
+  // GERA SITEMAP (Desativado: sitemap.xml é gerado automaticamente pelo jekyll-sitemap / GitHub Pages)
+  // gerarSitemap(pastaDestinoRaiz);
 
   const urlDestino = pastaDestinoRaiz.getUrl();
   const msgSucesso = `
