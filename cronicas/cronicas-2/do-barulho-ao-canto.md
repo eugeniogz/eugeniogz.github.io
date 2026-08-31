@@ -6,6 +6,9 @@ semantic_order: 30
 tags:
   - Atenção
   - Sociedade
+  - Natureza
+  - Evolução
+  - Decisões
 --- 
 
 

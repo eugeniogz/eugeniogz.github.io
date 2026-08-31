@@ -6,6 +6,9 @@ semantic_order: 42
 tags:
   - Arte
   - Afeto
+  - Vida
+  - Tempo
+  - Eudaimonia
 --- 
 
 

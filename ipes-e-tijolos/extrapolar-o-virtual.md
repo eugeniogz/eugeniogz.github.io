@@ -7,6 +7,7 @@ tags:
   - Ciência
   - Atenção
   - Natureza
+  - Tecnologia
 --- 
 
 

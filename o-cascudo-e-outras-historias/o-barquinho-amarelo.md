@@ -4,8 +4,14 @@ title: "O Barquinho Amarelo"
 reading_time: 2
 semantic_order: 20
 tags:
-  - Conhecimento
-  - Método VIDA
+  - Afeto
+  - Atenção
+  - Família
+  - Imperfeições
+  - Vida
+  - Infância
+  - Conduta
+description: "Na singela paciência do barquinho de papel, a infância descobre que o aprendizado e o afeto familiar transformam a frustração em travessia."
 --- 
 
 

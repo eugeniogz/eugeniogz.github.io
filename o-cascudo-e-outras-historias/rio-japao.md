@@ -4,9 +4,13 @@ title: "Rio Japão"
 reading_time: 2
 semantic_order: 1
 tags:
-  - Natureza
+  - Afeto
   - Família
-  - Método VIDA
+  - Natureza
+  - Valores
+  - Vida
+  - Infância
+description: "O fluir das águas do rio Japão e a sabedoria simples da vida no campo revelam o valor incomensurável da natureza e o calor dos afetos familiares."
 --- 
 
 

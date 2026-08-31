@@ -5,8 +5,12 @@ reading_time: 2
 semantic_order: 30
 tags:
   - Família
+  - Valores
+  - Autoconhecimento
+  - Vida
   - Evolução
-  - Método VIDA
+  - Infância
+description: "A sutil transição da infância passiva para a descoberta da autonomia e do valor do esforço compartilhado nos pequenos rituais do cotidiano."
 --- 
 
 

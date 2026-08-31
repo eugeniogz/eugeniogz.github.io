@@ -6,6 +6,10 @@ semantic_order: 60
 tags:
   - Sociedade
   - Ciência
+  - Natureza
+  - Tempo
+  - Família
+  - Atenção
 --- 
 
 

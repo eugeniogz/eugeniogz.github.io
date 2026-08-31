@@ -4,15 +4,13 @@ title: "O método VIDA: a Wingene em prática"
 reading_time: 14
 semantic_order: 60
 tags:
-  - Wingene
-  - Evolução
-  - Filosofia
-  - Atenção
-  - Conduta
   - Método VIDA
+  - Wingene
   - Valores
-  - Imperfeições
-  - Decisões
+  - Eudaimonia
+  - Filosofia
+  - Autoconhecimento
+description: "A aplicação prática da Wingene através do método VIDA: um itinerário ético de valores, imperfeições, decisões e atenção voltado ao florescimento humano."
 --- 
 
 

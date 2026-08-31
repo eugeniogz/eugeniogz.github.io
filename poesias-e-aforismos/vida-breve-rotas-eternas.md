@@ -6,6 +6,9 @@ semantic_order: 0.1
 tags:
   - Eudaimonia
   - Vida
+  - Tempo
+  - Valores
+  - Evolução
 --- 
 
 

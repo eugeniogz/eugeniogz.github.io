@@ -6,6 +6,9 @@ semantic_order: 0.8
 tags:
   - Eudaimonia
   - Filosofia
+  - Autoconhecimento
+  - Vida
+  - Atenção
 --- 
 
 

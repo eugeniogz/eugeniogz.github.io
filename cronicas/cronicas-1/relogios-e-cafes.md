@@ -4,8 +4,12 @@ title: "Relógios e cafés"
 reading_time: 3
 semantic_order: 650
 tags:
-  - Atenção
   - Tempo
+  - Atenção
+  - Vida
+  - Afeto
+  - Filosofia
+description: "No compasso de um passeio despretensioso, a efemeridade do tempo medido dissolve-se na elasticidade da vida vivida com atenção e afeto."
 --- 
 
 

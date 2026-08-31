@@ -6,6 +6,10 @@ semantic_order: 70
 tags:
   - Família
   - Conduta
+  - Sociedade
+  - Evolução
+  - Ciência
+  - Cidadania
 --- 
 
 

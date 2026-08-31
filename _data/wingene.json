@@ -7,13 +7,15 @@
     "time": "12 min",
     "category": "fundamentos",
     "tags": [
+      "Wingene",
       "Eudaimonia",
       "Evolução",
-      "Família",
-      "Método VIDA"
+      "Filosofia",
+      "Autoconhecimento",
+      "Ciência"
     ],
     "filename": "wingene-felicidade-agora-futuro-ancestral.html",
-    "desc": "Apresenta a visão de mundo da Wingene — fusão entre vitória (win) e herança (gene) — unindo bases naturalistas, eudaimonia aristotélica e aperfeiçoamento moral contínuo."
+    "desc": "A fusão entre herança e vitória íntima sob uma ótica naturalista, onde o florescimento da eudaimonia esculpe um legado consciente para o amanhã."
   },
   {
     "id": "etimologias-da-wingene-o-florescimento-do-espirito",
@@ -24,11 +26,14 @@
     "category": "etimologia",
     "tags": [
       "Wingene",
+      "Filosofia",
+      "Evolução",
+      "Eudaimonia",
       "Conhecimento",
-      "Filosofia"
+      "Etimologia"
     ],
     "filename": "etimologias-da-wingene-o-florescimento-do-espirito.html",
-    "desc": "Investigação profunda das raízes históricas das palavras vitória, esforço (winnan), alegria (wunjo) e herança, revelando o sentido vivo da filosofia Wingene."
+    "desc": "A arqueologia linguística de um conceito que une a herança interna do ser ao esforço intencional e amoroso de florescimento espiritual."
   },
   {
     "id": "o-metodo-vida-a-wingene-em-pratica",
@@ -38,18 +43,15 @@
     "time": "14 min",
     "category": "metodo-vida",
     "tags": [
-      "Wingene",
-      "Evolução",
-      "Filosofia",
-      "Atenção",
-      "Conduta",
       "Método VIDA",
+      "Wingene",
       "Valores",
-      "Imperfeições",
-      "Decisões"
+      "Eudaimonia",
+      "Filosofia",
+      "Autoconhecimento"
     ],
     "filename": "o-metodo-vida-a-wingene-em-pratica.html",
-    "desc": "O guia completo do Método VIDA: quatro pilares práticos (Valores, Imperfeições, Decisões, Atenção) para calibrar a bússola ética e construir a eudaimonia diária."
+    "desc": "A aplicação prática da Wingene através do método VIDA: um itinerário ético de valores, imperfeições, decisões e atenção voltado ao florescimento humano."
   },
   {
     "id": "metaconsciencia-pensar-o-sentir-sentir-o-pensar",
@@ -59,11 +61,17 @@
     "time": "4 min",
     "category": "consciencia",
     "tags": [
+      "Autoconhecimento",
       "Eudaimonia",
-      "Atenção"
+      "Atenção",
+      "Filosofia",
+      "Afeto",
+      "Wingene",
+      "Metaconsciência",
+      "Propriocepção"
     ],
     "filename": "metaconsciencia-pensar-o-sentir-sentir-o-pensar.html",
-    "desc": "Reflexão sobre a capacidade humana de observar seus próprios pensamentos e sentimentos, refinando a percepção da mente e a lucidez existencial."
+    "desc": "A fusão entre o pensar e o sentir na conquista da metaconsciência, estado de pura presença onde floresce a serena euforia da eudaimonia."
   },
   {
     "id": "tecendo-a-vida-criando-no-intimo-uma-obra-pessoal",
@@ -73,11 +81,15 @@
     "time": "7 min",
     "category": "aprimoramento",
     "tags": [
+      "Wingene",
+      "Arte",
       "Vida",
-      "Wingene"
+      "Autoconhecimento",
+      "Conhecimento",
+      "Família"
     ],
     "filename": "tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html",
-    "desc": "Como transformar cada vivência cotidiana em fio para a tecelagem do próprio ser, construindo internamente uma obra de valor ético e afetivo."
+    "desc": "A arte de tecer a própria existência como uma obra única, moldada pelo tempo, pelo afeto e pelo amadurecimento da razão diante das ilusões do mundo."
   },
   {
     "id": "a-wingene-na-familia-o-giz-invisivel-do-exemplo",
@@ -86,12 +98,15 @@
     "time": "3 min",
     "category": "aprimoramento",
     "tags": [
+      "Wingene",
       "Família",
-      "Filosofia",
-      "Wingene"
+      "Conduta",
+      "Valores",
+      "Afeto",
+      "Imperfeições"
     ],
     "filename": "a-wingene-na-familia-o-giz-invisivel-do-exemplo.html",
-    "desc": "Reflexão sobre a transmissão da virtude no ambiente familiar através do exemplo."
+    "desc": "Na geometria silenciosa do lar, o exemplo cotidiano atua como um giz invisível que desenha a bússola moral da família."
   },
   {
     "id": "o-sistema-gene-e-a-wingene-coletiva-a-arquitetura-da-eudaimonia-social",
@@ -102,11 +117,13 @@
     "category": "metodo-vida",
     "tags": [
       "Sistema GENE",
-      "Conhecimento",
       "Eudaimonia",
-      "Wingene"
+      "Sociedade",
+      "Wingene",
+      "Filosofia",
+      "Método VIDA"
     ],
     "filename": "o-sistema-gene-e-a-wingene-coletiva-a-arquitetura-da-eudaimonia-social.html",
-    "desc": "Conecta o método individual VIDA à estrutura coletiva por meio do Sistema GENE (Governos, Empresas, Normas e Educação), estabelecendo as bases para o florescimento e a eudaimonia social."
+    "desc": "A arquitetura coletiva do Sistema GENE como solo fértil para que o florescimento humano e a harmonia social germinem em sua plenitude."
   }
 ]

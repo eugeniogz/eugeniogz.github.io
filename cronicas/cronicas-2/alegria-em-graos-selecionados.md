@@ -5,6 +5,10 @@ reading_time: 2
 semantic_order: 1
 tags:
   - Eudaimonia
+  - Atenção
+  - Sociedade
+  - Valores
+  - Afeto
 --- 
 
 

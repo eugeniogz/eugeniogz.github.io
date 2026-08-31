@@ -4,11 +4,12 @@ title: "O relógio de bolso"
 reading_time: 1
 semantic_order: 10
 tags:
+  - Atenção
   - Tempo
-  - Vida
   - Família
-  - Wingene
-  - Método VIDA
+  - Vida
+  - Valores
+description: "A delicada herança de um relógio de bolso revela que o tempo e a própria vida só despertam quando lhes dedicamos a nossa atenção."
 --- 
 
 

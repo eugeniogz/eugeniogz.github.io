@@ -14,9 +14,13 @@
         "title": "Serena euforia",
         "time": "1 min",
         "filename": "cronicas-1/serena-euforia.html",
-        "desc": "O estado de plenitude silenciosa que floresce na mente desperta.",
+        "desc": "A dança harmônica da consciência atenta que transfigura o cotidiano de concreto na plenitude perene de uma serena euforia.",
         "tags": [
-          "Eudaimonia"
+          "Atenção",
+          "Eudaimonia",
+          "Autoconhecimento",
+          "Filosofia",
+          "Vida"
         ]
       },
       {
@@ -24,10 +28,13 @@
         "title": "Alvorecer",
         "time": "3 min",
         "filename": "cronicas-1/alvorecer.html",
-        "desc": "O despertar das primeiras luzes e a renovação diária dos pensamentos.",
+        "desc": "O alvorecer de duas rotinas que se cruzam na singeleza do cotidiano, revelando como a atenção aos pequenos detalhes pode despertar a poesia do presente.",
         "tags": [
           "Atenção",
-          "Sociedade"
+          "Vida",
+          "Tempo",
+          "Sociedade",
+          "Afeto"
         ]
       },
       {
@@ -35,10 +42,13 @@
         "title": "Mente presente",
         "time": "1 min",
         "filename": "cronicas-1/mente-presente.html",
-        "desc": "A ancoragem no momento presente como refúgio e clareza.",
+        "desc": "A ancoragem da alma no ritmo sereno do presente, tecendo instantes de paz contra a cacofonia dispersiva do cotidiano.",
         "tags": [
           "Atenção",
-          "Eudaimonia"
+          "Tempo",
+          "Família",
+          "Natureza",
+          "Vida"
         ]
       },
       {
@@ -46,9 +56,13 @@
         "title": "Manhã de domingo",
         "time": "2 min",
         "filename": "cronicas-1/manha-de-domingo.html",
-        "desc": "A serenidade dos domingos e o ritmo manso das horas.",
+        "desc": "Entre o canto dos pássaros e os afetos de um domingo em família, a escrita consagra o refúgio poético da presença nos pequenos rituais do tempo.",
         "tags": [
-          "Atenção"
+          "Afeto",
+          "Atenção",
+          "Família",
+          "Tempo",
+          "Vida"
         ]
       },
       {
@@ -56,10 +70,13 @@
         "title": "Relógios e cafés",
         "time": "3 min",
         "filename": "cronicas-1/relogios-e-cafes.html",
-        "desc": "O diálogo entre o ritmo dos ponteiros e o aroma do café fresquinho.",
+        "desc": "No compasso de um passeio despretensioso, a efemeridade do tempo medido dissolve-se na elasticidade da vida vivida com atenção e afeto.",
         "tags": [
+          "Tempo",
           "Atenção",
-          "Tempo"
+          "Vida",
+          "Afeto",
+          "Filosofia"
         ]
       },
       {
@@ -67,9 +84,13 @@
         "title": "As gavetas mentais",
         "time": "2 min",
         "filename": "cronicas-1/as-gavetas-mentais.html",
-        "desc": "Arrumando os compartimentos íntimos da memória e dos sentimentos.",
+        "desc": "Organizar o entulho da mobília mental para abrir espaço aos pequenos rituais e à delicada poesia que floresce no silêncio do cotidiano.",
         "tags": [
-          "Atenção"
+          "Atenção",
+          "Autoconhecimento",
+          "Decisões",
+          "Vida",
+          "Tempo"
         ]
       },
       {
@@ -77,9 +98,14 @@
         "title": "Cinza vazio",
         "time": "1 min",
         "filename": "cronicas-1/cinza-vazio.html",
-        "desc": "A superação dos dias nublados e a redescoberta da luz interior.",
+        "desc": "Aprisionado no cinza de seus próprios pensamentos, um homem consome o tempo em fumaça, alheio à vibrante vida que floresce ao redor e clama por atenção.",
         "tags": [
-          "Atenção"
+          "Atenção",
+          "Tempo",
+          "Natureza",
+          "Conduta",
+          "Filosofia",
+          "Vida"
         ]
       },
       {
@@ -87,9 +113,14 @@
         "title": "Aconchego sereno",
         "time": "2 min",
         "filename": "cronicas-1/aconchego-sereno.html",
-        "desc": "O calor reconfortante do lar e o valor das coisas simples.",
+        "desc": "Entre o frio das ruas e o calor do refúgio, a mente encontra na memória e na empatia o espaço sereno para meditar sobre a existência e a dor do outro.",
         "tags": [
-          "Eudaimonia"
+          "Atenção",
+          "Autoconhecimento",
+          "Filosofia",
+          "Sociedade",
+          "Valores",
+          "Vida"
         ]
       },
       {
@@ -143,7 +174,11 @@
         "filename": "cronicas-2/alegria-em-graos-selecionados.html",
         "desc": "A escolha atenta das vivências que nutrem a alma.",
         "tags": [
-          "Eudaimonia"
+          "Eudaimonia",
+          "Atenção",
+          "Sociedade",
+          "Valores",
+          "Afeto"
         ]
       },
       {
@@ -153,7 +188,11 @@
         "filename": "cronicas-2/singelas-letras-da-imprecisao.html",
         "desc": "A beleza imperfeita e sincera dos primeiros rascunhos da vida.",
         "tags": [
-          "Conduta"
+          "Conduta",
+          "Arte",
+          "Autoconhecimento",
+          "Imperfeições",
+          "Vida"
         ]
       },
       {
@@ -164,7 +203,10 @@
         "desc": "Transformando o barulho das pressões em música harmoniosa.",
         "tags": [
           "Atenção",
-          "Sociedade"
+          "Sociedade",
+          "Natureza",
+          "Evolução",
+          "Decisões"
         ]
       },
       {
@@ -174,7 +216,11 @@
         "filename": "cronicas-2/realidade-na-mesa-de-todos.html",
         "desc": "A riqueza da conversa franca e da partilha ao redor da mesa.",
         "tags": [
-          "Sociedade"
+          "Sociedade",
+          "Valores",
+          "Filosofia",
+          "Afeto",
+          "Eudaimonia"
         ]
       },
       {
@@ -209,7 +255,11 @@
         "desc": "A suavidade das nuvens e a calma de pisar suavemente no mundo.",
         "tags": [
           "Sociedade",
-          "Ciência"
+          "Ciência",
+          "Natureza",
+          "Tempo",
+          "Família",
+          "Atenção"
         ]
       },
       {

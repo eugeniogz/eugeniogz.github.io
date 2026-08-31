@@ -6,6 +6,9 @@ semantic_order: 20
 tags:
   - Filosofia
   - Natureza
+  - Autoconhecimento
+  - Ciência
+  - Vida
 --- 
 
 

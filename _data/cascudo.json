@@ -5,14 +5,17 @@
     "title": "Rio Japão",
     "time": "2 min",
     "tags": [
-      "Natureza",
+      "Afeto",
       "Família",
-      "Método VIDA"
+      "Natureza",
+      "Valores",
+      "Vida",
+      "Infância"
     ],
     "category": "natureza",
     "cover": "figuras/rio-japao/vovo-e-os-meninos.png",
     "filename": "rio-japao.html",
-    "desc": "Marcos e seus irmãos viajam para a fazenda dos avós, constroem represas de pedrinhas no rio de águas cristalinas e aprendem sobre a preservação da natureza.",
+    "desc": "O fluir das águas do rio Japão e a sabedoria simples da vida no campo revelam o valor incomensurável da natureza e o calor dos afetos familiares.",
     "reflection": {
       "title": "Para Conversar em Família",
       "questions": [
@@ -27,14 +30,17 @@
     "title": "O Cascudo",
     "time": "2 min",
     "tags": [
-      "Natureza",
       "Família",
-      "Método VIDA"
+      "Natureza",
+      "Valores",
+      "Afeto",
+      "Conduta",
+      "Infância"
     ],
     "category": "natureza",
     "cover": "figuras/o-cascudo/lago-no-rio.png",
     "filename": "o-cascudo.html",
-    "desc": "Fabiana e Rafaela constroem um lindo aquário de vidro na fazenda e descobrem o papel surpreendente e essencial do cascudo na limpeza do ecossistema.",
+    "desc": "Sob a tutela afetuosa do avô, a descoberta da vida aquática revela às irmãs a delicada arte de cuidar e a sabedoria do desapego ao devolver o rio ao rio.",
     "reflection": {
       "title": "Para Conversar em Família",
       "questions": [
@@ -49,16 +55,16 @@
     "title": "O relógio de bolso",
     "time": "1 min",
     "tags": [
+      "Atenção",
       "Tempo",
-      "Vida",
       "Família",
-      "Wingene",
-      "Método VIDA"
+      "Vida",
+      "Valores"
     ],
     "category": "valores",
     "cover": "figuras/marcando-o-proprio-tempo/mostrando-na-caixa.png",
     "filename": "o-relogio-de-bolso.html",
-    "desc": "Vovô Aurélio mostra a Marcos um precioso relógio de família e revela que o que realmente dá corda e faz a vida funcionar é a nossa atenção.",
+    "desc": "A delicada herança de um relógio de bolso revela que o tempo e a própria vida só despertam quando lhes dedicamos a nossa atenção.",
     "reflection": {
       "title": "Para Conversar em Família",
       "questions": [
@@ -74,13 +80,18 @@
     "title": "O Barquinho Amarelo",
     "time": "2 min",
     "tags": [
-      "Conhecimento",
-      "Método VIDA"
+      "Afeto",
+      "Atenção",
+      "Família",
+      "Imperfeições",
+      "Vida",
+      "Infância",
+      "Conduta"
     ],
     "category": "aprendizados",
     "cover": "figuras/o-barquinho-amarelo/iniciando-dobradura.png",
     "filename": "o-barquinho-amarelo.html",
-    "desc": "Marquinhos tenta dobrar um barquinho de papel sozinho, lida com a frustração e descobre a alegria e a paciência de aprender com a mãe.",
+    "desc": "Na singela paciência do barquinho de papel, a infância descobre que o aprendizado e o afeto familiar transformam a frustração em travessia.",
     "reflection": {
       "title": "Para Conversar em Família",
       "questions": [
@@ -96,13 +107,16 @@
     "time": "2 min",
     "tags": [
       "Família",
+      "Valores",
+      "Autoconhecimento",
+      "Vida",
       "Evolução",
-      "Método VIDA"
+      "Infância"
     ],
     "category": "familia",
     "cover": "figuras/um-sanduiche-especial/preparo-do-sanduiche.png",
     "filename": "um-sanduiche-especial.html",
-    "desc": "Nas férias na praia com a madrinha e o primo, Marquinhos prepara seu próprio lanche e compreende o esforço compartilhado que faz os dias serem especiais.",
+    "desc": "A sutil transição da infância passiva para a descoberta da autonomia e do valor do esforço compartilhado nos pequenos rituais do cotidiano.",
     "reflection": {
       "title": "Para Conversar em Família",
       "questions": [
@@ -118,14 +132,16 @@
     "time": "3 min",
     "tags": [
       "Família",
-      "Conhecimento",
+      "Natureza",
+      "Tempo",
+      "Vida",
       "Conduta",
-      "Método VIDA"
+      "Infância"
     ],
     "category": "familia",
     "cover": "figuras/as-bicicletas-no-parque/inicio-da-aventura.png",
     "filename": "aventura-de-bicicleta.html",
-    "desc": "As irmãs Clara e Alice encaram uma grande trilha de bicicleta pelo parque, aprendendo a dosar o ritmo, respeitar seus limites e apoiar uma à outra.",
+    "desc": "A jornada de duas irmãs sobre duas rodas revela a delicada sabedoria de dosar o próprio fôlego para contemplar os ritmos e segredos da natureza.",
     "reflection": {
       "title": "Para Conversar em Família",
       "questions": [
@@ -140,15 +156,18 @@
     "title": "O clube dos pinguins",
     "time": "2 min",
     "tags": [
-      "Ciência",
-      "Afeto",
-      "Método VIDA",
-      "Tempo"
+      "Família",
+      "Atenção",
+      "Valores",
+      "Conduta",
+      "Decisões",
+      "Infância",
+      "Tecnologia"
     ],
     "category": "tecnologia",
     "cover": "figuras/o-clube-dos-pinguins/jogando-xadrez.png",
     "filename": "o-clube-dos-pinguins.html",
-    "desc": "Após um imprevisto com um jogo no celular, Marquinhos e seus pais redescobrem a alegria insubstituível do xadrez, dos jogos de tabuleiro e do tempo compartilhado.",
+    "desc": "O limite sutil entre a ilusão magnética das telas e o despertar da atenção para a vivência concreta e afetiva das relações familiares.",
     "reflection": {
       "title": "Para Conversar em Família",
       "questions": [

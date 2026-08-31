@@ -6,6 +6,9 @@ semantic_order: 90
 tags:
   - Família
   - Afeto
+  - Wingene
+  - Conhecimento
+  - Evolução
 --- 
 
 

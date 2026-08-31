@@ -4,10 +4,14 @@ title: "O clube dos pinguins"
 reading_time: 2
 semantic_order: 50
 tags:
-  - Ciência
-  - Afeto
-  - Método VIDA
-  - Tempo
+  - Família
+  - Atenção
+  - Valores
+  - Conduta
+  - Decisões
+  - Infância
+  - Tecnologia
+description: "O limite sutil entre a ilusão magnética das telas e o despertar da atenção para a vivência concreta e afetiva das relações familiares."
 --- 
 
 

@@ -7,6 +7,8 @@ tags:
   - Conhecimento
   - Família
   - Sociedade
+  - Mitologia
+  - Ciência
 --- 
 
 

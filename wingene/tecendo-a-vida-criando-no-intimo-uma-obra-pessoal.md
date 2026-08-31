@@ -4,8 +4,13 @@ title: "Tecendo a vida: criando no íntimo uma obra pessoal"
 reading_time: 7
 semantic_order: 100
 tags:
-  - Vida
   - Wingene
+  - Arte
+  - Vida
+  - Autoconhecimento
+  - Conhecimento
+  - Família
+description: "A arte de tecer a própria existência como uma obra única, moldada pelo tempo, pelo afeto e pelo amadurecimento da razão diante das ilusões do mundo."
 --- 
 
 

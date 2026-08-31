@@ -4,7 +4,12 @@ title: "Manhã de domingo"
 reading_time: 2
 semantic_order: 600
 tags:
+  - Afeto
   - Atenção
+  - Família
+  - Tempo
+  - Vida
+description: "Entre o canto dos pássaros e os afetos de um domingo em família, a escrita consagra o refúgio poético da presença nos pequenos rituais do tempo."
 --- 
 
 

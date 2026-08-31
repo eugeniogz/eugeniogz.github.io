@@ -5,6 +5,10 @@ reading_time: 1
 semantic_order: 20
 tags:
   - Conduta
+  - Arte
+  - Autoconhecimento
+  - Imperfeições
+  - Vida
 --- 
 
 

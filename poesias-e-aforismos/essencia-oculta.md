@@ -6,6 +6,9 @@ semantic_order: 3
 tags:
   - Filosofia
   - Natureza
+  - Autoconhecimento
+  - Vida
+  - Valores
 --- 
 
 

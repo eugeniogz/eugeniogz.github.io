@@ -7,6 +7,7 @@ tags:
   - Autoconhecimento
   - Filosofia
   - Atenção
+  - Mitologia
 --- 
 
 

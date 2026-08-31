@@ -5,9 +5,12 @@ reading_time: 10
 semantic_order: 500
 tags:
   - Sistema GENE
-  - Conhecimento
   - Eudaimonia
+  - Sociedade
   - Wingene
+  - Filosofia
+  - Método VIDA
+description: "A arquitetura coletiva do Sistema GENE como solo fértil para que o florescimento humano e a harmonia social germinem em sua plenitude."
 --- 
 
 

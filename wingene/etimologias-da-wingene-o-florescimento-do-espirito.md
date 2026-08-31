@@ -5,8 +5,12 @@ reading_time: 3
 semantic_order: 50
 tags:
   - Wingene
-  - Conhecimento
   - Filosofia
+  - Evolução
+  - Eudaimonia
+  - Conhecimento
+  - Etimologia
+description: "A arqueologia linguística de um conceito que une a herança interna do ser ao esforço intencional e amoroso de florescimento espiritual."
 --- 
 
 

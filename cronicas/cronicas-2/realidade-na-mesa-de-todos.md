@@ -5,6 +5,10 @@ reading_time: 3
 semantic_order: 40
 tags:
   - Sociedade
+  - Valores
+  - Filosofia
+  - Afeto
+  - Eudaimonia
 --- 
 
 

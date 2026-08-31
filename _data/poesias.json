@@ -8,7 +8,8 @@
       "Ciência",
       "Atenção",
       "Eudaimonia",
-      "Natureza"
+      "Natureza",
+      "Aforismos"
     ],
     "category": "aforismos",
     "filename": "aforismos.html",
@@ -23,7 +24,10 @@
     "time": "1 min",
     "tags": [
       "Eudaimonia",
-      "Vida"
+      "Vida",
+      "Tempo",
+      "Valores",
+      "Evolução"
     ],
     "category": "eudaimonia",
     "filename": "vida-breve-rotas-eternas.html",
@@ -54,7 +58,10 @@
     "time": "1 min",
     "tags": [
       "Eudaimonia",
-      "Filosofia"
+      "Filosofia",
+      "Autoconhecimento",
+      "Vida",
+      "Atenção"
     ],
     "category": "eudaimonia",
     "filename": "eudaimonia-a-se-destilar.html",
@@ -85,7 +92,10 @@
     "time": "1 min",
     "tags": [
       "Atenção",
-      "Filosofia"
+      "Filosofia",
+      "Autoconhecimento",
+      "Vida",
+      "Eudaimonia"
     ],
     "category": "consciencia",
     "filename": "vida-consciente.html",
@@ -100,7 +110,10 @@
     "time": "1 min",
     "tags": [
       "Filosofia",
-      "Natureza"
+      "Natureza",
+      "Autoconhecimento",
+      "Vida",
+      "Valores"
     ],
     "category": "consciencia",
     "filename": "essencia-oculta.html",
@@ -115,7 +128,10 @@
     "time": "1 min",
     "tags": [
       "Arte",
-      "Afeto"
+      "Afeto",
+      "Natureza",
+      "Atenção",
+      "Vida"
     ],
     "category": "musica",
     "filename": "quadro-azul.html",
@@ -146,7 +162,10 @@
     "time": "1 min",
     "tags": [
       "Arte",
-      "Filosofia"
+      "Filosofia",
+      "Natureza",
+      "Atenção",
+      "Autoconhecimento"
     ],
     "category": "musica",
     "filename": "musica-soberana.html",
@@ -161,7 +180,11 @@
     "time": "1 min",
     "tags": [
       "Natureza",
-      "Filosofia"
+      "Filosofia",
+      "Afeto",
+      "Tempo",
+      "Família",
+      "Rituais"
     ],
     "category": "natureza",
     "filename": "cafe-em-flor.html",
@@ -176,7 +199,10 @@
     "time": "1 min",
     "tags": [
       "Arte",
-      "Afeto"
+      "Afeto",
+      "Vida",
+      "Tempo",
+      "Eudaimonia"
     ],
     "category": "musica",
     "filename": "aquarela-de-uma-valsa.html",

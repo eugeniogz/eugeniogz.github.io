@@ -5,6 +5,12 @@ reading_time: 1
 semantic_order: 715
 tags:
   - Atenção
+  - Tempo
+  - Natureza
+  - Conduta
+  - Filosofia
+  - Vida
+description: "Aprisionado no cinza de seus próprios pensamentos, um homem consome o tempo em fumaça, alheio à vibrante vida que floresce ao redor e clama por atenção."
 --- 
 
 

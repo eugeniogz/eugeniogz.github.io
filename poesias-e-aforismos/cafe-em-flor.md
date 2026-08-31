@@ -6,6 +6,10 @@ semantic_order: 9
 tags:
   - Natureza
   - Filosofia
+  - Afeto
+  - Tempo
+  - Família
+  - Rituais
 --- 
 
 

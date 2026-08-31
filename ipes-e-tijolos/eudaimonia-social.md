@@ -7,6 +7,8 @@ tags:
   - Eudaimonia
   - Sociedade
   - Filosofia
+  - Empatia
+  - Afeto
 --- 
 
 

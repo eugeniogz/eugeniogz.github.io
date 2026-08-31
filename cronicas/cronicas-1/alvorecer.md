@@ -5,7 +5,11 @@ reading_time: 3
 semantic_order: 30
 tags:
   - Atenção
+  - Vida
+  - Tempo
   - Sociedade
+  - Afeto
+description: "O alvorecer de duas rotinas que se cruzam na singeleza do cotidiano, revelando como a atenção aos pequenos detalhes pode despertar a poesia do presente."
 --- 
 
 

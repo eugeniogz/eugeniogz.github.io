@@ -4,9 +4,13 @@ title: "O Cascudo"
 reading_time: 2
 semantic_order: 5
 tags:
-  - Natureza
   - Família
-  - Método VIDA
+  - Natureza
+  - Valores
+  - Afeto
+  - Conduta
+  - Infância
+description: "Sob a tutela afetuosa do avô, a descoberta da vida aquática revela às irmãs a delicada arte de cuidar e a sabedoria do desapego ao devolver o rio ao rio."
 --- 
 
 

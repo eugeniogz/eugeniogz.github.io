@@ -6,6 +6,9 @@ semantic_order: 4
 tags:
   - Arte
   - Afeto
+  - Natureza
+  - Atenção
+  - Vida
 --- 
 
 

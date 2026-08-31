@@ -6,6 +6,9 @@ semantic_order: 37
 tags:
   - Natureza
   - Filosofia
+  - Sociedade
+  - Valores
+  - Vida
 --- 
 
 

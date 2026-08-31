@@ -4,10 +4,13 @@ title: "Wingene: Felicidade agora, futuro ancestral"
 reading_time: 12
 semantic_order: 17
 tags:
+  - Wingene
   - Eudaimonia
   - Evolução
-  - Família
-  - Método VIDA
+  - Filosofia
+  - Autoconhecimento
+  - Ciência
+description: "A fusão entre herança e vitória íntima sob uma ótica naturalista, onde o florescimento da eudaimonia esculpe um legado consciente para o amanhã."
 --- 
 
 

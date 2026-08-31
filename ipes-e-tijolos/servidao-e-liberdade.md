@@ -6,6 +6,9 @@ semantic_order: 39
 tags:
   - Filosofia
   - Autoconhecimento
+  - Sociedade
+  - Conduta
+  - Decisões
 --- 
 
 

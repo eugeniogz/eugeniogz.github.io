@@ -6,6 +6,9 @@ semantic_order: 7
 tags:
   - Arte
   - Filosofia
+  - Natureza
+  - Atenção
+  - Autoconhecimento
 --- 
 
 

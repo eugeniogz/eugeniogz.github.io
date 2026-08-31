@@ -5,6 +5,11 @@ reading_time: 2
 semantic_order: 710
 tags:
   - Atenção
+  - Autoconhecimento
+  - Decisões
+  - Vida
+  - Tempo
+description: "Organizar o entulho da mobília mental para abrir espaço aos pequenos rituais e à delicada poesia que floresce no silêncio do cotidiano."
 --- 
 
 

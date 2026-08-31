@@ -4,9 +4,13 @@ title: "A Wingene na Familia: O Giz Invisivel do Exemplo"
 reading_time: 3
 semantic_order: 120
 tags:
-  - Família
-  - Filosofia
   - Wingene
+  - Família
+  - Conduta
+  - Valores
+  - Afeto
+  - Imperfeições
+description: "Na geometria silenciosa do lar, o exemplo cotidiano atua como um giz invisível que desenha a bússola moral da família."
 --- 
 
 

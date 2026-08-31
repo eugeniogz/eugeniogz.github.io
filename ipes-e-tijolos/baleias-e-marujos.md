@@ -7,6 +7,8 @@ tags:
   - Filosofia
   - Sociedade
   - Natureza
+  - Justiça Social
+  - Cidadania
 --- 
 
 

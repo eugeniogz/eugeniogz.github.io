@@ -4,7 +4,10 @@ title: "Atenção"
 reading_time: 1
 semantic_order: 40
 tags:
-  - Atenção plena
+  - Atenção
+  - Método VIDA
+  - Autoconhecimento
+  - Eudaimonia
 --- 
 
 
