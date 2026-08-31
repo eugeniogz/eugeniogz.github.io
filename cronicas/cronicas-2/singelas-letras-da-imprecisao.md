@@ -4,7 +4,7 @@ title: "Singelas letras da imprecisão"
 reading_time: 1
 semantic_order: 20
 tags:
-  - Trabalho
+  - Conduta
 --- 
 
 

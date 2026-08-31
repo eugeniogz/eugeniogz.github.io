@@ -4,7 +4,7 @@ title: "Do barulho ao canto"
 reading_time: 2
 semantic_order: 30
 tags:
-  - Atenção plena
+  - Atenção Plena
   - Sociedade
 --- 
 

@@ -4,9 +4,8 @@ title: "Espírito material"
 reading_time: 2
 semantic_order: 20
 tags:
-  - Espírito
-  - Mente
-  - Biologia
+  - Filosofia
+  - Natureza
 --- 
 
 

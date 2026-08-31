@@ -5,7 +5,7 @@ reading_time: 1
 semantic_order: 20
 tags:
   - Wingene
-  - Atenção plena
+  - Atenção Plena
   - Vida
 --- 
 

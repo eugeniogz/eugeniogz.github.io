@@ -5,7 +5,7 @@ reading_time: 1
 semantic_order: 60
 tags:
   - Sociedade
-  - Escravidão digital
+  - Ciência
 --- 
 
 

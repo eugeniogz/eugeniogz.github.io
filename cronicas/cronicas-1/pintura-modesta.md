@@ -4,8 +4,8 @@ title: "Pintura modesta"
 reading_time: 1
 semantic_order: 800
 tags:
-  - Atenção plena
-  - Serena euforia
+  - Atenção Plena
+  - Eudaimonia
 --- 
 
 

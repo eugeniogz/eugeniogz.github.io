@@ -5,8 +5,8 @@ reading_time: 2
 semantic_order: 60
 tags:
   - Conhecimento
-  - Herança
-  - Civilização
+  - Família
+  - Sociedade
 --- 
 
 

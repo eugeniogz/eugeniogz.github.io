@@ -6,7 +6,7 @@ semantic_order: 5
 tags:
   - Natureza
   - Família
-  - método VIDA
+  - Método VIDA
 --- 
 
 

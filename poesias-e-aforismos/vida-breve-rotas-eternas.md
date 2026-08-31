@@ -4,7 +4,6 @@ title: "Vida breve, rotas eternas"
 reading_time: 1
 semantic_order: 0.1
 tags:
-  - Felicidade
   - Eudaimonia
   - Vida
 --- 

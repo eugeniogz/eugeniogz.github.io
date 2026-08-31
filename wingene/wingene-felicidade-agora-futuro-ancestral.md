@@ -4,11 +4,10 @@ title: "Wingene: Felicidade agora, futuro ancestral"
 reading_time: 12
 semantic_order: 17
 tags:
-  - Felicidade
   - Eudaimonia
   - Evolução
-  - Herança
-  - método VIDA
+  - Família
+  - Método VIDA
 --- 
 
 

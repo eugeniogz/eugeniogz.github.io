@@ -6,9 +6,9 @@ semantic_order: 10
 tags:
   - Tempo
   - Vida
-  - Herança
+  - Família
   - Wingene
-  - método VIDA
+  - Método VIDA
 --- 
 
 

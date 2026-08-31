@@ -5,10 +5,9 @@ reading_time: 1
 semantic_order: 20
 desc: "No inverno, o lamento da asa-branca se transforma em canto."
 tags:
-  - Amor
-  - Atenção plena
+  - Afeto
+  - Atenção Plena
   - Eudaimonia
-  - Felicidade
 --- 
 
 

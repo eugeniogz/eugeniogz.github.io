@@ -4,9 +4,8 @@ title: "Quadro azul"
 reading_time: 1
 semantic_order: 4
 tags:
-  - Música
-  - Cor
-  - Sentimento
+  - Arte
+  - Afeto
 --- 
 
 

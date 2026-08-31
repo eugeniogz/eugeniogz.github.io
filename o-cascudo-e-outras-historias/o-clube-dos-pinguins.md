@@ -4,9 +4,9 @@ title: "O clube dos pinguins"
 reading_time: 2
 semantic_order: 50
 tags:
-  - Escravidão Digital
-  - Amor
-  - método VIDA
+  - Ciência
+  - Afeto
+  - Método VIDA
   - Tempo
 --- 
 

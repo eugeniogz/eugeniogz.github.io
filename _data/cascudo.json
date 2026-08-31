@@ -7,7 +7,7 @@
     "tags": [
       "Natureza",
       "Família",
-      "método VIDA"
+      "Método VIDA"
     ],
     "category": "natureza",
     "cover": "figuras/rio-japao/vovo-e-os-meninos.png",
@@ -29,7 +29,7 @@
     "tags": [
       "Natureza",
       "Família",
-      "método VIDA"
+      "Método VIDA"
     ],
     "category": "natureza",
     "cover": "figuras/o-cascudo/lago-no-rio.png",
@@ -51,9 +51,9 @@
     "tags": [
       "Tempo",
       "Vida",
-      "Herança",
+      "Família",
       "Wingene",
-      "método VIDA"
+      "Método VIDA"
     ],
     "category": "valores",
     "cover": "figuras/marcando-o-proprio-tempo/mostrando-na-caixa.png",
@@ -74,9 +74,8 @@
     "title": "O Barquinho Amarelo",
     "time": "2 min",
     "tags": [
-      "Aprender",
-      "Ensinar",
-      "método VIDA"
+      "Conhecimento",
+      "Método VIDA"
     ],
     "category": "aprendizados",
     "cover": "figuras/o-barquinho-amarelo/iniciando-dobradura.png",
@@ -97,8 +96,8 @@
     "time": "2 min",
     "tags": [
       "Família",
-      "Colaboração",
-      "método VIDA"
+      "Evolução",
+      "Método VIDA"
     ],
     "category": "familia",
     "cover": "figuras/um-sanduiche-especial/preparo-do-sanduiche.png",
@@ -119,10 +118,9 @@
     "time": "3 min",
     "tags": [
       "Família",
-      "Aprender",
-      "Ensinar",
-      "Escutar",
-      "método VIDA"
+      "Conhecimento",
+      "Conduta",
+      "Método VIDA"
     ],
     "category": "familia",
     "cover": "figuras/as-bicicletas-no-parque/inicio-da-aventura.png",
@@ -142,9 +140,9 @@
     "title": "O clube dos pinguins",
     "time": "2 min",
     "tags": [
-      "Escravidão Digital",
-      "Amor",
-      "método VIDA",
+      "Ciência",
+      "Afeto",
+      "Método VIDA",
       "Tempo"
     ],
     "category": "tecnologia",

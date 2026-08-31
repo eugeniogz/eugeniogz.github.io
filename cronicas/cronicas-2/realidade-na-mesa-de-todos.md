@@ -4,7 +4,6 @@ title: "Realidade na mesa de todos"
 reading_time: 3
 semantic_order: 40
 tags:
-  - Economia
   - Sociedade
 --- 
 

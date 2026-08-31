@@ -5,8 +5,8 @@ reading_time: 1
 semantic_order: 38
 tags:
   - Autoconhecimento
-  - Jornada
-  - Consciência
+  - Filosofia
+  - Atenção Plena
 --- 
 
 

@@ -4,7 +4,7 @@ title: "Alvorecer"
 reading_time: 3
 semantic_order: 30
 tags:
-  - Atenção plena
+  - Atenção Plena
   - Sociedade
 --- 
 

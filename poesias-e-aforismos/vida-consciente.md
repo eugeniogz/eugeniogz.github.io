@@ -4,9 +4,8 @@ title: "Vida consciente"
 reading_time: 1
 semantic_order: 2
 tags:
-  - Consciência
-  - Presença
-  - Mente
+  - Atenção Plena
+  - Filosofia
 --- 
 
 

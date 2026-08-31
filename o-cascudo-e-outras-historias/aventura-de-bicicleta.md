@@ -5,10 +5,9 @@ reading_time: 3
 semantic_order: 40
 tags:
   - Família
-  - Aprender
-  - Ensinar
-  - Escutar
-  - método VIDA
+  - Conhecimento
+  - Conduta
+  - Método VIDA
 --- 
 
 

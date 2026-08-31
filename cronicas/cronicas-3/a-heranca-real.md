@@ -5,7 +5,7 @@ reading_time: 2
 semantic_order: 10
 tags:
   - Wingene
-  - Logosofia
+  - Conhecimento
 --- 
 
 

@@ -4,10 +4,8 @@ title: "Etimologia e a Wingene"
 reading_time: 3
 semantic_order: 50
 tags:
-  - Etimologia
-  - Espírito
   - Conhecimento
-  - Linguagem
+  - Filosofia
 --- 
 
 

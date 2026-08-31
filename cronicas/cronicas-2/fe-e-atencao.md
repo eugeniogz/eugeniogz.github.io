@@ -4,10 +4,9 @@ title: "Fé e atenção"
 reading_time: 2
 semantic_order: 40.5
 tags:
-  - Divino
-  - Fé
+  - Filosofia
   - Wingene
-  - método VIDA
+  - Método VIDA
 --- 
 
 

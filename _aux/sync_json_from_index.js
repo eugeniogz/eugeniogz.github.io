@@ -110,9 +110,23 @@ async function generateMetadataWithAI(title, bodyContent, existingTags = []) {
     const prompt = `Você é um editor assistente de publicação para um site autoral de literatura e filosofia.
 Analise o título e texto do artigo fornecidos e retorne APENAS um JSON estrito no seguinte formato:
 {
-  "desc": "Uma síntese/descrição concisa em 1 frase (máximo 150 caracteres) sobre o artigo em português.",
+  "desc": "Uma síntese/descrição elegante em 1 frase (máximo 160 caracteres) sobre o artigo em português.",
   "tags": ["Tag1", "Tag2", "Tag3"]
 }
+
+Diretrizes para a descrição ("desc"):
+- Escreva em tom elegante, poético, denso e filosófico, mantendo o estilo autoral do site.
+- Evite linguagem comercial/marketing (como "neste artigo você aprenderá...", "descubra como...").
+- Formule 1 frase concisa e expressiva que capture a essência temática ou reflexiva do texto.
+
+Exemplos de descrições reais já publicadas no site (use como referência de tom e extensão):
+• "O espírito não metafísico: a fauna consciente que habita o ecossistema mental e ampara os momentos difíceis."
+• "A coexistência poética entre os muros rígidos do concreto urbano e a delicada explosão dos ipês floridos."
+• "Superar a ilusão das telas e do imediatismo virtual para vivenciar o concreto da existência."
+• "O guia completo do Método VIDA: quatro pilares práticos (Valores, Imperfeições, Decisões, Atenção) para calibrar a bússola ética e construir a eudaimonia diária."
+• "Sentenças breves e lapidadas sobre ciência, consciência, amor, virtudes, eudaimonia e existência."
+• "O estado de plenitude silenciosa que floresce na mente desperta."
+• "Vovô Aurélio mostra a Marcos um precioso relógio de família e revela que o que realmente dá corda e faz a vida funcionar é a nossa atenção."
 
 Observações para as tags:
 - Devem ter entre 3 e 5 palavras-chave curtas, em português, sem numeração ou símbolos.

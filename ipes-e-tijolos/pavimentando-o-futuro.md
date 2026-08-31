@@ -4,9 +4,8 @@ title: "Pavimentando o futuro"
 reading_time: 1
 semantic_order: 70
 tags:
-  - Futuro Ancestral
-  - Ação
-  - Legado
+  - Família
+  - Conduta
 --- 
 
 

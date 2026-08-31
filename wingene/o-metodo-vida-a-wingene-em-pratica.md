@@ -6,10 +6,9 @@ semantic_order: 60
 tags:
   - Wingene
   - Evolução
-  - Valores
-  - Atenção plena
-  - Decisões
-  - Imperfeições
+  - Filosofia
+  - Atenção Plena
+  - Conduta
   - Método VIDA
 --- 
 

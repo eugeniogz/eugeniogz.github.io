@@ -4,8 +4,8 @@ title: "Atento descanso"
 reading_time: 1
 semantic_order: 900
 tags:
-  - Atenção plena
-  - Trabalho
+  - Atenção Plena
+  - Conduta
 --- 
 
 

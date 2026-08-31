@@ -4,9 +4,9 @@ title: "Baleias e marujos"
 reading_time: 1
 semantic_order: 50
 tags:
-  - Existência
-  - Coletivo
-  - Mundo
+  - Filosofia
+  - Sociedade
+  - Natureza
 --- 
 
 

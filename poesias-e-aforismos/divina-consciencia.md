@@ -4,8 +4,8 @@ title: "Divina consciência"
 reading_time: 1
 semantic_order: 999.99
 tags:
-  - Consciência
-  - Cosmo
+  - Atenção Plena
+  - Natureza
   - Vida
 --- 
 

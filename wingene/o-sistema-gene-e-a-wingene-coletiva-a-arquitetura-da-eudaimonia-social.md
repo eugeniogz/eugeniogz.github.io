@@ -4,11 +4,8 @@ title: "O Sistema GENE: A Arquitetura da Eudaimonia Social"
 reading_time: 10
 semantic_order: 500
 tags:
-  - Governos
-  - Empresas
-  - Normas
-  - Educação
   - Sistema GENE
+  - Conhecimento
   - Eudaimonia
   - Wingene
 --- 

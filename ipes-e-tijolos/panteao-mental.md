@@ -4,9 +4,9 @@ title: "Panteão mental"
 reading_time: 1
 semantic_order: 30
 tags:
-  - Mente
-  - Pensamento
-  - Criação
+  - Filosofia
+  - Conhecimento
+  - Evolução
 --- 
 
 

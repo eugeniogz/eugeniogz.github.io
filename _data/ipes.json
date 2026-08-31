@@ -6,9 +6,8 @@
     "time": "2 min",
     "category": "mente",
     "tags": [
-      "Espírito",
-      "Mente",
-      "Biologia"
+      "Filosofia",
+      "Natureza"
     ],
     "filename": "espirito-material.html",
     "desc": "O espírito não metafísico: a fauna consciente que habita o ecossistema mental e ampara os momentos difíceis."
@@ -20,9 +19,9 @@
     "time": "1 min",
     "category": "mente",
     "tags": [
-      "Mente",
-      "Pensamento",
-      "Criação"
+      "Filosofia",
+      "Conhecimento",
+      "Evolução"
     ],
     "filename": "panteao-mental.html",
     "desc": "O templo íntimo onde ideias, referências e mestres imaginários dialogam e refinam o caráter."
@@ -34,9 +33,9 @@
     "time": "1 min",
     "category": "sociedade",
     "tags": [
-      "Tecnologia",
-      "Presença",
-      "Realidade"
+      "Ciência",
+      "Atenção Plena",
+      "Natureza"
     ],
     "filename": "extrapolar-o-virtual.html",
     "desc": "Superar a ilusão das telas e do imediatismo virtual para vivenciar o concreto da existência."
@@ -48,9 +47,8 @@
     "time": "1 min",
     "category": "sociedade",
     "tags": [
-      "Cidade",
       "Natureza",
-      "Equilíbrio"
+      "Filosofia"
     ],
     "filename": "ipes-e-tijolos.html",
     "desc": "A coexistência poética entre os muros rígidos do concreto urbano e a delicada explosão dos ipês floridos."
@@ -63,8 +61,8 @@
     "category": "mente",
     "tags": [
       "Autoconhecimento",
-      "Jornada",
-      "Consciência"
+      "Filosofia",
+      "Atenção Plena"
     ],
     "filename": "odisseia-interior.html",
     "desc": "A viagem mais profunda que o ser humano pode empreender: o desbravamento dos mares de si mesmo."
@@ -76,9 +74,8 @@
     "time": "1 min",
     "category": "liberdade",
     "tags": [
-      "Liberdade",
-      "Vontade",
-      "Autonomia"
+      "Filosofia",
+      "Autoconhecimento"
     ],
     "filename": "servidao-e-liberdade.html",
     "desc": "A linha tênue entre as amarras do automatismo inconsciente e a conquista ativa da verdadeira liberdade."
@@ -90,9 +87,9 @@
     "time": "1 min",
     "category": "sociedade",
     "tags": [
-      "Existência",
-      "Coletivo",
-      "Mundo"
+      "Filosofia",
+      "Sociedade",
+      "Natureza"
     ],
     "filename": "baleias-e-marujos.html",
     "desc": "Reflexão sobre os gigantes misteriosos da existência e o papel solidário de cada marujo no mesmo barco."
@@ -105,8 +102,8 @@
     "category": "liberdade",
     "tags": [
       "Conhecimento",
-      "Herança",
-      "Civilização"
+      "Família",
+      "Sociedade"
     ],
     "filename": "o-fogo-de-prometeu.html",
     "desc": "A chama da inteligência e da técnica como herança milenar e dever de responsabilidade ética."
@@ -118,9 +115,8 @@
     "time": "1 min",
     "category": "futuro",
     "tags": [
-      "Futuro Ancestral",
-      "Ação",
-      "Legado"
+      "Família",
+      "Conduta"
     ],
     "filename": "pavimentando-o-futuro.html",
     "desc": "O assentamento paciente de cada tijolo moral que pavimentará o caminho para as próximas gerações."
@@ -134,7 +130,7 @@
     "tags": [
       "Eudaimonia",
       "Sociedade",
-      "Coexistência"
+      "Filosofia"
     ],
     "filename": "eudaimonia-social.html",
     "desc": "O florescimento humano que se expande além do indivíduo, alcançando a harmonia da comunidade."
@@ -146,9 +142,8 @@
     "time": "1 min",
     "category": "futuro",
     "tags": [
-      "Herança",
-      "Ancestralidade",
-      "Gratidão"
+      "Família",
+      "Afeto"
     ],
     "filename": "honrando-a-heranca-ancestral.html",
     "desc": "O reconhecimento lúcido do esforço dos antepassados como solo fértil para as nossas próprias escolhas."

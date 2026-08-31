@@ -6,7 +6,7 @@ semantic_order: 80
 tags:
   - Eudaimonia
   - Sociedade
-  - Coexistência
+  - Filosofia
 --- 
 
 

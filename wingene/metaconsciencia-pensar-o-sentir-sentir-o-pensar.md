@@ -4,10 +4,8 @@ title: "Metaconsciência: pensar o sentir, sentir o pensar"
 reading_time: 4
 semantic_order: 90
 tags:
-  - Serena euforia
-  - Metaconsciência
   - Eudaimonia
-  - Atenção plena
+  - Atenção Plena
 --- 
 
 

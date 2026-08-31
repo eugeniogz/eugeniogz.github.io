@@ -4,9 +4,8 @@ title: "Essência oculta"
 reading_time: 1
 semantic_order: 3
 tags:
-  - Essência
-  - Espírito
-  - Mundo
+  - Filosofia
+  - Natureza
 --- 
 
 

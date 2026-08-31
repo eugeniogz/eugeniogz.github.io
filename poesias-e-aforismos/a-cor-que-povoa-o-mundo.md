@@ -5,7 +5,7 @@ reading_time: 1
 semantic_order: 0.5
 tags:
   - Arte
-  - Sentir
+  - Afeto
   - Natureza
 --- 
 

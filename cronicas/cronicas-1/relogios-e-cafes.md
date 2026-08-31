@@ -4,7 +4,7 @@ title: "Relógios e cafés"
 reading_time: 3
 semantic_order: 650
 tags:
-  - Atenção plena
+  - Atenção Plena
   - Tempo
 --- 
 

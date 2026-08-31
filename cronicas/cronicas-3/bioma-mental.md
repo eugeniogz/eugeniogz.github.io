@@ -5,7 +5,6 @@ reading_time: 1
 semantic_order: 3
 tags:
   - Eudaimonia
-  - Serena euforia
 --- 
 
 

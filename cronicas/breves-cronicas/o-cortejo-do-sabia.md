@@ -4,9 +4,8 @@ title: "O cortejo do sabiá"
 reading_time: 1
 semantic_order: 10
 tags:
-  - Serena euforia
   - Eudaimonia
-  - Atenção plena
+  - Atenção Plena
 --- 
 
 

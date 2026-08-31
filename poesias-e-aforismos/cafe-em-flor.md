@@ -5,8 +5,7 @@ reading_time: 1
 semantic_order: 9
 tags:
   - Natureza
-  - Origem
-  - Memória
+  - Filosofia
 --- 
 
 

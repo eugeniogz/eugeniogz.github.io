@@ -4,7 +4,7 @@ title: "Aconchego sereno"
 reading_time: 2
 semantic_order: 720
 tags:
-  - Serena euforia
+  - Eudaimonia
 --- 
 
 

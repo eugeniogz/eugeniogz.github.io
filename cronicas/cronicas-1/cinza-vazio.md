@@ -4,7 +4,7 @@ title: "Cinza vazio"
 reading_time: 1
 semantic_order: 715
 tags:
-  - Atenção plena
+  - Atenção Plena
 --- 
 
 

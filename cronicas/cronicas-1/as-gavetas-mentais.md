@@ -4,7 +4,7 @@ title: "As gavetas mentais"
 reading_time: 2
 semantic_order: 710
 tags:
-  - Atenção plena
+  - Atenção Plena
 --- 
 
 

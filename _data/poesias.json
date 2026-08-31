@@ -6,8 +6,8 @@
     "time": "1 min",
     "tags": [
       "Ciência",
-      "Consciência",
-      "Felicidade",
+      "Atenção Plena",
+      "Eudaimonia",
       "Natureza"
     ],
     "category": "aforismos",
@@ -22,7 +22,6 @@
     "type": "poema",
     "time": "1 min",
     "tags": [
-      "Felicidade",
       "Eudaimonia",
       "Vida"
     ],
@@ -39,7 +38,7 @@
     "time": "1 min",
     "tags": [
       "Arte",
-      "Sentir",
+      "Afeto",
       "Natureza"
     ],
     "category": "natureza",
@@ -55,8 +54,7 @@
     "time": "1 min",
     "tags": [
       "Eudaimonia",
-      "Virtudes",
-      "Alegria"
+      "Filosofia"
     ],
     "category": "eudaimonia",
     "filename": "eudaimonia-a-se-destilar.html",
@@ -70,9 +68,9 @@
     "type": "poema",
     "time": "1 min",
     "tags": [
-      "Alegria",
+      "Eudaimonia",
       "Vida",
-      "Ação"
+      "Conduta"
     ],
     "category": "amor",
     "filename": "tecer-alegria.html",
@@ -86,9 +84,8 @@
     "type": "poema",
     "time": "1 min",
     "tags": [
-      "Consciência",
-      "Presença",
-      "Mente"
+      "Atenção Plena",
+      "Filosofia"
     ],
     "category": "consciencia",
     "filename": "vida-consciente.html",
@@ -102,9 +99,8 @@
     "type": "poema",
     "time": "1 min",
     "tags": [
-      "Essência",
-      "Espírito",
-      "Mundo"
+      "Filosofia",
+      "Natureza"
     ],
     "category": "consciencia",
     "filename": "essencia-oculta.html",
@@ -118,9 +114,8 @@
     "type": "poema",
     "time": "1 min",
     "tags": [
-      "Música",
-      "Cor",
-      "Sentimento"
+      "Arte",
+      "Afeto"
     ],
     "category": "musica",
     "filename": "quadro-azul.html",
@@ -134,9 +129,9 @@
     "type": "poema",
     "time": "1 min",
     "tags": [
-      "Infinito",
+      "Natureza",
       "Tempo",
-      "Existência"
+      "Filosofia"
     ],
     "category": "eudaimonia",
     "filename": "vidas-infinitas.html",
@@ -150,9 +145,8 @@
     "type": "poema",
     "time": "1 min",
     "tags": [
-      "Música",
-      "Harmonia",
-      "Espírito"
+      "Arte",
+      "Filosofia"
     ],
     "category": "musica",
     "filename": "musica-soberana.html",
@@ -167,8 +161,7 @@
     "time": "1 min",
     "tags": [
       "Natureza",
-      "Origem",
-      "Memória"
+      "Filosofia"
     ],
     "category": "natureza",
     "filename": "cafe-em-flor.html",
@@ -182,8 +175,7 @@
     "type": "poema",
     "time": "1 min",
     "tags": [
-      "Dança",
-      "Ritmo",
+      "Arte",
       "Afeto"
     ],
     "category": "musica",
@@ -198,8 +190,8 @@
     "type": "poema",
     "time": "1 min",
     "tags": [
-      "Consciência",
-      "Cosmo",
+      "Atenção Plena",
+      "Natureza",
       "Vida"
     ],
     "category": "consciencia",
