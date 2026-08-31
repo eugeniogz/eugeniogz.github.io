@@ -7,6 +7,7 @@ layout: reflections
 #### sentir e pensar
 
 ### 📄 [Valores](./valores.html) <span class="word-count">[1 min]</span>
+A bússola moral em constante revisão.
 ### 📄 [Imperfeições](./imperfeicoes.html) <span class="word-count">[1 min]</span>
 O reconhecimento sem culpa dos desvios.
 ### 📄 [Decisões](./decisoes.html) <span class="word-count">[1 min]</span>

@@ -207,10 +207,20 @@ function normalizarTag(tag) {
   const clean = normalizarAspas(tag).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
   if (!clean) return '';
 
+  const lower = clean.toLowerCase();
+  if (lower === 'método vida' || lower === 'metodo vida') {
+    return 'Método VIDA';
+  }
+  if (lower === 'sistema gene') {
+    return 'Sistema GENE';
+  }
+  if (lower === 'futuro ancestral') {
+    return 'Futuro Ancestral';
+  }
+
   const hasUpperVida = /\bVIDA\b/.test(clean);
   const hasUpperGene = /\bGENE\b/.test(clean);
 
-  const lower = clean.toLowerCase();
   let result = lower.charAt(0).toUpperCase() + lower.slice(1);
 
   if (hasUpperVida) {
@@ -1219,6 +1229,7 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         let customDateStr = null;
         let customDocLayout = null;
         let customDesc = null;
+        let descKey = 'description';
         
         // --- 1. EXTRAÇÃO DE METADADOS (SCORE e TAGS) em passagem reversa ---
         for (let i = body.getNumChildren() - 1; i >= 0; i--) {
@@ -1306,6 +1317,47 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         }
         let isPost = /^\d{4}-\d{2}-\d{2}-/.test(originalFileName);
         
+        // --- 1.5 PRESERVAÇÃO DE METADADOS DO ARQUIVO DESTINO EXISTENTE ---
+        // Se o Google Doc não possui tags ou descrição própria, preservamos o que já existe no .md destino.
+        const targetMdFileName = `${fileSlug}.md`;
+        try {
+            const existingFiles = pastaDestino.getFilesByName(targetMdFileName);
+            if (existingFiles.hasNext()) {
+                const existingMdContent = existingFiles.next().getBlob().getDataAsString();
+                const fmMatch = existingMdContent.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+                if (fmMatch) {
+                    const fmText = fmMatch[1];
+                    // Preservar tags se o Google Doc não definiu nenhuma
+                    if (!tagsFound || tags.length === 0) {
+                        const tagsBlockMatch = fmText.match(/^tags:\s*\n((?:\s*-\s*.*(?:\n|$))+)/im);
+                        if (tagsBlockMatch) {
+                            tags = tagsBlockMatch[1].split('\n')
+                                .map(line => {
+                                    const m = line.match(/^\s*-\s*(.+)$/);
+                                    return m ? m[1].trim().replace(/^['"]|['"]$/g, '') : null;
+                                })
+                                .filter(Boolean);
+                        } else {
+                            const tagsInlineMatch = fmText.match(/^tags:\s*\[(.*?)\]/im);
+                            if (tagsInlineMatch) {
+                                tags = tagsInlineMatch[1].split(',').map(t => t.trim().replace(/^['"]|['"]$/g, '')).filter(Boolean);
+                            }
+                        }
+                    }
+                    // Preservar descrição/desc se o Google Doc não definiu
+                    if (!customDesc) {
+                        const descMatch = fmText.match(/^(description|desc):\s*["']?(.*?)["']?\s*$/im);
+                        if (descMatch) {
+                            descKey = descMatch[1].toLowerCase();
+                            customDesc = descMatch[2].trim();
+                        }
+                    }
+                }
+            }
+        } catch (e) {
+            Logger.log(`[AVISO] Falha ao ler metadados existentes em "${targetMdFileName}": ${e.toString()}`);
+        }
+
         // --- 2. MONTAGEM DO YAML FRONT MATTER ---
         const cleanTitle = normalizarAspas(nomeSemData).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
         const defaultFolderLayout = obterLayoutDaPasta(pastaDestino);
@@ -1318,7 +1370,7 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         markdown += `semantic_order: ${semanticOrderScore}\n`;
 
         if (customDesc) {
-            markdown += `desc: "${customDesc}"\n`;
+            markdown += `${descKey || 'description'}: "${customDesc}"\n`;
         }
 
         if (pillar) {

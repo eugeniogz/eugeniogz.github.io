@@ -13,4 +13,4 @@ tags:
 description: "O respeito e a serenidade no debate democrático como fundamentos do exemplo e da virtude individual."
 --- 
 
-Numa democracia, ideologias e preferências alimentam discussões; todavia, o respeito e a serenidade iluminam a melhor escolha: o exemplo da virtude individual.
+Numa democracia, ideologias e preferências alimentam discussões; todavia, o respeito e a serenidade iluminam a melhor escolha: o exemplo das virtudes.
