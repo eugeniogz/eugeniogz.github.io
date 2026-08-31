@@ -422,8 +422,10 @@ async function processFlatSection(jsonBaseName, folderName, existingTags = []) {
             const { meta, body } = parseYamlFrontmatter(mdContent);
             mdBody = body;
 
-            if (meta.tags && Array.isArray(meta.tags) && meta.tags.length > 0) {
-                itemObj.tags = meta.tags;
+            if (!itemObj.tags || !Array.isArray(itemObj.tags) || itemObj.tags.length === 0) {
+                if (meta.tags && Array.isArray(meta.tags) && meta.tags.length > 0) {
+                    itemObj.tags = meta.tags;
+                }
             }
             if (meta.description || meta.desc) {
                 itemObj.desc = meta.description || meta.desc;
@@ -560,8 +562,10 @@ async function processVolumeSection(jsonBaseName, folderName, existingTags = [])
                 const { meta, body } = parseYamlFrontmatter(mdContent);
                 mdBody = body;
 
-                if (meta.tags && Array.isArray(meta.tags) && meta.tags.length > 0) {
-                    storyObj.tags = meta.tags;
+                if (!storyObj.tags || !Array.isArray(storyObj.tags) || storyObj.tags.length === 0) {
+                    if (meta.tags && Array.isArray(meta.tags) && meta.tags.length > 0) {
+                        storyObj.tags = meta.tags;
+                    }
                 }
                 if (meta.description || meta.desc) {
                     storyObj.desc = meta.description || meta.desc;
@@ -657,6 +661,14 @@ async function main() {
         console.log(`\n🎉 Total de ${updatedTotal} arquivo(s) JSON atualizado(s) com sucesso.`);
     } else {
         console.log('✨ Todos os arquivos JSON já estão sincronizados com os index.md e .md.');
+    }
+
+    console.log('\n🔄 Sincronizando tags nos arquivos Markdown a partir do _data/*.json...');
+    try {
+        const syncTagsScript = path.join(__dirname, 'sync_tags_from_json.js');
+        execSync(`node "${syncTagsScript}"`, { cwd: ROOT_DIR, stdio: 'inherit' });
+    } catch (e) {
+        console.error('⚠️ Erro ao sincronizar tags para os arquivos Markdown:', e.message);
     }
 }
 
