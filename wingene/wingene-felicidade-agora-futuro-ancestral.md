@@ -9,6 +9,9 @@ tags:
   - Eudaimonia
   - Autoconhecimento
 description: "A fusão entre herança e vitória íntima sob uma ótica naturalista, onde o florescimento da eudaimonia esculpe um legado consciente para o amanhã."
+redirect_from:
+  - /wingene-o-futuro-da-heranca-ancestral.html
+  - /wingene-o-futuro-da-heranca-ancestral-abreviado.html
 --- 
 
 

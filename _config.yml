@@ -9,6 +9,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-redirect-from
 paginate: 5
 paginate_path: '/page:num/' # Define a estrutura da URL
 markdown: kramdown

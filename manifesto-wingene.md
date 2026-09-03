@@ -11,6 +11,8 @@ tags:
   - Futuro Ancestral
   - Vida
   - Atenção
+redirect_from:
+  - /wingene-o-futuro-ancestral-manifesto.html
 --- 
 
 Criei a palavra *Wingene* da fusão entre *win* e *gene* — vitória e herança. Mas seu sentido ultrapassa o triunfo genético: expande-se na eterna busca pelo saber — nossa herança ancestral. O conhecimento se completa quando se torna prática, que leva ao aperfeiçoamento pessoal. Uma trilha que nunca termina: cada instante nos aproxima do utópico ideal, florescendo em plena eudaimonia — *eu* (bem) e *daimon* (espírito). Entendo "espírito" não como substância imaterial, mas como emergência de processos neurais. A experiência de transcendência brota da matéria viva. Nesse sentido, a eudaimonia é felicidade serena — um estado natural que nasce no recinto mental.

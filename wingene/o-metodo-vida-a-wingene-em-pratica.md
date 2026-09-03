@@ -12,6 +12,8 @@ tags:
   - Atenção
   - Imperfeições
 description: "A aplicação prática da Wingene através do método VIDA: um itinerário ético de valores, imperfeições, decisões e atenção voltado ao florescimento humano."
+redirect_from:
+  - /Wingene/o-metodo-vida-a-wingene-em-pratica.html
 --- 
 
 

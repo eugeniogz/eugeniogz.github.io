@@ -9,6 +9,8 @@ tags:
   - Vida
   - Autoconhecimento
 description: "A arte de tecer a própria existência como uma obra única, moldada pelo tempo, pelo afeto e pelo amadurecimento da razão diante das ilusões do mundo."
+redirect_from:
+  - /tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html
 --- 
 
 

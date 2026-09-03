@@ -4,8 +4,328 @@ title: "404 - Página não encontrada"
 permalink: /404.html
 ---
 
-<div style="text-align: center; margin-top: 50px;">
-  <h1>404</h1>
-  <p>Ops! Parece que esta página não existe.</p>
-  <p>Volte para a <a href="{{ site.baseurl }}/">página inicial</a>.</p>
+<script>
+(function() {
+  var path = window.location.pathname;
+  var hash = window.location.hash;
+
+  // Evita redirecionamento se já estiver na própria URL do 404
+  if (path === '/404.html' || path === '/404') {
+    return;
+  }
+
+  var decoded = '';
+  try {
+    decoded = decodeURIComponent(path);
+  } catch(e) {
+    decoded = path;
+  }
+
+  // Tabela direta de URLs conhecidas renomeadas ou movidas
+  var directMap = {
+    "/wingene-o-futuro-da-heranca-ancestral-abreviado.html": "/wingene/wingene-felicidade-agora-futuro-ancestral.html",
+    "/wingene-o-futuro-da-heranca-ancestral.html": "/wingene/wingene-felicidade-agora-futuro-ancestral.html",
+    "/wingene-o-futuro-ancestral-manifesto.html": "/manifesto-wingene.html",
+    "/tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html": "/wingene/tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html",
+    "/2026/01/31/serena-euforia-aurora-noturna.html": "/cronicas/cronicas-1/serena-euforia.html",
+    "/2026/01/21/vida-breve-rotas-eternasvida-breve-rotas-eternasht.html": "/poesias-e-aforismos/vida-breve-rotas-eternas.html",
+    "/p/wingene.html": "/wingene/",
+    "/page3/": "/",
+    "/page3": "/",
+    "/Ipês e Tijolos/temperando-a-ideologia.html": "/ipes-e-tijolos/",
+    "/ipes-e-tijolos/temperando-a-ideologia.html": "/ipes-e-tijolos/",
+    "/Ipês e Tijolos/a-eudaimonia-social-quando-as-florestas-mentais-se-encontram.html": "/wingene/o-sistema-gene-e-a-wingene-coletiva-a-arquitetura-da-eudaimonia-social.html",
+    "/ipes-e-tijolos/a-eudaimonia-social-quando-as-florestas-mentais-se-encontram.html": "/wingene/o-sistema-gene-e-a-wingene-coletiva-a-arquitetura-da-eudaimonia-social.html",
+    "/Crônicas/Crônicas 3/futuro-ancestral.html": "/wingene/wingene-felicidade-agora-futuro-ancestral.html",
+    "/cronicas/cronicas-3/futuro-ancestral.html": "/wingene/wingene-felicidade-agora-futuro-ancestral.html",
+    "/Ipês e Tijolos/ipes-e-tijolos.html": "/ipes-e-tijolos/ipes-e-tijolos.html",
+    "/o-cascudo-e-outras-historias/o-cascudo-upper.html": "/o-cascudo-e-outras-historias/o-cascudo.html",
+    "/o-cascudo-e-outras-historias/index-upper.html": "/o-cascudo-e-outras-historias/",
+    "/Wingene/o-metodo-vida-a-wingene-em-pratica.html": "/wingene/o-metodo-vida-a-wingene-em-pratica.html",
+    "/Wingene/wingene-felicidade-agora-futuro-ancestral.html": "/wingene/wingene-felicidade-agora-futuro-ancestral.html",
+    "/Crônicas/Crônicas 2/dedicada-rotina.html": "/cronicas/cronicas-2/"
+  };
+
+  if (directMap[decoded]) {
+    window.location.replace(directMap[decoded] + hash);
+    return;
+  }
+  if (directMap[path]) {
+    window.location.replace(directMap[path] + hash);
+    return;
+  }
+
+  // Normalização de pastas e caminhos antigos (acentos, espaços, maiúsculas)
+  var norm = decoded;
+  norm = norm.replace(/^\/Cr[oôó]nicas\/Cr[oôó]nicas\s*1\/?/i, "/cronicas/cronicas-1/");
+  norm = norm.replace(/^\/Cr[oôó]nicas\/Cr[oôó]nicas\s*2\/?/i, "/cronicas/cronicas-2/");
+  norm = norm.replace(/^\/Cr[oôó]nicas\/Cr[oôó]nicas\s*3\/?/i, "/cronicas/cronicas-3/");
+  norm = norm.replace(/^\/Cr[oôó]nicas\/breves\s*cr[oôó]nicas\/?/i, "/cronicas/breves-cronicas/");
+  norm = norm.replace(/^\/Cr[oôó]nicas\/?/i, "/cronicas/");
+  norm = norm.replace(/^\/Ip[eêé]s\s*e\s*Tijolos\/?/i, "/ipes-e-tijolos/");
+  norm = norm.replace(/^\/Poesias\s*e\s*Aforismos\/?/i, "/poesias-e-aforismos/");
+  norm = norm.replace(/^\/O\s*cascudo\s*e\s*outras\s*hist[oóô]rias\/?/i, "/o-cascudo-e-outras-historias/");
+  norm = norm.replace(/^\/Wingene\/?/i, "/wingene/");
+
+  // Normalizar nome do arquivo se presente
+  var segments = norm.split('/');
+  var fileName = segments.pop();
+  if (fileName) {
+    var cleanFileName = fileName
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .replace(/\s+/g, '-')
+      .replace(/-upper\.html$/i, '.html');
+    segments.push(cleanFileName);
+    norm = segments.join('/');
+  }
+
+  if (norm !== decoded && norm !== '/404.html') {
+    window.location.replace(norm + hash);
+    return;
+  }
+})();
+</script>
+
+<div class="custom-404-container">
+  <div class="custom-404-header">
+    <span class="custom-404-badge">404</span>
+    <h1>Página não encontrada</h1>
+    <p class="custom-404-desc">
+      O endereço que você tentou acessar foi renomeado, reorganizado ou não está mais disponível.
+    </p>
+  </div>
+
+  <div id="legacy-search-box" class="legacy-suggestion" style="display: none;">
+    <p>Você estava procurando por <strong id="legacy-term"></strong>?</p>
+    <a id="legacy-search-link" href="#" class="btn-legacy-search">
+      🔍 Pesquisar no site
+    </a>
+  </div>
+
+  <div class="custom-404-search">
+    <form action="{{ '/Search.html' | relative_url }}" method="get" class="search-form-group">
+      <div class="search-input-wrapper">
+        <span class="search-input-icon">🔍</span>
+        <input type="text" name="q" id="search-box-404" placeholder="Pesquisar por artigos, crônicas ou poesias..." autocomplete="off" />
+        <button type="submit" class="search-btn-submit">Buscar</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="custom-404-sections">
+    <h2>Explore os principais temas:</h2>
+    <div class="sections-grid">
+      <a href="{{ '/wingene/' | relative_url }}" class="section-card">
+        <span class="card-icon">🌱</span>
+        <div class="card-text">
+          <strong>Wingene & Método VIDA</strong>
+          <small>Ensaios sobre virtude, eudaimonia e legado consciente</small>
+        </div>
+      </a>
+      <a href="{{ '/cronicas/' | relative_url }}" class="section-card">
+        <span class="card-icon">☕</span>
+        <div class="card-text">
+          <strong>Crônicas</strong>
+          <small>Textos e reflexões sensíveis sobre o cotidiano</small>
+        </div>
+      </a>
+      <a href="{{ '/ipes-e-tijolos/' | relative_url }}" class="section-card">
+        <span class="card-icon">🌳</span>
+        <div class="card-text">
+          <strong>Ipês e Tijolos</strong>
+          <small>Ensaios sobre natureza, razão, esforço e tempo</small>
+        </div>
+      </a>
+      <a href="{{ '/poesias-e-aforismos/' | relative_url }}" class="section-card">
+        <span class="card-icon">✍️</span>
+        <div class="card-text">
+          <strong>Poesias e Aforismos</strong>
+          <small>Versos, sínteses e lapidações da consciência</small>
+        </div>
+      </a>
+      <a href="{{ '/o-cascudo-e-outras-historias/' | relative_url }}" class="section-card">
+        <span class="card-icon">🐢</span>
+        <div class="card-text">
+          <strong>O Cascudo e Outras Histórias</strong>
+          <small>Narrativas infanto-juvenis e colaboração</small>
+        </div>
+      </a>
+      <a href="{{ '/' | relative_url }}" class="section-card">
+        <span class="card-icon">🏠</span>
+        <div class="card-text">
+          <strong>Início do Microblog</strong>
+          <small>Ver as publicações e notas mais recentes</small>
+        </div>
+      </a>
+    </div>
+  </div>
 </div>
+
+<style>
+.custom-404-container {
+  max-width: 760px;
+  margin: 2rem auto 4rem auto;
+  padding: 0 1rem;
+}
+.custom-404-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.custom-404-badge {
+  display: inline-block;
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--color-values-primary, #940f0f);
+  background: var(--color-values-light, rgba(148, 15, 15, 0.08));
+  padding: 0.2rem 1rem;
+  border-radius: 999px;
+  margin-bottom: 0.8rem;
+}
+.custom-404-header h1 {
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
+  color: var(--text-main, #111827);
+}
+.custom-404-desc {
+  font-size: 1.05rem;
+  color: var(--text-muted, #4b5563);
+  margin: 0 auto;
+  max-width: 580px;
+  line-height: 1.5;
+}
+
+.legacy-suggestion {
+  background: var(--color-imperfections-light, #fefdf0);
+  border: 1px solid var(--border-light, #e5e7eb);
+  border-left: 4px solid var(--color-imperfections-primary, #a89408);
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  margin-bottom: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+.legacy-suggestion p {
+  margin: 0;
+  color: var(--text-main, #111827);
+}
+.btn-legacy-search {
+  background: var(--color-attention-primary, #123e9c);
+  color: #fff !important;
+  text-decoration: none;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: opacity 0.2s;
+}
+.btn-legacy-search:hover {
+  opacity: 0.9;
+}
+
+.custom-404-search {
+  margin-bottom: 2.5rem;
+}
+.search-btn-submit {
+  background: var(--color-attention-primary, #123e9c);
+  color: #fff;
+  border: none;
+  padding: 0 1rem;
+  border-radius: 6px;
+  margin-right: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+.search-btn-submit:hover {
+  opacity: 0.9;
+}
+
+.custom-404-sections h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  color: var(--text-main, #111827);
+  text-align: center;
+}
+.sections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.section-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 1rem;
+  background: var(--bg-card, #f9fafb);
+  border: 1px solid var(--border-light, #e5e7eb);
+  border-radius: 8px;
+  text-decoration: none !important;
+  color: inherit !important;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.section-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-attention-primary, #123e9c);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.card-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.card-text strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--color-attention-primary, #123e9c);
+  margin-bottom: 0.2rem;
+}
+.card-text small {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--text-muted, #6b7280);
+  line-height: 1.35;
+}
+</style>
+
+<script>
+// Detecta se a URL continha um post do Blogger ou slug com termo pesquisável
+(function() {
+  try {
+    var rawPath = decodeURIComponent(window.location.pathname);
+    var term = '';
+
+    // Match Blogger /YYYY/MM/DD/slug.html
+    var dateMatch = rawPath.match(/\/\d{4}\/\d{2}\/\d{2}\/(.+)\.html$/i);
+    if (dateMatch) {
+      term = dateMatch[1].replace(/[-_]/g, ' ').trim();
+    } else {
+      var fileMatch = rawPath.match(/\/([^\/]+)\.html$/i);
+      if (fileMatch) {
+        term = fileMatch[1].replace(/[-_]/g, ' ').trim();
+      }
+    }
+
+    if (term && term.length > 2) {
+      var box = document.getElementById('legacy-search-box');
+      var label = document.getElementById('legacy-term');
+      var link = document.getElementById('legacy-search-link');
+      var input = document.getElementById('search-box-404');
+      if (box && label && link) {
+        label.textContent = '"' + term + '"';
+        link.href = '{{ "/Search.html" | relative_url }}?q=' + encodeURIComponent(term);
+        box.style.display = 'flex';
+      }
+      if (input) {
+        input.value = term;
+      }
+    }
+  } catch(e) {}
+})();
+</script>
