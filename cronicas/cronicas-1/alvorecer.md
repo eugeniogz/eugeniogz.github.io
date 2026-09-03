@@ -9,6 +9,9 @@ tags:
   - Tempo
   - Sociedade
 description: "O alvorecer de duas rotinas que se cruzam na singeleza do cotidiano, revelando como a atenção aos pequenos detalhes pode despertar a poesia do presente."
+redirect_from:
+  - /Crônicas/Crônicas 2/dedicada-rotina.html
+  - /cronicas/cronicas-2/dedicada-rotina.html
 --- 
 
 

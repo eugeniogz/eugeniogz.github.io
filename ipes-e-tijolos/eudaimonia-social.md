@@ -9,6 +9,9 @@ tags:
   - Filosofia
   - Afeto
 description: "O florescimento humano que se expande além do indivíduo, alcançando a harmonia da comunidade."
+redirect_from:
+  - /Ipês e Tijolos/a-eudaimonia-social-quando-as-florestas-mentais-se-encontram.html
+  - /ipes-e-tijolos/a-eudaimonia-social-quando-as-florestas-mentais-se-encontram.html
 --- 
 
 

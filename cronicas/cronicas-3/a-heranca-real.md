@@ -7,6 +7,9 @@ tags:
   - Wingene
   - Autoconhecimento
 description: "O verdadeiro patrimônio: os valores e o exemplo transmitidos."
+redirect_from:
+  - /Crônicas/Crônicas 3/futuro-ancestral.html
+  - /cronicas/cronicas-3/futuro-ancestral.html
 --- 
 
 
