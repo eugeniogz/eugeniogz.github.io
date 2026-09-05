@@ -3,6 +3,14 @@ layout: wingene
 title: "Fundamentos Filosóficos e Científicos da Wingene"
 reading_time: 6
 semantic_order: 42
+description: "A convergência entre a sabedoria ética clássica e o rigor das ciências naturais, fundamentando a Wingene e o Método VIDA no solo fértil do naturalismo e do florescimento humano."
+tags:
+  - Wingene
+  - Filosofia
+  - Ciência
+  - Ética
+  - Eudaimonia
+  - Método VIDA
 --- 
 
 

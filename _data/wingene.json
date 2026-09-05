@@ -17,11 +17,21 @@
   },
   {
     "id": "fundamentos-filosoficos-e-cientificos-da-wingene",
+    "number": 2,
     "title": "Fundamentos Filosóficos e Científicos da Wingene",
+    "subtitle": "o encontro entre a tradição ética e o naturalismo",
     "time": "6 min",
+    "category": "fundamentos",
+    "tags": [
+      "Wingene",
+      "Filosofia",
+      "Ciência",
+      "Ética",
+      "Eudaimonia",
+      "Método VIDA"
+    ],
     "filename": "fundamentos-filosoficos-e-cientificos-da-wingene.html",
-    "desc": "",
-    "number": 2
+    "desc": "A convergência entre a sabedoria ética clássica e o rigor das ciências naturais, fundamentando a Wingene e o Método VIDA no solo fértil do naturalismo e do florescimento humano."
   },
   {
     "id": "etimologias-da-wingene-o-florescimento-do-espirito",
