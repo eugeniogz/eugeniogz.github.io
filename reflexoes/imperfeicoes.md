@@ -3,16 +3,16 @@ layout: reflections
 title: "Imperfeições"
 reading_time: 1
 semantic_order: 20
+description: "O reconhecimento sem culpa dos desvios."
 tags:
   - Imperfeições
-description: "O reconhecimento sem culpa dos desvios."
 --- 
 
 
 
 ### [Reflexões](./)
 
-Para vencer uma imperfeição é preciso reconhecer, ter vontade e se esforçar reiteradamente em combatê-la. -- 26/08/26
+Para vencer uma imperfeição, é preciso reconhecer, ter vontade e se esforçar reiteradamente em combatê-la. -- 26/08/26
 
 ### Pessoais
 
@@ -29,6 +29,8 @@ A defesa da opinião, quando precedida pela pausa consciente, não somente permi
 O instante do erro verbal transforma-se em lição quando convoca a atenção necessária para resgatar a coerência com os valores. -- 11/07/26
 
 ### Atencionais
+
+Uma falha não mancha o êxito; pinta o caminho da batalha contínua. -- 05/09/26
 
 Nos momentos de piloto automático, as atitudes podem desviar dos valores pessoais; todavia, basta um único instante de atenção para a oportuna correção da rota. -- 16/07/26
 

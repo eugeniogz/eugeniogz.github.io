@@ -15,3 +15,4 @@ layout: default
 ### 📄 [Repetição consciente](./2026-08-29-repeticao-consciente.html) <span class="word-count">[1 min]</span>
 ### 📄 [Exemplo como escolha](./2026-08-31-exemplo-como-escolha.html) <span class="word-count">[1 min]</span>
 O respeito e a serenidade no debate democrático como fundamentos do exemplo e da virtude individual.
+### 📄 [Nota mental](./2026-09-05-nota-mental.html) <span class="word-count">[1 min]</span>
