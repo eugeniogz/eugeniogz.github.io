@@ -9,6 +9,7 @@ layout: wingene
 ### 📄 [Wingene: Felicidade agora, futuro ancestral](./wingene-felicidade-agora-futuro-ancestral.html) <span class="word-count">[12 min]</span>
 A fusão entre herança e vitória íntima sob uma ótica naturalista, onde o florescimento da eudaimonia esculpe um legado consciente para o amanhã.
 ### 📄 [Fundamentos Filosóficos e Científicos da Wingene](./fundamentos-filosoficos-e-cientificos-da-wingene.html) <span class="word-count">[6 min]</span>
+A convergência entre a sabedoria ética clássica e o rigor das ciências naturais, fundamentando a Wingene e o Método VIDA no solo fértil do naturalismo e do florescimento humano.
 ### 📄 [Etimologia e a Wingene](./etimologias-da-wingene-o-florescimento-do-espirito.html) <span class="word-count">[3 min]</span>
 A arqueologia linguística de um conceito que une a herança interna do ser ao esforço intencional e amoroso de florescimento espiritual.
 ### 📄 [O método VIDA: a Wingene em prática](./o-metodo-vida-a-wingene-em-pratica.html) <span class="word-count">[15 min]</span>

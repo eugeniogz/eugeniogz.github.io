@@ -573,7 +573,11 @@ table {
 
 table td, table th {
   padding: 12px 15px !important;
-  white-space: nowrap;
+  white-space: normal !important;
+  word-break: normal;
+  overflow-wrap: break-word;
+  vertical-align: top;
+  line-height: 1.5;
 }
 
 table th {
@@ -581,6 +585,19 @@ table th {
   background-color: var(--color-values-light) !important;
   color: var(--text-values-primary) !important;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+  table td, table th {
+    padding: 8px 10px !important;
+    font-size: 0.88rem;
+    line-height: 1.4;
+    min-width: 95px;
+  }
+
+  table td:first-child, table th:first-child {
+    min-width: 70px;
+  }
 }
 
 /* ==========================================================================
