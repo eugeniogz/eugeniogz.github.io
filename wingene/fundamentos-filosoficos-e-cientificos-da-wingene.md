@@ -8,7 +8,6 @@ tags:
   - Wingene
   - Filosofia
   - Ciência
-  - Ética
   - Eudaimonia
   - Método VIDA
 --- 
