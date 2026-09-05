@@ -6,4 +6,39 @@
 
 <!-- Setup Google Analytics -->
 {% include head-custom-google-analytics.html %}
+
+<!-- Dados estruturados Schema.org para Desambiguação de Entidade e SEO da marca Wingene -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Blog",
+      "@id": "https://blog.wingene.com.br/#blog",
+      "url": "https://blog.wingene.com.br/",
+      "name": "Blog Wingene",
+      "alternateName": [
+        "Wingene Blog",
+        "Wingene — Microblog",
+        "Wingene — Filosofia e prática da herança consciente",
+        "Método Wingene"
+      ],
+      "description": "Blog oficial do projeto filosófico Wingene. Ensaios, crônicas, poesias e reflexões sobre eudaimonia, neurociência e o Método VIDA.",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://wingene.com.br/#website",
+        "url": "https://wingene.com.br/",
+        "name": "Wingene"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Wingene",
+        "url": "https://wingene.com.br/",
+        "logo": "https://wingene.com.br/wingene.svg"
+      }
+    }
+  ]
+}
+</script>
 <!-- end custom head snippets -->
