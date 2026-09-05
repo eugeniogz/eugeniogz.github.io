@@ -105,13 +105,13 @@ permalink: /404.html
   </div>
 
   <div class="custom-404-search">
-    <form action="{{ '/Search.html' | relative_url }}" method="get" class="search-form-group">
+    <form onsubmit="return false;" class="search-form-group">
       <div class="search-input-wrapper">
         <span class="search-input-icon">🔍</span>
-        <input type="text" name="q" id="search-box-404" placeholder="Pesquisar por artigos, crônicas ou poesias..." autocomplete="off" />
-        <button type="submit" class="search-btn-submit">Buscar</button>
+        <input type="text" id="search-input" placeholder="Pesquisar por artigos, crônicas ou poesias..." autocomplete="off" />
       </div>
     </form>
+    <ul id="results-container"></ul>
   </div>
 
   <div class="custom-404-sections">
@@ -234,19 +234,11 @@ permalink: /404.html
 .custom-404-search {
   margin-bottom: 2.5rem;
 }
-.search-btn-submit {
-  background: var(--color-attention-primary, #123e9c);
-  color: #fff;
-  border: none;
-  padding: 0 1rem;
-  border-radius: 6px;
-  margin-right: 4px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: opacity 0.2s;
+.custom-404-search .search-form-group {
+  margin-bottom: 0;
 }
-.search-btn-submit:hover {
-  opacity: 0.9;
+#results-container:empty {
+  display: none;
 }
 
 .custom-404-sections h2 {
@@ -295,14 +287,13 @@ permalink: /404.html
 }
 </style>
 
+<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
 <script>
-// Detecta se a URL continha um post do Blogger ou slug com termo pesquisável
 (function() {
+  var term = '';
+  // Detecta se a URL continha um post do Blogger ou slug com termo pesquisável
   try {
     var rawPath = decodeURIComponent(window.location.pathname);
-    var term = '';
-
-    // Match Blogger /YYYY/MM/DD/slug.html
     var dateMatch = rawPath.match(/\/\d{4}\/\d{2}\/\d{2}\/(.+)\.html$/i);
     if (dateMatch) {
       term = dateMatch[1].replace(/[-_]/g, ' ').trim();
@@ -317,10 +308,18 @@ permalink: /404.html
       var box = document.getElementById('legacy-search-box');
       var label = document.getElementById('legacy-term');
       var link = document.getElementById('legacy-search-link');
-      var input = document.getElementById('search-box-404');
+      var input = document.getElementById('search-input');
       if (box && label && link) {
         label.textContent = '"' + term + '"';
-        link.href = '{{ "/Search.html" | relative_url }}?q=' + encodeURIComponent(term);
+        link.href = '#search-input';
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          if (input) {
+            input.value = term;
+            input.focus();
+            input.dispatchEvent(new Event('input', { bubbles: true }));
+          }
+        });
         box.style.display = 'flex';
       }
       if (input) {
@@ -328,5 +327,72 @@ permalink: /404.html
       }
     }
   } catch(e) {}
+
+  fetch('{{ "/search.json" | relative_url }}')
+    .then(response => response.json())
+    .then(json => {
+      const filteredJson = json.filter(item => item.url !== '/' && item.url !== '');
+      const searchInput = document.getElementById('search-input');
+      const resultsContainer = document.getElementById('results-container');
+
+      window.simpleJekyllSearch = new SimpleJekyllSearch({
+        searchInput: searchInput,
+        resultsContainer: resultsContainer,
+        json: filteredJson,
+        searchResultTemplate: '<li><a href="{url}"><span>{title}</span> <span class="search-reading-time">{reading_time} min de leitura</span></a></li>',
+        noResultsText: '<li class="no-results">Nenhum resultado encontrado</li>',
+        minimumLength: 2,
+        stopWords: '',
+        limit: 100,
+        searchFields: ['title', 'content', 'tags']
+      });
+
+      function attachHighlightToLinks() {
+        const query = searchInput.value.trim();
+        if (!query) return;
+        const links = resultsContainer.querySelectorAll('a');
+        links.forEach(a => {
+          try {
+            const url = new URL(a.getAttribute('href'), window.location.origin);
+            if (!url.searchParams.has('highlight')) {
+              url.searchParams.set('highlight', query);
+              a.setAttribute('href', url.pathname + url.search);
+            }
+          } catch(e) {}
+        });
+      }
+
+      // Observa novos resultados gerados dinamicamente na lista
+      const observer = new MutationObserver(() => {
+        attachHighlightToLinks();
+      });
+      observer.observe(resultsContainer, { childList: true, subtree: true });
+
+      // Atualiza também no clique como garantia
+      resultsContainer.addEventListener('click', (e) => {
+        const a = e.target.closest('a');
+        if (a) {
+          const query = searchInput.value.trim();
+          if (query) {
+            try {
+              const url = new URL(a.getAttribute('href'), window.location.origin);
+              url.searchParams.set('highlight', query);
+              a.setAttribute('href', url.pathname + url.search);
+            } catch(err) {}
+          }
+        }
+      });
+
+      // Checa se há parâmetros de busca na URL (ex: ?q=minha_busca) ou se já possui termo detectado
+      const urlParams = new URLSearchParams(window.location.search);
+      const query = urlParams.get('q');
+      const finalQuery = query || (searchInput ? searchInput.value : '');
+      if (finalQuery && searchInput) {
+        searchInput.value = finalQuery;
+        setTimeout(() => {
+          searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+        }, 100);
+      }
+    });
 })();
 </script>
