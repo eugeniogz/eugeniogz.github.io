@@ -1,8 +1,9 @@
 ---
 layout: wingene
 title: "O método VIDA: a Wingene em prática"
-reading_time: 14
+reading_time: 15
 semantic_order: 60
+description: "A aplicação prática da Wingene através do método VIDA: um itinerário ético de valores, imperfeições, decisões e atenção voltado ao florescimento humano."
 tags:
   - Método VIDA
   - Euforia
@@ -11,9 +12,6 @@ tags:
   - Decisões
   - Atenção
   - Imperfeições
-description: "A aplicação prática da Wingene através do método VIDA: um itinerário ético de valores, imperfeições, decisões e atenção voltado ao florescimento humano."
-redirect_from:
-  - /Wingene/o-metodo-vida-a-wingene-em-pratica.html
 --- 
 
 
@@ -26,7 +24,7 @@ Como garantir que a seiva cultural contribua para a Wingene? A resposta está nu
 
 O VIDA é um método ético-existencial fundamentado nesses quatro eixos interdependentes. Não se trata de um sistema fechado nem de uma doutrina moral. Trata-se de uma estrutura simples e revisável, compatível com a natureza falível do ser humano e orientada pelo ideal da Wingene.
 
-O cultivo das virtudes não é um conceito original - permeia a filosofia há milênios. O método VIDA não pretende reinventar a ética, mas oferecer uma estrutura prática para o aperfeiçoamento moral.
+Pensadores de todas as épocas souberam que a virtude exige hábito e atenção. A contribuição do método VIDA é oferecer uma arquitetura mnemônica e executável para que esses princípios não fiquem restritos ao terreno da teoria, mas reflitam nas atitudes comuns de cada dia.
 
 ## Valores
 

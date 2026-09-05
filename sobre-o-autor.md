@@ -144,7 +144,7 @@ no_index: true
     </div>
     
     <div class="author-bio">
-      José Eugênio é engenheiro eletricista, mestre em Ciência da Computação e doutor em Gestão e Organização do Conhecimento. Analista de sistemas desde 1990, leciona computação e robótica básica em uma escola infantil. No tempo livre, além de curtir momentos com a família e amigos, estuda e escreve. Mantém esse site desde 2025 com foco na <a href="/manifesto-wingene.html">Wingene</a>, uma filosofia naturalista que descreve o caminho para a eudaimonia — que não deve ser somente pessoal, mas <a href="/ipes-e-tijolos/eudaimonia-social.html">social</a>.
+      José Eugênio é engenheiro eletricista, mestre em Ciência da Computação e doutor em Gestão e Organização do Conhecimento. Analista de sistemas desde 1990, leciona computação e robótica básica em uma escola infantil. No tempo livre, além de curtir momentos com a família e amigos, estuda e escreve. Mantém esse site desde 2025 com foco na <a href="/manifesto-wingene.html">Wingene</a>, uma proposta de filosofia prática e naturalista que busca sintetizar tradições clássicas de aperfeiçoamento moral com a ciência contemporânea, traçando um caminho consciente para a eudaimonia — que não deve ser somente pessoal, mas <a href="/ipes-e-tijolos/eudaimonia-social.html">social</a>.
     </div>
 
     <blockquote class="author-quote">

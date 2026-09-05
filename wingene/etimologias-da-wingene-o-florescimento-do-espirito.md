@@ -3,19 +3,17 @@ layout: wingene
 title: "Etimologia e a Wingene"
 reading_time: 3
 semantic_order: 50
+description: "A arqueologia linguística de um conceito que une a herança interna do ser ao esforço intencional e amoroso de florescimento espiritual."
 tags:
   - Wingene
   - Filosofia
   - Autoconhecimento
   - Eudaimonia
-description: "A arqueologia linguística de um conceito que une a herança interna do ser ao esforço intencional e amoroso de florescimento espiritual."
 --- 
 
 
 
 ### [Wingene](./)
-
-## Etimologia e a Wingene
 
 As palavras não são meros arranjos de letras; elas guardam a memória da experiência humana ao longo dos milênios. Quando mergulhamos na arqueologia linguística para compreender o neologismo **Wingene**, descobrimos que ele não é apenas uma palavra inventada, mas um manifesto filosófico que une a ciência da vida à poesia do esforço humano.
 
@@ -37,7 +35,7 @@ Na sua origem mais remota, na raiz indo-europeia wenh***-***, o significado era 
 
 * *Wunjo*: O substantivo que representava a "alegria", o "êxtase" ou a "harmonia" alcançada após a jornada.
 
-Vencer, na sua essência etimológica, é o ato de aproximar-se daquilo que se ama através do esforço intencional. Para a Wingene, o que mais se ama é a eudaimonia, o florescimento do espírito. A felicidade da conquista do objetivo primordial daquela semente: o aprimoramento da herança cultural e biológica.
+*Win*, na sua essência etimológica, é o ato de aproximar-se daquilo que se ama através do esforço intencional. Para a Wingene, o que mais se ama é a eudaimonia, o florescimento do espírito. A felicidade da conquista do objetivo primordial daquela semente: o aprimoramento da herança cultural e biológica.
 
 ### **Wingene: As vitórias sucessivas da vida**
 
@@ -57,6 +55,6 @@ Wingene, portanto, é o encontro da nossa origem com o nosso destino. É o ato d
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./wingene-felicidade-agora-futuro-ancestral.html">&lt;&lt; Wingene: Felicidade agora, futuro ancestral</a>
+  <a href="./fundamentos-filosoficos-e-cientificos-da-wingene.html">&lt;&lt; Fundamentos Filosóficos e Científicos da Wingene</a>
   <a href="./o-metodo-vida-a-wingene-em-pratica.html">O método VIDA: a Wingene em prática &gt;&gt;</a>
 </div>

@@ -3,12 +3,12 @@ layout: wingene
 title: "O Sistema GENE: A Arquitetura da Eudaimonia Social"
 reading_time: 10
 semantic_order: 500
+description: "A arquitetura coletiva do Sistema GENE como solo fértil para que o florescimento humano e a harmonia social germinem em sua plenitude."
 tags:
   - Sistema GENE
   - Eudaimonia
   - Sociedade
   - Wingene
-description: "A arquitetura coletiva do Sistema GENE como solo fértil para que o florescimento humano e a harmonia social germinem em sua plenitude."
 --- 
 
 
@@ -65,6 +65,8 @@ Passamos a maior parte do nosso dia no trabalho. Se o ambiente corporativo for a
 As leis e os costumes são os trilhos que conduzem à convivência. Na Grécia Antiga, acolher um forasteiro com gentileza era um dever sagrado; com o tempo, essa atitude evoluiu e transformou a cortesia em direito universal. As normas não podem ser pedras rígidas e intocáveis que esmagam a vida, nem folhas soltas ao vento do oportunismo.
 
 * **Direito Vivo:** leis que dialogam com os costumes da sociedade, mas se submetem continuamente aos valores de liberdade, dignidade e justiça.
+
+* **O Limite da Liberdade**: a busca pela eudaimonia individual encontra seu limite ético no bem-estar e na dignidade do outro. Quando uma atitude individual compromete a harmonia coletiva, a norma atua legitimamente como contrapeso regulador, preservando o solo comum sem anular a dignidade do transgressor.
 
 * **Revisão com o pé no chão:** periodicamente, a sociedade deve se perguntar: *"Esta regra ainda ajuda as pessoas a viverem em paz e com dignidade, ou virou apenas burocracia que atrapalha?"* Se virou amarra, precisa ser podada e corrigida.
 
