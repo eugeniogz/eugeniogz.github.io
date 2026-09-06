@@ -8,14 +8,14 @@ layout: wingene
 
 ### 📄 [Wingene: Felicidade agora, futuro ancestral](./wingene-felicidade-agora-futuro-ancestral.html) <span class="word-count">[12 min]</span>
 A fusão entre herança e vitória íntima sob uma ótica naturalista, onde o florescimento da eudaimonia esculpe um legado consciente para o amanhã.
-### 📄 [Fundamentos Filosóficos e Científicos da Wingene](./fundamentos-filosoficos-e-cientificos-da-wingene.html) <span class="word-count">[6 min]</span>
+### 📄 [Fundamentos Filosóficos e Científicos da Wingene](./fundamentos-filosoficos-e-cientificos-da-wingene.html) <span class="word-count">[5 min]</span>
 A convergência entre a sabedoria ética clássica e o rigor das ciências naturais, fundamentando a Wingene e o Método VIDA no solo fértil do naturalismo e do florescimento humano.
 ### 📄 [Etimologia e a Wingene](./etimologias-da-wingene-o-florescimento-do-espirito.html) <span class="word-count">[3 min]</span>
 A arqueologia linguística de um conceito que une a herança interna do ser ao esforço intencional e amoroso de florescimento espiritual.
 ### 📄 [O método VIDA: a Wingene em prática](./o-metodo-vida-a-wingene-em-pratica.html) <span class="word-count">[15 min]</span>
 A aplicação prática da Wingene através do método VIDA: um itinerário ético de valores, imperfeições, decisões e atenção voltado ao florescimento humano.
 ### 📄 [Metaconsciência: pensar o sentir, sentir o pensar](./metaconsciencia-pensar-o-sentir-sentir-o-pensar.html) <span class="word-count">[4 min]</span>
-A fusão entre o pensar e o sentir na conquista da metaconsciência, estado de pura presença onde floresce a serena euforia da eudaimonia.
+A fusão entre o pensar e o sentir na conquista da metaconsciência, estado de pura presença onde floresce a serena euforia.
 ### 📄 [Tecendo a vida: criando no íntimo uma obra pessoal](./tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html) <span class="word-count">[7 min]</span>
 A arte de tecer a própria existência como uma obra única, moldada pelo tempo, pelo afeto e pelo amadurecimento da razão diante das ilusões do mundo.
 ### 📄 [A Wingene na Familia: O Giz Invisivel do Exemplo](./a-wingene-na-familia-o-giz-invisivel-do-exemplo.html) <span class="word-count">[3 min]</span>

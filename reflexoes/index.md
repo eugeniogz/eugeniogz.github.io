@@ -4,7 +4,7 @@ layout: reflections
 
 ## Reflexões
 
-#### sentir e pensar
+#### Máximas e reflexões práticas sobre os quatro pilares
 
 ### 📄 [Valores](./valores.html) <span class="word-count">[1 min]</span>
 A bússola moral em constante revisão.

@@ -1,7 +1,7 @@
 ---
 layout: wingene
 title: "Fundamentos Filosóficos e Científicos da Wingene"
-reading_time: 6
+reading_time: 5
 semantic_order: 42
 description: "A convergência entre a sabedoria ética clássica e o rigor das ciências naturais, fundamentando a Wingene e o Método VIDA no solo fértil do naturalismo e do florescimento humano."
 tags:
@@ -20,13 +20,7 @@ tags:
 
 ## A Tradição Ética e o Naturalismo
 
-A busca pelo viver bem não começou hoje, nem brotou isolada sob o cinza do concreto urbano. A humanidade caminha sobre uma estrada aberta pelos passos, erros e acertos de incontáveis gerações. A Wingene não nasce do vácuo nem pretende romper bruscamente com esse passado: ela se reconhece herdeira declarada da reflexão ética clássica e do rigor investigativo da ciência. Não se trata de inventar uma moral descolada da história, mas de reconhecer que essa pode ser embasada na milenar busca pela sabedoria sob a claridade da biologia evolutiva, das ciências cognitivas e de um compromisso concreto com o futuro ancestral.
-
-A própria semente etimológica do termo guarda essa dupla filiação:
-
-* **Gene:** do grego antigo *génos* (γένος — nascimento, origem, estirpe) e formalizado na botânica de Wilhelm Johannsen (1909). Representa o substrato biológico herdado, a matéria orgânica, o ponto de partida que corre no sangue e delimita nossas predisposições sem reduzi-las ao determinismo cego.
-
-* **Win:** herdeiro da raiz indo-europeia *wenh-* e dos termos germânicos *winnan* (esforçar-se, trabalhar com dedicação) e *wunjo* (alegria, êxtase e harmonia conquistada). Representa o esforço ativo, a vigilância atenta contra as imperfeições e o estado de contentamento harmônico que coroa a jornada virtuosa.
+A busca pelo viver bem não começou hoje, nem brotou isolada sob o cinza do concreto urbano. A humanidade caminha sobre uma estrada aberta pelos passos, erros e acertos de incontáveis gerações. A Wingene não nasce do vácuo nem pretende romper bruscamente com esse passado: ela se reconhece herdeira declarada da reflexão ética clássica e do rigor investigativo da ciência. Não se trata de inventar uma moral descolada da história, mas de reconhecer que essa pode ser embasada na milenar busca pela sabedoria sob a claridade da biologia evolutiva, das ciências cognitivas e de um compromisso concreto com o futuro.
 
 A Wingene opera exatamente nessa fronteira fecunda: entre o que a natureza e os ancestrais nos legaram (*gene*) e aquilo que, com atenção e decisão, escolhemos aprimorar e transmitir (*win*).
 
@@ -44,7 +38,7 @@ Na tradição estóica de Epicteto, Sêneca e Marco Aurélio, encontramos a dist
 
 **Espinosa e o Naturalismo Imanente**
 
-Em Baruch Espinosa, supera-se a fratura do dualismo cartesiano: a mente é a ideia do próprio corpo vivente. A Wingene adota esse naturalismo integral ao postular o espírito material — o espírito não como substância etérea ou mística, mas como a consciência viva ancorada nos processos biológicos, nos circuitos neurais e na capacidade de contemplação do real. A força de perseverar na existência (*conatus*) ganha lucidez no princípio de pensar o sentir e sentir o pensar.
+Em Baruch Espinosa, supera-se a fratura do dualismo cartesiano: a mente é a ideia do próprio corpo vivente. A Wingene adota esse naturalismo integral ao postular o espírito material — o espírito não como substância etérea ou mística, mas como a consciência viva ancorada nos processos biológicos, nos circuitos neurais e na capacidade de contemplação do real.
 
 ## A Âncora Científica
 
@@ -90,8 +84,6 @@ Herdamos o gene biológico e cultural; conquistamos o *win* pelo esforço atenci
 1. **DAMÁSIO, António.** *E a Si Mesmo um Outro: construindo o cérebro consciente.* São Paulo: Companhia das Letras, 2011.
 
 1. **ESPINOSA, Baruch de.** *Ética demonstrada à maneira dos geômetras.* Tradução de Tomaz Tadeu. Belo Horizonte: Autêntica, 2015.
-
-1. **JOHANNSEN, Wilhelm.** *Elemente der exakten Erblichkeitslehre.* Jena: Gustav Fischer, 1909.
 
 1. **KRENAK, Ailton.** *Futuro ancestral.* São Paulo: Companhia das Letras, 2022.
 
