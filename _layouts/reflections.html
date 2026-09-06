@@ -81,8 +81,8 @@ layout: default
     container.innerHTML = `
       ${navHtml}
       <div class="reflexao-hero">
-        <h2>${pageTitle}: ${pageSubtitle}</h2>
-        <p>Reflexões sobre os quatro pilares do <a href="/wingene/o-metodo-vida-a-wingene-em-pratica.html">Método VIDA</a>.</p>
+        <h2>Pilares do método VIDA</h2>
+        <p>Máximas e reflexões práticas sobre os quatro <a href="/wingene/o-metodo-vida-a-wingene-em-pratica.html">pilares</a>.</p>
       </div>
       <div class="reflexoes-hub-grid">
         ${Object.values(pillars).map(p => `
@@ -94,10 +94,6 @@ layout: default
               </div>
               <p class="reflexoes-hub-desc">${p.desc}</p>
               <div class="reflexoes-hub-quote">"${p.quote}"</div>
-            </div>
-            <div class="reflexoes-hub-footer">
-              <span>Explorar reflexões</span>
-              <span>→</span>
             </div>
           </a>
         `).join('')}
