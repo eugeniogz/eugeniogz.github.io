@@ -182,15 +182,18 @@
     }
 
     if (!currentEssay) {
-      currentEssay = essays[0] || {
-        id: 'ensaio',
-        number: 1,
-        title: (container.querySelector('h1, h2') || {}).innerText || 'Ensaio Wingene',
-        time: '3 min',
-        tags: ['Wingene'],
-        url: baseUrl
+      const pageHeading = container.querySelector('h1, h2');
+      const docTitle = document.title ? document.title.split('—')[0].split('|')[0].trim() : '';
+      const fallbackTitle = pageHeading ? pageHeading.innerText.trim() : (docTitle || 'Wingene Essay');
+      currentEssay = {
+        id: pageFilename,
+        number: null,
+        title: fallbackTitle,
+        time: pageFilename.includes('vida') ? '14 min' : '12 min',
+        tags: ['Wingene', 'English'],
+        url: window.location.href
       };
-      currentIndex = 0;
+      currentIndex = -1;
     }
 
     const prevEssay = currentIndex > 0 ? essays[currentIndex - 1] : null;
