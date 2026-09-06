@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div id="wingene-app" class="wingene-container">
+<div id="wingene-app" class="wingene-container" data-page-title="{{ page.title | escape }}" data-page-time="{{ page.reading_time }}" data-page-tags="{{ page.tags | join: ',' }}">
   {{ content }}
 </div>
 
