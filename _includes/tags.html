@@ -19,6 +19,9 @@
         {% assign trimmed_tag = single_tag | strip %}
         {% if trimmed_tag != "" %}
           {% assign tag_check = trimmed_tag | downcase %}
+          {% if site.data.tag_translations[tag_check] %}
+            {% assign tag_check = site.data.tag_translations[tag_check] %}
+          {% endif %}
           {% if tag_check == "futuro ancestral" %}
             {% assign norm_tag = "Futuro Ancestral" %}
           {% elsif tag_check == "método vida" or tag_check == "metodo vida" %}
@@ -26,9 +29,9 @@
           {% elsif tag_check == "sistema gene" %}
             {% assign norm_tag = "Sistema GENE" %}
           {% else %}
-            {% assign norm_tag = trimmed_tag | downcase | capitalize %}
-            {% if trimmed_tag contains "GENE" %}
-              {% if trimmed_tag != "Wingene" and trimmed_tag != "wingene" and trimmed_tag != "WINGENE" %}
+            {% assign norm_tag = tag_check | capitalize %}
+            {% if tag_check contains "gene" %}
+              {% if tag_check != "wingene" %}
                 {% assign norm_tag = norm_tag | replace: "Gene", "GENE" | replace: "gene", "GENE" %}
               {% endif %}
             {% endif %}
@@ -62,6 +65,9 @@
         {% assign tag_parts = tag_str | split: "||" %}
         {% for single_tag in tag_parts %}
           {% assign trimmed_tag = single_tag | strip | downcase %}
+          {% if site.data.tag_translations[trimmed_tag] %}
+            {% assign trimmed_tag = site.data.tag_translations[trimmed_tag] %}
+          {% endif %}
           {% if trimmed_tag != "" %}
             {% assign item_tags_str = item_tags_str | append: "||" | append: trimmed_tag %}
           {% endif %}
@@ -111,6 +117,9 @@
           {% assign tag_parts = tag_str | split: "||" %}
           {% for single_tag in tag_parts %}
             {% assign trimmed_tag = single_tag | strip | downcase %}
+            {% if site.data.tag_translations[trimmed_tag] %}
+              {% assign trimmed_tag = site.data.tag_translations[trimmed_tag] %}
+            {% endif %}
             {% if trimmed_tag != "" %}
               {% assign item_tags_str = item_tags_str | append: "||" | append: trimmed_tag %}
             {% endif %}
@@ -167,6 +176,9 @@
             {% assign tag_parts = tag_str | split: "||" %}
             {% for single_tag in tag_parts %}
               {% assign trimmed_tag = single_tag | strip | downcase %}
+              {% if site.data.tag_translations[trimmed_tag] %}
+                {% assign trimmed_tag = site.data.tag_translations[trimmed_tag] %}
+              {% endif %}
               {% if trimmed_tag != "" %}
                 {% assign item_tags_str = item_tags_str | append: "||" | append: trimmed_tag %}
               {% endif %}
@@ -183,10 +195,63 @@
 {% endfor %}
 
 <script>
+  // Mapeamento de slugs de tags (em inglês ou sem acento) para os correspondentes em português
+  const tagSlugAliases = {
+    'self-knowledge': 'autoconhecimento',
+    'selfknowledge': 'autoconhecimento',
+    'euphoria': 'euforia',
+    'ancestral-future': 'futuro-ancestral',
+    'values': 'valores',
+    'value': 'valores',
+    'imperfections': 'imperfeicoes',
+    'imperfection': 'imperfeicoes',
+    'decisions': 'decisoes',
+    'decision': 'decisoes',
+    'attention': 'atencao',
+    'vida-method': 'metodo-vida',
+    'the-vida-method': 'metodo-vida',
+    'gene-system': 'sistema-gene',
+    'the-gene-system': 'sistema-gene',
+    'philosophy': 'filosofia',
+    'science': 'ciencia',
+    'consciousness': 'consciencia',
+    'contemplation': 'contemplacao',
+    'daily-life': 'cotidiano',
+    'everyday-life': 'cotidiano',
+    'everyday': 'cotidiano',
+    'existence': 'existencia',
+    'family': 'familia',
+    'habits': 'habitos',
+    'habit': 'habitos',
+    'harmony': 'harmonia',
+    'metaconsciousness': 'metaconsciencia',
+    'music': 'musica',
+    'nature': 'natureza',
+    'pause': 'pausa',
+    'presence': 'presenca',
+    'proprioception': 'propriocepcao',
+    'resilience': 'resiliencia',
+    'sensations': 'sensacoes',
+    'society': 'sociedade',
+    'time': 'tempo',
+    'life': 'vida',
+    'affection': 'afeto',
+    'love': 'amor',
+    'action': 'acao',
+    'coffee': 'cafe'
+  };
+
+  function resolveTagSlug(slug) {
+    if (!slug) return slug;
+    const cleanSlug = slug.toLowerCase();
+    return tagSlugAliases[cleanSlug] || cleanSlug;
+  }
+
   // Função para mostrar a lista de tags clicada e atualizar o conteúdo principal
   function showTagList(tagSlug, element) {
+    const canonicalSlug = resolveTagSlug(tagSlug);
     const mainContent = document.getElementById('main-content');
-    const selectedContainer = document.getElementById(tagSlug + '-container');
+    const selectedContainer = document.getElementById(canonicalSlug + '-container') || document.getElementById(tagSlug + '-container');
 
     // Remove a classe active de todas as tags da nuvem
     const tags = document.querySelectorAll('.tag-cloud a');
@@ -196,7 +261,8 @@
     if (element) {
       element.classList.add('active');
     } else {
-      const matchingTag = document.querySelector(`.tag-cloud a[data-tag="${tagSlug}"]`);
+      const matchingTag = document.querySelector(`.tag-cloud a[data-tag="${canonicalSlug}"]`) ||
+                          document.querySelector(`.tag-cloud a[data-tag="${tagSlug}"]`);
       if (matchingTag) {
         matchingTag.classList.add('active');
       }
@@ -225,8 +291,18 @@
           event.preventDefault();
           const tagSlug = link.getAttribute('data-tag');
           showTagList(tagSlug, link);
+          history.pushState(null, '', '#' + tagSlug);
         }
       });
+    }
+
+    // Se houver uma âncora de tag na URL (#autoconcehimento, #self-knowledge, etc.)
+    if (window.location.hash) {
+      const rawHash = decodeURIComponent(window.location.hash.substring(1));
+      const targetSlug = resolveTagSlug(rawHash);
+      if (document.getElementById(targetSlug + '-container') || document.getElementById(rawHash + '-container')) {
+        showTagList(rawHash);
+      }
     }
   });
 </script>
