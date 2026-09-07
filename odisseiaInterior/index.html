@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odisseia Interior</title>
     <meta name="description" content="Odisseia Interior — narrativa poética de José Eugênio sobre a jornada interior de Dirce rumo à paz e ao autoconhecimento.">
+    <link rel="preload" as="image" href="capa.webp" type="image/webp">
+    <link rel="preload" as="image" href="pg1.webp" type="image/webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -485,11 +487,11 @@
     </div>
 
     <script>
-        // Gera dinamicamente o array de imagens
-        const imagens = ["capa.png"];
+        // Gera dinamicamente o array de imagens (.webp)
+        const imagens = ["capa.webp"];
         const numeroDePaginas = 9;
         for (let i = 1; i <= numeroDePaginas; i++) {
-            imagens.push(`pg${i}.png`);
+            imagens.push(`pg${i}.webp`);
         }
 
         const storyText = `Odisseia Interior --- José Eugênio
@@ -516,6 +518,39 @@ Desde então, a centelha divina guia seus serenos passos, servindo de bússola p
         const progressFill = document.getElementById('progress-fill');
         let currentPageIndex = 0;
         let isLargeScreen = window.innerWidth >= 768;
+
+        // Cache e pré-carregamento de imagens
+        const imageCache = new Map();
+
+        function preloadImage(src) {
+            if (!imageCache.has(src)) {
+                const img = new Image();
+                img.src = src;
+                imageCache.set(src, img);
+            }
+            return imageCache.get(src);
+        }
+
+        function preloadNearbyPages(index) {
+            if (index + 1 < imagens.length) preloadImage(imagens[index + 1]);
+            if (index + 2 < imagens.length) preloadImage(imagens[index + 2]);
+            if (index - 1 >= 0) preloadImage(imagens[index - 1]);
+        }
+
+        function preloadAllPagesInBackground() {
+            let i = 0;
+            function loadNext() {
+                if (i < imagens.length) {
+                    preloadImage(imagens[i++]);
+                    if ('requestIdleCallback' in window) {
+                        requestIdleCallback(loadNext);
+                    } else {
+                        setTimeout(loadNext, 120);
+                    }
+                }
+            }
+            setTimeout(loadNext, 250);
+        }
 
         function createPageHTML(imgSrc, pageText, index) {
             const isFirst = index === 0;
@@ -555,52 +590,42 @@ Desde então, a centelha divina guia seus serenos passos, servindo de bússola p
         }
 
         function loadAndShowPage(index) {
-            pageContainer.innerHTML = `
-                <div class="loading-state">
-                    <div class="spinner"></div>
-                    <span>Carregando…</span>
-                </div>`;
-            prevBtn.disabled = true;
-            nextBtn.disabled = true;
+            const src = imagens[index];
+            const cachedImg = preloadImage(src);
+            preloadNearbyPages(index);
 
-            const img = new Image();
-            img.src = imagens[index];
-            img.onload = () => {
-                pageContainer.innerHTML = createPageHTML(imagens[index], texto[index], index);
+            const displayPage = () => {
+                pageContainer.innerHTML = createPageHTML(src, texto[index], index);
                 currentPageIndex = index;
                 updateButtons();
             };
-            img.onerror = () => {
-                pageContainer.innerHTML = `<div class="loading-state">Erro ao carregar a página. Tente novamente.</div>`;
-                updateButtons();
-            };
+
+            if (cachedImg.complete && cachedImg.naturalWidth !== 0) {
+                // Imagem pronta no cache: transição instantânea sem spinner
+                displayPage();
+            } else {
+                pageContainer.innerHTML = `
+                    <div class="loading-state">
+                        <div class="spinner"></div>
+                        <span>Carregando…</span>
+                    </div>`;
+                prevBtn.disabled = true;
+                nextBtn.disabled = true;
+
+                cachedImg.onload = displayPage;
+                cachedImg.onerror = () => {
+                    pageContainer.innerHTML = `<div class="loading-state">Erro ao carregar a página. Tente novamente.</div>`;
+                    updateButtons();
+                };
+            }
         }
 
         function loadAllPages() {
-            pageContainer.innerHTML = `
-                <div class="loading-state">
-                    <div class="spinner"></div>
-                    <span>Carregando história…</span>
-                </div>`;
-
-            const promises = imagens.map(src => new Promise((resolve, reject) => {
-                const img = new Image();
-                img.src = src;
-                img.onload = () => resolve();
-                img.onerror = () => reject(src);
-            }));
-
-            Promise.all(promises)
-                .then(() => {
-                    pageContainer.innerHTML = '';
-                    for (let i = 0; i < imagens.length; i++) {
-                        pageContainer.innerHTML += createPageHTML(imagens[i], texto[i], i);
-                    }
-                    progressFill.style.width = '100%';
-                })
-                .catch(failed => {
-                    pageContainer.innerHTML = `<div class="loading-state">Erro ao carregar: ${failed}. Recarregue a página.</div>`;
-                });
+            pageContainer.innerHTML = '';
+            for (let i = 0; i < imagens.length; i++) {
+                pageContainer.innerHTML += createPageHTML(imagens[i], texto[i], i);
+            }
+            progressFill.style.width = '100%';
         }
 
         function renderPages() {
@@ -669,6 +694,7 @@ Desde então, a centelha divina guia seus serenos passos, servindo de bússola p
 
         // Script está no final do <body> — o DOM já está pronto, chamar diretamente.
         renderPages();
+        preloadAllPagesInBackground();
     </script>
 </body>
 </html>
