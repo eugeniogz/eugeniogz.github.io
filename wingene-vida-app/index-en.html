@@ -238,7 +238,22 @@ hide_header_logo: true
   /* ── FEATURES ── */
   .feature-list { list-style: none; margin-top: 24px; display: flex; flex-direction: column; gap: 20px; }
   .feature-list li { display: flex; gap: 16px; align-items: flex-start; }
-  .feat-icon { font-size: 1.2rem; line-height: 1.4; flex-shrink: 0; width: 28px; text-align: center; }
+  .feat-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    color: var(--mid);
+    margin-top: 2px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .feat-icon svg { width: 18px; height: 18px; stroke: currentColor; }
+  .feature-list li:hover .feat-icon { color: var(--ink); border-color: var(--muted); }
   .feat-title { font-family: 'Lora', serif; font-weight: 600; font-size: 0.95rem; margin-bottom: 3px; }
   .feat-desc { font-size: 0.88rem; color: var(--mid); line-height: 1.6; }
 
@@ -260,8 +275,22 @@ hide_header_logo: true
     font-size: 0.88rem; line-height: 1.65; color: var(--mid);
   }
   .privacy-box strong { font-family: 'Lora', serif; color: var(--ink); font-weight: 600; }
-  .privacy-row { margin-bottom: 14px; }
+  .privacy-row {
+    margin-bottom: 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
   .privacy-row:last-child { margin-bottom: 0; }
+  .privacy-icon {
+    flex-shrink: 0;
+    width: 17px;
+    height: 17px;
+    margin-top: 4px;
+    color: var(--mid);
+    stroke: currentColor;
+  }
+  .privacy-text { flex: 1; }
 
   /* ── TAGS ── */
   .tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
@@ -372,31 +401,56 @@ hide_header_logo: true
     <p class="section-kicker">Features</p>
         <h2 class="section-title">One practice, multiple dimensions</h2>
         <ul class="feature-list">
-          <li>
-        <span class="feat-icon">📝</span>
+      <li>
+        <span class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            <line x1="9" y1="7" x2="15" y2="7"/>
+            <line x1="9" y1="11" x2="13" y2="11"/>
+          </svg>
+        </span>
         <div>
           <p class="feat-title">Daily journaling</p>
           <p class="feat-desc">Write down everyday perceptions, actions, and difficulties without judgment. The app suggests classifications within the method's pillars.</p>
         </div>
       </li>
       <li>
-        <span class="feat-icon">🤖</span>
+        <span class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+            <path d="M5 3v4"/>
+            <path d="M19 17v4"/>
+            <path d="M3 5h4"/>
+            <path d="M17 19h4"/>
+          </svg>
+        </span>
         <div>
           <p class="feat-title">AI Analysis</p>
           <p class="feat-desc">Artificial intelligence (Gemini) reads your accounts and provides practical philosophical insights. Completely anonymous queries — never used to train models.</p>
         </div>
       </li>
       <li>
-       <li>
-        <span class="feat-icon">📊</span>
+        <span class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 3v18h18"/>
+            <path d="M18 17V9"/>
+            <path d="M13 17V5"/>
+            <path d="M8 17v-3"/>
+          </svg>
+        </span>
         <div>
           <p class="feat-title">VIDA Radar and Heatmap</p>
           <p class="feat-desc">Track the distribution of records across the four pillars and visualize your practice consistency over time.</p>
         </div>
       </li>
-      </li>
       <li>
-        <span class="feat-icon">🌐</span>
+        <span class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+            <path d="m9 13 2 2 4-4"/>
+          </svg>
+        </span>
         <div>
           <p class="feat-title">Offline first</p>
           <p class="feat-desc">Works perfectly offline, syncing automatically with Google Drive as soon as the network is restored.</p>
@@ -410,10 +464,35 @@ hide_header_logo: true
     <h2 class="section-title">Your data is exclusively yours</h2>
     <p class="lead">Wingene VIDA was built with privacy as a core principle, not an afterthought.</p>
     <div class="privacy-box">
-      <p class="privacy-row"><strong>🔒 End-to-end encryption.</strong> All data is encrypted using a key generated from your personal password — which never leaves your device.</p>
-      <p class="privacy-row"><strong>☁️ Personal Google Drive.</strong> Backups are stored in a hidden folder within your own account — inaccessible to developers or third parties.</p>
-      <p class="privacy-row"><strong>🤖 Anonymous AI.</strong> Queries to the artificial intelligence are made in an anonymized mode and never used to train foundational models.</p>
-      <p class="privacy-row"><strong>📵 Biometrics and PIN.</strong> Support for biometric or device PIN lock for additional local protection.</p>
+      <div class="privacy-row">
+        <svg class="privacy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+        <div class="privacy-text"><strong>End-to-end encryption.</strong> All data is encrypted using a key generated from your personal password — which never leaves your device.</div>
+      </div>
+      <div class="privacy-row">
+        <svg class="privacy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+        </svg>
+        <div class="privacy-text"><strong>Personal Google Drive.</strong> Backups are stored in a hidden folder within your own account — inaccessible to developers or third parties.</div>
+      </div>
+      <div class="privacy-row">
+        <svg class="privacy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+        <div class="privacy-text"><strong>Anonymous AI.</strong> Queries to the artificial intelligence are made in an anonymized mode and never used to train foundational models.</div>
+      </div>
+      <div class="privacy-row">
+        <svg class="privacy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+          <line x1="12" y1="18" x2="12.01" y2="18"/>
+          <circle cx="12" cy="10" r="2"/>
+          <path d="M12 12v3"/>
+        </svg>
+        <div class="privacy-text"><strong>Biometrics and PIN.</strong> Support for biometric or device PIN lock for additional local protection.</div>
+      </div>
     </div>
   </section>
 
