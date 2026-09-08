@@ -164,7 +164,8 @@ hide_header_logo: true
   }
   .btn-text:hover { color: var(--blue) !important; }
   .badge-store {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     transition: opacity 0.2s, transform 0.2s;
   }
   .badge-store:hover { opacity: 0.85; transform: translateY(-1px); }
@@ -172,11 +173,11 @@ hide_header_logo: true
     display: block;
   }
   .badge-play img {
-    height: 60px; /* Reduzido para igualar a parte visível ao badge da Apple */
+    height: 68.5px; /* Compensa a margem transparente da imagem oficial para igualar os 46px visíveis da Apple */
   }
   .badge-apple img {
     height: 46px;
-    margin: 8px 0; /* Equilibra a altura total para 60px, alinhando perfeitamente */
+    margin: 0;
   }
 
   /* ── SECTIONS ── */

@@ -164,7 +164,8 @@ hide_header_logo: true
   }
   .btn-text:hover { color: var(--blue) !important; }
   .badge-store {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     transition: opacity 0.2s, transform 0.2s;
   }
   .badge-store:hover { opacity: 0.85; transform: translateY(-1px); }
@@ -172,11 +173,11 @@ hide_header_logo: true
     display: block;
   }
   .badge-play img {
-    height: 60px; /* Reduzido para igualar a parte visível ao badge da Apple */
+    height: 68.5px; /* Compensa a margem transparente da imagem oficial para igualar os 46px visíveis da Apple */
   }
   .badge-apple img {
     height: 46px;
-    margin: 8px 0; /* Equilibra a altura total para 60px, alinhando perfeitamente */
+    margin: 0;
   }
 
   /* ── SECTIONS ── */
@@ -310,10 +311,10 @@ hide_header_logo: true
 
     <div class="store-buttons">
       <a href="https://play.google.com/store/apps/details?id=br.com.wingene.diario" target="_blank" class="badge-store badge-play">
-        <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png">
+        <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
       </a>
       <a href="https://apps.apple.com/app/wingene-vida/id6761666105" target="_blank" class="badge-store badge-apple">
-        <img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1719878400">
+        <img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en?size=250x83&amp;releaseDate=1719878400">
       </a>
     </div>
     <a class="btn-text" href="https://blog.wingene.com.br/wingene-vida-app/wingene-vida-app-en.html" target="_blank">Read the full documentation →</a>
@@ -439,10 +440,10 @@ hide_header_logo: true
     <p>Android and iOS · 100% your data</p>
     <div class="store-buttons">
       <a href="https://play.google.com/store/apps/details?id=br.com.wingene.diario" target="_blank" class="badge-store badge-play">
-        <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png">
+        <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
       </a>
       <a href="https://apps.apple.com/app/wingene-vida/id6761666105" target="_blank" class="badge-store badge-apple">
-        <img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/pt-br?size=250x83&amp;releaseDate=1719878400">
+        <img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en?size=250x83&amp;releaseDate=1719878400">
       </a>
     </div>
   </div>
@@ -452,7 +453,7 @@ hide_header_logo: true
 <footer class="site-footer">
   <a href="https://blog.wingene.com.br">blog.wingene.com.br</a>
   &nbsp;·&nbsp;
-  <a href="https://blog.wingene.com.br/wingene-vida-app/politica-de-privacidade-wingene-vida-en.html" target="_blank">Política de Privacidade</a>
+  <a href="https://blog.wingene.com.br/wingene-vida-app/politica-de-privacidade-wingene-vida-en.html" target="_blank">Privacy Policy</a>
   &nbsp;·&nbsp;
   <a href="mailto:suporte@wingene.com.br">suporte@wingene.com.br</a>
 </footer>
