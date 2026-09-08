@@ -1230,6 +1230,8 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         let customDocLayout = null;
         let customDesc = null;
         let descKey = 'description';
+        let redirectFrom = [];
+        let redirectFromFound = false;
         
         // --- 1. EXTRAÇÃO DE METADADOS (SCORE e TAGS) em passagem reversa ---
         for (let i = body.getNumChildren() - 1; i >= 0; i--) {
@@ -1277,6 +1279,18 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                 const descMatch = text.match(/^\s*(?:desc|Desc|descrição|Descrição|description|Description):\s*(.+)$/i);
                 if (descMatch && !customDesc) {
                     customDesc = normalizarAspas(descMatch[1]).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
+                    isMetadata = true;
+                }
+
+                const redirectMatch = text.match(/^\s*(?:redirect_from|redirect|redirecionamento):\s*(.*)/i);
+                if (redirectMatch && !redirectFromFound) {
+                    const redirectString = redirectMatch[1].replace(/\.\s*$/, "").trim();
+                    if (redirectString) {
+                        redirectFrom = redirectString.split(',')
+                            .map(r => r.trim().replace(/^['"]|['"]$/g, ''))
+                            .filter(r => r.length > 0);
+                    }
+                    redirectFromFound = true;
                     isMetadata = true;
                 }
 
@@ -1352,6 +1366,41 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                             customDesc = descMatch[2].trim();
                         }
                     }
+                    // Preservar redirect_from se existir no arquivo .md de destino
+                    const redirectBlockMatch = fmText.match(/^redirect_from:\s*\n((?:\s*-\s*.*(?:\n|$))+)/im);
+                    let existingRedirects = [];
+                    if (redirectBlockMatch) {
+                        existingRedirects = redirectBlockMatch[1].split('\n')
+                            .map(line => {
+                                const m = line.match(/^\s*-\s*(.+)$/);
+                                return m ? m[1].trim().replace(/^['"]|['"]$/g, '') : null;
+                            })
+                            .filter(Boolean);
+                    } else {
+                        const redirectInlineMatch = fmText.match(/^redirect_from:\s*\[(.*?)\]/im);
+                        if (redirectInlineMatch) {
+                            existingRedirects = redirectInlineMatch[1].split(',')
+                                .map(r => r.trim().replace(/^['"]|['"]$/g, ''))
+                                .filter(Boolean);
+                        } else {
+                            const redirectSingleMatch = fmText.match(/^redirect_from:\s*["']?([^\s\n\r[\]][^\n\r]*?)["']?\s*$/im);
+                            if (redirectSingleMatch && redirectSingleMatch[1]) {
+                                existingRedirects = [redirectSingleMatch[1].trim()];
+                            }
+                        }
+                    }
+
+                    if (existingRedirects.length > 0) {
+                        if (!redirectFromFound || redirectFrom.length === 0) {
+                            redirectFrom = existingRedirects;
+                        } else {
+                            existingRedirects.forEach(r => {
+                                if (!redirectFrom.includes(r)) {
+                                    redirectFrom.push(r);
+                                }
+                            });
+                        }
+                    }
                 }
             }
         } catch (e) {
@@ -1390,6 +1439,13 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
             markdown += `tags:\n`;
             tags.forEach(tag => {
                 markdown += `  - ${tag}\n`;
+            });
+        }
+
+        if (redirectFrom && redirectFrom.length > 0) {
+            markdown += `redirect_from:\n`;
+            redirectFrom.forEach(rf => {
+                markdown += `  - ${rf}\n`;
             });
         }
 
@@ -1716,7 +1772,8 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
             noIndex: noIndex,
             hasNavigationFooter: hasNavigationFooter,
             tags: tags,
-            desc: customDesc
+            desc: customDesc,
+            redirectFrom: redirectFrom
         };
 
     } catch (e) {
@@ -1729,7 +1786,8 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
             noIndex: false,
             hasNavigationFooter: true,
             tags: [],
-            desc: null
+            desc: null,
+            redirectFrom: []
         };
     }
 }

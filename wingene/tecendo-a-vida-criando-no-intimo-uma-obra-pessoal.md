@@ -3,12 +3,12 @@ layout: wingene
 title: "Tecendo a vida: criando no íntimo uma obra pessoal"
 reading_time: 7
 semantic_order: 100
+description: "A arte de tecer a própria existência como uma obra única, moldada pelo tempo, pelo afeto e pelo amadurecimento da razão diante das ilusões do mundo."
 tags:
   - Wingene
   - Arte
   - Vida
   - Autoconhecimento
-description: "A arte de tecer a própria existência como uma obra única, moldada pelo tempo, pelo afeto e pelo amadurecimento da razão diante das ilusões do mundo."
 redirect_from:
   - /tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html
 --- 
@@ -21,7 +21,7 @@ A arte de viver requer aprendizado constante. Cada pessoa constrói sua vida com
 
 ### **Brincando e fazendo arte**
 
-Começando a aprender desde os primeiros anos de vida, o ser humano, mesmo sem saber, já começa a entrelaçar o colorido na sua consciência. Brincando no mundo de fantasia, gradualmente vai formando na sua mente belas imagens. Rabiscos e aventuras moldam no seu íntimo uma concepção própria do mundo que o rodeia.
+Começando a aprender desde os primeiros anos de vida, o ser humano, mesmo sem saber, já começa a entrelaçar o colorido na sua consciência. Brincando no mundo de fantasia, gradualmente vai formando na sua mente belas imagens. A trama das aventuras e do aprendizado molda no seu íntimo uma concepção própria do mundo que o rodeia.
 
 Primeiro com os pais e amiguinhos, posteriormente com professores e colegas de escola, as brincadeiras que lhes são apresentadas acompanham o seu crescimento. Cabe aos mais velhos a responsabilidade de cuidar para que essas sejam instrutivas e colaborem para o desenvolvimento da criança, pois os primeiros anos serão fundamentais.
 
@@ -35,9 +35,9 @@ A libertação da influência digital mostrará aos pequenos o verdadeiro mundo,
 
 Mas o tear da vida não para; um artista em amadurecimento continua seu trabalho com os novelos da vida. Nessa fase, as dúvidas tornam as escolhas mais difíceis. Críticas de colegas e amigos aumentam ainda mais a insegurança. Inevitáveis comparações se apresentam no convívio pessoal. Como saber se o colorido da infância moldou um valoroso caráter?
 
-Novamente, a tecnologia e as redes sociais estarão presentes. Deixando, na maioria das vezes, de estimular pontos importantes, para estimular postagens narcisistas em detrimento de conteúdos filosóficos. As belas teias coloridas da infância dão lugar aos frágeis fios da incerteza. As cordas do mundo digital amarram o jovem aprendiz, e as poéticas páginas literárias tornam-se escassas.
+Novamente, a tecnologia e as redes sociais estarão presentes. Deixando, na maioria das vezes, de estimular pontos importantes para estimular postagens narcisistas em detrimento de conteúdos filosóficos. As belas teias coloridas da infância dão lugar aos frágeis fios da incerteza. As cordas do mundo digital amarram o jovem aprendiz, e as poéticas páginas literárias tornam-se escassas.
 
-Na tentativa de se engajar com a maioria, o jovem perde o fio da meada, e se enrola no novelo das críticas. Perdendo seu tempo, esquece-se da obra de sua vida. Porém, a base construída desde a infância consegue indicar o caminho, permitindo seguir em frente. Nesse instante, o exemplo de pais, mestres e amigos será uma poderosa força.
+Na tentativa de se engajar com a maioria, o jovem perde o fio da meada e se enrola no novelo das críticas. Perdendo seu tempo, esquece-se da obra de sua vida. Porém, a base construída desde a infância consegue indicar o caminho, permitindo seguir em frente. Nesse instante, o exemplo de pais, mestres e amigos será uma poderosa força.
 
 ### **Desafios da vida adulta**
 
@@ -65,7 +65,7 @@ Integrar a dor, tecer com ela, transformá-la em sabedoria: este é o desafio. O
 
 ### A dança eterna
 
-Cada dia é uma nova oportunidade de entrelaçar fios, de burilar a obra-prima da própria existência. A mente permanece em constante transformação, abrigando novas compreensões e novas cores. O artista, ciente de sua infindável tarefa, abraça os desafios e as alegrias. Celebrando cada momento, a tapeçaria flutua com a leveza de uma dança que se aprimora a cada respiração. Nesse estado de atenção consciente, a cada movimento a obra se ilumina.
+Cada dia é uma nova oportunidade de entrelaçar fios, de tecer a obra-prima da própria existência. A mente permanece em constante transformação, abrigando novas compreensões e novas cores. O artista, ciente de sua infindável tarefa, abraça os desafios e as alegrias. Celebrando cada momento, a tapeçaria flutua com a leveza de uma dança que se aprimora a cada respiração. Nesse estado de atenção consciente, a cada movimento a obra se ilumina.
 
 O artista da vida não tece sozinho. Seus fios entrelaçam-se com os de outros — pais, filhos, amigos, mestres. A obra individual ressoa com obras alheias, criando uma tapeçaria coletiva que atravessa gerações. Cada gesto consciente enriquece não apenas a própria vida, mas a herança transmitida às próximas gerações. E assim, mesmo inacabada, a obra sobrevive ao seu criador: vibrando em harmonia no compasso da humanidade.
 
