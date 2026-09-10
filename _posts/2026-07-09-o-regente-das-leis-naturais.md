@@ -9,6 +9,7 @@ tags:
   - Wingene
   - Existência
   - Filosofia
+description: "A divindade desprovida de forma humana, concebida como a harmonia abstrata e a força regente das leis que movem o cosmos."
 ---
 
 Não é concebível a figura de um criador antropomórfico, onipresente no tempo e no espaço. O universo é inconstante; o cosmos se modifica e a matéria se transforma. A vida surge e desaparece, moldada com elementos que o próprio ciclo universal cria em estrelas, supernovas e afins. Deus, neste conceito abstrato, poderia ser o regente das leis naturais — aquelas que permitem a beleza harmônica que se expande das partículas elementares às galáxias.

@@ -103,10 +103,10 @@ function getAllExistingTags() {
 async function generateMetadataWithAI(title, bodyContent, existingTags = []) {
     const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) {
-        return null;
+        return null
     }
 
-    const models = ['gemini-3.1-flash', 'gemini-2.5-flash'];
+    const models = ['gemini-3.6-flash', 'gemini-3.8-flash', 'gemini-flash-latest'];
     const existingTagsStr = existingTags.length > 0 ? existingTags.join(', ') : '';
     const prompt = `Você é um editor assistente de publicação para um site autoral de literatura e filosofia.
 Analise o título e texto do artigo fornecidos e retorne APENAS um JSON estrito no seguinte formato:
@@ -151,10 +151,20 @@ ${bodyContent.slice(0, 3500)}`;
                     generationConfig: {
                         responseMimeType: "application/json"
                     }
-                })
+                }),
+                signal: AbortSignal.timeout(15000)
             });
 
-            if (!res.ok) continue;
+            if (res.status === 429) {
+                console.warn(`    ⚠️ Modelo ${model} atingiu limite de requisições (429). Aguardando 5s...`);
+                await new Promise(r => setTimeout(r, 5000));
+                continue;
+            }
+
+            if (!res.ok) {
+                console.warn(`    ⚠️ Modelo ${model} retornou status ${res.status}`);
+                continue;
+            }
 
             const data = await res.json();
             const rawText = data.candidates?.[0]?.content?.parts?.[0]?.text;
@@ -168,7 +178,7 @@ ${bodyContent.slice(0, 3500)}`;
                 return { desc, tags };
             }
         } catch (e) {
-            // Tenta o próximo modelo
+            console.warn(`    ⚠️ Erro com modelo ${model}: ${e.message}`);
         }
     }
 
@@ -681,6 +691,7 @@ async function processPostsFolder(existingTags = [], force = false) {
                         console.log(`     ✨ IA gerou para post: desc="${aiDesc || ''}", tags=[${(aiTags || []).join(', ')}]`);
                         updatedTotal++;
                     }
+                    await new Promise(r => setTimeout(r, 1500));
                 }
             } else {
                 console.log(`  ⚠️ Metadados faltantes no post "_posts/${file}" (desc/tags), mas GEMINI_API_KEY não está configurada.`);

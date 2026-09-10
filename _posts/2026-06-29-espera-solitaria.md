@@ -8,6 +8,7 @@ tags:
   - Euforia
   - Família
   - Cotidiano
+description: "A serena euforia desce ao cotidiano para encontrar beleza, presença e afeto na silenciosa espera por quem se ama."
 ---
 
 Em um passeio, a mente bailava nas esferas superiores, sentindo o prazer de voar além dos pensamentos e dos sentidos — a [serena euforia](/cronicas/cronicas-1/serena-euforia.html). O tempo passava suave e a alegria era intensa.

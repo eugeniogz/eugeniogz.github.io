@@ -8,6 +8,7 @@ tags:
   - Pausa
   - Natureza
   - Ação
+description: "Nas breves pausas do cotidiano, a observação contemplativa do mundo renova a mente e transcende os limites dos sentidos."
 ---
 
 Nas pausas do trabalho, observar o ambiente, os círculos suaves dos pássaros distantes. Cada atenta observação renova a mente, que se alegra transcendendo seus sentidos.

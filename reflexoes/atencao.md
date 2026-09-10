@@ -3,12 +3,12 @@ layout: reflections
 title: "Atenção"
 reading_time: 1
 semantic_order: 40
+description: "A presença que guia ações conscientes e sustenta a eudaimonia"
 tags:
   - Atenção
   - Euforia
   - Eudaimonia
   - Método VIDA
-description: "A presença que guia ações conscientes e sustenta a eudaimonia"
 --- 
 
 
@@ -23,11 +23,13 @@ Não importa que os sentidos e a mente vibrem com inúmeros estímulos e pensame
 
 Em certos momentos, remover um estímulo liberta a serena euforia. -- 21/08/26
 
-A atenção consciente é limitada, o foco exige inibir o pensar e o sentir concorrentes. -- 17/08/26
+A serena euforia surge da concentração máxima que silencia os ruídos do sentir e do pensar. -- 17/08/26
+
+Assim como a natureza espera que o broto frutifique, a vida torna-se mais saborosa com a maturação paciente dos pensamentos antes de agir. -- 10/09/26
+
+A atenção consciente é limitada; o foco exige inibir o pensar e o sentir concorrentes. -- 17/08/26
 
 A atenção alimenta as ideias enquanto esquece lembranças. -- 17/08/26
-
-A serena euforia surge da concentração máxima que silencia os ruídos do sentir e do pensar. -- 17/08/26
 
 ### Ao mundo
 

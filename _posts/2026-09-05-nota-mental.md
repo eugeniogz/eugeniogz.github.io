@@ -5,6 +5,11 @@ reading_time: 1
 semantic_order: 0
 pillar: "Imperfeições"
 date: 2026-09-05 12:00:00
+description: "A percepção íntima da falibilidade que redesenha os contornos da virtude na batalha contínua da existência."
+tags:
+  - Imperfeições
+  - Autoconhecimento
+  - Existência
 --- 
 
 Após sucessivos êxitos no cultivo de uma virtude, percebo novamente a imperfeição: a cor da falibilidade no desenho da batalha contínua.

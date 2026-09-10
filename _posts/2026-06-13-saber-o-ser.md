@@ -8,6 +8,7 @@ tags:
   - Propriocepção
   - Consciência
   - Euforia
+description: "A observação dos sentidos e a propriocepção revelam a serena euforia de reconhecer o próprio ser sem a mediação do pensamento."
 ---
 
 A observação dos sentidos permite a serena euforia. A visão e a audição predominam, mas o tato, o olfato e o paladar colaboram. A chave está na propriocepção: saber o ser sem a necessidade de pensar.

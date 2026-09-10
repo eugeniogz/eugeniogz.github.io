@@ -16,3 +16,4 @@ layout: default
 ### 📄 [Exemplo como escolha](./2026-08-31-exemplo-como-escolha.html) <span class="word-count">[1 min]</span>
 O respeito e a serenidade no debate democrático como fundamentos do exemplo e da virtude individual.
 ### 📄 [Percebendo a imperfeição](./2026-09-05-nota-mental.html) <span class="word-count">[1 min]</span>
+### 📄 [Do broto ao fruto](./2026-09-09-do-broto-ao-fruto.html) <span class="word-count">[1 min]</span>

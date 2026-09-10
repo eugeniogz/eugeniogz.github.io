@@ -7,6 +7,7 @@ tags:
   - Valores
   - Afeto
   - Sociedade
+description: "Transcender as fronteiras da nacionalidade para reconhecer no mérito alheio a empatia e o esforço coletivo da humanidade."
 ---
 
 O sentimento de nacionalidade é inerente à geografia. Ele é saudável, mas não deve se sobrepor ao pertencimento à humanidade, que ultrapassa fronteiras e traz empatia a qualquer ser humano.
