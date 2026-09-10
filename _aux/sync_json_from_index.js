@@ -106,7 +106,7 @@ async function generateMetadataWithAI(title, bodyContent, existingTags = []) {
         return null
     }
 
-    const models = ['gemini-3.6-flash', 'gemini-3.8-flash', 'gemini-flash-latest'];
+    const models = ['gemini-3.5-flash', 'gemini-3-flash-preview', 'gemini-3.6-flash', 'gemini-3.8-flash'];
     const existingTagsStr = existingTags.length > 0 ? existingTags.join(', ') : '';
     const prompt = `Você é um editor assistente de publicação para um site autoral de literatura e filosofia.
 Analise o título e texto do artigo fornecidos e retorne APENAS um JSON estrito no seguinte formato:
@@ -141,44 +141,47 @@ Conteúdo do artigo:
 ${bodyContent.slice(0, 3500)}`;
 
     for (const model of models) {
-        try {
-            const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
-            const res = await fetch(url, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    contents: [{ parts: [{ text: prompt }] }],
-                    generationConfig: {
-                        responseMimeType: "application/json"
-                    }
-                }),
-                signal: AbortSignal.timeout(15000)
-            });
+        for (let attempt = 0; attempt < 2; attempt++) {
+            try {
+                const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+                const res = await fetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: prompt }] }],
+                        generationConfig: {
+                            responseMimeType: "application/json"
+                        }
+                    }),
+                    signal: AbortSignal.timeout(15000)
+                });
 
-            if (res.status === 429) {
-                console.warn(`    ⚠️ Modelo ${model} atingiu limite de requisições (429). Aguardando 5s...`);
-                await new Promise(r => setTimeout(r, 5000));
-                continue;
+                if (res.status === 429) {
+                    console.warn(`    ⚠️ Limite de requisições (429). Aguardando 12s para liberar cota da API...`);
+                    await new Promise(r => setTimeout(r, 12000));
+                    continue; // tenta novamente este modelo
+                }
+
+                if (!res.ok) {
+                    console.warn(`    ⚠️ Modelo ${model} retornou status ${res.status}`);
+                    break; // tenta o próximo modelo
+                }
+
+                const data = await res.json();
+                const rawText = data.candidates?.[0]?.content?.parts?.[0]?.text;
+                if (!rawText) break;
+
+                const parsed = JSON.parse(rawText);
+                const desc = (parsed.desc || parsed.description || '').trim();
+                const tags = Array.isArray(parsed.tags) ? parsed.tags.map(t => String(t).trim()).filter(Boolean) : [];
+
+                if (desc || tags.length > 0) {
+                    return { desc, tags };
+                }
+            } catch (e) {
+                console.warn(`    ⚠️ Erro com modelo ${model}: ${e.message}`);
+                break;
             }
-
-            if (!res.ok) {
-                console.warn(`    ⚠️ Modelo ${model} retornou status ${res.status}`);
-                continue;
-            }
-
-            const data = await res.json();
-            const rawText = data.candidates?.[0]?.content?.parts?.[0]?.text;
-            if (!rawText) continue;
-
-            const parsed = JSON.parse(rawText);
-            const desc = (parsed.desc || parsed.description || '').trim();
-            const tags = Array.isArray(parsed.tags) ? parsed.tags.map(t => String(t).trim()).filter(Boolean) : [];
-
-            if (desc || tags.length > 0) {
-                return { desc, tags };
-            }
-        } catch (e) {
-            console.warn(`    ⚠️ Erro com modelo ${model}: ${e.message}`);
         }
     }
 
