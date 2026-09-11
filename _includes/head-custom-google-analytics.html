@@ -1,9 +1,71 @@
 {% if jekyll.environment == 'production' and site.google_analytics %}
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', '{{ site.google_analytics }}');
+  (function() {
+    try {
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('admin') === '1') {
+        localStorage.setItem('ignore_analytics', 'true');
+        alert('Google Analytics: Acessos deste navegador foram BLOQUEADOS (Modo Administrador ativado).');
+        params.delete('admin');
+        var newSearch = params.toString() ? '?' + params.toString() : '';
+        window.history.replaceState({}, document.title, window.location.pathname + newSearch + window.location.hash);
+      } else if (params.get('admin') === '0') {
+        localStorage.removeItem('ignore_analytics');
+        alert('Google Analytics: Acessos deste navegador voltaram a ser CONTABILIZADOS.');
+        params.delete('admin');
+        var newSearch = params.toString() ? '?' + params.toString() : '';
+        window.history.replaceState({}, document.title, window.location.pathname + newSearch + window.location.hash);
+      }
+
+      if (localStorage.getItem('ignore_analytics') === 'true') {
+        window['ga-disable-{{ site.google_analytics }}'] = true;
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function() {};
+        console.info('[Google Analytics] Desativado para este navegador (Modo Administrador).');
+
+        if (!sessionStorage.getItem('ga_disabled_notified')) {
+          sessionStorage.setItem('ga_disabled_notified', 'true');
+          var showNotice = function() {
+            var notice = document.createElement('div');
+            notice.id = 'ga-disabled-badge';
+            notice.innerHTML = '<span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#f59e0b;box-shadow:0 0 6px #f59e0b;"></span> Analytics: Disabled';
+            notice.style.cssText = 'position:fixed;bottom:16px;right:16px;z-index:999999;background:rgba(15,23,42,0.88);color:#cbd5e1;padding:6px 12px;border-radius:20px;font-family:system-ui,-apple-system,sans-serif;font-size:11px;font-weight:500;letter-spacing:0.02em;box-shadow:0 4px 14px rgba(0,0,0,0.25);border:1px solid rgba(255,255,255,0.12);backdrop-filter:blur(6px);display:flex;align-items:center;gap:7px;pointer-events:none;opacity:0;transform:translateY(8px);transition:opacity 0.4s ease,transform 0.4s ease;';
+            document.body.appendChild(notice);
+            setTimeout(function() {
+              notice.style.opacity = '1';
+              notice.style.transform = 'translateY(0)';
+            }, 100);
+            setTimeout(function() {
+              notice.style.opacity = '0';
+              notice.style.transform = 'translateY(8px)';
+              setTimeout(function() {
+                if (notice.parentNode) notice.parentNode.removeChild(notice);
+              }, 500);
+            }, 4000);
+          };
+
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', showNotice);
+          } else {
+            showNotice();
+          }
+        }
+        return;
+      }
+    } catch (e) {
+      // Ignora restrições de localStorage em modos anônimos estritos
+    }
+
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}';
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+  })();
 </script>
 {% endif %}
