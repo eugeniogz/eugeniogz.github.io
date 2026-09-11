@@ -3,21 +3,28 @@
   (function() {
     try {
       var params = new URLSearchParams(window.location.search);
+      var cookieDomain = window.location.hostname.endsWith('wingene.com.br') ? '; domain=.wingene.com.br' : '';
+
       if (params.get('admin') === '1') {
         localStorage.setItem('ignore_analytics', 'true');
+        document.cookie = 'ignore_analytics=true' + cookieDomain + '; path=/; max-age=31536000; SameSite=Lax';
         alert('Google Analytics: Acessos deste navegador foram BLOQUEADOS (Modo Administrador ativado).');
         params.delete('admin');
         var newSearch = params.toString() ? '?' + params.toString() : '';
         window.history.replaceState({}, document.title, window.location.pathname + newSearch + window.location.hash);
       } else if (params.get('admin') === '0') {
         localStorage.removeItem('ignore_analytics');
+        document.cookie = 'ignore_analytics=' + cookieDomain + '; path=/; max-age=0; SameSite=Lax';
         alert('Google Analytics: Acessos deste navegador voltaram a ser CONTABILIZADOS.');
         params.delete('admin');
         var newSearch = params.toString() ? '?' + params.toString() : '';
         window.history.replaceState({}, document.title, window.location.pathname + newSearch + window.location.hash);
       }
 
-      if (localStorage.getItem('ignore_analytics') === 'true') {
+      var isIgnored = localStorage.getItem('ignore_analytics') === 'true' ||
+                      document.cookie.indexOf('ignore_analytics=true') !== -1;
+
+      if (isIgnored) {
         window['ga-disable-{{ site.google_analytics }}'] = true;
         window.dataLayer = window.dataLayer || [];
         window.gtag = function() {};
