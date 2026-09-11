@@ -46,7 +46,7 @@ Quando passamos a pensar o sentir e a sentir o pensar, o piloto automático se r
 
 A metaconsciência revela sua vocação última: não apenas entender a vida, mas saboreá-la com presença atenta. Essa eudaimonia que brota da virtude e do discernimento passa a ser o tom do nosso próprio caminhar.
 
-Ao acender a chama da atenção no cotidiano, descobrimos que não precisamos esvaziar a mente para encontrar a paz. Basta erguer a consciência um pouco acima do ruído, olhar o horizonte — seja no aroma de um café passado com paciência, no voo de um sabiá ou na florada efêmera dos ipês — e perceber, com alegria pura, o próprio milagre de se saber consciente.
+Ao acender a chama da atenção no cotidiano, descobrimos que não precisamos esvaziar a mente para encontrar a paz. Basta erguer a consciência um pouco acima do ruído, olhar o horizonte — seja no aroma de um café partilhado, no voo de um sabiá ou na florada efêmera dos ipês — e perceber, com alegria pura, o próprio milagre de se saber consciente.
 <div style="clear: both;"></div>
 
 ---
