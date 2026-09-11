@@ -34,9 +34,9 @@ Esse estado de presença pura e total exige esforço e concentração; entretant
 
 ### A Mecânica da Serena Euforia
 
-A plenitude existencial não é um troféu estático ou um estado passivo; é uma ação constante, um florescimento vivo do ser. Nesse sentido, o quiasmo "pensar o sentir, sentir o pensar" não é apenas um ornamento poético, mas o motor indispensável para a serena euforia. A alegria se estabelece na consciência; a metaconsciência sustentada fornece as condições para o júbilo. Para isso, a metaconsciência não pode ser exercida com apego, controle ou julgamento rígido. Não se trata de uma "hipervigilância mental". A metaconsciência precisa mudar da razão para a vivência.
+A plenitude existencial não é um troféu estático ou um estado passivo; é uma ação constante, um florescimento vivo do ser. Nesse sentido, o quiasmo "pensar o sentir, sentir o pensar" não é apenas um ornamento poético, mas o motor indispensável para a serena euforia. A alegria se estabelece na consciência; a metaconsciência sustentada fornece as condições para o júbilo. Para isso, a metaconsciência não pode ser exercida com apego, controle ou julgamento rígido. Não se trata de uma "hipervigilância mental". A metaconsciência precisa se suavizar e contemplar, aproveitar o momento.
 
-No estado metaconsciente, a mente transcende a mente sem abandonar o solo, mantendo os pés na realidade, enquanto a consciência pode flutuar acima do sentir e do pensar. A partir deste momento, a mente é capaz de experimentar a felicidade pura — uma serena euforia que independe das ruínas e ruídos externos, bastando-se na própria presença.
+No estado metaconsciente, a mente transcende a mente sem abandonar o solo, mantendo os pés na realidade, enquanto a consciência pode sentir e pensar. A partir deste momento, a mente é capaz de experimentar a felicidade pura — uma serena euforia que independe das ruínas e ruídos externos, bastando-se na própria presença. A conexão ao mundo e aos outros permanece, porém de uma forma mais intensa.
 
 ### A Dança no Palco da Existência
 
