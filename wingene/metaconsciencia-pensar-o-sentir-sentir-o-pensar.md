@@ -3,13 +3,13 @@ layout: wingene
 title: "Metaconsciência: pensar o sentir, sentir o pensar"
 reading_time: 4
 semantic_order: 90
+description: "A fusão entre o pensar e o sentir na conquista da metaconsciência, estado de pura presença onde floresce a serena euforia."
 tags:
   - Autoconhecimento
   - Euforia
   - Eudaimonia
   - Atenção
   - Metaconsciência
-description: "A fusão entre o pensar e o sentir na conquista da metaconsciência, estado de pura presença onde floresce a serena euforia."
 --- 
 
 
@@ -34,9 +34,9 @@ Esse estado de presença pura e total exige esforço e concentração; entretant
 
 ### A Mecânica da Serena Euforia
 
-A plenitude existencial não é um troféu estático ou um estado passivo; é uma ação constante, um florescimento vivo do ser.  Nesse sentido**,** o quiasmo "pensar o sentir, sentir o pensar" não é apenas um ornamento poético, mas o motor indispensável para a serena euforia. A alegria se estabelece na consciência; da metaconsciência sustentada, surge a serena euforia.
+A plenitude existencial não é um troféu estático ou um estado passivo; é uma ação constante, um florescimento vivo do ser. Nesse sentido, o quiasmo "pensar o sentir, sentir o pensar" não é apenas um ornamento poético, mas o motor indispensável para a serena euforia. A alegria se estabelece na consciência; a metaconsciência sustentada fornece as condições para o júbilo. Para isso, a metaconsciência não pode ser exercida com apego, controle ou julgamento rígido. Não se trata de uma "hipervigilância mental". A metaconsciência precisa mudar da razão para a vivência.
 
-Com a metaconsciência a mente transcende a mente sem abandonar o solo, mantendo os pés na realidade enquanto a consciência flutua acima dos ruídos e do automatismo urbano. A partir deste momento, a mente experimenta a felicidade pura — uma serena euforia que independe das ruínas e ruídos externos, bastando-se na própria presença.
+No estado metaconsciente, a mente transcende a mente sem abandonar o solo, mantendo os pés na realidade, enquanto a consciência pode flutuar acima do sentir e do pensar. A partir deste momento, a mente pode experimentar a felicidade pura — uma serena euforia que independe das ruínas e ruídos externos, bastando-se na própria presença.
 
 ### A Dança no Palco da Existência
 

@@ -28,3 +28,4 @@ O respeito e a serenidade no debate democrático como fundamentos do exemplo e d
 A percepção íntima da falibilidade que redesenha os contornos da virtude na batalha contínua da existência.
 ### 📄 [Do broto ao fruto](./2026-09-09-do-broto-ao-fruto.html) <span class="word-count">[1 min]</span>
 Acolher o tempo de maturação dos pensamentos e degustar pacientemente cada instante, imitando a sabedoria da natureza que transforma o broto em fruto.
+### 📄 [Trânsito impaciente](./2026-10-10-transito-impaciente.html) <span class="word-count">[1 min]</span>
