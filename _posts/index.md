@@ -4,6 +4,8 @@ layout: default
 
 ## _posts
 
+### 📄 [Sinfonia doméstica](./2026-06-01-sinfonia-domestica.html) <span class="word-count">[1 min]</span>
+A contemplação poética dos ruídos e sensações do lar, onde a mente encontra saciedade e presença no cotidiano.
 ### 📄 [Presença atenta](./2026-07-28-presenca-atenta.html) <span class="word-count">[1 min]</span>
 A presença atenta como um filtro consciente que intercepta o impulso e transforma o julgamento em sereno acolhimento.
 ### 📄 [Amazônia](./2026-08-01-amazonia.html) <span class="word-count">[1 min]</span>
@@ -30,3 +32,4 @@ A percepção íntima da falibilidade que redesenha os contornos da virtude na b
 Acolher o tempo de maturação dos pensamentos e degustar pacientemente cada instante, imitando a sabedoria da natureza que transforma o broto em fruto.
 ### 📄 [Trânsito impaciente](./2026-10-10-transito-impaciente.html) <span class="word-count">[1 min]</span>
 O trânsito hostil desvela a fragilidade da nossa paciência, incitando a busca por uma aurora interior e pela regeneração do próprio agir.
+### 📄 [Momentos de afeto](./2026-10-12-momentos-de-afeto.html) <span class="word-count">[1 min]</span>

@@ -36,7 +36,7 @@ Esse estado de presença pura e total exige esforço e concentração; entretant
 
 A plenitude existencial não é um troféu estático ou um estado passivo; é uma ação constante, um florescimento vivo do ser. Nesse sentido, o quiasmo "pensar o sentir, sentir o pensar" não é apenas um ornamento poético, mas o motor indispensável para a serena euforia. A alegria se estabelece na consciência; a metaconsciência sustentada fornece as condições para o júbilo. Para isso, a metaconsciência não pode ser exercida com apego, controle ou julgamento rígido. Não se trata de uma "hipervigilância mental". A metaconsciência precisa se suavizar e contemplar, aproveitar o momento.
 
-No estado metaconsciente, a mente transcende a mente sem abandonar o solo, mantendo os pés na realidade, enquanto a consciência pode sentir e pensar. A partir deste momento, a mente é capaz de experimentar a felicidade pura — uma serena euforia que independe das ruínas e ruídos externos, bastando-se na própria presença. A conexão ao mundo e aos outros permanece, porém de uma forma mais intensa.
+No estado metaconsciente, a mente transcende a mente sem abandonar o solo, mantendo os pés na realidade, enquanto a consciência pode sentir e pensar. A partir deste momento, a mente é capaz de experimentar a felicidade pura — uma serena euforia que independe das ruínas e ruídos externos, bastando-se na própria presença. A atenção ao mundo e aos outros não apenas permanece, como se dá de uma forma mais intensa. A serena euforia se reconhece não pelo conteúdo do que se pensa ou sente, mas pela ausência de esforço em sustentá-la e pela leveza com que se instala — quando exige vigilância ou não existe essa naturalidade, não se trata de serena euforia.
 
 ### A Dança no Palco da Existência
 
