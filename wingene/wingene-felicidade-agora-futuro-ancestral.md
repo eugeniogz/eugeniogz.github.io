@@ -23,13 +23,13 @@ Etimologicamente, enquanto a palavra família se originou ligada à estrutura ex
 
 O homem carrega desde o nascimento questões que incitam; o eterno aprender é herança ancestral. Mas o conhecimento não é tudo; a vitória se completa na  prática do aperfeiçoamento pessoal — que nunca termina, mas se molda a cada passo rumo ao utópico ideal. Esse aperfeiçoamento é o caminho para  o que cada um realmente ama: a felicidade. Nele, os triunfos alvorecem brilhantes, iluminando o ser que, cada dia mais realizado, se extasia em plena *eudaimonia*.
 
-A *eudaimonia*, do grego *eu* (bem) e *daimon* (espírito), representa o florescimento da felicidade — um estado perene e sereno, que nasce das forças internas. Alinha-se ao estoicismo, no qual a alegria vem do interior, sendo firme e sólida. O aperfeiçoamento moral vem sendo debatido há milênios; a eudaimonia, segundo Aristóteles¹, é consequência de uma vida virtuosa. Não pretendemos reinventar esse sentido filosófico, mas utilizá-lo como base para a *Wingene*. O primeiro passo para esse florescimento é o conhecimento, que conduz ao caminho da evolução pessoal. Apesar de meu ávido desejo de aprender, foi com a Logosofia que esse ímpeto se solidificou, pois encarei com maior seriedade o desafio do aprimoramento moral — objetivo principal da obra de Carlos Pecotche².
+A *eudaimonia*, do grego *eu* (bem) e *daimon* (espírito), representa o florescimento da felicidade — um estado perene e sereno, que nasce das forças internas. Alinha-se ao estoicismo, no qual a alegria vem do interior, sendo firme e sólida. O aperfeiçoamento moral vem sendo debatido há milênios; a eudaimonia, segundo Aristóteles¹, é consequência de uma vida virtuosa. Não pretendemos reinventar esse sentido filosófico, mas utilizá-lo como base para a *Wingene*. O primeiro passo para esse florescimento é o conhecimento, que conduz ao caminho da evolução pessoal.
 
 A *Wingene* se apoia em bases naturalistas. Por isso, meu conceito de espírito não é metafísico: ele habita o corpo vivente, manifesta-se nos processos biológicos e guarda valores e emoções puras na mente. A poderosa máquina mental pode parecer, em alguns casos, extrapolar o limite corporal, viajando nas ondas das inúmeras conexões neuronais. Mas sua substância é material. Ainda assim, a mente é uma densa floresta, com árvores enraizadas no corpo inteiro que sentem, comandam e pensam. Das raízes às folhas, a floresta é um todo — complexo sistema consciente que dança incessantemente.
 
 A Wingene não nasce do vácuo nem pretende romper com o passado. Ela é herdeira declarada da ética aristotélica, da serenidade estoica, do naturalismo de Espinosa e do método de autoaperfeiçoamento da Logosofia. O que ela propõe não é uma nova moral descolada da história, mas uma rearticulação contemporânea: como viver essa busca milenar sob a luz da biologia moderna, da epigenética e de uma responsabilidade explícita com o futuro ancestral.
 
-A herança genética cria as primeiras luzes da mente. Segundo António Damásio³: "*Os nossos cérebros e as nossas mentes não são tabulae rasae quando nascemos. Contudo, também não são, na sua totalidade, geneticamente determinados. A sombra genética tem um grande alcance, mas não é completa.*" Esse legado biológico deve expandir-se gradualmente com a cultura — chave do aperfeiçoamento moral. Assim, o conhecimento saciará o ser, oferecendo-lhe a oportunidade ímpar do triunfo pessoal.
+A herança genética cria as primeiras luzes da mente. Segundo António Damásio²: "*Os nossos cérebros e as nossas mentes não são tabulae rasae quando nascemos. Contudo, também não são, na sua totalidade, geneticamente determinados. A sombra genética tem um grande alcance, mas não é completa.*" Esse legado biológico deve expandir-se gradualmente com a cultura — chave do aperfeiçoamento moral. Assim, o conhecimento saciará o ser, oferecendo-lhe a oportunidade ímpar do triunfo pessoal.
 
 Esse naturalismo ético reconhece limites biológicos sem determinismo. Nascemos com predisposições — temperamento, capacidades, vulnerabilidades —, mas a cultura as modela. A Wingene opera nessa fronteira: entre o que herdamos (gene) e o que construímos (win). Entre a sombra genética e a luz cultural.
 
@@ -47,7 +47,7 @@ Mas como, afinal, tecer essa evolução no cotidiano? Como transformar herança 
 
 Revisar os valores, cientes da imperfeição humana, é importante para orientar as decisões. Pois, assim como o ser é imperfeito, também é a cultura. Portanto, erros podem ser fruto de incorretas premissas. Os pilares do método científico e do aprendizado constante são a direção para a mente atenta.
 
-Esse método ético-existencial está detalhado em [O método VIDA: a Wingene em prática](/Wingene/o-metodo-vida-a-wingene-em-pratica.html).
+Esse método ético-existencial está detalhado em ["O método VIDA: a Wingene em prática"](/Wingene/o-metodo-vida-a-wingene-em-pratica.html).
 
 ### **Serena euforia**
 
@@ -77,7 +77,7 @@ As descobertas seguem acontecendo; nossa bagagem cultural é o trampolim que per
 
 Por que lutar pelo aprimoramento se não seremos nós a desfrutar do futuro?  A resposta está na eudaimonia como experiência presente dessa luta e no que teceram nossos ancestrais. Como eles, seremos a base das novas gerações, garantindo a sua evolução. Assim, pode-se pensar em uma Wingene coletiva, em que cada geração prepara o terreno para que a próxima floresça em eudaimonia.
 
-O filósofo Ailton Krenak⁴ observa que o futuro é ancestral: os ecossistemas que sustentam a vida precedem a própria humanidade. Preservar esse futuro ancestral natural é fundamental, ainda que não impeça o eventual ocaso de nossa civilização.
+O filósofo Ailton Krenak³ observa que o futuro é ancestral: os ecossistemas que sustentam a vida precedem a própria humanidade. Preservar esse futuro ancestral natural é fundamental, ainda que não impeça o eventual ocaso de nossa civilização.
 
 Essa sociedade tem um prazo para florescer; a raça humana ruma para um horizonte finito. A urgência na dedicação em evoluir é ditada pelo tempo, pois a seiva cultural não irá pulsar para sempre. A vida humana desaparecerá algum dia; depois ruirá também toda a biologia terrestre. Não colonizaremos outros planetas em tempo hábil; até mesmo as máquinas, nossas herdeiras de silício, eventualmente apagarão.
 
@@ -87,7 +87,7 @@ Nosso tempo é contado nas poucas décadas da finita existência. Temos essa opo
 
 A Wingene coletiva pode parecer inútil no tempo cósmico, que torna a existência humana um breve instante. Como encontrar sentido se o fim é inevitável? Meu olhar para a gênese do Cosmos sempre se apoiou na ciência, mas carecia de dimensão existencial. Foi o futuro ocaso da vida terrestre que me forçou a confrontar: qual esperança sustenta o esforço se o universo terá um fim? A resposta veio de uma especulação cosmológica ousada — não como verdade científica, mas como possibilidade que reconforta o espírito: e se a morte de um universo fosse o nascimento de outro?
 
-Essa especulação reflete uma das postulações científicas mais profundas e radicais, em que um buraco negro pode ter na outra ponta um buraco branco. Como descreve Carlo Rovelli⁵: *"se vierem comigo, vamos chegar à fronteira do horizonte de um buraco negro, entrar, descer até o fundo, onde espaço e tempo se dissolvem, atravessá-lo, desembocar no buraco branco, onde o tempo é invertido, e dali sair no futuro."* Nosso universo poderia ser então um buraco branco. Imagino a existência de uma sequência infinita de pares de buracos brancos e negros. A vida pode surgir em cada um desses buracos brancos. A dor da perda é mitigada pelo entendimento da eternidade desse ciclo.
+Essa especulação reflete uma das postulações científicas mais profundas e radicais, em que um buraco negro pode ter na outra ponta um buraco branco. Como descreve Carlo Rovelli⁴: *"se vierem comigo, vamos chegar à fronteira do horizonte de um buraco negro, entrar, descer até o fundo, onde espaço e tempo se dissolvem, atravessá-lo, desembocar no buraco branco, onde o tempo é invertido, e dali sair no futuro."* Nosso universo poderia ser então um buraco branco. Imagino a existência de uma sequência infinita de pares de buracos brancos e negros. A vida pode surgir em cada um desses buracos brancos. A dor da perda é mitigada pelo entendimento da eternidade desse ciclo.
 
 O que brotou na nossa nave azul algum dia será cinzas. Não viveremos de novo, tampouco voltaremos em outra oportunidade. Nosso prazo é o que temos: contado em respirações, no ritmo do coração. Para onde irá toda a beleza — os quadros brilhantes da colorida natureza? Esse inevitável futuro não me causa sofrimento, pois enxergo no escuro de buracos massivos, avistando neles negros portais para invisíveis universos — novas cores, outras vidas.
 
@@ -105,13 +105,11 @@ A *Wingene* se realiza em múltiplas camadas: no esforço evolutivo individual, 
 
 ¹ ARISTÓTELES. *Ética a Nicômaco.* Rio de Janeiro: Editora Vozes, 2024.
 
-² PECOTCHE, Carlos. *Deficiências e propensões do ser humano*. São Paulo: Editora Logosófica, 2014.
+² DAMÁSIO, António. *O Erro de Descartes: emoção, razão e o cérebro humano*. São Paulo: Companhia das Letras, 2012.
 
-³ DAMÁSIO, António. *O Erro de Descartes: emoção, razão e o cérebro humano*. São Paulo: Companhia das Letras, 2012.
+³ KRENAK, Ailton. *Futuro ancestral*. São Paulo: Companhia das Letras, 2022.
 
-⁴ KRENAK, Ailton. *Futuro ancestral*. São Paulo: Companhia das Letras, 2022.
-
-⁵ ROVELLI, Carlo. *Buracos brancos: dentro do horizonte*. Tradução de Silvana Cobucci Leite. Rio de Janeiro: Objetiva, 2024.
+⁴ ROVELLI, Carlo. *Buracos brancos: dentro do horizonte*. Tradução de Silvana Cobucci Leite. Rio de Janeiro: Objetiva, 2024.
 <div style="clear: both;"></div>
 
 ---
