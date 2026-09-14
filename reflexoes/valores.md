@@ -3,9 +3,9 @@ layout: reflections
 title: "Valores"
 reading_time: 1
 semantic_order: 10
+description: "A bússola moral em constante revisão."
 tags:
   - Valores
-description: "A bússola moral em constante revisão."
 --- 
 
 
@@ -23,6 +23,8 @@ Palavras sintetizam o pensar: a doçura que elas carregam é o que sela o calor 
 Na convivência, a felicidade do outro valoriza atitudes pessoais. -- 19/08/26
 
 A divergência de ideias alimenta o debate; o respeito e a serenidade iluminam o exemplo. -- 31/08/26
+
+A crítica torna-se generosa na conversa discreta, na qual o respeito ao outro fornece a oportunidade para o crescimento mútuo. -- 10/08/26
 
 ### Revisão contínua
 

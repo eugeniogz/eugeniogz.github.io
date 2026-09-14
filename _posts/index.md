@@ -33,3 +33,4 @@ Acolher o tempo de maturação dos pensamentos e degustar pacientemente cada ins
 ### 📄 [Trânsito impaciente](./2026-10-10-transito-impaciente.html) <span class="word-count">[1 min]</span>
 O trânsito hostil desvela a fragilidade da nossa paciência, incitando a busca por uma aurora interior e pela regeneração do próprio agir.
 ### 📄 [Momentos de afeto](./2026-10-12-momentos-de-afeto.html) <span class="word-count">[1 min]</span>
+O lirismo dos pequenos rituais partilhados e a dança silenciosa do afeto que transforma o cotidiano em uma serena euforia.
