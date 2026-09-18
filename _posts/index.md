@@ -30,6 +30,7 @@ O respeito e a serenidade no debate democrático como fundamentos do exemplo e d
 A percepção íntima da falibilidade que redesenha os contornos da virtude na batalha contínua da existência.
 ### 📄 [Do broto ao fruto](./2026-09-09-do-broto-ao-fruto.html) <span class="word-count">[1 min]</span>
 Acolher o tempo de maturação dos pensamentos e degustar pacientemente cada instante, imitando a sabedoria da natureza que transforma o broto em fruto.
+### 📄 [Serenidade ativa](./2026-09-18-serenidade-ativa.html) <span class="word-count">[1 min]</span>
 ### 📄 [Trânsito impaciente](./2026-10-10-transito-impaciente.html) <span class="word-count">[1 min]</span>
 O trânsito hostil desvela a fragilidade da nossa paciência, incitando a busca por uma aurora interior e pela regeneração do próprio agir.
 ### 📄 [Momentos de afeto](./2026-10-12-momentos-de-afeto.html) <span class="word-count">[1 min]</span>

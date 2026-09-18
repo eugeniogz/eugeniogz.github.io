@@ -17,13 +17,15 @@ tags:
 
 ### **Vitória das virtudes**
 
-Esse ensaio pretende mostrar uma visão de mundo que começou a se desenhar em setembro de 1998 com a criação de um neologismo: ***Wingene***, a fusão entre **win** e **gene** — vitória e herança. Seu sentido ultrapassa o triunfo genético: expande-se na eterna busca pelo significado da vida. Um anseio humano, gravado em fios dourados desde o seio materno.
+Esse ensaio pretende aprofundar a visão de mundo que começou a se desenhar em setembro de 1998 com a criação de um neologismo: ***Wingene***, a fusão entre **win** e **gene** — vitória e herança. Seu sentido ultrapassa o triunfo genético: expande-se na eterna busca pelo significado da vida. Um anseio humano, gravado em fios dourados desde o seio materno, conforme delineado nos princípios do [Manifesto Wingene](https://blog.wingene.com.br/manifesto-wingene.html).
 
 Etimologicamente, enquanto a palavra família se originou ligada à estrutura externa (a casa, a posse, os servos), a palavra gene nasceu ligada à essência interna (o nascimento, a geração, a continuidade da vida). Da mesma forma, **win** nos ensina que a verdadeira vitória não é o mero acaso de vencer um rival. Vencer é o estado de satisfação (Wunjo) que coroa uma jornada de profundo esforço, trabalho e desejo focado (Winnan); é aproximar-se daquilo que se ama.
 
 O homem carrega desde o nascimento questões que incitam; o eterno aprender é herança ancestral. Mas o conhecimento não é tudo; a vitória se completa na  prática do aperfeiçoamento pessoal — que nunca termina, mas se molda a cada passo rumo ao utópico ideal. Esse aperfeiçoamento é o caminho para  o que cada um realmente ama: a felicidade. Nele, os triunfos alvorecem brilhantes, iluminando o ser que, cada dia mais realizado, se extasia em plena *eudaimonia*.
 
 A *eudaimonia*, do grego *eu* (bem) e *daimon* (espírito), representa o florescimento da felicidade — um estado perene e sereno, que nasce das forças internas. Alinha-se ao estoicismo, no qual a alegria vem do interior, sendo firme e sólida. O aperfeiçoamento moral vem sendo debatido há milênios; a eudaimonia, segundo Aristóteles¹, é consequência de uma vida virtuosa. Não pretendemos reinventar esse sentido filosófico, mas utilizá-lo como base para a *Wingene*. O primeiro passo para esse florescimento é o conhecimento, que conduz ao caminho da evolução pessoal.
+
+Se o gene carrega a memória e os limites da nossa ancestralidade biológica, o florescimento humano — a verdadeira 'vitória' — exige alinhar esses impulsos primordiais às demandas do tempo presente e à construção do futuro. A felicidade, sob a ótica de Wingene, não é um estado efêmero de euforia, mas a harmonia dinâmica entre o corpo herdado do passado, a consciência vigilante do agora e a projeção de um propósito consciente no amanhã.
 
 A *Wingene* se apoia em bases naturalistas. Por isso, meu conceito de espírito não é metafísico: ele habita o corpo vivente, manifesta-se nos processos biológicos e guarda valores e emoções puras na mente. A poderosa máquina mental pode parecer, em alguns casos, extrapolar o limite corporal, viajando nas ondas das inúmeras conexões neuronais. Mas sua substância é material. Ainda assim, a mente é uma densa floresta, com árvores enraizadas no corpo inteiro que sentem, comandam e pensam. Das raízes às folhas, a floresta é um todo — complexo sistema consciente que dança incessantemente.
 
@@ -47,7 +49,7 @@ Mas como, afinal, tecer essa evolução no cotidiano? Como transformar herança 
 
 Revisar os valores, cientes da imperfeição humana, é importante para orientar as decisões. Pois, assim como o ser é imperfeito, também é a cultura. Portanto, erros podem ser fruto de incorretas premissas. Os pilares do método científico e do aprendizado constante são a direção para a mente atenta.
 
-Esse método ético-existencial está detalhado em ["O método VIDA: a Wingene em prática"](/Wingene/o-metodo-vida-a-wingene-em-pratica.html).
+Esse método ético-existencial está detalhado em ["O método VIDA: a Wingene em prática"](/wingene/o-metodo-vida-a-wingene-em-pratica.html).
 
 ### **Serena euforia**
 

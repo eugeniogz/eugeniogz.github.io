@@ -4,11 +4,12 @@ title: "Manifesto Wingene"
 reading_time: 3
 semantic_order: 1
 tags:
-  - Euforia
-  - Autoconhecimento
+  - Serena euforia
+  - Conhecimento
+  - Evolução
   - Wingene
   - Eudaimonia
-  - Futuro Ancestral
+  - Herança
   - Vida
   - Atenção
 redirect_from:
@@ -39,7 +40,7 @@ A busca pela *eudaimonia* nos impele a realizar a *Wingene*; no entanto, esse ob
 
 Por que lutar pelo aprimoramento se não seremos nós a desfrutar do futuro? A resposta está no que teceram nossos ancestrais e na eudaimonia como experiência presente dessa luta. Nós devemos ser a base das novas gerações, garantindo o seu futuro. Assim, pode-se pensar em uma *Wingene* coletiva, em que cada geração prepara o terreno para o florescimento de uma sociedade cada vez mais evoluída.
 
-[Wingene: filosofia e prática da herança consciente](/wingene)
+Leia o ensaio completo: "[Wingene: Felicidade agora, futuro ancestral](https://blog.wingene.com.br/wingene/wingene-felicidade-agora-futuro-ancestral.html)"
 
 **Notas**
 

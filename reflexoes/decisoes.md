@@ -3,9 +3,9 @@ layout: reflections
 title: "Decisões"
 reading_time: 1
 semantic_order: 30
+description: "A escolha consciente de atitudes."
 tags:
   - Decisões
-description: "A escolha consciente de atitudes."
 --- 
 
 
@@ -31,6 +31,8 @@ A vaidade impede o aprimoramento, paralisando a evolução. -- 26/08/26
 Quem se julga incapaz de dar um passo jamais deixará o ponto de partida. -- 26/08/26
 
 Uma ligeira mudança de direção pode alçar a um destino melhor. -- 26/08/26
+
+Agressões aos sentidos não impedem a serenidade; a mesma que permite agir para atenuá-las. -- 17/09/26
 <div style="clear: both;"></div>
 
 ---
