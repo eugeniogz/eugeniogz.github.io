@@ -6,7 +6,7 @@ layout: default
 
 ### 📄 [Sinfonia doméstica](./2026-06-01-sinfonia-domestica.html) <span class="word-count">[1 min]</span>
 A contemplação poética dos ruídos e sensações do lar, onde a mente encontra saciedade e presença no cotidiano.
-### 📄 [Saber o Ser](./2026-06-13-saber-o-ser.html) <span class="word-count">[1 min]</span>
+### 📄 [Apurando o sentir](./2026-06-13-saber-o-ser.html) <span class="word-count">[1 min]</span>
 A observação dos sentidos e a propriocepção revelam a serena euforia de reconhecer o próprio ser sem a mediação do pensamento.
 ### 📄 [Presença atenta](./2026-07-28-presenca-atenta.html) <span class="word-count">[1 min]</span>
 A presença atenta como um filtro consciente que intercepta o impulso e transforma o julgamento em sereno acolhimento.
