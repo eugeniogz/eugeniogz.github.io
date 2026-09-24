@@ -12,4 +12,4 @@ tags:
 date: 2026-09-10 12:00:00
 --- 
 
-Na manhã compartilhada, o café é prosa, a caminhada é verso; a pintura é canção — a serena euforia valsa.
+Na manhã compartilhada, o café é prosa, a caminhada é verso; a pintura é canção — a euforia valsa serena.

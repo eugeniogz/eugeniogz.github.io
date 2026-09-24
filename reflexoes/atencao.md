@@ -25,7 +25,7 @@ Em certos momentos, remover um estímulo liberta a serena euforia. -- 21/08/26
 
 A serena euforia surge da concentração máxima que silencia os ruídos do sentir e do pensar. -- 17/08/26
 
-Assim como a natureza espera que o broto frutifique, a vida torna-se mais saborosa com a maturação paciente dos pensamentos antes de agir. -- 10/09/26
+Assim como se espera do broto o doce, a vida ganha mais sabor com o silêncio que floresce o pensar e tempera o agir. -- 09/09/26
 
 A atenção consciente é limitada; o foco exige inibir o pensar e o sentir concorrentes. -- 17/08/26
 

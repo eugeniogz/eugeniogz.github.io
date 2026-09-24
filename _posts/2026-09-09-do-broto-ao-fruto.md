@@ -13,4 +13,4 @@ tags:
 date: 2026-09-09 12:00:00
 --- 
 
-Assim como a natureza espera que o broto frutifique, minha vida será mais saborosa ao degustar pacientemente cada instante, aguardando a maturação do pensar antes de agir.
+Assim como se espera do broto o doce, minha vida terá mais sabor com o silêncio que floresce o pensar e tempera o agir.

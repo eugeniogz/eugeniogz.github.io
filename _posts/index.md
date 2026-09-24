@@ -4,6 +4,8 @@ layout: default
 
 ## _posts
 
+### 📄 [Refinando a atenção](./2026-04-03-filtro-de-harmonia.html) <span class="word-count">[1 min]</span>
+Abstrair o ruído das distrações cotidianas para harmonizar o espírito com a beleza sutil do instante.
 ### 📄 [Sinfonia doméstica](./2026-06-01-sinfonia-domestica.html) <span class="word-count">[1 min]</span>
 A contemplação poética dos ruídos e sensações do lar, onde a mente encontra saciedade e presença no cotidiano.
 ### 📄 [Apurando o sentir](./2026-06-13-saber-o-ser.html) <span class="word-count">[1 min]</span>
