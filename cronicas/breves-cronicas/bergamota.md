@@ -20,5 +20,5 @@ No alto, a avenida Raja define o horizonte, seus prédios distantes. Longe, onde
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./asa-branca.html">&lt;&lt; Asa-branca</a>
-  <span></span>
+  <a href="./guardia-dos-segredos.html">Guardiã dos Segredos &gt;&gt;</a>
 </div>

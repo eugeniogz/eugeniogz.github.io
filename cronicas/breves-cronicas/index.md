@@ -12,3 +12,4 @@ O canto de cortejo matinal do sabiá que celebra a vida.
 No inverno, o lamento da asa-branca se transforma em canto.
 ### 📄 [Bergamota](./bergamota.html) <span class="word-count">[1 min]</span>
 Na noite de uma metrópole, a bergamota e o futebol.
+### 📄 [Guardiã dos Segredos](./guardia-dos-segredos.html) <span class="word-count">[1 min]</span>

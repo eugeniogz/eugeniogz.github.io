@@ -332,8 +332,8 @@
     "badge": "🌿 Extra",
     "folder": "breves-cronicas/",
     "desc": "Pequenos relatos sobre a vida.",
-    "count": 3,
-    "timeTotal": "3 min",
+    "count": 4,
+    "timeTotal": "4 min",
     "stories": [
       {
         "id": "o-cortejo-do-sabia",
@@ -368,6 +368,19 @@
         "tags": [
           "Atenção",
           "Sociedade"
+        ]
+      },
+      {
+        "id": "guardia-dos-segredos",
+        "title": "Guardiã dos Segredos",
+        "time": "1 min",
+        "filename": "breves-cronicas/guardia-dos-segredos.html",
+        "desc": "O encontro fugaz que transmuta o cotidiano em uma breve partilha sobre a sacralidade da identidade e o silêncio do que é íntimo.",
+        "tags": [
+          "Cotidiano",
+          "Existência",
+          "Presença",
+          "Afeto"
         ]
       }
     ]
