@@ -26,6 +26,8 @@ A divergência de ideias alimenta o debate; o respeito e a serenidade iluminam o
 
 A crítica torna-se generosa na conversa discreta, na qual o respeito ao outro fornece a oportunidade para o crescimento mútuo. -- 10/08/26
 
+A consciência da falibilidade humana transforma a decepção em lucidez; com empatia, compreendem-se as fraquezas, mas a tolerância ativa não tolera a complacência com desvios extremos. -- 24/09/26
+
 ### Revisão contínua
 
 O sentimento de nacionalidade é inerente à geografia. Ele é saudável, mas não deve se sobrepor ao pertencimento à humanidade, que ultrapassa fronteiras e traz empatia a qualquer ser humano. -- 18/07/26

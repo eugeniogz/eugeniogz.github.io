@@ -36,6 +36,7 @@ A percepção íntima da falibilidade que redesenha os contornos da virtude na b
 Acolher o tempo de maturação dos pensamentos e degustar pacientemente cada instante, imitando a sabedoria da natureza que transforma o broto em fruto.
 ### 📄 [Serenidade ativa](./2026-09-18-serenidade-ativa.html) <span class="word-count">[1 min]</span>
 A harmonia inabalável da consciência que preserva sua euforia diante das dissonâncias externas, unindo a paz contemplativa à prontidão para o agir.
+### 📄 [Desvios extremos](./2026-09-24-desvios-extremos.html) <span class="word-count">[1 min]</span>
 ### 📄 [Trânsito impaciente](./2026-10-10-transito-impaciente.html) <span class="word-count">[1 min]</span>
 O trânsito hostil desvela a fragilidade da nossa paciência, incitando a busca por uma aurora interior e pela regeneração do próprio agir.
 ### 📄 [Momentos de afeto](./2026-10-12-momentos-de-afeto.html) <span class="word-count">[1 min]</span>
