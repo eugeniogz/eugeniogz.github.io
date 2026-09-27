@@ -19,7 +19,7 @@ A receita veio errada. Liguei para a médica enquanto um novo cliente chegava.
 
 — Pode atendê-lo enquanto eu espero — eu disse.
 
-Ela hesitou, mas foi. Esperei. A correção chegou no meu celular antes que ela terminasse.
+Ela hesitou, mas foi. A correção chegou no meu celular antes que ela terminasse.
 
 Quando voltou, reparei no crachá.
 
