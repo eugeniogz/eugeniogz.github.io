@@ -179,6 +179,87 @@ hide_header_logo: true
     height: 46px;
     margin: 0;
   }
+  .badge-pwa {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    height: 46px;
+    padding: 0 16px;
+    background: #000000;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 7px;
+    text-decoration: none !important;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    transition: opacity 0.2s, transform 0.2s, border-color 0.2s;
+  }
+  .badge-pwa:hover {
+    color: #ffffff !important;
+    opacity: 0.88;
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  .badge-pwa svg {
+    width: 22px;
+    height: 22px;
+    stroke: #ffffff;
+    flex-shrink: 0;
+  }
+  .badge-pwa-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 1.15;
+  }
+  .badge-pwa-sub {
+    font-size: 8.5px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #cccccc;
+    font-weight: 500;
+  }
+  .badge-pwa-title {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+  }
+  .pwa-inline-link {
+    color: var(--blue) !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+  }
+  .pwa-inline-link:hover {
+    color: var(--ink) !important;
+  }
+  .pwa-box {
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--blue);
+    padding: 20px 24px;
+    margin-top: 24px;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: var(--mid);
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .pwa-box svg {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    color: var(--blue);
+    margin-top: 2px;
+  }
+  .pwa-box strong {
+    font-family: 'Lora', serif;
+    color: var(--ink);
+    font-weight: 600;
+  }
+
 
   /* ── SECTIONS ── */
   .section { padding: 44px 0; border-bottom: 1px solid var(--rule); }
@@ -348,11 +429,24 @@ hide_header_logo: true
     </p>
 
     <div class="store-buttons">
-      <a href="https://play.google.com/store/apps/details?id=br.com.wingene.diario" target="_blank" class="badge-store badge-play">
+      <a href="https://play.google.com/store/apps/details?id=br.com.wingene.diario" target="_blank" class="badge-store badge-play" title="Disponível no Google Play">
         <img alt="Disponível no Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png">
       </a>
-      <a href="https://apps.apple.com/app/wingene-vida/id6761666105" target="_blank" class="badge-store badge-apple">
+      <a href="https://apps.apple.com/app/wingene-vida/id6761666105" target="_blank" class="badge-store badge-apple" title="Baixar na App Store">
         <img alt="Baixar na App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/pt-br?size=250x83&amp;releaseDate=1719878400">
+      </a>
+      <a href="https://wingene.com.br/wingene.vida" target="_blank" class="badge-store badge-pwa" title="Acessar versão Web (PWA)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="3" width="20" height="18" rx="3" ry="3"/>
+          <line x1="2" y1="9" x2="22" y2="9"/>
+          <circle cx="6" cy="6" r="0.75" fill="currentColor"/>
+          <circle cx="9.5" cy="6" r="0.75" fill="currentColor"/>
+          <circle cx="13" cy="6" r="0.75" fill="currentColor"/>
+        </svg>
+        <div class="badge-pwa-text">
+          <span class="badge-pwa-sub">Usar no Navegador</span>
+          <span class="badge-pwa-title">Web App (PWA)</span>
+        </div>
       </a>
     </div>
 
@@ -369,6 +463,17 @@ hide_header_logo: true
     <p class="lead">
       A inteligência artificial analisa seus próprios registros para gerar insights e conselhos práticos — sem jamais expor seus dados ou utilizá-los para treinamento de modelos.
     </p>
+    <div class="pwa-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+        <line x1="2" y1="7.5" x2="22" y2="7.5"/>
+        <line x1="8" y1="21" x2="16" y2="21"/>
+        <line x1="12" y1="17" x2="12" y2="21"/>
+      </svg>
+      <div>
+        <strong>Disponível também na Web:</strong> Acesse o PWA em <a href="https://wingene.com.br/wingene.vida" target="_blank" class="pwa-inline-link">wingene.com.br/wingene.vida</a> para visualizar e editar todos os seus dados do Wingene VIDA diretamente pelo navegador. <em>(Atenção: a análise por IA não pode ser realizada na versão Web, sendo exclusiva dos aplicativos móveis.)</em>
+      </div>
+    </div>
     <blockquote>
       Que nossa breve passagem seja mais que travessia — compassos que ecoem na música universal.
       <cite>— Manifesto Wingene</cite>
@@ -415,11 +520,11 @@ hide_header_logo: true
     <ul class="feature-list">
       <li>
         <span class="feat-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
             <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-            <line x1="9" y1="7" x2="15" y2="7"/>
-            <line x1="9" y1="11" x2="13" y2="11"/>
+            <line x1="9" y1="8" x2="15" y2="8"/>
+            <line x1="9" y1="12" x2="13" y2="12"/>
           </svg>
         </span>
         <div>
@@ -429,26 +534,36 @@ hide_header_logo: true
       </li>
       <li>
         <span class="feat-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
-            <path d="M5 3v4"/>
-            <path d="M19 17v4"/>
-            <path d="M3 5h4"/>
-            <path d="M17 19h4"/>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m12 3-1.8 5.4a2 2 0 0 1-1.3 1.3L3.5 11.5l5.4 1.8a2 2 0 0 1 1.3 1.3l1.8 5.4 1.8-5.4a2 2 0 0 1 1.3-1.3l5.4-1.8-5.4-1.8a2 2 0 0 1-1.3-1.3L12 3Z"/>
           </svg>
         </span>
         <div>
           <p class="feat-title">Análise com IA</p>
-          <p class="feat-desc">Inteligência artificial (Gemini) lê seus relatos e fornece insights filosóficos práticos. Consultas completamente anônimas — nunca usadas para treinamento de modelos.</p>
+          <p class="feat-desc">Inteligência artificial (Gemini) lê seus relatos e fornece insights filosóficos práticos. Consultas completamente anônimas — nunca usadas para treinamento de modelos (recurso exclusivo dos aplicativos móveis; na versão Web a análise por IA não pode ser realizada).</p>
         </div>
       </li>
       <li>
         <span class="feat-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M3 3v18h18"/>
-            <path d="M18 17V9"/>
-            <path d="M13 17V5"/>
-            <path d="M8 17v-3"/>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+            <line x1="2" y1="7.5" x2="22" y2="7.5"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </span>
+        <div>
+          <p class="feat-title">Versão Web (PWA)</p>
+          <p class="feat-desc">Edite e visualize todos os seus dados do Wingene VIDA diretamente pelo computador ou smartphone em <a href="https://wingene.com.br/wingene.vida" target="_blank" class="pwa-inline-link">wingene.com.br/wingene.vida</a>, sincronizado de forma segura via Google Drive (sem execução de análise por IA).</p>
+        </div>
+      </li>
+      <li>
+        <span class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/>
+            <circle cx="12" cy="12" r="4.5"/>
+            <line x1="12" y1="3" x2="12" y2="21"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
           </svg>
         </span>
         <div>
@@ -458,9 +573,10 @@ hide_header_logo: true
       </li>
       <li>
         <span class="feat-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
-            <path d="m9 13 2 2 4-4"/>
+            <polyline points="9 13 12 16 15 13"/>
+            <line x1="12" y1="9" x2="12" y2="16"/>
           </svg>
         </span>
         <div>
@@ -478,27 +594,27 @@ hide_header_logo: true
     <p class="lead">O Wingene VIDA foi construído com privacidade como princípio, não como recurso adicional.</p>
     <div class="privacy-box">
       <div class="privacy-row">
-        <svg class="privacy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <svg class="privacy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
           <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
         </svg>
         <div class="privacy-text"><strong>Criptografia de ponta a ponta.</strong> Todos os dados são criptografados com uma chave gerada a partir da sua senha pessoal — que nunca sai do seu dispositivo.</div>
       </div>
       <div class="privacy-row">
-        <svg class="privacy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <svg class="privacy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
         </svg>
         <div class="privacy-text"><strong>Google Drive pessoal.</strong> Os backups ficam em uma pasta oculta na sua própria conta — inacessível para desenvolvedores ou terceiros.</div>
       </div>
       <div class="privacy-row">
-        <svg class="privacy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <svg class="privacy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
           <path d="m9 12 2 2 4-4"/>
         </svg>
         <div class="privacy-text"><strong>IA anônima.</strong> As consultas à inteligência artificial são realizadas em modo anonimizado e jamais usadas para treinar modelos fundacionais.</div>
       </div>
       <div class="privacy-row">
-        <svg class="privacy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <svg class="privacy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
           <line x1="12" y1="18" x2="12.01" y2="18"/>
           <circle cx="12" cy="10" r="2"/>
@@ -529,13 +645,26 @@ hide_header_logo: true
   <!-- CTA FINAL -->
   <div class="final-cta">
     <h2>Comece a observar<br>sua própria jornada.</h2>
-    <p>Android e iOS · Dados 100% seus</p>
+    <p>Android, iOS e Web (PWA) · Dados 100% seus</p>
     <div class="store-buttons">
-      <a href="https://play.google.com/store/apps/details?id=br.com.wingene.diario" target="_blank" class="badge-store badge-play">
+      <a href="https://play.google.com/store/apps/details?id=br.com.wingene.diario" target="_blank" class="badge-store badge-play" title="Disponível no Google Play">
         <img alt="Disponível no Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png">
       </a>
-      <a href="https://apps.apple.com/app/wingene-vida/id6761666105" target="_blank" class="badge-store badge-apple">
+      <a href="https://apps.apple.com/app/wingene-vida/id6761666105" target="_blank" class="badge-store badge-apple" title="Baixar na App Store">
         <img alt="Baixar na App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/pt-br?size=250x83&amp;releaseDate=1719878400">
+      </a>
+      <a href="https://wingene.com.br/wingene.vida" target="_blank" class="badge-store badge-pwa" title="Acessar versão Web (PWA)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="3" width="20" height="18" rx="3" ry="3"/>
+          <line x1="2" y1="9" x2="22" y2="9"/>
+          <circle cx="6" cy="6" r="0.75" fill="currentColor"/>
+          <circle cx="9.5" cy="6" r="0.75" fill="currentColor"/>
+          <circle cx="13" cy="6" r="0.75" fill="currentColor"/>
+        </svg>
+        <div class="badge-pwa-text">
+          <span class="badge-pwa-sub">Usar no Navegador</span>
+          <span class="badge-pwa-title">Web App (PWA)</span>
+        </div>
       </a>
     </div>
   </div>
@@ -560,7 +689,9 @@ hide_header_logo: true
           links.forEach(link => {
               let href = link.getAttribute('href');
               if (href) {
-                  if (href === 'https://wingene.com.br') {
+                  if (href === 'https://wingene.com.br/wingene.vida' || href === 'https://wingene.com.br/wingene.vida/') {
+                      link.setAttribute('href', '../../wingene.com.br/docs/wingene.vida/index.html');
+                  } else if (href === 'https://wingene.com.br') {
                       link.setAttribute('href', '../../wingene.com.br/docs/index.html');
                   } else if (href === 'https://blog.wingene.com.br') {
                       link.setAttribute('href', '../index.html');
