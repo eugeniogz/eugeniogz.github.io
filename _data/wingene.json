@@ -68,8 +68,22 @@
     "desc": "A aplicação prática da Wingene através do método VIDA: um itinerário ético de valores, imperfeições, decisões e atenção voltado ao florescimento humano."
   },
   {
-    "id": "metaconsciencia-pensar-o-sentir-sentir-o-pensar",
+    "id": "wingene-presenca-vida-e-eternidade",
+    "title": "Wingene: Presença, vida e eternidade",
+    "time": "3 min",
+    "filename": "wingene-presenca-vida-e-eternidade.html",
+    "desc": "A presença que reconhece o Kairós no tempo ordinário, convertendo a prática do método VIDA em hábito, caráter e vislumbre da eternidade.",
     "number": 5,
+    "tags": [
+      "Wingene",
+      "Presença",
+      "Tempo",
+      "Eudaimonia"
+    ]
+  },
+  {
+    "id": "metaconsciencia-pensar-o-sentir-sentir-o-pensar",
+    "number": 6,
     "title": "Metaconsciência: pensar o sentir, sentir o pensar",
     "subtitle": "pensar o sentir, sentir o pensar",
     "time": "4 min",
@@ -86,7 +100,7 @@
   },
   {
     "id": "tecendo-a-vida-criando-no-intimo-uma-obra-pessoal",
-    "number": 6,
+    "number": 7,
     "title": "Tecendo a vida: criando no íntimo uma obra pessoal",
     "subtitle": "criando no íntimo uma obra pessoal",
     "time": "7 min",
@@ -102,7 +116,7 @@
   },
   {
     "id": "a-wingene-na-familia-o-giz-invisivel-do-exemplo",
-    "number": 7,
+    "number": 8,
     "title": "A Wingene na Familia: O Giz Invisivel do Exemplo",
     "time": "3 min",
     "category": "aprimoramento",
@@ -117,7 +131,7 @@
   },
   {
     "id": "o-sistema-gene-e-a-wingene-coletiva-a-arquitetura-da-eudaimonia-social",
-    "number": 8,
+    "number": 9,
     "title": "O Sistema GENE: A Arquitetura da Eudaimonia Social",
     "subtitle": "A Arquitetura da Eudaimonia Social",
     "time": "10 min",

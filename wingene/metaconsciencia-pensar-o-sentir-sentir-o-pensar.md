@@ -52,6 +52,6 @@ Ao acender a chama da atenção no cotidiano, descobrimos que não precisamos es
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./o-metodo-vida-a-wingene-em-pratica.html">&lt;&lt; O método VIDA: a Wingene em prática</a>
+  <a href="./wingene-presenca-vida-e-eternidade.html">&lt;&lt; Wingene: Presença, vida e eternidade</a>
   <a href="./tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html">Tecendo a vida: criando no íntimo uma obra pessoal &gt;&gt;</a>
 </div>
