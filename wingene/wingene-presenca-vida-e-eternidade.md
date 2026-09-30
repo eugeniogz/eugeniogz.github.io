@@ -31,7 +31,7 @@ Os gregos tinham dois tempos, não um. Chronos: o relógio, indiferente, sucess�
 
 Presença é isso: a mão que se estende no momento exato. Não antes, não depois. *Phronesis* não é saber o que é certo — é saber quando.
 
-O Chronos incolor ganha cores com a atenção plena: eis o Kairós. A frase é simples. A prática, não.
+O Chronos incolor ganha cores com a atenção plena: o Kairós. A frase é simples. A prática, não.
 
 ## **Vida**
 
