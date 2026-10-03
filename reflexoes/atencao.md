@@ -19,6 +19,8 @@ Na atenção ao ser, a felicidade da propriocepção. Com a atenção aos outros
 
 A presença oportuna, o Kairós, transforma o vazio em um instante de felicidade. -- 26/09/26
 
+Saborear o momento: tocar a eternidade, viver a oportunidade. -- 03/10/26
+
 ### Ao ser
 
 Não importa que os sentidos e a mente vibrem com inúmeros estímulos e pensamentos. A consciência pode flutuar em serena euforia. -- 02/08/26
