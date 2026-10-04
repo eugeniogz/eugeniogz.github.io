@@ -3,7 +3,7 @@ layout: wingene
 title: "Wingene: Presença, vida e eternidade"
 reading_time: 2
 semantic_order: 62
-description: "A presença que reconhece o Kairós no tempo ordinário, convertendo a prática do método VIDA em hábito, caráter e vislumbre da eternidade."
+description: "A atenção que habita o instante presente, forja o caráter pelo método VIDA e encontra o eterno no tempo que passa."
 tags:
   - Wingene
   - Presença
