@@ -28,7 +28,7 @@ A contemplação sutil de uma tarde de inverno que desperta a metaconsciência, 
 A suspensão voluntária do ruído cotidiano abre frestas de silêncio onde a mente, enfim serena, pode experimentar a euforia do instante.
 ### 📄 [Repetição consciente](./2026-08-29-repeticao-consciente.html) <span class="word-count">[1 min]</span>
 A sutil arte de resgatar a intenção do esquecimento, esculpindo novos hábitos através do ritmo paciente da ação consciente.
-### 📄 [Exemplo como escolha](./2026-08-31-exemplo-como-escolha.html) <span class="word-count">[1 min]</span>
+### 📄 [Escolhas e destino](./2026-08-31-exemplo-como-escolha.html) <span class="word-count">[1 min]</span>
 O respeito e a serenidade no debate democrático como fundamentos do exemplo e da virtude individual.
 ### 📄 [Percebendo a imperfeição](./2026-09-05-nota-mental.html) <span class="word-count">[1 min]</span>
 A percepção íntima da falibilidade que redesenha os contornos da virtude na batalha contínua da existência.

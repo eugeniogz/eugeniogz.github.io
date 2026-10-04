@@ -1,16 +1,16 @@
 ---
 layout: post
-title: "Exemplo como escolha"
+title: "Escolhas e destino"
 reading_time: 1
 semantic_order: 0
+description: "O respeito e a serenidade no debate democrático como fundamentos do exemplo e da virtude individual."
 pillar: "Valores"
-date: 2026-08-29 12:00:00
 tags:
   - Valores
   - Sociedade
   - Harmonia
   - Decisões
-description: "O respeito e a serenidade no debate democrático como fundamentos do exemplo e da virtude individual."
+date: 2026-10-04 12:00:00
 --- 
 
-Numa democracia, ideologias e preferências alimentam discussões; todavia, o respeito e a serenidade iluminam a melhor escolha: o exemplo das virtudes.
+Numa democracia, ideologias e preferências alimentam discussões; todavia, respeito, serenidade e conhecimento alimentam a paciência inteligente — o destino que se espera é maior que o tempo das escolhas.

@@ -15,7 +15,7 @@ A arqueologia linguística de um conceito que une a herança interna do ser ao e
 ### 📄 [O método VIDA: a Wingene em prática](./o-metodo-vida-a-wingene-em-pratica.html) <span class="word-count">[15 min]</span>
 A aplicação prática da Wingene através do método VIDA: um itinerário ético de valores, imperfeições, decisões e atenção voltado ao florescimento humano.
 ### 📄 [Wingene: Presença, vida e eternidade](./wingene-presenca-vida-e-eternidade.html) <span class="word-count">[2 min]</span>
-A presença que reconhece o Kairós no tempo ordinário, convertendo a prática do método VIDA em hábito, caráter e vislumbre da eternidade.
+A atenção que habita o instante presente, forja o caráter pelo método VIDA e encontra o eterno no tempo que passa.
 ### 📄 [Metaconsciência: pensar o sentir, sentir o pensar](./metaconsciencia-pensar-o-sentir-sentir-o-pensar.html) <span class="word-count">[4 min]</span>
 A fusão entre o pensar e o sentir na conquista da metaconsciência, estado de pura presença onde floresce a serena euforia.
 ### 📄 [Tecendo a vida: criando no íntimo uma obra pessoal](./tecendo-a-vida-criando-no-intimo-uma-obra-pessoal.html) <span class="word-count">[7 min]</span>
