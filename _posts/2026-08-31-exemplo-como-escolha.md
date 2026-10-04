@@ -13,4 +13,4 @@ tags:
 date: 2026-10-04 12:00:00
 --- 
 
-Numa democracia, ideologias e preferências alimentam discussões; todavia, respeito, serenidade e conhecimento alimentam a paciência inteligente — o destino que se espera é maior que o tempo das escolhas.
+Numa democracia, ideologias e preferências alimentam discussões; todavia, respeito, serenidade e conhecimento alimentam a esperança — o destino não cabe no tempo das escolhas.
