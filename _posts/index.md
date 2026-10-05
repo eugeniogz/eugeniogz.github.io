@@ -38,6 +38,7 @@ Acolher o tempo de maturação dos pensamentos e degustar pacientemente cada ins
 A harmonia inabalável da consciência que preserva sua euforia diante das dissonâncias externas, unindo a paz contemplativa à prontidão para o agir.
 ### 📄 [Reagindo ao desvio](./2026-09-24-desvios-extremos.html) <span class="word-count">[1 min]</span>
 O amadurecimento da lucidez ética que equilibra a compreensão das fragilidades humanas com a necessária integridade dos próprios valores.
+### 📄 [Viver: ausência presente](./2026-10-05-viver-ausencia-presente.html) <span class="word-count">[1 min]</span>
 ### 📄 [Trânsito impaciente](./2026-10-10-transito-impaciente.html) <span class="word-count">[1 min]</span>
 O trânsito hostil desvela a fragilidade da nossa paciência, incitando a busca por uma aurora interior e pela regeneração do próprio agir.
 ### 📄 [Momentos de afeto](./2026-10-12-momentos-de-afeto.html) <span class="word-count">[1 min]</span>
