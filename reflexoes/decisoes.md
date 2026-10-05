@@ -12,6 +12,8 @@ tags:
 
 ### [Reflexões](./)
 
+Existe o tempo da escolha e a escolha do tempo; entre eles, a esperança. -- 04/10/26
+
 ### Reativas
 
 Combater uma deficiência, mesmo com recaídas, alimenta a alegria da decisão inicial. -- 26/08/26
