@@ -23,7 +23,7 @@ O fogo dos deuses, roubado por Prometeu, não apenas aquece, mas traz a luz. Ele
 
 Esse fogo interior pode vencer tempestades, permitindo que a luz encarcere os males. O espírito, como o baile material da nossa consciência, alcança novos horizontes com a sabedoria. Mas o conhecimento não é tudo; a vitória se completa na sua prática rumo ao aperfeiçoamento pessoal. Afinal, a mente atenta precisa se apossar do leme para que cada indivíduo descubra o espírito que vibra em sua própria jornada.
 
-Contudo, a religião e as baleias do capital muitas vezes agem como Zeus, escondendo a chama do saber em dogmas e mitos modernos. O Estado investe na educação, mas a luz da verdade pode desviar-se nos escudos do poder. Por isso, é preciso permitir a dança livre do método científico.
+Contudo, a religião e as baleias do capital muitas vezes agem como Zeus, escondendo a chama do saber em dogmas e mitos modernos. A sociedade investe na educação, mas a luz da verdade pode desviar-se nos escudos do poder. Por isso, é preciso permitir a dança livre do método científico.
 
 A eudaimonia social surge quando o fogo de Prometeu não arde isolado em castelos ou privilégios, mas ilumina a mesa de todos. É nessa fricção entre o que herdamos e o que construímos que a chama divina permanece acesa, pavimentando com o discernimento a estrada para tempos melhores e iluminando, coletivamente, o nosso futuro ancestral.
 <div style="clear: both;"></div>
