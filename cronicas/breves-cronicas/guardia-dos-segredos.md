@@ -15,13 +15,13 @@ tags:
 
 ### [Breves crônicas](./)
 
-A receita veio errada. Liguei para a médica enquanto um novo cliente chegava.
+A receita veio errada. Ligo para a médica enquanto um novo cliente chega.
 
-— Pode atendê-lo enquanto eu espero — eu disse.
+— Pode atendê-lo enquanto eu espero — eu digo.
 
-Ela hesitou, mas foi. A correção chegou no meu celular antes que ela terminasse.
+Ela hesita, mas vai. A correção chega no meu celular antes que ela termine.
 
-Quando voltou, reparei no crachá.
+Quando volta, reparo no crachá.
 
 — Kauara. Isso é indígena?
 
@@ -29,15 +29,11 @@ Quando voltou, reparei no crachá.
 
 — Quando eu tiver um, te conto.
 
-Ela sorriu e foi buscar a impressão. Perguntei o mês do seu nascimento — fevereiro, carnaval. O meu, setembro, véspera da primavera. Algumas coisas não deveriam ser públicas, completei. A data de nascimento, por exemplo.
+Ela valida a receita. Pergunto o mês do seu nascimento — fevereiro, carnaval. O meu, setembro, véspera da primavera. Algumas coisas não deveriam ser públicas, completo. A data de nascimento, por exemplo. Ela sorri.
 
-Ela sorriu, voltando-se para buscar a receita já impressa.
+— Agora está tudo certo.
 
-— Agora está tudo certo — disse ela.
-
-Assinei, apertei sua mão.
-
-— Foi um prazer.
+Um aperto de mão, os segredos guardados.
 <div style="clear: both;"></div>
 
 ---
