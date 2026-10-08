@@ -17,7 +17,7 @@ tags:
 
 A receita veio errada. Ligo para a médica enquanto um novo cliente chega.
 
-— Pode atendê-lo enquanto eu espero — eu digo.
+— Pode atendê-lo, eu espero.
 
 Ela hesita, mas vai. A correção chega no meu celular antes que ela termine.
 
