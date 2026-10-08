@@ -19,7 +19,7 @@ tags:
 
 *Gene*: o que herdamos. *Win*: o que conquistamos. Entre os dois, nenhuma vírgula — uma união.
 
-O grego *génos* nomeia o que persiste. O germânico *wunjo* nomeia o contentamento ganho na luta. Não somos apenas o que nos foi dado, somos o que fazemos com o dado. A semente não escolhe a espécie. Escolhe a sombra que produz. Forjar o destino com o método VIDA, criar a nossa copa, exige presença.
+O grego *génos* nomeia o que persiste. O germânico *wunjo* nomeia o contentamento ganho na luta. Não somos apenas o que nos foi dado; somos o que fazemos com o dado. A semente não escolhe a espécie. Escolhe a sombra que produz. Forjar o destino com o método VIDA, criar a nossa copa, exige presença.
 
 ## **Presença**
 
@@ -27,7 +27,7 @@ A atenção não é somente um dos quatro eixos do VIDA. É o que torna os outro
 
 Sem presença, Valores são palavras guardadas em gaveta. Imperfeições, pontos cegos. Decisões, reflexos. A atenção não soma aos três — ela os acende.
 
-Os gregos tinham dois tempos. Chronos: o relógio, indiferente, sucessão sem rosto. Kairós: o instante que pede reconhecimento — vem de frente, cabelo na testa, nuca calva. Quem, sem atenção, hesita, vê a nuca. O instante já passou.
+Para os gregos, Chronos e Kairós nomeavam diferentes relações com o tempo. Chronos: o relógio, indiferente, sucessão sem rosto. Kairós: o instante que pede reconhecimento — vem de frente, cabelo na testa, nuca calva. Quem, sem atenção, hesita, vê a nuca. O instante já passou.
 
 Presença é isso: a mão que se estende no momento exato. Não antes, não depois. *Phronesis* não é saber o que é certo — é saber quando.
 
@@ -45,7 +45,7 @@ Uma vida é construída de instantes atendidos. Não há atalho: cada Kairós pe
 
 ## **Eternidade**
 
-No eterno, Aión não é tempo infinito. É ausência de tempo — o que não sucede porque não tem antes nem depois.
+No eterno, Aión não é tempo infinito. É outra relação com o tempo: aquilo que não se deixa reduzir ao antes e ao depois.
 
 A Wingene reconhece a finitude ante a eternidade. Mas há instantes — poucos, raros, exigentes — em que a presença é tão intensa que o instante parece não passar, mesmo passando. Não é permanência. É densidade.
 
@@ -55,11 +55,11 @@ O gene atravessa gerações sem se lembrar de nenhuma. O instante presente, vivi
 
 ## **Presença, vida e eternidade**
 
-A presença reconhece o Kairós, onde havia só Chronos.  
-O VIDA é o Kairós repetido até virar hábito, e o hábito até virar caráter.  
-Aión é o que certos instantes, vividos assim, permitem tocar.
+A presença encontra o Kairós onde havia apenas Chronos.  
+O método VIDA transforma o instante em prática, a prática em caráter.  
+E alguns desses instantes, inteiramente vividos, permitem tocar o Aión.
 
-Três nomes. Um só movimento — presença, vida e eternidade.
+Presença, vida e eternidade.
 <div style="clear: both;"></div>
 
 ---
