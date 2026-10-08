@@ -48,15 +48,31 @@ description: Wingene é um projeto filosófico sobre herança, consciência, cri
       if (!feed) return;
 
       var cards = feed.querySelectorAll('.microblog-card');
-      // Seleciona aleatoriamente um post diferente dos 4 mais recentes (índice 4 em diante)
-      var candidates = Array.prototype.slice.call(cards, 4);
-      if (candidates.length === 0) {
-        if (cards.length > 1) {
-          candidates = Array.prototype.slice.call(cards, 1);
-        } else {
-          return;
+      if (cards.length < 3) return; // Necessita de conteúdo suficiente para intercalar
+
+      // Exibição limitada a uma vez por dia (usando localStorage)
+      // Permite testar/forçar a exibição via URL com ?recordando
+      var isTestMode = window.location.search.indexOf('recordando') !== -1;
+      var d = new Date();
+      var todayStr = d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
+
+      if (!isTestMode) {
+        try {
+          var lastSeen = localStorage.getItem('recordando_last_seen');
+          if (lastSeen === todayStr) {
+            return; // Já foi exibido hoje para este leitor
+          }
+        } catch (e) {
+          // localStorage indisponível ou em modo estrito
         }
       }
+
+      // Seleciona um post do acervo (a partir do 5º post mais recente, ou após os 2 primeiros)
+      var candidates = Array.prototype.slice.call(cards, 4);
+      if (candidates.length === 0) {
+        candidates = Array.prototype.slice.call(cards, 2);
+      }
+      if (candidates.length === 0) return;
 
       var chosenCard = candidates[Math.floor(Math.random() * candidates.length)];
       var clone = chosenCard.cloneNode(true);
@@ -81,9 +97,52 @@ description: Wingene é um projeto filosófico sobre herança, consciência, cri
         } else {
           header.insertBefore(recordandoBadge, header.firstChild);
         }
+
+        // Botão discreto para dispensar o lembrete
+        var closeBtn = document.createElement('button');
+        closeBtn.type = 'button';
+        closeBtn.className = 'recordando-close';
+        closeBtn.title = 'Dispensar lembrete';
+        closeBtn.setAttribute('aria-label', 'Dispensar lembrete');
+        closeBtn.innerHTML = '&times;';
+        closeBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          clone.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+          clone.style.opacity = '0';
+          clone.style.transform = 'scale(0.98)';
+          setTimeout(function() {
+            if (clone.parentNode) {
+              clone.parentNode.removeChild(clone);
+            }
+          }, 250);
+        });
+
+        var dateEl = header.querySelector('.microblog-date');
+        if (dateEl) {
+          var rightWrapper = document.createElement('div');
+          rightWrapper.style.display = 'inline-flex';
+          rightWrapper.style.alignItems = 'center';
+          rightWrapper.style.gap = '8px';
+          dateEl.parentNode.insertBefore(rightWrapper, dateEl);
+          rightWrapper.appendChild(dateEl);
+          rightWrapper.appendChild(closeBtn);
+        } else {
+          header.appendChild(closeBtn);
+        }
       }
 
-      feed.insertBefore(clone, feed.firstChild);
+      // Intercala após o 2º post mais recente (índice 1) para preservar os destaques novos no topo
+      if (cards.length >= 2) {
+        cards[1].insertAdjacentElement('afterend', clone);
+      } else {
+        feed.appendChild(clone);
+      }
+
+      // Grava que já foi visualizado hoje
+      try {
+        localStorage.setItem('recordando_last_seen', todayStr);
+      } catch (e) {}
     }
 
     if (document.readyState === 'loading') {

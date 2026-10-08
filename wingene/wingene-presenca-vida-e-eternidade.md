@@ -55,11 +55,11 @@ O gene atravessa gerações sem se lembrar de nenhuma. O instante presente, vivi
 
 ## **Presença, vida e eternidade**
 
-A presença encontra o Kairós onde havia apenas Chronos.  
-O método VIDA transforma o instante em prática, a prática em caráter.  
-E alguns desses instantes, inteiramente vividos, permitem tocar o Aión.
+A presença encontra o Kairós onde havia apenas Chronos.
+O VIDA é o Kairós repetido até virar hábito, e o hábito até virar caráter.
+E o Kairós inteiramente vivido permite tocar o Aión.
 
-Presença, vida e eternidade.
+Três nomes, um só movimento — presença, vida e eternidade.
 <div style="clear: both;"></div>
 
 ---
