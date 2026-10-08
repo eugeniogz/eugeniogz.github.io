@@ -44,5 +44,5 @@ Assinei, apertei sua mão.
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./bergamota.html">&lt;&lt; Bergamota</a>
-  <span></span>
+  <a href="./cortando-o-asfalto.html">Cortando o asfalto &gt;&gt;</a>
 </div>

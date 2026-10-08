@@ -332,8 +332,8 @@
     "badge": "🌿 Extra",
     "folder": "breves-cronicas/",
     "desc": "Pequenos relatos sobre a vida.",
-    "count": 4,
-    "timeTotal": "4 min",
+    "count": 5,
+    "timeTotal": "5 min",
     "stories": [
       {
         "id": "o-cortejo-do-sabia",
@@ -381,6 +381,19 @@
           "Existência",
           "Presença",
           "Afeto"
+        ]
+      },
+      {
+        "id": "cortando-o-asfalto",
+        "title": "Cortando o asfalto",
+        "time": "1 min",
+        "filename": "breves-cronicas/cortando-o-asfalto.html",
+        "desc": "No diálogo afetuoso de um casal, o tempo se rende à presença.",
+        "tags": [
+          "Tempo",
+          "Afeto",
+          "Presença",
+          "Cotidiano"
         ]
       }
     ]
