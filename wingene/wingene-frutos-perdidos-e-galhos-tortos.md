@@ -23,9 +23,9 @@ Mesmo quando a virtude individual se consolida no autoexame, ela encontra o atri
 
 A *eudaimonia social* transborda do exemplo pessoal e da convivência harmônica; todavia, diante de estruturas de poder capturadas, do ego dos poderosos e da voracidade das "baleias do capital", o hábito pode se enfraquecer. Leis e costumes — o Navio de Teseu institucional — não se renovam apenas pela gentileza contemplativa. Exigem a coragem do enfrentamento cívico, o combate lúcido de privilégios e a permanente vigilância contra a degeneração das normas em burocracia opressora.
 
-Diante do horizonte finito da nossa passagem e da eventual dissolução da própria matéria e do cosmos, a possibilidade de falhar na rota não anula a dignidade da caminhada. Se a colheita farta não é garantida, a grandeza reside em não abandonar o solo.
+Diante do horizonte finito da nossa passagem e da eventual dissolução da própria matéria e do cosmos, a possibilidade de falhar na rota não anula a dignidade da caminhada. Se a colheita farta não é garantida, a grandeza reside em não abandonar o pomar.
 
-A bússola moral não perde seu valor porque o mar é revolto ou porque algumas sementes secam pelo caminho. Reconhecer a existência de galhos tortos é a maior salvaguarda contra a soberba. A Wingene subsiste não por prometer frutos perfeitos, mas por insistir na poda atenta, aceitando a falibilidade para manter vivo o compromisso com o ótimo possível — a verdadeira vitória do cultivo consciente no presente, semeando as condições para o nosso futuro ancestral.
+A bússola moral não perde seu valor no mar revolto ou nas sementes que secam pelo caminho. Reconhecer a existência de galhos tortos é a maior salvaguarda contra a soberba. A Wingene subsiste não por prometer frutos perfeitos, mas por insistir na poda atenta, aceitando a falibilidade para manter vivo o compromisso com o ótimo possível — a verdadeira vitória do cultivo consciente no presente, semeando as condições para o nosso futuro ancestral.
 <div style="clear: both;"></div>
 
 ---
