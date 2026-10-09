@@ -151,5 +151,5 @@ A verdadeira vitória do ser humano é saber que cada virtude tecida no silênci
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./a-wingene-na-familia-o-giz-invisivel-do-exemplo.html">&lt;&lt; A Wingene na Familia: O Giz Invisivel do Exemplo</a>
-  <span></span>
+  <a href="./wingene-frutos-perdidos-e-galhos-tortos.html">Wingene: Frutos perdidos e galhos tortos &gt;&gt;</a>
 </div>

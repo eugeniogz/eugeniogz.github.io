@@ -24,3 +24,5 @@ A arte de tecer a própria existência como uma obra única, moldada pelo tempo,
 Na geometria silenciosa do lar, o exemplo cotidiano atua como um giz invisível que desenha a bússola moral da família.
 ### 📄 [O Sistema GENE: A Arquitetura da Eudaimonia Social](./o-sistema-gene-e-a-wingene-coletiva-a-arquitetura-da-eudaimonia-social.html) <span class="word-count">[10 min]</span>
 A arquitetura coletiva do Sistema GENE como solo fértil para que o florescimento humano e a harmonia social germinem em sua plenitude.
+### 📄 [Wingene: Frutos perdidos e galhos tortos](./wingene-frutos-perdidos-e-galhos-tortos.html) <span class="word-count">[2 min]</span>
+A falibilidade da filosofia Wingene: um mergulho nas sombras e nas quedas que compõem a jornada humana.

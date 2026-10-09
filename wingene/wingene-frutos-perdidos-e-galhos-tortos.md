@@ -2,9 +2,13 @@
 layout: wingene
 title: "Wingene: Frutos perdidos e galhos tortos"
 reading_time: 2
-desc: "A falibilidade da filosofia Wingene: um mergulho nas sombras e nas quedas que compõem a jornada humana."
 semantic_order: 600
-no_index: true
+description: "A falibilidade da filosofia Wingene: um mergulho nas sombras e nas quedas que compõem a jornada humana."
+tags:
+  - Wingene
+  - Imperfeições
+  - Valores
+  - Existência
 --- 
 
 
@@ -27,6 +31,6 @@ A bússola moral não perde seu valor porque o mar é revolto ou porque algumas 
 ---
 
 <div style="display: flex; justify-content: space-between;">
+  <a href="./o-sistema-gene-e-a-wingene-coletiva-a-arquitetura-da-eudaimonia-social.html">&lt;&lt; O Sistema GENE: A Arquitetura da Eudaimonia Social</a>
   <span></span>
-  <a href="./wingene-felicidade-agora-futuro-ancestral.html">Wingene: Felicidade agora, futuro ancestral &gt;&gt;</a>
 </div>
