@@ -33,6 +33,8 @@ A consciência da falibilidade humana transforma a decepção em lucidez: compre
 O sentimento de nacionalidade é inerente à geografia. Ele é saudável, mas não deve se sobrepor ao pertencimento à humanidade, que ultrapassa fronteiras e traz empatia a qualquer ser humano. -- 18/07/26
 
 Nossa bússola moral não possui um norte determinado; ele se ajusta com o conhecimento e a observação pessoal. -- 15/08/26
+
+A cultura pode podar os galhos tortos, mas a história mostra que a floresta pode se tornar um deserto moral. -- 09/10/26
 <div style="clear: both;"></div>
 
 ---
