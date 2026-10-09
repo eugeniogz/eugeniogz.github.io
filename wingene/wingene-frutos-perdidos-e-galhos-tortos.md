@@ -3,7 +3,7 @@ layout: wingene
 title: "Wingene: Frutos perdidos e galhos tortos"
 reading_time: 2
 desc: "A falibilidade da filosofia Wingene: um mergulho nas sombras e nas quedas que compõem a jornada humana."
-semantic_order: 0
+semantic_order: 600
 no_index: true
 --- 
 
