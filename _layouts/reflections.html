@@ -161,7 +161,7 @@ layout: default
           </div>
           <div class="reflexao-card-body">${textContent}</div>
           <div class="reflexao-card-footer">
-            <button class="btn-copy-reflexao" onclick="window.copyReflexaoCard(this)" title="Copiar reflexão">
+            <button class="btn-copy-reflexao" onclick="window.copyReflexaoCard(this)" title="Copiar reflexão em Markdown">
               <span>📋</span> <span>Copiar</span>
             </button>
           </div>
@@ -225,7 +225,8 @@ window.copyReflexaoCard = function(btn) {
   if (!card) return;
   const body = card.querySelector('.reflexao-card-body');
   if (!body) return;
-  const text = body.innerText.trim();
+  const toMarkdown = window.htmlToMarkdown || function(el) { return el.innerText.trim(); };
+  const text = toMarkdown(body);
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(text).then(() => {
       const originalHTML = btn.innerHTML;

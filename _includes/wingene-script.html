@@ -224,7 +224,7 @@
         </div>
 
         <div class="wingene-reading-controls">
-          <button id="wingene-copy-btn" class="wingene-control-btn" title="Copiar texto do ensaio" aria-label="Copiar Ensaio">
+          <button id="wingene-copy-btn" class="wingene-control-btn" title="Copiar texto do ensaio em Markdown" aria-label="Copiar Ensaio em Markdown">
             <span>📋</span> <span id="wingene-copy-label">Copiar</span>
           </button>
         </div>
@@ -294,7 +294,10 @@
 
     if (copyBtn && bodyEl) {
       copyBtn.addEventListener('click', () => {
-        const textToCopy = `${currentEssay.title}\n\n` + bodyEl.innerText.trim();
+        const toMarkdown = window.htmlToMarkdown || function(el) { return el.innerText.trim(); };
+        const markdownBody = toMarkdown(bodyEl);
+        const titleHeader = currentEssay.number ? `# ${currentEssay.number}. ${currentEssay.title}` : `# ${currentEssay.title}`;
+        const textToCopy = `${titleHeader}\n\n${markdownBody}`;
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(textToCopy).then(() => {
             const originalHTML = copyBtn.innerHTML;

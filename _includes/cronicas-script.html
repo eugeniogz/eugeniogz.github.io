@@ -258,7 +258,7 @@
           </a>
         </div>
         <div class="cronicas-reading-controls">
-          <button id="cronicas-copy-btn" class="cronicas-control-btn" title="Copiar crônica completa" aria-label="Copiar Crônica">
+          <button id="cronicas-copy-btn" class="cronicas-control-btn" title="Copiar crônica completa em Markdown" aria-label="Copiar Crônica em Markdown">
             <span>📋</span> <span id="cronicas-copy-label">Copiar</span>
           </button>
         </div>
@@ -322,7 +322,9 @@
 
     if (copyBtn && bodyEl) {
       copyBtn.addEventListener('click', () => {
-        const textToCopy = `${currentStory.title}\n\n` + bodyEl.innerText.trim();
+        const toMarkdown = window.htmlToMarkdown || function(el) { return el.innerText.trim(); };
+        const markdownBody = toMarkdown(bodyEl);
+        const textToCopy = `# ${currentStory.title}\n\n${markdownBody}`;
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(textToCopy).then(() => {
             const originalHTML = copyBtn.innerHTML;

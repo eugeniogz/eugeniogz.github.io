@@ -222,7 +222,7 @@
                     <div class="aforismo-card-text">${item}</div>
                     <div class="aforismo-card-footer">
                       <span class="aforismo-tag-small">${sec.title.split(' ')[1] || 'Pensamento'}</span>
-                      <button class="btn-copy-aforismo" onclick="window.copyAforismo(this)" title="Copiar aforismo">
+                      <button class="btn-copy-aforismo" onclick="window.copyAforismo(this)" title="Copiar aforismo em Markdown">
                         <span>📋</span> <span>Copiar</span>
                       </button>
                     </div>
@@ -303,7 +303,7 @@
           </a>
         </div>
         <div class="poetry-reading-controls">
-          <button id="poetry-copy-top-btn" class="poetry-control-btn" title="Copiar poema completo" aria-label="Copiar Poema">
+          <button id="poetry-copy-top-btn" class="poetry-control-btn" title="Copiar poema completo em Markdown" aria-label="Copiar Poema em Markdown">
             <span>📋</span> <span id="poetry-copy-label">Copiar</span>
           </button>
         </div>
@@ -327,7 +327,7 @@
         <div class="poetry-poem-body" id="poetry-body"></div>
 
         <div class="poetry-copy-action-row">
-          <button class="btn-copy-full-poem" id="btn-copy-full-poem" title="Copiar poema completo">
+          <button class="btn-copy-full-poem" id="btn-copy-full-poem" title="Copiar poema completo em Markdown">
             <span>📋</span> <span>Copiar Poema Completo</span>
           </button>
         </div>
@@ -371,7 +371,9 @@
     });
 
     function handlePoemCopy(btn) {
-      const text = `${currentPoem.title}\n\n` + bodyEl.innerText.trim();
+      const toMarkdown = window.htmlToMarkdown || function(el) { return el.innerText.trim(); };
+      const markdownBody = toMarkdown(bodyEl);
+      const text = `# ${currentPoem.title}\n\n${markdownBody}`;
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(text).then(() => {
           const originalHTML = btn.innerHTML;
@@ -416,7 +418,8 @@
     if (!card) return;
     const textEl = card.querySelector('.aforismo-card-text');
     if (!textEl) return;
-    const text = textEl.innerText.trim();
+    const toMarkdown = window.htmlToMarkdown || function(el) { return el.innerText.trim(); };
+    const text = toMarkdown(textEl);
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(() => {
         const origHTML = btn.innerHTML;
