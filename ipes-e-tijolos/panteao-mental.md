@@ -23,6 +23,6 @@ Libertar a consciência é possível. O primeiro passo é entender os mitos como
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./espirito-material.html">&lt;&lt; Espírito material</a>
+  <a href="./florestas-e-plantacoes.html">&lt;&lt; Florestas e plantações</a>
   <a href="./extrapolar-o-virtual.html">Extrapolar o virtual &gt;&gt;</a>
 </div>

@@ -15,8 +15,22 @@
     "desc": "O espírito não metafísico: a fauna consciente que habita o ecossistema mental e ampara os momentos difíceis."
   },
   {
-    "id": "panteao-mental",
+    "id": "florestas-e-plantacoes",
+    "title": "Florestas e plantações",
+    "time": "3 min",
+    "filename": "florestas-e-plantacoes.html",
+    "desc": "Entre o solo da biologia e o vento dos valores, a consciência cultiva a floresta mental para que a vida não se torne uma mera plantação de utilidades.",
     "number": 2,
+    "tags": [
+      "Natureza",
+      "Consciência",
+      "Valores",
+      "Filosofia"
+    ]
+  },
+  {
+    "id": "panteao-mental",
+    "number": 3,
     "title": "Panteão mental",
     "time": "1 min",
     "category": "mente",
@@ -29,7 +43,7 @@
   },
   {
     "id": "extrapolar-o-virtual",
-    "number": 3,
+    "number": 4,
     "title": "Extrapolar o virtual",
     "time": "1 min",
     "category": "sociedade",
@@ -43,7 +57,7 @@
   },
   {
     "id": "ipes-e-tijolos",
-    "number": 4,
+    "number": 5,
     "title": "Ipês e tijolos",
     "time": "1 min",
     "category": "sociedade",
@@ -58,7 +72,7 @@
   },
   {
     "id": "odisseia-interior",
-    "number": 5,
+    "number": 6,
     "title": "Odisseia interior",
     "time": "1 min",
     "category": "mente",
@@ -72,7 +86,7 @@
   },
   {
     "id": "servidao-e-liberdade",
-    "number": 6,
+    "number": 7,
     "title": "Servidão e liberdade",
     "time": "1 min",
     "category": "liberdade",
@@ -87,7 +101,7 @@
   },
   {
     "id": "baleias-e-marujos",
-    "number": 7,
+    "number": 8,
     "title": "Baleias e marujos",
     "time": "1 min",
     "category": "sociedade",
@@ -101,7 +115,7 @@
   },
   {
     "id": "o-fogo-de-prometeu",
-    "number": 8,
+    "number": 9,
     "title": "O fogo de Prometeu",
     "time": "2 min",
     "category": "liberdade",
@@ -116,7 +130,7 @@
   },
   {
     "id": "pavimentando-o-futuro",
-    "number": 9,
+    "number": 10,
     "title": "Pavimentando o futuro",
     "time": "1 min",
     "category": "futuro",
@@ -131,7 +145,7 @@
   },
   {
     "id": "eudaimonia-social",
-    "number": 10,
+    "number": 11,
     "title": "Eudaimonia Social",
     "time": "3 min",
     "category": "sociedade",
@@ -146,7 +160,7 @@
   },
   {
     "id": "honrando-a-heranca-ancestral",
-    "number": 11,
+    "number": 12,
     "title": "Honrando a herança ancestral",
     "time": "1 min",
     "category": "futuro",
