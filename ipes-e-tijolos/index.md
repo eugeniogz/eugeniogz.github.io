@@ -9,6 +9,7 @@ layout: ipes
 ### 📄 [Espírito material](./espirito-material.html) <span class="word-count">[2 min]</span>
 O espírito não metafísico: a fauna consciente que habita o ecossistema mental e ampara os momentos difíceis.
 ### 📄 [Florestas e plantações](./florestas-e-plantacoes.html) <span class="word-count">[3 min]</span>
+Entre o solo da biologia e o vento dos valores, a consciência cultiva a floresta mental para que a vida não se torne uma mera plantação de utilidades.
 ### 📄 [Panteão mental](./panteao-mental.html) <span class="word-count">[1 min]</span>
 O templo íntimo onde ideias, referências e mestres imaginários dialogam e refinam o caráter.
 ### 📄 [Extrapolar o virtual](./extrapolar-o-virtual.html) <span class="word-count">[1 min]</span>
