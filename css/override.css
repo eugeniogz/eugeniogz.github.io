@@ -12,7 +12,7 @@
 
   /* Versões Refinadas para Máxima Acessibilidade e Contraste (Tema Claro) */
   --color-values-primary: #940f0f;       /* Vermelho Carmesim (Valores / Herança) */
-  --text-values-primary: var(--color-values-primary);
+  --text-values-primary: #111827;        /* Preto / Grafite profundo para títulos e cabeçalhos no tema claro */
   --color-values-dark: #3f0505;          /* Vinho Profundo (Fundo do Header) */
   --color-values-light: #fdf2f2;         /* Rosa muito sutil */
   
@@ -244,7 +244,9 @@ header h2 {
 #main-content:not(.custom-headings) h1, 
 #main-content:not(.custom-headings) h2, 
 #main-content:not(.custom-headings) h3, 
-#main-content:not(.custom-headings) h4 {
+#main-content:not(.custom-headings) h4,
+#main-content:not(.custom-headings) h5,
+#main-content:not(.custom-headings) h6 {
   font-family: 'Outfit', sans-serif !important;
   color: var(--text-values-primary) !important;
   font-weight: 700;
@@ -256,6 +258,28 @@ header h2 {
 #main-content:not(.custom-headings) h1 { font-size: 2.2rem; }
 #main-content:not(.custom-headings) h2 { font-size: 1.75rem; border-bottom: 1px solid var(--border-light); padding-bottom: 0.3em; }
 #main-content:not(.custom-headings) h3 { font-size: 1.4rem; }
+#main-content:not(.custom-headings) h4 { font-size: 1.2rem; }
+#main-content:not(.custom-headings) h5 { font-size: 1.1rem; }
+#main-content:not(.custom-headings) h6 { font-size: 1.0rem; }
+
+#main-content:not(.custom-headings) h1 a, 
+#main-content:not(.custom-headings) h2 a, 
+#main-content:not(.custom-headings) h3 a, 
+#main-content:not(.custom-headings) h4 a,
+#main-content:not(.custom-headings) h5 a,
+#main-content:not(.custom-headings) h6 a {
+  color: inherit !important;
+  border-bottom: none !important;
+}
+
+#main-content:not(.custom-headings) h1 a:hover, 
+#main-content:not(.custom-headings) h2 a:hover, 
+#main-content:not(.custom-headings) h3 a:hover, 
+#main-content:not(.custom-headings) h4 a:hover,
+#main-content:not(.custom-headings) h5 a:hover,
+#main-content:not(.custom-headings) h6 a:hover {
+  color: var(--color-attention-primary) !important;
+}
 
 #main-content p, 
 #main-content li {
@@ -1117,7 +1141,7 @@ textarea::placeholder {
 
 .microblog-badge.valores {
   background: var(--color-values-light);
-  color: var(--text-values-primary);
+  color: var(--color-values-primary);
 }
 
 .microblog-badge.imperfeicoes {
@@ -1187,6 +1211,16 @@ textarea::placeholder {
   color: var(--text-main) !important;
   border-bottom: none !important;
   padding-bottom: 0 !important;
+}
+
+.microblog-card h3 a {
+  color: inherit !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.microblog-card h3 a:hover {
+  color: var(--color-attention-primary) !important;
 }
 
 .microblog-body {

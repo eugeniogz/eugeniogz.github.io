@@ -55,7 +55,7 @@ no_index: true
     margin-bottom: 0.6rem !important;
     font-family: 'Outfit', sans-serif !important;
     font-size: 2rem !important;
-    color: var(--color-values-primary) !important;
+    color: var(--text-values-primary) !important;
     font-weight: 700;
   }
   .author-badges {
