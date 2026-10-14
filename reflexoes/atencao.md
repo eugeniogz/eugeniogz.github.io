@@ -21,13 +21,15 @@ A presença oportuna, o Kairós, transforma o vazio em um instante de felicidade
 
 Saborear o momento: tocar a eternidade, viver a oportunidade. -- 03/10/26
 
+Círculo e reta — Aión e Chronos; sem Kairós, apenas geometria. -- 14/10/26
+
 ### Ao ser
 
-Não importa que os sentidos e a mente vibrem com inúmeros estímulos e pensamentos. A consciência pode flutuar em serena euforia. -- 02/08/26
+Não importa que vibrem inúmeros estímulos e pensamentos. A consciência pode flutuar em serena euforia. -- 02/08/26
 
 Em certos momentos, remover um estímulo liberta a serena euforia. -- 21/08/26
 
-A serena euforia surge da concentração máxima que silencia os ruídos do sentir e do pensar. -- 17/08/26
+A serena euforia requer silenciar os ruídos do sentir e do pensar. -- 17/08/26
 
 Assim como se espera do broto o doce, a vida ganha mais sabor com o silêncio que floresce o pensar e tempera o agir. -- 09/09/26
 
