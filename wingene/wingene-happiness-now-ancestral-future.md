@@ -107,8 +107,11 @@ Wingene finds fulfillment across multiple layers: in the individual’s evolutio
 **Notes**
 
 ¹ ARISTOTLE. *Nicomachean Ethics.* Translated with introduction and notes.
+
 ² DAMÁSIO, António. *Descartes' Error: Emotion, Reason, and the Human Brain.* New York: Putnam, 1994.
+
 ³ KRENAK, Ailton. *Ancestral Future.* Translated by Jamille Pinheiro Dias.
+
 ⁴ ROVELLI, Carlo. *White Holes: Inside the Horizon.* Translated by Simon Carnell. Riverhead Books, 2024.
 
 <div style="clear: both;"></div>
