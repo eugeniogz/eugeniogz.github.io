@@ -26,6 +26,8 @@ Observar as falhas alheias incita comentários críticos; substituí-los pelo re
 
 As decisões somente se tornam hábito com a repetição consciente. -- 29/08/26
 
+Superar imperfeita herança — calibrar valores, cultivar esperança. -- 15/10/26
+
 ### Adaptativas
 
 A vaidade impede o aprimoramento, paralisando a evolução. -- 26/08/26

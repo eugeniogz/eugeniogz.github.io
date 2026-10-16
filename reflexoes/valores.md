@@ -28,6 +28,8 @@ A crítica torna-se generosa na conversa discreta, na qual o respeito ao outro f
 
 A consciência da falibilidade humana transforma a decepção em lucidez: compreende-se a fraqueza, mas, conforme os efeitos que ela produz, a reação transita do perdão à condenação. -- 24/09/26
 
+Família: patrimônio moral, herança cultural. -- 15/10/26
+
 ### Revisão contínua
 
 O sentimento de nacionalidade é inerente à geografia. Ele é saudável, mas não deve se sobrepor ao pertencimento à humanidade, que ultrapassa fronteiras e traz empatia a qualquer ser humano. -- 18/07/26

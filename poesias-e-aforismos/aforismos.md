@@ -1,21 +1,19 @@
 ---
-layout: default
+layout: poetry
 title: "Aforismos"
 reading_time: 1
 semantic_order: 0
+description: "Sentenças breves e lapidadas sobre ciência, consciência, amor, virtudes, eudaimonia e existência."
 tags:
   - Filosofia
   - Autoconhecimento
   - Consciência
   - Amor
-description: "Sentenças breves e lapidadas sobre ciência, consciência, amor, virtudes, eudaimonia e existência."
 --- 
 
 
 
 ### [Poesias e Aforismos](./)
-
-## Aforismos
 
 ### 🔬 Ciência e Conhecimento
 
@@ -49,6 +47,8 @@ Eudaimonia: cadência do pulsar e pensar <!--15/01/26-->
 
 Solitude: árvore que sente floresta <!--06/02/2026-->
 
+Paciência: quando a razão respira. <!--17/07/2026-->
+
 ### 🌺 Felicidade e Amor
 
 Os pilares da felicidade: Criar, Amar, Recordar e Evoluir (CARE) <!--25/02/23-->
@@ -68,8 +68,6 @@ Tecer virtudes, semear atitudes <!--29/01/26-->
 ### 🌿 Natureza e Existência
 
 O natural rasga o frio asfalto <!--16/07/22-->
-
-Brilham alegrias em infinitas cosmogonias <!--08/10/25-->
 
 Viver: ausência presente <!--07/02/26-->
 

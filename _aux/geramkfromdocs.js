@@ -16,7 +16,6 @@ const REGEX_ORDENACAO = /Ordenação:\s*(\d+([.,]\d+)?)/i;
 let ROOT_DESTINATION_FOLDER_ID = null;
 let ROOT_DESTINATION_FOLDER = null;
 let DATA_FOLDER = null;
-let AFORISMOS_DOC_ID = null;
 let totalFiles = 0;
 
 // --- FUNÇÕES PRINCIPAIS E DE GESTÃO DE PASTAS ---
@@ -380,10 +379,6 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
         const nomeSlug = slugifyFileName(nomeDocLimpo);
         let nomeMarkdown = `${nomeSlug}.md`;
 
-        if (nomeDocOriginal === 'Aforismos') {
-            AFORISMOS_DOC_ID = arquivoDoc.getId();
-        }
-
         // Lógica específica para a pasta _posts: Adiciona data ao nome do arquivo
         if (pastaDestino.getName() === '_posts') {
              const dateObj = arquivoDoc.getLastUpdated();
@@ -463,10 +458,6 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
                 tags,
                 desc
             } = getMarkdownAndScoreFromDoc(arquivoDoc, nomeDocOriginal, nomeSlug, pastaDestino, comentarioPasta[0]));
-
-            if (nomeDocOriginal === 'Aforismos') {
-                gerarPostsAforismos(arquivoDoc);
-            }
         } else {
             // OTIMIZAÇÃO: Extrai Metadados do MD existente, evitando abrir o Google Doc
             if (arquivoMdDestino) {
@@ -1055,113 +1046,6 @@ function getMetadataFromDocLite(docFile, originalFileName, pastaDestino = null) 
             desc: null
         };
     }
-}
-
-/**
- * Gera posts individuais na pasta _posts para cada parágrafo do documento Aforismos.
- */
-function gerarPostsAforismos(docFile) {
-    const rootFolder = DriveApp.getFolderById(ROOT_DESTINATION_FOLDER_ID);
-    let postsFolder;
-    const postsIter = rootFolder.getFoldersByName('_posts');
-    if (postsIter.hasNext()) {
-        postsFolder = postsIter.next();
-    } else {
-        postsFolder = rootFolder.createFolder('_posts');
-    }
-
-    const doc = DocumentApp.openById(docFile.getId());
-    const body = doc.getBody();
-    const paragraphs = body.getParagraphs();
-
-    for (let i = 0; i < paragraphs.length; i++) {
-        const p = paragraphs[i];
-        let text = p.getText().trim();
-        
-        // Ignora parágrafos vazios ou títulos (assume que aforismos são texto normal)
-        if (!text || p.getHeading() !== DocumentApp.ParagraphHeading.NORMAL) continue;
-
-        // Verifica se existe data customizada no formato <!--dd/mm/yy--> no final
-        const matchDate = text.match(/<!--\s*(\d{2})\/(\d{2})\/(\d{2,4})\s*-->$/);
-        
-        if (!matchDate) continue;
-
-        const day = parseInt(matchDate[1], 10);
-        const month = parseInt(matchDate[2], 10) - 1;
-        let year = parseInt(matchDate[3], 10);
-        if (year < 100) year += 2000;
-
-        const customDate = new Date(year, month, day, 12, 0, 0);
-        const dateStr = Utilities.formatDate(customDate, Session.getScriptTimeZone(), "yyyy-MM-dd");
-        const dateTimeStr = Utilities.formatDate(customDate, Session.getScriptTimeZone(), "yyyy-MM-dd HH:mm:ss");
-        
-        // Remove a data do texto
-        text = text.substring(0, matchDate.index).trim();
-        if (!text) continue;
-
-        let slug = slugifyFileName(text);
-        if (slug.length > 50) slug = slug.substring(0, 50).replace(/-$/, '');
-        
-        const fileName = `${dateStr}-${slug}.md`;
-        const rawTitle = text.length > 30 ? text.substring(0, 30) + "..." : text;
-        const cleanTitle = normalizarAspas(rawTitle).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
-        const normText = normalizarAspas(text);
-        
-        const content = `---\nlayout: post\ntitle: "${cleanTitle}"\ndate: ${dateTimeStr}\n---\n\n${normText}`;
-        
-        // VERIFICAÇÃO DE EXISTÊNCIA PARA EVITAR DUPLICATAS
-        const existingFiles = postsFolder.getFilesByName(fileName);
-        if (existingFiles.hasNext()) {
-            const file = existingFiles.next();
-            if (file.getBlob().getDataAsString() !== content) {
-                file.setContent(content);
-            }
-            // Remove duplicatas extras se houver (limpeza de execuções anteriores)
-            while (existingFiles.hasNext()) {
-                existingFiles.next().setTrashed(true);
-            }
-        } else {
-            postsFolder.createFile(fileName, content, MIME_MARKDOWN);
-        }
-    }
-}
-
-/**
- * Helper para obter os nomes de arquivos que seriam gerados pelo Aforismos.
- * Usado para evitar que a limpeza apague esses arquivos.
- */
-function obterNomesArquivosAforismos(docFile) {
-    const nomes = [];
-    const doc = DocumentApp.openById(docFile.getId());
-    const body = doc.getBody();
-    const paragraphs = body.getParagraphs();
-
-    for (let i = 0; i < paragraphs.length; i++) {
-        const p = paragraphs[i];
-        let text = p.getText().trim();
-        
-        if (!text || p.getHeading() !== DocumentApp.ParagraphHeading.NORMAL) continue;
-
-        const matchDate = text.match(/<!--\s*(\d{2})\/(\d{2})\/(\d{2,4})\s*-->$/);
-        if (!matchDate) continue;
-
-        const day = parseInt(matchDate[1], 10);
-        const month = parseInt(matchDate[2], 10) - 1;
-        let year = parseInt(matchDate[3], 10);
-        if (year < 100) year += 2000;
-
-        const customDate = new Date(year, month, day, 12, 0, 0);
-        const dateStr = Utilities.formatDate(customDate, Session.getScriptTimeZone(), "yyyy-MM-dd");
-        
-        text = text.substring(0, matchDate.index).trim();
-        if (!text) continue;
-
-        let slug = slugifyFileName(text);
-        if (slug.length > 50) slug = slug.substring(0, 50).replace(/-$/, '');
-        
-        nomes.push(`${dateStr}-${slug}.md`);
-    }
-    return nomes;
 }
 
 /**
@@ -1943,16 +1827,6 @@ function limparArquivosExcluidos(pastaDestino, pastaFonte) {
         if (nomeArq.toLowerCase().endsWith('.md')) {
             slugsFonteValidos.add(nomeArq);
         }
-    }
-
-    if (isPostsFolder && AFORISMOS_DOC_ID) {
-         try {
-             const aforismosDoc = DriveApp.getFileById(AFORISMOS_DOC_ID);
-             const nomesAforismos = obterNomesArquivosAforismos(aforismosDoc);
-             nomesAforismos.forEach(nome => slugsFonteValidos.add(nome));
-         } catch(e) {
-             Logger.log("Erro ao ler Aforismos na limpeza: " + e);
-         }
     }
 
     // 2. Limpeza: Itera apenas nos arquivos .md do destino.
