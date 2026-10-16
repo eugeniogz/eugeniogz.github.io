@@ -93,7 +93,7 @@ Essa especulação reflete uma das postulações científicas mais profundas e r
 
 O que brotou na nossa nave azul algum dia será cinzas. Não viveremos de novo, tampouco voltaremos em outra oportunidade. Nosso prazo é o que temos: contado em respirações, no ritmo do coração. Para onde irá toda a beleza — os quadros brilhantes da colorida natureza? Esse inevitável futuro não me causa sofrimento, apesar de nosso conhecimento não enxergar no escuro de buracos massivos.
 
-A esperança não está em infinitas cosmogonias, mas no tempo humano que espera novos inventores que descubram sinfonias inéditas — desbravadores de mundos, arautos da *Wingene* que nunca termina. A mesma que move a nossa existência, movimentos da música que ressoam no eterno — uma sinfonia da finita existência que seguirá vibrando no tempo universal.
+A esperança não está em infinitas cosmogonias, mas no tempo humano que espera novos inventores de sinfonias inéditas — desbravadores de mundos, arautos da *Wingene* que nunca termina. A mesma que move a nossa existência, movimentos da música que ressoam no eterno — uma sinfonia da finita existência que seguirá vibrando no tempo universal.
 
 ***
 
