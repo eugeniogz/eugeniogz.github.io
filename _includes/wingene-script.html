@@ -202,13 +202,34 @@
     const rawNodes = Array.from(container.childNodes);
     const bodyElements = [];
 
+    const isLegacyNavElement = (el) => {
+      if (!el || el.nodeType !== 1) return false;
+      const tag = el.tagName.toLowerCase();
+      return tag === 'div' && (el.innerText.includes('<<') || el.innerText.includes('>>') || el.style.clear === 'both');
+    };
+
+    const isLegacyNavHr = (el) => {
+      if (!el || el.nodeType !== 1 || el.tagName.toLowerCase() !== 'hr') return false;
+      let next = el.nextElementSibling;
+      while (next) {
+        if (next.nodeType === 1) {
+          if (isLegacyNavElement(next)) return true;
+          return false;
+        }
+        next = next.nextSibling;
+      }
+      const prev = el.previousElementSibling;
+      if (prev && isLegacyNavElement(prev)) return true;
+      return true;
+    };
+
     rawNodes.forEach(node => {
       if (node.nodeType !== 1) return;
       const tagName = node.tagName.toLowerCase();
       if (tagName === 'h3' && (node.querySelector('a[href*="./"]') || node.innerText.toLowerCase().includes('wingene'))) return;
       if (tagName === 'h2' && node.innerText.trim().toLowerCase().includes((currentEssay.title || '').split(':')[0].trim().toLowerCase())) return;
-      if (tagName === 'hr') return;
-      if (tagName === 'div' && (node.innerText.includes('<<') || node.innerText.includes('>>') || node.style.clear === 'both')) return;
+      if (tagName === 'div' && isLegacyNavElement(node)) return;
+      if (tagName === 'hr' && isLegacyNavHr(node)) return;
       bodyElements.push(node.cloneNode(true));
     });
 
