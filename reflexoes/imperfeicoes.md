@@ -38,7 +38,7 @@ Nos momentos de piloto automático, as atitudes podem desviar dos valores pessoa
 
 O tropeço do piloto automático não é motivo de culpa, mas um sinal para aprimorar a presença. Não é possível manter a atenção a todo tempo; reconhecer uma distração, no entanto, é o que permite a capacitação contínua. -- 10/08/26
 
-Algoritmos cativam; desconectam o real. -- 20/10/26
+Algoritmos cativam; desconectam. -- 20/10/26
 <div style="clear: both;"></div>
 
 ---
