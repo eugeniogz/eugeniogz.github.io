@@ -48,3 +48,4 @@ A sacola cinza e seu odor invasivo: o atrito entre o recipiente urbano e a simpl
 O trânsito hostil desvela a fragilidade da nossa paciência, incitando a busca por uma aurora interior e pela regeneração do próprio agir.
 ### 📄 [Momentos de afeto](./2026-10-12-momentos-de-afeto.html) <span class="word-count">[1 min]</span>
 O lirismo dos pequenos rituais partilhados e a dança silenciosa do afeto que transforma o cotidiano em uma serena euforia.
+### 📄 [Tempo vazio](./2026-10-20-tempo-vazio.html) <span class="word-count">[1 min]</span>

@@ -12,7 +12,7 @@ tags:
 
 ### [Reflexões](./)
 
-Para vencer uma imperfeição, é preciso reconhecer, ter vontade e se esforçar reiteradamente em combatê-la. -- 26/08/26
+Para vencer uma imperfeição, é preciso reconhecê-la e se esforçar reiteradamente em combatê-la. -- 26/08/26
 
 ### Pessoais
 
@@ -28,6 +28,8 @@ A defesa da opinião, quando precedida pela pausa consciente, não somente permi
 
 O instante do erro verbal transforma-se em lição quando convoca a atenção necessária para resgatar a coerência com os valores. -- 11/07/26
 
+A boca não esperou a mente; a palavra, inconsequente. -- 16/10/26
+
 ### Atencionais
 
 Uma falha não mancha o êxito; desenha a batalha contínua. -- 05/09/26
@@ -35,6 +37,8 @@ Uma falha não mancha o êxito; desenha a batalha contínua. -- 05/09/26
 Nos momentos de piloto automático, as atitudes podem desviar dos valores pessoais; todavia, basta um único instante de atenção para a oportuna correção da rota. -- 16/07/26
 
 O tropeço do piloto automático não é motivo de culpa, mas um sinal para aprimorar a presença. Não é possível manter a atenção a todo tempo; reconhecer uma distração, no entanto, é o que permite a capacitação contínua. -- 10/08/26
+
+Algoritmos cativam a atenção — o virtual desconecta o real. -- 20/10/26
 <div style="clear: both;"></div>
 
 ---
