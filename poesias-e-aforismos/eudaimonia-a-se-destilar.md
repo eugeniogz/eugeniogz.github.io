@@ -18,10 +18,10 @@ tags:
 A mente se amplia na atenção  
 A seiva vital pulsa sem pressa  
 Flor e cultura no coração  
-O infinito na palma da mão
+O infinito no instante cessa
 
 Sentidos bailam com emoção  
-Instante isento de preocupação  
+Tempo isento de preocupação  
 O ritmo é tranquilo e forte  
 A mente enxerga o norte
 
