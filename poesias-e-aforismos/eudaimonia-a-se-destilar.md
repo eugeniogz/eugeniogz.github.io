@@ -1,33 +1,31 @@
 ---
-layout: default
+layout: poetry
 title: "Eudaimonia a se destilar"
 reading_time: 1
 semantic_order: 0.8
+description: "A alquimia do viver consciente: cultivar a alegria serena através de pequenas atitudes diárias."
 tags:
   - Euforia
   - Eudaimonia
   - Filosofia
   - Autoconhecimento
-description: "A alquimia do viver consciente: cultivar a alegria serena através de pequenas atitudes diárias."
 --- 
 
 
 
-### [Poesias e Aforimos](./)
+### [Poesias e Aforismos](./)
 
-## Eudaimonia a se destilar
-
-O horizonte se amplia em euforia  
+A mente se amplia na atenção  
 A seiva vital pulsa sem pressa  
-Flores e pedras são ilusões  
-O espaço infinito ocupa o vivo
+Flor e cultura no coração  
+O infinito na palma da mão
 
-Cores reais bailam no corpo  
-A fronte sente o pulsar suave  
-O ritmo é cadente no coração  
-A mente vibra em sensações
+Sentidos bailam com emoção  
+Instante isento de preocupação  
+O ritmo é tranquilo e forte  
+A mente enxerga o norte
 
-Serena euforia, pulso e pensar — Eudaimonia a se destilar
+Serena euforia, pulso e pensar — eudaimonia a se destilar
 <div style="clear: both;"></div>
 
 ---

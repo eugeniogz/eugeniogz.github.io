@@ -11,6 +11,8 @@ const NOME_INDEX = "index.md";
 // REGEX PARA EXTRAÇÃO DE METADADOS DO CORPO DO DOC
 // Captura "Ordenação:" seguida de um número, aceitando '.' ou ',' como separador decimal
 const REGEX_ORDENACAO = /Ordenação:\s*(\d+([.,]\d+)?)/i;
+const REGEX_SPLIT_COMENTARIO = /^([^:]+):\s*(.*)$/;
+const CLEAR_DIV_REGEX = /(\s*<div style="clear: both;"><\/div>\s*)+$/;
 
 // VARIÁVEL GLOBAL PARA RASTREAR A PASTA RAIZ DE DESTINO
 let ROOT_DESTINATION_FOLDER_ID = null;
@@ -171,14 +173,8 @@ function encontrarCriarPastaPorCaminho(caminhoCompleto, criar = false) {
  * Converte o nome de um arquivo para um formato "slug" amigável.
  */
 function slugifyFileName(fileName) {
-  let slug = fileName.toLowerCase();
-
-  slug = slug.replace(/á|à|ã|â/g, 'a');
-  slug = slug.replace(/é|è|ê/g, 'e');
-  slug = slug.replace(/í|ì|î/g, 'i');
-  slug = slug.replace(/ó|ò|õ|ô/g, 'o');
-  slug = slug.replace(/ú|ù|û/g, 'u');
-  slug = slug.replace(/ç/g, 'c');
+  if (!fileName) return '';
+  let slug = fileName.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
   slug = slug.replace(/\s+/g, '-');
   slug = slug.replace(/[^a-z0-9-]/g, '');
@@ -228,6 +224,122 @@ function normalizarTag(tag) {
   if (hasUpperGene) {
     result = result.replace(/\bgene\b/gi, 'GENE');
   }
+
+  return result;
+}
+
+/**
+ * Calcula o tempo estimado de leitura (em minutos) a partir de um texto.
+ */
+function calcularTempoLeitura(fullText) {
+  if (!fullText) return 1;
+  const text = fullText.replace(/\[.*?\]\(.*?\)/g, '').replace(/<div[^>]*>|<\/div>/gi, '');
+  const words = text.split(/\s+/).filter(word => word.length > 0);
+  return Math.max(1, Math.round(words.length / 200.0));
+}
+
+/**
+ * Formata um elemento de texto do Google Docs para Markdown,
+ * preservando negrito, itálico e combinação de ambos.
+ * OTIMIZAÇÃO CRÍTICA: Usa getTextAttributeIndices() para ler as formatações
+ * em blocos (runs), em vez de fazer milhares de chamadas remotas caractere a caractere.
+ */
+function formatarTextElementMarkdown(textElement, isTableCell = false) {
+  const rawContent = textElement.getText();
+  if (!rawContent) return '';
+  const textContent = normalizarAspas(rawContent);
+
+  let indices;
+  try {
+    indices = textElement.getTextAttributeIndices();
+  } catch (e) {
+    indices = [0];
+  }
+  if (!indices || indices.length === 0) {
+    indices = [0];
+  }
+
+  let result = '';
+  let inBoldRun = false;
+  let inItalicRun = false;
+  let inBoldItalicRun = false;
+
+  for (let r = 0; r < indices.length; r++) {
+    const start = indices[r];
+    const end = (r < indices.length - 1) ? indices[r + 1] : textContent.length;
+    if (start >= end) continue;
+
+    let isBold = false;
+    let isItalic = false;
+    try {
+      isBold = !!textElement.isBold(start);
+      isItalic = !!textElement.isItalic(start);
+    } catch (e) {
+      isBold = false;
+      isItalic = false;
+    }
+
+    const runText = textContent.substring(start, end);
+
+    // Otimização: Se o bloco inteiro não tem formatação e nenhuma tag está aberta
+    if (!isBold && !isItalic && !inBoldRun && !inItalicRun) {
+      if (isTableCell) {
+        result += runText.replace(/(\r\n|\r|\n)/g, ' ');
+      } else {
+        result += runText;
+      }
+      continue;
+    }
+
+    // Bloco com formatação ativa ou transição de estilos (processado 100% em memória JS)
+    for (let k = 0; k < runText.length; k++) {
+      const char = runText[k];
+
+      if (char === '\r' || char === '\n') {
+        if (inBoldItalicRun) {
+          result += "***";
+          inBoldItalicRun = false;
+          inBoldRun = false;
+          inItalicRun = false;
+        } else {
+          if (inBoldRun) { result += '**'; inBoldRun = false; }
+          if (inItalicRun) { result += '*'; inItalicRun = false; }
+        }
+        result += isTableCell ? ' ' : char;
+        continue;
+      }
+
+      if (char === ' ' && inBoldItalicRun) {
+        result += "*** ";
+        inBoldItalicRun = false;
+        inBoldRun = false;
+        inItalicRun = false;
+        continue;
+      }
+
+      if (isBold && !inBoldRun && char !== ' ') {
+        result += '**';
+        inBoldRun = true;
+      } else if (!isBold && inBoldRun) {
+        result += '**';
+        inBoldRun = false;
+      }
+
+      if (isItalic && !inItalicRun && char !== ' ') {
+        result += '*';
+        inItalicRun = true;
+      } else if (!isItalic && inItalicRun) {
+        result += '*';
+        inItalicRun = false;
+      }
+
+      inBoldItalicRun = inItalicRun && inBoldRun;
+      result += char;
+    }
+  }
+
+  if (inBoldRun) { result += '**'; inBoldRun = false; }
+  if (inItalicRun) { result += '*'; inItalicRun = false; }
 
   return result;
 }
@@ -348,6 +460,24 @@ function getMetadataFromMd(arquivoMdDestino) {
  * @returns {number} O total de arquivos .md que foram criados ou atualizados.
  */
 function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
+    // 0. Cache em memória dos arquivos e subpastas de destino para eliminar requisições N+1 ao Drive
+    const arquivosDestinoMap = new Map();
+    const destFilesIter = pastaDestino.getFiles();
+    while (destFilesIter.hasNext()) {
+        const arq = destFilesIter.next();
+        const nomeArq = arq.getName();
+        if (!arquivosDestinoMap.has(nomeArq)) {
+            arquivosDestinoMap.set(nomeArq, []);
+        }
+        arquivosDestinoMap.get(nomeArq).push(arq);
+    }
+
+    const subpastasDestinoMap = new Map();
+    const destFoldersIter = pastaDestino.getFolders();
+    while (destFoldersIter.hasNext()) {
+        const sub = destFoldersIter.next();
+        subpastasDestinoMap.set(sub.getName(), sub);
+    }
 
     const arquivosDocIter = pastaFonte.getFilesByType(MIME_GOOGLE_DOCS);
     const listaArquivosDoc = [];
@@ -391,19 +521,14 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
         
         totalFiles++;
 
-        // 1.1. Tenta encontrar o arquivo .md de destino e verifica a data
-        const arquivosMdDestinoIterator = pastaDestino.getFilesByName(nomeMarkdown);
+        // 1.1. Tenta encontrar o arquivo .md de destino no Map em memória e verifica a data
+        const listaDeArquivosMd = arquivosDestinoMap.get(nomeMarkdown) || [];
         let deveConverter = converterTodos; // Assume converterTodos (global) como padrão
         let arquivoMdDestino = null;
 
-        const listaDeArquivosMd = [];
-        while (arquivosMdDestinoIterator.hasNext()) {
-            listaDeArquivosMd.push(arquivosMdDestinoIterator.next());
-        }
-
         if (listaDeArquivosMd.length === 1) {
           arquivoMdDestino = listaDeArquivosMd[0];
-        } else {
+        } else if (listaDeArquivosMd.length > 1) {
           for (let i = 0; i < listaDeArquivosMd.length; i++) {
               const arquivoAtual = listaDeArquivosMd[i];
               if (/.*\([0-9]+\).md/.test(arquivoAtual.getName())) {
@@ -447,7 +572,7 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
         let desc = null;
 
         if (deveConverter) {
-            // Conversão pesada (Corpo e Metadados)
+            // Conversão pesada (Corpo e Metadados) - passa arquivoMdDestino para reaproveitar metadados sem nova busca
              ({
                 markdownContent, 
                 semanticOrderScore,
@@ -457,7 +582,7 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
                 hasNavigationFooter,
                 tags,
                 desc
-            } = getMarkdownAndScoreFromDoc(arquivoDoc, nomeDocOriginal, nomeSlug, pastaDestino, comentarioPasta[0]));
+            } = getMarkdownAndScoreFromDoc(arquivoDoc, nomeDocOriginal, nomeSlug, pastaDestino, comentarioPasta[0], null, arquivoMdDestino));
         } else {
             // OTIMIZAÇÃO: Extrai Metadados do MD existente, evitando abrir o Google Doc
             if (arquivoMdDestino) {
@@ -510,7 +635,8 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
             nomeSemData: nomeSemData,
             docFile: arquivoDoc,
             noIndex: noIndex,
-            hasNavigationFooter: hasNavigationFooter
+            hasNavigationFooter: hasNavigationFooter,
+            wasChanged: false
         });
 
         // 1.4. Adiciona metadados para indexação (lista paralela)
@@ -528,8 +654,8 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
         }
     }
 
-    // 1.5. SINCRONIZAR ASSETS (Imagens e Vídeos)
-    sincronizarAssets(pastaFonte, pastaDestino);
+    // 1.5. SINCRONIZAR ASSETS (Imagens e Vídeos) - com mapa em memória
+    sincronizarAssets(pastaFonte, pastaDestino, arquivosDestinoMap);
 
     // 2. ORDENAÇÃO
     // Ordena listas com a função sortDocs harmonizada
@@ -567,9 +693,10 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
                   }
               }
 
-              // **OTIMIZAÇÃO 3:** Só reescreve se o conteúdo (corpo OU navegação) for diferente
-              const wasChanged = salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDestino);
+              // Só reescreve se o conteúdo (corpo OU navegação) for diferente
+              const wasChanged = salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDestino, arquivosDestinoMap);
               if (wasChanged) {
+                  docInfo.wasChanged = true;
                   filesUpdated++;
               }
           }
@@ -608,14 +735,11 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
             nomeDestino = slugifyFileName(nomeSubpasta);
         }
 
-        // Tenta encontrar a pasta de destino
-        let subpastasDestinoIterator = pastaDestino.getFoldersByName(nomeDestino);
-        let subpastaDestino;
-
-        if (subpastasDestinoIterator.hasNext()) {
-            subpastaDestino = subpastasDestinoIterator.next();
-        } else {
+        // Tenta encontrar a pasta de destino no Map em memória
+        let subpastaDestino = subpastasDestinoMap.get(nomeDestino);
+        if (!subpastaDestino) {
             subpastaDestino = pastaDestino.createFolder(nomeDestino);
+            subpastasDestinoMap.set(nomeDestino, subpastaDestino);
         }
 
         // 4.1. Chamada Recursiva: Converte os arquivos dentro da subpasta
@@ -676,19 +800,22 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
     } catch (e) {
         Logger.log(`[AVISO] Falha temporária ao verificar/criar o índice da pasta "${pastaDestino.getName()}": ${e.toString()}`);
     }
-    
-    // 5.1. REORDENA O ARQUIVO JSON EM _DATA DE ACORDO COM A ORDEM DO INDEX.MD
-    try {
-        reordenarDataJsonDaPasta(pastaDestino, arquivosIndexados);
-    } catch (e) {
-        Logger.log(`[AVISO] Falha ao reordenar JSON da pasta "${pastaDestino.getName()}": ${e.toString()}`);
-    }
 
-    // 6. VERIFICA O REQUISITO DE RECONVERSÃO
-    if (indexAlterado && arquivosParaProcessar.length > 0) {
-        Logger.log(`[FORÇANDO RECONVERSÃO] Index.md em ${pastaDestino.getName()} foi alterado. Reconvertendo arquivos desta pasta para atualizar a navegação.`);
+    // 6. VERIFICA O REQUISITO DE RECONVERSÃO DE NAVEGAÇÃO
+    // Somente reconverte se index.md mudou E algum documento nesta pasta foi de fato alterado/adicionado
+    const algumDocAlterado = filesConverted > 0 || arquivosParaProcessar.some(d => d.wasChanged || d.deveConverter);
+    if (indexAlterado && arquivosParaProcessar.length > 0 && algumDocAlterado) {
+        Logger.log(`[RECONVERSÃO DE NAVEGAÇÃO] Index.md e arquivos alterados em ${pastaDestino.getName()}. Atualizando navegação dos vizinhos.`);
         // Força a segunda passagem de conversão para todos os arquivos da pasta (Passo 3 repetido)
         filesConverted += executarPassagemDeConversao(true);
+    }
+
+    // 7. SINCRONIZA METADADOS E REORDENA OS ARQUIVOS JSON EM _DATA EM LOTE (Uma única escrita por arquivo JSON)
+    try {
+        const docsAlterados = arquivosParaProcessar.filter(d => d.wasChanged || d.deveConverter);
+        sincronizarDataJsonDaPasta(pastaDestino, docsAlterados, arquivosIndexados);
+    } catch (e) {
+        Logger.log(`[AVISO] Falha ao sincronizar JSON em _data para pasta "${pastaDestino.getName()}": ${e.toString()}`);
     }
 
     return filesConverted;
@@ -697,7 +824,7 @@ function converterPastaParaMarkdown(pastaFonte, pastaDestino) {
 /**
  * Sincroniza arquivos estáticos (JPG, PNG, Vídeos) da fonte para o destino.
  */
-function sincronizarAssets(pastaFonte, pastaDestino) {
+function sincronizarAssets(pastaFonte, pastaDestino, arquivosDestinoMap = null) {
     const arquivos = pastaFonte.getFiles();
     while (arquivos.hasNext()) {
         const arquivo = arquivos.next();
@@ -711,10 +838,20 @@ function sincronizarAssets(pastaFonte, pastaDestino) {
 
         // Verifica se é para copiar diretamente
         if (mime === MimeType.JAVASCRIPT || mime === MimeType.HTML || mime === MimeType.JPEG || mime === MimeType.PNG || mime === MimeType.PDF || mime.startsWith('video/') || mime === MimeType.GIF || mime === MimeType.SVG || mime === 'application/x-tex' || nomeArquivo.toLowerCase().endsWith('.tex')  || nomeArquivo.toLowerCase().endsWith('.md')) {
-            const arquivosDestino = pastaDestino.getFilesByName(nomeArquivo);
+            let arquivoDestino = null;
+            if (arquivosDestinoMap) {
+                const list = arquivosDestinoMap.get(nomeArquivo);
+                if (list && list.length > 0) {
+                    arquivoDestino = list[0];
+                }
+            } else {
+                const arquivosDestino = pastaDestino.getFilesByName(nomeArquivo);
+                if (arquivosDestino.hasNext()) {
+                    arquivoDestino = arquivosDestino.next();
+                }
+            }
             
-            if (arquivosDestino.hasNext()) {
-                const arquivoDestino = arquivosDestino.next();
+            if (arquivoDestino) {
                 // Se o arquivo fonte for mais recente, atualiza
                 if (arquivo.getLastUpdated().getTime() > arquivoDestino.getLastUpdated().getTime()) {
                     Logger.log(`[ASSET ATUALIZADO] ${nomeArquivo} em ${pastaDestino.getName()}`);
@@ -737,7 +874,13 @@ function sincronizarAssets(pastaFonte, pastaDestino) {
                 }
             } else {
                 Logger.log(`[ASSET NOVO] ${nomeArquivo} em ${pastaDestino.getName()}`);
-                arquivo.makeCopy(nomeArquivo, pastaDestino);
+                const copia = arquivo.makeCopy(nomeArquivo, pastaDestino);
+                if (arquivosDestinoMap) {
+                    if (!arquivosDestinoMap.has(nomeArquivo)) {
+                        arquivosDestinoMap.set(nomeArquivo, []);
+                    }
+                    arquivosDestinoMap.get(nomeArquivo).push(copia);
+                }
             }
         }
     }
@@ -850,7 +993,7 @@ function gerarSitemap(pastaRaiz) {
  * ele lê o arquivo existente para injetar o rodapé.
  * * @returns {boolean} True se o arquivo foi criado ou alterado.
  */
-function salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDestino) {
+function salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDestino, arquivosDestinoMap = null) {
     
     const navegacaoRodape = docInfo.hasNavigationFooter === false ? "" : gerarNavegacaoRodape(anterior, proximo);
     let finalContent = null;
@@ -874,10 +1017,8 @@ function salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDest
         bodyContent = docInfo.content;
     }
 
-    // NOVO: Remove qualquer <div style="clear: both;"></div> do final do conteúdo do corpo
-    // para evitar duplicação, já que o rodapé de navegação irá adicioná-lo.
-    const clearDivRegex = /(\s*<div style="clear: both;"><\/div>\s*)+$/;
-    bodyContent = bodyContent.replace(clearDivRegex, '').trim();
+    // Remove qualquer <div style="clear: both;"></div> do final do conteúdo do corpo
+    bodyContent = bodyContent.replace(CLEAR_DIV_REGEX, '').trim();
     
     finalContent = bodyContent + navegacaoRodape;
 
@@ -900,11 +1041,13 @@ function salvarArquivoMarkdownComNavegacao(docInfo, anterior, proximo, pastaDest
         // ARQUIVO NOVO: Cria
         const novoArquivo = pastaDestino.createFile(docInfo.markdownName, finalContent, MIME_MARKDOWN);
         docInfo.arquivoMdDestino = novoArquivo;
+        if (arquivosDestinoMap) {
+            if (!arquivosDestinoMap.has(docInfo.markdownName)) {
+                arquivosDestinoMap.set(docInfo.markdownName, []);
+            }
+            arquivosDestinoMap.get(docInfo.markdownName).push(novoArquivo);
+        }
         fileChanged = true;
-    }
-
-    if (fileChanged || docInfo.deveConverter) {
-        atualizarDataJsonSeNecessario(docInfo, pastaDestino);
     }
 
     return fileChanged;
@@ -978,25 +1121,18 @@ function getMetadataFromDocLite(docFile, originalFileName, pastaDestino = null) 
             };
         }
         
-        // 1. CÁLCULO DE TEMPO DE LEITURA
-        let textForReadingTime = fullText.replace(/\[.*?\]\(.*?\)/g, '');
-        textForReadingTime = textForReadingTime.replace(/<div[^>]*>|<\/div>/gi, '');
-        const words = textForReadingTime.split(/\s+/).filter(word => word.length > 0);
-        const wordCount = words.length;
-        const rawTime = wordCount / 200.0;
-        const roundedTime = Math.max(1, Math.round(rawTime));
-        tempoLeitura = roundedTime;
+        // 1. CÁLCULO DE TEMPO DE LEITURA (Otimizado)
+        tempoLeitura = calcularTempoLeitura(fullText);
 
         // 2. EXTRAÇÃO DE SCORE E TAGS
-        const fullBodyText = body.getText();
-        const scoreMatch = fullBodyText.match(REGEX_ORDENACAO);
+        const scoreMatch = fullText.match(REGEX_ORDENACAO);
         if (scoreMatch) {
             const scoreStr = scoreMatch[1].replace(',', '.');
             semanticOrderScore = parseFloat(scoreStr) || semanticOrderScore;
             noIndex = false;
         }
 
-        const tagMatch = fullBodyText.match(/^\s*tags:\s*(.*)/im);
+        const tagMatch = fullText.match(/^\s*tags:\s*(.*)/im);
         if (tagMatch) {
             const tagsString = tagMatch[1].replace(/\.\s*$/, "");
             tags = tagsString.split(',')
@@ -1004,19 +1140,19 @@ function getMetadataFromDocLite(docFile, originalFileName, pastaDestino = null) 
                 .filter(tag => tag.length > 0);
         }
 
-        const descMatch = fullBodyText.match(/^\s*(?:desc|Desc|descrição|Descrição|description|Description):\s*(.+)$/im);
+        const descMatch = fullText.match(/^\s*(?:desc|Desc|descrição|Descrição|description|Description):\s*(.+)$/im);
         if (descMatch) {
             desc = normalizarAspas(descMatch[1]).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
         }
         
-        const footerMatch = fullBodyText.match(/^\s*(?:Footer|Fotter):\s*(n[ãa]o|no)/im);
+        const footerMatch = fullText.match(/^\s*(?:Footer|Fotter):\s*(n[ãa]o|no)/im);
         if (footerMatch) {
             hasNavigationFooter = false;
             noIndex = false;
         }
 
         // 3. EXTRAÇÃO DE TÍTULO CUSTOMIZADO OU REMOÇÃO DA DATA DO NOME
-        const titleMatch = fullBodyText.match(/^\s*(?:T[ií]tulo|Title):\s*(.+)$/im);
+        const titleMatch = fullText.match(/^\s*(?:T[ií]tulo|Title):\s*(.+)$/im);
         if (titleMatch) {
             nomeSemData = normalizarAspas(titleMatch[1]).replace(/^["'“`”‘'«»]+|["'“`”‘'«»]+$/g, '').trim();
         } else {
@@ -1054,7 +1190,7 @@ function getMetadataFromDocLite(docFile, originalFileName, pastaDestino = null) 
  * Inclui metadados no Front Matter.
  * @returns {{markdownContent: string, semanticOrderScore: number, tempoLeitura: number, nomeSemData: string}}
  */
-function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDestino, tituloPasta, customLayout = null) {
+function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDestino, tituloPasta, customLayout = null, arquivoMdDestino = null) {
     let markdown = '';
     let tags = [];
     let semanticOrderScore = 0.0;
@@ -1094,14 +1230,8 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
             };
         }
         
-        // CÁLCULO DE TEMPO DE LEITURA (INTEGRADO)
-        let textForReadingTime = fullText.replace(/\[.*?\]\(.*?\)/g, '');
-        textForReadingTime = textForReadingTime.replace(/<div[^>]*>|<\/div>/gi, '');
-        const words = textForReadingTime.split(/\s+/).filter(word => word.length > 0);
-        const wordCount = words.length;
-        const rawTime = wordCount / 200.0;
-        const roundedTime = Math.max(1, Math.round(rawTime));
-        tempoLeitura = roundedTime;
+        // CÁLCULO DE TEMPO DE LEITURA (Otimizado)
+        tempoLeitura = calcularTempoLeitura(fullText);
 
         
         let contentElementsInReverse = [];
@@ -1219,9 +1349,15 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
         // Se o Google Doc não possui tags ou descrição própria, preservamos o que já existe no .md destino.
         const targetMdFileName = `${fileSlug}.md`;
         try {
-            const existingFiles = pastaDestino.getFilesByName(targetMdFileName);
-            if (existingFiles.hasNext()) {
-                const existingMdContent = existingFiles.next().getBlob().getDataAsString();
+            let existingMdFile = arquivoMdDestino;
+            if (!existingMdFile && pastaDestino) {
+                const existingFiles = pastaDestino.getFilesByName(targetMdFileName);
+                if (existingFiles.hasNext()) {
+                    existingMdFile = existingFiles.next();
+                }
+            }
+            if (existingMdFile) {
+                const existingMdContent = existingMdFile.getBlob().getDataAsString();
                 const fmMatch = existingMdContent.match(/^---\r?\n([\s\S]*?)\r?\n---/);
                 if (fmMatch) {
                     const fmText = fmMatch[1];
@@ -1386,52 +1522,10 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                 const heading = paragraph.getHeading();
 
                 let rawText = '';
-                let inBoldRun = false;
-                let inItalicRun = false;
-                let inBoldItalicRun = false;
                 for (let j = 0; j < paragraph.getNumChildren(); j++) {
                     const child = paragraph.getChild(j);
                     if (child.getType() === DocumentApp.ElementType.TEXT) {
-                        const textElement = child.asText();
-                        const textContent = normalizarAspas(textElement.getText());
-                        for (let k = 0; k < textContent.length; k++) {
-                            const char = textContent[k];
-                            const isBold = textElement.isBold(k);
-                            const isItalic = textElement.isItalic(k);
-                            
-                            // Lógica de itálico/negrito
-                            if (char === '\r' || char === '\n') {
-                                if (inBoldItalicRun) {
-                                    rawText += "***";
-                                    inBoldItalicRun = false; inBoldRun = false; inItalicRun = false;
-                                } else {
-                                    if (inBoldRun) { rawText += '**'; inBoldRun = false; }
-                                    if (inItalicRun) { rawText += '*'; inItalicRun = false; }
-                                }
-                                rawText += char;
-                                continue;
-                            }
-
-                            if (char===' ' && inBoldItalicRun) { 
-                              rawText +="*** "; 
-                              inBoldItalicRun = false,  inBoldRun = false; inItalicRun = false;
-                              continue;
-                            }
-
-                            if (isBold && !inBoldRun & char!==' ') { rawText += '**'; inBoldRun = true; } 
-                            else if (!isBold && inBoldRun) { rawText += '**'; inBoldRun = false; }
-                            
-                            if (isItalic && !inItalicRun & char!==' ') { rawText += '*'; inItalicRun = true; } 
-                            else if (!isItalic && inItalicRun) {   rawText += '*'; inItalicRun = false; }
-                            
-                            inBoldItalicRun = inItalicRun && inBoldRun;
-                            
-                            rawText += char;
-                        }
-                        if (inBoldRun) { rawText += '**'; inBoldRun = false; }
-                        if (inItalicRun) { rawText += '*'; inItalicRun = false; }
-                        
-
+                        rawText += formatarTextElementMarkdown(child.asText(), false);
                     } else {
                         rawText += child.getText ? child.getText() : '';
                     }
@@ -1473,51 +1567,10 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                 }
 
                 let rawText = '';
-                let inBoldRun = false;
-                let inItalicRun = false;
-                let inBoldItalicRun = false;
                 for (let j = 0; j < listItem.getNumChildren(); j++) {
                     const child = listItem.getChild(j);
                     if (child.getType() === DocumentApp.ElementType.TEXT) {
-                        const textElement = child.asText();
-                        const textContent = normalizarAspas(textElement.getText());
-                        for (let k = 0; k < textContent.length; k++) {
-                            const char = textContent[k];
-                            const isBold = textElement.isBold(k);
-                            const isItalic = textElement.isItalic(k);
-                            
-                            if (char === '\r' || char === '\n') {
-                                if (inBoldItalicRun) {
-                                    rawText += "***";
-                                    inBoldItalicRun = false; inBoldRun = false; inItalicRun = false;
-                                } else {
-                                    if (inBoldRun) { rawText += '**'; inBoldRun = false; }
-                                    if (inItalicRun) { rawText += '*'; inItalicRun = false; }
-                                }
-                                rawText += char;
-                                continue;
-                            }
-
-                            if (char===' ' && inBoldItalicRun) { 
-                              rawText +="*** "; 
-                              inBoldItalicRun = false; inBoldRun = false; inItalicRun = false;
-                              continue;
-                            }
-
-                            if (isBold && !inBoldRun && char!==' ') { rawText += '**'; inBoldRun = true; } 
-                            else if (!isBold && inBoldRun) { rawText += '**'; inBoldRun = false; }
-                            
-                            if (isItalic && !inItalicRun && char!==' ') { rawText += '*'; inItalicRun = true; } 
-                            else if (!isItalic && inItalicRun) {   rawText += '*'; inItalicRun = false; }
-                            
-                            if (!inBoldItalicRun) {
-                              inBoldItalicRun = inItalicRun && inBoldRun;
-                            }
-
-                            rawText += char;
-                        }
-                        if (inBoldRun) { rawText += '**'; inBoldRun = false; }
-                        if (inItalicRun) { rawText += '*'; inItalicRun = false; }
+                        rawText += formatarTextElementMarkdown(child.asText(), false);
                     } else {
                         rawText += child.getText ? child.getText() : '';
                     }
@@ -1554,49 +1607,10 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
                                         if (child.getType() === DocumentApp.ElementType.PARAGRAPH) {
                                             const p = child.asParagraph();
                                             let pText = '';
-                                            let inBoldRun = false;
-                                            let inItalicRun = false;
-                                            let inBoldItalicRun = false;
-
                                             for (let k = 0; k < p.getNumChildren(); k++) {
                                                 const textChild = p.getChild(k);
                                                 if (textChild.getType() === DocumentApp.ElementType.TEXT) {
-                                                    const textElement = textChild.asText();
-                                                    const textContent = normalizarAspas(textElement.getText());
-                                                    for (let chIdx = 0; chIdx < textContent.length; chIdx++) {
-                                                        const char = textContent[chIdx];
-                                                        const isBold = textElement.isBold(chIdx);
-                                                        const isItalic = textElement.isItalic(chIdx);
-
-                                                        if (char === '\r' || char === '\n') {
-                                                            if (inBoldItalicRun) {
-                                                                pText += "***";
-                                                                inBoldItalicRun = false; inBoldRun = false; inItalicRun = false;
-                                                            } else {
-                                                                if (inBoldRun) { pText += '**'; inBoldRun = false; }
-                                                                if (inItalicRun) { pText += '*'; inItalicRun = false; }
-                                                            }
-                                                            pText += ' ';
-                                                            continue;
-                                                        }
-
-                                                        if (char === ' ' && inBoldItalicRun) {
-                                                            pText += "*** ";
-                                                            inBoldItalicRun = false; inBoldRun = false; inItalicRun = false;
-                                                            continue;
-                                                        }
-
-                                                        if (isBold && !inBoldRun && char !== ' ') { pText += '**'; inBoldRun = true; }
-                                                        else if (!isBold && inBoldRun) { pText += '**'; inBoldRun = false; }
-
-                                                        if (isItalic && !inItalicRun && char !== ' ') { pText += '*'; inItalicRun = true; }
-                                                        else if (!isItalic && inItalicRun) { pText += '*'; inItalicRun = false; }
-
-                                                        inBoldItalicRun = inItalicRun && inBoldRun;
-                                                        pText += char;
-                                                    }
-                                                    if (inBoldRun) { pText += '**'; inBoldRun = false; }
-                                                    if (inItalicRun) { pText += '*'; inItalicRun = false; }
+                                                    pText += formatarTextElementMarkdown(textChild.asText(), true);
                                                 } else {
                                                     pText += textChild.getText ? textChild.getText() : '';
                                                 }
@@ -1677,12 +1691,8 @@ function getMarkdownAndScoreFromDoc(docFile, originalFileName, fileSlug, pastaDe
 }
 
 function splitComentario(texto) {
-  
-  // A Regex para capturar a primeira parte (até o primeiro ':') e o resto.
-  var regex = /^([^:]+):\s*(.*)$/;
-  
-  var resultado = texto.match(regex);
-  
+  if (!texto) return [texto || ''];
+  const resultado = texto.match(REGEX_SPLIT_COMENTARIO);
   if (resultado) {
     return [resultado[1], resultado[2]];
   } else {
@@ -1798,33 +1808,27 @@ function criarIndexMarkdown(pastaDestino, titulo, arquivos, subpastas, comentari
  */
 function limparArquivosExcluidos(pastaDestino, pastaFonte) {
 
-    // 1. Otimização: Coleta todos os slugs válidos da pasta fonte.
+    // 1. Otimização: Coleta todos os slugs válidos da pasta fonte em UMA ÚNICA passagem
     const slugsFonteValidos = new Set();
-    const arquivosDocFonte = pastaFonte.getFilesByType(MIME_GOOGLE_DOCS);
-    
     const isPostsFolder = pastaDestino.getName() === '_posts';
+    const arquivosFonte = pastaFonte.getFiles();
 
-    while (arquivosDocFonte.hasNext()) {
-        const doc = arquivosDocFonte.next();
-        const nomeDoc = doc.getName();
-        let slug = slugifyFileName(nomeDoc);
-        
-        if (isPostsFolder) {
-             const dateObj = doc.getLastUpdated();
-             const dateStr = Utilities.formatDate(dateObj, Session.getScriptTimeZone(), "yyyy-MM-dd");
-             if (!/^\d{4}-\d{2}-\d{2}-/.test(slug)) {
-                 slug = `${dateStr}-${slug}`;
-             }
-        }
-        slugsFonteValidos.add(slug + ".md");
-    }
-
-    // Protege arquivos .md nativos que foram copiados diretamente da origem
-    const arquivosNativosFonte = pastaFonte.getFiles();
-    while (arquivosNativosFonte.hasNext()) {
-        const arq = arquivosNativosFonte.next();
+    while (arquivosFonte.hasNext()) {
+        const arq = arquivosFonte.next();
+        const mime = arq.getMimeType();
         const nomeArq = arq.getName();
-        if (nomeArq.toLowerCase().endsWith('.md')) {
+
+        if (mime === MIME_GOOGLE_DOCS) {
+            let slug = slugifyFileName(nomeArq);
+            if (isPostsFolder) {
+                const dateObj = arq.getLastUpdated();
+                const dateStr = Utilities.formatDate(dateObj, Session.getScriptTimeZone(), "yyyy-MM-dd");
+                if (!/^\d{4}-\d{2}-\d{2}-/.test(slug)) {
+                    slug = `${dateStr}-${slug}`;
+                }
+            }
+            slugsFonteValidos.add(slug + ".md");
+        } else if (nomeArq.toLowerCase().endsWith('.md')) {
             slugsFonteValidos.add(nomeArq);
         }
     }
@@ -1836,10 +1840,7 @@ function limparArquivosExcluidos(pastaDestino, pastaFonte) {
         const nomeArquivoMd = arquivoMd.getName();
 
         if (nomeArquivoMd.toLowerCase().endsWith('.md') && nomeArquivoMd !== NOME_INDEX) {    
-            if (!slugsFonteValidos.has(nomeArquivoMd)) {
-                Logger.log(`[LIMPEZA] Arquivo .md "${nomeArquivoMd}" (em ${pastaDestino.getName()}) movido para lixeira.`);
-                arquivoMd.setTrashed(true);
-            } else if (/.*\([0-9]+\).md/.test(nomeArquivoMd)) {
+            if (!slugsFonteValidos.has(nomeArquivoMd) || /.*\([0-9]+\).md/.test(nomeArquivoMd)) {
                 Logger.log(`[LIMPEZA] Arquivo .md "${nomeArquivoMd}" (em ${pastaDestino.getName()}) movido para lixeira.`);
                 arquivoMd.setTrashed(true);
             }
@@ -1901,11 +1902,11 @@ function obterPastaData() {
 }
 
 /**
- * Atualiza o tempo de leitura, tags e desc em arquivos .json na pasta _data,
- * se o nome do json estiver contido no nome da pasta de destino e houver item com o filename correspondente.
- * Se o item não existir no JSON, insere-o automaticamente.
+ * Sincroniza metadados (tempo, desc, tags) e reordena os arquivos .json em _data em lote.
+ * Processa cada arquivo JSON correspondente à pastaDestino uma única vez,
+ * agrupando todas as atualizações e a reordenação em uma única leitura e escrita por arquivo.
  */
-function atualizarDataJsonSeNecessario(docInfo, pastaDestino) {
+function sincronizarDataJsonDaPasta(pastaDestino, docsAlterados = [], arquivosIndexados = []) {
     try {
         const pastaData = obterPastaData();
         if (!pastaData) return;
@@ -1913,6 +1914,11 @@ function atualizarDataJsonSeNecessario(docInfo, pastaDestino) {
         const folderName = pastaDestino.getName().toLowerCase();
         const normFolderName = folderName.replace(/[-_]/g, '');
         const filesIter = pastaData.getFiles();
+
+        let ordemSlugs = extrairOrdemDoIndexMd(pastaDestino);
+        if (ordemSlugs.length === 0 && arquivosIndexados && arquivosIndexados.length > 0) {
+            ordemSlugs = arquivosIndexados.map(doc => doc.slug);
+        }
 
         while (filesIter.hasNext()) {
             const file = filesIter.next();
@@ -1936,51 +1942,71 @@ function atualizarDataJsonSeNecessario(docInfo, pastaDestino) {
                 continue;
             }
 
-            const formattedTime = `${docInfo.time} min`;
-            const itemJaExiste = itemExisteNoObjeto(
-                dataObj,
-                docInfo.slug,
-                docInfo.markdownName,
-                pastaDestino.getName()
-            );
+            let wasAnyUpdated = false;
 
-            let wasUpdated = false;
+            // 1. Aplica atualizações/inserções para todos os docs alterados
+            if (docsAlterados && docsAlterados.length > 0) {
+                for (let i = 0; i < docsAlterados.length; i++) {
+                    const docInfo = docsAlterados[i];
+                    const formattedTime = `${docInfo.time} min`;
+                    const itemJaExiste = itemExisteNoObjeto(
+                        dataObj,
+                        docInfo.slug,
+                        docInfo.markdownName,
+                        pastaDestino.getName()
+                    );
 
-            if (itemJaExiste) {
-                wasUpdated = atualizarItemNoObjeto(
-                    dataObj,
-                    docInfo.slug,
-                    docInfo.markdownName,
-                    pastaDestino.getName(),
-                    formattedTime,
-                    docInfo.tags,
-                    docInfo.desc,
-                    docInfo.nomeSemData
-                );
-            } else {
-                wasUpdated = inserirItemNoObjetoSeNaoExistir(
-                    dataObj,
-                    docInfo,
-                    pastaDestino.getName(),
-                    formattedTime
-                );
+                    let updated = false;
+                    if (itemJaExiste) {
+                        updated = atualizarItemNoObjeto(
+                            dataObj,
+                            docInfo.slug,
+                            docInfo.markdownName,
+                            pastaDestino.getName(),
+                            formattedTime,
+                            docInfo.tags,
+                            docInfo.desc,
+                            docInfo.nomeSemData
+                        );
+                    } else {
+                        updated = inserirItemNoObjetoSeNaoExistir(
+                            dataObj,
+                            docInfo,
+                            pastaDestino.getName(),
+                            formattedTime
+                        );
+                    }
+                    if (updated) {
+                        wasAnyUpdated = true;
+                    }
+                }
             }
 
-            // Sempre reordena o JSON de acordo com a ordem do index.md
-            const ordemSlugsIndex = extrairOrdemDoIndexMd(pastaDestino);
-            const foiReordenado = reordenarObjetoJson(dataObj, ordemSlugsIndex, pastaDestino.getName());
+            // 2. Reordena de acordo com os slugs
+            let foiReordenado = false;
+            if (ordemSlugs && ordemSlugs.length > 0) {
+                foiReordenado = reordenarObjetoJson(dataObj, ordemSlugs, pastaDestino.getName());
+            }
 
-            if (wasUpdated || foiReordenado) {
+            // 3. Salva uma única vez por arquivo JSON se houve qualquer mudança ou reordenação
+            if (wasAnyUpdated || foiReordenado) {
                 const newContent = JSON.stringify(dataObj, null, 2) + '\n';
                 if (contentStr.trim() !== newContent.trim()) {
                     file.setContent(newContent);
-                    Logger.log(`[_DATA] Atualizado/Reordenado em "${fileName}" para "${docInfo.slug}" (tempo: ${formattedTime}, tags: ${JSON.stringify(docInfo.tags || [])}, desc: ${docInfo.desc ? `"${docInfo.desc}"` : 'não alterado'}).`);
+                    Logger.log(`[_DATA] Atualizado e reordenado em lote: "${fileName}" para pasta "${pastaDestino.getName()}".`);
                 }
             }
         }
     } catch (e) {
-        Logger.log(`[ERRO _DATA] Falha ao atualizar dados em _data para "${docInfo.slug}": ${e.toString()}`);
+        Logger.log(`[ERRO _DATA BATCH] Falha ao sincronizar JSON em _data para "${pastaDestino.getName()}": ${e.toString()}`);
     }
+}
+
+/**
+ * Wrapper de compatibilidade para atualizar um doc individual em _data.
+ */
+function atualizarDataJsonSeNecessario(docInfo, pastaDestino) {
+    sincronizarDataJsonDaPasta(pastaDestino, [docInfo], []);
 }
 
 /**
@@ -2107,57 +2133,10 @@ function reordenarObjetoJson(dataObj, ordemSlugs, folderName) {
 /**
  * Reordena todos os arquivos .json em _data correspondentes à pastaDestino
  * com base na ordem dos arquivos no index.md (ou em arquivosIndexados).
+ * Delega para a rotina de lote sincronizarDataJsonDaPasta.
  */
 function reordenarDataJsonDaPasta(pastaDestino, arquivosIndexados = []) {
-    try {
-        const pastaData = obterPastaData();
-        if (!pastaData) return;
-
-        let ordemSlugs = extrairOrdemDoIndexMd(pastaDestino);
-
-        if (ordemSlugs.length === 0 && arquivosIndexados && arquivosIndexados.length > 0) {
-            ordemSlugs = arquivosIndexados.map(doc => doc.slug);
-        }
-
-        if (ordemSlugs.length === 0) return;
-
-        const folderName = pastaDestino.getName().toLowerCase();
-        const normFolderName = folderName.replace(/[-_]/g, '');
-        const filesIter = pastaData.getFiles();
-
-        while (filesIter.hasNext()) {
-            const file = filesIter.next();
-            const fileName = file.getName();
-            if (!fileName.toLowerCase().endsWith('.json')) continue;
-
-            const jsonBaseName = fileName.replace(/\.json$/i, '').toLowerCase();
-            const normJsonName = jsonBaseName.replace(/[-_]/g, '');
-
-            if (!normFolderName.includes(normJsonName) && !normJsonName.includes(normFolderName)) {
-                continue;
-            }
-
-            let contentStr = file.getBlob().getDataAsString();
-            let dataObj;
-            try {
-                dataObj = JSON.parse(contentStr);
-            } catch (e) {
-                continue;
-            }
-
-            const foiReordenado = reordenarObjetoJson(dataObj, ordemSlugs, pastaDestino.getName());
-
-            if (foiReordenado) {
-                const newContent = JSON.stringify(dataObj, null, 2) + '\n';
-                if (contentStr.trim() !== newContent.trim()) {
-                    file.setContent(newContent);
-                    Logger.log(`[_DATA REORDENADO] Reordenado "${fileName}" de acordo com a ordem do index.md.`);
-                }
-            }
-        }
-    } catch (e) {
-        Logger.log(`[ERRO REORDENAR _DATA] Falha ao reordenar JSON para pasta "${pastaDestino.getName()}": ${e.toString()}`);
-    }
+    sincronizarDataJsonDaPasta(pastaDestino, [], arquivosIndexados);
 }
 
 /**
