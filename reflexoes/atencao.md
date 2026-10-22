@@ -25,6 +25,8 @@ Círculo e reta — Aión e Chronos; sem Kairós, apenas geometria. -- 14/10/26
 
 ### Ao ser
 
+Somos o que fomos; e a vida é breve e única. -- 22/10/26
+
 Não importa que vibrem inúmeros estímulos e pensamentos. A consciência pode flutuar em serena euforia. -- 02/08/26
 
 Em certos momentos, remover um estímulo liberta a serena euforia. -- 21/08/26
