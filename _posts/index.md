@@ -50,3 +50,5 @@ O trânsito hostil desvela a fragilidade da nossa paciência, incitando a busca 
 O lirismo dos pequenos rituais partilhados e a dança silenciosa do afeto que transforma o cotidiano em uma serena euforia.
 ### 📄 [Tempo vazio](./2026-10-20-tempo-vazio.html) <span class="word-count">[1 min]</span>
 O vácuo da presença que se instaura quando o brilho das telas silencia o encontro e desabita o tempo compartilhado.
+### 📄 [Viver o eterno](./2026-10-22-viver-o-eterno.html) <span class="word-count">[1 min]</span>
+Diante da imensidão cósmica, a oportunidade do Kairós vivido com atenção plena transforma nossa breve passagem em instantes de eternidade.
