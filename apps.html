@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aplicativos Wingene — Conectando filosofia e prática no seu dia a dia. Conheça o Wingene VIDA e o +afeto.">
-    <title>Aplicativos Wingene</title>
+    <meta name="description" content="Catálogo Completo de Softwares & Ferramentas Wingene — Aplicações offline-first, privacidade por desenho, soberania digital e florescimento humano.">
+    <title>Catálogo Completo de Softwares & Ferramentas — Wingene</title>
     
     <!-- Google Fonts: Outfit para títulos e Inter para o corpo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <!-- Link para o arquivo CSS de estilos externos -->
     <link rel="stylesheet" href="https://wingene.com.br/style.css" id="main-stylesheet">
@@ -17,26 +17,22 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="https://wingene.com.br/wingene-simplified.svg" id="favicon-svg">
 
-    <!-- Estilos específicos para a página de aplicativos (usando design system do style.css) -->
+    <!-- Estilos específicos para o Catálogo Completo de Softwares -->
     <style>
         .apps-container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 120px 24px 80px;
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
         }
         
         .apps-header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
         }
 
         .apps-title {
             font-family: var(--font-heading);
-            font-size: clamp(2.5rem, 5vw, 3.8rem);
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
             font-weight: 800;
             background: linear-gradient(135deg, var(--title-gradient-start), var(--title-gradient-end));
             -webkit-background-clip: text;
@@ -48,21 +44,89 @@
         .apps-subtitle {
             font-size: clamp(1.05rem, 2vw, 1.25rem);
             color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
+            max-width: 780px;
+            margin: 0 auto 30px;
             line-height: 1.6;
+        }
+
+        /* Chips de navegação rápida */
+        .category-nav {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .category-chip {
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--text-secondary);
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            transition: var(--transition-quick);
+            backdrop-filter: blur(8px);
+        }
+
+        .category-chip:hover {
+            color: var(--text-primary);
+            border-color: var(--border-glass-hover);
+            transform: translateY(-2px);
+            background: var(--bg-card-hover);
+        }
+
+        /* Seções temáticas */
+        .category-section {
+            margin-bottom: 70px;
+            scroll-margin-top: 100px;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 28px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--border-glass-hover);
+        }
+
+        .category-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            flex-shrink: 0;
+        }
+
+        .category-header h2 {
+            font-size: 1.65rem;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .category-header p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0;
         }
 
         .apps-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 32px;
-            margin-bottom: 50px;
+            gap: 28px;
         }
 
         .app-card {
-            border-radius: 24px;
-            padding: 40px;
+            border-radius: 20px;
+            padding: 32px 28px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -74,120 +138,296 @@
         }
 
         .app-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-6px);
             border-color: var(--border-glass-hover);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .app-header-area {
+            margin-bottom: 16px;
+        }
+
+        .app-badges-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .platform-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .badge-arch {
+            background: rgba(15, 23, 42, 0.06);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-glass);
         }
 
         @media (prefers-color-scheme: dark) {
-            .app-card:hover {
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            .badge-arch {
+                background: rgba(255, 255, 255, 0.08);
             }
         }
 
-        .app-badge-pillar {
-            display: inline-block;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            margin-bottom: 24px;
-            width: fit-content;
-        }
-
-        /* Estilo para Wingene VIDA */
-        .app-vida {
-            border-top: 4px solid var(--color-valores);
-        }
+        /* Estilos individuais de pilares */
+        .app-vida { border-top: 4px solid var(--color-valores); }
         .app-vida .app-badge-pillar {
             background-color: var(--color-valores-glow);
             color: var(--text-valores);
+            border: 1px solid rgba(148, 15, 15, 0.2);
         }
 
-        /* Estilo para +afeto */
-        .app-afeto {
-            border-top: 4px solid var(--color-atencao);
-        }
+        .app-afeto { border-top: 4px solid var(--color-atencao); }
         .app-afeto .app-badge-pillar {
             background-color: var(--color-atencao-glow);
             color: var(--color-atencao);
+            border: 1px solid rgba(18, 62, 156, 0.2);
+        }
+
+        .app-whynot { border-top: 4px solid var(--color-decisoes); }
+        .app-whynot .app-badge-pillar {
+            background-color: var(--color-decisoes-glow);
+            color: var(--color-decisoes);
+            border: 1px solid rgba(14, 125, 15, 0.2);
+        }
+
+        .app-winvest { border-top: 4px solid var(--color-imperfeicoes); }
+        .app-winvest .app-badge-pillar {
+            background-color: var(--color-imperfeicoes-glow);
+            color: var(--color-imperfeicoes);
+            border: 1px solid rgba(133, 117, 6, 0.2);
+        }
+
+        .app-crypto { border-top: 4px solid #6366f1; }
+        .app-crypto .app-badge-pillar {
+            background-color: rgba(99, 102, 241, 0.15);
+            color: #6366f1;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+
+        .app-math { border-top: 4px solid #06b6d4; }
+        .app-math .app-badge-pillar {
+            background-color: rgba(6, 182, 212, 0.15);
+            color: #06b6d4;
+            border: 1px solid rgba(6, 182, 212, 0.3);
         }
 
         .app-name {
             font-family: var(--font-heading);
-            font-size: 1.8rem;
+            font-size: 1.65rem;
             font-weight: 700;
             color: var(--text-primary);
-            margin-bottom: 16px;
+            margin-bottom: 6px;
+        }
+
+        .app-tagline {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
         }
 
         .app-desc {
             color: var(--text-secondary);
             line-height: 1.6;
-            margin-bottom: 30px;
-            font-size: 0.95rem;
+            margin-bottom: 20px;
+            font-size: 0.92rem;
             flex-grow: 1;
         }
 
-        .app-features {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 40px 0;
+        /* Ficha Técnica */
+        .tech-spec-box {
+            background: rgba(15, 23, 42, 0.03);
+            border: 1px solid var(--border-glass);
+            border-radius: 12px;
+            padding: 14px 16px;
+            margin-bottom: 24px;
+            font-size: 0.82rem;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 6px;
         }
 
-        .app-features li {
-            font-size: 0.9rem;
+        @media (prefers-color-scheme: dark) {
+            .tech-spec-box {
+                background: rgba(255, 255, 255, 0.03);
+            }
+        }
+
+        .tech-spec-item {
+            display: flex;
+            justify-content: space-between;
             color: var(--text-secondary);
+        }
+
+        .tech-spec-label {
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .tech-spec-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+            color: var(--text-primary);
+            text-align: right;
+        }
+
+        .app-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .app-btn-primary {
+            flex: 1;
+            text-align: center;
+            padding: 10px 16px;
+            font-size: 0.88rem;
+            border-radius: 12px;
+        }
+
+        .app-btn-secondary {
+            padding: 10px 14px;
+            font-size: 0.85rem;
+            border-radius: 12px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border: 1px solid var(--border-glass);
+            background: var(--btn-secondary-bg);
+            transition: var(--transition-quick);
+            white-space: nowrap;
+        }
+
+        .app-btn-secondary:hover {
+            color: var(--text-primary);
+            border-color: var(--border-glass-hover);
+        }
+
+        /* Seção Tabela Técnica Matriz */
+        .table-section {
+            margin-top: 80px;
+            scroll-margin-top: 100px;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            border-radius: 16px;
+            border: 1px solid var(--border-glass);
+            backdrop-filter: blur(12px);
+            background: var(--bg-card);
+        }
+
+        .tech-matrix {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            text-align: left;
+        }
+
+        .tech-matrix th {
+            background: rgba(15, 23, 42, 0.05);
+            padding: 16px 20px;
+            font-weight: 700;
+            font-family: var(--font-heading);
+            color: var(--text-primary);
+            border-bottom: 1px solid var(--border-glass-hover);
+            letter-spacing: 0.03em;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .tech-matrix th {
+                background: rgba(255, 255, 255, 0.05);
+            }
+        }
+
+        .tech-matrix td {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-glass);
+            color: var(--text-secondary);
+            vertical-align: middle;
+        }
+
+        .tech-matrix tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tech-matrix tr:hover td {
+            background: var(--bg-card-hover);
+        }
+
+        .tech-matrix .app-title-cell {
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .code-cell {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+        }
+
+        /* Caixa de Instalação PWA */
+        .pwa-guide {
+            margin-top: 60px;
+            padding: 36px;
+            border-radius: 20px;
+            border: 1px solid var(--border-glass);
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+        }
+
+        .pwa-guide h3 {
+            font-size: 1.4rem;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+
+        .pwa-steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        .pwa-step-card {
+            padding: 20px;
+            border-radius: 14px;
+            border: 1px solid var(--border-glass);
+            background: rgba(15, 23, 42, 0.02);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .pwa-step-card {
+                background: rgba(255, 255, 255, 0.02);
+            }
+        }
+
+        .pwa-step-card h4 {
+            font-size: 1.05rem;
+            color: var(--text-primary);
+            margin-bottom: 8px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
 
-        .app-features li::before {
-            content: "✓";
-            color: inherit;
-            font-weight: bold;
-        }
-
-        .app-vida .app-features li::before {
-            color: var(--text-valores);
-        }
-
-        .app-afeto .app-features li::before {
-            color: var(--color-atencao);
-        }
-
-        /* Estilo para Notas Criptografadas */
-        .app-decisoes {
-            border-top: 4px solid var(--color-decisoes);
-        }
-        .app-decisoes .app-badge-pillar {
-            background-color: var(--color-decisoes-glow);
-            color: var(--color-decisoes);
-        }
-        .app-decisoes .app-features li::before {
-            color: var(--color-decisoes);
-        }
-
-        /* Estilo para Winvest */
-        .app-valores {
-            border-top: 4px solid var(--color-imperfeicoes);
-        }
-        .app-valores .app-badge-pillar {
-            background-color: var(--color-imperfeicoes-glow);
-            color: var(--color-imperfeicoes);
-        }
-        .app-valores .app-features li::before {
-            color: var(--color-imperfeicoes);
+        .pwa-step-card p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin: 0;
         }
 
         .back-home {
-            margin-top: 20px;
+            margin-top: 50px;
             text-align: center;
         }
     </style>
@@ -206,7 +446,8 @@
             <div class="nav-links" id="nav-menu-links">
                 <a href="https://wingene.com.br/index.html#filosofia">Filosofia</a>
                 <a href="https://wingene.com.br/index.html#metodo-vida">O Método VIDA</a>
-                <a href="https://wingene.com.br/index.html#conteudo">Tópicos</a>
+                <a href="https://wingene.com.br/index.html#software">Softwares</a>
+                <a href="https://wingene.com.br/index.html#conteudo">Acervo</a>
                 <a href="/" class="nav-cta-small">Ir para o Blog</a>
             </div>
         </div>
@@ -215,86 +456,447 @@
     <!-- Container dos Aplicativos -->
     <main class="apps-container">
         <header class="apps-header">
-            <h1 class="apps-title">Aplicativos Wingene</h1>
-            <p class="apps-subtitle">Ferramentas práticas criadas para apoiar o cultivo da atenção, da auto-observação e do cuidado intencional.</p>
+            <h1 class="apps-title">Catálogo Completo de Softwares</h1>
+            <p class="apps-subtitle">Aplicações, ferramentas de soberania de dados, privacidade local e recursos interativos concebidos para apoiar o florescimento humano cotidiano.</p>
+            
+            <!-- Navegação Rápida por Categorias -->
+            <div class="category-nav">
+                <a href="#florescimento" class="category-chip">🌱 Florescimento & Saúde</a>
+                <a href="#soberania" class="category-chip">🛡️ Soberania & Atenção</a>
+                <a href="#patrimonio" class="category-chip">📊 Patrimônio & Disciplina</a>
+                <a href="#ciencia" class="category-chip">📐 Ciência & Interatividade</a>
+                <a href="#matriz-tecnica" class="category-chip">📋 Matriz Técnica</a>
+            </div>
         </header>
 
-        <div class="apps-grid">
-            <!-- Card 1: Wingene VIDA -->
-            <div class="card glassmorphism app-card app-vida">
+        <!-- ==========================================
+             CATEGORIA 1: FLORESCIMENTO & SAÚDE
+             ========================================== -->
+        <section id="florescimento" class="category-section">
+            <div class="category-header">
+                <div class="category-icon">🌱</div>
                 <div>
-                    <span class="app-badge-pillar">Autoconhecimento & Prática</span>
-                    <h2 class="app-name">Wingene VIDA</h2>
-                    <p class="app-desc">Aplicativo offline-first projetado para a prática diária do Método VIDA. Registre e reflita sobre seus Valores, Imperfeições, Decisões e Atenção de forma simples, fluida e totalmente privada.</p>
-                    <ul class="app-features">
-                        <li>Acompanhamento dos 4 pilares do método</li>
-                        <li>Interface minimalista e focada</li>
-                        <li>Dados salvos localmente com total privacidade</li>
-                        <li>Opção de análises por IA totalmente anônimas</li>
-                    </ul>
-                </div>
-                <div class="app-actions">
-                    <a href="/wingene-vida-app/" class="btn btn-primary" style="width: 100%; text-align: center; display: block;" id="btn-vida-app">Conhecer o App</a>
+                    <h2>Florescimento & Saúde Humana</h2>
+                    <p>Instrumentos práticos para auto-observação, cultivo do caráter e acompanhamento acolhedor de familiares.</p>
                 </div>
             </div>
 
-            <!-- Card 2: +afeto -->
-            <div class="card glassmorphism app-card app-afeto">
-                <div>
-                    <span class="app-badge-pillar">Cuidado & Conexão</span>
-                    <h2 class="app-name">+afeto</h2>
-                    <p class="app-desc">Uma plataforma segura que conecta familiares e cuidadores no acompanhamento diário da rotina e saúde de pessoas queridas. Monitore de forma prática e com segurança criptográfica ativa.</p>
-                    <ul class="app-features">
-                        <li>Registro de medicamentos e rotinas</li>
-                        <li>Monitoramento de sinais vitais</li>
-                        <li>Notificações e alertas em tempo real</li>
-                        <li>Criptografia de ponta a ponta ativa</li>
-                    </ul>
+            <div class="apps-grid">
+                <!-- App 1: Wingene VIDA -->
+                <div class="card glassmorphism app-card app-vida">
+                    <div>
+                        <div class="app-badges-row">
+                            <span class="platform-badge app-badge-pillar">Método VIDA</span>
+                            <span class="platform-badge badge-arch">PWA Web</span>
+                            <span class="platform-badge badge-arch">Offline-First</span>
+                        </div>
+                        <h3 class="app-name">Wingene VIDA</h3>
+                        <p class="app-tagline">Autoconhecimento & Prática Cotidiana</p>
+                        <p class="app-desc">Bússola pessoal baseada no Método VIDA. Registre e pondere seus Valores, Imperfeições, Decisões e Atenção com total privacidade e armazenamento local no seu dispositivo.</p>
+                        
+                        <div class="tech-spec-box">
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Arquitetura:</span>
+                                <span class="tech-spec-value">Progressive Web App (PWA)</span>
+                            </div>
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Armazenamento:</span>
+                                <span class="tech-spec-value">IndexedDB / LocalStorage</span>
+                            </div>
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Segurança:</span>
+                                <span class="tech-spec-value">Dados 100% locais no aparelho</span>
+                            </div>
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Exportação:</span>
+                                <span class="tech-spec-value">Backup JSON / Criptografia local</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-actions">
+                        <a href="https://wingene.com.br/wingene.vida/" class="btn btn-primary app-btn-primary" id="btn-vida-app" target="_blank">Abrir App ↗</a>
+                        <a href="/wingene-vida-app/" class="app-btn-secondary" id="link-vida-docs">Página do App</a>
+                    </div>
                 </div>
-                <div class="app-actions">
-                    <a href="/cuidados/landing.html" class="btn btn-primary" style="width: 100%; text-align: center; display: block;" id="btn-cuidados-app">Conhecer o App</a>
+
+                <!-- App 2: +afeto -->
+                <div class="card glassmorphism app-card app-afeto">
+                    <div>
+                        <div class="app-badges-row">
+                            <span class="platform-badge app-badge-pillar">Cuidado Familiar</span>
+                            <span class="platform-badge badge-arch">iOS App</span>
+                            <span class="platform-badge badge-arch">PWA Web</span>
+                        </div>
+                        <h3 class="app-name">+afeto</h3>
+                        <p class="app-tagline">Atenção, Rotinas & Saúde de Pessoas Queridas</p>
+                        <p class="app-desc">Plataforma acolhedora e segura desenvolvida para apoiar familiares e cuidadores no acompanhamento contínuo de rotinas de medicamentos, sinais vitais e bem-estar de entes queridos.</p>
+                        
+                        <div class="tech-spec-box">
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Arquitetura:</span>
+                                <span class="tech-spec-value">App Nativo iOS / Web PWA</span>
+                            </div>
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Armazenamento:</span>
+                                <span class="tech-spec-value">Nuvem segura em tempo real</span>
+                            </div>
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Segurança:</span>
+                                <span class="tech-spec-value">Criptografia ativa ponta a ponta</span>
+                            </div>
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Compatibilidade:</span>
+                                <span class="tech-spec-value">iPhone, iPad e Navegadores</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-actions">
+                        <a href="/cuidados/landing.html" class="btn btn-primary app-btn-primary" id="btn-cuidados-app">Conhecer o +afeto ↗</a>
+                        <a href="/cuidados/index.html" class="app-btn-secondary" id="link-cuidados-web">Web App</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             CATEGORIA 2: SOBERANIA & ATENÇÃO
+             ========================================== -->
+        <section id="soberania" class="category-section">
+            <div class="category-header">
+                <div class="category-icon">🛡️</div>
+                <div>
+                    <h2>Soberania Digital & Proteção da Atenção</h2>
+                    <p>Ferramentas projetadas para defender o foco mental e garantir sigilo criptográfico intransigente.</p>
                 </div>
             </div>
 
+            <div class="apps-grid">
+                <!-- App 3: WhyNot -->
+                <div class="card glassmorphism app-card app-whynot">
+                    <div>
+                        <div class="app-badges-row">
+                            <span class="platform-badge app-badge-pillar">Foco & Atenção</span>
+                            <span class="platform-badge badge-arch">Android Nativo</span>
+                            <span class="platform-badge badge-arch">100% On-Device</span>
+                        </div>
+                        <h3 class="app-name">WhyNot</h3>
+                        <p class="app-tagline">Triagem Inteligente de Notificações</p>
+                        <p class="app-desc">Filtro avançado de notificações Android com processamento 100% no aparelho. Silencia o ruído e o excesso de distrações cotidianas para manter sua presença no que realmente importa.</p>
+                        
+                        <div class="tech-spec-box">
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Arquitetura:</span>
+                                <span class="tech-spec-value">Android Nativo (Kotlin/Java)</span>
+                            </div>
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Processamento:</span>
+                                <span class="tech-spec-value">100% On-Device (Zero Telemetria)</span>
+                            </div>
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Segurança:</span>
+                                <span class="tech-spec-value">Notificações não saem do aparelho</span>
+                            </div>
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Recursos:</span>
+                                <span class="tech-spec-value">Regras de prioridade & Alerta urgente</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-actions">
+                        <a href="https://wingene.com.br/whynot/" class="btn btn-primary app-btn-primary" id="btn-whynot-app" target="_blank">Acessar o WhyNot ↗</a>
+                    </div>
+                </div>
 
-            <!-- Card 3: Notas Criptografadas -->
-            <div class="card glassmorphism app-card app-decisoes">
-                <div>
-                    <span class="app-badge-pillar">Segurança & Notas</span>
-                    <h2 class="app-name">Notas Criptografadas</h2>
-                    <p class="app-desc">Utilitário offline-first baseado em criptografia robusta local (Stanford JavaScript Crypto Library) para salvaguardar anotações sensíveis.</p>
-                    <ul class="app-features">
-                        <li>Criptografia no lado do cliente</li>
-                        <li>Senhas salvas localmente na memória</li>
-                        <li>Código fonte transparente e seguro</li>
-                        <li>Instalável como Progressive Web App</li>
-                    </ul>
-                </div>
-                <div class="app-actions">
-                    <a href="https://eugeniogz.github.io/assis/pwa.sjcl/" class="btn btn-primary" style="width: 100%; text-align: center; display: block;" id="btn-investimentos-app" target="_blank">Acessar o App ↗</a>
+                <!-- App 4: Notas Criptografadas -->
+                <div class="card glassmorphism app-card app-crypto">
+                    <div>
+                        <div class="app-badges-row">
+                            <span class="platform-badge app-badge-pillar">Criptografia Local</span>
+                            <span class="platform-badge badge-arch">PWA Web</span>
+                            <span class="platform-badge badge-arch">SJCL AES-256</span>
+                        </div>
+                        <h3 class="app-name">Notas Criptografadas</h3>
+                        <p class="app-tagline">Privacidade e Anotações Seguras</p>
+                        <p class="app-desc">Utilitário ultraleve baseado na Stanford JavaScript Crypto Library. Suas anotações são cifradas e decifradas exclusivamente na memória do seu navegador através de senha mestre.</p>
+                        
+                        <div class="tech-spec-box">
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Arquitetura:</span>
+                                <span class="tech-spec-value">Cliente Web Puro (Zero Backend)</span>
+                            </div>
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Algoritmo:</span>
+                                <span class="tech-spec-value">AES-256 / SHA-256 (SJCL)</span>
+                            </div>
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Chaves:</span>
+                                <span class="tech-spec-value">Memória volátil (nunca persistida)</span>
+                            </div>
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Instalação:</span>
+                                <span class="tech-spec-value">PWA instalável offline</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-actions">
+                        <a href="https://eugeniogz.github.io/assis/pwa.sjcl/" class="btn btn-primary app-btn-primary" id="btn-sjcl-app" target="_blank">Abrir Utilitário ↗</a>
+                    </div>
                 </div>
             </div>
-            <!-- Card 4: WinGene Investimentos PWA -->
-            <div class="card glassmorphism app-card app-valores">
+        </section>
+
+        <!-- ==========================================
+             CATEGORIA 3: PATRIMÔNIO & METAS
+             ========================================== -->
+        <section id="patrimonio" class="category-section">
+            <div class="category-header">
+                <div class="category-icon">📊</div>
                 <div>
-                    <span class="app-badge-pillar">Gestão de Patrimônio & Metas</span>
-                    <h2 class="app-name">Winvest</h2>
-                    <p class="app-desc">PWA para acompanhamento de Renda Fixa, Carteira de Ações, cálculo automático de percentuais na carteira, metas e rebalanceamento inteligente com sincronização no Google Drive.</p>
-                    <ul class="app-features">
-                        <li>Acompanhamento de Renda Fixa e Ações por Ticker</li>
-                        <li>Cálculo de % e metas de rebalanceamento</li>
-                        <li>Data de cadastro marcada automaticamente com a data corrente</li>
-                        <li>Sincronização na nuvem com login Google Drive</li>
-                    </ul>
-                </div>
-                <div class="app-actions">
-                    <a href="https://wingene.com.br/investimentos/" class="btn btn-primary" style="width: 100%; text-align: center; display: block;" id="btn-investimentos-app" target="_blank">Acessar o App ↗</a>
+                    <h2>Patrimônio & Futuro Ancestral</h2>
+                    <p>Planejamento patrimonial inteligente para sustentabilidade financeira e disciplina intergeracional.</p>
                 </div>
             </div>
-        </div>
+
+            <div class="apps-grid">
+                <!-- App 5: Winvest -->
+                <div class="card glassmorphism app-card app-winvest">
+                    <div>
+                        <div class="app-badges-row">
+                            <span class="platform-badge app-badge-pillar">Gestão de Carteira</span>
+                            <span class="platform-badge badge-arch">PWA Instalável</span>
+                            <span class="platform-badge badge-arch">Nuvem Pessoal</span>
+                        </div>
+                        <h3 class="app-name">Winvest</h3>
+                        <p class="app-tagline">Rebalanceamento Inteligente & Metas</p>
+                        <p class="app-desc">PWA desenhado para gerenciar alocações entre Renda Fixa e Ações por ticker. Calcula automaticamente aportes ideais com base em metas percentuais e sincroniza diretamente no Google Drive do usuário.</p>
+                        
+                        <div class="tech-spec-box">
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Arquitetura:</span>
+                                <span class="tech-spec-value">Progressive Web App (Offline-First)</span>
+                            </div>
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Sincronização:</span>
+                                <span class="tech-spec-value">Google Drive API (Nuvem Pessoal)</span>
+                            </div>
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Cálculos:</span>
+                                <span class="tech-spec-value">Rebalanceamento determinístico local</span>
+                            </div>
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Privacidade:</span>
+                                <span class="tech-spec-value">Dados restritos à conta do usuário</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-actions">
+                        <a href="https://wingene.com.br/investimentos/" class="btn btn-primary app-btn-primary" id="btn-investimentos-app" target="_blank">Acessar o Winvest ↗</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             CATEGORIA 4: CIÊNCIA & INTERATIVIDADE
+             ========================================== -->
+        <section id="ciencia" class="category-section">
+            <div class="category-header">
+                <div class="category-icon">📐</div>
+                <div>
+                    <h2>Ciência, Matemática & Recursos Lúdicos</h2>
+                    <p>Visualizações geométricas tridimensionais e explorações interativas da harmonia espacial e educacional.</p>
+                </div>
+            </div>
+
+            <div class="apps-grid">
+                <!-- App 6: Geometria 3D Interativa -->
+                <div class="card glassmorphism app-card app-math">
+                    <div>
+                        <div class="app-badges-row">
+                            <span class="platform-badge app-badge-pillar">Matemática 3D</span>
+                            <span class="platform-badge badge-arch">WebGL / Three.js</span>
+                            <span class="platform-badge badge-arch">Interativo</span>
+                        </div>
+                        <h3 class="app-name">Geometria Interativa 3D</h3>
+                        <p class="app-tagline">Polígonos Estrelados & Sólidos Platônicos</p>
+                        <p class="app-desc">Ambiente interativo de computação gráfica para exploração em tempo real de poliedros regulares, compostos estrelados e a geometria fundamental do símbolo Wingene {12/5, 12/4, 12/3, 12/2}.</p>
+                        
+                        <div class="tech-spec-box">
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Motor Gráfico:</span>
+                                <span class="tech-spec-value">Three.js / WebGL</span>
+                            </div>
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Renderização:</span>
+                                <span class="tech-spec-value">Câmera orbital e luzes em tempo real</span>
+                            </div>
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Modelos:</span>
+                                <span class="tech-spec-value">Platão, Polígonos e Estrelas Wingene</span>
+                            </div>
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Execução:</span>
+                                <span class="tech-spec-value">100% no navegador sem plugins</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-actions">
+                        <a href="https://wingene.com.br/geometria3d/" class="btn btn-primary app-btn-primary" id="btn-geometria-app" target="_blank">Explorar em 3D ↗</a>
+                    </div>
+                </div>
+
+                <!-- App 7: Trilha Secreta / Educação -->
+                <div class="card glassmorphism app-card app-math">
+                    <div>
+                        <div class="app-badges-row">
+                            <span class="platform-badge app-badge-pillar">Educação Lúdica</span>
+                            <span class="platform-badge badge-arch">Canvas 2D</span>
+                            <span class="platform-badge badge-arch">Pedagógico</span>
+                        </div>
+                        <h3 class="app-name">Trilha Secreta & Recursos</h3>
+                        <p class="app-tagline">Jogos de Atenção & Descoberta Espacial</p>
+                        <p class="app-desc">Atividades interativas infantis concebidas para estimular a concentração e a curiosidade investigativa através de dinâmicas de lanterna e caminhos ocultos.</p>
+                        
+                        <div class="tech-spec-box">
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Tecnologia:</span>
+                                <span class="tech-spec-value">HTML5 Canvas / Vanilla JS</span>
+                            </div>
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Público:</span>
+                                <span class="tech-spec-value">Infantil, Pais e Educadores</span>
+                            </div>
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Mecânica:</span>
+                                <span class="tech-spec-value">Iluminação pontual e revelação de rotas</span>
+                            </div>
+                            <div class="tech-spec-item">
+                                <span class="tech-spec-label">Acesso:</span>
+                                <span class="tech-spec-value">Livre e direto no navegador</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-actions">
+                        <a href="https://wingene.com.br/Mapas/" class="btn btn-primary app-btn-primary" id="btn-mapas-app" target="_blank">Jogar Trilha ↗</a>
+                        <a href="https://wingene.com.br/educacao/" class="app-btn-secondary" id="link-educacao-portal" target="_blank">Portal Educacional</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             MATRIZ TÉCNICA COMPARATIVA
+             ========================================== -->
+        <section id="matriz-tecnica" class="table-section">
+            <div class="category-header">
+                <div class="category-icon">📋</div>
+                <div>
+                    <h2>Matriz Técnica Comparativa</h2>
+                    <p>Visão sistêmica de plataformas, persistência e privacidade das ferramentas Wingene.</p>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="tech-matrix">
+                    <thead>
+                        <tr>
+                            <th>Aplicação</th>
+                            <th>Categoria</th>
+                            <th>Plataformas</th>
+                            <th>Persistência de Dados</th>
+                            <th>Segurança / Privacidade</th>
+                            <th>Acesso Direto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="app-title-cell">Wingene VIDA</td>
+                            <td>Autoconhecimento</td>
+                            <td>Web, PWA, Android, iOS</td>
+                            <td class="code-cell">IndexedDB / Local</td>
+                            <td>Privacidade local absoluta (offline-first)</td>
+                            <td><a href="https://wingene.com.br/wingene.vida/" class="btn-text" target="_blank">Abrir ↗</a></td>
+                        </tr>
+                        <tr>
+                            <td class="app-title-cell">+afeto</td>
+                            <td>Saúde & Cuidado</td>
+                            <td>iOS Nativo, PWA Web</td>
+                            <td class="code-cell">Nuvem Segura</td>
+                            <td>Criptografia ativa ponta a ponta</td>
+                            <td><a href="/cuidados/landing.html" class="btn-text">Ver App ↗</a></td>
+                        </tr>
+                        <tr>
+                            <td class="app-title-cell">WhyNot</td>
+                            <td>Foco & Atenção</td>
+                            <td>Android Nativo</td>
+                            <td class="code-cell">SQLite On-Device</td>
+                            <td>100% On-Device (sem telemetria)</td>
+                            <td><a href="https://wingene.com.br/whynot/" class="btn-text" target="_blank">Acessar ↗</a></td>
+                        </tr>
+                        <tr>
+                            <td class="app-title-cell">Notas Criptografadas</td>
+                            <td>Privacidade & Segurança</td>
+                            <td>Web, PWA Universal</td>
+                            <td class="code-cell">Volátil / LocalStorage</td>
+                            <td>AES-256 / SHA-256 no cliente (SJCL)</td>
+                            <td><a href="https://eugeniogz.github.io/assis/pwa.sjcl/" class="btn-text" target="_blank">Abrir ↗</a></td>
+                        </tr>
+                        <tr>
+                            <td class="app-title-cell">Winvest</td>
+                            <td>Gestão Patrimonial</td>
+                            <td>PWA Instalável</td>
+                            <td class="code-cell">Google Drive API</td>
+                            <td>Nuvem pessoal restrita ao usuário</td>
+                            <td><a href="https://wingene.com.br/investimentos/" class="btn-text" target="_blank">Acessar ↗</a></td>
+                        </tr>
+                        <tr>
+                            <td class="app-title-cell">Geometria 3D</td>
+                            <td>Matemática & Ciência</td>
+                            <td>Web 3D (WebGL)</td>
+                            <td class="code-cell">Stateless (Client)</td>
+                            <td>Zero rastreamento ou cookies</td>
+                            <td><a href="https://wingene.com.br/geometria3d/" class="btn-text" target="_blank">Explorar ↗</a></td>
+                        </tr>
+                        <tr>
+                            <td class="app-title-cell">Trilha Secreta</td>
+                            <td>Educação Lúdica</td>
+                            <td>Web Canvas</td>
+                            <td class="code-cell">Stateless (Client)</td>
+                            <td>Ambiente infantil seguro e livre</td>
+                            <td><a href="https://wingene.com.br/Mapas/" class="btn-text" target="_blank">Jogar ↗</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             GUIA PRÁTICO: COMO INSTALAR UM PWA
+             ========================================== -->
+        <section class="pwa-guide">
+            <h3>Como Instalar Nossos Aplicativos PWA</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 0;">
+                A maioria das ferramentas Wingene é desenvolvida como Progressive Web App (PWA): você pode instalá-las no seu smartphone ou computador diretamente pelo navegador, sem ocupar espaço excessivo de armazenamento.
+            </p>
+
+            <div class="pwa-steps-grid">
+                <div class="pwa-step-card">
+                    <h4>📱 No Android (Chrome)</h4>
+                    <p>Abra o link do aplicativo no Chrome, toque nos <strong>três pontos (⋮)</strong> no canto superior direito e selecione <strong>"Instalar aplicativo"</strong> ou <strong>"Adicionar à tela inicial"</strong>.</p>
+                </div>
+                <div class="pwa-step-card">
+                    <h4>🍎 No iPhone / iPad (Safari)</h4>
+                    <p>Abra o aplicativo no navegador Safari, toque no botão <strong>Compartilhar</strong> (ícone do quadrado com a seta para cima) e escolha a opção <strong>"Adicionar à Tela de Início"</strong>.</p>
+                </div>
+                <div class="pwa-step-card">
+                    <h4>💻 No Computador (Desktop)</h4>
+                    <p>No Chrome, Edge ou Brave, clique no <strong>ícone de instalação</strong> que aparece no lado direito da barra de endereços (ao lado da estrela de favoritos) e confirme a instalação.</p>
+                </div>
+            </div>
+        </section>
 
         <div class="back-home">
-            <a href="https://wingene.com.br/index.html" class="btn-text" id="back-home-link">← Voltar para o Portal Principal</a>
+            <a href="https://wingene.com.br/index.html" class="btn btn-secondary font-large" id="back-home-link">← Voltar para o Portal Principal Wingene</a>
         </div>
     </main>
 
@@ -311,6 +913,7 @@
                 <ul>
                     <li><a href="https://wingene.com.br/index.html#filosofia">Filosofia</a></li>
                     <li><a href="https://wingene.com.br/index.html#metodo-vida">O Método VIDA</a></li>
+                    <li><a href="https://wingene.com.br/index.html#software">Softwares & Ferramentas</a></li>
                     <li><a href="https://wingene.com.br/index.html#conteudo">Tópicos de Conteúdo</a></li>
                     <li><a href="/sobre-o-autor.html">Sobre o Autor</a></li>
                 </ul>
@@ -367,11 +970,22 @@
                 });
 
                 const btnVida = document.getElementById('btn-vida-app');
-                if (btnVida) btnVida.setAttribute('href', './wingene-vida-app/index.html');
+                if (btnVida) btnVida.setAttribute('href', '../wingene.com.br/docs/wingene.vida/index.html');
 
                 const btnCuidados = document.getElementById('btn-cuidados-app');
                 if (btnCuidados) btnCuidados.setAttribute('href', './cuidados/landing.html');
 
+                const btnWhynot = document.getElementById('btn-whynot-app');
+                if (btnWhynot) btnWhynot.setAttribute('href', '../wingene.com.br/docs/whynot/index.html');
+
+                const btnInvest = document.getElementById('btn-investimentos-app');
+                if (btnInvest) btnInvest.setAttribute('href', '../wingene.com.br/docs/investimentos/index.html');
+
+                const btnGeometria = document.getElementById('btn-geometria-app');
+                if (btnGeometria) btnGeometria.setAttribute('href', '../wingene.com.br/docs/geometria3d/index.html');
+
+                const btnMapas = document.getElementById('btn-mapas-app');
+                if (btnMapas) btnMapas.setAttribute('href', '../wingene.com.br/docs/Mapas/index.html');
 
                 const btnSjcl = document.getElementById('btn-sjcl-app');
                 if (btnSjcl) btnSjcl.setAttribute('href', '../ws1.assis.bhz.br/assis/docs/pwa.sjcl/index.html');
