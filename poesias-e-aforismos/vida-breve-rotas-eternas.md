@@ -26,11 +26,8 @@ Criar alegria, das virtudes o sal,
 polir o caráter, o futuro ancestral.
 
 Escolhas diárias tecem a vida,
-
 valor para viver o alegre pulsar.
-
 Criando futuro a cada pegada,
-
 rotas eternas ao porvir navegar.
 <div style="clear: both;"></div>
 
