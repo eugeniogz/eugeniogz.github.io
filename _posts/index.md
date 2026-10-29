@@ -52,3 +52,5 @@ O lirismo dos pequenos rituais partilhados e a dança silenciosa do afeto que tr
 O vácuo da presença que se instaura quando o brilho das telas silencia o encontro e desabita o tempo compartilhado.
 ### 📄 [Viver o eterno](./2026-10-22-viver-o-eterno.html) <span class="word-count">[1 min]</span>
 Diante da imensidão cósmica, a oportunidade do Kairós vivido com atenção plena transforma nossa breve passagem em instantes de eternidade.
+### 📄 [Amarelo amor](./2026-10-25-amarelo-amor.html) <span class="word-count">[1 min]</span>
+Entre o canto do bem-te-vi, o grito súbito e os galhos tortos do ipê-amarelo que aguardam 2027, um voto de afeto, liberdade e beleza.

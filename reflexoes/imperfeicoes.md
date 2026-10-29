@@ -20,9 +20,7 @@ Atitudes que afetam a saúde: o amor-próprio se dissolvendo em gotas.  -- 29/08
 
 ### Emocionais
 
-A pressa em responder pode ofuscar a escuta. A pausa consciente deve preceder as intervenções, dando espaço ao interlocutor e acalmando o ambiente. -- 01/08/26
-
-A defesa da opinião, quando precedida pela pausa consciente, não somente permite ao interlocutor expressar sua posição, como também fornece meios para um julgamento assertivo. -- 11/08/26
+A pressa em responder pode ofuscar a escuta; a pausa consciente cede espaço ao interlocutor e acalma o ambiente. -- 01/08/26
 
 ### Morais
 
@@ -36,7 +34,9 @@ Uma falha não mancha o êxito; desenha a batalha contínua. -- 05/09/26
 
 Nos momentos de piloto automático, as atitudes podem desviar dos valores pessoais; todavia, basta um único instante de atenção para a oportuna correção da rota. -- 16/07/26
 
-O tropeço do piloto automático não é motivo de culpa, mas um sinal para aprimorar a presença. Não é possível manter a atenção a todo tempo; reconhecer uma distração, no entanto, é o que permite a capacitação contínua. -- 10/08/26
+O tropeço do piloto automático não é motivo de culpa, mas um sinal para aprimorar a presença. -- 10/08/26
+
+Não é possível manter a atenção a todo tempo; reconhecer uma distração, no entanto, permite a capacitação contínua. -- 10/08/26
 
 Algoritmos cativam; desconectam. -- 20/10/26
 <div style="clear: both;"></div>

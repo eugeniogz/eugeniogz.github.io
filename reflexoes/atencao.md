@@ -33,7 +33,7 @@ Em certos momentos, remover um estímulo liberta a serena euforia. -- 21/08/26
 
 A serena euforia requer silenciar os ruídos do sentir e do pensar. -- 17/08/26
 
-Assim como se espera do broto o doce, a vida ganha mais sabor com o silêncio que floresce o pensar e tempera o agir. -- 09/09/26
+Espera-se do broto o doce; mas o sabor forma-se da seiva interior. -- 09/09/26
 
 A atenção consciente é limitada; o foco exige inibir o pensar e o sentir concorrentes. -- 17/08/26
 
