@@ -54,3 +54,5 @@ O vácuo da presença que se instaura quando o brilho das telas silencia o encon
 Diante da imensidão cósmica, a oportunidade do Kairós vivido com atenção plena transforma nossa breve passagem em instantes de eternidade.
 ### 📄 [Amarelo amor](./2026-10-25-amarelo-amor.html) <span class="word-count">[1 min]</span>
 Entre o canto do bem-te-vi, o grito súbito e os galhos tortos do ipê-amarelo que aguardam 2027, um voto de afeto, liberdade e beleza.
+### 📄 [Descanso ativo](./2026-11-01-descanso-ativo.html) <span class="word-count">[1 min]</span>
+Entre o ipê e o concreto inacabado, o repouso vigilante da atenção plena.
