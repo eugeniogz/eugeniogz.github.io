@@ -21,9 +21,6 @@ description: Wingene é um projeto filosófico sobre herança, consciência, cri
     
     <div class="microblog-card {{ pillar_class }}">
       <div class="microblog-header">
-        <span class="microblog-badge {{ pillar_class }}">
-          {% if post.pillar %}{{ post.pillar }}{% else %}Atenção{% endif %}
-        </span>
         <span class="microblog-date">{{ post.date | date: "%d/%m/%Y" }}</span>
       </div>
       <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
@@ -124,6 +121,7 @@ description: Wingene é um projeto filosófico sobre herança, consciência, cri
           rightWrapper.style.display = 'inline-flex';
           rightWrapper.style.alignItems = 'center';
           rightWrapper.style.gap = '8px';
+          rightWrapper.style.marginLeft = 'auto';
           dateEl.parentNode.insertBefore(rightWrapper, dateEl);
           rightWrapper.appendChild(dateEl);
           rightWrapper.appendChild(closeBtn);

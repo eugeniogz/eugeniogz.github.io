@@ -1201,6 +1201,7 @@ textarea::placeholder {
   font-family: 'Inter', sans-serif;
   font-size: 0.85rem;
   color: var(--text-muted);
+  margin-left: auto;
 }
 
 .microblog-card h3 {
