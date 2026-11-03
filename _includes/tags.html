@@ -165,7 +165,7 @@
   
   <div class="tag-list-container" id="{{ tag_id }}-container" style="display: none;">
     
-    <h3 id="{{ tag_id }}">{{ tag_name }}</h3>
+    <h3 class="tag-list-title" id="tag-title-{{ tag_id }}">{{ tag_name }}</h3>
 
     <ul>
       {% for item in total_items %}
@@ -296,9 +296,24 @@
       });
     }
 
-    // Se houver uma âncora de tag na URL (#autoconcehimento, #self-knowledge, etc.)
+    // Se houver uma âncora de tag na URL (#autoconhecimento, #self-knowledge, etc.)
     if (window.location.hash) {
       const rawHash = decodeURIComponent(window.location.hash.substring(1));
+      const mainContent = document.getElementById('main-content');
+
+      // Se a âncora corresponder a um elemento dentro do conteúdo principal da página,
+      // não sobrescreve a página com a lista de tags (preserva âncoras internas de artigos).
+      let contentAnchor = null;
+      try {
+        contentAnchor = mainContent ? mainContent.querySelector('#' + CSS.escape(rawHash)) : null;
+      } catch (e) {
+        contentAnchor = document.getElementById(rawHash);
+      }
+
+      if (contentAnchor && mainContent && mainContent.contains(contentAnchor)) {
+        return;
+      }
+
       const targetSlug = resolveTagSlug(rawHash);
       if (document.getElementById(targetSlug + '-container') || document.getElementById(rawHash + '-container')) {
         showTagList(rawHash);

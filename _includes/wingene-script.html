@@ -306,6 +306,19 @@
     const articleBody = document.getElementById('wingene-article-body');
     bodyElements.forEach(el => articleBody.appendChild(el));
 
+    // Se a URL contiver uma âncora (ex: #valores), rola suavemente até ela após montar o artigo
+    if (window.location.hash) {
+      try {
+        const hashTarget = decodeURIComponent(window.location.hash.substring(1));
+        const targetEl = document.getElementById(hashTarget);
+        if (targetEl) {
+          setTimeout(() => {
+            targetEl.scrollIntoView({ behavior: 'smooth' });
+          }, 150);
+        }
+      } catch (e) {}
+    }
+
     setupReadingInteractions(currentEssay);
   }
 
