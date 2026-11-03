@@ -10,6 +10,8 @@ Abstrair o ruído das distrações cotidianas para harmonizar o espírito com a 
 A contemplação poética dos ruídos e sensações do lar, onde a mente encontra saciedade e presença no cotidiano.
 ### 📄 [Apurando o sentir](./2026-06-13-saber-o-ser.html) <span class="word-count">[1 min]</span>
 A observação dos sentidos e a propriocepção revelam a serena euforia de reconhecer o próprio ser sem a mediação do pensamento.
+### 📄 [ruidos-quebtados](./2026-07-21-ruidos-quebtados.html) <span class="word-count">[1 min]</span>
+A fragilidade do cotidiano revelada no ruído súbito do descuido e na incontornável ruptura do instante.
 ### 📄 [Presença atenta](./2026-07-28-presenca-atenta.html) <span class="word-count">[1 min]</span>
 A presença atenta como um filtro consciente que intercepta o impulso e transforma o julgamento em sereno acolhimento.
 ### 📄 [Amazônia](./2026-08-01-amazonia.html) <span class="word-count">[1 min]</span>
