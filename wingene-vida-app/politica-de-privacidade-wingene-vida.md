@@ -80,6 +80,8 @@ Você tem controle total sobre os seus dados. Diretamente pelo aplicativo (no me
 
 Podemos atualizar nossa Política de Privacidade de tempos em tempos. Recomendamos que você revise esta página periodicamente para quaisquer alterações. As modificações entram em vigor imediatamente após serem publicadas nesta página.
 
-#### Contato
+#### Contato e Termos de Serviço
 
-Se você tiver alguma dúvida ou sugestão sobre a nossa Política de Privacidade ou o tratamento dos seus dados, entre em contato conosco através do e-mail: **[suporte@wingene.com.br]**.
+Se você tiver alguma dúvida ou sugestão sobre a nossa Política de Privacidade ou o tratamento dos seus dados, entre em contato conosco através do e-mail: **[suporte@wingene.com.br](mailto:suporte@wingene.com.br)**.
+
+Consulte também os nossos [Termos de Serviço do Wingene VIDA](./termos-de-servico-wingene-vida.html).

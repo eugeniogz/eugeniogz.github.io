@@ -80,6 +80,8 @@ You have total control over your data. Directly through the application (in the 
 
 We may update our Privacy Policy from time to time. We recommend that you review this page periodically for any changes. Modifications become effective immediately upon being posted on this page.
 
-#### Contact
+#### Contact and Terms of Service
 
-If you have any questions or suggestions about our Privacy Policy or the handling of your data, please contact us via email: **[eugenio@wingene.com.br]**.
+If you have any questions or suggestions about our Privacy Policy or the handling of your data, please contact us via email: **[suporte@wingene.com.br](mailto:suporte@wingene.com.br)**.
+
+Please also refer to our [Wingene VIDA Terms of Service](./termos-de-servico-wingene-vida-en.html).

@@ -125,6 +125,7 @@ For questions, feature requests, or sharing your experience:
 ## Related Documentation
 
 * [Wingene VIDA Privacy Policy](https://blog.wingene.com.br/wingene-vida-app/politica-de-privacidade-wingene-vida-en.html)
+* [Wingene VIDA Terms of Service](https://blog.wingene.com.br/wingene-vida-app/termos-de-servico-wingene-vida-en.html)
 * [The VIDA Method: Wingene in Practice](https://blog.wingene.com.br/wingene/the-vida-method.html)
 * [The Wingene Manifest](https://blog.wingene.com.br/wingene/manifesto-wingene-en.html)
 

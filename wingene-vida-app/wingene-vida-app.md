@@ -125,6 +125,7 @@ Dúvidas, sugestões ou relatos de experiência com o aplicativo:
 ## Documentos Relacionados
 
 * [Política de Privacidade do Wingene VIDA](https://blog.wingene.com.br/wingene-vida-app/politica-de-privacidade-wingene-vida.html)
+* [Termos de Serviço do Wingene VIDA](https://blog.wingene.com.br/wingene-vida-app/termos-de-servico-wingene-vida.html)
 * [O Método VIDA: A Wingene em Prática](https://blog.wingene.com.br/wingene/o-metodo-vida-a-wingene-em-pratica.html)
 * [Manifesto Wingene](https://blog.wingene.com.br/wingene/manifesto-wingene.html)
 
