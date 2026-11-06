@@ -14,7 +14,7 @@ A convergência entre a sabedoria ética clássica e o rigor das ciências natur
 A arqueologia linguística de um conceito que une a herança interna do ser ao esforço intencional e amoroso de florescimento espiritual.
 ### 📄 [O método VIDA: a Wingene em prática](./o-metodo-vida-a-wingene-em-pratica.html) <span class="word-count">[15 min]</span>
 A aplicação prática da Wingene através do método VIDA: um itinerário ético de valores, imperfeições, decisões e atenção voltado ao florescimento humano.
-### 📄 [Wingene: Presença, vida e eternidade](./wingene-presenca-vida-e-eternidade.html) <span class="word-count">[2 min]</span>
+### 📄 [Wingene: Presença, vida e eternidade](./wingene-presenca-vida-e-eternidade.html) <span class="word-count">[3 min]</span>
 A atenção que habita o instante presente, forja o caráter pelo método VIDA e encontra o eterno no tempo que passa.
 ### 📄 [Metaconsciência: pensar o sentir, sentir o pensar](./metaconsciencia-pensar-o-sentir-sentir-o-pensar.html) <span class="word-count">[4 min]</span>
 A fusão entre o pensar e o sentir na conquista da metaconsciência, estado de pura presença onde floresce a serena euforia.
