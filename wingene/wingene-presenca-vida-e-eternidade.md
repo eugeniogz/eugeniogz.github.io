@@ -39,7 +39,7 @@ Uma vida é construída de instantes atendidos. Não há atalho: cada Kairós pe
 
 Resta uma terceira palavra grega, e é a que o tempo não alcança: Aión. Não é tempo infinito. É outra relação com o tempo: aquilo que não se deixa reduzir ao antes e ao depois.
 
-A Wingene reconhece a finitude ante a eternidade. Mas há instantes — poucos, raros, exigentes — em que a presença é tão intensa que o instante parece não passar, mesmo passando. Não é permanência. É densidade.
+A Wingene reconhece a finitude ante a eternidade. Mas há instantes — poucos, raros, exigentes — nos quais a presença é tão intensa que o instante parece não passar, mesmo passando. Não é permanência. É densidade.
 
 Chronos dura. Aión significa. O Kairós vivido em plenitude é o único lugar onde um mortal toca ambos ao mesmo tempo: dura porque é tempo, significa porque foi inteiramente habitado.
 
@@ -50,6 +50,8 @@ O gene atravessa gerações sem se lembrar de nenhuma. O instante presente, vivi
 *E o Kairós inteiramente vivido permite tocar o Aión.*
 
 *Três nomes, um só movimento — presença, vida e eternidade.*
+
+![À esquerda (Chronos): Representado como um homem idoso, majestoso e alado, segurando uma haste longa e afiada que remete à sua foice. Ele personifica o envelhecimento e o curso linear e inexorável das coisas. A haste que ele empunha atravessa a composição horizontalmente, materializando a reta do tempo contínuo. Ao centro (Kairós): O instante fugaz assume a forma de um jovem atlético em pleno movimento, com asas não apenas nas costas, mas também nos tornozelos, indicando a rapidez com que a oportunidade surge e desaparece. Ele segura uma balança, que simboliza a precisão cirúrgica do momento exato. Atuando como o ponto de intersecção, as suas mãos tocam simultaneamente a linha reta de Chronos e o aro eterno de Aion. À direita (Aion): A eternidade e o tempo cósmico são retratados como uma figura divinizada, jovem e serena, que não envelhece. Ele está posicionado dentro de um grande anel marcado com símbolos zodiacais, que representa o círculo. Ao seu lado, a serpente evoca o Ouroboros (a cobra que morde a própria cauda), reforçando a ideia de um ciclo infinito e autossuficiente, sem princípio nem fim.](./Chronos_Kairos_Aion.jpeg)
 <div style="clear: both;"></div>
 
 ---
