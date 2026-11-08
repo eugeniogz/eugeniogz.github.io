@@ -13,4 +13,4 @@ tags:
   - Natureza
 --- 
 
-O carcará voa soberano entre ipês e tijolos. Repousa sobre o prédio inacabado. Mas o descanso é ativo — o predador abarcando o horizonte.
+O carcará voa soberano entre ipês e tijolos. Repousa sobre o prédio inacabado. Mas o descanso é ativo — asas que dominam o horizonte.
