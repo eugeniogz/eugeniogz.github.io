@@ -26,6 +26,7 @@ Reflexão sobre os gigantes misteriosos da existência e o papel solidário de c
 A chama da inteligência e da técnica como herança milenar e dever de responsabilidade ética.
 ### 📄 [Pavimentando o futuro](./pavimentando-o-futuro.html) <span class="word-count">[1 min]</span>
 O assentamento paciente de cada tijolo moral que pavimentará o caminho para as próximas gerações.
+### 📄 [A Costura Necessária](./a-costura-necessaria.html) <span class="word-count">[1 min]</span>
 ### 📄 [Eudaimonia Social](./eudaimonia-social.html) <span class="word-count">[3 min]</span>
 O florescimento humano que se expande além do indivíduo, alcançando a harmonia da comunidade.
 ### 📄 [Honrando a herança ancestral](./honrando-a-heranca-ancestral.html) <span class="word-count">[1 min]</span>

@@ -144,8 +144,21 @@
     "desc": "O assentamento paciente de cada tijolo moral que pavimentará o caminho para as próximas gerações."
   },
   {
-    "id": "eudaimonia-social",
+    "id": "a-costura-necessaria",
+    "title": "A Costura Necessária",
+    "time": "1 min",
+    "filename": "a-costura-necessaria.html",
+    "desc": "A urgente costura da conciliação humana frente ao isolamento em bolhas digitais que fragmentam a trama da cultura.",
     "number": 11,
+    "tags": [
+      "Sociedade",
+      "Filosofia",
+      "Consciência"
+    ]
+  },
+  {
+    "id": "eudaimonia-social",
+    "number": 12,
     "title": "Eudaimonia Social",
     "time": "3 min",
     "category": "sociedade",
@@ -160,7 +173,7 @@
   },
   {
     "id": "honrando-a-heranca-ancestral",
-    "number": 12,
+    "number": 13,
     "title": "Honrando a herança ancestral",
     "time": "1 min",
     "category": "futuro",

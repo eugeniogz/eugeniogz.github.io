@@ -42,6 +42,6 @@ Veja também: [O sistema GENE: a arquitetura da eudaimonia social](/wingene/o-si
 ---
 
 <div style="display: flex; justify-content: space-between;">
-  <a href="./pavimentando-o-futuro.html">&lt;&lt; Pavimentando o futuro</a>
+  <a href="./a-costura-necessaria.html">&lt;&lt; A Costura Necessária</a>
   <a href="./honrando-a-heranca-ancestral.html">Honrando a herança ancestral &gt;&gt;</a>
 </div>

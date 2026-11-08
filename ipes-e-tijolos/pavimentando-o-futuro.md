@@ -30,5 +30,5 @@ Mas seria ingênuo acreditar que a pavimentação será concluída em nossa gera
 
 <div style="display: flex; justify-content: space-between;">
   <a href="./o-fogo-de-prometeu.html">&lt;&lt; O fogo de Prometeu</a>
-  <a href="./eudaimonia-social.html">Eudaimonia Social &gt;&gt;</a>
+  <a href="./a-costura-necessaria.html">A Costura Necessária &gt;&gt;</a>
 </div>
