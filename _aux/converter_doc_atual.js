@@ -247,65 +247,130 @@ function exibirMarkdownModal() {
  * 1. Tenta espelhar o caminho da pasta fonte no caminho do site Jekyll (CAMINHO_SITE_DESTINO).
  * 2. Se não encontrar ou não estiver sob a pasta fonte padrão, salva na mesma pasta do próprio documento no Drive.
  */
-function determinarPastaDestino(docFile) {
-  const parents = docFile.getParents();
-  if (!parents.hasNext()) {
-    const rootFolder = DriveApp.getRootFolder();
-    return { pasta: rootFolder, isPosts: false, caminhoExibicao: "Raiz do Drive" };
-  }
-
-  const pastaDoc = parents.next();
-  const nomePastaDoc = pastaDoc.getName();
-
-  // Tenta encontrar a pasta de destino do site Jekyll
-  const pastaRaizSite = encontrarCriarPastaPorCaminho(CAMINHO_SITE_DESTINO, false);
-  if (!pastaRaizSite) {
-    // Fallback: salva na própria pasta onde o documento está
-    return {
-      pasta: pastaDoc,
-      isPosts: (nomePastaDoc === '_posts'),
-      caminhoExibicao: `Mesma pasta do documento (${nomePastaDoc})`
-    };
-  }
-
-  // Se o documento já estiver numa pasta chamada '_posts'
-  if (nomePastaDoc === '_posts') {
-    const subpastasPosts = pastaRaizSite.getFoldersByName('_posts');
-    if (subpastasPosts.hasNext()) {
-      return {
-        pasta: subpastasPosts.next(),
-        isPosts: true,
-        caminhoExibicao: `${CAMINHO_SITE_DESTINO}/_posts`
-      };
+/**
+ * Localiza a pasta raiz do site ("eugeniogz.github.io") no Google Drive.
+ * 1. Tenta pelo caminho completo configurado ("Pessoal/Meus.Sites/eugeniogz.github.io").
+ * 2. Tenta por busca direta do nome da pasta em todo o Google Drive.
+ * 3. Se não encontrar, lança um erro crítico para JAMAIS salvar em local indevido.
+ */
+function obterPastaRaizSite() {
+  // 1. Tenta pelo caminho completo
+  if (CAMINHO_SITE_DESTINO) {
+    const pastaPorCaminho = encontrarCriarPastaPorCaminho(CAMINHO_SITE_DESTINO, false);
+    if (pastaPorCaminho) {
+      return pastaPorCaminho;
     }
   }
 
-  // Tenta achar a subpasta correspondente (slugificada) no site
-  const slugSubpasta = slugifyFileName(nomePastaDoc.replace(/_/g, ' '));
-  const subpastasSite = pastaRaizSite.getFoldersByName(slugSubpasta);
-  if (subpastasSite.hasNext()) {
+  // 2. Busca direta por nome da pasta em todo o Drive (elimina falhas caso "Pessoal" ou "Meus.Sites" variem de nível)
+  const nomePastaFinal = CAMINHO_SITE_DESTINO.split('/').pop().trim();
+  const pastasEncontradas = DriveApp.getFoldersByName(nomePastaFinal);
+  while (pastasEncontradas.hasNext()) {
+    const f = pastasEncontradas.next();
+    if (!f.isTrashed()) {
+      Logger.log(`[PASTA SITE LOCALIZADA] ID: ${f.getId()} - Nome: ${f.getName()}`);
+      return f;
+    }
+  }
+
+  // 3. Trava de segurança: lança erro explícito e nunca permite salvar na pasta do próprio doc
+  throw new Error(
+    `[ERRO CRÍTICO] A pasta de destino do site ("${CAMINHO_SITE_DESTINO}") não foi encontrada no seu Google Drive.\n\n` +
+    `A conversão foi cancelada para evitar salvar na pasta de origem dos textos.`
+  );
+}
+
+/**
+ * Determina onde o arquivo Markdown DEVE ser salvo:
+ * 1. Mapeia a hierarquia da pasta fonte (sob "Wingene" ou "Meus.Textos") para o site de destino.
+ * 2. Valida com trava de segurança para NUNCA salvar na pasta de origem do Google Doc.
+ */
+function determinarPastaDestino(docFile) {
+  const pastaRaizSite = obterPastaRaizSite();
+
+  const parents = docFile.getParents();
+  if (!parents.hasNext()) {
+    throw new Error("[ERRO] Não foi possível identificar a pasta de origem do documento no Drive.");
+  }
+
+  const pastaDoc = parents.next();
+  const idPastaDoc = pastaDoc.getId();
+
+  // 1. Coleta a cadeia de pastas ancestrais a partir da pasta do doc até 'Wingene' ou 'Meus.Textos'
+  const cadeiaPastas = [];
+  let atual = pastaDoc;
+  const nomesRaizTexto = ['wingene', 'meus.textos', 'meustextos', 'textos'];
+
+  while (atual) {
+    const nomeAtual = atual.getName();
+    if (nomesRaizTexto.includes(nomeAtual.toLowerCase())) {
+      break;
+    }
+    cadeiaPastas.unshift(nomeAtual);
+
+    const pais = atual.getParents();
+    if (pais.hasNext()) {
+      atual = pais.next();
+    } else {
+      break;
+    }
+  }
+
+  // Se o doc estiver na raiz dos textos (ex: direto em 'Wingene'), o destino é a própria raiz do site
+  if (cadeiaPastas.length === 0) {
+    if (pastaRaizSite.getId() === idPastaDoc) {
+      throw new Error(`[ERRO DE SEGURANÇA] A pasta do documento é a própria raiz do site. Operação abortada.`);
+    }
     return {
-      pasta: subpastasSite.next(),
+      pasta: pastaRaizSite,
       isPosts: false,
-      caminhoExibicao: `${CAMINHO_SITE_DESTINO}/${slugSubpasta}`
+      caminhoExibicao: pastaRaizSite.getName()
     };
   }
 
-  // Também tenta pelo nome exato da pasta
-  const subpastasExatas = pastaRaizSite.getFoldersByName(nomePastaDoc);
-  if (subpastasExatas.hasNext()) {
-    return {
-      pasta: subpastasExatas.next(),
-      isPosts: (nomePastaDoc === '_posts'),
-      caminhoExibicao: `${CAMINHO_SITE_DESTINO}/${nomePastaDoc}`
-    };
+  // 2. Mapeia e navega (ou cria) as subpastas correspondentes dentro de pastaRaizSite
+  let pastaDestinoAtual = pastaRaizSite;
+  let isPosts = false;
+  const partesCaminhoExibicao = [pastaRaizSite.getName()];
+
+  for (let i = 0; i < cadeiaPastas.length; i++) {
+    const nomePastaFonte = cadeiaPastas[i];
+    let nomePastaDestino;
+
+    if (nomePastaFonte === '_posts') {
+      nomePastaDestino = '_posts';
+      isPosts = true;
+    } else {
+      // Remove anotações após dois pontos ex: "poesias_e_aforismos: versos" -> "poesias_e_aforismos"
+      const nomeSemComentario = splitComentario(nomePastaFonte.replace(/_/g, ' '))[0];
+      nomePastaDestino = slugifyFileName(nomeSemComentario);
+    }
+
+    if (!nomePastaDestino) continue;
+
+    const subpastas = pastaDestinoAtual.getFoldersByName(nomePastaDestino);
+    if (subpastas.hasNext()) {
+      pastaDestinoAtual = subpastas.next();
+    } else {
+      pastaDestinoAtual = pastaDestinoAtual.createFolder(nomePastaDestino);
+      Logger.log(`[CRIADA SUBPASTA NO DESTINO] "${nomePastaDestino}" em "${pastaDestinoAtual.getName()}"`);
+    }
+    partesCaminhoExibicao.push(nomePastaDestino);
   }
 
-  // Fallback seguro: salva na própria pasta do Google Doc
+  // 3. TRAVA DE SEGURANÇA ABSOLUTA:
+  // A pasta final de destino NUNCA pode ser a mesma pasta onde o documento Google Doc reside!
+  if (pastaDestinoAtual.getId() === idPastaDoc) {
+    throw new Error(
+      `[ERRO DE SEGURANÇA BLOQUEADO] A pasta de destino calculada (${pastaDestinoAtual.getName()}) ` +
+      `possui o mesmo ID da pasta de origem do Google Doc! A operação foi abortada imediatamente para não poluir sua pasta de textos.`
+    );
+  }
+
   return {
-    pasta: pastaDoc,
-    isPosts: (nomePastaDoc === '_posts'),
-    caminhoExibicao: `Pasta do Doc (${nomePastaDoc})`
+    pasta: pastaDestinoAtual,
+    isPosts: isPosts,
+    caminhoExibicao: partesCaminhoExibicao.join('/')
   };
 }
 
@@ -810,6 +875,16 @@ function formatarTextElementMarkdown(textElement, isTableCell = false) {
 /**
  * Utilitários auxiliares
  */
+function splitComentario(texto) {
+  if (!texto) return [texto || ''];
+  const resultado = texto.match(REGEX_SPLIT_COMENTARIO);
+  if (resultado) {
+    return [resultado[1].trim(), resultado[2].trim()];
+  } else {
+    return [texto.trim()];
+  }
+}
+
 function slugifyFileName(fileName) {
   if (!fileName) return '';
   let slug = fileName.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');

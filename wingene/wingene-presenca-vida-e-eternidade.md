@@ -9,11 +9,7 @@ tags:
   - Presença
   - Tempo
   - Eudaimonia
---- 
-
-
-
-### [Wingene](./)
+---
 
 *Gene*: o que herdamos. *Win*: o que conquistamos. Entre os dois, nenhuma vírgula — uma união.
 
@@ -37,26 +33,18 @@ Eudaimonia não se persegue. Persegue-se o prêmio da loteria e ele foge; a aleg
 
 Uma vida é construída de instantes atendidos. Não há atalho: cada Kairós perdido é irrecuperável; no entanto, nenhum Kairós isolado basta.
 
-Resta uma terceira palavra grega, e é a que o tempo não alcança: Aión. Não é tempo infinito. É outra relação com o tempo: aquilo que não se deixa reduzir ao antes e ao depois.
+Resta uma terceira palavra grega, e é a que o tempo não alcança: Aion. Não é tempo infinito. É outra relação com o tempo: aquilo que não se deixa reduzir ao antes e ao depois.
 
 A Wingene reconhece a finitude ante a eternidade. Mas há instantes — poucos, raros, exigentes — nos quais a presença é tão intensa que o instante parece não passar, mesmo passando. Não é permanência. É densidade.
 
-Chronos dura. Aión significa. O Kairós vivido em plenitude é o único lugar onde um mortal toca ambos ao mesmo tempo: dura porque é tempo, significa porque foi inteiramente habitado.
+Chronos dura. Aion significa. O Kairós vivido em plenitude é o único lugar onde um mortal toca ambos ao mesmo tempo: dura porque é tempo, significa porque foi inteiramente habitado.
 
 O gene atravessa gerações sem se lembrar de nenhuma. O instante presente, vivido a fundo, atravessa o próprio tempo sem prometer durar. Entre os dois — a ponte que já estava no nome, antes de qualquer ensaio precisar dizê-la.
 
 *A presença encontra o Kairós onde havia apenas Chronos.*  
 *O VIDA é o Kairós repetido até virar hábito, e o hábito até virar caráter.*  
-*E o Kairós inteiramente vivido permite tocar o Aión.*
+*E o Kairós inteiramente vivido permite tocar o Aion.*
 
 *Três nomes, um só movimento — presença, vida e eternidade.*
 
 ![À esquerda (Chronos): Representado como um homem idoso, majestoso e alado, segurando uma haste longa e afiada que remete à sua foice. Ele personifica o envelhecimento e o curso linear e inexorável das coisas. A haste que ele empunha atravessa a composição horizontalmente, materializando a reta do tempo contínuo. Ao centro (Kairós): O instante fugaz assume a forma de um jovem atlético em pleno movimento, com asas não apenas nas costas, mas também nos tornozelos, indicando a rapidez com que a oportunidade surge e desaparece. Ele segura uma balança, que simboliza a precisão cirúrgica do momento exato. Atuando como o ponto de intersecção, as suas mãos tocam simultaneamente a linha reta de Chronos e o aro eterno de Aion. À direita (Aion): A eternidade e o tempo cósmico são retratados como uma figura divinizada, jovem e serena, que não envelhece. Ele está posicionado dentro de um grande anel marcado com símbolos zodiacais, que representa o círculo. Ao seu lado, a serpente evoca o Ouroboros (a cobra que morde a própria cauda), reforçando a ideia de um ciclo infinito e autossuficiente, sem princípio nem fim.](./Chronos_Kairos_Aion.jpeg)
-<div style="clear: both;"></div>
-
----
-
-<div style="display: flex; justify-content: space-between;">
-  <a href="./o-metodo-vida-a-wingene-em-pratica.html">&lt;&lt; O método VIDA: a Wingene em prática</a>
-  <a href="./metaconsciencia-pensar-o-sentir-sentir-o-pensar.html">Metaconsciência: pensar o sentir, sentir o pensar &gt;&gt;</a>
-</div>

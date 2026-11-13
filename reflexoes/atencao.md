@@ -3,17 +3,13 @@ layout: reflections
 title: "Atenção"
 reading_time: 1
 semantic_order: 40
-description: "A presença que guia ações conscientes e sustenta a eudaimonia"
 tags:
   - Atenção
   - Euforia
   - Eudaimonia
   - Método VIDA
---- 
-
-
-
-### [Reflexões](./)
+description: "A presença que guia ações conscientes e sustenta a eudaimonia"
+---
 
 Na atenção ao ser, a felicidade da propriocepção. Com a atenção aos outros, a alegria de ser útil. Pela atenção ao mundo, a beleza de existir. -- 09/05/26
 
@@ -21,7 +17,7 @@ A presença oportuna, o Kairós, transforma o vazio em um instante de felicidade
 
 Saborear o momento: tocar a eternidade, viver a oportunidade. -- 03/10/26
 
-Círculo e reta — Aión e Chronos; sem Kairós, apenas geometria. -- 14/10/26
+Círculo e reta — Aion e Chronos; sem Kairós, apenas geometria. -- 14/10/26
 
 ### Ao ser
 
@@ -50,11 +46,3 @@ A presença pode interceptar as palavras, evitando que firam o outro. -- 17/08/2
 Compartilhados, a caminhada é verso, o café é prosa. -- 10/09/26
 
 A arte vive na presença do outro. -- 14/09/26
-<div style="clear: both;"></div>
-
----
-
-<div style="display: flex; justify-content: space-between;">
-  <a href="./decisoes.html">&lt;&lt; Decisões</a>
-  <span></span>
-</div>
