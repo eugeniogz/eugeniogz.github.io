@@ -3,17 +3,13 @@ layout: poetry
 title: "Aforismos"
 reading_time: 1
 semantic_order: 0
-description: "Sentenças breves e lapidadas sobre ciência, consciência, amor, virtudes, eudaimonia e existência."
 tags:
   - Filosofia
   - Autoconhecimento
   - Consciência
   - Amor
---- 
-
-
-
-### [Poesias e Aforismos](./)
+description: "Sentenças breves e lapidadas sobre ciência, consciência, amor, virtudes, eudaimonia e existência."
+---
 
 ### 🔬 Ciência e Conhecimento
 
@@ -65,6 +61,8 @@ Exemplo: giz invisível <!--20/01/26-->
 
 Tecer virtudes, semear atitudes <!--29/01/26-->
 
+Oportunidades contêm o sabor da alegria — degustá-las é tocar o infinito <!--24/11/26-->
+
 ### 🌿 Natureza e Existência
 
 O natural rasga o frio asfalto <!--16/07/22-->
@@ -76,11 +74,3 @@ Viver: ausência presente <!--07/02/26-->
 ***
 
 🖋️ Do que escrevo: rara a originalidade, seiva da liberdade <!--10/07/22-->
-<div style="clear: both;"></div>
-
----
-
-<div style="display: flex; justify-content: space-between;">
-  <span></span>
-  <a href="./vida-breve-rotas-eternas.html">Vida breve, rotas eternas &gt;&gt;</a>
-</div>
